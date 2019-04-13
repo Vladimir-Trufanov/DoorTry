@@ -1,0 +1,53 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.CompileOnBackground=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultDir=C:\Webservers\DoorTry
+DefaultCP=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+HTServer=localhost
+Extensions=*.*
+[Project tree]
+DoorTry
+	+DoorTry
+		+www
+			-PHP
+				www\PHP\Exceptionizer.php
+			www\Actions.php
+			www\ExceptionClass.php
+			www\Exceptions.php
+			www\iHtmlBegin.php
+			www\iHtmlEnd.php
+			www\include.php
+			www\index.php
+			www\log.txt
+			www\mylog.log
+			www\Site.php
+		DoorTry.ppr
+[Open project files]
+0=www\index.php
+1=www\Actions.php
+2=www\PHP\Exceptionizer.php
+3=www\include.php
+[Selected Project Files]
+Main=
+Selected=www\include.php
+[www\index.php]
+TopLine=385
+Caret=1,399
+[www\Actions.php]
+TopLine=55
+Caret=1,79
+[www\PHP\Exceptionizer.php]
+TopLine=11
+Caret=1,11
+[www\include.php]
+TopLine=17
+Caret=64,31
