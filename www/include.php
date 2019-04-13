@@ -35,8 +35,8 @@
 //              in C:\Webservers\DoorTry\www\include.php:17 
 //              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(426): 
 //              include() #1 {main} thrown in C:\Webservers\DoorTry\www\include.php on line 17
-//$str='try';
-//$str[]=4;
+$str='try';
+$str[]=4;
     
 // E_COMPILE_ERROR
 // Warning:     require_once(not-exists.php): failed to open stream: No such file or directory 
@@ -51,14 +51,14 @@
 // Warning: include_once(): Failed opening 'not-exists.php' 
 //          for inclusion (include_path='.;C:\php\pear') 
 //          in C:\Webservers\DoorTry\www\include.php on line 32
-//include_once 'not-exists.php';
+// include_once 'not-exists.php';
 
 // Notice: Undefined variable: a in C:\Webservers\DoorTry\www\include.php on line 35
 //echo $a;
 
 // Notice: Use of undefined constant UNKNOWN_CONSTANT - assumed 'UNKNOWN_CONSTANT' 
 //         in C:\Webservers\DoorTry\www\include.php on line 39
-// echo UNKNOWN_CONSTANT;
+//echo UNKNOWN_CONSTANT;
 
 // Deprecated: Non-static method Deprec::test() should not be called statically 
 //             in C:\Webservers\DoorTry\www\include.php on line 50
@@ -79,10 +79,17 @@ Deprec::test();*/
 //              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(437): 
 //              include() #1 {main} 
 //              thrown in C:\Webservers\DoorTry\www\include.php on line 61
-split(',', 'a,b');
+//split(',', 'a,b');
 
 // E_STRICT: Это ошибки, которые научат вас писать код правильно, чтобы 
 // не было стыдно, тем более IDE вам эти ошибки сразу показывают. Вот например, 
 // если вызвали не статический метод как статику, то код будет работать, 
 // но это как-то неправильно, и возможно появление серьёзных ошибок, 
 // если в дальнейшем метод класса будет изменён, и появится обращение к $this:
+/*
+class My_Datetime extends DateTime
+{
+   public static function createFromFormat($format, $time, DateTimeZone $timezone = null)
+   {}
+} 
+*/
