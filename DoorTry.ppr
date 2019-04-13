@@ -40,8 +40,8 @@ DoorTry
 Main=
 Selected=www\include.php
 [www\index.php]
-TopLine=385
-Caret=1,399
+TopLine=413
+Caret=3,431
 [www\Actions.php]
 TopLine=55
 Caret=1,79
@@ -49,5 +49,5 @@ Caret=1,79
 TopLine=11
 Caret=1,11
 [www\include.php]
-TopLine=17
-Caret=64,31
+TopLine=11
+Caret=1,25

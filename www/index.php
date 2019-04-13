@@ -415,13 +415,24 @@ function ShutDown()
     $lasterror = error_get_last();
     if (in_array($lasterror['type'],Array( 
       E_ERROR, 
-      E_WARNING,
+      E_WARNING, 
+      E_PARSE,
+      E_NOTICE,
+      E_STRICT,
+      E_DEPRECATED,
       E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR, 
-      E_CORE_WARNING, E_COMPILE_WARNING, E_PARSE)))
+      E_CORE_WARNING, E_COMPILE_WARNING)))
    {
       catchError($lasterror['type'],$lasterror['message'],$lasterror['file'],$lasterror['line']);
    }
-}   
+} 
+
+// определеяем уровень протоколирования ошибок
+//error_reporting(E_ALL | E_STRICT);
+error_reporting(E_ALL);
+// определяем режим вывода ошибок
+ini_set('display_errors', 'On');
+  
 echo 'Привет!<br>';
 include 'include.php'; 
 
