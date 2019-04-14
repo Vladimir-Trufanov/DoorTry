@@ -18,6 +18,50 @@ class DoorDryer
     $catcher = new DoorDryer_Catcher();
     $catcher->mask = $mask;
     $catcher->prevHdl = set_error_handler(array($catcher, "handler"));
+   
+   /* 
+    function shutdown() 
+    {
+         echo 'Этот текст будет всегда отображаться';
+   }
+   register_shutdown_function('shutdown');
+   */
+ 
+/*
+   function catchError($errno, $errstr, $errfile = '', $errline = '')
+{
+    echo "<br>-----------------------------<br>";
+    echo "Error Type : " .$errno. "<br>";
+    echo "Error Message : " . $errstr . "<br>";
+    echo "Line Number : " . $errline. "<br>";
+    echo "errfile : " . $errfile. "<br>";
+    echo "-----------------------------<br>";
+    exit();
+} 
+function ShutDown()
+{
+    $lasterror = error_get_last();
+    if (in_array($lasterror['type'],Array( 
+      E_ERROR, 
+      E_WARNING, 
+      E_PARSE,
+      E_NOTICE,
+      E_STRICT,
+      E_DEPRECATED,
+      E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR, 
+      E_CORE_WARNING, E_COMPILE_WARNING)))
+   {
+      catchError($lasterror['type'],$lasterror['message'],$lasterror['file'],$lasterror['line']);
+   }
+} 
+
+   register_shutdown_function('shutdown');
+*/
+   
+   
+   
+    
+    
   }
   // Вызывается при уничтожении объекта-перехватчика (например,
   // при выходе его из области видимости функции). Восстанавливает
@@ -52,8 +96,8 @@ class DoorDryer_Catcher
       }
       // Получаем текстовое представление типа ошибки
       $types = array(
-         "E_ERROR",             // 1 - фатальная ошибка во время выполнения,  остановка программы
          "E_WARNING",           // 2 - предупреждение во время выполнения,    --- продолжение работы 
+         "E_ERROR",             // 1 - фатальная ошибка во время выполнения,  остановка программы
          "E_PARSE",             // 4 - ошибка трансляции,                     остановка программы
          "E_NOTICE",            // 8 - уведомление о проблеме,                остановка программы
          "E_CORE_ERROR",        // 16 - фатальная ошибка ядра PHP,            остановка программы
@@ -85,6 +129,7 @@ class DoorDryer_Catcher
       
     // Генерируем исключение нужного типа.
     throw new $className($errno, $errstr, $errfile, $errline);
+    //throw new Exception('Hellow!!!');
   }
 }
 
@@ -107,7 +152,11 @@ abstract class PHP_Exceptionizer_Exception extends Exception
  * и сообщения, не менее "фатальные", чем указано.
  */
 class E_EXCEPTION extends PHP_Exceptionizer_Exception {}
+class E_ERROR extends E_EXCEPTION {}
+class E_WARNING extends E_EXCEPTION {}
 class E_NOTICE extends E_EXCEPTION {}
+class E_PARSE  extends E_EXCEPTION {}
+class E_DEPRECATED  extends E_EXCEPTION {}
 
 
 /*
@@ -136,4 +185,3 @@ class E_EXCEPTION extends PHP_Exceptionizer_Exception {}
   // т.к. они используются для разных целей, и оценить 
   // "серьезность" нельзя.
 */
-?>

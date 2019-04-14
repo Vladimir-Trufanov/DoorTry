@@ -44,33 +44,34 @@
 // Fatal error: require_once(): Failed opening required 'not-exists.php' 
 //              (include_path='.;C:\php\pear') 
 //              in C:\Webservers\DoorTry\www\include.php on line 25
-//require_once 'not-exists.php';
+require_once 'not-exists.php';
 
 // Warning: include_once(not-exists.php): failed to open stream: No such file or directory 
 //          in C:\Webservers\DoorTry\www\include.php on line 32
 // Warning: include_once(): Failed opening 'not-exists.php' 
 //          for inclusion (include_path='.;C:\php\pear') 
 //          in C:\Webservers\DoorTry\www\include.php on line 32
-// include_once 'not-exists.php';
+//include_once 'not-exists.php';
 
 // Notice: Undefined variable: a in C:\Webservers\DoorTry\www\include.php on line 35
 //echo $a;
 
 // Notice: Use of undefined constant UNKNOWN_CONSTANT - assumed 'UNKNOWN_CONSTANT' 
 //         in C:\Webservers\DoorTry\www\include.php on line 39
-echo UNKNOWN_CONSTANT;
+//echo UNKNOWN_CONSTANT;
 
 // Deprecated: Non-static method Deprec::test() should not be called statically 
 //             in C:\Webservers\DoorTry\www\include.php on line 50
-/*class Deprec 
+/*
+class Deprec 
 {
    public function test() 
    {
       echo 'Test'; 
    } 
 }
-Deprec::test();*/
-
+Deprec::test();
+*/
 // E_DEPRECATED: Так PHP будет ругаться, если вы используете устаревшие функции
 // (т.е. те, что помечены как deprecated, и в следующем мажорном релизе их не будет):
 

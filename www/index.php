@@ -322,6 +322,7 @@ echo 'Новость была добавлена';
 //echo 'Конец <br>';
 
 
+/*
   function suffer()
   {
     // Создаем новый объект-преобразователь. Начиная с этого момента 
@@ -359,12 +360,12 @@ echo 'Новость была добавлена';
       // Перехватываем исключение класса Error.
       echo "<pre><b>er Перехвачена ошибка!</b>\n", $e, "</pre>";
     }
-   /**
-    * Следующие типы ошибок, хотя и поддерживаются формально, не могут
-    * быть перехвачены:
-    * E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR,
-    * E_COMPILE_WARNING
-   **/
+   //
+   // Следующие типы ошибок, хотя и поддерживаются формально, не могут
+   // быть перехвачены:
+   // E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR,
+   // E_COMPILE_WARNING
+   //
 
     
     
@@ -374,7 +375,7 @@ echo 'Новость была добавлена';
     // выходе из функции (при этом вызовется деструктор объекта $w2e,
     // отключающий слежение за ошибками).
   }
-
+  */
 
   //require_once "PHP/Exceptionizer.php";
 
@@ -400,6 +401,7 @@ echo 'Новость была добавлена';
 ///------------------------------
 // register_shutdown_function('ShutDown');
 
+/*
 function catchError($errno, $errstr, $errfile = '', $errline = '')
 {
     echo "<br>-----------------------------<br>";
@@ -426,7 +428,7 @@ function ShutDown()
       catchError($lasterror['type'],$lasterror['message'],$lasterror['file'],$lasterror['line']);
    }
 } 
-
+*/
 // определеяем уровень протоколирования ошибок
 error_reporting(E_ALL);
 // определяем режим вывода ошибок
@@ -435,23 +437,105 @@ error_reporting(E_ALL);
 //   если же display_errors = off, то для фатальных ошибок код ответа будет 500
 //   и результат не будет возвращён пользователю, для остальных ошибок – 
 //   код будет работать неправильно, но никому об этом не расскажет
-ini_set('display_errors', 'on');
-  
+ini_set('display_errors', 'off');
+
+
+
+   function catchError($errno, $errstr, $errfile = '', $errline = '')
+{
+    echo "<br>-----------------------------<br>";
+    echo "Error Type : " .$errno. "<br>";
+    echo "Error Message : " . $errstr . "<br>";
+    echo "Line Number : " . $errline. "<br>";
+    echo "errfile : " . $errfile. "<br>";
+    echo "-----------------------------<br>";
+   echo '<pre>';
+   $lasterror = error_get_last();
+   echo "{$lasterror->getMessage()}";
+   echo $lasterror->getTraceAsString();
+   echo '</pre>';
+    echo "-----------------------------<br>";
+    exit();
+} 
+function ShutDown()
+{
+    $lasterror = error_get_last();
+    if (in_array($lasterror['type'],Array( 
+      E_ERROR, 
+      E_WARNING, 
+      E_PARSE,
+      E_NOTICE,
+      E_STRICT,
+      E_DEPRECATED,
+      E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR, 
+      E_CORE_WARNING, E_COMPILE_WARNING)))
+   {
+      catchError($lasterror['type'],$lasterror['message'],$lasterror['file'],$lasterror['line']);
+   }
+} 
+
+   register_shutdown_function('shutdown');
+
+
+
+
+
+
+
+
 //$w2e = new PHP_Exceptionizer(E_ALL);
 require_once "DoorDryerClass.php";
+
 $w2e = new DoorDryer(E_ALL);
-try 
+//try
+//{
+  try 
+  {
+     echo 'Привет!<br>';
+     include 'includErrs.php'; 
+     echo '<br>Hi!';
+  } 
+  catch (E_EXCEPTION $e) 
+  {
+     echo "<pre><b>ex Перехвачена ошибка!</b><br>".$e."</pre>";
+  }
+  catch (Error $e) 
 {
-   echo 'Привет!<br>';
-   include 'includErrs.php'; 
-   echo '<br>Hi!';
-} 
-catch (E_EXCEPTION $e) 
-{
-   echo "<pre><b>ex Перехвачена ошибка!</b>\n", $e, "</pre>";
+  // Перехватываем исключение класса Error.
+  echo "<pre><b>er Перехвачена ошибка!</b><br>".$e."</pre>";
 }
+//}
+//catch (Error $e) 
+//{
+  // Перехватываем исключение класса Error.
+  //echo "<pre><b>er Перехвачена ошибка!</b><br>".$e."</pre>";
+//}
 unset($w2e);
 
 
-
+  /*
+  $w2e = new DoorDryer(E_ALL);
+  try 
+  {
+     echo 'Привет!<br>';
+     include 'includErrs.php'; 
+     echo '<br>Hi!';
+  } 
+  catch (E_EXCEPTION $e) 
+  {
+    echo "<pre><b>Перехвачена ошибка!</b><br>".$e."</pre>";
+  }
+  unset($w2e);
+  */
+  //try 
+  //{
+     //echo 'Привет!<br>';
+     //include 'includErrs.php'; 
+     //echo '<br>Hi!';
+  //} 
+  //catch (Parse $e) 
+  //{
+  //  echo "<pre><b>Перехвачена ошибка!</b><br>".$e."</pre>";
+  //}
+  
 // ************************************************************** index.php ***
