@@ -35,8 +35,8 @@
 //              in C:\Webservers\DoorTry\www\include.php:17 
 //              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(426): 
 //              include() #1 {main} thrown in C:\Webservers\DoorTry\www\include.php on line 17
-$str='try';
-$str[]=4;
+//$str='try';
+//$str[]=4;
     
 // E_COMPILE_ERROR
 // Warning:     require_once(not-exists.php): failed to open stream: No such file or directory 
@@ -58,7 +58,7 @@ $str[]=4;
 
 // Notice: Use of undefined constant UNKNOWN_CONSTANT - assumed 'UNKNOWN_CONSTANT' 
 //         in C:\Webservers\DoorTry\www\include.php on line 39
-//echo UNKNOWN_CONSTANT;
+echo UNKNOWN_CONSTANT;
 
 // Deprecated: Non-static method Deprec::test() should not be called statically 
 //             in C:\Webservers\DoorTry\www\include.php on line 50

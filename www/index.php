@@ -376,7 +376,7 @@ echo 'Новость была добавлена';
   }
 
 
-  require_once "PHP/Exceptionizer.php";
+  //require_once "PHP/Exceptionizer.php";
 
   // Для большей наглядности поместим основной проверочный код в функцию.
   //suffer();
@@ -398,7 +398,7 @@ echo 'Новость была добавлена';
     //require_once 'not-exists.php';
     
 ///------------------------------
-register_shutdown_function('ShutDown');
+// register_shutdown_function('ShutDown');
 
 function catchError($errno, $errstr, $errfile = '', $errline = '')
 {
@@ -435,11 +435,23 @@ error_reporting(E_ALL);
 //   если же display_errors = off, то для фатальных ошибок код ответа будет 500
 //   и результат не будет возвращён пользователю, для остальных ошибок – 
 //   код будет работать неправильно, но никому об этом не расскажет
-ini_set('display_errors', 'off');
+ini_set('display_errors', 'on');
   
-echo 'Привет!<br>';
-include 'include.php'; 
-echo '<br>Hi';
+//$w2e = new PHP_Exceptionizer(E_ALL);
+require_once "DoorDryerClass.php";
+$w2e = new DoorDryer(E_ALL);
+try 
+{
+   echo 'Привет!<br>';
+   include 'includErrs.php'; 
+   echo '<br>Hi!';
+} 
+catch (E_EXCEPTION $e) 
+{
+   echo "<pre><b>ex Перехвачена ошибка!</b>\n", $e, "</pre>";
+}
+unset($w2e);
+
 
 
 // ************************************************************** index.php ***
