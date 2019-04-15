@@ -40,7 +40,7 @@
 // *** E_WARNING *** продолжение работы
 // Warning: fopen(spoon): failed to open stream: No such file or directory 
 //          in C:\Webservers\DoorTry\www\include.php on line 10
-fopen("spoon", "r");
+//fopen("spoon", "r");
 
 // Warning: include_once(not-exists.php): failed to open stream: No such file or directory 
 //          in C:\Webservers\DoorTry\www\include.php on line 32

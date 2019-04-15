@@ -18,37 +18,32 @@ Extensions=*.*
 DoorTry
 	+DoorTry
 		+www
-			-PHP
-				www\PHP\Exceptionizer.php
+			+TDoorTryer
+				www\TDoorTryer\DoorTryerClass.php
 			www\Actions.php
-			www\DoorTryerClass.php
-			www\ExceptionClass.php
-			www\Exceptions.php
 			www\favicon.ico
 			www\iHtmlBegin.php
 			www\iHtmlEnd.php
 			www\includErrs.php
 			www\index.php
 			www\log.txt
-			www\mylog.log
 			www\Site.php
 		DoorTry.ppr
 		LICENSE
 		README.md
 [Open project files]
 0=www\index.php
-1=www\DoorTryerClass.php
-2=www\includErrs.php
+1=www\includErrs.php
+2=www\TDoorTryer\DoorTryerClass.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\includErrs.php
 [www\index.php]
-TopLine=39
-Caret=30,77
-[www\DoorTryerClass.php]
-TopLine=49
-Caret=1,9
-Mark1=1,20
+TopLine=13
+Caret=1,34
 [www\includErrs.php]
-TopLine=31
-Caret=1,43
+TopLine=102
+Caret=1,89
+[www\TDoorTryer\DoorTryerClass.php]
+TopLine=168
+Caret=5,187
