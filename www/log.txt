@@ -5,3 +5,15 @@
 [12-Apr-2019 18:49:01 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\index.php on line 71
 [12-Apr-2019 18:52:18 Asia/Kuwait] PHP Warning:  require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\index.php on line 71
 [12-Apr-2019 18:52:18 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\index.php on line 71
+[15-Apr-2019 16:55:53 Asia/Kuwait] PHP Warning:  require_once(DoorDryerClass.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\index.php on line 86
+[15-Apr-2019 16:55:53 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'DoorDryerClass.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\index.php on line 86
+[15-Apr-2019 16:57:50 Asia/Kuwait] PHP Warning:  require_once(DoorDryerClass.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\index.php on line 86
+[15-Apr-2019 16:57:50 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'DoorDryerClass.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\index.php on line 86
+[15-Apr-2019 17:07:36 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:88
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(88): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 88, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(88): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(92): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 88
+[15-Apr-2019 17:07:36 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 88

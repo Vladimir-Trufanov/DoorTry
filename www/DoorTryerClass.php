@@ -1,14 +1,13 @@
 <?php ## Класс для преобразования ошибок PHP в исключения.
 /**
- * Класс для преобразования перехватываемых (см. set_error_handler()) 
+ * Класс для преобразования перехватываемых 
  * ошибок и предупреждений PHP в исключения.
- *
- * Следующие типы ошибок, хотя и поддерживаются формально, не могут
- * быть перехвачены:
- * E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR,
- * E_COMPILE_WARNING
+ * 
+ *    В DoorTryer заложены все типы ошибок.
+ * Через set_error_handler срабатывают только некоторые, часть срабатывает
+ * через try-catch-error, остальные через register_shutdown_function.
  */
-class DoorDryer
+class DoorTryer
 {
   // Создает новый объект-перехватчик и подключает его к стеку
   // обработчиков ошибок PHP (используется идеология "выделение 
@@ -16,52 +15,8 @@ class DoorDryer
   public function __construct($mask = E_ALL)
   {
     $catcher = new DoorDryer_Catcher();
-    $catcher->mask = $mask;
-    $catcher->prevHdl = set_error_handler(array($catcher, "handler"));
-   
-   /* 
-    function shutdown() 
-    {
-         echo 'Этот текст будет всегда отображаться';
-   }
-   register_shutdown_function('shutdown');
-   */
- 
-/*
-   function catchError($errno, $errstr, $errfile = '', $errline = '')
-{
-    echo "<br>-----------------------------<br>";
-    echo "Error Type : " .$errno. "<br>";
-    echo "Error Message : " . $errstr . "<br>";
-    echo "Line Number : " . $errline. "<br>";
-    echo "errfile : " . $errfile. "<br>";
-    echo "-----------------------------<br>";
-    exit();
-} 
-function ShutDown()
-{
-    $lasterror = error_get_last();
-    if (in_array($lasterror['type'],Array( 
-      E_ERROR, 
-      E_WARNING, 
-      E_PARSE,
-      E_NOTICE,
-      E_STRICT,
-      E_DEPRECATED,
-      E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR, 
-      E_CORE_WARNING, E_COMPILE_WARNING)))
-   {
-      catchError($lasterror['type'],$lasterror['message'],$lasterror['file'],$lasterror['line']);
-   }
-} 
-
-   register_shutdown_function('shutdown');
-*/
-   
-   
-   
-    
-    
+    //$catcher->mask = $mask;
+    set_error_handler(array($catcher, "DoorTryHandler"));
   }
   // Вызывается при уничтожении объекта-перехватчика (например,
   // при выходе его из области видимости функции). Восстанавливает
@@ -82,12 +37,11 @@ function ShutDown()
 class DoorDryer_Catcher
 {
    // Битовые флаги предупреждений, которые будут перехватываться
-   public $mask = E_ALL;
+   //public $mask = E_ALL;
    
    // Функция-обработчик ошибок PHP
-   public function handler($errno, $errstr, $errfile, $errline)
+   public function DoorTryHandler($errno, $errstr, $errfile, $errline)
    {
-      echo 'Handler<br>';
       // Если error_reporting нулевой, значит, использован оператор @,
       // все ошибки должны игнорироваться
       if (!error_reporting())
@@ -96,8 +50,8 @@ class DoorDryer_Catcher
       }
       // Получаем текстовое представление типа ошибки
       $types = array(
-         "E_WARNING",           // 2 - предупреждение во время выполнения,    --- продолжение работы 
          "E_ERROR",             // 1 - фатальная ошибка во время выполнения,  остановка программы
+         "E_WARNING",           // 2 - предупреждение во время выполнения,    --- продолжение работы 
          "E_PARSE",             // 4 - ошибка трансляции,                     остановка программы
          "E_NOTICE",            // 8 - уведомление о проблеме,                остановка программы
          "E_CORE_ERROR",        // 16 - фатальная ошибка ядра PHP,            остановка программы
@@ -115,7 +69,6 @@ class DoorDryer_Catcher
       );
       // Формируем имя класса-исключения в зависимости от типа ошибки
       $className=__CLASS__."_"."Exception";
-      echo '$className1='.$className.'<br>';
       foreach ($types as $t) 
       {
          $e=constant($t);
@@ -125,12 +78,9 @@ class DoorDryer_Catcher
             break;
          }
       }
-      echo '$className2='.$className.'<br>';
-      
-    // Генерируем исключение нужного типа.
-    throw new $className($errno, $errstr, $errfile, $errline);
-    //throw new Exception('Hellow!!!');
-  }
+      // Генерируем исключение нужного типа.
+      throw new $className($errno, $errstr, $errfile, $errline);
+   }  
 }
 
 /**
@@ -146,42 +96,19 @@ abstract class PHP_Exceptionizer_Exception extends Exception
    }
 }
 
-/**
- * Создаем иерархию "серьезности" ошибок, чтобы можно было
- * ловить не только исключения с указанием точного типа, но 
- * и сообщения, не менее "фатальные", чем указано.
- */
 class E_EXCEPTION extends PHP_Exceptionizer_Exception {}
-class E_ERROR extends E_EXCEPTION {}
-class E_WARNING extends E_EXCEPTION {}
+class E_ERROR extends E_EXCEPTION {} 
+class E_WARNING extends E_EXCEPTION {} 
+class E_PARSE extends E_EXCEPTION {}
 class E_NOTICE extends E_EXCEPTION {}
-class E_PARSE  extends E_EXCEPTION {}
-class E_DEPRECATED  extends E_EXCEPTION {}
-
-
-/*
-class E_EXCEPTION extends PHP_Exceptionizer_Exception {}
-  class AboveE_STRICT extends E_EXCEPTION {} 
-    class E_STRICT extends AboveE_STRICT {}
-    class AboveE_NOTICE extends AboveE_STRICT {}
-      class E_NOTICE extends AboveE_NOTICE {}
-      class AboveE_WARNING extends AboveE_NOTICE {}
-        class E_WARNING extends AboveE_WARNING {}
-        class AboveE_PARSE extends AboveE_WARNING {}
-          class E_PARSE extends AboveE_PARSE {}
-          class AboveE_ERROR extends AboveE_PARSE {}
-            class E_ERROR extends AboveE_ERROR {} 
-            class E_CORE_ERROR extends AboveE_ERROR {}
-            class E_CORE_WARNING extends AboveE_ERROR {}
-            class E_COMPILE_ERROR extends AboveE_ERROR {}
-            class E_COMPILE_WARNING extends AboveE_ERROR {}
-  class AboveE_USER_NOTICE extends E_EXCEPTION {}
-    class E_USER_NOTICE extends AboveE_USER_NOTICE {}
-    class AboveE_USER_WARNING extends AboveE_USER_NOTICE {}
-      class E_USER_WARNING extends AboveE_USER_WARNING {}
-      class AboveE_USER_ERROR extends AboveE_USER_WARNING {}
-        class E_USER_ERROR extends AboveE_USER_ERROR {}
-  // Иерархии пользовательских и встроенных ошибок не сравнимы,
-  // т.к. они используются для разных целей, и оценить 
-  // "серьезность" нельзя.
-*/
+class E_CORE_ERROR extends E_EXCEPTION {}
+class E_CORE_WARNING extends E_EXCEPTION {}
+class E_COMPILE_ERROR extends E_EXCEPTION {}
+class E_COMPILE_WARNING extends E_EXCEPTION {}
+class E_USER_ERROR extends E_EXCEPTION {}
+class E_USER_WARNING extends E_EXCEPTION {}
+class E_USER_NOTICE extends E_EXCEPTION {}
+class E_STRICT extends E_EXCEPTION {}
+class E_RECOVERABLE_ERROR extends E_EXCEPTION {}
+class E_DEPRECATED extends E_EXCEPTION {}
+class E_USER_DEPRECATED extends E_EXCEPTION {}
