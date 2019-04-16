@@ -210,3 +210,103 @@ Stack trace:
 #3 {main}
   thrown in C:\Webservers\DoorTry\www\includErrs.php on line 88
 [15-Apr-2019 21:18:27 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 88
+[16-Apr-2019 14:21:06 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Array to string conversion in C:\Webservers\DoorTry\www\index.php:35
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(35): DoorDryer_Catcher->DoorTryHandler(8, 'Array to string...', 'C:\\Webservers\\D...', 35, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 35
+[16-Apr-2019 14:22:58 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Use of undefined constant __toString - assumed '__toString' in C:\Webservers\DoorTry\www\index.php:41
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(41): DoorDryer_Catcher->DoorTryHandler(8, 'Use of undefine...', 'C:\\Webservers\\D...', 41, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 41
+[16-Apr-2019 14:24:05 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Use of undefined constant __toString - assumed '__toString' in C:\Webservers\DoorTry\www\index.php:36
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(36): DoorDryer_Catcher->DoorTryHandler(8, 'Use of undefine...', 'C:\\Webservers\\D...', 36, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 36
+[16-Apr-2019 17:21:51 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:27
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(27): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 27, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 27
+[16-Apr-2019 17:24:02 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:27
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(27): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 27, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 27
+[16-Apr-2019 17:24:04 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:27
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(27): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 27, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 27
+[16-Apr-2019 17:24:22 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:27
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(27): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 27, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 27
+[16-Apr-2019 17:24:30 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:27
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(27): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 27, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 27
+[16-Apr-2019 17:25:27 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:27
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(27): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 27, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 27
+[16-Apr-2019 17:27:30 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:53
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(53): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 53, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 53
+[16-Apr-2019 17:28:19 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:69
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(69): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 69, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 69
+[16-Apr-2019 17:29:13 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:70
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(70): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 70, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 70
+[16-Apr-2019 17:30:54 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:108
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(108): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 108, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 108
+[16-Apr-2019 17:31:30 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:108
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(108): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 108, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 108
+[16-Apr-2019 17:36:35 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:108
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(108): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 108, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 108
+[16-Apr-2019 17:37:20 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined variable: е in C:\Webservers\DoorTry\www\index.php:108
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(108): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined varia...', 'C:\\Webservers\\D...', 108, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 108
+[16-Apr-2019 17:51:09 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined property: ParseError::$Code in C:\Webservers\DoorTry\www\index.php:109
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(109): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined prope...', 'C:\\Webservers\\D...', 109, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 109
+[16-Apr-2019 17:57:26 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined property: ParseError::$Code in C:\Webservers\DoorTry\www\index.php:109
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(109): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined prope...', 'C:\\Webservers\\D...', 109, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 109
+[16-Apr-2019 18:04:12 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined property: ParseError::$Code in C:\Webservers\DoorTry\www\index.php:114
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(114): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined prope...', 'C:\\Webservers\\D...', 114, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 114
+[16-Apr-2019 18:06:29 Asia/Kuwait] PHP Fatal error:  Uncaught E_NOTICE: Undefined property: E_WARNING::$Code in C:\Webservers\DoorTry\www\index.php:106
+Stack trace:
+#0 C:\Webservers\DoorTry\www\index.php(106): DoorDryer_Catcher->DoorTryHandler(8, 'Undefined prope...', 'C:\\Webservers\\D...', 106, Array)
+#1 {main}
+  thrown in C:\Webservers\DoorTry\www\index.php on line 106

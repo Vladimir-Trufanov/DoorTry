@@ -64,8 +64,8 @@ class My_Datetime extends DateTime
 // *** E_PARSE *** остановка программы
 // Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' 
 //              in C:\Webservers\DoorTry\www\include.php on line 32
-//echo "Hi" 
-//echo "Hello";
+echo "Hi" 
+echo "Hello";
 
 // *** E_NOTICE *** продолжение работы 
 // Notice: Undefined variable: a in C:\Webservers\DoorTry\www\include.php on line 35

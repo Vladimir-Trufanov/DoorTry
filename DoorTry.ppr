@@ -37,13 +37,13 @@ DoorTry
 2=www\TDoorTryer\DoorTryerClass.php
 [Selected Project Files]
 Main=
-Selected=www\includErrs.php
+Selected=www\index.php
 [www\index.php]
-TopLine=13
-Caret=1,34
+TopLine=97
+Caret=1,121
 [www\includErrs.php]
-TopLine=102
-Caret=1,89
+TopLine=51
+Caret=1,68
 [www\TDoorTryer\DoorTryerClass.php]
-TopLine=168
-Caret=5,187
+TopLine=1
+Caret=4,79
