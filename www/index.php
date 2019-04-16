@@ -10,9 +10,23 @@
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 16.04.2019
 
+// "фрагмент с типом ошибки с начала строки до ":"
+define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
 
 
-function DoorTryerPage($errstr,$errno,$errline='',$errfile='',$TraceAsString='')
+
+// Инициализируем корневой каталог сайта, надсайтовый каталог, каталог хостинга
+require_once "iGetAbove.php";
+$SiteRoot = $_SERVER['DOCUMENT_ROOT'];  // Корневой каталог сайта
+$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
+
+// Подключаем файлы библиотеки прикладных модулей
+require_once $SiteHost."/TPhpPrown/TPhpPrown/MakeRegExp.php";
+
+
+
+function DoorTryerMessage($errstr,$errno,$errline='',$errfile='',$TraceAsString='')
 {
     echo "<br>-----------------------------";
     echo "<pre>";
@@ -24,6 +38,33 @@ function DoorTryerPage($errstr,$errno,$errline='',$errfile='',$TraceAsString='')
     echo "</pre>";
     echo "-----------------------------<br>";
 }
+
+function DoorTryerPage($e)
+{
+   echo '***'.$e.'***';
+   
+   $value=\prown\MakeRegExp(regErrorType,$e,$matches,false);
+   if ($value>0)
+   {
+      $findes=$matches[0]; 
+      $TypeError=$findes[0][0]; $Point=$findes[0][1];  
+   }
+   else
+   {
+      $TypeError='NoDefine'; $Point=-1;  
+   }
+   echo '$TypeError='.$TypeError;
+   
+   
+   
+   
+   
+   DoorTryerMessage
+   (
+      $e->getMessage(),intval($e->getCode()),
+      $e->getLine(),$e->getFile(),$e->getTraceAsString()
+   );
+ }
 
     
          function DoorTryFinal($errno, $errstr, $errfile = '', $errline = '')
@@ -87,7 +128,7 @@ ini_set('log_errors','On');
 ini_set('error_log','log.txt');
 
 
-//register_shutdown_function('DoorTryShutdown');
+register_shutdown_function('DoorTryShutdown');
 
 
 require_once "TDoorTryer/DoorTryerClass.php";
@@ -101,23 +142,12 @@ try
 catch (E_EXCEPTION $e) 
 {
    echo  "<pre><b>ex Перехвачена ошибка!</b><br>".$e."</pre>";
-   DoorTryerPage
-   (
-      $e->getMessage(),intval($e->getCode()),
-      $e->getLine(),$e->getFile(),$e->getTraceAsString()
-   );
-   echo '<br>*1*'.gettype($e->getCode()).'***<br>';
+   DoorTryerPage($e);
 }
 catch (Error $e) 
 {
    echo  "<pre><b>er Перехвачена ошибка!</b><br>".$e."</pre>";
-   //DoorTryerPage($e->getMessage(),intval($e->getCode()),$e->getLine(),$e->getFile(),$e->getTraceAsString());
-   DoorTryerPage
-   (
-      $e->getMessage(),intval($e->getCode()),
-      $e->getLine(),$e->getFile(),$e->getTraceAsString()
-   );
-   echo '<br>*1*'.gettype($e->getCode()).'***<br>';
+   DoorTryerPage($e);
 }
 unset($w2e);
   

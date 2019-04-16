@@ -60,6 +60,11 @@ class My_Datetime extends DateTime
    {}
 } 
 */
+//$a=0;
+//$a=1/$a;
+
+//$a='три';
+//$a=1+$a;
 
 // *** E_PARSE *** остановка программы
 // Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' 
