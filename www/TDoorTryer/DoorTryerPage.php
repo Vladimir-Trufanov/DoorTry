@@ -30,7 +30,7 @@ function DoorTryPage($e)
       $TypeError='NoDefine'; $Point=-1;  
    }
    //echo '$TypeError='.$TypeError;
-   DoorTryerMessage
+   DoorTryMessage
    (
       $e->getMessage(),$TypeError,
       $e->getLine(),$e->getFile(),$e->getTraceAsString()

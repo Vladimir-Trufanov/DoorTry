@@ -2,52 +2,81 @@
 // Функции и классы для обработки ошибок PHP7+
 // (преобразования ошибок PHP в исключения)
 
-$TypeError[E_ERROR]             = "E_ERROR"; 
-$TypeError[E_WARNING]           = "E_WARNING"; 
-$TypeError[E_PARSE]             = "E_PARSE"; 
-$TypeError[E_NOTICE]            = "E_NOTICE"; 
-$TypeError[E_CORE_ERROR]        = "E_CORE_ERROR"; 
-$TypeError[E_CORE_WARNING]      = "E_CORE_WARNING"; 
-$TypeError[E_COMPILE_ERROR]     = "E_COMPILE_ERROR"; 
-$TypeError[E_COMPILE_WARNING]   = "E_COMPILE_WARNING"; 
-$TypeError[E_USER_ERROR]        = "E_USER_ERROR"; 
-$TypeError[E_USER_WARNING]      = "E_USER_WARNING"; 
-$TypeError[E_USER_NOTICE]       = "E_USER_NOTICE"; 
-$TypeError[E_STRICT]            = "E_STRICT"; 
-$TypeError[E_RECOVERABLE_ERROR] = "E_RECOVERABLE_ERROR"; 
-$TypeError[E_DEPRECATED]        = "E_DEPRECATED"; 
-$TypeError[E_USER_DEPRECATED]   = "E_USER_DEPRECATED"; 
-$TypeError[E_ALL]               = "E_ALL"; 
+// 1 - фатальная ошибка во время выполнения
+$TypeErrors[E_ERROR]             = "E_ERROR";
+// 2 - предупреждение во время выполнения        
+$TypeErrors[E_WARNING]           = "E_WARNING"; 
+// 4 - ошибка трансляции
+$TypeErrors[E_PARSE]             = "E_PARSE";
+// 8 - уведомление о проблеме
+$TypeErrors[E_NOTICE]            = "E_NOTICE";
+// 16 - фатальная ошибка ядра PHP
+$TypeErrors[E_CORE_ERROR]        = "E_CORE_ERROR";
+// 32 - предупреждение ядра PHP
+$TypeErrors[E_CORE_WARNING]      = "E_CORE_WARNING";
+// 64 - фатальная ошибка движка ZEND
+$TypeErrors[E_COMPILE_ERROR]     = "E_COMPILE_ERROR";
+// 128 - предупреждение движка ZEND
+$TypeErrors[E_COMPILE_WARNING]   = "E_COMPILE_WARNING";
+// 256 - фатальная ошибка по trigger_error()
+$TypeErrors[E_USER_ERROR]        = "E_USER_ERROR";
+// 512 - предупреждение по trigger_error()
+$TypeErrors[E_USER_WARNING]      = "E_USER_WARNING";
+// 1024 - уведомление по trigger_error()
+$TypeErrors[E_USER_NOTICE]       = "E_USER_NOTICE";
+// 2048 - рекомендация по улучшению кода
+$TypeErrors[E_STRICT]            = "E_STRICT"; 
+// 4096 - ошибка с возможностью обработки
+$TypeErrors[E_RECOVERABLE_ERROR] = "E_RECOVERABLE_ERROR";
+// 8192 - устаревшая конструкция
+$TypeErrors[E_DEPRECATED]        = "E_DEPRECATED"; 
+// 16384 - устаревшее по trigger_error()
+$TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED"; 
+// 32767
+$TypeErrors[E_ALL]               = "E_ALL"; 
+
+function terGetValue($inkey)
+{
+   global $TypeErrors;
+   $result='E_UNKNOWN';
+   foreach($TypeErrors as $key => $value) 
+   { 
+      if ($inkey==$key)
+      {
+         $result=$value;
+         break;
+      } 
+   }
+   return $result;         
+}
+
+function terIsKey($inkey)
+{
+   global $TypeErrors;
+   $result=false;
+   foreach($TypeErrors as $key => $value) 
+   { 
+      if ($inkey==$key)
+      {
+         $result=true;
+         break;
+      } 
+   }
+   return $result;         
+}
 
 function DoorTryShutdown()
 {
-   global $TypeError;
+   global $TypeErrors;
    
-   $lasterror = error_get_last();
-   
-   if (in_array($lasterror['type'],Array( 
-      E_ERROR, 
-      E_WARNING, 
-      E_PARSE,
-      E_NOTICE,
-      E_CORE_ERROR,
-      E_CORE_WARNING,
-      E_COMPILE_ERROR,
-      E_COMPILE_WARNING,
-      E_USER_ERROR,
-      E_USER_WARNING,
-      E_USER_NOTICE,
-      E_STRICT,
-      E_RECOVERABLE_ERROR, 
-      E_DEPRECATED,
-      E_USER_DEPRECATED
-   )))
-   
+   $lasterror=error_get_last();
+   $typelast=intval($lasterror['type']);
+   if (terIsKey($typelast))
    {
-      echo '###'.$TypeError[E_WARNING].'###';
+      $TypeError=terGetValue(intval($typelast));
       DoorTryMessage
       (
-         $lasterror['message'],'$TypeError',
+         $lasterror['message'],$TypeError,
          $lasterror['line'],$lasterror['file'],''
       );
    }
@@ -125,35 +154,44 @@ class DoorDryer_Catcher
          return true;
       }
       // Получаем текстовое представление типа ошибки
+      /*
       $types = array(
-         "E_ERROR",             // 1 - фатальная ошибка во время выполнения,  остановка программы
-         "E_WARNING",           // 2 - предупреждение во время выполнения,    --- продолжение работы 
-         "E_PARSE",             // 4 - ошибка трансляции,                     остановка программы
-         "E_NOTICE",            // 8 - уведомление о проблеме,                остановка программы
-         "E_CORE_ERROR",        // 16 - фатальная ошибка ядра PHP,            остановка программы
-         "E_CORE_WARNING",      // 32 - предупреждение ядра PHP,              ----------------------
-         "E_COMPILE_ERROR",     // 64 - фатальная ошибка движка ZEND,         остановка программы
-         "E_COMPILE_WARNING",   // 128 - предупреждение движка ZEND,          ----------------------
-         "E_USER_ERROR",        // 256 - фатальная ошибка по trigger_error(), ----------------------
-         "E_USER_WARNING",      // 512 - предупреждение по trigger_error(),   ----------------------
-         "E_USER_NOTICE",       // 1024 - уведомление по trigger_error(),     ----------------------
-         "E_STRICT",            // 2048 - рекомендация по улучшению кода,     ----------------------
-         "E_RECOVERABLE_ERROR", // 4096 - ошибка с возможностью обработки,    ----------------------
-         "E_DEPRECATED",        // 8192 - устаревшая конструкция,             ----------------------
-         "E_USER_DEPRECATED",   // 16384 - устаревшее по trigger_error(),     ----------------------
-         "E_ALL"                // 32767
+         "E_ERROR",             
+         "E_WARNING",           
+         "E_PARSE",            
+         "E_NOTICE",            
+         "E_CORE_ERROR",      
+         "E_CORE_WARNING",      
+         "E_COMPILE_ERROR",     
+         "E_COMPILE_WARNING",   
+         "E_USER_ERROR",        
+         "E_USER_WARNING",      
+         "E_USER_NOTICE",       
+         "E_STRICT",            
+         "E_RECOVERABLE_ERROR", 
+         "E_DEPRECATED",        
+         "E_USER_DEPRECATED",   
+         "E_ALL"                
       );
       // Формируем имя класса-исключения в зависимости от типа ошибки
       $className=__CLASS__."_"."Exception";
+      
+      
       foreach ($types as $t) 
       {
          $e=constant($t);
          if ($errno & $e) 
          {
             $className = $t;
+            //echo  '$className='.$className;
             break;
          }
       }
+      
+      
+      //$className = "E_USER_NOTICE";
+      */
+      $className=terGetValue($errno);
       // Генерируем исключение нужного типа.
       throw new $className($errno, $errstr, $errfile, $errline);
    }  
