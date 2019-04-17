@@ -2,6 +2,57 @@
 // Функции и классы для обработки ошибок PHP7+
 // (преобразования ошибок PHP в исключения)
 
+$TypeError[E_ERROR]             = "E_ERROR"; 
+$TypeError[E_WARNING]           = "E_WARNING"; 
+$TypeError[E_PARSE]             = "E_PARSE"; 
+$TypeError[E_NOTICE]            = "E_NOTICE"; 
+$TypeError[E_CORE_ERROR]        = "E_CORE_ERROR"; 
+$TypeError[E_CORE_WARNING]      = "E_CORE_WARNING"; 
+$TypeError[E_COMPILE_ERROR]     = "E_COMPILE_ERROR"; 
+$TypeError[E_COMPILE_WARNING]   = "E_COMPILE_WARNING"; 
+$TypeError[E_USER_ERROR]        = "E_USER_ERROR"; 
+$TypeError[E_USER_WARNING]      = "E_USER_WARNING"; 
+$TypeError[E_USER_NOTICE]       = "E_USER_NOTICE"; 
+$TypeError[E_STRICT]            = "E_STRICT"; 
+$TypeError[E_RECOVERABLE_ERROR] = "E_RECOVERABLE_ERROR"; 
+$TypeError[E_DEPRECATED]        = "E_DEPRECATED"; 
+$TypeError[E_USER_DEPRECATED]   = "E_USER_DEPRECATED"; 
+$TypeError[E_ALL]               = "E_ALL"; 
+
+function DoorTryShutdown()
+{
+   global $TypeError;
+   
+   $lasterror = error_get_last();
+   
+   if (in_array($lasterror['type'],Array( 
+      E_ERROR, 
+      E_WARNING, 
+      E_PARSE,
+      E_NOTICE,
+      E_CORE_ERROR,
+      E_CORE_WARNING,
+      E_COMPILE_ERROR,
+      E_COMPILE_WARNING,
+      E_USER_ERROR,
+      E_USER_WARNING,
+      E_USER_NOTICE,
+      E_STRICT,
+      E_RECOVERABLE_ERROR, 
+      E_DEPRECATED,
+      E_USER_DEPRECATED
+   )))
+   
+   {
+      echo '###'.$TypeError[E_WARNING].'###';
+      DoorTryMessage
+      (
+         $lasterror['message'],'$TypeError',
+         $lasterror['line'],$lasterror['file'],''
+      );
+   }
+} 
+
 /**
  *    В DoorTryer заложены все типы ошибок.
  * Через set_error_handler срабатывают только некоторые, часть срабатывает
@@ -9,13 +60,42 @@
  */
 class DoorTryer
 {
+   function InisetErrors()
+   {
+      // Определеяем уровень протоколирования ошибок
+      error_reporting(E_ALL);
+      // Определяем режим вывода ошибок:
+      //   если display_errors = on, то в случае ошибки браузер получит html 
+      //   c текстом ошибки и кодом 200
+      //   если же display_errors = off, то для фатальных ошибок код ответа будет 500
+      //   и результат не будет возвращён пользователю, для остальных ошибок – 
+      //   код будет работать неправильно, но никому об этом не расскажет
+      ini_set('display_errors','Off');
+      // Определяем режим вывода ошибок при запуске PHP. Если = on, то даже если 
+      // display_errors включена; ошибки, возникающие во время запуска PHP, не будут 
+      // отображаться. Настойчиво рекомендуем включать директиву 
+      // display_startup_errors только для отладки
+      ini_set('display_startup_errors','Off');
+      // Определяем ведение журнала, в котором будут сохраняться сообщения об ошибках.
+      // Это может быть журнал сервера или error_log. Применимость этой настройки 
+      // зависит от конкретного сервера.
+      //    При работе на готовых работающих web сайтах следует протоколировать 
+      // ошибки там, где они отображаются
+      ini_set('log_errors','On');
+      ini_set('error_log','log.txt');
+   }
+
+
+
    // Создает новый объект-перехватчик и подключает его к стеку
    // обработчиков ошибок PHP (используется идеология "выделение 
    // ресурса есть инициализация").
    public function __construct()
    {
+      $this->InisetErrors();
       $catcher = new DoorDryer_Catcher();
       set_error_handler(array($catcher,"DoorTryHandler"));
+      register_shutdown_function('DoorTryShutdown');
    }
    // Вызывается при уничтожении объекта-перехватчика (например,
    // при выходе его из области видимости функции). Восстанавливает
