@@ -1,7 +1,23 @@
 <?php 
-// Функции и классы для обработки ошибок PHP7+
-// (преобразования ошибок PHP в исключения)
+// PHP7/HTML5, EDGE/CHROME                           *** DoorTryerClass.php ***
 
+// ****************************************************************************
+// * DOORTRY                Обработать ошибки PHP7+ и пользовательские ошибки *
+// *                                  (преобразовать ошибки PHP в исключения) *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  09.04.2019
+// Copyright © 2019 tve                              Посл.изменение: 21.04.2019
+
+/**
+ * В DoorTryer заложены все типы ошибок. Через установленный модуль от 
+ * set_error_handler срабатывают некоторые типы ошибок, часть ошибок срабатывает
+ * через try-catch-error, остальные ошибки вылавливаются после завершения работы
+ * сценария через register_shutdown_function
+**/
+
+// ------------------------------------- Массив зарегистрированных ошибок PHP7+
 // 1 - фатальная ошибка во время выполнения
 $TypeErrors[E_ERROR]             = "E_ERROR";
 // 2 - предупреждение во время выполнения        
@@ -35,61 +51,36 @@ $TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED";
 // 32767
 $TypeErrors[E_ALL]               = "E_ALL"; 
 
-function terGetValue($inkey)
-{
-   global $TypeErrors;
-   $result='E_UNKNOWN';
-   foreach($TypeErrors as $key => $value) 
-   { 
-      if ($inkey==$key)
-      {
-         $result=$value;
-         break;
-      } 
-   }
-   return $result;         
-}
-
-function terIsKey($inkey)
-{
-   global $TypeErrors;
-   $result=false;
-   foreach($TypeErrors as $key => $value) 
-   { 
-      if ($inkey==$key)
-      {
-         $result=true;
-         break;
-      } 
-   }
-   return $result;         
-}
-
-function DoorTryShutdown()
-{
-   global $TypeErrors;
-   
-   $lasterror=error_get_last();
-   $typelast=intval($lasterror['type']);
-   if (terIsKey($typelast))
-   {
-      $TypeError=terGetValue(intval($typelast));
-      DoorTryMessage
-      (
-         $lasterror['message'],$TypeError,
-         $lasterror['line'],$lasterror['file'],''
-      );
-   }
-} 
-
-/**
- *    В DoorTryer заложены все типы ошибок.
- * Через set_error_handler срабатывают только некоторые, часть срабатывает
- * через try-catch-error, остальные через register_shutdown_function.
- */
+// ****************************************************************************
+// *  DoorTryer class       Обработать ошибки PHP7+ и пользовательские ошибки *
+// *                                  (преобразовать ошибки PHP в исключения) *
+// ****************************************************************************
 class DoorTryer
 {
-   function InisetErrors()
+   // -------------------------------------------------------------------------
+   // Создать новый объект-перехватчик и подключить его к стеку обработчиков 
+   // ошибок PHP, используя механизм "выделение ресурса есть инициализация",
+   // подключить обработчик после завершения работы сценария
+   // -------------------------------------------------------------------------
+   public function __construct()
+   {
+      $this->InisetErrors();
+      $catcher = new DoorDryer_Catcher();
+      set_error_handler(array($catcher,"DoorTryHandler"));
+      register_shutdown_function('DoorTryShutdown');
+   }
+   // -------------------------------------------------------------------------
+   // Уничтожить объекта-перехватчик (например, при выходе его из области 
+   // видимости функции). Восстановить предыдущий обработчик ошибок
+   // -------------------------------------------------------------------------
+   public function __destruct()
+   {
+      restore_error_handler();
+   }
+   // -------------------------------------------------------------------------
+   // Проинициализировать параметры Php.ini для управления выводом ошибок
+   // -------------------------------------------------------------------------
+   private function InisetErrors()
    {
       // Определеяем уровень протоколирования ошибок
       error_reporting(E_ALL);
@@ -113,35 +104,14 @@ class DoorTryer
       ini_set('log_errors','On');
       ini_set('error_log','log.txt');
    }
-
-
-
-   // Создает новый объект-перехватчик и подключает его к стеку
-   // обработчиков ошибок PHP (используется идеология "выделение 
-   // ресурса есть инициализация").
-   public function __construct()
-   {
-      $this->InisetErrors();
-      $catcher = new DoorDryer_Catcher();
-      set_error_handler(array($catcher,"DoorTryHandler"));
-      register_shutdown_function('DoorTryShutdown');
-   }
-   // Вызывается при уничтожении объекта-перехватчика (например,
-   // при выходе его из области видимости функции). Восстанавливает
-   // предыдущий обработчик ошибок
-   public function __destruct()
-   {
-      restore_error_handler();
-   }
 }
-
-/**
- * Внутренний класс, содержащий метод перехвата ошибок.
- * Мы не можем использовать для этой же цели непосредственно $this 
- * (класса PHP_Exceptionizer): вызов set_error_handler() увеличивает 
- * счетчик ссылок на объект, а он должен остаться неизменным, чтобы в 
- * программе всегда оставалась ровно одна ссылка.
- */
+// ****************************************************************************
+// *  DoorDryer_Catcher class           Внутренний класс: перехватить ошибки. *
+// *          Мы не можем использовать для этой же цели непосредственно $this * 
+// * (класса DoorTryer): вызов set_error_handler() увеличивает счетчик ссылок *
+// *     на объект, а он должен остаться неизменным, чтобы в программе всегда *
+// *                          оставалась ровно одна ссылка (Дмитрий Котеров). *
+// ****************************************************************************
 class DoorDryer_Catcher
 {
    // Функция-обработчик ошибок PHP
@@ -153,80 +123,66 @@ class DoorDryer_Catcher
       {
          return true;
       }
-      // Получаем текстовое представление типа ошибки
-      /*
-      $types = array(
-         "E_ERROR",             
-         "E_WARNING",           
-         "E_PARSE",            
-         "E_NOTICE",            
-         "E_CORE_ERROR",      
-         "E_CORE_WARNING",      
-         "E_COMPILE_ERROR",     
-         "E_COMPILE_WARNING",   
-         "E_USER_ERROR",        
-         "E_USER_WARNING",      
-         "E_USER_NOTICE",       
-         "E_STRICT",            
-         "E_RECOVERABLE_ERROR", 
-         "E_DEPRECATED",        
-         "E_USER_DEPRECATED",   
-         "E_ALL"                
-      );
-      // Формируем имя класса-исключения в зависимости от типа ошибки
-      $className=__CLASS__."_"."Exception";
-      
-      
-      foreach ($types as $t) 
-      {
-         $e=constant($t);
-         if ($errno & $e) 
-         {
-            $className = $t;
-            //echo  '$className='.$className;
-            break;
-         }
-      }
-      
-      
-      //$className = "E_USER_NOTICE";
-      */
       $className=terGetValue($errno);
       // Генерируем исключение нужного типа.
       throw new $className($errno, $errstr, $errfile, $errline);
    }  
 }
 
-/**
- * Базовый класс для всех исключений, полученных в результате ошибки PHP.
- */
-abstract class PHP_Exceptionizer_Exception extends Exception
+// ****************************************************************************
+// *      Обработать пропущенные ошибки после завершения работы сценария      *
+// ****************************************************************************
+function DoorTryShutdown()
 {
-   public function __construct($no=0,$str=null,$file=null,$line=0) 
+   global $TypeErrors;
+   
+   $lasterror=error_get_last();
+   $typelast=intval($lasterror['type']);
+   if (terIsKey($typelast))
    {
-      parent::__construct($str,$no);
-      $this->file=$file;
-      $this->line=$line;
+      $TypeError=terGetValue(intval($typelast));
+      DoorTryMessage
+      (
+         $lasterror['message'],$TypeError,
+         $lasterror['line'],$lasterror['file'],''
+      );
    }
+} 
+
+// ****************************************************************************
+// *                 Отловить незафиксированный тип ошибки                    *
+// ****************************************************************************
+function terGetValue($inkey)
+{
+   global $TypeErrors;
+   $result='E_UNKNOWN';
+   foreach($TypeErrors as $key => $value) 
+   { 
+      if ($inkey==$key)
+      {
+         $result=$value;
+         break;
+      } 
+   }
+   return $result;         
 }
 
-class E_EXCEPTION extends PHP_Exceptionizer_Exception {}
-class E_ERROR extends E_EXCEPTION {} 
-class E_WARNING extends E_EXCEPTION {} 
-class E_PARSE extends E_EXCEPTION {}
-class E_NOTICE extends E_EXCEPTION {}
-class E_CORE_ERROR extends E_EXCEPTION {}
-class E_CORE_WARNING extends E_EXCEPTION {}
-class E_COMPILE_ERROR extends E_EXCEPTION {}
-class E_COMPILE_WARNING extends E_EXCEPTION {}
-class E_USER_ERROR extends E_EXCEPTION {}
-class E_USER_WARNING extends E_EXCEPTION {}
-class E_USER_NOTICE extends E_EXCEPTION {}
-class E_STRICT extends E_EXCEPTION {}
-class E_RECOVERABLE_ERROR extends E_EXCEPTION {}
-class E_DEPRECATED extends E_EXCEPTION {}
-class E_USER_DEPRECATED extends E_EXCEPTION {}
-
-
+// ****************************************************************************
+// *     Проверить наличие ключа в массиве зарегистрированных ошибок PHP7+    *
+// ****************************************************************************
+function terIsKey($inkey)
+{
+   global $TypeErrors;
+   $result=false;
+   foreach($TypeErrors as $key => $value) 
+   { 
+      if ($inkey==$key)
+      {
+         $result=true;
+         break;
+      } 
+   }
+   return $result;         
+}
  
-     
+// ***************************************************** DoorTryerClass.php ***

@@ -40,16 +40,16 @@ DoorTry
 3=www\TDoorTryer\DoorTryerClass.php
 [Selected Project Files]
 Main=
-Selected=www\includErrs.php
+Selected=www\TDoorTryer\DoorTryerClass.php
 [www\index.php]
-TopLine=21
-Caret=6,37
+TopLine=1
+Caret=1,11
 [www\includErrs.php]
-TopLine=97
-Caret=3,93
+TopLine=27
+Caret=1,38
 [www\TDoorTryer\DoorTryerPage.php]
 TopLine=13
 Caret=11,33
 [www\TDoorTryer\DoorTryerClass.php]
-TopLine=181
-Caret=9,193
+TopLine=1
+Caret=72,2

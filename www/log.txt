@@ -583,3 +583,115 @@ Stack trace:
 #3 {main}
   thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
 [17-Apr-2019 21:05:57 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[20-Apr-2019 09:57:38 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(32): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[20-Apr-2019 09:57:38 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:20:59 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:20:59 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:22:23 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:22:23 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:22:38 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:22:38 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:23:46 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:23:46 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:23:53 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:23:53 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:23:59 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:23:59 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:24:07 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:24:07 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:24:15 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:24:15 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:24:57 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:24:57 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:25:03 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:25:03 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:29:26 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:29:26 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:34:24 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\Webservers\DoorTry\www\includErrs.php:93
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 11:34:24 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
+[21-Apr-2019 12:20:26 Asia/Kuwait] PHP Warning:  Uncaught Error: Class 'E_WARNING' not found in C:\Webservers\DoorTry\www\TDoorTryer\DoorTryerClass.php:128
+Stack trace:
+#0 C:\Webservers\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\Webservers\\D...', 93, Array)
+#1 C:\Webservers\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\Webservers\DoorTry\www\index.php(29): include('C:\\Webservers\\D...')
+#3 {main}
+  thrown in C:\Webservers\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
+[21-Apr-2019 12:20:26 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\Webservers\DoorTry\www\includErrs.php on line 93
