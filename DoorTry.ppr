@@ -20,19 +20,30 @@ DoorTry
 		+TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
 			www\TDoorTryer\DoorTryerPage.php
+		www\Common.php
+		www\error.php
 		www\favicon.ico
 		www\iGetAbove.php
 		www\includErrs.php
 		www\index.php
+		www\log.txt
 [Open project files]
 0=www\index.php
 1=www\TDoorTryer\DoorTryerClass.php
+2=www\error.php
+3=www\TDoorTryer\DoorTryerPage.php
 [Selected Project Files]
 Main=
-Selected=www\TDoorTryer\DoorTryerClass.php
+Selected=www\TDoorTryer\DoorTryerPage.php
 [www\index.php]
-TopLine=9
-Caret=1,22
+TopLine=3
+Caret=6,34
 [www\TDoorTryer\DoorTryerClass.php]
 TopLine=1
-Caret=1,184
+Caret=20,8
+[www\error.php]
+TopLine=1
+Caret=41,5
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=7
+Caret=7,27

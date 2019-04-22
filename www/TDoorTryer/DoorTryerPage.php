@@ -1,18 +1,30 @@
 <?php 
+
+
+require_once $_SERVER['DOCUMENT_ROOT']."/Common.php";
+//\common\Headeri("/Main.php?Com=Atfirst");
+
+
+
+
+
+
+
 // Функции и классы для обработки ошибок PHP7+
 // (преобразования ошибок PHP в исключения)
 
-function DoorTryMessage($errstr,$TypeError,$errline='',$errfile='',$TraceAsString='')
+function DoorTryMessage($errstr,$errtype,$errline='',$errfile='',$errtrace='')
 {
     echo "<br>-----------------------------";
     echo "<pre>";
     echo "<b>".$errstr."</b><br><br>";
     echo "File: ".$errfile."<br>";
     echo "Line: ".$errline."<br><br>";
-    echo $TypeError."<br>";
-    if (!($TraceAsString=='')) {echo $TraceAsString."<br>";}
+    echo $errtype."<br>";
+    if (!($errtrace=='')) {echo $errtrace."<br>";}
     echo "</pre>";
     echo "-----------------------------<br>";
+    //\common\Headeri("/error.php?etrace=".urlencode($errtrace));
 }
 
 function DoorTryPage($e)
