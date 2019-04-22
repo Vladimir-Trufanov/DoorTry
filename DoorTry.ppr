@@ -5,7 +5,7 @@ Compilator.CompileOnBackground=0
 Compilator.ProgSaveAll=0
 Compilator.ProgRunSelection=0
 Compilator.LogType=0
-DefaultDir=C:\Webservers\DoorTry
+DefaultDir=C:\DoorTry\www
 DefaultCP=0
 LogtoEnd=1
 DontOpen=0
@@ -16,40 +16,23 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+DoorTry
-		+www
-			+TDoorTryer
-				www\TDoorTryer\DoorTryerClass.php
-				www\TDoorTryer\DoorTryerPage.php
-			www\Actions.php
-			www\favicon.ico
-			www\iGetAbove.php
-			www\iHtmlBegin.php
-			www\iHtmlEnd.php
-			www\includErrs.php
-			www\index.php
-			www\log.txt
-			www\Site.php
-		DoorTry.ppr
-		LICENSE
-		README.md
+	+www
+		+TDoorTryer
+			www\TDoorTryer\DoorTryerClass.php
+			www\TDoorTryer\DoorTryerPage.php
+		www\favicon.ico
+		www\iGetAbove.php
+		www\includErrs.php
+		www\index.php
 [Open project files]
 0=www\index.php
-1=www\includErrs.php
-2=www\TDoorTryer\DoorTryerPage.php
-3=www\TDoorTryer\DoorTryerClass.php
+1=www\TDoorTryer\DoorTryerClass.php
 [Selected Project Files]
 Main=
 Selected=www\TDoorTryer\DoorTryerClass.php
 [www\index.php]
-TopLine=1
-Caret=1,11
-[www\includErrs.php]
-TopLine=27
-Caret=1,38
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=13
-Caret=11,33
+TopLine=9
+Caret=1,22
 [www\TDoorTryer\DoorTryerClass.php]
 TopLine=1
-Caret=72,2
+Caret=1,184

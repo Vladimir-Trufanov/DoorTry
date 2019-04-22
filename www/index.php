@@ -19,7 +19,7 @@ $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 
 // Подключаем модули обеспечения обработки ошибок
-require_once $SiteHost."/TPhpPrown/TPhpPrown/MakeRegExp.php";
+require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
 require_once "TDoorTryer/DoorTryerClass.php";
 require_once "TDoorTryer/DoorTryerPage.php";
 $w2e = new DoorTryer(E_ALL);
