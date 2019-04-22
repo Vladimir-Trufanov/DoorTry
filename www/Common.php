@@ -26,6 +26,19 @@ function Headeri($page)
     }
 }
 
+function DoorTryMessage($errstr,$errtype,$errline='',$errfile='',$errtrace='')
+{
+    echo "<br>-----------------------------";
+    echo "<pre>";
+    echo "<b>".$errstr."</b><br><br>";
+    echo "File: ".$errfile."<br>";
+    echo "Line: ".$errline."<br><br>";
+    echo $errtype."<br>";
+    if (!($errtrace=='')) {echo $errtrace."<br>";}
+    echo "</pre>";
+    echo "-----------------------------<br>";
+}
+
 
 // ************************************************************* Common.php ***
 

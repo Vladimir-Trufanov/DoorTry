@@ -13,18 +13,37 @@ require_once $_SERVER['DOCUMENT_ROOT']."/Common.php";
 // Функции и классы для обработки ошибок PHP7+
 // (преобразования ошибок PHP в исключения)
 
-function DoorTryMessage($errstr,$errtype,$errline='',$errfile='',$errtrace='')
+function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='')
 {
-    echo "<br>-----------------------------";
-    echo "<pre>";
-    echo "<b>".$errstr."</b><br><br>";
-    echo "File: ".$errfile."<br>";
-    echo "Line: ".$errline."<br><br>";
-    echo $errtype."<br>";
-    if (!($errtrace=='')) {echo $errtrace."<br>";}
-    echo "</pre>";
-    echo "-----------------------------<br>";
-    //\common\Headeri("/error.php?etrace=".urlencode($errtrace));
+   // \common\Headeri("/error.php");
+
+   /*
+    \common\Headeri("/error.php".
+      "?estr=".urlencode($errstr).
+      "&etype=".urlencode($errtype).
+      "&eline=".urlencode($errline).
+      "&efile=".urlencode($errfile).
+      "&etrace=".urlencode($errtrace));
+   */
+   
+   $uripage="error.php".
+      "?estr=".urlencode($errstr).
+      "&etype=".urlencode($errtype).
+      "&eline=".urlencode($errline).
+      "&efile=".urlencode($errfile).
+      "&etrace=".urlencode($errtrace);
+   
+   
+   //        document.location.replace("index.php?Com=Cook");
+   //echo '--script';
+   echo '<script>';
+   //echo 'document.location.replace("'.'error.php'.'")';
+   echo 'document.location.replace("'.$uripage.'")';
+   echo '</script>';
+   //echo '==script';
+
+      
+      
 }
 
 function DoorTryPage($e)
@@ -42,7 +61,7 @@ function DoorTryPage($e)
       $TypeError='NoDefine'; $Point=-1;  
    }
    //echo '$TypeError='.$TypeError;
-   DoorTryMessage
+   DoorTryExec
    (
       $e->getMessage(),$TypeError,
       $e->getLine(),$e->getFile(),$e->getTraceAsString()
