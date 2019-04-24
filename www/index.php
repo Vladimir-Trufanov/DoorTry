@@ -22,9 +22,12 @@ $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
 require_once "TDoorTryer/DoorTryerClass.php";
 require_once "TDoorTryer/DoorTryerPage.php";
+//include 'Body.php'; 
+
 $w2e = new DoorTryer(E_ALL);
 try 
 {
+   //MainBody();
    echo 'Привет!<br>';
    include 'includErrs.php'; 
    echo '<br>Hi!';
@@ -40,5 +43,6 @@ catch (Error $e)
    DoorTryPage($e);
 }
 unset($w2e);
+
   
 // ************************************************************** index.php ***

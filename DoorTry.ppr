@@ -17,37 +17,48 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
-		+TDoorTryer
+		-imgs
+			www\imgs\clouds.jpg
+			www\imgs\gator.jpg
+			www\imgs\jellyfish.jpg
+			www\imgs\mule.jpg
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
 			www\TDoorTryer\DoorTryerPage.php
+		www\Body.php
 		www\Common.php
 		www\error.php
 		www\favicon.ico
 		www\iGetAbove.php
 		www\includErrs.php
 		www\index.php
-		www\log.txt
+		www\Main.php
+		www\styles.css
 [Open project files]
 0=www\index.php
-1=www\TDoorTryer\DoorTryerClass.php
-2=www\error.php
-3=www\TDoorTryer\DoorTryerPage.php
-4=www\Common.php
+1=www\Common.php
+2=www\Body.php
+3=www\iGetAbove.php
+4=www\Main.php
+5=www\includErrs.php
 [Selected Project Files]
 Main=
-Selected=www\TDoorTryer\DoorTryerPage.php
+Selected=www\index.php
 [www\index.php]
-TopLine=31
-Caret=6,34
-[www\TDoorTryer\DoorTryerClass.php]
-TopLine=11
-Caret=20,8
-[www\error.php]
-TopLine=1
-Caret=11,20
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=23
-Caret=4,42
+TopLine=13
+Caret=1,46
 [www\Common.php]
-TopLine=19
-Caret=79,29
+TopLine=1
+Caret=1,1
+[www\Body.php]
+TopLine=9
+Caret=10,5
+[www\iGetAbove.php]
+TopLine=21
+Caret=1,1
+[www\Main.php]
+TopLine=7
+Caret=1,1
+[www\includErrs.php]
+TopLine=25
+Caret=1,38

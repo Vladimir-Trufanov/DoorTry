@@ -1,0 +1,40 @@
+[24-Apr-2019 21:01:19 Asia/Kuwait] PHP Warning:  Uncaught Error: Class 'E_WARNING' not found in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php:128
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 93, Array)
+#1 C:\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\DoorTry\www\index.php(46): include('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
+[24-Apr-2019 21:01:19 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 93
+[24-Apr-2019 21:02:51 Asia/Kuwait] PHP Warning:  Uncaught Error: Class 'E_WARNING' not found in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php:128
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 93, Array)
+#1 C:\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\DoorTry\www\index.php(46): include('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
+[24-Apr-2019 21:02:51 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 93
+[24-Apr-2019 21:04:37 Asia/Kuwait] PHP Warning:  Uncaught Error: Class 'E_WARNING' not found in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php:128
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 93, Array)
+#1 C:\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\DoorTry\www\index.php(32): include('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
+[24-Apr-2019 21:04:37 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 93
+[24-Apr-2019 21:04:42 Asia/Kuwait] PHP Warning:  Uncaught Error: Class 'E_WARNING' not found in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php:128
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 93, Array)
+#1 C:\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\DoorTry\www\index.php(32): include('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
+[24-Apr-2019 21:04:42 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 93
+[24-Apr-2019 21:05:05 Asia/Kuwait] PHP Warning:  Uncaught Error: Class 'E_WARNING' not found in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php:128
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(93): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 93, Array)
+#1 C:\DoorTry\www\includErrs.php(93): require_once()
+#2 C:\DoorTry\www\index.php(32): include('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
+[24-Apr-2019 21:05:05 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 93
