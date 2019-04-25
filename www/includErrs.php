@@ -35,7 +35,7 @@
 //              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(437): 
 //              include() #1 {main} 
 //              thrown in C:\Webservers\DoorTry\www\include.php on line 61
-split(',', 'a,b');
+//split(',', 'a,b');
 
 // *** E_WARNING *** продолжение работы
 // Warning: fopen(spoon): failed to open stream: No such file or directory 
@@ -60,6 +60,7 @@ class My_Datetime extends DateTime
    {}
 } 
 */
+
 //$a=0;
 //$a=1/$a;
 
@@ -90,7 +91,7 @@ class My_Datetime extends DateTime
 // Fatal error: require_once(): Failed opening required 'not-exists.php' 
 //              (include_path='.;C:\php\pear') 
 //              in C:\Webservers\DoorTry\www\include.php on line 25
-//require_once 'not-exists.php';
+require_once 'not-exists.php';
 
 // *** E_COMPILE_WARNING *** 
 

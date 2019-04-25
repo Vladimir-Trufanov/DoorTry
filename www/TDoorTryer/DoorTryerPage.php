@@ -37,8 +37,12 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='')
    //        document.location.replace("index.php?Com=Cook");
    //echo '--script';
    echo '<script>';
-   //echo 'document.location.replace("'.'error.php'.'")';
-   echo 'document.location.replace("'.$uripage.'")';
+   //echo 'document.location.assign("'.'error.php'.'")';
+   //echo 'window.location.assign("'.'http://ittve.me'.'")';
+   echo 'window.location.assign("'.$uripage.'")';
+
+   //echo 'document.location.replace("'.$uripage.'")';
+   //echo 'document.location.assign("'.$uripage.'")';
    echo '</script>';
    //echo '==script';
 

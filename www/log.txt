@@ -38,3 +38,48 @@ Stack trace:
 #3 {main}
   thrown in C:\DoorTry\www\TDoorTryer\DoorTryerClass.php on line 128
 [24-Apr-2019 21:05:05 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 93
+[25-Apr-2019 16:27:29 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php:94
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(94): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 94, Array)
+#1 C:\DoorTry\www\includErrs.php(94): require_once()
+#2 C:\DoorTry\www\Main.php(50): require_once('C:\\DoorTry\\www\\...')
+#3 C:\DoorTry\www\index.php(12): require_once('C:\\DoorTry\\www\\...')
+#4 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:27:29 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:29:40 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php:94
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(94): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 94, Array)
+#1 C:\DoorTry\www\includErrs.php(94): require_once()
+#2 C:\DoorTry\www\Main.php(50): require_once('C:\\DoorTry\\www\\...')
+#3 C:\DoorTry\www\index.php(12): require_once('C:\\DoorTry\\www\\...')
+#4 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:29:40 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:31:01 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php:94
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(94): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 94, Array)
+#1 C:\DoorTry\www\includErrs.php(94): require_once()
+#2 C:\DoorTry\www\Main.php(50): require_once('C:\\DoorTry\\www\\...')
+#3 C:\DoorTry\www\index.php(12): require_once('C:\\DoorTry\\www\\...')
+#4 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:31:01 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:31:38 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php:94
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(94): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 94, Array)
+#1 C:\DoorTry\www\includErrs.php(94): require_once()
+#2 C:\DoorTry\www\Main.php(50): require_once('C:\\DoorTry\\www\\...')
+#3 C:\DoorTry\www\index.php(12): require_once('C:\\DoorTry\\www\\...')
+#4 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:31:38 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:36:10 Asia/Kuwait] PHP Warning:  Uncaught E_WARNING: require_once(not-exists.php): failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php:94
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(94): DoorDryer_Catcher->DoorTryHandler(2, 'require_once(no...', 'C:\\DoorTry\\www\\...', 94, Array)
+#1 C:\DoorTry\www\includErrs.php(94): require_once()
+#2 C:\DoorTry\www\Main.php(50): require_once('C:\\DoorTry\\www\\...')
+#3 C:\DoorTry\www\index.php(12): require_once('C:\\DoorTry\\www\\...')
+#4 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 94
+[25-Apr-2019 16:36:10 Asia/Kuwait] PHP Fatal error:  main(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 94

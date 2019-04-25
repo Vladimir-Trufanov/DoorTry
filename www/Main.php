@@ -1,71 +1,85 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>Большая книга CSS</title>
-<link href="styles.css" rel="stylesheet">
-</head>
+<?php
+// PHP7/HTML5, EDGE/CHROME                                     *** Main.php ***
 
-<body>
-<div class="pageWrapper">
-<header>
-<nav class="clear">
-<ul>
-<li><a href="#">О книге</a></li>
-<li><a href="#">Свойства CSS</a></li>
-<li><a href="#">Советы по CSS</a></li>
-<li><a href="includErrs.php">Ошибки</a></li>
-<li><a href="#">Контакты</a></li>
-</ul>
-</nav>
-<h1>Большая книга CSS</h1>
-</header>
-<div class="contentWrapper">
-<div class="columnWrapper">
-<!-- основной контент -->
-<article class="main">
-  <h2>Название</h2>
-  <p><img src="imgs/clouds.jpg" alt="Облака" class="half right">Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum.</p>
-  <p>Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. </p>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
-  <h3><img src="imgs/jellyfish.jpg" alt="Медуза" class="half left">Подзаголовок</h3>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
-  <h3>Подзаголовок</h3>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tor</p>
-</article>
-<!-- первая боковая панель -->
-<aside class="sidebar1">
-  <h2>Боковая панель 1</h2>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.  </p>
-  <p><img src="imgs/gator.jpg" alt="Аллигатор"></p>
-  <h3>Второстепенный заголовок</h3>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum.  </p>
-  <h3>Второстепенный заголовок</h3>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
-</aside>
-</div>
-<!-- вторая боковая панель -->
-<aside class="sidebar2">
-<h2>Боковая панель 2 </h2>
-  <ul>
-    <li>Aenean orci ante</li>
-    <li>Venenatis non adipiscing vita</li>
-    <li> Fringilla et neque</li>
-    <li>Aenean orci ante</li>
-    <li>Venenatis non adipiscing vita</li>
-    <li> Fringilla et neque</li>
-  </ul>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.Suspendisse vitae quam lorem, in tempus velit. </p>
-  <p><img src="imgs/mule.jpg" alt="Ослик"></p>
-  <p>Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.</p>
-</aside>
-</div>
-<footer>
-<p>Собственность 2015, Greek Text Generator, Inc.
-Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.</p>
-<p>Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></p>
-</footer>
-</div>
-</body>
-</html>
+// ****************************************************************************
+// *      DOORTRY - сайт сбора ошибок и формирования страницы с ошибками      *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  09.04.2019
+// Copyright © 2019 tve                              Посл.изменение: 21.04.2019
+
+// "фрагмент с типом ошибки с начала строки до ":"
+define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
+
+// Инициализируем корневой каталог сайта, надсайтовый каталог, каталог хостинга
+require_once "iGetAbove.php";
+$SiteRoot = $_SERVER['DOCUMENT_ROOT'];  // Корневой каталог сайта
+$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
+
+// Подключаем модули обеспечения обработки ошибок
+require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
+require_once "TDoorTryer/DoorTryerClass.php";
+require_once "TDoorTryer/DoorTryerPage.php";
+require_once "PHP/Exceptionizer.php";
+
+//$w2e = new PHP_Exceptionizer(E_ALL);
+$w2e = new DoorTryer(E_ALL);
+try 
+{
+
+   //echo '<script>';
+   //echo 'document.location.assign("'.'http://ittve.me'.'")';
+   
+   //echo 'window.location.assign("'.'http://ittve.me'.'")';
+   
+   
+   //echo 'document.location.replace("'.$uripage.'")';
+   //echo 'document.location.assign("'.$uripage.'")';
+   //echo '</script>';
+   
+   //MainBody();
+   //echo 'Привет!<br>';
+   //include 'includErrs.php'; 
+   //echo '<br>Hi!';
+   
+   
+   
+   //require_once "iHtmlBegin.php";
+   require_once "includErrs.php";
+   //require_once "Site.php";
+   //require_once "iHtmlEnd.php";
+}
+
+/*
+catch (E_EXCEPTION $e) 
+{
+   echo '<pre>';
+   echo "{$e->getMessage()}";
+   echo $e->getTraceAsString();
+   echo '</pre>';
+   
+   // При необходимости выводим дополнительную информацию
+   // Header("Content-type: text/plain");
+   // $headers = getallheaders();
+   // print_r($headers);
+   // print_r($_SERVER);
+}
+*/
+ 
+catch (E_EXCEPTION $e) 
+{
+   //echo  "<pre><b>ex Перехвачена ошибка!</b><br>".$e."</pre>";
+   DoorTryPage($e);
+}
+catch (Error $e) 
+{
+   //echo  "<pre><b>er Перехвачена ошибка!</b><br>".$e."</pre>";
+   DoorTryPage($e);
+}
+
+unset($w2e);
+
+  
+// *************************************************************** Main.php ***
