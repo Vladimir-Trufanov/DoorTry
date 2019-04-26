@@ -140,12 +140,11 @@ function DoorTryShutdown()
    if (terIsKey($typelast))
    {
       $TypeError=terGetValue(intval($typelast));
-      echo 'Привет!';
-      //DoorTryMessage
-      //(
-      //   $lasterror['message'],$TypeError,
-      //   $lasterror['line'],$lasterror['file'],''
-      //);
+      DoorTryExec
+      (
+         $lasterror['message'],$TypeError,
+         $lasterror['line'],$lasterror['file'],''
+      );
    }
 } 
 // ****************************************************************************

@@ -22,19 +22,25 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
+		-PHP
+			www\PHP\Exceptionizer.php
 		+TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\Body.php
 		www\Common.php
+		www\doortry.bmp
 		www\error.php
 		www\favicon.ico
 		www\iGetAbove.php
+		www\iHtmlBegin.php
+		www\iHtmlEnd.php
 		www\includErrs.php
 		www\index.php
 		www\log.txt
 		www\Main.php
 		www\MainOld.php
+		www\Site.php
 		www\styles.css
 [Open project files]
 0=www\Main.php
@@ -44,27 +50,43 @@ DoorTry
 4=www\error.php
 5=www\Common.php
 6=www\TDoorTryer\DoorTryerClass.php
+7=www\MainOld.php
+8=www\iHtmlBegin.php
+9=www\iHtmlEnd.php
+10=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\TDoorTryer\DoorTryerClass.php
+Selected=www\Site.php
 [www\Main.php]
-TopLine=61
-Caret=4,74
+TopLine=31
+Caret=4,50
 [www\index.php]
 TopLine=1
 Caret=72,10
 [www\includErrs.php]
-TopLine=83
-Caret=1,94
+TopLine=13
+Caret=3,43
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=53
-Caret=47,42
+TopLine=25
+Caret=33,31
 [www\error.php]
-TopLine=1
+TopLine=11
 Caret=1,1
 [www\Common.php]
 TopLine=17
 Caret=1,1
 [www\TDoorTryer\DoorTryerClass.php]
-TopLine=123
-Caret=9,148
+TopLine=17
+Caret=1,143
+[www\MainOld.php]
+TopLine=66
+Caret=1,70
+[www\iHtmlBegin.php]
+TopLine=7
+Caret=16,5
+[www\iHtmlEnd.php]
+TopLine=1
+Caret=1,1
+[www\Site.php]
+TopLine=59
+Caret=7,69

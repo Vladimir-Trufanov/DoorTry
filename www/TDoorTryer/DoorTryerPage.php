@@ -26,7 +26,9 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='')
       "&etrace=".urlencode($errtrace));
    */
    
-   $uripage="error.php".
+   //$uripage="error.php".
+   //$uripage="http://kwinflatht.nichost.ru/error.php".
+   $uripage="http://localhost:82/error.php".
       "?estr=".urlencode($errstr).
       "&etype=".urlencode($errtype).
       "&eline=".urlencode($errline).

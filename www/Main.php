@@ -46,10 +46,10 @@ try
    
    
    
-   //require_once "iHtmlBegin.php";
+   require_once "iHtmlBegin.php";
    require_once "includErrs.php";
-   //require_once "Site.php";
-   //require_once "iHtmlEnd.php";
+   require_once "Site.php";
+   require_once "iHtmlEnd.php";
 }
 
 /*

@@ -1,13 +1,16 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<!-- <meta name="viewport" content="width=device-width"> -->
-<title>Большая книга CSS</title>
-<link href="styles.css" rel="stylesheet">
-</head>
+<?php
+// PHP7/HTML5, EDGE/CHROME                                     *** Site.php ***
 
-<body>
+// ****************************************************************************
+// * ittve.me                          Обо мне, путешествиях и ... Черногории *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  13.01.2019
+// Copyright © 2019 tve                              Посл.изменение: 19.02.2019
+
+?>
+
 <div class="pageWrapper">
 <header>
 <nav class="clear">
@@ -19,7 +22,7 @@
 <li><a href="#">Контакты</a></li>
 </ul>
 </nav>
-<h1>Большая книга CSS</h1>
+<h1>DoorTry - коллекционер ошибок</h1>
 </header>
 <div class="contentWrapper">
 <div class="columnWrapper">
@@ -62,10 +65,11 @@
 </aside>
 </div>
 <footer>
-<p>Собственность 2015, Greek Text Generator, Inc.
-Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.</p>
+<p>Copyright © 2019 tve</p> 
+<p>---</p> 
 <p>Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></p>
 </footer>
 </div>
-</body>
-</html>
+
+<?php
+// <!-- --> ****************************************************** Site.php ***

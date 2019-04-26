@@ -91,7 +91,7 @@ class My_Datetime extends DateTime
 // Fatal error: require_once(): Failed opening required 'not-exists.php' 
 //              (include_path='.;C:\php\pear') 
 //              in C:\Webservers\DoorTry\www\include.php on line 25
-require_once 'not-exists.php';
+//require_once 'not-exists.php';
 
 // *** E_COMPILE_WARNING *** 
 
