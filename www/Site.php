@@ -15,9 +15,9 @@
 <header>
 <nav class="clear">
 <ul>
-<li><a href="#">О книге</a></li>
-<li><a href="#">Свойства CSS</a></li>
-<li><a href="#">Советы по CSS</a></li>
+<li><a href="#">Простой принцип</a></li>
+<li><a href="#">Штрихотворения</a></li>
+<li><a href="#">SoftШутки</a></li>
 <li><a href="includErrs.php">Ошибки</a></li>
 <li><a href="#">Контакты</a></li>
 </ul>
@@ -26,6 +26,7 @@
 </header>
 <div class="contentWrapper">
 <div class="columnWrapper">
+
 <!-- основной контент -->
 <article class="main">
   <h2>Название</h2>
@@ -37,28 +38,83 @@
   <h3>Подзаголовок</h3>
   <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tor</p>
 </article>
+
 <!-- первая боковая панель -->
 <aside class="sidebar1">
-  <h2>Боковая панель 1</h2>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.  </p>
+  <h2>Новости</h2>
+  <ul>
+    <li>Яндекс-Новости</li>
+    <li>Лига-Новости</li>
+  </ul>
   <p><img src="imgs/gator.jpg" alt="Аллигатор"></p>
-  <h3>Второстепенный заголовок</h3>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum.  </p>
-  <h3>Второстепенный заголовок</h3>
-  <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
+
+
+  <h3>Яндекс-Новости</h3>
+
+<p>
+
+<?php
+ 
+$url = "https://news.yandex.ru/gadgets.rss?&";
+  $content = file_get_contents($url);
+  $items = new SimpleXmlElement($content);
+ 
+  print "<ul>";
+   $Point=1;
+   foreach($items -> channel -> item as $item) 
+   {
+    print "<li><a href = '{$item->link}' title = '$item->title'>" .
+    $item->title . "</a> - " . $item -> description . "</li>";
+   $Point=$Point+1;
+   
+   if ($Point>2) {break;}
+   
+   }
+ 
+  print "</ul>";
+?>
+</p>
+ 
+
+  <h3>Лига-Новости</h3>
+<p>
+
+<?php
+
+   $rss = simplexml_load_file ( 'http://news.liga.net/economics/rss.xml' );
+   
+   
+   echo ''."\n";
+   $Point=1;
+   foreach ( $rss->channel->item as $item )  
+   {
+      $image = $item->enclosure;  
+      $item->pubDate = date("H:i ", strtotime("$item->pubDate"));  
+      echo '<details class="rss_sp">';
+      echo '<img src="'.$image['url'].'" width="'.$image['width'].
+         '" height="'.$image['height'].'" alt="" class="image_link" />';
+      echo '<td>';  
+      echo '<summary><span>'.$item->title.'</span></summary>';  
+      echo '<div><p>'.$item->description.'</p></div><a href="'.
+         $item->link.'"target="blank" class="link">Подробнее</a>';  
+      echo '</td>';  echo '</details>'."\n";  
+      echo '<tr><td colspan="2">&nbsp;</td></tr>'."\n";  
+      echo '<span class="date">'.$item->pubDate.'</span>';  
+   $Point=$Point+1;
+   if ($Point>2) {break;}
+
+   }
+   echo ' ';
+
+?>
+</p>
+
 </aside>
 </div>
+
 <!-- вторая боковая панель -->
 <aside class="sidebar2">
-<h2>Боковая панель 2 </h2>
-  <ul>
-    <li>Aenean orci ante</li>
-    <li>Venenatis non adipiscing vita</li>
-    <li> Fringilla et neque</li>
-    <li>Aenean orci ante</li>
-    <li>Venenatis non adipiscing vita</li>
-    <li> Fringilla et neque</li>
-  </ul>
+<h2>Всякое-разное</h2>
   <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.Suspendisse vitae quam lorem, in tempus velit. </p>
   <p><img src="imgs/mule.jpg" alt="Ослик"></p>
   <p>Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor.</p>
