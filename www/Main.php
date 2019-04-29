@@ -18,11 +18,10 @@ $SiteRoot = $_SERVER['DOCUMENT_ROOT'];  // Корневой каталог са�
 $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 
-// Подключаем модули обеспечения обработки ошибок
-require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
-require_once "TDoorTryer/DoorTryerClass.php";
-require_once "TDoorTryer/DoorTryerPage.php";
+//require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
 
+// Подключаем модули и обеспечиваем обработку ошибок
+require_once "TDoorTryer/DoorTryerClass.php";
 $w2e = new DoorTryer(E_ALL);
 try 
 {
@@ -41,6 +40,5 @@ catch (Error $e)
    //echo  "<pre><b>er Перехвачена ошибка!</b><br>".$e."</pre>";
    DoorTryPage($e);
 }
-
 unset($w2e);
 // *************************************************************** Main.php ***

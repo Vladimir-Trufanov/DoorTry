@@ -16,10 +16,8 @@
 <nav class="clear">
 <ul>
 <li><a href="#">Простой принцип</a></li>
-<li><a href="#">Штрихотворения</a></li>
 <li><a href="#">SoftШутки</a></li>
-<li><a href="includErrs.php">Ошибки</a></li>
-<li><a href="#">Контакты</a></li>
+<li><a href="#">Штрихотворения</a></li>
 </ul>
 </nav>
 <h1>DoorTry - коллекционер ошибок</h1>

@@ -1,6 +1,17 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT']."/Common.php";
+function DoorTryMessage($errstr,$errtype,$errline='',$errfile='',$errtrace='')
+{
+    echo "<br>-----------------------------";
+    echo "<pre>";
+    echo "<b>".$errstr."</b><br><br>";
+    echo "File: ".$errfile."<br>";
+    echo "Line: ".$errline."<br><br>";
+    echo $errtype."<br>";
+    if (!($errtrace=='')) {echo $errtrace."<br>";}
+    echo "</pre>";
+    echo "-----------------------------<br>";
+}
 
 $errstr='';    
 if (IsSet($_GET['estr'])) 
@@ -28,4 +39,4 @@ if (IsSet($_GET['etrace']))
    $errtrace=urldecode($_GET['etrace']);
 }
 
-\common\DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);
+DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);

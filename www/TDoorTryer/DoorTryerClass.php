@@ -51,6 +51,8 @@ $TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED";
 // 32767
 $TypeErrors[E_ALL]               = "E_ALL"; 
 
+require_once $_SERVER['DOCUMENT_ROOT']."/TDoorTryer/DoorTryerPage.php";
+
 // ****************************************************************************
 // *  DoorTryer class       Обработать ошибки PHP7+ и пользовательские ошибки *
 // *                                  (преобразовать ошибки PHP в исключения) *
