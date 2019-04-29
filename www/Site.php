@@ -27,9 +27,33 @@
 <div class="contentWrapper">
 <div class="columnWrapper">
 
-<!-- основной контент -->
 <article class="main">
   <h2>Название</h2>
+
+<?php
+   /*
+   <!-- 1 штрих-код -->
+   <div style="text-align:center;">
+   <a target="_blank" style="font-family:arial;text-decoration:none;color:#000;font-size:13px;" 
+      href="http://qrcc.ru/qrcode.html">
+   <script type="text/javascript" src="http://qrcc.ru/urlqr.js"></script><br>
+   QR код этой страницы
+   </a>
+   </div>
+   */
+   
+   /*
+   // 2 штрих-код
+   include "phpqrcode/qrlib.php";
+   QRcode::png("http://ittve.me", "test.png", "L", 4, 4);
+  
+   // 3 штрих-код
+   $backColor = 0xFFFF00; //0x555555;
+   $foreColor = 0xFF00FF; //0x111111;
+   QRcode::png("http://doortry.ru","doortry.png","L",4,4,false,$backColor,$foreColor);
+   */
+?>
+ 
   <p><img src="imgs/clouds.jpg" alt="Облака" class="half right">Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum.</p>
   <p>Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. </p>
   <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
@@ -105,6 +129,10 @@ $url = "https://news.yandex.ru/gadgets.rss?&";
 
    }
    echo ' ';
+   
+   //phpinfo();
+
+
 
 ?>
 </p>

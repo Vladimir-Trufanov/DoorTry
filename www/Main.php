@@ -22,52 +22,15 @@ $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
 require_once "TDoorTryer/DoorTryerClass.php";
 require_once "TDoorTryer/DoorTryerPage.php";
-require_once "PHP/Exceptionizer.php";
 
-//$w2e = new PHP_Exceptionizer(E_ALL);
 $w2e = new DoorTryer(E_ALL);
 try 
 {
-
-   //echo '<script>';
-   //echo 'document.location.assign("'.'http://ittve.me'.'")';
-   
-   //echo 'window.location.assign("'.'http://ittve.me'.'")';
-   
-   
-   //echo 'document.location.replace("'.$uripage.'")';
-   //echo 'document.location.assign("'.$uripage.'")';
-   //echo '</script>';
-   
-   //MainBody();
-   //echo 'Привет!<br>';
-   //include 'includErrs.php'; 
-   //echo '<br>Hi!';
-   
-   
-   
    require_once "iHtmlBegin.php";
    require_once "includErrs.php";
    require_once "Site.php";
    require_once "iHtmlEnd.php";
 }
-
-/*
-catch (E_EXCEPTION $e) 
-{
-   echo '<pre>';
-   echo "{$e->getMessage()}";
-   echo $e->getTraceAsString();
-   echo '</pre>';
-   
-   // При необходимости выводим дополнительную информацию
-   // Header("Content-type: text/plain");
-   // $headers = getallheaders();
-   // print_r($headers);
-   // print_r($_SERVER);
-}
-*/
- 
 catch (E_EXCEPTION $e) 
 {
    //echo  "<pre><b>ex Перехвачена ошибка!</b><br>".$e."</pre>";
@@ -80,6 +43,4 @@ catch (Error $e)
 }
 
 unset($w2e);
-
-  
 // *************************************************************** Main.php ***

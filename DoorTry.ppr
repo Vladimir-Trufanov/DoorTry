@@ -32,7 +32,6 @@ DoorTry
 		www\doortry.bmp
 		www\error.php
 		www\favicon.ico
-		www\iGetAbove.php
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
 		www\includErrs.php
@@ -42,19 +41,28 @@ DoorTry
 		www\MainOld.php
 		www\Site.php
 		www\styles.css
+		www\iGetAbove.php
 [Open project files]
 0=www\Main.php
 1=www\includErrs.php
 2=www\Site.php
+3=www\index.php
+4=www\TDoorTryer\DoorTryerClass.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\includErrs.php
 [www\Main.php]
-TopLine=31
-Caret=4,50
+TopLine=21
+Caret=1,46
 [www\includErrs.php]
-TopLine=65
-Caret=3,78
+TopLine=68
+Caret=36,81
 [www\Site.php]
-TopLine=86
-Caret=1,104
+TopLine=34
+Caret=1,34
+[www\index.php]
+TopLine=1
+Caret=1,1
+[www\TDoorTryer\DoorTryerClass.php]
+TopLine=115
+Caret=1,1
