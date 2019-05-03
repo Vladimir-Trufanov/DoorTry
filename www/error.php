@@ -39,4 +39,5 @@ if (IsSet($_GET['etrace']))
    $errtrace=urldecode($_GET['etrace']);
 }
 
+//echo '==='.$errtrace.'===';
 DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);

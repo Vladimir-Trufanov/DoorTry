@@ -17,7 +17,9 @@
  * сценария через register_shutdown_function
 **/
 
-// ------------------------------------- Массив зарегистрированных ошибок PHP7+
+// -------------- Рег.выражение "фрагмент с типом ошибки с начала строки до ":"
+define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
+// ------------------------------------------- Массив зарегистрированных ошибок
 // 1 - фатальная ошибка во время выполнения
 $TypeErrors[E_ERROR]             = "E_ERROR";
 // 2 - предупреждение во время выполнения        
@@ -50,8 +52,59 @@ $TypeErrors[E_DEPRECATED]        = "E_DEPRECATED";
 $TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED"; 
 // 32767
 $TypeErrors[E_ALL]               = "E_ALL"; 
+// ------------------------------------------- Массив зарегистрированных ошибок
 
-require_once $_SERVER['DOCUMENT_ROOT']."/TDoorTryer/DoorTryerPage.php";
+function isPhp7()
+{
+   $Result=False;
+   if (defined('PHP_VERSION_ID')) 
+   {
+      if (PHP_VERSION_ID>=70000) {$Result=True;}
+   }
+   return $Result;
+}
+
+function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='')
+{
+   $uripage="http://kwinflatht.nichost.ru/error.php".
+   //$uripage="http://localhost:82/error.php".
+      "?estr=".urlencode($errstr).
+      "&etype=".urlencode($errtype).
+      "&eline=".urlencode($errline).
+      "&efile=".urlencode($errfile).
+      "&etrace=".urlencode($errtrace);
+   
+   // Вызываем страницу ошибки через javascript
+   echo '<script>';
+   echo 'window.location.assign("'.$uripage.'")';
+   echo '</script>';
+
+   // Вызываем страницу ошибки через отправку заголовка
+   // Header("Location: ".$uripage);
+}
+
+function DoorTryPage($e)
+{
+   //echo '***'.$e.'***';
+   // Определяем тип ошибки
+   $value=preg_match_all(regErrorType,$e,$matches,PREG_OFFSET_CAPTURE);
+
+   if ($value>0)
+   {
+      $findes=$matches[0]; 
+      $TypeError=$findes[0][0]; $Point=$findes[0][1];  
+   }
+   else
+   {
+      $TypeError='NoDefine'; $Point=-1;  
+   }
+   //echo '$TypeError='.$TypeError;
+   DoorTryExec
+   (
+      $e->getMessage(),$TypeError,
+      $e->getLine(),$e->getFile(),$e->getTraceAsString()
+   );
+}
 
 // ****************************************************************************
 // *  DoorTryer class       Обработать ошибки PHP7+ и пользовательские ошибки *

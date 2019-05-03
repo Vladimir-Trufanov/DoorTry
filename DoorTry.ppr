@@ -26,7 +26,6 @@ DoorTry
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
-			www\TDoorTryer\DoorTryerPage.php
 		www\doortry.png
 		www\error.php
 		www\favicon.ico
@@ -34,46 +33,24 @@ DoorTry
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
 		www\includErrs.php
+		www\index.pho
 		www\index.php
+		www\Main.pho
 		www\Main.php
 		www\Site.php
 [Open project files]
-0=www\Main.php
-1=www\includErrs.php
-2=www\Site.php
-3=www\index.php
-4=www\iHtmlBegin.php
-5=www\TDoorTryer\DoorTryerPage.php
-6=www\TDoorTryer\DoorTryerClass.php
-7=www\Common.php
-8=www\error.php
+0=www\error.php
+1=www\Main.php
+2=www\index.php
 [Selected Project Files]
 Main=
-Selected=www\includErrs.php
+Selected=www\index.php
+[www\error.php]
+TopLine=27
+Caret=3,42
 [www\Main.php]
-TopLine=19
-Caret=19,43
-[www\includErrs.php]
-TopLine=68
-Caret=3,78
-[www\Site.php]
-TopLine=4
-Caret=1,20
+TopLine=1
+Caret=30,3
 [www\index.php]
 TopLine=1
-Caret=1,1
-[www\iHtmlBegin.php]
-TopLine=7
-Caret=56,20
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=1
-Caret=1,2
-[www\TDoorTryer\DoorTryerClass.php]
-TopLine=39
-Caret=1,55
-[www\Common.php]
-TopLine=21
-Caret=1,28
-[www\error.php]
-TopLine=1
-Caret=1,15
+Caret=16,2

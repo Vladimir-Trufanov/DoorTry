@@ -23,7 +23,8 @@
 // информации об этих настройках, смотрите руководство PHP: 
 
 // *** E_ERROR *** остановка программы
-// Fatal error: Uncaught Error: [] operator not supported for strings 
+// ---------------------------------------------------------------------- 1 ---
+// [7] Fatal error: Uncaught Error: [] operator not supported for strings 
 //              in C:\Webservers\DoorTry\www\include.php:17 
 //              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(426): 
 //              include() #1 {main} thrown in C:\Webservers\DoorTry\www\include.php on line 17
@@ -125,4 +126,46 @@ class Deprec
    } 
 }
 Deprec::test();
+*/
+
+/*
+class A
+{
+    protected $_b;
+ 
+    public function __construct()
+    {
+        $this->_b = new B();
+    }
+ 
+    public function run()
+    {
+        $this->_b->doSomething();
+    }
+}
+ 
+class B
+{
+    protected $_c;
+ 
+    public function __construct()
+    {
+        $this->_c = new C();
+    }
+ 
+    public function doSomething()
+    {
+          $this->_c->doException();
+    }
+}
+ 
+class C
+{
+    public function doException()
+    {
+        throw new Exception('Error in method ' . __METHOD__ . ' !');
+    }
+}
+$a = new A();
+$a->run();
 */
