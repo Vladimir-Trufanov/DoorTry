@@ -1,33 +1,34 @@
 <?php
 
-// Ğàçğàáîòêà 
+// Ğ Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° 
 // 
-// Äëÿ òîãî, ÷òîáû âèäåòü âñå âîçìîæíûå îøèáêè âî âğåìÿ ğàçğàáîòêè, 
-// íàñòğîéòå ñëåäóşùèå ïàğàìåòğû â âàøåì php.ini: 
+// Ğ”Ğ»Ñ Ñ‚Ğ¾Ğ³Ğ¾, Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ Ğ²Ğ¸Ğ´ĞµÑ‚ÑŒ Ğ²ÑĞµ Ğ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ñ‹Ğµ Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸ Ğ²Ğ¾ Ğ²Ñ€ĞµĞ¼Ñ Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ¸, 
+// Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹Ñ‚Ğµ ÑĞ»ĞµĞ´ÑƒÑÑ‰Ğ¸Ğµ Ğ¿Ğ°Ñ€Ğ°Ğ¼ĞµÑ‚Ñ€Ñ‹ Ğ² Ğ²Ğ°ÑˆĞµĞ¼ php.ini: 
 // display_errors = On
 // display_startup_errors = On
 // error_reporting = -1
 // log_errors = On
 
-// Ïğîäàêøí 
+// ĞŸÑ€Ğ¾Ğ´Ğ°ĞºÑˆĞ½ 
 //
-// ×òîáû ñïğÿòàòü âñå îøèáêè âàøåé ñğåäû âî âğåìÿ ïğîäàêøíà, 
-// íàñòğîéòå âàø php.ini ñëåäóşùèì îáğàçîì: 
+// Ğ§Ñ‚Ğ¾Ğ±Ñ‹ ÑĞ¿Ñ€ÑÑ‚Ğ°Ñ‚ÑŒ Ğ²ÑĞµ Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸ Ğ²Ğ°ÑˆĞµĞ¹ ÑÑ€ĞµĞ´Ñ‹ Ğ²Ğ¾ Ğ²Ñ€ĞµĞ¼Ñ Ğ¿Ñ€Ğ¾Ğ´Ğ°ĞºÑˆĞ½Ğ°, 
+// Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹Ñ‚Ğµ Ğ²Ğ°Ñˆ php.ini ÑĞ»ĞµĞ´ÑƒÑÑ‰Ğ¸Ğ¼ Ğ¾Ğ±Ñ€Ğ°Ğ·Ğ¾Ğ¼: 
 // display_errors = Off
 // display_startup_errors = Off
 // error_reporting = E_ALL
 // log_errors = On
 //
-// Ñ ıòèìè íàñòğîéêàìè â ïğîäàêøíå, îøèáêè âñ¸ òàêæå áóäóò çàïèñûâàòüñÿ â ëîã 
-// îøèáîê âåá ñåğâåğà, íî íå áóäóò ïîêàçàíû ïîëüçîâàòåëş. Äëÿ ïîäğîáíîé 
-// èíôîğìàöèè îá ıòèõ íàñòğîéêàõ, ñìîòğèòå ğóêîâîäñòâî PHP: 
+// Ğ¡ ÑÑ‚Ğ¸Ğ¼Ğ¸ Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ°Ğ¼Ğ¸ Ğ² Ğ¿Ñ€Ğ¾Ğ´Ğ°ĞºÑˆĞ½Ğµ, Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸ Ğ²ÑÑ‘ Ñ‚Ğ°ĞºĞ¶Ğµ Ğ±ÑƒĞ´ÑƒÑ‚ Ğ·Ğ°Ğ¿Ğ¸ÑÑ‹Ğ²Ğ°Ñ‚ÑŒÑÑ Ğ² Ğ»Ğ¾Ğ³ 
+// Ğ¾ÑˆĞ¸Ğ±Ğ¾Ğº Ğ²ĞµĞ± ÑĞµÑ€Ğ²ĞµÑ€Ğ°, Ğ½Ğ¾ Ğ½Ğµ Ğ±ÑƒĞ´ÑƒÑ‚ Ğ¿Ğ¾ĞºĞ°Ğ·Ğ°Ğ½Ñ‹ Ğ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»Ñ. Ğ”Ğ»Ñ Ğ¿Ğ¾Ğ´Ñ€Ğ¾Ğ±Ğ½Ğ¾Ğ¹ 
+// Ğ¸Ğ½Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ†Ğ¸Ğ¸ Ğ¾Ğ± ÑÑ‚Ğ¸Ñ… Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ°Ñ…, ÑĞ¼Ğ¾Ñ‚Ñ€Ğ¸Ñ‚Ğµ Ñ€ÑƒĞºĞ¾Ğ²Ğ¾Ğ´ÑÑ‚Ğ²Ğ¾ PHP: 
 
-// *** E_ERROR *** îñòàíîâêà ïğîãğàììû
+// *** E_ERROR *** Ğ¾ÑÑ‚Ğ°Ğ½Ğ¾Ğ²ĞºĞ° Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹
 // ---------------------------------------------------------------------- 1 ---
-// [7] Fatal error: Uncaught Error: [] operator not supported for strings 
-//              in C:\Webservers\DoorTry\www\include.php:17 
-//              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(426): 
-//              include() #1 {main} thrown in C:\Webservers\DoorTry\www\include.php on line 17
+// [7] Fatal error: Uncaught Error: 
+//     [] operator not supported for strings in C:\DoorTry\www\includErrs.php:99 
+//     Stack trace: #0 C:\DoorTry\www\index.php(99): require_once() #1 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
+// [5] Fatal error: 
+//     [] operator not supported for strings in Z:\home\Proba\www\includErrs.php on line 99
 //$str='try';
 //$str[]=4;
 
@@ -38,9 +39,11 @@
 //              thrown in C:\Webservers\DoorTry\www\include.php on line 61
 //split(',', 'a,b');
 
-// *** E_WARNING *** ïğîäîëæåíèå ğàáîòû
-// Warning: fopen(spoon): failed to open stream: No such file or directory 
-//          in C:\Webservers\DoorTry\www\include.php on line 10
+// *** E_WARNING *** Ğ¿Ñ€Ğ¾Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½Ğ¸Ğµ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‹
+// [7] Warning: fopen(spoon):                  
+//     failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php on line 99
+// [5] Warning: fopen(spoon) [function.fopen]: 
+//     failed to open stream: No such file or directory in Z:\home\Proba\www\includErrs.php on line 99
 //fopen("spoon", "r");
 
 // Warning: include_once(not-exists.php): failed to open stream: No such file or directory 
@@ -65,16 +68,16 @@ class My_Datetime extends DateTime
 //$a=0;
 //$a=1/$a;
 
-//$a='òğè';
+//$a='Ñ‚Ñ€Ğ¸';
 //$a=1+$a;
 
-// *** E_PARSE *** îñòàíîâêà ïğîãğàììû
+// *** E_PARSE *** Ğ¾ÑÑ‚Ğ°Ğ½Ğ¾Ğ²ĞºĞ° Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹
 // Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' 
 //              in C:\Webservers\DoorTry\www\include.php on line 32
 //echo "Hi" 
 //echo "Hello";
 
-// *** E_NOTICE *** ïğîäîëæåíèå ğàáîòû 
+// *** E_NOTICE *** Ğ¿Ñ€Ğ¾Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½Ğ¸Ğµ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‹ 
 // Notice: Undefined variable: a in C:\Webservers\DoorTry\www\include.php on line 35
 //echo $a;
 
@@ -86,7 +89,7 @@ class My_Datetime extends DateTime
 
 // *** E_CORE_WARNING *** 
 
-// *** E_COMPILE_ERROR *** îñòàíîâêà ïğîãğàììû 
+// *** E_COMPILE_ERROR *** Ğ¾ÑÑ‚Ğ°Ğ½Ğ¾Ğ²ĞºĞ° Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹ 
 // Warning:     require_once(not-exists.php): failed to open stream: No such file or directory 
 //              in C:\Webservers\DoorTry\www\include.php on line 25
 // Fatal error: require_once(): Failed opening required 'not-exists.php' 
@@ -103,17 +106,17 @@ class My_Datetime extends DateTime
 // *** E_USER_NOTICE *** 
 
 // *** E_STRICT *** 
-//    İòî îøèáêè, êîòîğûå íàó÷àò âàñ ïèñàòü êîä ïğàâèëüíî, ÷òîáû 
-// íå áûëî ñòûäíî, òåì áîëåå IDE âàì ıòè îøèáêè ñğàçó ïîêàçûâàşò. Âîò íàïğèìåğ, 
-// åñëè âûçâàëè íå ñòàòè÷åñêèé ìåòîä êàê ñòàòèêó, òî êîä áóäåò ğàáîòàòü, 
-// íî ıòî êàê-òî íåïğàâèëüíî, è âîçìîæíî ïîÿâëåíèå ñåğü¸çíûõ îøèáîê, 
-// åñëè â äàëüíåéøåì ìåòîä êëàññà áóäåò èçìåí¸í, è ïîÿâèòñÿ îáğàùåíèå ê $this:
+//    Ğ­Ñ‚Ğ¾ Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸, ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ğ½Ğ°ÑƒÑ‡Ğ°Ñ‚ Ğ²Ğ°Ñ Ğ¿Ğ¸ÑĞ°Ñ‚ÑŒ ĞºĞ¾Ğ´ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ 
+// Ğ½Ğµ Ğ±Ñ‹Ğ»Ğ¾ ÑÑ‚Ñ‹Ğ´Ğ½Ğ¾, Ñ‚ĞµĞ¼ Ğ±Ğ¾Ğ»ĞµĞµ IDE Ğ²Ğ°Ğ¼ ÑÑ‚Ğ¸ Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸ ÑÑ€Ğ°Ğ·Ñƒ Ğ¿Ğ¾ĞºĞ°Ğ·Ñ‹Ğ²Ğ°ÑÑ‚. Ğ’Ğ¾Ñ‚ Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€, 
+// ĞµÑĞ»Ğ¸ Ğ²Ñ‹Ğ·Ğ²Ğ°Ğ»Ğ¸ Ğ½Ğµ ÑÑ‚Ğ°Ñ‚Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¹ Ğ¼ĞµÑ‚Ğ¾Ğ´ ĞºĞ°Ğº ÑÑ‚Ğ°Ñ‚Ğ¸ĞºÑƒ, Ñ‚Ğ¾ ĞºĞ¾Ğ´ Ğ±ÑƒĞ´ĞµÑ‚ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ğ°Ñ‚ÑŒ, 
+// Ğ½Ğ¾ ÑÑ‚Ğ¾ ĞºĞ°Ğº-Ñ‚Ğ¾ Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, Ğ¸ Ğ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾ Ğ¿Ğ¾ÑĞ²Ğ»ĞµĞ½Ğ¸Ğµ ÑĞµÑ€ÑŒÑ‘Ğ·Ğ½Ñ‹Ñ… Ğ¾ÑˆĞ¸Ğ±Ğ¾Ğº, 
+// ĞµÑĞ»Ğ¸ Ğ² Ğ´Ğ°Ğ»ÑŒĞ½ĞµĞ¹ÑˆĞµĞ¼ Ğ¼ĞµÑ‚Ğ¾Ğ´ ĞºĞ»Ğ°ÑÑĞ° Ğ±ÑƒĞ´ĞµÑ‚ Ğ¸Ğ·Ğ¼ĞµĞ½Ñ‘Ğ½, Ğ¸ Ğ¿Ğ¾ÑĞ²Ğ¸Ñ‚ÑÑ Ğ¾Ğ±Ñ€Ğ°Ñ‰ĞµĞ½Ğ¸Ğµ Ğº $this:
 
 // *** E_RECOVERABLE_ERROR *** 
 
-// *** E_DEPRECATED *** ïğîäîëæåíèå ğàáîòû 
-// PHP áóäåò ğóãàòüñÿ, åñëè âû èñïîëüçóåòå óñòàğåâøèå ôóíêöèè (ò.å. òå, ÷òî 
-// ïîìå÷åíû êàê deprecated, è â ñëåäóşùåì ìàæîğíîì ğåëèçå èõ íå áóäåò):
+// *** E_DEPRECATED *** Ğ¿Ñ€Ğ¾Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½Ğ¸Ğµ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‹ 
+// PHP Ğ±ÑƒĞ´ĞµÑ‚ Ñ€ÑƒĞ³Ğ°Ñ‚ÑŒÑÑ, ĞµÑĞ»Ğ¸ Ğ²Ñ‹ Ğ¸ÑĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞµÑ‚Ğµ ÑƒÑÑ‚Ğ°Ñ€ĞµĞ²ÑˆĞ¸Ğµ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¸ (Ñ‚.Ğµ. Ñ‚Ğµ, Ñ‡Ñ‚Ğ¾ 
+// Ğ¿Ğ¾Ğ¼ĞµÑ‡ĞµĞ½Ñ‹ ĞºĞ°Ğº deprecated, Ğ¸ Ğ² ÑĞ»ĞµĞ´ÑƒÑÑ‰ĞµĞ¼ Ğ¼Ğ°Ğ¶Ğ¾Ñ€Ğ½Ğ¾Ğ¼ Ñ€ĞµĞ»Ğ¸Ğ·Ğµ Ğ¸Ñ… Ğ½Ğµ Ğ±ÑƒĞ´ĞµÑ‚):
 
 // Deprecated: Non-static method Deprec::test() should not be called statically 
 //             in C:\Webservers\DoorTry\www\include.php on line 50
@@ -169,3 +172,4 @@ class C
 $a = new A();
 $a->run();
 */
+

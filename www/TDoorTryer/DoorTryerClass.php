@@ -1,4 +1,4 @@
-<?php 
+<?php
 // PHP7/HTML5, EDGE/CHROME                           *** DoorTryerClass.php ***
 
 // ****************************************************************************
@@ -54,6 +54,7 @@ $TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED";
 $TypeErrors[E_ALL]               = "E_ALL"; 
 // ------------------------------------------- Массив зарегистрированных ошибок
 
+
 function isPhp7()
 {
    $Result=False;
@@ -63,6 +64,9 @@ function isPhp7()
    }
    return $Result;
 }
+
+
+
 
 function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='')
 {
@@ -119,6 +123,7 @@ class DoorTryer
    // -------------------------------------------------------------------------
    public function __construct()
    {
+      //echo 'DoorTryerClass';
       $this->InisetErrors();
       $catcher = new DoorDryer_Catcher();
       set_error_handler(array($catcher,"DoorTryHandler"));
@@ -236,4 +241,6 @@ function terIsKey($inkey)
    }
    return $result;         
 }
+
 // ***************************************************** DoorTryerClass.php ***
+

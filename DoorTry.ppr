@@ -33,24 +33,19 @@ DoorTry
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
 		www\includErrs.php
-		www\index.pho
 		www\index.php
 		www\Main.pho
 		www\Main.php
 		www\Site.php
 [Open project files]
-0=www\error.php
-1=www\Main.php
-2=www\index.php
+0=www\index.php
+1=www\includErrs.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
-[www\error.php]
-TopLine=27
-Caret=3,42
-[www\Main.php]
-TopLine=1
-Caret=30,3
+Selected=www\includErrs.php
 [www\index.php]
 TopLine=1
-Caret=16,2
+Caret=41,26
+[www\includErrs.php]
+TopLine=23
+Caret=3,47
