@@ -86,6 +86,24 @@ function myErrorHandler($errno,$msg,$file,$line)
    echo "</div>";
 }
 // ****************************************************************************
+// *     Проверить наличие ключа в массиве зарегистрированных ошибок PHP7+    *
+// ****************************************************************************
+function terIsKey($inkey)
+{
+   global $TypeErrors;
+   $result=false;
+   foreach($TypeErrors as $key => $value) 
+   { 
+      if ($inkey==$key)
+      {
+         $result=true;
+         break;
+      } 
+   }
+   return $result;         
+}
+
+// ****************************************************************************
 // *                 Отловить незафиксированный тип ошибки                    *
 // ****************************************************************************
 function terGetValue($inkey)
@@ -103,37 +121,76 @@ function terGetValue($inkey)
    return $result;         
 }
 
-// Функция-обработчик ошибок PHP
 
-function DooriTryHandler($errno,$errstr,$errfile,$errline)
+function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$MakePage=true)
 {
-   // Если error_reporting нулевой, значит, использован оператор @,
-   // все ошибки должны игнорироваться
-   if (!error_reporting())
+   if ($MakePage==true)
    {
-      return true;
+      $uripage="http://kwinflatht.nichost.ru/error.php".
+      //$uripage="http://localhost:82/error.php".
+         "?estr=".urlencode($errstr).
+         "&etype=".urlencode($errtype).
+         "&eline=".urlencode($errline).
+         "&efile=".urlencode($errfile).
+         "&etrace=".urlencode($errtrace);
+   
+      // Вызываем страницу ошибки через javascript
+      echo '<script>';
+      echo 'window.location.assign("'.$uripage.'")';
+      echo '</script>';
+
+      // Вызываем страницу ошибки через отправку заголовка
+      // Header("Location: ".$uripage);
    }
-   $className=terGetValue($errno);
-   // Генерируем исключение нужного типа.
-   //throw new Exception('$errno','$errstr','$errfile','$errline');
-   throw new ConfigFileNotFoundException('eeeeerrno');
-}  
+   else
+   {
+      echo "<br>=============================";
+      echo "<pre>";
+      echo "<b>".$errstr."</b><br><br>";
+      echo "File: ".$errfile."<br>";
+      echo "Line: ".$errline."<br><br>";
+      echo $errtype."<br>";
+      if (!($errtrace=='')) {echo $errtrace."<br>";}
+      echo "</pre>";
+      echo "=============================<br>";
+   }
+}
 
+// ****************************************************************************
+// *      Обработать пропущенные ошибки после завершения работы сценария      *
+// ****************************************************************************
+function DoorTryShutdown()
+{
+   global $TypeErrors;
+   
+   $lasterror=error_get_last();
+   $typelast=intval($lasterror['type']);
+   if (terIsKey($typelast))
+   {
+      $TypeError=terGetValue(intval($typelast));
+      DoorTryExec
+      (
+         $lasterror['message'],$TypeError,
+         $lasterror['line'],$lasterror['file'],'',false
+      );
+   }
+} 
 
-
-
-
-
+// ---------------------------------
 function ddt()
 {
    echo 'DDT<br>';
    // Инициализируем параметры Php.ini для управления выводом ошибок
    //InisetErrors();
+   // Регистрируем функцию, которая будет выполняться по завершению работы скрипта
+   register_shutdown_function('DoorTryShutdown');
+
+   
    // Регистрируем новую функцию-обработчик для всех типов ошибок
    //set_error_handler("myErrorHandler",E_ALL);
-   set_error_handler("DooriTryHandler",E_ALL);
+   //set_error_handler("DooriTryHandler",E_ALL);
    // Вызываем функцию для несуществующего файла, чтобы 
    // сгенерировать предупреждение, которое будет перехвачено.
    //@filemtime("spoon");
-   filemtime("spoon");
+   //filemtime("spoon");
 }

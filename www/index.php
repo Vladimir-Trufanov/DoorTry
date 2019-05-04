@@ -22,23 +22,34 @@ function testFile($FileName)
       throw new $TypeExp("oiConfiguration file not found.");
    }
 }
+
+
+
+require_once $SiteRoot."/dt.php";
+ddt();
 // init bootstrapping phase
 try 
 {
-    $config_file_path="config.php";
-    testFile($config_file_path);
+   require_once $SiteRoot."/Main.php";
 }
 // continue execution of the bootstrapping phase
-catch (ConfigFileNotFoundException $e) 
+catch (ConfigFileNotFoundExceptioni $e) 
 {
-    echo "ConfigFileNotFoundException: ".$e->getMessage();
-    //die();
+   echo  "<pre><b>CC Перехвачена ошибка!</b><br>".$e."</pre>";
+   //DoorTryPage($e);
 } 
 // other additional actions that you want to carry out for this exception
+/*
+catch (Error $e) 
+{
+   echo  "<pre><b>ER Перехвачена ошибка!</b><br>".$e."</pre>";
+   //DoorTryPage($e);
+}
+*/
 catch (Exception $e) 
 {
-   echo 'Exception: '.$e->getMessage();
-   //die();
+   echo  "<pre><b>EE Перехвачена ошибка!</b><br>".$e."</pre>";
+   //DoorTryPage($e);
 }
 
 
