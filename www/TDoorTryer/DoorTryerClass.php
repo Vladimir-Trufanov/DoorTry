@@ -54,7 +54,6 @@ $TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED";
 $TypeErrors[E_ALL]               = "E_ALL"; 
 // ------------------------------------------- Массив зарегистрированных ошибок
 
-
 function isPhp7()
 {
    $Result=False;
@@ -64,9 +63,6 @@ function isPhp7()
    }
    return $Result;
 }
-
-
-
 
 function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='')
 {
@@ -102,12 +98,16 @@ function DoorTryPage($e)
    {
       $TypeError='NoDefine'; $Point=-1;  
    }
-   //echo '$TypeError='.$TypeError;
+   echo '$TypeError='.$TypeError.'<br>';
+   echo '$e->getCode()='.$e->getCode().'<br>';
+   echo 'get_class($e)='.get_class($e).'<br>';
+   /*
    DoorTryExec
    (
       $e->getMessage(),$TypeError,
       $e->getLine(),$e->getFile(),$e->getTraceAsString()
    );
+   */
 }
 
 // ****************************************************************************

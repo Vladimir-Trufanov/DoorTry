@@ -1,0 +1,21 @@
+[04-May-2019 11:27:16 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function terGetValue() in C:\DoorTry\www\dt.php:62
+Stack trace:
+#0 [internal function]: DooriTryHandler(2, 'filemtime(): st...', 'C:\\DoorTry\\www\\...', 84, Array)
+#1 C:\DoorTry\www\dt.php(84): filemtime('spoon')
+#2 C:\DoorTry\www\index.php(23): ddt()
+#3 {main}
+  thrown in C:\DoorTry\www\dt.php on line 62
+[04-May-2019 11:29:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function terGetValue() in C:\DoorTry\www\dt.php:62
+Stack trace:
+#0 [internal function]: DooriTryHandler(2, 'filemtime(): st...', 'C:\\DoorTry\\www\\...', 84, Array)
+#1 C:\DoorTry\www\dt.php(84): filemtime('spoon')
+#2 C:\DoorTry\www\index.php(23): ddt()
+#3 {main}
+  thrown in C:\DoorTry\www\dt.php on line 62
+[04-May-2019 11:34:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'E_className' not found in C:\DoorTry\www\dt.php:65
+Stack trace:
+#0 [internal function]: DooriTryHandler(2, 'filemtime(): st...', 'C:\\DoorTry\\www\\...', 84, Array)
+#1 C:\DoorTry\www\dt.php(84): filemtime('spoon')
+#2 C:\DoorTry\www\index.php(23): ddt()
+#3 {main}
+  thrown in C:\DoorTry\www\dt.php on line 65

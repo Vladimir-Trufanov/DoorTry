@@ -27,6 +27,7 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
 		www\doortry.png
+		www\dt.php
 		www\error.php
 		www\favicon.ico
 		www\iGetAbove.php
@@ -40,12 +41,28 @@ DoorTry
 [Open project files]
 0=www\index.php
 1=www\includErrs.php
+2=www\Main.php
+3=www\TDoorTryer\DoorTryerClass.php
+4=www\dt.php
+5=www\Main.pho
 [Selected Project Files]
 Main=
-Selected=www\includErrs.php
+Selected=www\index.php
 [www\index.php]
-TopLine=1
-Caret=41,26
+TopLine=21
+Caret=24,31
 [www\includErrs.php]
-TopLine=23
-Caret=3,47
+TopLine=37
+Caret=3,56
+[www\Main.php]
+TopLine=1
+Caret=1,8
+[www\TDoorTryer\DoorTryerClass.php]
+TopLine=19
+Caret=1,56
+[www\dt.php]
+TopLine=95
+Caret=1,110
+[www\Main.pho]
+TopLine=1
+Caret=1,1

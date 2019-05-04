@@ -24,78 +24,95 @@
 
 // *** E_ERROR *** остановка программы
 // ---------------------------------------------------------------------- 1 ---
+//$str='try';
+//$str[]=4;
 // [7] Fatal error: Uncaught Error: 
 //     [] operator not supported for strings in C:\DoorTry\www\includErrs.php:99 
 //     Stack trace: #0 C:\DoorTry\www\index.php(99): require_once() #1 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
+/*
+-----------------------------
+[] operator not supported for strings
+
+File: C:\DoorTry\www\includErrs.php
+Line: 28
+
+Error:
+#0 C:\DoorTry\www\Main.php(4): require_once()
+#1 C:\DoorTry\www\index.php(24): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+-----------------------------
+*/
 // [5] Fatal error: 
 //     [] operator not supported for strings in Z:\home\Proba\www\includErrs.php on line 99
-//$str='try';
-//$str[]=4;
-
-// Fatal error: Uncaught Error: Call to undefined function split() 
-//              in C:\Webservers\DoorTry\www\include.php:61 
-//              Stack trace: #0 C:\Webservers\DoorTry\www\index.php(437): 
-//              include() #1 {main} 
-//              thrown in C:\Webservers\DoorTry\www\include.php on line 61
+// ---------------------------------------------------------------------- 2 ---
 //split(',', 'a,b');
-
+// [7] Fatal error: Uncaught Error: 
+//     Call to undefined function split() in C:\DoorTry\www\includErrs.php:99
+//     Stack trace: #0 C:\DoorTry\www\index.php(99): require_once() #1 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
+// [5] Deprecated: Function split() is deprecated in Z:\home\Proba\www\includErrs.php on line 99
+ 
 // *** E_WARNING *** продолжение работы
+// ---------------------------------------------------------------------- 3 ---
+//fopen("spoon", "r");
 // [7] Warning: fopen(spoon):                  
 //     failed to open stream: No such file or directory in C:\DoorTry\www\includErrs.php on line 99
 // [5] Warning: fopen(spoon) [function.fopen]: 
 //     failed to open stream: No such file or directory in Z:\home\Proba\www\includErrs.php on line 99
-//fopen("spoon", "r");
-
-// Warning: include_once(not-exists.php): failed to open stream: No such file or directory 
-//          in C:\Webservers\DoorTry\www\include.php on line 32
-// Warning: include_once(): Failed opening 'not-exists.php' 
-//          for inclusion (include_path='.;C:\php\pear') 
-//          in C:\Webservers\DoorTry\www\include.php on line 32
+// ---------------------------------------------------------------------- 4 ---
 //include_once 'not-exists.php';
-
-// Error Message: Declaration of My_Datetime::createFromFormat
-//                ($format, $time, ?DateTimeZone $timezone = NULL) 
-//                should be compatible with DateTime::
-//                createFromFormat($format, $time, $object = NULL)
-/*
-class My_Datetime extends DateTime
-{
-   public static function createFromFormat($format, $time, DateTimeZone $timezone = null)
-   {}
-} 
-*/
-
-//$a=0;
-//$a=1/$a;
-
-//$a='три';
-//$a=1+$a;
+// [7] Warning: include_once(not-exists.php): failed to open stream: 
+//     No such file or directory in C:\DoorTry\www\includErrs.php on line 99
+//     Warning: include_once(): Failed opening 'not-exists.php' for inclusion 
+//     (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 99
+// [5] Warning: include_once(not-exists.php) [function.include-once]: failed to open stream: 
+//     No such file or directory in Z:\home\Proba\www\includErrs.php on line 99
+//     Warning: include_once() [function.include]: Failed opening 'not-exists.php' for inclusion 
+//     (include_path='.;C:\php\pear') in Z:\home\Proba\www\includErrs.php on line 99
+// ---------------------------------------------------------------------- 5 ---
+//$a=0; $a=1/$a;
+// [7] Warning: Division by zero in C:\DoorTry\www\includErrs.php on line 99
+// [5] Warning: Division by zero in Z:\home\Proba\www\includErrs.php on line 99
+// ---------------------------------------------------------------------- 6 ---
+//$a='три'; $a=1+$a;
+// [7] Warning: A non-numeric value encountered in C:\DoorTry\www\includErrs.php on line 99
+// [5] Ошибок не нашел, просто сложил один с нулём и получил 1
 
 // *** E_PARSE *** остановка программы
-// Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' 
-//              in C:\Webservers\DoorTry\www\include.php on line 32
-//echo "Hi" 
-//echo "Hello";
+// ---------------------------------------------------------------------- 7 ---
+//echo "Hi" echo "Hello";
+// [7] Parse error: syntax error, 
+//     unexpected 'echo' (T_ECHO), 
+//     expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 99
+// [5] Parse error: syntax error, 
+//     unexpected T_ECHO, 
+//     expecting ',' or ';' in Z:\home\Proba\www\includErrs.php on line 99
 
 // *** E_NOTICE *** продолжение работы 
-// Notice: Undefined variable: a in C:\Webservers\DoorTry\www\include.php on line 35
-//echo $a;
-
-// Notice: Use of undefined constant UNKNOWN_CONSTANT - assumed 'UNKNOWN_CONSTANT' 
-//         in C:\Webservers\DoorTry\www\include.php on line 39
+// ---------------------------------------------------------------------- 8 ---
+//echo '***'.$a.'***';
+// [7] Notice: Undefined variable: a in C:\DoorTry\www\includErrs.php on line 99
+// [5] Ошибок не нашел, просто вывел пустое значение переменной
+// ---------------------------------------------------------------------- 9 ---
 //echo UNKNOWN_CONSTANT;
+// [7] Notice: Use of undefined constant UNKNOWN_CONSTANT - 
+//     assumed 'UNKNOWN_CONSTANT' in C:\DoorTry\www\includErrs.php on line 99
+// [5] Ошибок не нашел, просто вывел наименование константы
 
 // *** E_CORE_ERROR *** 
 
 // *** E_CORE_WARNING *** 
 
 // *** E_COMPILE_ERROR *** остановка программы 
-// Warning:     require_once(not-exists.php): failed to open stream: No such file or directory 
-//              in C:\Webservers\DoorTry\www\include.php on line 25
-// Fatal error: require_once(): Failed opening required 'not-exists.php' 
-//              (include_path='.;C:\php\pear') 
-//              in C:\Webservers\DoorTry\www\include.php on line 25
+// --------------------------------------------------------------------- 10 ---
 //require_once 'not-exists.php';
+// [7] Warning: require_once(not-exists.php): failed to open stream: 
+//     No such file or directory in C:\DoorTry\www\includErrs.php on line 99
+//     Fatal error: require_once(): Failed opening required 'not-exists.php' 
+//     (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 99
+// [5] Warning: require_once(not-exists.php) [function.require-once]: failed to open stream: 
+//     No such file or directory in Z:\home\Proba\www\includErrs.php on line 99
+//     Fatal error: require_once() [function.require]: Failed opening required 'not-exists.php' 
+//     (include_path='.;C:\php\pear') in Z:\home\Proba\www\includErrs.php on line 99
 
 // *** E_COMPILE_WARNING *** 
 
@@ -115,61 +132,49 @@ class My_Datetime extends DateTime
 // *** E_RECOVERABLE_ERROR *** 
 
 // *** E_DEPRECATED *** продолжение работы 
+// --------------------------------------------------------------------- 11 ---
 // PHP будет ругаться, если вы используете устаревшие функции (т.е. те, что 
 // помечены как deprecated, и в следующем мажорном релизе их не будет):
+//split(',', 'a,b');
+// [7] Fatal error: Uncaught Error: 
+//     Call to undefined function split() in C:\DoorTry\www\includErrs.php:99
+//     Stack trace: #0 C:\DoorTry\www\index.php(99): require_once() #1 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
+// [5] Deprecated: Function split() is deprecated in Z:\home\Proba\www\includErrs.php on line 99
 
-// Deprecated: Non-static method Deprec::test() should not be called statically 
-//             in C:\Webservers\DoorTry\www\include.php on line 50
-/*
-class Deprec 
-{
-   public function test() 
-   {
-      echo 'Test'; 
-   } 
-}
-Deprec::test();
-*/
-
+// *** Пример, где есть трассировка и в PHP7, и в PHP5 ***
+// --------------------------------------------------------------------- 12 ---
 /*
 class A
 {
-    protected $_b;
- 
-    public function __construct()
-    {
-        $this->_b = new B();
-    }
- 
-    public function run()
-    {
-        $this->_b->doSomething();
-    }
+   protected $_b;
+   public function __construct() {$this->_b = new B();}
+   public function run() {$this->_b->doSomething();}
 }
- 
 class B
 {
-    protected $_c;
- 
-    public function __construct()
-    {
-        $this->_c = new C();
-    }
- 
-    public function doSomething()
-    {
-          $this->_c->doException();
-    }
+   protected $_c;
+   public function __construct() {$this->_c = new C();}
+   public function doSomething() {$this->_c->doException();}
 }
- 
 class C
 {
-    public function doException()
-    {
-        throw new Exception('Error in method ' . __METHOD__ . ' !');
-    }
+   public function doException()
+   {throw new Exception('Error in method ' . __METHOD__ . ' !');}
 }
-$a = new A();
+$a=new A();
 $a->run();
 */
-
+// [7] Fatal error: Uncaught Exception: Error in method C::doException ! 
+//     in C:\DoorTry\www\includErrs.php:99 
+//     Stack trace: #0 C:\DoorTry\www\includErrs.php(99): C->doException() 
+//     #1 C:\DoorTry\www\includErrs.php(99): B->doSomething() 
+//     #2 C:\DoorTry\www\includErrs.php(99): A->run() 
+//     #3 C:\DoorTry\www\index.php(99): require_once('C:\\DoorTry\\www\\...') 
+//     #4 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
+// [5] Fatal error: Uncaught exception 'Exception' with message 'Error in method C::doException !'
+//     in Z:\home\Proba\www\includErrs.php:99
+//     Stack trace: #0 Z:\home\Proba\www\includErrs.php(99): C->doException() 
+//     #1 Z:\home\Proba\www\includErrs.php(99): B->doSomething() 
+//     #2 Z:\home\Proba\www\includErrs.php(99): A->run() 
+//     #3 Z:\home\Proba\www\index.php(99): require_once('Z:\home\Proba\w...') 
+//     #4 {main} thrown in Z:\home\Proba\www\includErrs.php on line 99
