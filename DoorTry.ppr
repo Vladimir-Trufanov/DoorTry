@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
@@ -35,6 +35,7 @@ DoorTry
 		www\iHtmlEnd.php
 		www\includErrs.php
 		www\index.php
+		www\log.txt
 		www\Main.pho
 		www\Main.php
 		www\Site.php
@@ -42,27 +43,27 @@ DoorTry
 0=www\index.php
 1=www\includErrs.php
 2=www\Main.php
-3=www\TDoorTryer\DoorTryerClass.php
-4=www\dt.php
-5=www\Main.pho
+3=www\dt.php
+4=www\Main.pho
+5=www\TDoorTryer\DoorTryerClass.php
 [Selected Project Files]
 Main=
 Selected=www\index.php
 [www\index.php]
-TopLine=21
-Caret=24,31
+TopLine=5
+Caret=20,18
 [www\includErrs.php]
 TopLine=37
 Caret=3,56
 [www\Main.php]
 TopLine=1
 Caret=1,8
-[www\TDoorTryer\DoorTryerClass.php]
-TopLine=19
-Caret=1,56
 [www\dt.php]
 TopLine=95
 Caret=1,110
 [www\Main.pho]
 TopLine=1
 Caret=1,1
+[www\TDoorTryer\DoorTryerClass.php]
+TopLine=181
+Caret=7,129

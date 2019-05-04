@@ -101,13 +101,13 @@ function DoorTryPage($e)
    echo '$TypeError='.$TypeError.'<br>';
    echo '$e->getCode()='.$e->getCode().'<br>';
    echo 'get_class($e)='.get_class($e).'<br>';
-   /*
+   
    DoorTryExec
    (
       $e->getMessage(),$TypeError,
       $e->getLine(),$e->getFile(),$e->getTraceAsString()
    );
-   */
+   
 }
 
 // ****************************************************************************
