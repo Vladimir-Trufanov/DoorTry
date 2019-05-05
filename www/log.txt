@@ -1,21 +1,16 @@
-[04-May-2019 11:27:16 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function terGetValue() in C:\DoorTry\www\dt.php:62
+[05-May-2019 05:42:44 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\Main.php:6
 Stack trace:
-#0 [internal function]: DooriTryHandler(2, 'filemtime(): st...', 'C:\\DoorTry\\www\\...', 84, Array)
-#1 C:\DoorTry\www\dt.php(84): filemtime('spoon')
-#2 C:\DoorTry\www\index.php(23): ddt()
-#3 {main}
-  thrown in C:\DoorTry\www\dt.php on line 62
-[04-May-2019 11:29:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function terGetValue() in C:\DoorTry\www\dt.php:62
+#0 C:\DoorTry\www\index.php(33): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 6
+[05-May-2019 06:33:19 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\Main.php:6
 Stack trace:
-#0 [internal function]: DooriTryHandler(2, 'filemtime(): st...', 'C:\\DoorTry\\www\\...', 84, Array)
-#1 C:\DoorTry\www\dt.php(84): filemtime('spoon')
-#2 C:\DoorTry\www\index.php(23): ddt()
-#3 {main}
-  thrown in C:\DoorTry\www\dt.php on line 62
-[04-May-2019 11:34:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'E_className' not found in C:\DoorTry\www\dt.php:65
+#0 C:\DoorTry\www\index.php(34): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 6
+[05-May-2019 07:04:55 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'E_USER_WARNING' not found in C:\DoorTry\www\index.php:23
 Stack trace:
-#0 [internal function]: DooriTryHandler(2, 'filemtime(): st...', 'C:\\DoorTry\\www\\...', 84, Array)
-#1 C:\DoorTry\www\dt.php(84): filemtime('spoon')
-#2 C:\DoorTry\www\index.php(23): ddt()
-#3 {main}
-  thrown in C:\DoorTry\www\dt.php on line 65
+#0 C:\DoorTry\www\Main.php(5): testFile('config.php')
+#1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\index.php on line 23

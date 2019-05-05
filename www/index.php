@@ -11,17 +11,29 @@
 
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
 
-$TypeExp='ConfigFileNotFoundException';
-class ConfigFileNotFoundException extends Exception {}
+$TypeExp='E_USER_WARNING';
+class E_USER_WARNING extends Exception {}
 function testFile($FileName)
 {
    global $TypeExp;
    if (!file_exists($FileName))
    {
-      //throw new ConfigFileNotFoundException("oiConfiguration file not found.");
-      throw new $TypeExp("oiConfiguration file not found.");
+      throw new $TypeExp("Конфигурационный файл не найден");
    }
 }
+
+  function print_age($age)
+  {
+    $age = intval($age);
+    if ($age < 0)
+    {
+      trigger_error("Функция print_age(): ".
+                    "возраст не может быть".
+                    " отрицательным", E_USER_ERROR);
+    }
+    echo "Возраст составляет: $age";
+  }
+
 
 
 
@@ -33,11 +45,11 @@ try
    require_once $SiteRoot."/Main.php";
 }
 // continue execution of the bootstrapping phase
-catch (ConfigFileNotFoundExceptioni $e) 
-{
-   echo  "<pre><b>CC Перехвачена ошибка!</b><br>".$e."</pre>";
+//catch (E_USER_WARNING $e) 
+//{
+//   echo  "<pre><b>CC Перехвачена ошибка!</b><br>".$e."</pre>";
    //DoorTryPage($e);
-} 
+//} 
 // other additional actions that you want to carry out for this exception
 /*
 catch (Error $e) 
@@ -48,8 +60,8 @@ catch (Error $e)
 */
 catch (Exception $e) 
 {
-   echo  "<pre><b>EE Перехвачена ошибка!</b><br>".$e."</pre>";
-   //DoorTryPage($e);
+   //echo  "<pre><b>EE Перехвачена ошибка!</b><br>".$e."</pre>";
+   DoorTryPage($e);
 }
 
 

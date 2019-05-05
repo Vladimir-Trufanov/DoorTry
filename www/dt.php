@@ -1,5 +1,7 @@
 <?php
 
+// -------------- Рег.выражение "фрагмент с типом ошибки с начала строки до ":"
+define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
 // ------------------------------------------- Массив зарегистрированных ошибок
 // 1 - фатальная ошибка во время выполнения
 $TypeErrors[E_ERROR]             = "E_ERROR";
@@ -72,19 +74,6 @@ function InisetErrors()
    ini_set('log_errors','On');
    ini_set('error_log','log.txt');
 }
-
-// Определяем новую функцию-обработчик
-function myErrorHandler($errno,$msg,$file,$line)
-{
-   // Если используется @, ничего не делать
-   if (error_reporting()==0) return;
-   // Иначе - выводим сообщение
-   echo '<div style="border-style:inset; border-width:2">';
-   echo "Произошла ошибка с кодом <b>$errno</b>!<br />";
-   echo "Файл: <tt>$file</tt>, строка $line.<br />";
-   echo "Текст ошибки: <i>$msg</i>";
-   echo "</div>";
-}
 // ****************************************************************************
 // *     Проверить наличие ключа в массиве зарегистрированных ошибок PHP7+    *
 // ****************************************************************************
@@ -144,7 +133,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
    }
    else
    {
-      echo "<br>=============================";
+      echo '<div style="border-style:inset; border-width:2">';
       echo "<pre>";
       echo "<b>".$errstr."</b><br><br>";
       echo "File: ".$errfile."<br>";
@@ -152,7 +141,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
       echo $errtype."<br>";
       if (!($errtrace=='')) {echo $errtrace."<br>";}
       echo "</pre>";
-      echo "=============================<br>";
+      echo "</div>";
    }
 }
 
@@ -171,26 +160,97 @@ function DoorTryShutdown()
       DoorTryExec
       (
          $lasterror['message'],$TypeError,
-         $lasterror['line'],$lasterror['file'],'',false
+         $lasterror['line'],$lasterror['file'],'DoorTryShutdown',false
       );
    }
 } 
+
+// Определяем новую функцию-обработчик
+function myErrorHandler($errno,$msg,$file,$line)
+{
+   // Если используется @, ничего не делать
+   if (error_reporting()==0) return;
+   // Иначе - выводим сообщение
+   echo '<div style="border-style:inset; border-width:2">';
+   echo "Произошла ошибка с кодом <b>$errno</b>!<br />";
+   echo "Файл: <tt>$file</tt>, строка $line.<br />";
+   echo "Текст ошибки: <i>$msg</i>";
+   echo "</div>";
+}
+// Функция-обработчик ошибок PHP
+function DoorTryHandler($errno,$errstr,$errfile,$errline)
+{
+   global $TypeErrors;
+   // Если error_reporting нулевой, значит, использован оператор @,
+   // все ошибки должны игнорироваться
+   if (!error_reporting())
+   {
+      return true;
+   }
+   $typelast=intval($errno);
+   if (terIsKey($typelast))
+   {
+      $TypeError=terGetValue(intval($typelast));
+      DoorTryExec
+      (
+         $errstr,$TypeError,$errline,$errfile,'DoorTryHandler',false
+      );
+   }
+   else
+   {
+      DoorTryExec('Авария 195',1,'','','',false);
+   }
+
+
+
+   //$className=terGetValue($errno);
+   // Генерируем исключение нужного типа.
+   //throw new $className($errno,$errstr,$errfile,$errline);
+   //DoorTryExec
+   //(
+   //   $lasterror['message'],$TypeError,
+   //   $lasterror['line'],$lasterror['file'],'',false
+   //);
+}  
+
+
+function DoorTryPage($e)
+{
+   //echo '***'.$e.'***';
+   // Определяем тип ошибки
+   $value=preg_match_all(regErrorType,$e,$matches,PREG_OFFSET_CAPTURE);
+   if ($value>0)
+   {
+      $findes=$matches[0]; 
+      $TypeError=$findes[0][0]; $Point=$findes[0][1];  
+   }
+   else
+   {
+      $TypeError='NoDefine'; $Point=-1;  
+   }
+   //echo '$TypeError='.$TypeError.'<br>';
+   //echo '$e->getCode()='.$e->getCode().'<br>';
+   //echo 'get_class($e)='.get_class($e).'<br>';
+   
+   DoorTryExec
+   (
+      $e->getMessage(),$TypeError,
+      $e->getLine(),$e->getFile(),$e->getTraceAsString(),false
+   );
+   
+   
+}
+
 
 // ---------------------------------
 function ddt()
 {
    echo 'DDT<br>';
    // Инициализируем параметры Php.ini для управления выводом ошибок
-   //InisetErrors();
+   InisetErrors();
    // Регистрируем функцию, которая будет выполняться по завершению работы скрипта
    register_shutdown_function('DoorTryShutdown');
-
-   
    // Регистрируем новую функцию-обработчик для всех типов ошибок
    //set_error_handler("myErrorHandler",E_ALL);
-   //set_error_handler("DooriTryHandler",E_ALL);
-   // Вызываем функцию для несуществующего файла, чтобы 
-   // сгенерировать предупреждение, которое будет перехвачено.
-   //@filemtime("spoon");
-   //filemtime("spoon");
+   set_error_handler("DoorTryHandler",E_ALL);
 }
