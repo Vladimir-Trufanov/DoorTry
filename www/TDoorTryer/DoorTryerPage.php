@@ -1,5 +1,7 @@
 <?php
 
+require_once $SiteRoot."/TDoorTryer/DoorTryerMessage.php";
+
 // -------------- Рег.выражение "фрагмент с типом ошибки с начала строки до ":"
 define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
 // ------------------------------------------- Массив зарегистрированных ошибок
@@ -131,7 +133,8 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
       // Вызываем страницу ошибки через отправку заголовка
       // Header("Location: ".$uripage);
    }
-   else
+   else DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);
+   /*
    {
       echo '<div style="border-style:inset; border-width:2">';
       echo "<pre>";
@@ -143,6 +146,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
       echo "</pre>";
       echo "</div>";
    }
+   */
 }
 
 // ****************************************************************************
@@ -160,23 +164,10 @@ function DoorTryShutdown()
       DoorTryExec
       (
          $lasterror['message'],$TypeError,
-         $lasterror['line'],$lasterror['file'],'DoorTryShutdown',false
+         $lasterror['line'],$lasterror['file'],'DoorTryShutdown',true
       );
    }
 } 
-
-// Определяем новую функцию-обработчик
-function myErrorHandler($errno,$msg,$file,$line)
-{
-   // Если используется @, ничего не делать
-   if (error_reporting()==0) return;
-   // Иначе - выводим сообщение
-   echo '<div style="border-style:inset; border-width:2">';
-   echo "Произошла ошибка с кодом <b>$errno</b>!<br />";
-   echo "Файл: <tt>$file</tt>, строка $line.<br />";
-   echo "Текст ошибки: <i>$msg</i>";
-   echo "</div>";
-}
 // Функция-обработчик ошибок PHP
 function DoorTryHandler($errno,$errstr,$errfile,$errline)
 {
@@ -193,7 +184,7 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
       $TypeError=terGetValue(intval($typelast));
       DoorTryExec
       (
-         $errstr,$TypeError,$errline,$errfile,'DoorTryHandler',false
+         $errstr,$TypeError,$errline,$errfile,'DoorTryHandler',true
       );
    }
    else
@@ -235,17 +226,32 @@ function DoorTryPage($e)
    DoorTryExec
    (
       $e->getMessage(),$TypeError,
-      $e->getLine(),$e->getFile(),$e->getTraceAsString(),false
+      $e->getLine(),$e->getFile(),$e->getTraceAsString(),true
    );
    
    
 }
 
+// Связываем ошибки с исключениями
+class E_EXCEPTION         extends Exception {}     // 0
+class E_ERROR             extends E_EXCEPTION {}   // 1
+class E_WARNING           extends E_EXCEPTION {}   // 2
+class E_PARSE             extends E_EXCEPTION {}   // 4
+class E_NOTICE            extends E_EXCEPTION {}   // 8
+class E_CORE_ERROR        extends E_EXCEPTION {}   // 16
+class E_CORE_WARNING      extends E_EXCEPTION {}   // 32
+class E_COMPILE_ERROR     extends E_EXCEPTION {}   // 64
+class E_COMPILE_WARNING   extends E_EXCEPTION {}   // 126
+class E_USER_ERROR        extends E_EXCEPTION {}   // 256
+class E_USER_WARNING      extends E_EXCEPTION {}   // 512
+class E_USER_NOTICE       extends E_EXCEPTION {}   // 1024
+class E_STRICT            extends E_EXCEPTION {}   // 2048
+class E_RECOVERABLE_ERROR extends E_EXCEPTION {}   // 4096
+class E_DEPRECATED        extends E_EXCEPTION {}   // 8192
+class E_USER_DEPRECATED   extends E_EXCEPTION {}   // 16384
+class E_ALL               extends E_EXCEPTION {}   // 32767
 
-// ---------------------------------
-function ddt()
-{
-   echo 'DDT<br>';
+   //echo 'DDToii<br>';
    // Инициализируем параметры Php.ini для управления выводом ошибок
    InisetErrors();
    // Регистрируем функцию, которая будет выполняться по завершению работы скрипта
@@ -253,4 +259,3 @@ function ddt()
    // Регистрируем новую функцию-обработчик для всех типов ошибок
    //set_error_handler("myErrorHandler",E_ALL);
    set_error_handler("DoorTryHandler",E_ALL);
-}

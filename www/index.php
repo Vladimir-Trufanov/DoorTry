@@ -11,8 +11,8 @@
 
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
 
-$TypeExp='E_USER_WARNING';
-class E_USER_WARNING extends Exception {}
+$TypeExp='E_USER_ERROR';
+//class E_USER_WARNING extends Exception {}
 function testFile($FileName)
 {
    global $TypeExp;
@@ -29,7 +29,7 @@ function testFile($FileName)
     {
       trigger_error("Функция print_age(): ".
                     "возраст не может быть".
-                    " отрицательным", E_USER_ERROR);
+                    " отрицательным", E_USER_WARNING);
     }
     echo "Возраст составляет: $age";
   }
@@ -37,8 +37,8 @@ function testFile($FileName)
 
 
 
-require_once $SiteRoot."/dt.php";
-ddt();
+require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
+//ddt();
 // init bootstrapping phase
 try 
 {
@@ -58,7 +58,7 @@ catch (Error $e)
    //DoorTryPage($e);
 }
 */
-catch (Exception $e) 
+catch (E_EXCEPTION $e) 
 {
    //echo  "<pre><b>EE Перехвачена ошибка!</b><br>".$e."</pre>";
    DoorTryPage($e);

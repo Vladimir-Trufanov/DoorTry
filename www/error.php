@@ -9,19 +9,8 @@
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 03.05.2019
 
-
-function DoorTryMessage($errstr,$errtype,$errline='',$errfile='',$errtrace='')
-{
-    echo "<br>-----------------------------";
-    echo "<pre>";
-    echo "<b>".$errstr."</b><br><br>";
-    echo "File: ".$errfile."<br>";
-    echo "Line: ".$errline."<br><br>";
-    echo $errtype."<br>";
-    if (!($errtrace=='')) {echo $errtrace."<br>";}
-    echo "</pre>";
-    echo "-----------------------------<br>";
-}
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+require_once $SiteRoot."/TDoorTryer/DoorTryerMessage.php";
 
 $errstr='';    
 if (IsSet($_GET['estr'])) 
@@ -49,5 +38,27 @@ if (IsSet($_GET['etrace']))
    $errtrace=urldecode($_GET['etrace']);
 }
 
-//echo '==='.$errtrace.'===';
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <title>Обработчик ошибок и исключений</title>
+   <meta charset="utf-8">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+   <meta name="viewport" content="width=device-width"> 
+   <meta name="description" content="DoorTry - обработчик ошибок и исключений">
+   <meta name="keywords" content="DoorTry - обработчик ошибок и исключений">
+   <!-- 
+   <link href="Styles/Styles.css" rel="stylesheet">
+   -->
+</head>
+<body>
+<?php
+
 DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);
+
+?>
+</body> 
+</html>
+<?php
+// <!-- -->

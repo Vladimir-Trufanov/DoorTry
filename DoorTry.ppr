@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
@@ -26,8 +26,9 @@ DoorTry
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
+			www\TDoorTryer\DoorTryerMessage.php
+			www\TDoorTryer\DoorTryerPage.php
 		www\doortry.png
-		www\dt.php
 		www\error.php
 		www\favicon.ico
 		www\iGetAbove.php
@@ -41,34 +42,45 @@ DoorTry
 		www\Site.php
 [Open project files]
 0=www\index.php
-1=www\includErrs.php
-2=www\Main.php
-3=www\dt.php
-4=www\Main.pho
-5=www\TDoorTryer\DoorTryerClass.php
-6=www\error.php
+1=www\Main.php
+2=www\Main.pho
+3=www\TDoorTryer\DoorTryerClass.php
+4=www\error.php
+5=www\TDoorTryer\DoorTryerMessage.php
+6=www\includErrs.php
+7=www\TDoorTryer\DoorTryerPage.php
+8=www\iHtmlBegin.php
+9=www\iHtmlEnd.php
 [Selected Project Files]
 Main=
-Selected=www\dt.php
+Selected=www\TDoorTryer\DoorTryerPage.php
 [www\index.php]
-TopLine=45
-Caret=1,22
-[www\includErrs.php]
-TopLine=13
-Caret=1,91
+TopLine=55
+Caret=1,13
 [www\Main.php]
 TopLine=1
-Caret=1,5
-[www\dt.php]
-TopLine=216
-Caret=4,240
-Mark1=1,175
+Caret=1,12
 [www\Main.pho]
 TopLine=1
 Caret=1,1
 [www\TDoorTryer\DoorTryerClass.php]
-TopLine=1
-Caret=1,22
+TopLine=201
+Caret=25,40
 [www\error.php]
+TopLine=39
+Caret=7,53
+[www\TDoorTryer\DoorTryerMessage.php]
+TopLine=1
+Caret=19,9
+[www\includErrs.php]
+TopLine=39
+Caret=3,55
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=114
+Caret=9,121
+[www\iHtmlBegin.php]
 TopLine=7
-Caret=1,24
+Caret=1,27
+[www\iHtmlEnd.php]
+TopLine=1
+Caret=1,16

@@ -14,3 +14,7 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\index.php on line 23
+[05-May-2019 09:25:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ddt() in C:\DoorTry\www\index.php:41
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\index.php on line 41
