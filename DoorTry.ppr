@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
@@ -24,7 +24,7 @@ DoorTry
 			www\imgs\mule.jpg
 		-Styles
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerClass.php
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
@@ -37,50 +37,25 @@ DoorTry
 		www\includErrs.php
 		www\index.php
 		www\log.txt
-		www\Main.pho
 		www\Main.php
 		www\Site.php
 [Open project files]
 0=www\index.php
 1=www\Main.php
-2=www\Main.pho
-3=www\TDoorTryer\DoorTryerClass.php
-4=www\error.php
-5=www\TDoorTryer\DoorTryerMessage.php
-6=www\includErrs.php
-7=www\TDoorTryer\DoorTryerPage.php
-8=www\iHtmlBegin.php
-9=www\iHtmlEnd.php
+2=www\TDoorTryer\DoorTryerClass.php
+3=www\TDoorTryer\DoorTryerPage.php
 [Selected Project Files]
 Main=
 Selected=www\TDoorTryer\DoorTryerPage.php
 [www\index.php]
-TopLine=55
-Caret=1,13
+TopLine=21
+Caret=19,32
 [www\Main.php]
 TopLine=1
-Caret=1,12
-[www\Main.pho]
-TopLine=1
-Caret=1,1
+Caret=3,10
 [www\TDoorTryer\DoorTryerClass.php]
-TopLine=201
-Caret=25,40
-[www\error.php]
-TopLine=39
-Caret=7,53
-[www\TDoorTryer\DoorTryerMessage.php]
-TopLine=1
-Caret=19,9
-[www\includErrs.php]
-TopLine=39
-Caret=3,55
+TopLine=169
+Caret=1,189
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=114
-Caret=9,121
-[www\iHtmlBegin.php]
-TopLine=7
-Caret=1,27
-[www\iHtmlEnd.php]
-TopLine=1
-Caret=1,16
+TopLine=195
+Caret=62,174

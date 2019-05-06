@@ -134,19 +134,6 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
       // Header("Location: ".$uripage);
    }
    else DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);
-   /*
-   {
-      echo '<div style="border-style:inset; border-width:2">';
-      echo "<pre>";
-      echo "<b>".$errstr."</b><br><br>";
-      echo "File: ".$errfile."<br>";
-      echo "Line: ".$errline."<br><br>";
-      echo $errtype."<br>";
-      if (!($errtrace=='')) {echo $errtrace."<br>";}
-      echo "</pre>";
-      echo "</div>";
-   }
-   */
 }
 
 // ****************************************************************************
@@ -191,17 +178,6 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
    {
       DoorTryExec('Авария 195',1,'','','',false);
    }
-
-
-
-   //$className=terGetValue($errno);
-   // Генерируем исключение нужного типа.
-   //throw new $className($errno,$errstr,$errfile,$errline);
-   //DoorTryExec
-   //(
-   //   $lasterror['message'],$TypeError,
-   //   $lasterror['line'],$lasterror['file'],'',false
-   //);
 }  
 
 
@@ -219,17 +195,24 @@ function DoorTryPage($e)
    {
       $TypeError='NoDefine'; $Point=-1;  
    }
+   // При неопределенном типе ошибки для PHP5 
+   // назначаем тип ошибки по типу класса
+   if ($TypeError=='NoDefine')
+   {
+      if (!(isPhp7()))
+      {
+         $TypeError=get_class($e).':';   
+      }
+   
+   }
    //echo '$TypeError='.$TypeError.'<br>';
    //echo '$e->getCode()='.$e->getCode().'<br>';
    //echo 'get_class($e)='.get_class($e).'<br>';
-   
    DoorTryExec
    (
       $e->getMessage(),$TypeError,
       $e->getLine(),$e->getFile(),$e->getTraceAsString(),true
    );
-   
-   
 }
 
 // Связываем ошибки с исключениями
@@ -253,7 +236,7 @@ class E_ALL               extends E_EXCEPTION {}   // 32767
 
    //echo 'DDToii<br>';
    // Инициализируем параметры Php.ini для управления выводом ошибок
-   InisetErrors();
+   //InisetErrors();
    // Регистрируем функцию, которая будет выполняться по завершению работы скрипта
    register_shutdown_function('DoorTryShutdown');
    // Регистрируем новую функцию-обработчик для всех типов ошибок

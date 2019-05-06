@@ -18,3 +18,21 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\index.php on line 41
+[06-May-2019 16:29:32 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Wrong parameters for E_EXCEPTION([string $message [, long $code [, Throwable $previous = NULL]]]) in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:186
+Stack trace:
+#0 C:\DoorTry\www\TDoorTryer\DoorTryerPage.php(186): Exception->__construct(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22)
+#1 [internal function]: DoorTryHandler(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22, Array)
+#2 C:\DoorTry\www\index.php(22): trigger_error('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 512)
+#3 C:\DoorTry\www\Main.php(5): print_age(-10)
+#4 C:\DoorTry\www\index.php(35): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 186
+[06-May-2019 17:15:54 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function E_EXCEPTION() in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:137
+Stack trace:
+#0 C:\DoorTry\www\TDoorTryer\DoorTryerPage.php(190): DoorTryExec('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'E_USER_WARNING', 22, 'C:\\DoorTry\\www\\...', 'DoorTryHandleri...', true)
+#1 [internal function]: DoorTryHandler(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22, Array)
+#2 C:\DoorTry\www\index.php(22): trigger_error('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 512)
+#3 C:\DoorTry\www\Main.php(5): print_age(-10)
+#4 C:\DoorTry\www\index.php(30): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 137
