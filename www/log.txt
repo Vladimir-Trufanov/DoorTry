@@ -36,3 +36,92 @@ Stack trace:
 #4 C:\DoorTry\www\index.php(30): require_once('C:\\DoorTry\\www\\...')
 #5 {main}
   thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 137
+[06-May-2019 19:30:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[06-May-2019 20:47:05 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function inc() in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:139
+Stack trace:
+#0 C:\DoorTry\www\TDoorTryer\DoorTryerPage.php(209): terGetTrace2(Object(Exception))
+#1 [internal function]: DoorTryHandler(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22, Array)
+#2 C:\DoorTry\www\index.php(22): trigger_error('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 512)
+#3 C:\DoorTry\www\Main.php(5): print_age(-10)
+#4 C:\DoorTry\www\index.php(30): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 139
+[06-May-2019 20:57:10 Asia/Kuwait] PHP Notice:  Undefined offset: 1 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 145
+[06-May-2019 20:57:10 Asia/Kuwait] PHP Notice:  Undefined offset: 2 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 145
+[06-May-2019 21:16:47 Asia/Kuwait] PHP Notice:  Undefined offset: 0 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 152
+[06-May-2019 21:17:41 Asia/Kuwait] PHP Notice:  Undefined offset: 0 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 152
+[06-May-2019 21:52:08 Asia/Kuwait] PHP Notice:  Array to string conversion in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 142
+[06-May-2019 21:52:31 Asia/Kuwait] PHP Notice:  Array to string conversion in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 142
+[06-May-2019 22:07:21 Asia/Kuwait] PHP Warning:  preg_match(): Unknown modifier '\' in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 139
+[06-May-2019 22:14:33 Asia/Kuwait] PHP Notice:  Array to string conversion in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 154
+[06-May-2019 22:28:04 Asia/Kuwait] PHP Notice:  Undefined variable: Result in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 147
+[06-May-2019 22:28:04 Asia/Kuwait] PHP Notice:  Undefined variable: Result in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 159
+[06-May-2019 22:28:40 Asia/Kuwait] PHP Notice:  Undefined variable: Result in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 147
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
+[06-May-2019 22:42:29 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 156
+[06-May-2019 22:42:29 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 156

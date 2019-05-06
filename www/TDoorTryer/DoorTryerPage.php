@@ -4,6 +4,8 @@ require_once $SiteRoot."/TDoorTryer/DoorTryerMessage.php";
 
 // -------------- Рег.выражение "фрагмент с типом ошибки с начала строки до ":"
 define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
+// ---------------------------- Рег.выражение "фрагмент от "#2" до конца строки
+define ("regTrace2",   "/#2[\s\S]{1,}$/u");
 // ------------------------------------------- Массив зарегистрированных ошибок
 // 1 - фатальная ошибка во время выполнения
 $TypeErrors[E_ERROR]             = "E_ERROR";
@@ -112,6 +114,60 @@ function terGetValue($inkey)
    return $result;         
 }
 
+// ****************************************************************************
+// *              Выбрать из принудительного исключения трассировку           *
+// ****************************************************************************
+function terGetTrace2($e)
+{
+   function findes($preg,$string)
+   {
+      $findes='';
+      $value=preg_match($preg,$string,$matches,PREG_OFFSET_CAPTURE);
+      if ($value>0)
+      {
+         $findes=$matches[0][0];
+      }
+      return $findes;
+   }
+   
+   // Выбираем из сообщения трассировку, начиная со 2 строки "#2" (для того,
+   // чтобы отрезать трассировку, вызванную принудительным исключениеми) и
+   // добавляем в хвосте ограничитель для выборки строк трассировки "#999" 
+   $SayTrass='';
+   $value=preg_match_all(regTrace2,$e,$matches,PREG_OFFSET_CAPTURE);
+   if ($value>0)
+   {
+      $findes=$matches[0]; 
+      $SayTrass=$findes[0][0].'#999 ';  
+   }
+   //echo '1***'.$e.'***1<br>';
+   //echo '2***'.$SayTrass.'***2<br>';
+   
+   // Инициируем счетчик выводимых строк трассировки и
+   // выбираем первую строку 
+   $i=0;
+   $findes=findes("/#[\s\S]{1,}?#/u",$SayTrass);
+   $findes=substr($findes,0,strlen($findes)-1);
+   //echo 'Первый $findes='.$findes.'***<br>';      
+   while (strlen($findes)>0)
+   //while ($i<3)
+   {
+      // Выделяем остаток трассировки
+      $SayTrass=substr($SayTrass,strlen($findes));
+      //echo '$SayTrass='.$SayTrass.'***<br>';
+      // Выделяем фрагмент прежнего счетчика строк
+      $numbers=findes("/#[0-9]{1,}\s/u",$findes);
+      //echo '$numbers='.$numbers.'***<br>';
+      // Формируем и выводим актуальную строку трассировки
+      echo '#'.$i.' '.substr($findes,strlen($numbers)).'<br>';
+      // Выбираем следующую строку 
+      $findes=findes("/#[\s\S]{1,}?#/u",$SayTrass);
+      $findes=substr($findes,0,strlen($findes)-1);
+      //echo 'След $findes='.$findes.'***<br>';      
+      $i=$i+1;
+   }
+   return $SayTrass;
+}
 
 function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$MakePage=true)
 {
@@ -171,12 +227,15 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
       $TypeError=terGetValue(intval($typelast));
       try
       {
+         // Делаем принудительное исключение для того,
+         // чтобы поймать трассировку
          throw new Exception('Hello!');
       }
       catch (Exception $e)
       {
-         //echo '11111111'.$e.'11111111111';
-      
+         // Выделяем трассировку
+         $errtrace=terGetTrace2($e); 
+         // Запускаем вывод ошибки     
       //DoorTryExec
       //(
       //   $errstr,$TypeError,$errline,$errfile,'DoorTryHandler'.$e,true
@@ -245,7 +304,7 @@ class E_ALL               extends E_EXCEPTION {}   // 32767
 
    //echo 'DDToii<br>';
    // Инициализируем параметры Php.ini для управления выводом ошибок
-   //InisetErrors();
+   InisetErrors();
    // Регистрируем функцию, которая будет выполняться по завершению работы скрипта
    register_shutdown_function('DoorTryShutdown');
    // Регистрируем новую функцию-обработчик для всех типов ошибок

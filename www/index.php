@@ -21,7 +21,7 @@ $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
                     "возраст не может быть".
                     " отрицательным", E_USER_WARNING);
     }
-    echo "Возраст составляет: $age";
+    echo "Возраст составляет: $age<br>";
   }
 
 require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
