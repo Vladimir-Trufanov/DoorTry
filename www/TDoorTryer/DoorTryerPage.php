@@ -169,10 +169,19 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
    if (terIsKey($typelast))
    {
       $TypeError=terGetValue(intval($typelast));
-      DoorTryExec
-      (
-         $errstr,$TypeError,$errline,$errfile,'DoorTryHandler',true
-      );
+      try
+      {
+         throw new Exception('Hello!');
+      }
+      catch (Exception $e)
+      {
+         //echo '11111111'.$e.'11111111111';
+      
+      //DoorTryExec
+      //(
+      //   $errstr,$TypeError,$errline,$errfile,'DoorTryHandler'.$e,true
+      //);
+      }
    }
    else
    {
