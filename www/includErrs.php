@@ -78,7 +78,7 @@ Error:
 
 // *** E_PARSE *** остановка программы
 // ---------------------------------------------------------------------- 7 ---
-//echo "Hi" echo "Hello";
+echo "Hi" echo "Hello";
 // [7] Parse error: syntax error, 
 //     unexpected 'echo' (T_ECHO), 
 //     expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 99
@@ -127,7 +127,19 @@ function ReadFileConfig($FileName)
 }
 //ReadFileConfig("config.php");
 
-// *** E_USER_WARNING *** 
+// *** E_USER_WARNING *** продолжение работы 
+// --------------------------------------------------------------------- 12 ---
+function PrintAge($age)
+{
+   $age = intval($age);
+   if ($age < 0)
+   {
+      trigger_error("Функция print_age(): "."возраст не может быть".
+      " отрицательным", E_USER_WARNING);
+   }
+   echo "Возраст составляет: $age<br>";
+}
+//PrintAge(-10);
 
 // *** E_USER_NOTICE *** 
 
@@ -141,7 +153,7 @@ function ReadFileConfig($FileName)
 // *** E_RECOVERABLE_ERROR *** 
 
 // *** E_DEPRECATED *** продолжение работы 
-// --------------------------------------------------------------------- 11 ---
+// --------------------------------------------------------------------- 13 ---
 // PHP будет ругаться, если вы используете устаревшие функции (т.е. те, что 
 // помечены как deprecated, и в следующем мажорном релизе их не будет):
 //split(',', 'a,b');
@@ -151,7 +163,7 @@ function ReadFileConfig($FileName)
 // [5] Deprecated: Function split() is deprecated in Z:\home\Proba\www\includErrs.php on line 99
 
 // *** Пример, где есть трассировка и в PHP7, и в PHP5 ***
-// --------------------------------------------------------------------- 12 ---
+// --------------------------------------------------------------------- 14 ---
 
 class A
 {
@@ -186,3 +198,8 @@ class C
 //     #2 Z:\home\Proba\www\includErrs.php(99): A->run() 
 //     #3 Z:\home\Proba\www\index.php(99): require_once('Z:\home\Proba\w...') 
 //     #4 {main} thrown in Z:\home\Proba\www\includErrs.php on line 99
+
+// *** Пример, где есть блокировка трассироваи ***
+// --------------------------------------------------------------------- 15 ---
+//filemtime("spoon");
+//@filemtime("spoon");

@@ -145,7 +145,7 @@ function terGetTrace2($e)
    
    // Инициируем счетчик выводимых строк трассировки и
    // выбираем первую строку 
-   $i=0;
+   $i=0;  $Result='';
    $findes=findes("/#[\s\S]{1,}?#/u",$SayTrass);
    $findes=substr($findes,0,strlen($findes)-1);
    //echo 'Первый $findes='.$findes.'***<br>';      
@@ -159,14 +159,15 @@ function terGetTrace2($e)
       $numbers=findes("/#[0-9]{1,}\s/u",$findes);
       //echo '$numbers='.$numbers.'***<br>';
       // Формируем и выводим актуальную строку трассировки
-      echo '#'.$i.' '.substr($findes,strlen($numbers)).'<br>';
+      //echo '#'.$i.' '.substr($findes,strlen($numbers)).'<br>';
+      $Result=$Result.'#'.$i.' '.substr($findes,strlen($numbers));
       // Выбираем следующую строку 
       $findes=findes("/#[\s\S]{1,}?#/u",$SayTrass);
       $findes=substr($findes,0,strlen($findes)-1);
       //echo 'След $findes='.$findes.'***<br>';      
       $i=$i+1;
    }
-   return $SayTrass;
+   return $Result;
 }
 
 function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$MakePage=true)
@@ -206,8 +207,8 @@ function DoorTryShutdown()
       $TypeError=terGetValue(intval($typelast));
       DoorTryExec
       (
-         $lasterror['message'],$TypeError,
-         $lasterror['line'],$lasterror['file'],'DoorTryShutdown',true
+         $lasterror['message'],$TypeError.' [SHT]',
+         $lasterror['line'],$lasterror['file'],'',true
       );
    }
 } 
@@ -236,10 +237,10 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
          // Выделяем трассировку
          $errtrace=terGetTrace2($e); 
          // Запускаем вывод ошибки     
-      //DoorTryExec
-      //(
-      //   $errstr,$TypeError,$errline,$errfile,'DoorTryHandler'.$e,true
-      //);
+         DoorTryExec
+         (
+            $errstr,$TypeError.' [HND]',$errline,$errfile,$errtrace,true
+         );
       }
    }
    else
@@ -271,14 +272,10 @@ function DoorTryPage($e)
       {
          $TypeError=get_class($e).':';   
       }
-   
    }
-   //echo '$TypeError='.$TypeError.'<br>';
-   //echo '$e->getCode()='.$e->getCode().'<br>';
-   //echo 'get_class($e)='.get_class($e).'<br>';
    DoorTryExec
    (
-      $e->getMessage(),$TypeError,
+      $e->getMessage(),$TypeError.' [PGE]',
       $e->getLine(),$e->getFile(),$e->getTraceAsString(),true
    );
 }

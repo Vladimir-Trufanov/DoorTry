@@ -7,22 +7,11 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 03.05.2019
+// Copyright © 2019 tve                              Посл.изменение: 07.05.2019
 
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
 
 
-  function print_age($age)
-  {
-    $age = intval($age);
-    if ($age < 0)
-    {
-      trigger_error("Функция print_age(): ".
-                    "возраст не может быть".
-                    " отрицательным", E_USER_WARNING);
-    }
-    echo "Возраст составляет: $age<br>";
-  }
 
 require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
 try 

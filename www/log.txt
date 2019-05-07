@@ -125,3 +125,15 @@ Stack trace:
 [06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
 [06-May-2019 22:42:29 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 156
 [06-May-2019 22:42:29 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 156
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Notice:  A non well formed numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Notice:  A non well formed numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Notice:  A non well formed numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
+[07-May-2019 16:12:09 Asia/Kuwait] PHP Fatal error:  Cannot redeclare findes() (previously declared in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:122) in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 122
+[07-May-2019 16:17:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[07-May-2019 16:19:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[07-May-2019 16:20:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
