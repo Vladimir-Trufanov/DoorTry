@@ -24,7 +24,7 @@
 
 // *** E_ERROR *** остановка программы
 // ---------------------------------------------------------------------- 1 ---
-$str='try'; $str[]=4;
+//$str='try'; $str[]=4;
 // [7] Fatal error: Uncaught Error: 
 //     [] operator not supported for strings in C:\DoorTry\www\includErrs.php:99 
 //     Stack trace: #0 C:\DoorTry\www\index.php(99): require_once() #1 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
@@ -182,7 +182,7 @@ class C
    public function doException()
    {throw new Exception('Error in method ' . __METHOD__ . ' !');}
 }
-//$a=new A(); $a->run();
+$a=new A(); $a->run();
 
 // [7] Fatal error: Uncaught Exception: Error in method C::doException ! 
 //     in C:\DoorTry\www\includErrs.php:99 
@@ -202,4 +202,4 @@ class C
 // *** Пример, где есть блокировка трассироваи ***
 // --------------------------------------------------------------------- 15 ---
 //filemtime("spoon");
-@filemtime("spoon");
+//@filemtime("spoon");

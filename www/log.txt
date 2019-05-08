@@ -317,3 +317,28 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 27
+[08-May-2019 19:27:48 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 27
+[08-May-2019 19:28:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[08-May-2019 19:30:06 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[08-May-2019 19:33:04 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183

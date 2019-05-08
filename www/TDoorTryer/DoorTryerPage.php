@@ -246,7 +246,21 @@ function DoorTryShutdown()
       if ($thrown>'')
       {
          $string=substr($string,$point+16);      
-      } 
+      }
+      // Так как сообщение об ошибке может начинаться с "Uncaught exception 'Exception' with message" - 
+      // "необнаруженное исключение", то отрезаем этот фрагмент
+      $thrown=findes("/Uncaught exception 'Exception' with message /u",$string,$point);
+      if ($thrown>'')
+      {
+         $string=substr($string,$point+44);      
+      }
+      // Так как сообщение об ошибке может начинаться с "Uncaught Exception" - 
+      // "необнаруженное исключение", то отрезаем этот фрагмент
+      $thrown=findes("/Uncaught Exception: /u",$string,$point);
+      if ($thrown>'')
+      {
+         $string=substr($string,$point+20);      
+      }
       // Определяем тип ошибки, формируем и выводим сообщение
       $TypeError=terGetValue(intval($typelast));
       DoorTryExec

@@ -24,7 +24,7 @@ DoorTry
 			www\imgs\mule.jpg
 		-Styles
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\doortry.png
@@ -53,8 +53,8 @@ Caret=72,10
 TopLine=1
 Caret=1,5
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=232
-Caret=32,248
+TopLine=244
+Caret=1,264
 [www\includErrs.php]
-TopLine=11
-Caret=1,27
+TopLine=173
+Caret=8,181
