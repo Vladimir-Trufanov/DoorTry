@@ -342,3 +342,36 @@ Stack trace:
 #4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #5 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 183
+[08-May-2019 19:39:38 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[08-May-2019 19:41:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 159
+[08-May-2019 19:49:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 159
+[08-May-2019 19:51:15 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 159
+[08-May-2019 19:51:46 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 159

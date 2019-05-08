@@ -261,6 +261,13 @@ function DoorTryShutdown()
       {
          $string=substr($string,$point+20);      
       }
+      // Так как сообщение об ошибке может заканчиваться указанием строки с ошибкой,
+      // то отрезаем этот фрагмент
+      $thrown=findes("/ in [\s\S]{1,}:[0-9]{1,}/u",$string,$point);
+      if ($thrown>'')
+      {
+         $string=substr($string,0,$point);      
+      }
       // Определяем тип ошибки, формируем и выводим сообщение
       $TypeError=terGetValue(intval($typelast));
       DoorTryExec
