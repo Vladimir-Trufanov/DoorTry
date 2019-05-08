@@ -24,7 +24,7 @@
 
 // *** E_ERROR *** остановка программы
 // ---------------------------------------------------------------------- 1 ---
-//$str='try'; $str[]=4;
+$str='try'; $str[]=4;
 // [7] Fatal error: Uncaught Error: 
 //     [] operator not supported for strings in C:\DoorTry\www\includErrs.php:99 
 //     Stack trace: #0 C:\DoorTry\www\index.php(99): require_once() #1 {main} thrown in C:\DoorTry\www\includErrs.php on line 99
@@ -78,7 +78,7 @@ Error:
 
 // *** E_PARSE *** остановка программы
 // ---------------------------------------------------------------------- 7 ---
-echo "Hi" echo "Hello";
+//echo "Hi" echo "Hello";
 // [7] Parse error: syntax error, 
 //     unexpected 'echo' (T_ECHO), 
 //     expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 99
@@ -202,4 +202,4 @@ class C
 // *** Пример, где есть блокировка трассироваи ***
 // --------------------------------------------------------------------- 15 ---
 //filemtime("spoon");
-//@filemtime("spoon");
+@filemtime("spoon");
