@@ -7,10 +7,10 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 07.05.2019
+// Copyright © 2019 tve                              Посл.изменение: 09.05.2019
 
 /**
- * В DoorTryer заложены все типы ошибок. Через установленный модуль от 
+ * В DoorTryer заложены все типы ошибок: через установленный модуль от 
  * set_error_handler обрабатывается большинство ошибок, остальные ошибки 
  * вылавливаются после завершения работы сценария через 
  * register_shutdown_function, через try-catch-error обрабатываются исключения
@@ -60,8 +60,6 @@ $TypeErrors[E_DEPRECATED]        = "E_DEPRECATED";
 $TypeErrors[E_USER_DEPRECATED]   = "E_USER_DEPRECATED"; 
 // 32767
 $TypeErrors[E_ALL]               = "E_ALL"; 
-// ------------------------------------------- Массив зарегистрированных ошибок
-
 // ****************************************************************************
 // *         Определить: является ли версия текущего PHP-сценария             *
 // *                        седьмой или большей                               *
@@ -78,9 +76,6 @@ function isPhp7()
 // ****************************************************************************
 // *    Выбрать из строки подстроку, соответствующую регулярному выражению    *                          *
 // ****************************************************************************
-// ----------------------------------------------------------------------------
-//     Выбрать из строки подстроку, соответствующую регулярному выражению 
-// ----------------------------------------------------------------------------
 function findes($preg,$string,&$point=0)
 {
    $findes='';
@@ -92,10 +87,12 @@ function findes($preg,$string,&$point=0)
    }
    return $findes;
 }
-
+// ****************************************************************************
+// *    Выбрать из строки последнюю подстроку, соответствующую регулярному    *
+// *         выражению. При необходимости показать трассировку поиска         * 
+// ****************************************************************************
 function LastFindes($preg,$string,&$point=0,$say=false)
 {
-   // Выполняем регулярное выражение и получаем результаты поиска
    $Result='';
    $x=preg_match_all($preg,$string,$imatches,PREG_OFFSET_CAPTURE);
    if (!($matches=null)) $matches=$imatches;
@@ -124,7 +121,6 @@ function LastFindes($preg,$string,&$point=0,$say=false)
       }
    return $Result;
 }
-
 // ****************************************************************************
 // *    Проинициализировать параметры Php.ini для управления выводом ошибок   *
 // ****************************************************************************
@@ -171,7 +167,7 @@ function terIsKey($inkey)
 }
 // ****************************************************************************
 // *               Определить наименование по типу ошибки и                   *
-// *                 Отловить незафиксированный тип ошибки                    *
+// *                 отловить незафиксированный тип ошибки                    *
 // ****************************************************************************
 function terGetValue($inkey)
 {
@@ -188,7 +184,7 @@ function terGetValue($inkey)
    return $result;         
 }
 // ****************************************************************************
-// *              Выбрать из принудительного исключения трассировку           *
+// *    Выбрать подстроку трассировки из текста принудительного исключения    *
 // ****************************************************************************
 function terGetTrace2($e)
 {
@@ -235,12 +231,10 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
          "&eline=".urlencode($errline).
          "&efile=".urlencode($errfile).
          "&etrace=".urlencode($errtrace);
-   
       // Вызываем страницу ошибки через javascript
       echo '<script>';
       echo 'window.location.assign("'.$uripage.'")';
       echo '</script>';
-
       // Вызываем страницу ошибки через отправку заголовка
       // Header("Location: ".$uripage);
    }
@@ -252,7 +246,6 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
 function DoorTryShutdown()
 {
    global $TypeErrors;
-   
    $lasterror=error_get_last();
    $typelast=intval($lasterror['type']);
    if (terIsKey($typelast))
@@ -260,68 +253,37 @@ function DoorTryShutdown()
       // Пробуем выбрать трассировку
       $point=0;
       $string=$lasterror['message'];
-      //echo '1 $string='.$string.'<br>';
       $trace=findes(regTrace,$string,$point);
       // Если трассировка есть, то отделяем трассировку от сообщения 
-      if ($trace>'')
-      {
-         $string=substr($string,0,$point);      
-      } 
+      if ($trace>'') {$string=substr($string,0,$point);} 
       // Так как текст трассировки может завершаться словом "thrown",
       // то отрезаем его
       $thrown=findes(regThrown,$trace);
-      if ($thrown>'')
-      {
-         $trace=substr($thrown,0,strlen($thrown)-6);      
-      } 
+      if ($thrown>'') {$trace=substr($thrown,0,strlen($thrown)-6);} 
       // Так как сообщение об ошибке может начинаться с "Uncaught Error" - 
       // "необнаруженная ошибка", то отрезаем этот фрагмент
       $thrown=findes('/Uncaught Error: /u',$string,$point);
-      if ($thrown>'')
-      {
-         $string=substr($string,$point+16);      
-      }
-      // Так как сообщение об ошибке может начинаться с "Uncaught exception 'Exception' with message" - 
-      // "необнаруженное исключение", то отрезаем этот фрагмент
+      if ($thrown>'') {$string=substr($string,$point+16);}
+      // Так как сообщение об ошибке может начинаться с "Uncaught exception 
+      // 'Exception' with message" - "необнаруженное исключение", 
+      // то отрезаем этот фрагмент
       $thrown=findes("/Uncaught exception 'Exception' with message /u",$string,$point);
-      if ($thrown>'')
-      {
-         $string=substr($string,$point+44);      
-      }
+      if ($thrown>'') {$string=substr($string,$point+44);}
       // Так как сообщение об ошибке может начинаться с "Uncaught Exception" - 
       // "необнаруженное исключение", то отрезаем этот фрагмент
       $thrown=findes("/Uncaught Exception: /u",$string,$point);
-      if ($thrown>'')
-      {
-         $string=substr($string,$point+20);      
-      }
+      if ($thrown>'') {$string=substr($string,$point+20);}
       // Так как сообщение об ошибке может заканчиваться указанием строки с ошибкой,
       // то отрезаем этот фрагмент
-      /*
-      $thrown=findes("/ in [\s\S]{1,}:[0-9]{1,}/u",$string,$point);
-      if ($thrown>'')
-      {
-         $string=substr($string,0,$point);      
-      }
-      */
-      
-      //LastFindes("/ in [\s\S]{1,}:[0-9]{1,}/u",$string);
       LastFindes("/in /u",$string,$point,false);
-      //echo '$point='.$point;
-      $string=substr($string,0,$point);      
-      //echo '2 $string='.$string.'<br>';
-      
-      
-      
+      if ($point>0) {$string=substr($string,0,$point);}      
       // Определяем тип ошибки, формируем и выводим сообщение
       $TypeError=terGetValue(intval($typelast));
-      
       DoorTryExec
       (
          $string,$TypeError.' [SHT]',
          $lasterror['line'],$lasterror['file'],$trace,true
       );
-      
    }
 } 
 // ****************************************************************************
@@ -359,7 +321,7 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
    }
    else
    {
-      DoorTryExec('Авария 195',1,'','','',false);
+      DoorTryExec('Авария-95!',1,'','','',false);
    }
 }  
 // ****************************************************************************
@@ -367,7 +329,6 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
 // ****************************************************************************
 function DoorTryPage($e)
 {
-   //echo '***'.$e.'***';
    // Определяем тип ошибки
    $value=preg_match_all(regErrorType,$e,$matches,PREG_OFFSET_CAPTURE);
    if ($value>0)
@@ -421,5 +382,4 @@ InisetErrors();
 register_shutdown_function('DoorTryShutdown');
 // Регистрируем новую функцию-обработчик для всех типов ошибок
 set_error_handler("DoorTryHandler",E_ALL);
-
 // ****************************************************** DoorTryerPage.php ***

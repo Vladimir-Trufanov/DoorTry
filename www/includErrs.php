@@ -182,7 +182,7 @@ class C
    public function doException()
    {throw new Exception('Error in method ' . __METHOD__ . ' !');}
 }
-$a=new A(); $a->run();
+//$a=new A(); $a->run();
 
 // [7] Fatal error: Uncaught Exception: Error in method C::doException ! 
 //     in C:\DoorTry\www\includErrs.php:99 

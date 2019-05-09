@@ -1,149 +1,4 @@
-[05-May-2019 05:42:44 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\Main.php:6
-Stack trace:
-#0 C:\DoorTry\www\index.php(33): require_once()
-#1 {main}
-  thrown in C:\DoorTry\www\Main.php on line 6
-[05-May-2019 06:33:19 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\Main.php:6
-Stack trace:
-#0 C:\DoorTry\www\index.php(34): require_once()
-#1 {main}
-  thrown in C:\DoorTry\www\Main.php on line 6
-[05-May-2019 07:04:55 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'E_USER_WARNING' not found in C:\DoorTry\www\index.php:23
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): testFile('config.php')
-#1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\index.php on line 23
-[05-May-2019 09:25:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ddt() in C:\DoorTry\www\index.php:41
-Stack trace:
-#0 {main}
-  thrown in C:\DoorTry\www\index.php on line 41
-[06-May-2019 16:29:32 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Wrong parameters for E_EXCEPTION([string $message [, long $code [, Throwable $previous = NULL]]]) in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:186
-Stack trace:
-#0 C:\DoorTry\www\TDoorTryer\DoorTryerPage.php(186): Exception->__construct(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22)
-#1 [internal function]: DoorTryHandler(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22, Array)
-#2 C:\DoorTry\www\index.php(22): trigger_error('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 512)
-#3 C:\DoorTry\www\Main.php(5): print_age(-10)
-#4 C:\DoorTry\www\index.php(35): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 186
-[06-May-2019 17:15:54 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function E_EXCEPTION() in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:137
-Stack trace:
-#0 C:\DoorTry\www\TDoorTryer\DoorTryerPage.php(190): DoorTryExec('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'E_USER_WARNING', 22, 'C:\\DoorTry\\www\\...', 'DoorTryHandleri...', true)
-#1 [internal function]: DoorTryHandler(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22, Array)
-#2 C:\DoorTry\www\index.php(22): trigger_error('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 512)
-#3 C:\DoorTry\www\Main.php(5): print_age(-10)
-#4 C:\DoorTry\www\index.php(30): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 137
-[06-May-2019 19:30:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[06-May-2019 20:47:05 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function inc() in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:139
-Stack trace:
-#0 C:\DoorTry\www\TDoorTryer\DoorTryerPage.php(209): terGetTrace2(Object(Exception))
-#1 [internal function]: DoorTryHandler(512, '\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 'C:\\DoorTry\\www\\...', 22, Array)
-#2 C:\DoorTry\www\index.php(22): trigger_error('\xD0\xA4\xD1\x83\xD0\xBD\xD0\xBA\xD1\x86\xD0\xB8\xD1\x8F ...', 512)
-#3 C:\DoorTry\www\Main.php(5): print_age(-10)
-#4 C:\DoorTry\www\index.php(30): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 139
-[06-May-2019 20:57:10 Asia/Kuwait] PHP Notice:  Undefined offset: 1 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 145
-[06-May-2019 20:57:10 Asia/Kuwait] PHP Notice:  Undefined offset: 2 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 145
-[06-May-2019 21:16:47 Asia/Kuwait] PHP Notice:  Undefined offset: 0 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 152
-[06-May-2019 21:17:41 Asia/Kuwait] PHP Notice:  Undefined offset: 0 in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 152
-[06-May-2019 21:52:08 Asia/Kuwait] PHP Notice:  Array to string conversion in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 142
-[06-May-2019 21:52:31 Asia/Kuwait] PHP Notice:  Array to string conversion in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 142
-[06-May-2019 22:07:21 Asia/Kuwait] PHP Warning:  preg_match(): Unknown modifier '\' in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 139
-[06-May-2019 22:14:33 Asia/Kuwait] PHP Notice:  Array to string conversion in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 154
-[06-May-2019 22:28:04 Asia/Kuwait] PHP Notice:  Undefined variable: Result in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 147
-[06-May-2019 22:28:04 Asia/Kuwait] PHP Notice:  Undefined variable: Result in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 159
-[06-May-2019 22:28:40 Asia/Kuwait] PHP Notice:  Undefined variable: Result in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 147
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:41:09 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 155
-[06-May-2019 22:42:29 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 156
-[06-May-2019 22:42:29 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 156
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Notice:  A non well formed numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Notice:  A non well formed numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Notice:  A non well formed numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 15:59:47 Asia/Kuwait] PHP Warning:  A non-numeric value encountered in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 163
-[07-May-2019 16:12:09 Asia/Kuwait] PHP Fatal error:  Cannot redeclare findes() (previously declared in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php:122) in C:\DoorTry\www\TDoorTryer\DoorTryerPage.php on line 122
-[07-May-2019 16:17:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 16:19:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 16:20:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 21:48:39 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[07-May-2019 21:50:28 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+[09-May-2019 17:17:55 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
 Stack trace:
 #0 C:\DoorTry\www\includErrs.php(178): C->doException()
 #1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
@@ -152,10 +7,7 @@ Stack trace:
 #4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #5 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 183
-[07-May-2019 21:54:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 21:58:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 21:59:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 22:01:48 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+[09-May-2019 17:19:59 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
 Stack trace:
 #0 C:\DoorTry\www\includErrs.php(178): C->doException()
 #1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
@@ -164,218 +16,24 @@ Stack trace:
 #4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #5 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 183
-[07-May-2019 22:02:19 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[07-May-2019 22:04:14 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[07-May-2019 22:05:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 22:05:55 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[07-May-2019 22:06:45 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 16:15:53 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 16:22:36 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 16:34:32 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 16:36:21 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 17:17:59 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 17:18:35 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 17:19:44 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 17:21:28 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 17:22:51 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[08-May-2019 17:23:28 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 17:44:12 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 17:46:36 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 17:49:11 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 18:08:28 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 18:10:32 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 18:29:46 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 18:32:19 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 18:33:21 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 19:27:48 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 19:28:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[08-May-2019 19:30:06 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 19:33:04 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 19:39:38 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 19:41:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
+[09-May-2019 17:21:00 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
 Stack trace:
 #0 C:\DoorTry\www\Main.php(5): require_once()
 #1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 159
-[08-May-2019 19:49:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 159
-[08-May-2019 19:51:15 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 159
-[08-May-2019 19:51:46 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
-Stack trace:
-#0 C:\DoorTry\www\Main.php(5): require_once()
-#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 159
-[08-May-2019 19:55:30 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+[09-May-2019 17:24:37 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'not-exists.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\includErrs.php on line 106
+[09-May-2019 17:26:50 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:31:45 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:33:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:34:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:34:28 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:35:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:35:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:35:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:40:45 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:41:35 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[09-May-2019 17:43:04 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
 Stack trace:
 #0 C:\DoorTry\www\includErrs.php(178): C->doException()
 #1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
@@ -384,172 +42,21 @@ Stack trace:
 #4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #5 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 19:57:49 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+[09-May-2019 17:43:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:159
 Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 19:59:31 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 159
+[09-May-2019 17:46:50 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function split() in C:\DoorTry\www\includErrs.php:47
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 47
+[09-May-2019 17:47:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
 Stack trace:
 #0 C:\DoorTry\www\Main.php(5): require_once()
 #1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 27
-[08-May-2019 20:08:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
-[08-May-2019 20:09:52 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[08-May-2019 20:21:56 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 08:20:08 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 08:26:28 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 08:27:16 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:35:10 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:35:32 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:36:59 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:37:36 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:38:32 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:57:13 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 12:59:27 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 13:00:07 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 13:02:21 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 13:02:59 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 13:05:39 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
-[09-May-2019 13:06:23 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
-Stack trace:
-#0 C:\DoorTry\www\includErrs.php(178): C->doException()
-#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
-#2 C:\DoorTry\www\includErrs.php(185): A->run()
-#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
-#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
-#5 {main}
-  thrown in C:\DoorTry\www\includErrs.php on line 183
