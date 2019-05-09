@@ -375,3 +375,181 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\includErrs.php on line 159
+[08-May-2019 19:55:30 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[08-May-2019 19:57:49 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[08-May-2019 19:59:31 Asia/Kuwait] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in C:\DoorTry\www\includErrs.php:27
+Stack trace:
+#0 C:\DoorTry\www\Main.php(5): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 27
+[08-May-2019 20:08:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\includErrs.php on line 81
+[08-May-2019 20:09:52 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[08-May-2019 20:21:56 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 08:20:08 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 08:26:28 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 08:27:16 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:35:10 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:35:32 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:36:59 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:37:36 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:38:32 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:57:13 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 12:59:27 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 13:00:07 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 13:02:21 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 13:02:59 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 13:05:39 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183
+[09-May-2019 13:06:23 Asia/Kuwait] PHP Fatal error:  Uncaught Exception: Error in method C::doException ! in C:\DoorTry\www\includErrs.php:183
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(178): C->doException()
+#1 C:\DoorTry\www\includErrs.php(172): B->doSomething()
+#2 C:\DoorTry\www\includErrs.php(185): A->run()
+#3 C:\DoorTry\www\Main.php(5): require_once('C:\\DoorTry\\www\\...')
+#4 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 183

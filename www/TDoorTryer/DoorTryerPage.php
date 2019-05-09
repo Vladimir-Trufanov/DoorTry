@@ -92,6 +92,39 @@ function findes($preg,$string,&$point=0)
    }
    return $findes;
 }
+
+function LastFindes($preg,$string,&$point=0,$say=false)
+{
+   // Выполняем регулярное выражение и получаем результаты поиска
+   $Result='';
+   $x=preg_match_all($preg,$string,$imatches,PREG_OFFSET_CAPTURE);
+   if (!($matches=null)) $matches=$imatches;
+   if ($say==true)
+   {
+      echo '<br>'.'$string: '.$string;
+      echo '<br>'.'$preg: '.$preg;
+   }
+   if ($x>0)
+   {
+      for ($i=0; $i<count($imatches); $i++)
+		{
+            $findes=$imatches[$i];    
+            for ($j=0; $j<count($findes); $j++)
+            {
+               if ($say==true)
+               {
+                  echo '<br>$findes['.$j.'] = '.
+                  $findes[$j][0].' Point = '.
+                  $findes[$j][1];
+               } 
+               $Result=$findes[$j][0];
+               $point=$findes[$j][1]; 
+            }
+         }
+      }
+   return $Result;
+}
+
 // ****************************************************************************
 // *    Проинициализировать параметры Php.ini для управления выводом ошибок   *
 // ****************************************************************************
@@ -227,6 +260,7 @@ function DoorTryShutdown()
       // Пробуем выбрать трассировку
       $point=0;
       $string=$lasterror['message'];
+      //echo '1 $string='.$string.'<br>';
       $trace=findes(regTrace,$string,$point);
       // Если трассировка есть, то отделяем трассировку от сообщения 
       if ($trace>'')
@@ -263,18 +297,31 @@ function DoorTryShutdown()
       }
       // Так как сообщение об ошибке может заканчиваться указанием строки с ошибкой,
       // то отрезаем этот фрагмент
+      /*
       $thrown=findes("/ in [\s\S]{1,}:[0-9]{1,}/u",$string,$point);
       if ($thrown>'')
       {
          $string=substr($string,0,$point);      
       }
+      */
+      
+      //LastFindes("/ in [\s\S]{1,}:[0-9]{1,}/u",$string);
+      LastFindes("/in /u",$string,$point,false);
+      //echo '$point='.$point;
+      $string=substr($string,0,$point);      
+      //echo '2 $string='.$string.'<br>';
+      
+      
+      
       // Определяем тип ошибки, формируем и выводим сообщение
       $TypeError=terGetValue(intval($typelast));
+      
       DoorTryExec
       (
          $string,$TypeError.' [SHT]',
          $lasterror['line'],$lasterror['file'],$trace,true
       );
+      
    }
 } 
 // ****************************************************************************
