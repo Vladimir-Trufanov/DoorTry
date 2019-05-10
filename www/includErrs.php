@@ -139,7 +139,7 @@ function PrintAge($age)
    }
    echo "Возраст составляет: $age<br>";
 }
-//PrintAge(-10);
+PrintAge(-10);
 
 // *** E_USER_NOTICE *** 
 

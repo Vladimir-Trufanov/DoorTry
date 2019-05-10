@@ -24,7 +24,7 @@ DoorTry
 			www\imgs\mule.jpg
 		-Styles
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\doortry.png
@@ -37,16 +37,45 @@ DoorTry
 		www\index.php
 		www\log.txt
 		www\Main.php
+		www\MainDoorTry.php
 		www\Site.php
 [Open project files]
 0=www\includErrs.php
-1=www\TDoorTryer\DoorTryerPage.php
+1=www\index.php
+2=www\MainDoorTry.php
+3=www\Site.php
+4=www\TDoorTryer\DoorTryerPage.php
+5=www\TDoorTryer\DoorTryerMessage.php
+6=www\error.php
+7=www\iHtmlBegin.php
+8=www\iHtmlEnd.php
 [Selected Project Files]
 Main=
-Selected=www\includErrs.php
+Selected=www\index.php
 [www\includErrs.php]
-TopLine=23
-Caret=3,27
+TopLine=123
+Caret=1,142
+[www\index.php]
+TopLine=3
+Caret=21,15
+[www\MainDoorTry.php]
+TopLine=1
+Caret=22,17
+[www\Site.php]
+TopLine=19
+Caret=1,1
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=312
-Caret=4,287
+TopLine=343
+Caret=72,361
+[www\TDoorTryer\DoorTryerMessage.php]
+TopLine=3
+Caret=1,12
+[www\error.php]
+TopLine=1
+Caret=6,5
+[www\iHtmlBegin.php]
+TopLine=1
+Caret=1,27
+[www\iHtmlEnd.php]
+TopLine=1
+Caret=1,16

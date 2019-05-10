@@ -246,6 +246,8 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
 function DoorTryShutdown()
 {
    global $TypeErrors;
+   global $FaultLocation;
+   
    $lasterror=error_get_last();
    $typelast=intval($lasterror['type']);
    if (terIsKey($typelast))
@@ -282,7 +284,7 @@ function DoorTryShutdown()
       DoorTryExec
       (
          $string,$TypeError.' [SHT]',
-         $lasterror['line'],$lasterror['file'],$trace,true
+         $lasterror['line'],$lasterror['file'],$trace,$FaultLocation
       );
    }
 } 
@@ -292,6 +294,8 @@ function DoorTryShutdown()
 function DoorTryHandler($errno,$errstr,$errfile,$errline)
 {
    global $TypeErrors;
+   global $FaultLocation;
+   
    // Если error_reporting нулевой, значит, использован оператор @,
    // все ошибки должны игнорироваться
    if (!error_reporting())
@@ -315,7 +319,7 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
          // Запускаем вывод ошибки     
          DoorTryExec
          (
-            $errstr,$TypeError.' [HND]',$errline,$errfile,$errtrace,true
+            $errstr,$TypeError.' [HND]',$errline,$errfile,$errtrace,$FaultLocation
          );
       }
    }
@@ -329,6 +333,8 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
 // ****************************************************************************
 function DoorTryPage($e)
 {
+   global $FaultLocation;
+   
    // Определяем тип ошибки
    $value=preg_match_all(regErrorType,$e,$matches,PREG_OFFSET_CAPTURE);
    if ($value>0)
@@ -352,7 +358,7 @@ function DoorTryPage($e)
    DoorTryExec
    (
       $e->getMessage(),$TypeError.' [PGE]',
-      $e->getLine(),$e->getFile(),$e->getTraceAsString(),true
+      $e->getLine(),$e->getFile(),$e->getTraceAsString(),$FaultLocation
    );
 }
 // ****************************************************************************
