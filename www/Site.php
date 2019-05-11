@@ -67,6 +67,7 @@
   <ul>
     <li>Яндекс-Новости</li>
     <li>Лига-Новости</li>
+    <li>Столица на онего</li>
   </ul>
   <p><img src="imgs/gator.jpg" alt="Аллигатор"></p>
 
@@ -77,7 +78,8 @@
 
 <?php
  
-$url = "https://news.yandex.ru/gadgets.rss?&";
+//$url = "https://news.yandex.ru/gadgets.rss?&";
+$url = "http://www.stolica.onego.ru/rss.php/feed.xml";
   $content = file_get_contents($url);
   $items = new SimpleXmlElement($content);
  
@@ -98,12 +100,15 @@ $url = "https://news.yandex.ru/gadgets.rss?&";
 </p>
  
 
-  <h3>Лига-Новости</h3>
+  <h3>Столица на онего</h3>
 <p>
 
 <?php
 
-   $rss = simplexml_load_file ( 'http://news.liga.net/economics/rss.xml' );
+   //$rss = simplexml_load_file ( 'http://news.liga.net/economics/rss.xml' );
+   //$rss = simplexml_load_file ( 'http://uaport.net/cgi-bin/infostream.rss?rubr15' );
+   $rss = simplexml_load_file ( 'http://www.stolica.onego.ru/rss.php/feed.xml' );
+   
    
    
    echo ''."\n";
@@ -123,7 +128,7 @@ $url = "https://news.yandex.ru/gadgets.rss?&";
       echo '<tr><td colspan="2">&nbsp;</td></tr>'."\n";  
       echo '<span class="date">'.$item->pubDate.'</span>';  
    $Point=$Point+1;
-   if ($Point>2) {break;}
+   //if ($Point>2) {break;}
 
    }
    echo ' ';

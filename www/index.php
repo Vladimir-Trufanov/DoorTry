@@ -12,12 +12,12 @@
 
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
 
-$FaultLocation=false;
+$FaultLocation=true;
 require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
 try 
 {
-   //require_once $SiteRoot."/Main.php";
-   require_once $SiteRoot."/MainDoorTry.php";
+   require_once $SiteRoot."/Main.php";
+   //require_once $SiteRoot."/MainDoorTry.php";
 }
 catch (E_EXCEPTION $e) 
 {
