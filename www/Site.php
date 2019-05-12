@@ -40,16 +40,17 @@
    </div>
    */
    
-   /*
+   
    // 2 штрих-код
    include "phpqrcode/qrlib.php";
-   QRcode::png("http://ittve.me", "test.png", "L", 4, 4);
+   QRcode::png("http://doortry.ru - Обработчик ошибок и исключений","doortry.png","L",4,4);
+   //QRcode::png("http://ittve.me", "test.png", "L", 4, 4);
   
    // 3 штрих-код
-   $backColor = 0xFFFF00; //0x555555;
-   $foreColor = 0xFF00FF; //0x111111;
-   QRcode::png("http://doortry.ru","doortry.png","L",4,4,false,$backColor,$foreColor);
-   */
+   //$backColor = 0xFFFF00; //0x555555;
+   //$foreColor = 0xFF00FF; //0x111111;
+   //QRcode::png("http://doortry.ru","doortry.png","L",4,4,false,$backColor,$foreColor);
+   
 ?>
  
   <p><img src="imgs/clouds.jpg" alt="Облака" class="half right">Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum.</p>
