@@ -12,7 +12,6 @@
 
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
 
-$FaultLocation=true;
 require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
 try 
 {

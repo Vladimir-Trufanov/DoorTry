@@ -42,8 +42,8 @@
    
    
    // 2 штрих-код
-   include "phpqrcode/qrlib.php";
-   QRcode::png("http://doortry.ru - Обработчик ошибок и исключений","doortry.png","L",4,4);
+   //include "QrCode/qrlib.php";
+   //QRcode::png("http://doortry.ru - Обработчик ошибок и исключений","doortry.png","L",4,4);
    //QRcode::png("http://ittve.me", "test.png", "L", 4, 4);
   
    // 3 штрих-код

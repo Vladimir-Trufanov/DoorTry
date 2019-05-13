@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 09.05.2019
+// Copyright © 2019 tve                              Посл.изменение: 13.05.2019
 
 /**
  * В DoorTryer заложены все типы ошибок: через установленный модуль от 
@@ -223,7 +223,14 @@ function terGetTrace2($e)
 // ****************************************************************************
 function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$MakePage=true)
 {
-   if ($MakePage==true)
+   // Определяем: Выводить сообщение на текущей странице или через сайт doortry.ru 
+   global $FaultLocation; 
+   if (!(IsSet($FaultLocation)))    
+   {
+      $FaultLocation=true;
+   }
+   // Выводим сообщение об ошибке/исключении через сайт doortry.ru
+   if ($FaultLocation==true)
    {
       $uripage="http://kwinflatht.nichost.ru/error.php".
       //$uripage="http://localhost:82/error.php".
@@ -239,6 +246,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
       // Вызываем страницу ошибки через отправку заголовка
       // Header("Location: ".$uripage);
    }
+   // Выводим сообщение об ошибке/исключении на текущей странице
    else DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);
 }
 // ****************************************************************************
@@ -247,7 +255,6 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
 function DoorTryShutdown()
 {
    global $TypeErrors;
-   global $FaultLocation;
    
    $lasterror=error_get_last();
    $typelast=intval($lasterror['type']);
@@ -285,7 +292,7 @@ function DoorTryShutdown()
       DoorTryExec
       (
          $string,$TypeError.' [SHT]',
-         $lasterror['line'],$lasterror['file'],$trace,$FaultLocation
+         $lasterror['line'],$lasterror['file'],$trace
       );
    }
 } 
@@ -295,7 +302,6 @@ function DoorTryShutdown()
 function DoorTryHandler($errno,$errstr,$errfile,$errline)
 {
    global $TypeErrors;
-   global $FaultLocation;
    
    // Если error_reporting нулевой, значит, использован оператор @,
    // все ошибки должны игнорироваться
@@ -320,7 +326,7 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
          // Запускаем вывод ошибки     
          DoorTryExec
          (
-            $errstr,$TypeError.' [HND]',$errline,$errfile,$errtrace,$FaultLocation
+            $errstr,$TypeError.' [HND]',$errline,$errfile,$errtrace
          );
       }
    }
@@ -334,8 +340,6 @@ function DoorTryHandler($errno,$errstr,$errfile,$errline)
 // ****************************************************************************
 function DoorTryPage($e)
 {
-   global $FaultLocation;
-   
    // Определяем тип ошибки
    $value=preg_match_all(regErrorType,$e,$matches,PREG_OFFSET_CAPTURE);
    if ($value>0)
@@ -359,7 +363,7 @@ function DoorTryPage($e)
    DoorTryExec
    (
       $e->getMessage(),$TypeError.' [PGE]',
-      $e->getLine(),$e->getFile(),$e->getTraceAsString(),$FaultLocation
+      $e->getLine(),$e->getFile(),$e->getTraceAsString()
    );
 }
 // ****************************************************************************

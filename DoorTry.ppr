@@ -22,7 +22,7 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+phpqrcode
+		-QrCode
 			www\phpqrcode\CHANGELOG
 			www\phpqrcode\index.php
 			www\phpqrcode\INSTALL
@@ -68,27 +68,31 @@ DoorTry
 4=www\TDoorTryer\DoorTryerMessage.php
 5=www\Main.php
 6=www\Site.php
+7=www\includErrs.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\Main.php
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=1
-Caret=1,19
+TopLine=213
+Caret=65,249
 [www\index.php]
 TopLine=1
 Caret=1,15
 [www\error.php]
-TopLine=39
-Caret=11,45
+TopLine=25
+Caret=1,40
 [www\iHtmlBegin.php]
 TopLine=1
 Caret=1,1
 [www\TDoorTryer\DoorTryerMessage.php]
-TopLine=1
+TopLine=9
 Caret=1,1
 [www\Main.php]
 TopLine=1
-Caret=1,1
+Caret=1,6
 [www\Site.php]
-TopLine=29
-Caret=17,46
+TopLine=1
+Caret=18,45
+[www\includErrs.php]
+TopLine=9
+Caret=1,1
