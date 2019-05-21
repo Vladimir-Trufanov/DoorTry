@@ -139,7 +139,7 @@ function PrintAge($age)
    }
    echo "Возраст составляет: $age<br>";
 }
-PrintAge(-10);
+//PrintAge(-10);
 
 // *** E_USER_NOTICE *** 
 
@@ -203,3 +203,17 @@ class C
 // --------------------------------------------------------------------- 15 ---
 //filemtime("spoon");
 //@filemtime("spoon");
+
+/*
+require_once $SiteHost."/TPhpPrown/isCalcInBrowser.php";
+$UserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ".
+    "Chrome/72.0.3626.96 Chrome/72.0.3626.96 Safari/537.36";
+$Result=\prown\isCalcInBrowser($UserAgent); 
+*/
+
+require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
+$UserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ".
+    "Chrome/72.0.3626.96 Chrome/72.0.3626.96 Safari/537.36";
+$pattern="/Chrome/u";
+$value=\prown\MakeRegExp($pattern,$UserAgent,$matches,false);
+

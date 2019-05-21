@@ -105,3 +105,18 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\Site.php on line 46
+[21-May-2019 14:15:10 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iniErrMessage.php' (include_path='.;C:\php\pear') in C:\TPhpPrown\isCalcInBrowser.php on line 54
+[21-May-2019 14:16:23 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iniErrMessage.php' (include_path='.;C:\php\pear') in C:\TPhpPrown\isCalcInBrowser.php on line 54
+[21-May-2019 14:33:58 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\MakeRegExp() in C:\DoorTry\www\includErrs.php:217
+Stack trace:
+#0 C:\DoorTry\www\Main.php(57): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\includErrs.php on line 217
+[21-May-2019 14:35:02 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\MakeUserError() in C:\TPhpPrown\MakeRegExp.php:65
+Stack trace:
+#0 C:\DoorTry\www\includErrs.php(218): prown\MakeRegExp('/Chrome/u', 'Mozilla/5.0 (Wi...', Array, false)
+#1 C:\DoorTry\www\Main.php(57): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\TPhpPrown\MakeRegExp.php on line 65
