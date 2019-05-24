@@ -1,0 +1,16 @@
+[24-May-2019 18:36:38 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR), expecting ',' or ';' in C:\DoorTry\www\Init\Inimem.php on line 25
+[24-May-2019 19:52:02 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting '(' in C:\DoorTry\www\Init\Inimem.php on line 25
+[24-May-2019 19:52:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\DoorTry\www\Init\Inimem.php on line 25
+[24-May-2019 19:53:48 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\DoorTry\www\Init\Inimem.php on line 25
+[24-May-2019 21:13:16 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\ViewGlobalArr() in C:\TPhpPrown\ViewGlobal.php:92
+Stack trace:
+#0 C:\DoorTry\www\Init\Inimem.php(29): prown\ViewGlobal(16)
+#1 C:\DoorTry\www\Main.php(25): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\TPhpPrown\ViewGlobal.php on line 92
+[24-May-2019 21:37:42 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\TPhpPrown\ViewGlobal.php on line 54
+[24-May-2019 21:37:49 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\TPhpPrown\ViewGlobal.php on line 54
+[24-May-2019 21:39:43 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Name' (T_VARIABLE), expecting '(' in C:\TPhpPrown\ViewGlobal.php on line 69
+[24-May-2019 21:40:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Name' (T_VARIABLE), expecting '(' in C:\TPhpPrown\ViewGlobal.php on line 69
+[24-May-2019 21:53:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\TPhpPrown\ViewGlobal.php on line 62

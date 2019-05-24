@@ -48,7 +48,7 @@ DoorTry
 			www\phpqrcode\VERSION
 		-Styles
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\doortry.png
@@ -66,15 +66,28 @@ DoorTry
 0=www\index.php
 1=www\Main.php
 2=www\Init\Inimem.php
+3=..\TPhpPrown\ViewGlobal.php
+4=www\TDoorTryer\DoorTryerPage.php
+5=www\TDoorTryer\DoorTryerMessage.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Init\Inimem.php
 [www\index.php]
 TopLine=5
 Caret=14,17
 [www\Main.php]
-TopLine=29
-Caret=1,50
+TopLine=17
+Caret=3,54
 [www\Init\Inimem.php]
-TopLine=21
-Caret=3,38
+TopLine=11
+Caret=1,25
+[..\TPhpPrown\ViewGlobal.php]
+TopLine=50
+Caret=31,68
+Mark1=1,91
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=11
+Caret=1,1
+[www\TDoorTryer\DoorTryerMessage.php]
+TopLine=3
+Caret=1,1
