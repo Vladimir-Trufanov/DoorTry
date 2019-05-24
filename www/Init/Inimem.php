@@ -9,7 +9,6 @@
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 18.05.2019
 
-
 // Определяем сайтовые константы
 define ("Atfirst",    "atf");    // Перевести переменные в начальные условия  
 define ("ChangeSize", "chs");    // "Изменить размер базового шрифта"  
@@ -22,6 +21,7 @@ $uagent=$_SERVER['HTTP_USER_AGENT'];        // HTTP_USER_AGENT
 $SiteDevice=prown\getSiteDevice();          // 'Computer','Mobile','Tablet'
 $UserName=$_COOKIE['PersName'] ?? "Гость";  // Логин авторизованного посетителя 
 
+/*
 // Инициализируем сессионные переменные
 if (!isset($_SESSION['Counter'])) $_SESSION['Counter']=0; // Посещения за сессию
 
@@ -35,5 +35,5 @@ $mCookies=$_COOKIE['mCookies'] ?? 1;
 $BrowEntry=$_COOKIE['BrowEntry'] ?? 1;      // Число запросов сайта из браузера
 $PersEntry=$_COOKIE['PersEntry'] ?? 1;      // Число запросов сайта посетителем
 $PersName=$_COOKIE['PersName'] ?? "Гость";  // Логин посетителя
-
+*/
 // ************************************************************* Inimem.php *** 

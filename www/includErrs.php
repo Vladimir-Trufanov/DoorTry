@@ -1,4 +1,14 @@
 <?php
+// PHP7/HTML5, EDGE/CHROME                               *** includErrs.php ***
+
+// ****************************************************************************
+// * doortry.ru                        Вывести сообщение об ошибке/исключении *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  10.04.2019
+// Copyright © 2019 tve                              Посл.изменение: 12.05.2019
+
 
 // Разработка 
 // 
@@ -204,16 +214,12 @@ class C
 //filemtime("spoon");
 //@filemtime("spoon");
 
-/*
-require_once $SiteHost."/TPhpPrown/isCalcInBrowser.php";
-$UserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ".
-    "Chrome/72.0.3626.96 Chrome/72.0.3626.96 Safari/537.36";
-$Result=\prown\isCalcInBrowser($UserAgent); 
-*/
-
+// *** E_USER_DEPRECATED *** продолжение работы 
+// --------------------------------------------------------------------- 16 ---
 require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
 $UserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ".
     "Chrome/72.0.3626.96 Chrome/72.0.3626.96 Safari/537.36";
 $pattern="/Chrome/u";
 $value=\prown\MakeRegExp($pattern,$UserAgent,$matches,false);
 
+// ********************************************************* includErrs.php ***

@@ -2,7 +2,7 @@
 // PHP7/HTML5, EDGE/CHROME                                     *** Main.php ***
 
 // ****************************************************************************
-// * DOORTRY       сайт сбора сообщений об ошибках/исключениях и формирования *
+// * doortry.ru    Сайт сбора сообщений об ошибках/исключениях и формирования *
 // *         страницы с выводом сообщений, а также комментариев для PHP5-PHP7 *
 // ****************************************************************************
 
@@ -11,23 +11,21 @@
 // Copyright © 2019 tve                              Посл.изменение: 18.05.2019
 
 session_start(); 
-
 // Инициализируем надсайтовый каталог и каталог хостинга
 require_once "iGetAbove.php";
 $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
-
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 require_once $SiteHost."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
-
-// Подключаем файлы прикладных классов
-//require_once $SiteHost."/TPhpTools/TException/ExceptionClass.php";
-
+// Подключаем функциональные модули сайта
+//require_once "Iniparm.php";    // параметры сайта в браузере клиента
 // Выполняем начальную инициализацию
-require_once "Inimem.php";   
+require_once $SiteRoot."/Init/Inimem.php";   
 
+
+/*
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $BrowEntry = $BrowEntry+1;
@@ -48,16 +46,10 @@ if ($PersName<>$UserName)
    $PersName=$UserName;
    \prown\MakeCookie('PersName',$PersName); 
 }
-
-
+*/
 
 require_once $SiteRoot."/iHtmlBegin.php";
-//echo 'Приветик из Main!<br>';
-
-require_once $SiteRoot."/includErrs.php";
-//require_once $SiteRoot."/Site.php";
-
-//echo 'Завершение в Main! ';
+require_once $SiteRoot."/Site.php";
 require_once $SiteRoot."/iHtmlEnd.php";
 
 // *************************************************************** Main.php ***
