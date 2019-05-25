@@ -10,16 +10,6 @@
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 18.05.2019
 
-// Локально устанавливаем параметры кукисов и сессии
-
-//В файл .htaccess вносим следующее:
-//php_value session.gc_maxlifetime 86400
-//php_value session.cookie_lifetime 0
-
-//ini_set('session.gc_maxlifetime',30); //1440);
-//ini_set('session.cookie_lifetime',0);
-//session_set_cookie_params(0);
-
 session_start(); 
 // Инициализируем надсайтовый каталог и каталог хостинга
 require_once "iGetAbove.php";
@@ -57,9 +47,9 @@ if ($PersName<>$UserName)
    \prown\MakeCookie('PersName',$PersName); 
 }
 */
-/*
+
 require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";
 require_once $SiteRoot."/iHtmlEnd.php";
-*/
+
 // *************************************************************** Main.php ***

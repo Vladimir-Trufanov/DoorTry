@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
@@ -48,6 +48,8 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
+		www\.htaccess
+		www\.user.ini
 		www\doortry.png
 		www\error.php
 		www\favicon.ico
@@ -65,23 +67,15 @@ DoorTry
 0=www\index.php
 1=www\Main.php
 2=www\Inimem.php
-3=..\TPhpPrown\MakeSession.php
-4=..\TPhpPrown\ViewGlobal.php
 [Selected Project Files]
 Main=
-Selected=www\Inimem.php
+Selected=www\Main.php
 [www\index.php]
-TopLine=3
+TopLine=7
 Caret=41,13
 [www\Main.php]
-TopLine=7
-Caret=3,21
+TopLine=39
+Caret=1,54
 [www\Inimem.php]
 TopLine=16
-Caret=47,42
-[..\TPhpPrown\MakeSession.php]
-TopLine=19
-Caret=5,34
-[..\TPhpPrown\ViewGlobal.php]
-TopLine=105
-Caret=1,122
+Caret=12,27
