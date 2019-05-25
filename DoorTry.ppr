@@ -22,9 +22,6 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+Init
-			www\Init\Inimem.php
-			www\Init\Iniparm.php
 		-phpqrcode
 			www\phpqrcode\CHANGELOG
 			www\phpqrcode\index.php
@@ -48,7 +45,7 @@ DoorTry
 			www\phpqrcode\VERSION
 		-Styles
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\doortry.png
@@ -59,35 +56,32 @@ DoorTry
 		www\iHtmlEnd.php
 		www\includErrs.php
 		www\index.php
+		www\Inimem.php
+		www\log.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\Site.php
 [Open project files]
 0=www\index.php
 1=www\Main.php
-2=www\Init\Inimem.php
-3=..\TPhpPrown\ViewGlobal.php
-4=www\TDoorTryer\DoorTryerPage.php
-5=www\TDoorTryer\DoorTryerMessage.php
+2=www\Inimem.php
+3=..\TPhpPrown\MakeSession.php
+4=..\TPhpPrown\ViewGlobal.php
 [Selected Project Files]
 Main=
-Selected=www\Init\Inimem.php
+Selected=www\Inimem.php
 [www\index.php]
-TopLine=5
-Caret=14,17
-[www\Main.php]
-TopLine=17
-Caret=3,54
-[www\Init\Inimem.php]
-TopLine=11
-Caret=1,25
-[..\TPhpPrown\ViewGlobal.php]
-TopLine=50
-Caret=31,68
-Mark1=1,91
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=11
-Caret=1,1
-[www\TDoorTryer\DoorTryerMessage.php]
 TopLine=3
-Caret=1,1
+Caret=41,13
+[www\Main.php]
+TopLine=7
+Caret=3,21
+[www\Inimem.php]
+TopLine=16
+Caret=47,42
+[..\TPhpPrown\MakeSession.php]
+TopLine=19
+Caret=5,34
+[..\TPhpPrown\ViewGlobal.php]
+TopLine=105
+Caret=1,122

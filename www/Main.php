@@ -10,6 +10,16 @@
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 18.05.2019
 
+// Локально устанавливаем параметры кукисов и сессии
+
+//В файл .htaccess вносим следующее:
+//php_value session.gc_maxlifetime 86400
+//php_value session.cookie_lifetime 0
+
+//ini_set('session.gc_maxlifetime',30); //1440);
+//ini_set('session.cookie_lifetime',0);
+//session_set_cookie_params(0);
+
 session_start(); 
 // Инициализируем надсайтовый каталог и каталог хостинга
 require_once "iGetAbove.php";
@@ -17,12 +27,12 @@ $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
+require_once $SiteHost."/TPhpPrown/iniConstMem.php";
 require_once $SiteHost."/TPhpPrown/MakeCookie.php";
+require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
-// Подключаем функциональные модули сайта
-//require_once "Iniparm.php";    // параметры сайта в браузере клиента
 // Выполняем начальную инициализацию
-require_once $SiteRoot."/Init/Inimem.php";   
+require_once $SiteRoot."/Inimem.php";   
 
 
 /*
