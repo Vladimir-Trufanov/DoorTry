@@ -137,7 +137,7 @@ $url = "http://www.stolica.onego.ru/rss.php/feed.xml";
    }
    echo ' ';
    
-   phpinfo();
+   //phpinfo();
 
 
 

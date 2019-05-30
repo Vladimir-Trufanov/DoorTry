@@ -24,11 +24,16 @@ $Uagent=$_SERVER['HTTP_USER_AGENT'];        // HTTP_USER_AGENT
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt);  // Посещения за сессию
 
-/*
+// Инициализируем переменные-кукисы
+$c_BrowEntry=prown\MakeCookie('BrowEntry',1,tInt); // Число запросов сайта из браузера
+$c_PersEntry=prown\MakeCookie('PersEntry',1,tInt); // Число запросов сайта посетителем
+$c_PersName=prown\MakeCookie('PersName',"Гость");  // Логин посетителя
+
+
 \prown\ViewGlobal(avgCOOKIE);
-\prown\ViewGlobal(avgSESSION);
+//\prown\ViewGlobal(avgSESSION);
 \prown\ViewGlobal(avgGLOBALS);
-*/
+
 
 /*
 // Инициализируем регулятор кукисов (настраиваем порядок использования кукисов):
@@ -36,10 +41,5 @@ $s_Counter=prown\MakeSession('Counter',0,tInt);  // Посещения за се
 //    $mCookies=1, браузером кукисы разрешены, пользователем еще нет
 //    $mCookies=2, пользователем разрешено использование кукисов
 $mCookies=$_COOKIE['mCookies'] ?? 1;        
-
-// Инициализируем переменные-кукисы
-$BrowEntry=$_COOKIE['BrowEntry'] ?? 1;      // Число запросов сайта из браузера
-$PersEntry=$_COOKIE['PersEntry'] ?? 1;      // Число запросов сайта посетителем
-$PersName=$_COOKIE['PersName'] ?? "Гость";  // Логин посетителя
 */
 // ************************************************************* Inimem.php *** 

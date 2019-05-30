@@ -22,7 +22,7 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+qrcode
+		-qrcode
 			www\qrcode\CHANGELOG
 			www\qrcode\index.php
 			www\qrcode\INSTALL
@@ -43,7 +43,7 @@ DoorTry
 			www\qrcode\qrvect.php
 			www\qrcode\README
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -69,9 +69,12 @@ DoorTry
 1=www\qrcode\index.php
 2=www\Site.php
 3=www\Main.php
+4=www\Inimem.php
+5=..\TPhpPrown\MakeCookie.php
+6=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\qrcode\index.php
+Selected=www\Inimem.php
 [www\index.php]
 TopLine=13
 Caret=41,13
@@ -79,8 +82,17 @@ Caret=41,13
 TopLine=9
 Caret=3,27
 [www\Site.php]
-TopLine=47
-Caret=1,1
+TopLine=135
+Caret=6,140
 [www\Main.php]
-TopLine=27
-Caret=1,1
+TopLine=37
+Caret=1,52
+[www\Inimem.php]
+TopLine=17
+Caret=44,29
+[..\TPhpPrown\MakeCookie.php]
+TopLine=30
+Caret=1,50
+[www\Styles\Styles.css]
+TopLine=115
+Caret=3,140
