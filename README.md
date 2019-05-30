@@ -30,7 +30,7 @@
     E_NOTICE [HND]
 ***
 **syntax error, unexpected 'else'**
-**Неожиданно встетился else**
+**Неожиданно встретился else**
 
     File: C:\TPhpPrown\ViewGlobal.php Line: 83  
     E_PARSE [SHT]
@@ -38,3 +38,56 @@
 а) может "else" не предшествовала фигурная скобка или двоеточие, закрывающие действие условия "if" или "eise if".
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 ***
+**setcookie() expects parameter 3 to be integer, string given**  
+  
+
+    File: /home/kwinflatht/TPhpPrown/MakeCookie.php  
+    Line: 16  
+      
+    E_WARNING [HND]  
+    #0 /home/kwinflatht/kwinflatht.nichost.ru/docs/Inimem.php(28): prown\MakeCookie('BrowEntry', 1, 'integer')
+    #1 /home/kwinflatht/kwinflatht.nichost.ru/docs/Main.php(25): require_once('/home/kwinflath...')
+    #2 /home/kwinflatht/kwinflatht.nichost.ru/docs/index.php(22): require_once('/home/kwinflath...')
+    #3 {main}
+MakeCookie на сайте
+
+    <?php namespace prown; 
+                                             
+    // PHP7/HTML5, EDGE/CHROME                               *** MakeCookie.php ***
+    
+    // ****************************************************************************
+    // *                Установить новое значение COOKIE в браузере               *
+    // *             и заменить значение во внутреннем массиве $_COOKIE           *
+    // ****************************************************************************
+    
+    //                                                   Автор:       Труфанов В.Е.
+    //                                                   Дата создания:  03.02.2018
+    // Copyright © 2018 TVE                              Посл.изменение: 10.02.2018
+    
+    function MakeCookie($Name,$Value,$Duration=0x6FFFFFFF)
+    {
+        setcookie($Name,$Value,$Duration);
+        //echo "<br>"."MakeCookie_1: ".$Name."=".$Value." [".$Duration."]<br>";
+        if (IsSet($_COOKIE[$Name])) 
+        {
+            $_COOKIE[$Name]=$Value;
+            //echo "<br>"."MakeCookie_2: ".$Name."=".$_COOKIE[$Name]." [".$Duration."]<br>";
+        }
+    }
+    
+    // ********************************************************* MakeCookie.php ***
+
+Вызов из сценария:
+
+    <?php 
+    // PHP7/HTML5, EDGE/CHROME                                   *** Inimem.php ***
+    
+    // Инициализируем переменные-кукисы
+    $c_BrowEntry=prown\MakeCookie('BrowEntry',1,tInt); // Число запросов сайта из браузера
+###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
+
+***
+
+
+
+
