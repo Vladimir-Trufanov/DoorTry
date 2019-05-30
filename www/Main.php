@@ -49,7 +49,7 @@ if ($PersName<>$UserName)
 */
 
 require_once $SiteRoot."/iHtmlBegin.php";
-require_once $SiteRoot."/Site.php";
+//require_once $SiteRoot."/Site.php";
 require_once $SiteRoot."/iHtmlEnd.php";
 
 // *************************************************************** Main.php ***

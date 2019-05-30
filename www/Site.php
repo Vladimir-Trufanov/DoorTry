@@ -43,6 +43,9 @@
    
    // 2 штрих-код
    //include "QrCode/qrlib.php";
+   //QRcode::png("TPhpPrown - библиотека PHP-прикладных функций","TPhpPrown.png","L",4,4);
+   
+
    //QRcode::png("http://doortry.ru - Обработчик ошибок и исключений","doortry.png","L",4,4);
    //QRcode::png("http://ittve.me", "test.png", "L", 4, 4);
   
@@ -134,7 +137,7 @@ $url = "http://www.stolica.onego.ru/rss.php/feed.xml";
    }
    echo ' ';
    
-   //phpinfo();
+   phpinfo();
 
 
 

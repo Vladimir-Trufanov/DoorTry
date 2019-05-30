@@ -24,9 +24,11 @@ $Uagent=$_SERVER['HTTP_USER_AGENT'];        // HTTP_USER_AGENT
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt);  // Посещения за сессию
 
+/*
 \prown\ViewGlobal(avgCOOKIE);
 \prown\ViewGlobal(avgSESSION);
 \prown\ViewGlobal(avgGLOBALS);
+*/
 
 /*
 // Инициализируем регулятор кукисов (настраиваем порядок использования кукисов):

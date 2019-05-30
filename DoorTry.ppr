@@ -16,33 +16,34 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		-phpqrcode
-			www\phpqrcode\CHANGELOG
-			www\phpqrcode\index.php
-			www\phpqrcode\INSTALL
-			www\phpqrcode\LICENSE
-			www\phpqrcode\phpqrcode.php
-			www\phpqrcode\qrbitstream.php
-			www\phpqrcode\qrconfig.php
-			www\phpqrcode\qrconst.php
-			www\phpqrcode\qrencode.php
-			www\phpqrcode\qrimage.php
-			www\phpqrcode\qrinput.php
-			www\phpqrcode\qrlib.php
-			www\phpqrcode\qrmask.php
-			www\phpqrcode\qrrscode.php
-			www\phpqrcode\qrspec.php
-			www\phpqrcode\qrsplit.php
-			www\phpqrcode\qrtools.php
-			www\phpqrcode\qrvect.php
-			www\phpqrcode\README
-			www\phpqrcode\VERSION
+		+QrCode
+			www\QrCode\CHANGELOG
+			www\QrCode\index.php
+			www\QrCode\INSTALL
+			www\QrCode\LICENSE
+			www\QrCode\phpqrcode.php
+			www\QrCode\qrbitstream.php
+			www\QrCode\qrconfig.php
+			www\QrCode\qrconst.php
+			www\QrCode\qrencode.php
+			www\QrCode\qrimage.php
+			www\QrCode\qrinput.php
+			www\QrCode\qrlib.php
+			www\QrCode\qrmask.php
+			www\QrCode\qrrscode.php
+			www\QrCode\qrspec.php
+			www\QrCode\qrsplit.php
+			www\QrCode\qrtools.php
+			www\QrCode\qrvect.php
+			www\QrCode\README
+			www\QrCode\TPhpPrown.png-errors.txt
+			www\QrCode\VERSION
 		-Styles
 			www\Styles\Styles.css
 		-TDoorTryer
@@ -63,19 +64,16 @@ DoorTry
 		www\Main.php
 		www\MainDoorTry.php
 		www\Site.php
+		www\TPhpPrown.png
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\Inimem.php
+1=www\QrCode\index.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\QrCode\index.php
 [www\index.php]
 TopLine=7
 Caret=41,13
-[www\Main.php]
-TopLine=39
-Caret=1,54
-[www\Inimem.php]
-TopLine=16
-Caret=12,27
+[www\QrCode\index.php]
+TopLine=55
+Caret=48,75

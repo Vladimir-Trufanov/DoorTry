@@ -24,3 +24,9 @@ Stack trace:
   thrown in C:\DoorTry\www\Inimem.php on line 27
 [25-May-2019 10:11:36 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\TPhpPrown\ViewGlobal.php on line 51
 [25-May-2019 11:26:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\TPhpPrown\ViewGlobal.php on line 83
+[26-May-2019 20:10:11 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'QRcode' not found in C:\DoorTry\www\Site.php:46
+Stack trace:
+#0 C:\DoorTry\www\Main.php(52): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 46
