@@ -32,11 +32,12 @@ $Uagent=$_SERVER['HTTP_USER_AGENT'];               // HTTP_USER_AGENT
 $s_Counter=prown\MakeSession('Counter',0,tInt);    // посещения за сессию
 
 // Инициализируем переменные-кукисы
-echo 'ini BrowEntry='.'3'.'<br>';
+echo 'in1 $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
 $c_BrowEntry=prown\MakeCookie('BrowEntry',3,tInt,true);          // число запросов сайта из браузера
 $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // число запросов сайта посетителем     
-echo 'ini $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
+echo 'in2 $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
+echo 'in2 $c_BrowEntry         ='.$c_BrowEntry.'<br>';
 
 // Инициализируем параметры страницы сайта 
 //$p_FormNews=prown\MakeParm('FormNews',frnWithImg); // форма представления новостей

@@ -100,10 +100,10 @@ TopLine=1
 Caret=41,13
 [www\Main.php]
 TopLine=19
-Caret=10,31
+Caret=11,33
 [www\Inimem.php]
 TopLine=19
-Caret=25,35
+Caret=1,35
 [..\TPhpPrown\MakeCookie.php]
-TopLine=44
-Caret=20,62
+TopLine=40
+Caret=65,54
