@@ -22,28 +22,27 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+QrCode
-			www\QrCode\CHANGELOG
-			www\QrCode\index.php
-			www\QrCode\INSTALL
-			www\QrCode\LICENSE
-			www\QrCode\phpqrcode.php
-			www\QrCode\qrbitstream.php
-			www\QrCode\qrconfig.php
-			www\QrCode\qrconst.php
-			www\QrCode\qrencode.php
-			www\QrCode\qrimage.php
-			www\QrCode\qrinput.php
-			www\QrCode\qrlib.php
-			www\QrCode\qrmask.php
-			www\QrCode\qrrscode.php
-			www\QrCode\qrspec.php
-			www\QrCode\qrsplit.php
-			www\QrCode\qrtools.php
-			www\QrCode\qrvect.php
-			www\QrCode\README
-			www\QrCode\TPhpPrown.png-errors.txt
-			www\QrCode\VERSION
+		+qrcode
+			www\qrcode\CHANGELOG
+			www\qrcode\index.php
+			www\qrcode\INSTALL
+			www\qrcode\LICENSE
+			www\qrcode\phpqrcode.php
+			www\qrcode\qrbitstream.php
+			www\qrcode\qrconfig.php
+			www\qrcode\qrconst.php
+			www\qrcode\qrencode.php
+			www\qrcode\qrimage.php
+			www\qrcode\qrinput.php
+			www\qrcode\qrlib.php
+			www\qrcode\qrmask.php
+			www\qrcode\qrrscode.php
+			www\qrcode\qrspec.php
+			www\qrcode\qrsplit.php
+			www\qrcode\qrtools.php
+			www\qrcode\qrvect.php
+			www\qrcode\README
+			www\qrcode\VERSION
 		-Styles
 			www\Styles\Styles.css
 		-TDoorTryer
@@ -67,13 +66,21 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\index.php
-1=www\QrCode\index.php
+1=www\qrcode\index.php
+2=www\Site.php
+3=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\QrCode\index.php
+Selected=www\qrcode\index.php
 [www\index.php]
-TopLine=7
+TopLine=13
 Caret=41,13
-[www\QrCode\index.php]
-TopLine=55
-Caret=48,75
+[www\qrcode\index.php]
+TopLine=9
+Caret=3,27
+[www\Site.php]
+TopLine=47
+Caret=1,1
+[www\Main.php]
+TopLine=27
+Caret=1,1
