@@ -25,12 +25,14 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Выполняем начальную инициализацию
 require_once $SiteRoot."/Inimem.php";   
 
-
-/*
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
-$BrowEntry = $BrowEntry+1;
-\prown\MakeCookie('BrowEntry',$BrowEntry); 
+$x=$c_BrowEntry+1;
+echo 'man BrowEntry='.$x.'<br>';
+$c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
+echo 'man $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
+
+/*
 // Изменяем счетчик посещений текущим посетителем      
 $PersEntry = $PersEntry+1;
 \prown\MakeCookie('PersEntry',$PersEntry); 

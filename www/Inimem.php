@@ -32,16 +32,17 @@ $Uagent=$_SERVER['HTTP_USER_AGENT'];               // HTTP_USER_AGENT
 $s_Counter=prown\MakeSession('Counter',0,tInt);    // посещения за сессию
 
 // Инициализируем переменные-кукисы
-$c_BrowEntry=prown\MakeCookie('BrowEntry',1,tInt);          // число запросов сайта из браузера
-$c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);          // число запросов сайта посетителем
-$c_PersName=prown\MakeCookie('PersName',"Гость");           // логин посетителя
-$с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt); // число запросов сайта посетителем     
+echo 'ini BrowEntry='.'3'.'<br>';
+$c_BrowEntry=prown\MakeCookie('BrowEntry',3,tInt,true);          // число запросов сайта из браузера
+$c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
+$с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // число запросов сайта посетителем     
+echo 'ini $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
 
 // Инициализируем параметры страницы сайта 
-$p_FormNews=prown\MakeParm('FormNews',frnWithImg); // форма представления новостей
+//$p_FormNews=prown\MakeParm('FormNews',frnWithImg); // форма представления новостей
 
-\prown\ViewGlobal(avgCOOKIE);
+//\prown\ViewGlobal(avgCOOKIE);
 //\prown\ViewGlobal(avgSESSION);
-\prown\ViewGlobal(avgGLOBALS);
+//\prown\ViewGlobal(avgGLOBALS);
 
 // ************************************************************* Inimem.php *** 

@@ -87,6 +87,76 @@ MakeCookie на сайте
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
 ***
+**Undefined variable: Result**
+
+    File: C:\TPhpPrown\MakeCookie.php  
+    Line: 63  
+    E_NOTICE [HND]  
+    #0 C:\DoorTry\www\Main.php(26): require_once('C:\\DoorTry\\www\\...')
+    #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+    #2 {main}
+В сценарии:
+
+    function MakeCookie($Name,$Value,$Type=tStr,$Init=false,$Duration=0x6FFFFFFF)
+    {
+       function _MakeCookie($Name,$Value,$Type,$Duration)
+       {
+          $Result=MakeType($Value,$Type);
+          setcookie($Name,$Value,$Duration);
+          if (IsSet($_COOKIE[$Name])) $_COOKIE[$Name]=$Value;
+          return $Result;
+       }
+       // Устанавливаем значение, если инициализация
+       if ($Init=true) 
+       {
+          if (!(IsSet($_COOKIE[$Name]))) 
+          {
+             $Result=_MakeCookie($Name,$Value,$Type,$Duration);
+          }
+       }
+       // Устанавливаем значение в обычном режиме
+       else $Result=_MakeCookie($Name,$Value,$Type,$Duration); 
+       return $Result;
+    }
+***
+**Cannot redeclare prown\_MakeCookie() (previously declared**   
+
+      
+    File: C:\TPhpPrown\MakeCookie.php  
+    Line: 56  
+      
+    E_ERROR [SHT]
+
+В коде:
+
+    function MakeCookie($Name,$Value,$Type=tStr,$Init=false,$Duration=0x6FFFFFFF)
+    {
+       56) function _MakeCookie($Name,$Value,$Type,$Duration)
+       {
+          $Result=MakeType($Value,$Type);
+          setcookie($Name,$Value,$Duration);
+          if (IsSet($_COOKIE[$Name])) $_COOKIE[$Name]=$Value;
+          return $Result;
+       }
+       // Устанавливаем значение, если инициализация
+       if ($Init=true) 
+       {
+          if (!(IsSet($_COOKIE[$Name]))) 
+          {
+             $Result=_MakeCookie($Name,$Value,$Type,$Duration);
+          }
+          else $Result=$_COOKIE[$Name];
+       }
+       // Устанавливаем значение в обычном режиме
+       else $Result=_MakeCookie($Name,$Value,$Type,$Duration); 
+       return $Result;
+    }
+
+###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
+
+***
+
+
 
 
 
