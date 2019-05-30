@@ -16,13 +16,25 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
 		-qrcode
+			-temp
+				www\qrcode\temp\test.png
+				www\qrcode\temp\test14b3cd3b8e3b7979585c1bb7dbe761f1.png
+				www\qrcode\temp\test485a07b72d8cde6ed37b066818c7d95e.png
+				www\qrcode\temp\test50d24d22fce856a20469727fc5a1b92f.png
+				www\qrcode\temp\test9d9859ebb4e825179a00a36b2d734ca0.png
+				www\qrcode\temp\testc134f9a08220e1da584c745cc71b8d9d.png
+				www\qrcode\temp\testc247c73ab14c5140e941c5bc3611580f.png
+				www\qrcode\temp\testda71b5daac6e0d773a00a9fff159a5c9.png
+				www\qrcode\temp\testdb2554bbb14951259ed70f8c9ba51693.png
+				www\qrcode\temp\testfacde18fb02ca1510477fb88ff14c01b.png
+				www\qrcode\temp\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png
 			www\qrcode\CHANGELOG
 			www\qrcode\index.php
 			www\qrcode\INSTALL
@@ -42,8 +54,19 @@ DoorTry
 			www\qrcode\qrtools.php
 			www\qrcode\qrvect.php
 			www\qrcode\README
+			www\qrcode\test.png-errors.txt
+			www\qrcode\test14b3cd3b8e3b7979585c1bb7dbe761f1.png-errors.txt
+			www\qrcode\test485a07b72d8cde6ed37b066818c7d95e.png-errors.txt
+			www\qrcode\test50d24d22fce856a20469727fc5a1b92f.png-errors.txt
+			www\qrcode\test9d9859ebb4e825179a00a36b2d734ca0.png-errors.txt
+			www\qrcode\testc134f9a08220e1da584c745cc71b8d9d.png-errors.txt
+			www\qrcode\testc247c73ab14c5140e941c5bc3611580f.png-errors.txt
+			www\qrcode\testda71b5daac6e0d773a00a9fff159a5c9.png-errors.txt
+			www\qrcode\testdb2554bbb14951259ed70f8c9ba51693.png-errors.txt
+			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
+			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -66,33 +89,9 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\index.php
-1=www\qrcode\index.php
-2=www\Site.php
-3=www\Main.php
-4=www\Inimem.php
-5=..\TPhpPrown\MakeCookie.php
-6=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=..\TPhpPrown\MakeCookie.php
+Selected=www\index.php
 [www\index.php]
 TopLine=13
 Caret=41,13
-[www\qrcode\index.php]
-TopLine=9
-Caret=3,27
-[www\Site.php]
-TopLine=135
-Caret=6,140
-[www\Main.php]
-TopLine=37
-Caret=1,52
-[www\Inimem.php]
-TopLine=17
-Caret=44,29
-[..\TPhpPrown\MakeCookie.php]
-TopLine=26
-Caret=44,47
-[www\Styles\Styles.css]
-TopLine=115
-Caret=3,140

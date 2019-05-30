@@ -19,6 +19,7 @@ $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 require_once $SiteHost."/TPhpPrown/iniConstMem.php";
 require_once $SiteHost."/TPhpPrown/MakeCookie.php";
+require_once $SiteHost."/TPhpPrown/MakeParm.php";
 require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Выполняем начальную инициализацию
