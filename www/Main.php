@@ -27,29 +27,19 @@ require_once $SiteRoot."/Inimem.php";
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
-$x=$c_BrowEntry+1;
-echo 'man1 BrowEntry='.$x.'<br>';
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
-echo 'man2 $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
-
-/*
 // Изменяем счетчик посещений текущим посетителем      
-$PersEntry = $PersEntry+1;
-\prown\MakeCookie('PersEntry',$PersEntry); 
+$c_PersEntry=prown\MakeCookie('PersEntry',$c_PersEntry+1,tInt);
 // Изменяем счетчик посещений за сессию                 
-$_SESSION['Counter']++;
-// echo "Вы обновили эту страницу ".$_SESSION['Counter']++." раз. ";
-// echo "<br><a href=".$_SERVER['PHP_SELF'].">обновить"; 
+$s_Counter=prown\MakeSession('Counter',$s_Counter+1,tInt);   
 // Если после авторизации изменилось имя пользователя,
-// то перенастраиваем счетчики
-if ($PersName<>$UserName)
+// то перенастраиваем счетчики и посетителя
+if ($c_PersName<>$c_UserName)
 {
-   $PersEntry = 1;
-   \prown\MakeCookie('PersEntry',$PersEntry); 
-   $PersName=$UserName;
-   \prown\MakeCookie('PersName',$PersName); 
+   $c_PersEntry=prown\MakeCookie('PersEntry',1,tInt);
+   $s_Counter=prown\MakeSession('Counter',1,tInt); 
+   $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
-*/
 
 require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";

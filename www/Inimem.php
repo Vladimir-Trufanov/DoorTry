@@ -25,22 +25,20 @@ define ("rciCookiUserYes", 2);   // пользователем разрешен�
 
 // Инициализируем общие переменные сайтового сценария
 $SiteDevice=prown\getSiteDevice();                 // 'Computer','Mobile','Tablet'
-$UserName=$_COOKIE['PersName'] ?? "Гость";         // логин авторизованного посетителя 
 $Uagent=$_SERVER['HTTP_USER_AGENT'];               // HTTP_USER_AGENT
 
-// Инициализируем сессионные переменные
-$s_Counter=prown\MakeSession('Counter',0,tInt);    // посещения за сессию
-
 // Инициализируем переменные-кукисы
-echo 'in1 $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
-$c_BrowEntry=prown\MakeCookie('BrowEntry',3,tInt,true);          // число запросов сайта из браузера
+$c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);          // число запросов сайта из браузера
+$c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчик посещений текущим посетителем
 $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
-$с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // число запросов сайта посетителем     
-echo 'in2 $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
-echo 'in2 $c_BrowEntry         ='.$c_BrowEntry.'<br>';
+$с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов     
+$c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
 
 // Инициализируем параметры страницы сайта 
-//$p_FormNews=prown\MakeParm('FormNews',frnWithImg); // форма представления новостей
+$p_FormNews=prown\MakeParm('FormNews',frnWithImg);               // форма представления новостей
+
+// Инициализируем сессионные переменные
+$s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 
 //\prown\ViewGlobal(avgCOOKIE);
 //\prown\ViewGlobal(avgSESSION);

@@ -155,6 +155,29 @@ MakeCookie на сайте
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
 ***
+**Undefined index: BrowEntry**  
+  
+
+    File: C:\DoorTry\www\Inimem.php  
+    Line: 35  
+      
+    E_NOTICE [HND]  
+    #0 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+    #1 {main}
+
+В коде
+
+    34 // Инициализируем переменные-кукисы
+    35 echo 'in1 $_COOKIE["BrowEntry"]='.$_COOKIE["BrowEntry"].'<br>';
+    36 $c_BrowEntry=prown\MakeCookie('BrowEntry',3,tInt,true);          // число запросов сайта из браузера
+
+Что было:
+***Запрещены кукисы, а в коде идет обращение к элементу массива кукисов***
+###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
+
+***
+
+
 
 
 
