@@ -21,6 +21,10 @@
    <body>
 
 <?php
+require_once "iGetAbove.php";
+$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
+
 echo 'Здравствуй, читатель!<br>';
 require_once $SiteRoot."/includErrs.php";
 echo 'Все 16 примеров с ошибками и исключениями просмотрены. До встречи!';

@@ -78,7 +78,7 @@ Error:
 //     Warning: include_once() [function.include]: Failed opening 'not-exists.php' for inclusion 
 //     (include_path='.;C:\php\pear') in Z:\home\Proba\www\includErrs.php on line 99
 // ---------------------------------------------------------------------- 5 ---
-//$a=0; $a=1/$a;
+$a=0; $a=1/$a;
 // [7] Warning: Division by zero in C:\DoorTry\www\includErrs.php on line 99
 // [5] Warning: Division by zero in Z:\home\Proba\www\includErrs.php on line 99
 // ---------------------------------------------------------------------- 6 ---
@@ -132,7 +132,7 @@ function ReadFileConfig($FileName)
    $TypeExp='E_USER_ERROR';
    if (!file_exists($FileName))
    {
-      throw new $TypeExp("Конфигурационный файл не найден");
+      throw new $TypeExp("[ReadFileConfig] Конфигурационный файл не найден");
    }
 }
 //ReadFileConfig("config.php");
@@ -144,8 +144,11 @@ function PrintAge($age)
    $age = intval($age);
    if ($age < 0)
    {
-      trigger_error("Функция print_age(): "."возраст не может быть".
-      " отрицательным", E_USER_WARNING);
+      trigger_error(
+         "Функция PrintAge(): ".
+         "возраст не может быть ".
+         "отрицательным", 
+      E_USER_WARNING);
    }
    echo "Возраст составляет: $age<br>";
 }
@@ -220,6 +223,6 @@ require_once $SiteHost."/TPhpPrown/MakeRegExp.php";
 $UserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ".
     "Chrome/72.0.3626.96 Chrome/72.0.3626.96 Safari/537.36";
 $pattern="/Chrome/u";
-$value=\prown\MakeRegExp($pattern,$UserAgent,$matches,false);
+//$value=\prown\MakeRegExp($pattern,$UserAgent,$matches,false);
 
 // ********************************************************* includErrs.php ***
