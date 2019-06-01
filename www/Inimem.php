@@ -35,7 +35,8 @@ $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // поряд�
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
 
 // Инициализируем параметры страницы сайта 
-$p_FormNews=prown\MakeParm('FormNews',frnWithImg);               // форма представления новостей
+$p_FormNews=prown\MakeParm('FormNews',frnSimple);                // форма представления новостей
+$p_AmtNews=prown\MakeParm('AmtNews',8);                          // количество новостей в форме
 
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию

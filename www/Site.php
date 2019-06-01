@@ -73,74 +73,26 @@
     <li>Лига-Новости</li>
     <li>Столица на онего</li>
   </ul>
-  <p><img src="imgs/gator.jpg" alt="Аллигатор"></p>
 
+<p><img src="imgs/gator.jpg" alt="Аллигатор"></p>
 
-  <h3>Яндекс-Новости</h3>
-
+<h3>Столица на онего</h3>
 <p>
-
 <?php
- 
-//$url = "https://news.yandex.ru/gadgets.rss?&";
-$url = "http://www.stolica.onego.ru/rss.php/feed.xml";
-  $content = file_get_contents($url);
-  $items = new SimpleXmlElement($content);
- 
-  print "<ul>";
-   $Point=1;
-   foreach($items -> channel -> item as $item) 
-   {
-    print "<li><a href = '{$item->link}' title = '$item->title'>" .
-    $item->title . "</a> - " . $item -> description . "</li>";
-   $Point=$Point+1;
-   
-   if ($Point>2) {break;}
-   
-   }
- 
-  print "</ul>";
-?>
-</p>
- 
+//echo '$p_FormNews='.$p_FormNews.'<br>';
+//echo '$p_AmtNews ='.$p_AmtNews.'<br>';
 
-  <h3>Столица на онего</h3>
-<p>
-
-<?php
-
-   //$rss = simplexml_load_file ( 'http://news.liga.net/economics/rss.xml' );
-   //$rss = simplexml_load_file ( 'http://uaport.net/cgi-bin/infostream.rss?rubr15' );
-   $rss = simplexml_load_file ( 'http://www.stolica.onego.ru/rss.php/feed.xml' );
-   
-   
-   
-   echo ''."\n";
-   $Point=1;
-   foreach ( $rss->channel->item as $item )  
-   {
-      $image = $item->enclosure;  
-      $item->pubDate = date("H:i ", strtotime("$item->pubDate"));  
-      echo '<details class="rss_sp">';
-      echo '<img src="'.$image['url'].'" width="'.$image['width'].
-         '" height="'.$image['height'].'" alt="" class="image_link" />';
-      echo '<td>';  
-      echo '<summary><span>'.$item->title.'</span></summary>';  
-      echo '<div><p>'.$item->description.'</p></div><a href="'.
-         $item->link.'"target="blank" class="link">Подробнее</a>';  
-      echo '</td>';  echo '</details>'."\n";  
-      echo '<tr><td colspan="2">&nbsp;</td></tr>'."\n";  
-      echo '<span class="date">'.$item->pubDate.'</span>';  
-   $Point=$Point+1;
-   //if ($Point>2) {break;}
-
-   }
-   echo ' ';
-   
-   //phpinfo();
-
-
-
+$urlNews="http://www.stolica.onego.ru/rss.php/feed.xml";
+if ($p_FormNews==frnSimple) 
+{
+   require_once $SiteRoot."/Pages/News/SimpleTape.php";   
+   SimpleTape($urlNews,$p_AmtNews);
+}
+else
+{
+   require_once $SiteRoot."/Pages/News/WithImgTape.php";   
+   WithImgTape($urlNews,$p_AmtNews);
+}
 ?>
 </p>
 
