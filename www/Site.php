@@ -2,33 +2,29 @@
 // PHP7/HTML5, EDGE/CHROME                                     *** Site.php ***
 
 // ****************************************************************************
-// * ittve.me                          Обо мне, путешествиях и ... Черногории *
+// * doortry.ru                                      Выполнить разметку сайта *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 19.02.2019
+// Copyright © 2019 tve                              Посл.изменение: 01.06.2019
 
 ?>
-
 <div class="pageWrapper">
-<header>
-<nav class="clear">
-<ul>
-<li><a href="#">Простой принцип</a></li>
-<li><a href="#">SoftШутки</a></li>
-<li><a href="#">Штрихотворения</a></li>
-</ul>
-</nav>
-<h1>DoorTry - коллекционер ошибок</h1>
-</header>
-<div class="contentWrapper">
-<div class="columnWrapper">
+   
+   <header>
+      <?php
+      IniTopMenu();
+      ?>
+      <h1>DoorTry - коллекционер ошибок</h1>
+   </header>
+   
+   <div class="contentWrapper">
+      <div class="columnWrapper">
 
-<article class="main">
-  <h2>Название</h2>
-
-<?php
+      <article class="main">
+         <h2>Название</h2>
+         <?php
    /*
    <!-- 1 штрих-код -->
    <div style="text-align:center;">

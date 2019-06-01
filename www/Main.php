@@ -22,6 +22,8 @@ require_once $SiteHost."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TPhpPrown/MakeParm.php";
 require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
+// Подключаем модули сайта
+require_once $SiteRoot."/IniMenu.php";   
 // Выполняем начальную инициализацию
 require_once $SiteRoot."/Inimem.php";   
 
