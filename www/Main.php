@@ -24,6 +24,12 @@ require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Подключаем модули сайта
 require_once $SiteRoot."/IniMenu.php";   
+require_once $SiteRoot."/MakeQrcode.php";   
+require_once $SiteRoot."/Pages/ConnHandler.php";   
+require_once $SiteRoot."/Pages/SimPrincip.php"; 
+require_once $SiteRoot."/Pages/News/SimpleTape.php";   
+require_once $SiteRoot."/Pages/News/WithImgTape.php";   
+  
 // Выполняем начальную инициализацию
 require_once $SiteRoot."/Inimem.php";   
 

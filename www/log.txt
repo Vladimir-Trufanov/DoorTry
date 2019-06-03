@@ -35,3 +35,4 @@ Stack trace:
 [30-May-2019 20:29:51 Asia/Kuwait] PHP Fatal error:  Cannot redeclare prown\thisMakeCookie() (previously declared in C:\TPhpPrown\MakeCookie.php:47) in C:\TPhpPrown\MakeCookie.php on line 47
 [30-May-2019 21:23:11 Asia/Kuwait] PHP Fatal error:  Cannot redeclare prown\_MakeCookie() (previously declared in C:\TPhpPrown\MakeCookie.php:56) in C:\TPhpPrown\MakeCookie.php on line 56
 [30-May-2019 22:30:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''<br>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in C:\DoorTry\www\Main.php on line 30
+[02-Jun-2019 12:02:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\DoorTry\www\Site.php on line 30

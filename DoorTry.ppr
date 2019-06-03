@@ -22,10 +22,10 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		-Pages
+		+Pages
 			-DoorTry
 			-LastError
-			-News
+			+News
 				-Kraina
 				-StoOnego
 				-Yandex
@@ -33,8 +33,10 @@ DoorTry
 				www\Pages\News\WithImgTape.php
 			-Sshu
 			-Stih
+			www\Pages\ConnHandler.php
 			www\Pages\Normativy_po_otopleniyu.php
 			www\Pages\Other_Main.php
+			www\Pages\SimPrincip.php
 			www\Pages\Sotsialnyye_normy_ploshchadi_zhilya.php
 		-qrcode
 			-temp
@@ -80,7 +82,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -100,16 +102,15 @@ DoorTry
 		www\log.txt
 		www\Main.php
 		www\MainDoorTry.php
+		www\MakeQrcode.php
 		www\Site.php
 		www\TPhpPrown.png
 [Open project files]
 0=www\index.php
 1=www\Main.php
-2=www\iHtmlBegin.php
-3=www\Inimem.php
+2=www\Site.php
+3=www\IniMenu.php
 4=www\Styles\Styles.css
-5=www\Site.php
-6=www\IniMenu.php
 [Selected Project Files]
 Main=
 Selected=www\Site.php
@@ -118,19 +119,13 @@ TopLine=9
 Caret=6,24
 [www\Main.php]
 TopLine=10
-Caret=1,27
-[www\iHtmlBegin.php]
-TopLine=9
-Caret=1,1
-[www\Inimem.php]
-TopLine=19
-Caret=38,39
-[www\Styles\Styles.css]
-TopLine=29
-Caret=12,41
+Caret=1,31
 [www\Site.php]
-TopLine=25
-Caret=12,37
+TopLine=19
+Caret=10,58
 [www\IniMenu.php]
-TopLine=1
-Caret=29,20
+TopLine=19
+Caret=18,30
+[www\Styles\Styles.css]
+TopLine=126
+Caret=15,141

@@ -32,13 +32,13 @@ table {
 } 
 /* конец кода сброса стилей браузера */
 
-.IniTopMenu:after {
+.TopMenu:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-.IniTopMenu {
+.TopMenu {
 	zoom: 1;	
 }
 
@@ -143,7 +143,7 @@ footer a {
     width: 80%;
 }
 
-.sidebar1 {
+.LeftBar {
   float: left;
   width: 25%;
   padding: 0 20px 0 10px;
@@ -163,7 +163,7 @@ footer a {
 footer {
   clear: both;  
 }
-nav ul, header h1, footer p, .contentWrapper {
+nav ul, header h1, footer p {
   max-width: 1200px;
   margin: 0 auto; 
 }
@@ -199,14 +199,14 @@ img.right {
 }
 
 @media (max-width:480px) {
-  .columnWrapper, .main, .sidebar1, .sidebar2 {
+  .columnWrapper, .main, .LeftBar, .sidebar2 {
     float: none;
     width: auto;
   }
   .main {
     border: none;
   }
-  .sidebar1, .sidebar2 {
+  .LeftBar, .sidebar2 {
     border-top: 2px solid black;
     margin-top: 25px;
     padding-top: 10px;
