@@ -35,8 +35,9 @@ $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // поряд�
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
 
 // Инициализируем параметры страницы сайта 
-$p_FormNews=prown\MakeParm('FormNews',frnSimple);                // форма представления новостей
-$p_AmtNews=prown\MakeParm('AmtNews',8);                          // количество новостей в форме
+$p_NewsForm=prown\MakeParm('NewsForm',frnSimple);                // форма представления новостей
+$p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
+$p_NewsView=prown\MakeParm('NewsView',false,tBool,true);         // true - разворачивать новости при загрузке
 
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию

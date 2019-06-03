@@ -17,10 +17,10 @@
    <title>Коллекционер ошибок</title>
    <meta charset="utf-8">
    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-   <meta name="viewport" content="width=device-width"> 
+<!--    <meta name="viewport" content="width=device-width"> -->
    <meta name="description" content="DoorTry - коллекционер ошибок">
    <meta name="keywords" content="DoorTry - простой принцип программирования">
-   <link href="Styles/Styles.css" rel="stylesheet">
+   <link href="Styles/Styles.css" rel="stylesheet">  -->
 </head>
 <body>
 <?php

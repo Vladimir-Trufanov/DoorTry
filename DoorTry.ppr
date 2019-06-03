@@ -25,14 +25,15 @@ DoorTry
 		+Pages
 			-DoorTry
 			-LastError
-			+News
+			-News
 				-Kraina
 				-StoOnego
 				-Yandex
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			-Stih
+			+Stih
+				www\Pages\Stih\Stih.php
 			www\Pages\ConnHandler.php
 			www\Pages\Normativy_po_otopleniyu.php
 			www\Pages\Other_Main.php
@@ -82,7 +83,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -109,23 +110,19 @@ DoorTry
 0=www\index.php
 1=www\Main.php
 2=www\Site.php
-3=www\IniMenu.php
-4=www\Styles\Styles.css
+3=www\Inimem.php
 [Selected Project Files]
 Main=
 Selected=www\Site.php
 [www\index.php]
-TopLine=9
+TopLine=5
 Caret=6,24
 [www\Main.php]
-TopLine=10
-Caret=1,31
+TopLine=31
+Caret=41,32
 [www\Site.php]
-TopLine=19
-Caret=10,58
-[www\IniMenu.php]
-TopLine=19
-Caret=18,30
-[www\Styles\Styles.css]
-TopLine=126
-Caret=15,141
+TopLine=35
+Caret=9,63
+[www\Inimem.php]
+TopLine=21
+Caret=1,40

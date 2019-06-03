@@ -155,7 +155,7 @@ footer a {
   border-left: dashed 1px rgb(153,153,153);
   border-right: dashed 1px rgb(153,153,153);
 }
-.sidebar2 {
+.RightBar {
   float: right;
   width: 20%; 
   padding: 0 10px 0 20px;
@@ -183,7 +183,7 @@ img.right {
 }
 
 @media (min-width: 481px) and (max-width:768px) {
-  .sidebar2 {
+  .RightBar {
     float: none;
     width: auto;
     clear: both;
@@ -199,14 +199,14 @@ img.right {
 }
 
 @media (max-width:480px) {
-  .columnWrapper, .main, .LeftBar, .sidebar2 {
+  .columnWrapper, .main, .LeftBar, .RightBar {
     float: none;
     width: auto;
   }
   .main {
     border: none;
   }
-  .LeftBar, .sidebar2 {
+  .LeftBar, .RightBar {
     border-top: 2px solid black;
     margin-top: 25px;
     padding-top: 10px;

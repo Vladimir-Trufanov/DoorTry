@@ -29,6 +29,7 @@ require_once $SiteRoot."/Pages/ConnHandler.php";
 require_once $SiteRoot."/Pages/SimPrincip.php"; 
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
+require_once $SiteRoot."/Pages/Stih/Stih.php";   
   
 // Выполняем начальную инициализацию
 require_once $SiteRoot."/Inimem.php";   
