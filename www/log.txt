@@ -36,3 +36,21 @@ Stack trace:
 [30-May-2019 21:23:11 Asia/Kuwait] PHP Fatal error:  Cannot redeclare prown\_MakeCookie() (previously declared in C:\TPhpPrown\MakeCookie.php:56) in C:\TPhpPrown\MakeCookie.php on line 56
 [30-May-2019 22:30:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''<br>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in C:\DoorTry\www\Main.php on line 30
 [02-Jun-2019 12:02:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\DoorTry\www\Site.php on line 30
+[05-Jun-2019 16:00:47 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function TopMenu() in C:\DoorTry\www\Site.php:15
+Stack trace:
+#0 C:\DoorTry\www\Main.php(56): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 15
+[05-Jun-2019 16:02:26 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeQrcode() in C:\DoorTry\www\Site.php:27
+Stack trace:
+#0 C:\DoorTry\www\Main.php(55): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 27
+[05-Jun-2019 16:51:15 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function NewsView() in C:\DoorTry\www\Site.php:34
+Stack trace:
+#0 C:\DoorTry\www\Main.php(53): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 34

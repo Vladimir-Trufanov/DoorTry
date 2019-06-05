@@ -20,7 +20,7 @@
 <!--    <meta name="viewport" content="width=device-width"> -->
    <meta name="description" content="DoorTry - коллекционер ошибок">
    <meta name="keywords" content="DoorTry - простой принцип программирования">
-   <link href="Styles/Styles.css" rel="stylesheet">  -->
+   <link href="Styles/Styles.css" rel="stylesheet">  
 </head>
 <body>
 <?php
