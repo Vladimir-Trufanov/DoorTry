@@ -9,7 +9,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 05.06.2019
 
-function NewsView($p_NewsView,$p_NewsForm)
+function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
 {
    $Result = true;
    if ($p_NewsView)

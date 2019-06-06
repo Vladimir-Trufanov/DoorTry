@@ -27,18 +27,18 @@ echo '<div class="contentWrapper">';
       ConnHandler();
       //SimPrincip();
       echo '</article>';
-
-      echo '<aside class="LeftBar">';
-      echo '<h2>Новости</h2>';
-      NewsMenu();
-      NewsView($p_NewsView,$p_NewsForm);
+      
+      echo '<aside class="RightBar">';
+      echo '<h2>Штрихотворение</h2>';
+      Stih();
       echo '</aside>';
       
    echo '</div>';
-      
-   echo '<aside class="RightBar">';
-   echo '<h2>Штрихотворение</h2>';
-   Stih();
+
+   echo '<aside class="LeftBar">';
+   echo '<h2>Новости</h2>';
+   NewsMenu();
+   NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);
    echo '</aside>';
    
 echo '</div>';
