@@ -11,8 +11,11 @@
 // Copyright © 2019 tve                              Посл.изменение: 10.05.2019
 
 $start = microtime(true);
+
 // Инициализируем корневой каталог сайта
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+// Подключаем контроль загрузки страницы
+require_once $SiteRoot."/Probas/Probas2.php";   
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
@@ -31,6 +34,5 @@ catch (E_EXCEPTION $e)
 }
 
 echo 'Время генерации: '.( microtime(true) - $start ).' сек.'.'<br>';
-require_once $SiteRoot."/Probas/Probas2.php";   
 
 // ************************************************************** index.php ***

@@ -18,6 +18,12 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
       <h2>Столица на онего</h2>
       <p>
       <?php
+      
+      // Фиксируем начало загрузки новостей
+      echo '<script>';
+      echo 'BeginNews();';
+      echo '</script>';
+      // Выводим новости
       //echo '$p_FormNews='.$p_FormNews.'<br>';
       //echo '$p_AmtNews ='.$p_AmtNews.'<br>';
       $urlNews="http://www.stolica.onego.ru/rss.php/feed.xml";
