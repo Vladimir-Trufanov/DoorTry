@@ -90,7 +90,7 @@ DoorTry
 		-Styles
 			www\Styles\Styles.css
 			www\Styles\StylesOld.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -113,28 +113,26 @@ DoorTry
 		www\SiteOld.php
 		www\TPhpPrown.png
 [Open project files]
-0=www\index.php
-1=www\Main.php
-2=www\Pages\News\NewsView.php
-3=www\Inimem.php
-4=www\IniMenu.php
-5=www\Site.php
-6=www\Probas\Probas2.php
+0=www\Main.php
+1=www\Pages\News\NewsView.php
+2=www\Inimem.php
+3=www\IniMenu.php
+4=www\Site.php
+5=www\Probas\Probas2.php
+6=www\Probas\Probas1.php
+7=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
 [Selected Project Files]
 Main=
-Selected=www\Probas\Probas2.php
-[www\index.php]
-TopLine=5
-Caret=41,17
+Selected=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
 [www\Main.php]
-TopLine=73
-Caret=1,78
+TopLine=1
+Caret=22,74
 [www\Pages\News\NewsView.php]
-TopLine=21
-Caret=1,38
+TopLine=11
+Caret=9,24
 [www\Inimem.php]
-TopLine=9
-Caret=1,25
+TopLine=25
+Caret=1,45
 [www\IniMenu.php]
 TopLine=16
 Caret=24,25
@@ -142,6 +140,12 @@ Caret=24,25
 TopLine=31
 Caret=1,41
 [www\Probas\Probas2.php]
-TopLine=17
-Caret=62,36
+TopLine=23
+Caret=1,44
 Mark1=1,43
+[www\Probas\Probas1.php]
+TopLine=25
+Caret=1,1
+[..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
+TopLine=1
+Caret=1,31

@@ -21,7 +21,7 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
       
       // Фиксируем начало загрузки новостей
       echo '<script>';
-      echo 'BeginNews();';
+      //echo 'BeginNews();';
       echo '</script>';
       // Выводим новости
       //echo '$p_FormNews='.$p_FormNews.'<br>';

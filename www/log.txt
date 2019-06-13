@@ -54,3 +54,10 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\Site.php on line 34
+[13-Jun-2019 18:17:36 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\Main.php on line 74
+[13-Jun-2019 18:18:34 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TFixLoadTimer.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 73
+[13-Jun-2019 18:20:21 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'Exceptionizer_Catcher' not found in C:\DoorTry\www\Main.php:74
+Stack trace:
+#0 C:\DoorTry\www\index.php(24): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 74

@@ -14,8 +14,6 @@ $start = microtime(true);
 
 // Инициализируем корневой каталог сайта
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-// Подключаем контроль загрузки страницы
-require_once $SiteRoot."/Probas/Probas2.php";   
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";

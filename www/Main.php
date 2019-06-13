@@ -67,7 +67,14 @@ require_once $SiteHost."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TPhpPrown/MakeParm.php";
 require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
-// Подключаем модули сайта
+// Подключаем задействованные классы
+//// Подключаем контроль загрузки страницы
+//// require_once $SiteRoot."/Probas/Probas2.php";   
+require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
+$oFixLoadTimer = new FixLoadTimer();
+//oFixLoadTimer->mask = $mask;
+
+// Подключаем рабочие модули сайта 
 require_once $SiteRoot."/IniMenu.php";
 require_once $SiteRoot."/MakeQrcode.php";   
 require_once $SiteRoot."/Pages/ConnHandler.php";   
