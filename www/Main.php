@@ -71,8 +71,6 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 //// Подключаем контроль загрузки страницы
 //// require_once $SiteRoot."/Probas/Probas2.php";   
 require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
-$oFixLoadTimer = new FixLoadTimer();
-//oFixLoadTimer->mask = $mask;
 
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/IniMenu.php";
@@ -101,6 +99,13 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
+
+// Запускаем регистратор времени загрузки страницы
+$oFixLoadTimer = new FixLoadTimer();
+//oFixLoadTimer->mask = $mask;
+
+
+
 
 require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";

@@ -121,12 +121,13 @@ DoorTry
 5=www\Probas\Probas2.php
 6=www\Probas\Probas1.php
 7=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
+8=www\index.php
 [Selected Project Files]
 Main=
 Selected=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
 [www\Main.php]
-TopLine=1
-Caret=22,74
+TopLine=92
+Caret=1,105
 [www\Pages\News\NewsView.php]
 TopLine=11
 Caret=9,24
@@ -140,12 +141,15 @@ Caret=24,25
 TopLine=31
 Caret=1,41
 [www\Probas\Probas2.php]
-TopLine=23
-Caret=1,44
+TopLine=21
+Caret=1,26
 Mark1=1,43
 [www\Probas\Probas1.php]
 TopLine=25
 Caret=1,1
 [..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=1
-Caret=1,31
+TopLine=77
+Caret=103,85
+[www\index.php]
+TopLine=5
+Caret=1,1
