@@ -22,10 +22,10 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+Pages
+		-Pages
 			-DoorTry
 			-LastError
-			+News
+			-News
 				-Kraina
 				-StoOnego
 				-Yandex
@@ -40,9 +40,6 @@ DoorTry
 			www\Pages\Other_Main.php
 			www\Pages\SimPrincip.php
 			www\Pages\Sotsialnyye_normy_ploshchadi_zhilya.php
-		+Probas
-			www\Probas\Probas1.php
-			www\Probas\Probas2.php
 		-qrcode
 			-temp
 				www\qrcode\temp\test.png
@@ -89,8 +86,7 @@ DoorTry
 			www\qrcode\VERSION
 		-Styles
 			www\Styles\Styles.css
-			www\Styles\StylesOld.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -110,7 +106,6 @@ DoorTry
 		www\MainDoorTry.php
 		www\MakeQrcode.php
 		www\Site.php
-		www\SiteOld.php
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
@@ -118,39 +113,30 @@ DoorTry
 2=www\Inimem.php
 3=www\IniMenu.php
 4=www\Site.php
-5=www\Probas\Probas2.php
-6=www\Probas\Probas1.php
-7=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
-8=www\index.php
+5=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
+6=www\index.php
 [Selected Project Files]
 Main=
-Selected=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
+Selected=www\Main.php
 [www\Main.php]
-TopLine=92
-Caret=1,105
+TopLine=59
+Caret=1,17
 [www\Pages\News\NewsView.php]
 TopLine=11
 Caret=9,24
 [www\Inimem.php]
 TopLine=25
-Caret=1,45
+Caret=3,45
 [www\IniMenu.php]
-TopLine=16
-Caret=24,25
+TopLine=14
+Caret=28,20
 [www\Site.php]
-TopLine=31
+TopLine=3
 Caret=1,41
-[www\Probas\Probas2.php]
-TopLine=21
-Caret=1,26
-Mark1=1,43
-[www\Probas\Probas1.php]
-TopLine=25
-Caret=1,1
 [..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=89
-Caret=56,107
+TopLine=3
+Caret=9,17
 Mark1=1,108
 [www\index.php]
-TopLine=5
-Caret=1,1
+TopLine=7
+Caret=6,32

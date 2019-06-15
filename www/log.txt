@@ -61,3 +61,8 @@ Stack trace:
 #0 C:\DoorTry\www\index.php(24): require_once()
 #1 {main}
   thrown in C:\DoorTry\www\Main.php on line 74
+[15-Jun-2019 21:40:53 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'FixLoadTimer' not found in C:\DoorTry\www\Main.php:101
+Stack trace:
+#0 C:\DoorTry\www\index.php(22): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 101

@@ -14,47 +14,6 @@
 // header('Location: http://www.new-website.com');
 
 session_start(); 
-/*
-Часто для оценки скорости загрузки страниц выбирают один из двух вариантов:
-
-Скорость загрузки всего контента на клиенте.
-Скорость генерации страницы на сервере.
-Однако на практике (иногда) имеет смысл отвечать на такой вопрос:
-
-Сколько времени проходит от момента нажатия на ссылку до момента полной загрузки страницы?
-Т.е. реальное время ожидания пользователя. Чтобы не прибегать к сложным решениям, можно сделать следующее:
-
-Запомнить точное время на клиенте прямо перед кликом по ссылке.
-При полной загрузке следующей страницы отправить на сервер разницу.
-Или текстом программирования:
-
-// Сохраняем текущее время в sessionStorage
-// Как только любая ссылка будет нажата, выполнение остановится
-function check_speed() {
-    sessionStorage.now = Date.now();
-    setTimeout(check_speed, 25);
-}
-
-// Вешаем обработчик на полную загрузку страницы
-window.onload = function() {
-    var now = Date.now();
-    if ( sessionStorage.now ) {
-        var loaded_in = now - parseInt(sessionStorage.now);
-        // отправляем значение loaded_in на сервер
-        // значение в миллисекундах
-    }
-
-    check_speed();
-};
-Значение loaded_in можно отправить на сервер либо в систему трекинга
-
-
- 
-Такой метод пропускает первые страницы сессий. Однако для общей оценки проблем со скоростью это не 
-критично.
-
-*/
-
 
 // Инициализируем надсайтовый каталог и каталог хостинга
 require_once "iGetAbove.php";
@@ -68,9 +27,6 @@ require_once $SiteHost."/TPhpPrown/MakeParm.php";
 require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Подключаем задействованные классы
-//// Подключаем контроль загрузки страницы
-//// require_once $SiteRoot."/Probas/Probas2.php";   
-require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
 
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/IniMenu.php";
@@ -100,15 +56,14 @@ if ($c_PersName<>$c_UserName)
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
 
-// Запускаем регистратор времени загрузки страницы
-$oFixLoadTimer = new FixLoadTimer();
-//oFixLoadTimer->mask = $mask;
-
-
-
-
 require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";
 require_once $SiteRoot."/iHtmlEnd.php";
+
+//// Подключаем контроль загрузки страницы
+require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
+// Запускаем регистратор времени загрузки страницы
+$oFixLoadTimer = new FixLoadTimer();
+//oFixLoadTimer->mask = $mask;
 
 // *************************************************************** Main.php ***
