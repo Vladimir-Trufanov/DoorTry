@@ -125,8 +125,8 @@ Caret=1,65
 TopLine=11
 Caret=9,24
 [www\Inimem.php]
-TopLine=7
-Caret=1,17
+TopLine=31
+Caret=44,40
 [www\IniMenu.php]
 TopLine=14
 Caret=28,20
@@ -134,9 +134,11 @@ Caret=28,20
 TopLine=16
 Caret=1,41
 [..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=1
-Caret=30,21
-Mark1=1,161
+TopLine=152
+Caret=12,147
+Mark1=1,164
+Mark2=1,179
+Mark3=1,156
 [www\index.php]
 TopLine=7
 Caret=6,32
