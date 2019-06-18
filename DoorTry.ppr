@@ -89,6 +89,9 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
+		+TJsPrown
+			www\TJsPrown\TJsPrown.css
+			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
 		www\doortry.png
@@ -115,12 +118,14 @@ DoorTry
 4=www\Site.php
 5=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
 6=www\index.php
+7=www\TJsPrown\TJsPrown.js
+8=www\iHtmlBegin.php
 [Selected Project Files]
 Main=
 Selected=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
 [www\Main.php]
 TopLine=53
-Caret=1,65
+Caret=1,61
 [www\Pages\News\NewsView.php]
 TopLine=11
 Caret=9,24
@@ -134,11 +139,17 @@ Caret=28,20
 TopLine=16
 Caret=1,41
 [..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=152
-Caret=12,147
-Mark1=1,164
-Mark2=1,179
-Mark3=1,156
+TopLine=133
+Caret=1,163
+Mark1=1,163
+Mark2=1,178
+Mark3=1,161
 [www\index.php]
 TopLine=7
 Caret=6,32
+[www\TJsPrown\TJsPrown.js]
+TopLine=1
+Caret=4,3
+[www\iHtmlBegin.php]
+TopLine=9
+Caret=7,26
