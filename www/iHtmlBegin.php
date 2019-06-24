@@ -20,12 +20,11 @@
 <!--    <meta name="viewport" content="width=device-width"> -->
    <meta name="description" content="DoorTry - коллекционер ошибок">
    <meta name="keywords" content="DoorTry - простой принцип программирования">
-   <link href="Styles/Styles.css"     rel="stylesheet"> 
-   <link href="TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css"> 
-   <script 
-      src="/TJsPrown/TJsPrown.js">
-   </script>
-
+   <link href="Styles/Styles.css" rel="stylesheet"> 
+   <link href="JS/TJsPrown.css" rel="stylesheet" type="text/css"> 
+   <script src="/JS/TJsPrown.js"></script>
+   <script src="/JS/DoorTry.js"></script>
+   <script src="/JS/FixLoadTimer.js"></script>
 </head>
 <body>
 

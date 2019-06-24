@@ -42,7 +42,7 @@ $p_NewsView=prown\MakeParm('NewsView',false,tBool,true);         // true - ра�
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 
-\prown\ViewGlobal(avgCOOKIE);
+//\prown\ViewGlobal(avgCOOKIE);
 //\prown\ViewGlobal(avgSESSION);
 //\prown\ViewGlobal(avgGLOBALS);
 

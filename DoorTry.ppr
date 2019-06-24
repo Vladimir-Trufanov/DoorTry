@@ -22,6 +22,11 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
+		+JS
+			www\JS\DoorTry.js
+			www\JS\FixLoadTimer.js
+			www\JS\TJsPrown.css
+			www\JS\TJsPrown.js
 		-Pages
 			-DoorTry
 			-LastError
@@ -89,9 +94,6 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		+TJsPrown
-			www\TJsPrown\TJsPrown.css
-			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
 		www\doortry.png
@@ -104,7 +106,6 @@ DoorTry
 		www\index.php
 		www\Inimem.php
 		www\IniMenu.php
-		www\log.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -112,45 +113,25 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\Pages\News\NewsView.php
-2=www\Inimem.php
-3=www\IniMenu.php
-4=www\Site.php
-5=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
-6=www\index.php
-7=www\TJsPrown\TJsPrown.js
-8=www\iHtmlBegin.php
+1=www\iHtmlBegin.php
+2=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
+3=www\JS\TJsPrown.js
+4=www\JS\FixLoadTimer.js
 [Selected Project Files]
 Main=
 Selected=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
 [www\Main.php]
 TopLine=53
-Caret=1,61
-[www\Pages\News\NewsView.php]
-TopLine=11
-Caret=9,24
-[www\Inimem.php]
-TopLine=31
-Caret=44,40
-[www\IniMenu.php]
-TopLine=14
-Caret=28,20
-[www\Site.php]
-TopLine=16
-Caret=1,41
-[..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=82
-Caret=10,66
-Mark1=1,171
-Mark2=1,186
-Mark3=1,169
-Mark4=1,161
-[www\index.php]
-TopLine=7
-Caret=6,32
-[www\TJsPrown\TJsPrown.js]
-TopLine=1
-Caret=25,48
+Caret=1,64
 [www\iHtmlBegin.php]
-TopLine=9
-Caret=7,26
+TopLine=3
+Caret=1,1
+[..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
+TopLine=26
+Caret=26,42
+[www\JS\TJsPrown.js]
+TopLine=19
+Caret=99,32
+[www\JS\FixLoadTimer.js]
+TopLine=93
+Caret=1,113

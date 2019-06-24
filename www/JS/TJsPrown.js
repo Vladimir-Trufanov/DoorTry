@@ -1,4 +1,40 @@
 
+
+      // ----------------------------------------------------------------------
+      //      Добавить обработку события по завершению загрузки страницы
+      // ----------------------------------------------------------------------
+      function addLoadEvent(func) 
+      {
+         var oldonload = window.onload;
+         if (typeof window.onload != 'function') 
+         {
+            window.onload = func;
+         } 
+         else
+         {
+            window.onload = function() 
+            {
+               if (oldonload) 
+               {
+                  oldonload();
+               }
+               func();
+            }
+         }
+      }
+
+// Перебираем все элементы, находящиеся в контейнере localStorage
+function ViewLocalStorage()
+{
+      var str="";
+      for (var i=0; i<localStorage.length; i++)
+      {
+         str="Ключ: "+localStorage.key(i)+"; Значение: "+localStorage.getItem(localStorage.key(i));
+         console.log(str);
+      }
+}
+
+
 // Значения name и value являются обязательными, а остальные не обязательны.
 // http://www.codenet.ru/webmast/js/Cookies.php 
 function setCookie(name,value,expires,path,domain,secure) 
