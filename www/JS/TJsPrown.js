@@ -32,6 +32,7 @@ function ViewLocalStorage()
          str="Ключ: "+localStorage.key(i)+"; Значение: "+localStorage.getItem(localStorage.key(i));
          console.log(str);
       }
+         console.log('--- localStorage ---');
 }
 
 

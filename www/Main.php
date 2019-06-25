@@ -60,9 +60,7 @@ require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";
 // Подключаем и запускаем регистратор времени загрузки страницы
 require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
-
-$oFixLoadTimer = new FixLoadTimer($SiteHost);
-//oFixLoadTimer->mask = $mask;
+$oFixLoadTimer = new FixLoadTimer();
 require_once $SiteRoot."/iHtmlEnd.php";
 
 // *************************************************************** Main.php ***
