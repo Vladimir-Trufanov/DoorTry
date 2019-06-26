@@ -56,11 +56,15 @@ if ($c_PersName<>$c_UserName)
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
 
+//\prown\ViewGlobal(avgCOOKIE);
+//\prown\ViewGlobal(avgSESSION);
+//\prown\ViewGlobal(avgGLOBALS);
+
 require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";
 // Подключаем и запускаем регистратор времени загрузки страницы
 require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
-$oFixLoadTimer = new FixLoadTimer(fltAll);
+$oFixLoadTimer = new FixLoadTimer();
 require_once $SiteRoot."/iHtmlEnd.php";
 
 // *************************************************************** Main.php ***

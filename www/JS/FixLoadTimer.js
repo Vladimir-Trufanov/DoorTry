@@ -136,6 +136,8 @@ function ViewFixLoadTime(Caption,FltLead)
 function window_onload(FltLead)
 {
    var CurrLoadTime,MiddLoadTime,MaxiLoadTime,MiniLoadTime; 
+   // Выводим в консоль данные о предыдущей загрузке страницы
+   ViewFixLoadTime('Время предыдущей загрузки страницы:',FltLead);
    // Задаем период хранения кукисов 400 дней
    var dateCookie,stringDate;
    dateCookie=new Date;
