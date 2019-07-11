@@ -7,15 +7,14 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 28.06.2019
+ * Copyright © 2019 tve                              Посл.изменение: 11.07.2019
  * 
- * Замечание:      при написании комментария через 2 слэша перед директивой CSS 
- *      блокируется выполнение директивы, а выполняется внутри фигурных скобок!
- */
+ *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
+**/
 
-/**
- * Cбрасываем стили браузера 
- */
+/* 
+   Cбрасываем стили браузера 
+*/
 *
 {
    box-sizing: border-box; 
@@ -38,10 +37,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 {
    display: block;
 }
-/**
- * Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
- * списков и таблиц и определяем в процентах пространство документа
- */
+/* 
+   Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+   списков и таблиц и определяем в процентах пространство документа 
+*/
 html
 {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
@@ -69,8 +68,35 @@ table
 	border-collapse: collapse;
 	border-spacing: 0;
 } 
+/* 
+   Позиционируем элементы разметки, порядок размещения текстов, отступы
+   контекста колонок
+*/
+.LeftBar 
+{
+   float: left;
+   width: 20%;
+}
+.columnWrapper 
+{
+   float: right;
+   width: 80%;
+}
+.main 
+{
+   float: left;
+   width: 75%;
+}
+.RightBar 
+{
+   float: right;
+   width: 25%; 
+}
 
 
+
+
+/* далее - не отработанное */
 
 
 
@@ -165,37 +191,19 @@ footer {
 footer a {
 	color: white;	
 }
-/* пользовательские стили  */
 
-/* раскомментируйте этот стиль, 
-если хотите всю страницу, включая фоновый цвет, 
-ограничить центрированным блоком размером 1200 пикселов  */
-/*
-.pageWrapper {
-	max-width: 1200px;
-	margin: 0 auto;	
-}
-*/
-.columnWrapper {
-    float: right;
-    width: 80%;
-}
-
-.LeftBar {
-  float: left;
-  width: 20%;
+.LeftBar 
+{
   padding: 0 20px 0 10px;
 }
-.main {
-  float: left;
-  width: 75%;
+.main 
+{
   padding: 0 20px;
   border-left: dashed 1px rgb(153,153,153);
   border-right: dashed 1px rgb(153,153,153);
 }
-.RightBar {
-  float: right;
-  width: 25%; 
+.RightBar 
+{
   padding: 0 10px 0 20px;
 }
 footer {
