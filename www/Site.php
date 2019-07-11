@@ -22,10 +22,10 @@ echo '<div class="contentWrapper">';
    echo '<div class="columnWrapper">';
 
       echo '<article class="main">';
-      echo '<h2>Название</h2>';
+      //echo '<h2>Название</h2>';
       MakeQrcode();
-      ConnHandler();
-      //SimPrincip();
+      //ConnHandler();
+      SimPrincip();
       echo '</article>';
       
       echo '<aside class="RightBar">';

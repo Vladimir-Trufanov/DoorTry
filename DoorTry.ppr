@@ -22,12 +22,12 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 			-LastError
 			-News
@@ -38,12 +38,13 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			-Stih
+			+Stih
 				www\Pages\Stih\Stih.php
 			www\Pages\ConnHandler.php
 			www\Pages\Normativy_po_otopleniyu.php
 			www\Pages\Other_Main.php
 			www\Pages\SimPrincip.php
+			www\Pages\SimPrincip1.php
 			www\Pages\Sotsialnyye_normy_ploshchadi_zhilya.php
 		-qrcode
 			-temp
@@ -89,9 +90,9 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -113,30 +114,17 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\iHtmlBegin.php
-2=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
-3=www\JS\TJsPrown.js
-4=www\Inimem.php
-5=www\JS\FixLoadTimer.js
+1=www\Site.php
+2=www\Pages\SimPrincip.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Pages\SimPrincip.php
 [www\Main.php]
-TopLine=43
-Caret=27,65
-[www\iHtmlBegin.php]
-TopLine=15
-Caret=1,1
-[..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=23
-Caret=16,33
-Mark1=1,53
-[www\JS\TJsPrown.js]
-TopLine=11
-Caret=41,35
-[www\Inimem.php]
-TopLine=24
-Caret=1,44
-[www\JS\FixLoadTimer.js]
-TopLine=47
-Caret=1,1
+TopLine=1
+Caret=1,7
+[www\Site.php]
+TopLine=13
+Caret=9,25
+[www\Pages\SimPrincip.php]
+TopLine=9
+Caret=31,26
