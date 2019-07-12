@@ -44,8 +44,8 @@ echo '<div class="contentWrapper">';
 echo '</div>';
 
 echo '<footer>';
-echo '<p>Copyright © 2019 tve</p>'; 
-echo '<p>Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></p>';
+echo '<span class="p">Copyright © 2019 tve</span>';
+echo '<span class="p">Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></span>';
 echo '</footer>';
 echo '</div>';
 

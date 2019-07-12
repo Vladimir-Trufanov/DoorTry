@@ -7,7 +7,7 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 11.07.2019
+ * Copyright © 2019 tve                              Посл.изменение: 12.07.2019
  * 
  *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
 **/
@@ -69,8 +69,7 @@ table
 	border-spacing: 0;
 } 
 /* 
-   Позиционируем элементы разметки, порядок размещения текстов, отступы
-   контекста колонок
+   Позиционируем элементы разметки, порядок размещения текстов
 */
 .LeftBar 
 {
@@ -86,133 +85,172 @@ table
 {
    float: left;
    width: 75%;
+   border-left: dashed 0.1rem rgb(153,153,153);
+   border-right: dashed 0.1rem rgb(153,153,153);
 }
 .RightBar 
 {
    float: right;
    width: 25%; 
 }
-
-
+/* 
+   Форматируем шапку страницы, меню и заголовок страницы
+*/
+header 
+{
+	background-color:rgb(93,43,78); 
+	background-image: linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
+	padding-bottom: 3rem;
+}
+header h1 
+{
+	font-size: 3rem;	
+	color: white;
+	font-weight: bold;
+	padding-top: 3rem;
+	clear: both;
+	padding-left: 1rem;
+}
+nav 
+{
+	background-color: rgb(25,25,25);
+	border: 0.1rem solid rgba(255,255,255,.5);	
+	border-left: none;
+	border-right: none;
+}
+nav ul 
+{
+	padding: 0;
+	margin: 0;	
+}
+nav li 
+{
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
+nav a 
+{
+	float: left;
+	font-size: 1.4rem;	
+	color: white;
+	font-weight: normal;
+	text-decoration: none;
+	padding: 1rem;
+	border-right: 0.1rem dashed rgba(255,255,255,.75);
+	transition: all .5s;
+}
+nav li:last-of-type a 
+{
+	border-right: none;	
+}
+nav a:hover 
+{
+	background-color: rgb(93,43,78);
+}
+/* 
+   Отделяем меню от контекста страницы белой линией,
+   размер пунктов меню оставляем нормальным 
+*/
+.TopMenu:after 
+{
+   content: " ";
+   display: table;
+   clear: both;
+}
+.TopMenu 
+{
+   zoom: 1;	
+}
+/* 
+   Определяем общие параметры колонок новостей и стихотворений
+*/
+aside h2 
+{
+	font-size: 1.9rem;
+	margin-top: 1rem;	
+}
+aside h3 
+{
+	font-size: 1.8rem;
+	margin-top: 1rem;
+}
+aside p, aside li 
+{
+	font-size: 1.5rem;
+	margin-top: 1rem;	
+}
+/* 
+   Определяем параметры колонок текста главного материала
+*/
+.main h2 
+{
+	font-size: 2.3rem;
+	margin-top: 1rem;	
+}
+.main h3 
+{
+	font-size: 2.2rem;
+	margin-top: 1rem;	
+}
+.main p 
+{
+	margin-bottom: 0.8rem;	
+}
+/* 
+   Устанавливаем поля во всех трех колонках вокруг содержимого
+*/
+.LeftBar 
+{
+   padding: 0 2rem 0 1rem;
+}
+.main 
+{
+   padding: 0 2rem;
+}
+.RightBar 
+{
+   padding: 0 1rem 0 2rem;
+}
+/* 
+   Форматируем элементы подвала страницы
+*/
+footer 
+{
+	margin-top: 1.5rem;
+	font-size: 1.4rem;	
+	padding: 1rem;
+	background-color: black;
+	color: rgb(204,204,204);
+}
+footer a 
+{
+	color: white;	
+}
+footer .p 
+{
+   padding: 0 1rem 0 0;
+}
+footer 
+{
+   clear: both;  
+}
 
 
 /* далее - не отработанное */
 
 
 
-.TopMenu:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.TopMenu {
-	zoom: 1;	
-}
 
 
-header {
-	background-color:rgb(93,43,78); 
-	background-image: linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
-	padding-bottom: 30px;
-}
-
-header h1 {
-	font-size: 3em;	
-	color: white;
-	font-weight: bold;
-	padding-top: 30px;
-	clear: both;
-	padding-left: 10px;
-}
-
-nav {
-	background-color: rgb(25,25,25);
-	border: 1px solid rgba(255,255,255,.5);	
-	border-left: none;
-	border-right: none;
-}
-nav ul {
-	padding: 0;
-	margin: 0;	
-}
-nav li {
-	float: left;
-	padding: 0;
-	margin: 0;
-	list-style: none;	
-}
-nav a {
-	float: left;
-	font-size: .8em;	
-	color: white;
-	font-weight: normal;
-	text-decoration: none;
-	padding: 10px;
-	border-right: 1px dashed rgba(255,255,255,.75);
-	transition: all .5s;
-}
-nav li:last-of-type a {
-	border-right: none;	
-}
-nav a:hover {
-	background-color: rgb(93,43,78);
-}
-aside h2 {
-	font-size: 1.3em;
-	margin-top: 10px;	
-}
-aside h3 {
-	font-size: 1.1em;
-	margin-top: 15px;
-}
-aside p, aside li {
-	font-size: .75em;
-	margin-top: 10px;	
-}
-.main h2 {
-	font-size: 2em;
-	margin-top: 10px;	
-}
-.main h3 {
-	font-size: 1.5em;
-	margin-top: 20px;	
-}
-.main p {
-	margin-bottom: 15px;	
-}
-footer {
-	margin-top: 15px;
-	font-size: .8em;	
-	padding: 10px 10px 30px 10px;
-	background-color: black;
-	color: rgb(204,204,204);
-}
-footer a {
-	color: white;	
-}
-
-.LeftBar 
+/*
+nav ul, header h1, footer p 
 {
-  padding: 0 20px 0 10px;
-}
-.main 
-{
-  padding: 0 20px;
-  border-left: dashed 1px rgb(153,153,153);
-  border-right: dashed 1px rgb(153,153,153);
-}
-.RightBar 
-{
-  padding: 0 10px 0 20px;
-}
-footer {
-  clear: both;  
-}
-nav ul, header h1, footer p {
   max-width: 1200px;
   margin: 0 auto; 
 }
+*/
 img {
   max-width: 100%;
 }
