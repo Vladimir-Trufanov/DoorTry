@@ -17,6 +17,7 @@ function TopMenu()
    $Result = true;
    echo '<ul>';
       echo '<li><a href="#">Простой принцип</a></li>';
+      echo "<li><a href=\"index.php?Com=Common\">Дом и квартира</a></li>";
       echo '<li><a href="##">Штрихотворения</a></li>';
       echo '<li><a href="###">Новости</a></li>';
       //echo '<li><a href="#">SoftШутки</a></li>';

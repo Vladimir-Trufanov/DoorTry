@@ -25,7 +25,8 @@ echo '<div class="contentWrapper">';
       //echo '<h2>Название</h2>';
       MakeQrcode();
       //ConnHandler();
-      SimPrincip();
+      //SimPrincip();
+      PageContent();
       echo '</article>';
       
       echo '<aside class="RightBar">';

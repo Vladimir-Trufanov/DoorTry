@@ -17,6 +17,9 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
+		-Images
+			www\Images\DoorTry1.png
+			www\Images\DoorTry2.png
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
@@ -28,7 +31,8 @@ DoorTry
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
 		+Pages
-			-DoorTry
+			+DoorTry
+				www\Pages\DoorTry\SimPrincip.php
 			-LastError
 			-News
 				-Kraina
@@ -38,13 +42,12 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			+Stih
+			-Stih
 				www\Pages\Stih\Stih.php
 			www\Pages\ConnHandler.php
 			www\Pages\Normativy_po_otopleniyu.php
 			www\Pages\Other_Main.php
 			www\Pages\SimPrincip.php
-			www\Pages\SimPrincip1.php
 			www\Pages\Sotsialnyye_normy_ploshchadi_zhilya.php
 		-qrcode
 			-temp
@@ -90,9 +93,9 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -105,8 +108,9 @@ DoorTry
 		www\iHtmlEnd.php
 		www\includErrs.php
 		www\index.php
-		www\Inimem.php
+		www\IniMem.php
 		www\IniMenu.php
+		www\IniSeoPage.php
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -115,25 +119,28 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Site.php
-2=www\Pages\SimPrincip.php
+2=www\IniSeoPage.php
 3=www\iHtmlBegin.php
-4=www\Styles\Styles.css
+4=www\Pages\ConnHandler.php
+5=www\Pages\SimPrincip.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\Pages\SimPrincip.php
 [www\Main.php]
-TopLine=1
-Caret=1,7
-[www\Site.php]
 TopLine=26
-Caret=22,48
-[www\Pages\SimPrincip.php]
-TopLine=11
-Caret=1,24
+Caret=69,51
+[www\Site.php]
+TopLine=15
+Caret=9,28
+[www\IniSeoPage.php]
+TopLine=15
+Caret=42,62
 [www\iHtmlBegin.php]
 TopLine=7
 Caret=1,1
-[www\Styles\Styles.css]
-TopLine=221
-Caret=23,233
-Mark1=7,99
+[www\Pages\ConnHandler.php]
+TopLine=1
+Caret=61,2
+[www\Pages\SimPrincip.php]
+TopLine=11
+Caret=21,25
