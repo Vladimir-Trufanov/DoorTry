@@ -25,13 +25,14 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
 		+Pages
 			+DoorTry
+				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
 			-News
@@ -42,13 +43,8 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			-Stih
+			+Stih
 				www\Pages\Stih\Stih.php
-			www\Pages\ConnHandler.php
-			www\Pages\Normativy_po_otopleniyu.php
-			www\Pages\Other_Main.php
-			www\Pages\SimPrincip.php
-			www\Pages\Sotsialnyye_normy_ploshchadi_zhilya.php
 		-qrcode
 			-temp
 				www\qrcode\temp\test.png
@@ -93,7 +89,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -119,28 +115,33 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Site.php
-2=www\IniSeoPage.php
-3=www\iHtmlBegin.php
-4=www\Pages\ConnHandler.php
-5=www\Pages\SimPrincip.php
+2=www\iHtmlBegin.php
+3=www\IniSeoPage.php
+4=www\Pages\DoorTry\ConnHandler.php
+5=www\Pages\DoorTry\SimPrincip.php
+6=www\IniMenu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SimPrincip.php
+Selected=www\Pages\DoorTry\ConnHandler.php
 [www\Main.php]
-TopLine=26
-Caret=69,51
+TopLine=48
+Caret=1,63
 [www\Site.php]
-TopLine=15
-Caret=9,28
-[www\IniSeoPage.php]
-TopLine=15
-Caret=42,62
+TopLine=17
+Caret=25,40
 [www\iHtmlBegin.php]
 TopLine=7
 Caret=1,1
-[www\Pages\ConnHandler.php]
-TopLine=1
-Caret=61,2
-[www\Pages\SimPrincip.php]
-TopLine=11
-Caret=21,25
+[www\IniSeoPage.php]
+TopLine=9
+Caret=10,18
+Mark1=1,20
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=9
+Caret=55,14
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=9
+Caret=1,15
+[www\IniMenu.php]
+TopLine=13
+Caret=54,23

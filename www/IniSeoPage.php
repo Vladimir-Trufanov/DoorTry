@@ -11,12 +11,13 @@
 
 function isComRequest($subs)
 {
-    $Result=false;
-    if (IsSet($_REQUEST['Com'])) 
-    { 
-        if ($_REQUEST['Com']==$subs) $Result=true;
-    }
-    return $Result;
+   $Result=false;
+   if (IsSet($_REQUEST['Com']))
+   { 
+      if ($_REQUEST['Com']==$subs) $Result=true;
+      // echo '***'.$_REQUEST['Com'].'***';
+   }
+   return $Result;
 }
 
 function IniSeoTags()

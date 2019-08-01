@@ -32,7 +32,6 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 require_once $SiteRoot."/IniMenu.php";
 require_once $SiteRoot."/IniSeoPage.php";
 require_once $SiteRoot."/MakeQrcode.php";   
-require_once $SiteRoot."/Pages/ConnHandler.php";   
 require_once $SiteRoot."/Pages/News/NewsView.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
@@ -61,12 +60,10 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgGLOBALS);
 
 // Подключаем динамические страницы с SEO-тегами, H1 и страницами
-if (isComRequest('SimPrincip'))
-    require $SiteRoot.'/Pages/DootTry/SimPrincip.php';
-elseif (isComRequest('ConnHandler'))
-    require $SiteRoot.'/Pages/DootTry/SimPrincip.php';
+if (isComRequest('ConnHandler'))
+    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
 else
-    require $SiteRoot.'/Pages/SimPrincip.php';
+    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
     
 
 

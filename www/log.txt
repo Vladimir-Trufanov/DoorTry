@@ -1,0 +1,8 @@
+[01-Aug-2019 16:31:43 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[01-Aug-2019 16:34:28 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[01-Aug-2019 16:34:42 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[01-Aug-2019 16:35:46 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[01-Aug-2019 16:37:14 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[01-Aug-2019 16:37:43 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[01-Aug-2019 16:38:35 Asia/Kuwait] PHP Fatal error:  Cannot redeclare SeoTags() (previously declared in C:\DoorTry\www\Pages\ConnHandler.php:15) in C:\DoorTry\www\Pages\DoorTry\SimPrincip.php on line 21
+[01-Aug-2019 16:41:38 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
