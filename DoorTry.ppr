@@ -25,7 +25,7 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
@@ -43,7 +43,7 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			+Stih
+			-Stih
 				www\Pages\Stih\Stih.php
 		-qrcode
 			-temp
@@ -89,7 +89,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -106,7 +106,8 @@ DoorTry
 		www\index.php
 		www\IniMem.php
 		www\IniMenu.php
-		www\IniSeoPage.php
+		www\isComRequest.php
+		www\log.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -115,33 +116,24 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Site.php
-2=www\iHtmlBegin.php
-3=www\IniSeoPage.php
-4=www\Pages\DoorTry\ConnHandler.php
-5=www\Pages\DoorTry\SimPrincip.php
-6=www\IniMenu.php
+2=www\.htaccess
+3=www\Pages\DoorTry\SimPrincip.php
+4=www\isComRequest.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\DoorTry\ConnHandler.php
+Selected=www\isComRequest.php
 [www\Main.php]
-TopLine=48
-Caret=1,63
+TopLine=2
+Caret=70,10
 [www\Site.php]
-TopLine=17
-Caret=25,40
-[www\iHtmlBegin.php]
-TopLine=7
-Caret=1,1
-[www\IniSeoPage.php]
-TopLine=9
-Caret=10,18
-Mark1=1,20
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=9
-Caret=55,14
+TopLine=5
+Caret=13,26
+[www\.htaccess]
+TopLine=50
+Caret=74,62
 [www\Pages\DoorTry\SimPrincip.php]
-TopLine=9
-Caret=1,15
-[www\IniMenu.php]
-TopLine=13
-Caret=54,23
+TopLine=1
+Caret=55,14
+[www\isComRequest.php]
+TopLine=1
+Caret=7,18

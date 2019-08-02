@@ -5,8 +5,8 @@
 ## ******************************************************************************
 ##
 ##                                                     Автор:       Труфанов В.Е.
-##                                                     Дата создания:  01.11.2016
-## Copyright © 2016 tve                                Посл.изменение: 25.05.2019
+##                                                     Дата создания:  09.04.2019
+## Copyright © 2019 tve                                Посл.изменение: 02.08.2019
 
 ## Устанавливаем кодировку сайта по умолчанию
 AddDefaultCharset utf-8
@@ -22,8 +22,8 @@ php_value session.cookie_lifetime 0
 
 ## Задаём время сессии в секундах, по прошествии которого 
 ## данные могут быть удалены (по умолчанию 1440 сек = 24 минуты).
-php_value session.gc_maxlifetime 30
-## php_value session.gc_maxlifetime 1440
+## php_value session.gc_maxlifetime 30
+php_value session.gc_maxlifetime 1440
 
 ## Определяем, что будет использоваться кукис для хранения идентификатора 
 ## сессии на стороне клиента. on[boolean] = "включено".
@@ -56,23 +56,22 @@ php_flag session.use_trans_sid off
     Deny from all
 </FilesMatch>
 
-## *************************************************************** kwinflat.ru ***
 ## 
-## RewriteEngine On
-## 
-## RewriteRule ^Normativy_po_otopleniyu$ Main.php?Com=refNormotop [L]
+RewriteEngine On
+RewriteRule ^Podklyuchit-obrabotchik-oshibok-isklyucheniy$ index.php?Com=ConnHandler [L]
+RewriteRule ^Prostoy-printsip-programmirovaniya$ index.php?Com=SimPrincip [L]
 ## RewriteRule ^Redaktor_tekstov$ /TinyMCE/ [L]
 ## RewriteRule ^reset$ /Reset/ [L]
  
 ## Перенаправляем ошибки в файл e404.php
-ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 
-ErrorDocument 403 http://ittve.me/Reset/e404.php?err=403 
-ErrorDocument 404 http://ittve.me/Reset/e404.php?err=404 
-ErrorDocument 405 http://ittve.me/Reset/e404.php?err=405 
-ErrorDocument 408 http://ittve.me/Reset/e404.php?err=408 
+## ErrorDocument 400 http://ittve.me/Reset/e404.php?err=400 
+## ErrorDocument 403 http://ittve.me/Reset/e404.php?err=403 
+## ErrorDocument 404 http://ittve.me/Reset/e404.php?err=404 
+## ErrorDocument 405 http://ittve.me/Reset/e404.php?err=405 
+## ErrorDocument 408 http://ittve.me/Reset/e404.php?err=408 
 
-ErrorDocument 500 http://ittve.me/Reset/e404.php?err=500 
-ErrorDocument 502 http://ittve.me/Reset/e404.php?err=502 
-ErrorDocument 504 http://ittve.me/Reset/e404.php?err=504 
+## ErrorDocument 500 http://ittve.me/Reset/e404.php?err=500 
+## ErrorDocument 502 http://ittve.me/Reset/e404.php?err=502 
+## ErrorDocument 504 http://ittve.me/Reset/e404.php?err=504 
 
 ## **************************************************************** .htaccess ***

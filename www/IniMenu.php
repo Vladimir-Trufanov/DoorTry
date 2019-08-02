@@ -20,7 +20,7 @@ function TopMenu()
       if (isComRequest('ConnHandler'))
          echo '<li><a href="index.php?Com=SimPrincip">Простой принцип программирования</a></li>';
       else
-         echo '<li><a href="index.php?Com=ConnHandler">Подключение обработчика ошибок/исключений</a></li>';
+         echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
       // Устанавливаем остальные пункты
       echo '<li><a href="##">Штрихотворения</a></li>';
       echo '<li><a href="###">Новости</a></li>';

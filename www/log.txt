@@ -6,3 +6,21 @@
 [01-Aug-2019 16:37:43 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
 [01-Aug-2019 16:38:35 Asia/Kuwait] PHP Fatal error:  Cannot redeclare SeoTags() (previously declared in C:\DoorTry\www\Pages\ConnHandler.php:15) in C:\DoorTry\www\Pages\DoorTry\SimPrincip.php on line 21
 [01-Aug-2019 16:41:38 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/ConnHandler.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[02-Aug-2019 14:33:35 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function H1() in C:\DoorTry\www\Site.php:27
+Stack trace:
+#0 C:\DoorTry\www\Main.php(72): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 27
+[02-Aug-2019 14:35:03 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function HH1() in C:\DoorTry\www\Site.php:27
+Stack trace:
+#0 C:\DoorTry\www\Main.php(72): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 27
+[02-Aug-2019 14:37:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function HH1() in C:\DoorTry\www\Site.php:27
+Stack trace:
+#0 C:\DoorTry\www\Main.php(72): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 27

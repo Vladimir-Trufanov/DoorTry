@@ -15,7 +15,7 @@ function isComRequest($subs)
    if (IsSet($_REQUEST['Com']))
    { 
       if ($_REQUEST['Com']==$subs) $Result=true;
-      // echo '***'.$_REQUEST['Com'].'***';
+      echo '***'.$_REQUEST['Com'].'***';
    }
    return $Result;
 }

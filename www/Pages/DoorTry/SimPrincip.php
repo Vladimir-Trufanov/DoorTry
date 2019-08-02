@@ -8,10 +8,10 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 01.08.2019
+// Copyright © 2019 tve                              Посл.изменение: 02.08.2019
 
 // Переадресация страницы:
-//            'Prostoy_printsip_programmirovaniya' = 'index.php?Com=SimPrincip'
+//            'Prostoy-printsip-programmirovaniya' = 'index.php?Com=SimPrincip'
 
 function SeoTags()
 {
@@ -20,16 +20,15 @@ function SeoTags()
     echo "<meta name=\"keywords\" content=\"система обработки ошибок (и исключений) на PHP,автоматический вывод ошибок на сайт\">";
 }
 
-function Н2()
+function MakeH1()
 {
-    echo "<h2>Простой принцип программирования</h2>";
+    echo "<h1>Простой принцип программирования - Simple programming principle</h1>";
 }
 
 function PageContent()
 {
    $Result = true;
    ?>
-   <h2>Простой принцип программирования - Simple programming principle</h2>
    <br>
    <p>
    «В каждой программе есть хотя бы одна ошибка!». Любому компьютерному разработчику с этим надо жить и продолжать программировать. Поэтому серьезному специалисту приходится, прежде чем начать писать некоторую программную систему, вначале создать систему обработки ошибок (и исключений).

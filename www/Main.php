@@ -30,7 +30,7 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/IniMenu.php";
-require_once $SiteRoot."/IniSeoPage.php";
+require_once $SiteRoot."/isComRequest.php";
 require_once $SiteRoot."/MakeQrcode.php";   
 require_once $SiteRoot."/Pages/News/NewsView.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   

@@ -14,7 +14,7 @@ echo '<header>';
 echo '<nav class="TopMenu">';
    TopMenu();
 echo '</nav>';
-echo '<h1>DoorTry - коллекционер ошибок</h1>';
+echo '<h2>DoorTry - коллекционер ошибок</h2>';
 echo '</header>';
 
 echo '<div class="contentWrapper">';
@@ -22,10 +22,8 @@ echo '<div class="contentWrapper">';
    echo '<div class="columnWrapper">';
 
       echo '<article class="main">';
-      //echo '<h2>Название</h2>';
       MakeQrcode();
-      //ConnHandler();
-      //SimPrincip();
+      MakeH1();
       PageContent();
       echo '</article>';
       
