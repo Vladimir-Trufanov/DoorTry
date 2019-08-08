@@ -91,7 +91,7 @@ DoorTry
 			www\qrcode\VERSION
 		-Styles
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -119,9 +119,14 @@ DoorTry
 2=www\.htaccess
 3=www\Pages\DoorTry\SimPrincip.php
 4=www\isComRequest.php
+5=www\index.php
+6=www\TDoorTryer\DoorTryerPage.php
+7=www\TDoorTryer\DoorTryerMessage.php
+8=www\iHtmlBegin.php
+9=www\Pages\DoorTry\ConnHandler.php
 [Selected Project Files]
 Main=
-Selected=www\isComRequest.php
+Selected=www\index.php
 [www\Main.php]
 TopLine=2
 Caret=70,10
@@ -132,8 +137,23 @@ Caret=13,26
 TopLine=50
 Caret=74,62
 [www\Pages\DoorTry\SimPrincip.php]
-TopLine=1
-Caret=55,14
+TopLine=36
+Caret=1,48
 [www\isComRequest.php]
 TopLine=1
-Caret=7,18
+Caret=9,18
+[www\index.php]
+TopLine=1
+Caret=1,14
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=1
+Caret=1,1
+[www\TDoorTryer\DoorTryerMessage.php]
+TopLine=1
+Caret=1,1
+[www\iHtmlBegin.php]
+TopLine=5
+Caret=1,1
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=30
+Caret=4,41

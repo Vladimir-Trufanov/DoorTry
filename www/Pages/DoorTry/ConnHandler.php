@@ -29,8 +29,47 @@ function PageContent()
 {
    $Result = true;
    ?>
-   <p><img src="imgs/clouds.jpg" alt="Облака" class="half right">Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum.</p>
-   <p>Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. </p>
+   <br>
+   <p>
+   Для подключения обработчика ошибок/исключений к сайтам следует выполнить несколько шагов:
+   </p>
+   <p>
+   1 шаг. Включить в стартовый файл сайта, например index.php, собственно вызов обработчика.
+   </p>
+   <p>
+   
+   
+// PHP7/HTML5, EDGE/CHROME                                    *** index.php ***
+
+// ****************************************************************************
+// * doortry.ru    Сайт сбора сообщений об ошибках/исключениях и формирования *
+// *         страницы с выводом сообщений, а также комментариев для PHP5-PHP7 *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  09.04.2019
+// Copyright © 2019 tve                              Посл.изменение: 10.05.2019
+
+// Инициализируем корневой каталог сайта
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+// Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
+// страницы с выводом сообщений, а также комментариев для PHP5-PHP7
+require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
+
+try 
+{
+   // Запускаем сценарий сайта
+   require_once $SiteRoot."/Main.php";
+   // Запускаем примеры ошибок и исключений
+   //require_once $SiteRoot."/MainDoorTry.php";
+}
+catch (E_EXCEPTION $e) 
+{
+   // Подключаем обработку исключений верхнего уровня
+   DoorTryPage($e);
+}
+// ************************************************************** index.php ***
+    </p>
    <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
    <h3><img src="imgs/jellyfish.jpg" alt="Медуза" class="half left">Подзаголовок</h3>
    <p>Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. Aenean orci ante, venenatis non adipiscing vitae, fringilla et neque. In pharetra, eros imperdiet luctus imperdiet, nunc sem pharetra mi, vel faucibus elit risus id tortor. Suspendisse vitae quam lorem, in tempus velit. Sed vitae ante quis felis fringilla condimentum. </p>
