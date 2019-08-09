@@ -103,7 +103,7 @@ DoorTry
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
 		www\includErrs.php
-		www\index.php
+		www\fil.php
 		www\IniMem.php
 		www\IniMenu.php
 		www\isComRequest.php
@@ -119,14 +119,14 @@ DoorTry
 2=www\.htaccess
 3=www\Pages\DoorTry\SimPrincip.php
 4=www\isComRequest.php
-5=www\index.php
+5=www\fil.php
 6=www\TDoorTryer\DoorTryerPage.php
 7=www\TDoorTryer\DoorTryerMessage.php
 8=www\iHtmlBegin.php
 9=www\Pages\DoorTry\ConnHandler.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\Pages\DoorTry\ConnHandler.php
 [www\Main.php]
 TopLine=2
 Caret=70,10
@@ -138,22 +138,22 @@ TopLine=50
 Caret=74,62
 [www\Pages\DoorTry\SimPrincip.php]
 TopLine=36
-Caret=1,48
+Caret=1,39
 [www\isComRequest.php]
 TopLine=1
 Caret=9,18
-[www\index.php]
+[www\fil.php]
 TopLine=1
-Caret=1,14
+Caret=4,27
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=1
-Caret=1,1
+TopLine=378
+Caret=1,380
 [www\TDoorTryer\DoorTryerMessage.php]
-TopLine=1
-Caret=1,1
+TopLine=61
+Caret=1,65
 [www\iHtmlBegin.php]
 TopLine=5
 Caret=1,1
 [www\Pages\DoorTry\ConnHandler.php]
-TopLine=30
-Caret=4,41
+TopLine=13
+Caret=15,25
