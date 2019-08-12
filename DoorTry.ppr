@@ -20,6 +20,7 @@ DoorTry
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
+			www\Images\Index.png
 		-imgs
 			www\imgs\clouds.jpg
 			www\imgs\gator.jpg
@@ -30,8 +31,8 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
-			+DoorTry
+		-Pages
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
@@ -103,7 +104,7 @@ DoorTry
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
 		www\includErrs.php
-		www\fil.php
+		www\index.php
 		www\IniMem.php
 		www\IniMenu.php
 		www\isComRequest.php
@@ -119,19 +120,20 @@ DoorTry
 2=www\.htaccess
 3=www\Pages\DoorTry\SimPrincip.php
 4=www\isComRequest.php
-5=www\fil.php
-6=www\TDoorTryer\DoorTryerPage.php
-7=www\TDoorTryer\DoorTryerMessage.php
-8=www\iHtmlBegin.php
-9=www\Pages\DoorTry\ConnHandler.php
+5=www\TDoorTryer\DoorTryerPage.php
+6=www\TDoorTryer\DoorTryerMessage.php
+7=www\iHtmlBegin.php
+8=www\Pages\DoorTry\ConnHandler.php
+9=www\index.php
+10=www\IniMenu.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\DoorTry\ConnHandler.php
 [www\Main.php]
-TopLine=2
-Caret=70,10
+TopLine=21
+Caret=1,34
 [www\Site.php]
-TopLine=5
+TopLine=1
 Caret=13,26
 [www\.htaccess]
 TopLine=50
@@ -142,18 +144,21 @@ Caret=1,39
 [www\isComRequest.php]
 TopLine=1
 Caret=9,18
-[www\fil.php]
-TopLine=1
-Caret=4,27
 [www\TDoorTryer\DoorTryerPage.php]
-TopLine=378
+TopLine=21
 Caret=1,380
 [www\TDoorTryer\DoorTryerMessage.php]
-TopLine=61
+TopLine=43
 Caret=1,65
 [www\iHtmlBegin.php]
 TopLine=5
 Caret=1,1
 [www\Pages\DoorTry\ConnHandler.php]
-TopLine=13
-Caret=15,25
+TopLine=61
+Caret=6,69
+[www\index.php]
+TopLine=9
+Caret=14,17
+[www\IniMenu.php]
+TopLine=11
+Caret=1,1
