@@ -20,58 +20,42 @@ function SeoTags()
     echo "<meta name=\"keywords\" content=\"универсальная обработка ошибок и исключений PHP5-7, принцип DO-or-TRY, Делай или Пробуй\">";
 }
 
-function MakeH1(){
-    echo "<h1>Подключить обработчик ошибок/исключений - Connect error/exception handler</h1>";}
+function MakeH1()
+{
+   echo "<h1>Подключить обработчик ошибок/исключений - Connect error/exception handler</h1>";
+}
 
 function PageContent()
 {
-   global $f1;
-   echo  '2'.$f1;
-
    $Result = true;
    ?>
    <br>
    <p>
-   Для подключения обработчика ошибок/исключений к сайтам следует выполнить несколько шагов:
+   Для подключения обработчика ошибок/исключений к сайтам следует выполнить всего два шага:
    </p>
-   <br>
-   <p>
-   1 шаг. Включить в стартовый файл сайта, например index.php, собственно вызов обработчика.
+   <br><p><b>1 шаг.&nbsp;</b> 
+   Включить в стартовый файл сайта, например index.php, собственно вызов обработчика.
    </p>
    <p>
    <img src="Images/Index.png" alt="Вызов обработчика">
    </p>
    <br>
    <p>
-   Что будет происходить? При запуске сайта вначале загрузится оболочка для обработки ошибок. В представленном случае - сценарий DoorTryerPage.php из каталога сайта TDoorTryer. Затем загрузится и запустится собственно пользовательский сайт (в данном примере Main.php). Запускаемый сайт укрыт в оболочке try - catch для перехода в "открытую дверь"-DoorTryPage к отработке системных или пользовательских исключений.  
+   Что будет происходить?<br><br>
+   При запуске сайта вначале загрузится оболочка для обработки ошибок. В представленном нами случае - сценарий DoorTryerPage.php из каталога сайта TDoorTryer.<br><br>
+   Затем загрузится и запустится собственно пользовательский сайт (в данном примере Main.php).<br><br>
+   Запускаемый сайт укрыт в оболочке try - catch для перехода в "открытую дверь"&nbsp;-&nbsp;DoorTryPage к отработке системных или пользовательских исключений.  
    </p>
-   <br>
-   <p>
-   2 шаг. Включить в состав сайта два модуля сценариев (DoorTryerPage.php, DoorTryerMessage.php), реализующих обработку ошибок/исключений.
-   </p>
-   <br>
-   <p>
-   <pre>
-   </pre>
+   <br><p><b>2 шаг.&nbsp;</b> 
+   Включить в состав сайта модуль сценария DoorTryerPage.php, реализующего обработку ошибок/исключений.
    </p>
    <?php
-   
-   //echo '<br>- - -<br>';
-   //echo '<pre>';
-   //echo htmlspecialchars(file_get_contents(__FILE__));
-   //highlight_string(file_get_contents(__FILE__));
-   //show_source (__FILE__);
-   show_source ($f1);
-
-   
-   
-   //echo '</pre>';
-   //echo '<br>- - -<br>';
-   
    global $SiteRoot;
-   $f2=$SiteRoot."/TDoorTryer/DoorTryerMessage.php";
-   show_source ($f2);
-   
+   echo '<div class="CodeText">';
+   $f2=$SiteRoot."/Pages/DoorTry/DoorTryForSite.php";
+   $stx=show_source($f2,true);
+   echo $stx;
+   echo '</div>';
    return $Result;
 }
 // <!-- --> *********************************************** ConnHandler.php ***

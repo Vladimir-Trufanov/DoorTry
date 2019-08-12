@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -34,6 +34,7 @@ DoorTry
 		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
+				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
 			-News
@@ -92,7 +93,7 @@ DoorTry
 			www\qrcode\VERSION
 		-Styles
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -115,50 +116,18 @@ DoorTry
 		www\Site.php
 		www\TPhpPrown.png
 [Open project files]
-0=www\Main.php
-1=www\Site.php
-2=www\.htaccess
-3=www\Pages\DoorTry\SimPrincip.php
-4=www\isComRequest.php
-5=www\TDoorTryer\DoorTryerPage.php
-6=www\TDoorTryer\DoorTryerMessage.php
-7=www\iHtmlBegin.php
-8=www\Pages\DoorTry\ConnHandler.php
-9=www\index.php
-10=www\IniMenu.php
+0=www\.htaccess
+1=www\Pages\DoorTry\SimPrincip.php
+2=www\Pages\DoorTry\ConnHandler.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\DoorTry\ConnHandler.php
-[www\Main.php]
-TopLine=21
-Caret=1,34
-[www\Site.php]
-TopLine=1
-Caret=13,26
 [www\.htaccess]
 TopLine=50
 Caret=74,62
 [www\Pages\DoorTry\SimPrincip.php]
-TopLine=36
-Caret=1,39
-[www\isComRequest.php]
-TopLine=1
-Caret=9,18
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=21
-Caret=1,380
-[www\TDoorTryer\DoorTryerMessage.php]
-TopLine=43
-Caret=1,65
-[www\iHtmlBegin.php]
-TopLine=5
-Caret=1,1
+TopLine=38
+Caret=128,49
 [www\Pages\DoorTry\ConnHandler.php]
-TopLine=61
-Caret=6,69
-[www\index.php]
-TopLine=9
-Caret=14,17
-[www\IniMenu.php]
-TopLine=11
-Caret=1,1
+TopLine=23
+Caret=91,34
