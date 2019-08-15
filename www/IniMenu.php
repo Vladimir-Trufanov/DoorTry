@@ -23,34 +23,39 @@ function TopMenu()
          echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
       // Устанавливаем остальные пункты
       echo '<li><a href="##">Штрихотворения</a></li>';
-      echo '<li class="menu"><a href="#">Новости</a></li>';
+      echo '<li><a href="#">Новости</a></li>';
       
+      /*
       echo '<ul>';
       echo '<li><a href="###">Яндекс-Новости</a></li>';
       echo '<li><a href="###">Лига-Новости</a></li>';
       echo '<li><a href="###">Столица на онего</a></li>';
       echo '</ul>';
-      
+      */
       //echo '<li><a href="#">SoftШутки</a></li>';
    echo '</ul>';
    
             
-?>   
+?> 
+
+<!--  
 <nav class="menu">
   <ul>
     <li><a href="#">Lorem.</a></li>
     <li><a href="#">Explicabo?</a>
     
+    
+    </li>
+    <li><a href="#">Doloribus.</a></li>
+    <li><a href="#">Sint.</a>
       <ul>
         <li><a href="#">Lorem.2</a></li>
         <li><a href="#">Eveniet.2</a></li>
         <li><a href="#">Omnis.2</a></li>
         <li><a href="#">Beatae.2</a></li>
       </ul>
-    
+
     </li>
-    <li><a href="#">Doloribus.</a></li>
-    <li><a href="#">Sint.</a></li>
   </ul>
 </nav>
 
@@ -75,9 +80,10 @@ function TopMenu()
       </div>
    </div>
 </div>
-
+--> 
 
 <script>
+/*
    document.getElementById('nav').onmouseover= function(event) 
    {
       var target = event.target; // где был клик?
@@ -108,6 +114,7 @@ function TopMenu()
          closeMenu();
       }
    }
+*/
 </script> 
 
 

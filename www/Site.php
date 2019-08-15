@@ -25,6 +25,7 @@ echo '<div class="contentWrapper">';
       MakeQrcode();
       MakeH1();
       PageContent();
+      
       echo '</article>';
       
       echo '<aside class="RightBar">';
