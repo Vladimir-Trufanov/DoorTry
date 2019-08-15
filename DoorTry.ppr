@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -26,7 +26,7 @@ DoorTry
 			www\imgs\gator.jpg
 			www\imgs\jellyfish.jpg
 			www\imgs\mule.jpg
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
@@ -91,7 +91,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
@@ -119,9 +119,11 @@ DoorTry
 0=www\.htaccess
 1=www\Pages\DoorTry\SimPrincip.php
 2=www\Pages\DoorTry\ConnHandler.php
+3=www\IniMenu.php
+4=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\DoorTry\ConnHandler.php
+Selected=www\IniMenu.php
 [www\.htaccess]
 TopLine=50
 Caret=74,62
@@ -129,5 +131,11 @@ Caret=74,62
 TopLine=38
 Caret=128,49
 [www\Pages\DoorTry\ConnHandler.php]
-TopLine=23
-Caret=91,34
+TopLine=25
+Caret=16,23
+[www\IniMenu.php]
+TopLine=53
+Caret=1,112
+[www\Styles\Styles.css]
+TopLine=155
+Caret=69,165

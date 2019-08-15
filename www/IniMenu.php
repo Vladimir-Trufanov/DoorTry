@@ -23,9 +23,106 @@ function TopMenu()
          echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
       // Устанавливаем остальные пункты
       echo '<li><a href="##">Штрихотворения</a></li>';
-      echo '<li><a href="###">Новости</a></li>';
+      echo '<li class="menu"><a href="#">Новости</a></li>';
+      
+      echo '<ul>';
+      echo '<li><a href="###">Яндекс-Новости</a></li>';
+      echo '<li><a href="###">Лига-Новости</a></li>';
+      echo '<li><a href="###">Столица на онего</a></li>';
+      echo '</ul>';
+      
       //echo '<li><a href="#">SoftШутки</a></li>';
    echo '</ul>';
+   
+            
+?>   
+<nav class="menu">
+  <ul>
+    <li><a href="#">Lorem.</a></li>
+    <li><a href="#">Explicabo?</a>
+    
+      <ul>
+        <li><a href="#">Lorem.2</a></li>
+        <li><a href="#">Eveniet.2</a></li>
+        <li><a href="#">Omnis.2</a></li>
+        <li><a href="#">Beatae.2</a></li>
+      </ul>
+    
+    </li>
+    <li><a href="#">Doloribus.</a></li>
+    <li><a href="#">Sint.</a></li>
+  </ul>
+</nav>
+
+
+<div id="nav">
+   <div class="menu-item">
+      Меню 1
+      <div class="submenu">
+         Подменю1
+      </div>
+   </div>
+   <div class="menu-item">
+      Меню 2
+      <div class="submenu">
+         Подменю2
+      </div>
+   </div>
+   <div class="menu-item">
+      Меню 3
+      <div class="submenu">
+         Подменю
+      </div>
+   </div>
+</div>
+
+
+<script>
+   document.getElementById('nav').onmouseover= function(event) 
+   {
+      var target = event.target; // где был клик?
+      if (target.className == 'menu-item') 
+      {
+         var s=target.getElementsByClassName('submenu');
+         closeMenu();
+         s[0].style.display='block';
+      }
+   }
+   
+   function closeMenu()
+   {
+      var menu=document.getElementById('nav');
+      var subm=document.getElementsByClassName('submenu');
+      for (var i=0; i<subm.length; i++) 
+      {
+         subm[i].style.display="none";
+      }
+   }
+   
+   document.onmousemove=function(event) 
+   {
+      var target = event.target; // где был клик?
+      console.log(event.target);
+      if (target.className!='menu-item' && target.className!='submenu') 
+      {
+         closeMenu();
+      }
+   }
+</script> 
+
+
+
+
+
+
+
+<?php
+
+   
+   
+   
+   
+   
    return $Result;
 }
 // ****************************************************************************
