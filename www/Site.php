@@ -14,6 +14,31 @@ echo '<header>';
 echo '<nav class="TopMenu">';
    TopMenu();
 echo '</nav>';
+
+?> 
+      
+      <nav class="menu">
+  <ul>
+    <li><a href="#">Lorem.</a></li>
+    <li><a href="#">Doloribus.</a></li>
+    <li><a href="#">Новости</a>
+    <?php
+      echo '<ul>';
+      echo '<li class="menuli"><a href="###">Яндекс-Новости</a></li>';
+      echo '<li class="menuli"><a href="###">Лига-Новости</a></li>';
+      echo '<li class="menuli"><a href="###">Столицаwfwfwf на онего</a></li>';
+      echo '</ul>';
+    ?> 
+    </li>
+
+  </ul>
+</nav>
+<?php
+
+
+
+
+
 echo '<h2>DoorTry - коллекционер ошибок</h2>';
 echo '</header>';
 

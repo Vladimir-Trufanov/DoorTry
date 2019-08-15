@@ -208,7 +208,7 @@ footer
 /* 
    Форматируем меню
 */
-.TopMenu 
+.TopMenu, .menu 
 {
 	background-color: rgb(25,25,25);
 	border: 0.1rem solid rgba(255,255,255,.5);	
@@ -217,19 +217,22 @@ footer
 }
 .TopMenu ul 
 {
-	padding-left: 1.4rem;
 	list-style: square;
+}
+.TopMenu ul, .menu ul 
+{
+	padding-left: 1.4rem;
 	padding: 0;
 	margin: 0;	
 }
-.TopMenu li 
+.TopMenu li, .menu li 
 {
 	float: left;
 	padding: 0;
 	margin: 0;
 	list-style: none;	
 }
-.TopMenu a 
+.TopMenu a, .menu a 
 {
 	float: left;
 	font-size: 1.4rem;	
@@ -244,10 +247,80 @@ footer
 {
 	border-right: none;	
 }
-.TopMenu a:hover 
+.TopMenu a:hover, .menu a:hover
 {
 	background-color: rgb(93,43,78);
 }
+/*
+.menu
+{
+   z-index: 101;
+}
+*/
+
+/*
+.menu ul li{
+  padding: 1rem;
+}
+*/
+
+/*
+.menu ul > li:hover{
+  background-color: #f96;
+}
+.menu ul ul > li:hover{
+  background-color: #69e;
+}
+*/
+
+.menu ul li, .menu ul{
+  display: inline-block;
+}
+.menu ul{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  
+}
+.menu ul ul{
+  display: none;
+  position: absolute;
+  /*
+  background-color: #369;
+  */
+  margin-top: 3.6rem;
+  margin-left: -1rem;
+}
+.menu ul a{
+/*
+  color: #fff;
+  */
+  text-decoration: none;
+}
+.menu ul ul a{
+/*
+  color: #fff;
+  */
+  text-decoration: none;
+}
+.menu li:hover ul{
+  display: block;
+}
+
+.menu li:hover li{
+  display: block;
+}
+
+.menuli
+{
+  background-color: #f63;
+}
+
+.menuli a
+{
+   width: 100%; 
+}
+
 
 
 
@@ -279,6 +352,7 @@ img.right {
     margin: 0 0 10px 10px;
 }
 
+/*
 @media (min-width: 481px) and (max-width:768px) {
   .RightBar {
     float: none;
@@ -325,64 +399,7 @@ img.right {
     border: none;
   }
 }
-
-
-
-/*
-.menu
-{
-   z-index: 101;
-}
 */
-.menu ul li{
-  padding: 10px;
-}
-
-
-/*
-.menu ul > li:hover{
-  background-color: #f96;
-}
-.menu ul ul > li:hover{
-  background-color: #69e;
-}
-*/
-
-.menu ul li, .menu ul{
-  display: inline-block;
-}
-.menu ul{
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background-color: #f63;
-}
-.menu ul ul{
-  display: none;
-  position: absolute;
-  background-color: #369;
-  margin-top: 10px;
-  margin-left: -10px;
-}
-.menu ul a{
-  color: #fff;
-  text-decoration: none;
-}
-.menu ul ul a{
-  color: #fff;
-  text-decoration: none;
-}
-.menu li:hover ul{
-  display: block;
-}
-
-.menu li:hover li{
-  display: block;
-}
-
-
-
-
 
 
 #nav

@@ -38,28 +38,8 @@ function TopMenu()
             
 ?> 
 
-<!--  
-<nav class="menu">
-  <ul>
-    <li><a href="#">Lorem.</a></li>
-    <li><a href="#">Explicabo?</a>
-    
-    
-    </li>
-    <li><a href="#">Doloribus.</a></li>
-    <li><a href="#">Sint.</a>
-      <ul>
-        <li><a href="#">Lorem.2</a></li>
-        <li><a href="#">Eveniet.2</a></li>
-        <li><a href="#">Omnis.2</a></li>
-        <li><a href="#">Beatae.2</a></li>
-      </ul>
 
-    </li>
-  </ul>
-</nav>
-
-
+<!--
 <div id="nav">
    <div class="menu-item">
       Меню 1
