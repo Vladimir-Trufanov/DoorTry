@@ -278,18 +278,21 @@ footer
 }
 */
 
-.menu ul li, .menu ul
+.menu ul li, .menu ul, .TopMenu ul li, .TopMenu ul
 {
   display: inline-block;
 }
-.menu ul{
+
+.menu ul, .TopMenu ul
+{
   position: relative;
   /*
   margin: 0;
   padding: 0;
   */
 }
-.menu ul ul{
+.menu ul ul, .TopMenu ul ul
+{
   display: none;
   position: absolute;
   /*
@@ -300,25 +303,26 @@ footer
   margin-left: -1rem;
   
 }
-.menu ul a
+.menu ul a, .TopMenu ul a
 {
 /*
   color: #fff;
   */
   text-decoration: none;
 }
-.menu ul ul a{
+.menu ul ul a, .TopMenu ul ul a
+{
 /*
   color: #fff;
   */
   text-decoration: none;
 }
-.menu li:hover ul
+.menu li:hover ul, .TopMenu li:hover ul
 {
   display: block;
 }
 
-.menu li:hover li
+.menu li:hover li, .TopMenu li:hover li
 {
   display: block;
 }
