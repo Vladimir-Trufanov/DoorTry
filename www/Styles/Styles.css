@@ -192,58 +192,66 @@ footer
    padding: 1rem 0 2rem 0;
 }
 
-/* 
-   Отделяем меню от контекста страницы белой линией,
-   размер пунктов меню оставляем нормальным 
-*/
-
-
-.TopMenu:after, .menu:after 
+/*
+.TopMenu:after
 {
    content: " ";
    display: table;
    clear: both;
 }
-
-.TopMenu, .menu 
+*/
+/*
+.TopMenu
 {
+}
+ 
+   Форматируем меню
+*/
+
+/**
+ * Отделяем меню от контекста страницы белой линией,
+ * размер пунктов меню оставляем нормальным 
+**/
+.TopMenu
+{
+	border-bottom: 0.1rem solid rgba(255,255,255,.5);	
+	background-color: rgb(25,25,25);
    zoom: 1;	
 }
 
-/* 
-   Форматируем меню
-*/
-.TopMenu, .menu 
-{
-	background-color: rgb(25,25,25);
-	border: 0.1rem solid rgba(255,255,255,.5);	
-	border-left: none;
-	border-right: none;
-}
+/*
 .TopMenu ul, .menu ul 
 {
 	list-style: square;
 }
-.TopMenu ul, .menu ul 
+*/
+/*
+.TopMenu ul 
 {
 	padding-left: 1.4rem;
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }
-.TopMenu li, .menu li 
+*/	
+
+
+.TopMenu li
 {
 	float: left;
+   /*
 	padding: 0;
 	margin: 0;
-	list-style: none;	
+	list-style: none;
+   */	
 }
-.TopMenu a, .menu a
+
+.TopMenu a
 {
-	float: left;
-	font-size: 1.4rem;	
+	float: left;	
+	font-size: 1.4rem;
 	color: white;
 	font-weight: normal;
-	text-decoration: none;
+   text-decoration: none;
 	padding: 1rem;
 	border-right: 0.1rem dashed rgba(255,255,255,.75);
 	transition: all .5s;
@@ -252,77 +260,47 @@ footer
 {
 	border-right: none;	
 }
-.TopMenu a:hover, .menu a:hover
+.TopMenu a:hover
 {
 	background-color: rgb(93,43,78);
 }
-/*
-.menu
+
+.TopMenu ul
 {
-   z-index: 101;
+  position: relative;
+  display: inline-block;
 }
-*/
-
-/*
-.menu ul li{
-  padding: 1rem;
-}
-*/
-
-/*
-.menu ul > li:hover{
-  background-color: #f96;
-}
-.menu ul ul > li:hover{
-  background-color: #69e;
-}
-*/
-
-.menu ul li, .menu ul, .TopMenu ul li, .TopMenu ul
+.TopMenu ul li
 {
   display: inline-block;
 }
 
-.menu ul, .TopMenu ul
-{
-  position: relative;
-  /*
-  margin: 0;
-  padding: 0;
-  */
-}
-.menu ul ul, .TopMenu ul ul
+
+
+.TopMenu ul ul
 {
   display: none;
   position: absolute;
-  /*
-  background-color: #369;
-  */
-  
   margin-top: 3.6rem;
   margin-left: -1rem;
   
 }
-.menu ul a, .TopMenu ul a
-{
+
 /*
-  color: #fff;
-  */
-  text-decoration: none;
-}
-.menu ul ul a, .TopMenu ul ul a
+.TopMenu ul ul a
 {
-/*
   color: #fff;
-  */
-  text-decoration: none;
 }
-.menu li:hover ul, .TopMenu li:hover ul
+*/
+
+
+.TopMenu li:hover ul
 {
   display: block;
 }
 
-.menu li:hover li, .TopMenu li:hover li
+
+.TopMenu li:hover li
 {
   display: block;
 }
@@ -416,26 +394,3 @@ img.right {
   }
 }
 */
-
-
-#nav
-{
-   z-index: 201;
-}
-
-/*Для пунктов меню*/
-.menu-item 
-{
-    border: 2px solid red; /*Красная граница пунктов*/
-    display: inline-block; /*Выстраиваем пункты в линию*/
-    position: relative;
-    cursor: pointer; /*Указатель курсора мыши*/
-}
-.menu-item .submenu {
-    height: 50px; /*высота открывающегося блока - не обязательный пункт*/
-    width: 150px;/*ширина блока*/
-    background: greenyellow; /*фон*/
-    display: none; /*скрываем все пункты меню*/
-    position: absolute;
-    cursor: pointer;
-}

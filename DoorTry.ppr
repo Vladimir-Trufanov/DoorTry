@@ -119,12 +119,12 @@ DoorTry
 0=www\.htaccess
 1=www\Pages\DoorTry\SimPrincip.php
 2=www\Pages\DoorTry\ConnHandler.php
-3=www\Styles\Styles.css
-4=www\IniMenu.php
-5=www\Site.php
+3=www\IniMenu.php
+4=www\Site.php
+5=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\Styles\Styles.css
 [www\.htaccess]
 TopLine=50
 Caret=74,62
@@ -134,14 +134,12 @@ Caret=128,49
 [www\Pages\DoorTry\ConnHandler.php]
 TopLine=43
 Caret=4,61
-[www\Styles\Styles.css]
-TopLine=262
-Caret=22,286
-Mark1=1,264
-Mark2=1,93
 [www\IniMenu.php]
 TopLine=11
 Caret=26,34
 [www\Site.php]
-TopLine=27
-Caret=1,17
+TopLine=17
+Caret=121,42
+[www\Styles\Styles.css]
+TopLine=181
+Caret=1,296
