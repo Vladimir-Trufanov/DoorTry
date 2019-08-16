@@ -53,11 +53,13 @@ body
    height: 100%;
    /*background: yellow;*/
 }
+/*
 ol 
 { 
 	padding-left: 1.4rem;
 	list-style: decimal;
 }
+*/
 table 
 {
 	border-collapse: collapse;
@@ -108,21 +110,6 @@ header h1, header h2
 	padding-left: 1rem;
 }
 
-
-/* 
-   Отделяем меню от контекста страницы белой линией,
-   размер пунктов меню оставляем нормальным 
-*/
-.TopMenu:after 
-{
-   content: " ";
-   display: table;
-   clear: both;
-}
-.TopMenu 
-{
-   zoom: 1;	
-}
 /* 
    Определяем общие параметры колонок новостей и стихотворений
 */
@@ -206,6 +193,24 @@ footer
 }
 
 /* 
+   Отделяем меню от контекста страницы белой линией,
+   размер пунктов меню оставляем нормальным 
+*/
+
+
+.TopMenu:after, .menu:after 
+{
+   content: " ";
+   display: table;
+   clear: both;
+}
+
+.TopMenu, .menu 
+{
+   zoom: 1;	
+}
+
+/* 
    Форматируем меню
 */
 .TopMenu, .menu 
@@ -215,7 +220,7 @@ footer
 	border-left: none;
 	border-right: none;
 }
-.TopMenu ul 
+.TopMenu ul, .menu ul 
 {
 	list-style: square;
 }
@@ -232,7 +237,7 @@ footer
 	margin: 0;
 	list-style: none;	
 }
-.TopMenu a, .menu a 
+.TopMenu a, .menu a
 {
 	float: left;
 	font-size: 1.4rem;	
@@ -273,14 +278,16 @@ footer
 }
 */
 
-.menu ul li, .menu ul{
+.menu ul li, .menu ul
+{
   display: inline-block;
 }
 .menu ul{
   position: relative;
+  /*
   margin: 0;
   padding: 0;
-  
+  */
 }
 .menu ul ul{
   display: none;
@@ -288,10 +295,13 @@ footer
   /*
   background-color: #369;
   */
+  
   margin-top: 3.6rem;
   margin-left: -1rem;
+  
 }
-.menu ul a{
+.menu ul a
+{
 /*
   color: #fff;
   */
@@ -303,11 +313,13 @@ footer
   */
   text-decoration: none;
 }
-.menu li:hover ul{
+.menu li:hover ul
+{
   display: block;
 }
 
-.menu li:hover li{
+.menu li:hover li
+{
   display: block;
 }
 

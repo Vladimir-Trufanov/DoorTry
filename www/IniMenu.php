@@ -24,16 +24,12 @@ function TopMenu()
       // Устанавливаем остальные пункты
       echo '<li><a href="##">Штрихотворения</a></li>';
       echo '<li><a href="#">Новости</a></li>';
-      
-      /*
-      echo '<ul>';
-      echo '<li><a href="###">Яндекс-Новости</a></li>';
-      echo '<li><a href="###">Лига-Новости</a></li>';
-      echo '<li><a href="###">Столица на онего</a></li>';
-      echo '</ul>';
-      */
+
+
       //echo '<li><a href="#">SoftШутки</a></li>';
    echo '</ul>';
+   
+   
    
             
 ?> 

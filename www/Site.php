@@ -11,25 +11,43 @@
 
 echo '<div class="pageWrapper">';
 echo '<header>';
-echo '<nav class="TopMenu">';
-   TopMenu();
-echo '</nav>';
+//echo '<nav class="TopMenu">';
+//   TopMenu();
+//echo '</nav>';
+
+
+
+
+
+
+
+
+
 
 ?> 
       
       <nav class="menu">
   <ul>
-    <li><a href="#">Lorem.</a></li>
-    <li><a href="#">Doloribus.</a></li>
-    <li><a href="#">Новости</a>
     <?php
+      // Переключаем пункты меню главных материалов сайта
+      if (isComRequest('ConnHandler'))
+         echo '<li><a href="index.php?Com=SimPrincip">Простой принцип программирования</a></li>';
+      else
+         echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
+      // Устанавливаем остальные пункты
+      echo '<li><a href="##">Штрихотворения</a></li>';
+      echo '<li><a href="#">Новости</a>';
+
+      
       echo '<ul>';
       echo '<li class="menuli"><a href="###">Яндекс-Новости</a></li>';
       echo '<li class="menuli"><a href="###">Лига-Новости</a></li>';
-      echo '<li class="menuli"><a href="###">Столицаwfwfwf на онего</a></li>';
+      echo '<li class="menuli"><a href="###">Столица на Онего</a></li>';
       echo '</ul>';
+      echo '</li>';
+      
+      //echo '<li><a href="#">SoftШутки</a></li>';
     ?> 
-    </li>
 
   </ul>
 </nav>
