@@ -146,7 +146,7 @@ aside p, aside li
 	margin-bottom: 0.8rem;	
 }
 /* 
-   Устанавливаем поля во всех трех колонках вокруг содержимого
+ Устанавливаем поля во всех трех колонках вокруг содержимого
 */
 .LeftBar 
 {
@@ -161,7 +161,7 @@ aside p, aside li
    padding: 0 1rem 0 2rem;
 }
 /* 
-   Форматируем элементы подвала страницы
+ Форматируем элементы подвала страницы
 */
 footer 
 {
@@ -183,7 +183,7 @@ footer
 {
    clear: both;  
 }
-/* 
+/*
    Форматируем показ кода
 */
 .CodeText
@@ -191,60 +191,19 @@ footer
    font-size: 1.75rem;	
    padding: 1rem 0 2rem 0;
 }
-
 /*
-.TopMenu:after
-{
-   content: " ";
-   display: table;
-   clear: both;
-}
-*/
-/*
-.TopMenu
-{
-}
- 
    Форматируем меню
 */
-
-/**
- * Отделяем меню от контекста страницы белой линией,
- * размер пунктов меню оставляем нормальным 
-**/
 .TopMenu
 {
 	border-bottom: 0.1rem solid rgba(255,255,255,.5);	
 	background-color: rgb(25,25,25);
    zoom: 1;	
 }
-
-/*
-.TopMenu ul, .menu ul 
-{
-	list-style: square;
-}
-*/
-/*
-.TopMenu ul 
-{
-	padding-left: 1.4rem;
-	padding: 0;
-	margin: 0;
-}
-*/	
-
-
 .TopMenu li
 {
 	float: left;
-   /*
-	padding: 0;
-	margin: 0;
-	list-style: none;
-   */	
 }
-
 .TopMenu a
 {
 	float: left;	
@@ -264,52 +223,34 @@ footer
 {
 	background-color: rgb(93,43,78);
 }
-
 .TopMenu ul
 {
-  position: relative;
-  display: inline-block;
+   position: relative;
+   display: inline-block;
 }
 .TopMenu ul li
 {
-  display: inline-block;
+   display: inline-block;
 }
-
-
-
 .TopMenu ul ul
 {
-  display: none;
-  position: absolute;
-  margin-top: 3.6rem;
-  margin-left: -1rem;
-  
+   display: none;
+   position: absolute;
+   margin-top: 3.6rem;
+   margin-left: -1rem;
 }
-
-/*
-.TopMenu ul ul a
-{
-  color: #fff;
-}
-*/
-
-
 .TopMenu li:hover ul
 {
-  display: block;
+   display: block;
 }
-
-
 .TopMenu li:hover li
 {
-  display: block;
+   display: block;
 }
-
 .menuli
 {
   background-color: #f63;
 }
-
 .menuli a
 {
    width: 100%; 

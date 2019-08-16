@@ -36,10 +36,6 @@ echo '<div class="contentWrapper">';
    echo '</div>';
 
    echo '<aside class="LeftBar">';
-   echo '<h2>Новости</h2>';
-   
-   
-   
    //NewsMenu();
    NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);
    echo '</aside>';

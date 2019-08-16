@@ -37,7 +37,7 @@ $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // лог�
 // Инициализируем параметры страницы сайта 
 $p_NewsForm=prown\MakeParm('NewsForm',frnSimple);                // форма представления новостей
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
-$p_NewsView=prown\MakeParm('NewsView',false,tBool,true);         // true - разворачивать новости при загрузке
+$p_NewsView=prown\MakeParm('NewsView',true,tBool,true);         // true - разворачивать новости при загрузке
 
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию

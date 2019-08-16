@@ -40,11 +40,13 @@ function TopMenu()
 function NewsMenu()
 {
    $Result = true;
+   /*
    echo '<ul>';
    echo '<li>Яндекс-Новости</li>';
    echo '<li>Лига-Новости</li>';
    echo '<li>Столица на онего</li>';
    echo '</ul>';
+   */
    return $Result;
 }
 // ************************************************************ IniMenu.php ***
