@@ -9,8 +9,44 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 05.06.2019
 
+function ViewSimpArr($aArray)
+{
+   $s='';
+   foreach($aArray as $k=>$v)
+   {
+      $s=$s."$k => $v"."<br>";
+   }
+   echo $s;
+}
+
+function getValueSimpArr($aArray,$key)
+{
+   $Result=NULL;
+   foreach($aArray as $k=>$v)
+   {
+      if ($key==$k) 
+      {
+         $Result=$v;
+         break;
+      }
+   }
+   return $Result;
+}
+
 function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
 {
+   $aNews=array
+   (            
+      'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
+      'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
+      'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
+      'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
+      'Яндекс Интернет'  => 'http://feeds.feedburner.com/yandex/MAOo',
+      'Журнала Хакер'    => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
+   );
+
+   echo getValueSimpArr($aNews,'Ведомости России').'<br>';
+
    $Result = true;
    if ($p_NewsView)
    {
@@ -28,9 +64,11 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
       // Выводим новости
       //echo '$p_FormNews='.$p_FormNews.'<br>';
       //echo '$p_AmtNews ='.$p_AmtNews.'<br>';
-      //$urlNews="http://www.stolica.onego.ru/rss.php/feed.xml";
-      // ИНФОРМАЦИОННОЕ АГЕНТСТВО РОССИИ ТАСС
-      //$urlNews="http://www.itar-tass.com/rss/all.xml";
+      
+      // Столица на онего
+      // $urlNews="http://www.stolica.onego.ru/rss.php/feed.xml";
+      // Информационное агенство России ТАСС
+      // $urlNews="http://www.itar-tass.com/rss/all.xml";
       // "Ведомости". Ежедневная деловая газета
       //$urlNews="http://www.vedomosti.ru/newsline/out/rss.xml";
       // Яндекс.Новости: Общество

@@ -42,3 +42,6 @@ Stack trace:
   thrown in C:\DoorTry\www\Pages\News\NewsView.php on line 22
 [17-Aug-2019 06:42:24 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''э'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\TPhpPrown\getTranslit.php on line 86
 [17-Aug-2019 06:42:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''э'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\TPhpPrown\getTranslit.php on line 86
+[17-Aug-2019 10:04:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\Pages\News\NewsView.php on line 14
+[17-Aug-2019 10:06:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\Pages\News\NewsView.php on line 14
+[17-Aug-2019 10:06:51 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\Pages\News\NewsView.php on line 32
