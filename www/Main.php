@@ -21,6 +21,7 @@ $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
+require_once $SiteHost."/TPhpPrown/getTranslit.php";
 require_once $SiteHost."/TPhpPrown/iniConstMem.php";
 require_once $SiteHost."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TPhpPrown/MakeParm.php";

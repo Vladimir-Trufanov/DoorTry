@@ -26,3 +26,19 @@ Stack trace:
   thrown in C:\DoorTry\www\Site.php on line 27
 [09-Aug-2019 16:30:24 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\DoorTry\www\Pages\DoorTry\ConnHandler.php on line 432
 [16-Aug-2019 15:22:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '/', expecting end of file in C:\DoorTry\www\Site.php on line 41
+[17-Aug-2019 06:12:36 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getTranslit() in C:\DoorTry\www\Pages\News\NewsView.php:22
+Stack trace:
+#0 C:\DoorTry\www\Site.php(40): NewsView(true, '1', '8')
+#1 C:\DoorTry\www\Main.php(73): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\Pages\News\NewsView.php on line 22
+[17-Aug-2019 06:14:20 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getTranslit() in C:\DoorTry\www\Pages\News\NewsView.php:22
+Stack trace:
+#0 C:\DoorTry\www\Site.php(40): NewsView(true, '1', '8')
+#1 C:\DoorTry\www\Main.php(73): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\Pages\News\NewsView.php on line 22
+[17-Aug-2019 06:42:24 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''э'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\TPhpPrown\getTranslit.php on line 86
+[17-Aug-2019 06:42:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''э'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\TPhpPrown\getTranslit.php on line 86

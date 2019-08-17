@@ -18,11 +18,13 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
       <h2>Столица на онего</h2>
       <p>
       <?php
+      echo 'скрипт ещё  8 неь неъ'.'<br>';
+      echo prown\getTranslit('скрипт ещё  8 неь неъ').'<br>';
       
       // Фиксируем начало загрузки новостей
-      echo '<script>';
+      //echo '<script>';
       //echo 'BeginNews();';
-      echo '</script>';
+      //echo '</script>';
       // Выводим новости
       //echo '$p_FormNews='.$p_FormNews.'<br>';
       //echo '$p_AmtNews ='.$p_AmtNews.'<br>';
