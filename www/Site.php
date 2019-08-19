@@ -34,11 +34,21 @@ echo '<div class="contentWrapper">';
       echo '</aside>';
       
    echo '</div>';
+   
+   
+   
+   
+         
+   $ret=getComRequest();
+   echo '***'.$ret.'***';
 
+   
+
+   /*
    echo '<aside class="LeftBar">';
-   //NewsMenu();
    NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);
    echo '</aside>';
+   */
    
 echo '</div>';
 

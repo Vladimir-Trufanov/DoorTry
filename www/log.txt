@@ -45,3 +45,8 @@ Stack trace:
 [17-Aug-2019 10:04:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\Pages\News\NewsView.php on line 14
 [17-Aug-2019 10:06:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\Pages\News\NewsView.php on line 14
 [17-Aug-2019 10:06:51 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\Pages\News\NewsView.php on line 32
+[19-Aug-2019 14:54:18 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\DoorTry\www\IniMenu.php on line 99
+[19-Aug-2019 15:37:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\isComRequest.php on line 28
+[19-Aug-2019 15:37:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '&' in C:\DoorTry\www\Pages\News\NewsView.php on line 65
+[19-Aug-2019 15:38:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '&' in C:\DoorTry\www\Pages\News\NewsView.php on line 65
+[19-Aug-2019 16:01:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\iHtmlBegin.php on line 19

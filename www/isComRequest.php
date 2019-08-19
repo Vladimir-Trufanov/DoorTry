@@ -20,4 +20,13 @@ function isComRequest($subs)
    return $Result;
 }
 
+function getComRequest()
+{
+   $Result=NULL;
+   if (IsSet($_REQUEST['Com']))
+   { 
+      $Result=$_REQUEST['Com'];
+   }
+   return $Result;
+}
 // ******************************************************* isComRequest.php *** 
