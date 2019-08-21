@@ -19,7 +19,7 @@ echo  '<!-- <meta name="viewport" content="width=device-width"> -->';
 echo  '<link href="Styles/Styles.css" rel="stylesheet">';
       // Определяем заданную ленту новостей
       getNews();
-      if (isNews()) 
+      if (isNews($s_NameNews)) 
 echo  '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
       else
 echo  '<link href="Styles/NoColNews.css" rel="stylesheet">'; 

@@ -39,7 +39,14 @@ function getUrlNews($key)
    global $aNews;
    foreach($aNews as $k=>$v)
    {
-      if ($key==$k) 
+      $kt=prown\getTranslit($k);
+      
+      //echo $k.'='.$k.'<br>';
+      //echo $kt.'='.$kt.'<br>';
+      //echo $v.'='.$v.'<br>';
+
+      
+      if ($key==$kt) 
       {
          $Result=$v;
          break;
@@ -47,18 +54,26 @@ function getUrlNews($key)
    }
    return $Result;
 }
-
-function isNews()
+function getH2_News($key)
 {
-            
-   $ret=getComRequest();
-   //echo '***'.$ret.'***';
+   $Result=NULL;
+   global $aNews;
+   foreach($aNews as $k=>$v)
+   {
+      $kt=prown\getTranslit($k);
+      if ($key==$kt) 
+      {
+         $Result=$k;
+         break;
+      }
+   }
+   return $Result;
+}
 
-   $regNews="/News_/";
-   $s=Findes($regNews,$ret);
-   //echo '==='.$s.'==='.'<br>';
-   if ($s=='News_') $Result=True;
-   else $Result=False;
+function isNews($News)
+{
+   if ($News==NotNews) $Result=False;
+   else $Result=True;
    return $Result;
 }
 
@@ -71,51 +86,28 @@ function getNews()
    if ($s=='News_') 
    {
       $Result=True;
-      echo $ret.'<br>';
-      echo $s.'<br>';
+      //echo $ret.'<br>';
+      //echo $s.'<br>';
       $str=substr($ret,5,strlen($ret)-5);
-      echo $str.'<br>';
-      $s_NameNews=prown\MakeSession('NameNews',$str,tStr,false);   // активированная лента новостей
+      //echo $str.'<br>';
+      // Изменяем признак активированной ленты новостей до конца сессии
+      $s_NameNews=prown\MakeSession('NameNews',$str,tStr,false);   
    }
    else $Result=False;
-      global $s_Counter; 
-      echo $s_Counter.': '.$s_NameNews.'<br>';
+      //global $s_Counter; 
+      //echo $s_Counter.': '.$s_NameNews.'<br>';
    return $Result;
 }
 
-function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
-{
+function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
+{  
    $Result = true;
-   //
-   //
    if ($p_NewsView)
    {
-      ?>
-      <h2>Столица на онего</h2>
-      <p>
-      <?php
-      
-      //echo 'скрипт ещё  8 неь неъ'.'<br>';
-      //echo prown\getTranslit('скрипт ещё  8 неь неъ').'<br>';
-      
-      //
-      // Фиксируем начало загрузки новостей
-      //echo '<script>';
-      //echo 'BeginNews();';
-      //echo '</script>';
-      // Выводим новости
-      //echo '$p_FormNews='.$p_FormNews.'<br>';
-      //echo '$p_AmtNews ='.$p_AmtNews.'<br>';
-      //$urlNews="http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack";
+      echo '<h2>'.getH2_News($s_NameNews).'</h2>';
+      echo '<p>';
       $urlNews="http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack";
-      
-      
-      
-
-      
-                         
-
-        
+      $urlNews=getUrlNews($s_NameNews);
       if ($p_NewsForm==frnSimple) 
       {
          SimpleTape($urlNews,$p_NewsAmt);
@@ -124,10 +116,9 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
       {
          WithImgTape($urlNews,$p_NewsAmt);
       }
-      ?>
-      </p>
-      <?php
+      echo '</p>';
    }
    return $Result;
+   
 }
-// <!-- --> ************************************************** MakeNews.php ***
+// *********************************************************** MakeNews.php ***

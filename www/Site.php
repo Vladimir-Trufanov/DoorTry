@@ -30,11 +30,11 @@ echo           '<h2>Штрихотворение</h2>';
 echo        '</aside>';
 echo     '</div>';
          
-         echo 'Лента новостей: '.$s_NameNews;
+         //echo 'Лента новостей: '.$s_NameNews;
 
-         if (isNews()) {
+         if (isNews($s_NameNews)) {
 echo     '<aside class="LeftBar">';
-            NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);
+            NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
 echo     '</aside>'; }
 echo  '</div>';
    

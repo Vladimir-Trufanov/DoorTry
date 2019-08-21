@@ -55,3 +55,9 @@ Stack trace:
 [21-Aug-2019 15:41:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Result' (T_VARIABLE) in C:\DoorTry\www\Pages\News\MakeNews.php on line 56
 [21-Aug-2019 15:42:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Result' (T_VARIABLE), expecting ',' or ';' in C:\DoorTry\www\Pages\News\MakeNews.php on line 56
 [21-Aug-2019 15:50:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$s' (T_VARIABLE), expecting '(' in C:\DoorTry\www\Pages\News\MakeNews.php on line 60
+[21-Aug-2019 22:03:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in C:\DoorTry\www\Pages\News\MakeNews.php on line 134
+[21-Aug-2019 22:14:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 153
+[21-Aug-2019 22:16:24 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 144
+[21-Aug-2019 22:18:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 130
+[21-Aug-2019 22:18:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 131
+[21-Aug-2019 22:19:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 133
