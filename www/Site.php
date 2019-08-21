@@ -7,50 +7,34 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 05.06.2019
+// Copyright © 2019 tve                              Посл.изменение: 21.08.2019
 
-echo '<div class="pageWrapper">';
-echo '<header>';
-echo '<nav class="TopMenu">';
-   TopMenu();
-echo '</nav>';
-echo '<h2>DoorTry - коллекционер ошибок</h2>';
-echo '</header>';
+echo  '<div class="pageWrapper">';
+echo  '<header>';
+echo  '<nav class="TopMenu">';
+         TopMenu();
+echo  '</nav>';
+echo  '<h2>DoorTry - коллекционер ошибок</h2>';
+echo  '</header>';
 
-echo '<div class="contentWrapper">';
-      
-   echo '<div class="columnWrapper">';
-
-      echo '<article class="main">';
-      MakeQrcode();
-      MakeH1();
-      PageContent();
-      
-      echo '</article>';
-      
-      echo '<aside class="RightBar">';
-      echo '<h2>Штрихотворение</h2>';
-      Stih();
-      echo '</aside>';
-      
-   echo '</div>';
+echo  '<div class="contentWrapper">';
+echo     '<div class="columnWrapper">';
+echo        '<article class="main">';
+               MakeQrcode();
+               MakeH1();
+               PageContent();
+echo        '</article>';
+echo        '<aside class="RightBar">';
+echo           '<h2>Штрихотворение</h2>';
+               Stih();
+echo        '</aside>';
+echo     '</div>';
+         if (isNews()) {
+echo     '<aside class="LeftBar">';
+            NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);
+echo     '</aside>'; }
+echo  '</div>';
    
-   
-   
-   
-         
-   $ret=getComRequest();
-   echo '***'.$ret.'***';
-
-   
-
-   /*
-   echo '<aside class="LeftBar">';
-   NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);
-   echo '</aside>';
-   */
-   
-echo '</div>';
 
 echo '<footer>';
 echo '<span class="p">Copyright © 2019 tve</span>';

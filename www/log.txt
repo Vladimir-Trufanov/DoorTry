@@ -50,3 +50,8 @@ Stack trace:
 [19-Aug-2019 15:37:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '&' in C:\DoorTry\www\Pages\News\NewsView.php on line 65
 [19-Aug-2019 15:38:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '&' in C:\DoorTry\www\Pages\News\NewsView.php on line 65
 [19-Aug-2019 16:01:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\iHtmlBegin.php on line 19
+[21-Aug-2019 14:59:11 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/News/MakeNews.php.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 36
+[21-Aug-2019 15:40:50 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\Pages\News\MakeNews.php on line 53
+[21-Aug-2019 15:41:16 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Result' (T_VARIABLE) in C:\DoorTry\www\Pages\News\MakeNews.php on line 56
+[21-Aug-2019 15:42:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$Result' (T_VARIABLE), expecting ',' or ';' in C:\DoorTry\www\Pages\News\MakeNews.php on line 56
+[21-Aug-2019 15:50:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$s' (T_VARIABLE), expecting '(' in C:\DoorTry\www\Pages\News\MakeNews.php on line 60

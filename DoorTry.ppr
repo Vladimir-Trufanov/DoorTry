@@ -21,12 +21,7 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		-imgs
-			www\imgs\clouds.jpg
-			www\imgs\gator.jpg
-			www\imgs\jellyfish.jpg
-			www\imgs\mule.jpg
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
@@ -38,10 +33,7 @@ DoorTry
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
 			+News
-				-Kraina
-				-StoOnego
-				-Yandex
-				www\Pages\News\NewsView.php
+				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
@@ -91,13 +83,16 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
+			www\Styles\IsColNews.css
+			www\Styles\NoColNews.css
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
 		www\.user.ini
+		www\ComRequest.php
 		www\doortry.png
 		www\error.php
 		www\favicon.ico
@@ -108,7 +103,6 @@ DoorTry
 		www\index.php
 		www\IniMem.php
 		www\IniMenu.php
-		www\isComRequest.php
 		www\log.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -116,46 +110,50 @@ DoorTry
 		www\Site.php
 		www\TPhpPrown.png
 [Open project files]
-0=www\.htaccess
-1=..\TPhpPrown\getTranslit.php
-2=www\Main.php
-3=www\Site.php
-4=www\Pages\News\NewsView.php
-5=www\IniMenu.php
-6=www\IniMem.php
-7=www\isComRequest.php
-8=www\Styles\Styles.css
-9=www\iHtmlBegin.php
+0=www\Main.php
+1=www\Site.php
+2=www\Pages\News\MakeNews.php
+3=www\iHtmlBegin.php
+4=www\Styles\NoColNews.css
+5=www\Styles\IsColNews.css
+6=www\Styles\Styles.css
+7=www\ComRequest.php
+8=..\TPhpPrown\Findes.php
+9=..\TPhpPrown\iniRegExp.php
+10=www\IniMenu.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
-[www\.htaccess]
-TopLine=50
-Caret=74,62
-[..\TPhpPrown\getTranslit.php]
-TopLine=73
-Caret=1,91
+Selected=www\Pages\News\MakeNews.php
 [www\Main.php]
-TopLine=32
-Caret=17,54
+TopLine=10
+Caret=1,24
 [www\Site.php]
+TopLine=23
+Caret=1,38
+[www\Pages\News\MakeNews.php]
+TopLine=37
+Caret=20,60
+[www\iHtmlBegin.php]
+TopLine=3
+Caret=1,20
+[www\Styles\NoColNews.css]
 TopLine=1
-Caret=6,51
-[www\Pages\News\NewsView.php]
-TopLine=47
-Caret=7,54
-[www\IniMenu.php]
-TopLine=35
-Caret=1,70
-[www\IniMem.php]
-TopLine=7
-Caret=1,1
-[www\isComRequest.php]
-TopLine=9
-Caret=31,28
+Caret=75,1
+[www\Styles\IsColNews.css]
+TopLine=1
+Caret=66,1
 [www\Styles\Styles.css]
 TopLine=69
-Caret=14,81
-[www\iHtmlBegin.php]
-TopLine=7
-Caret=14,18
+Caret=25,82
+[www\ComRequest.php]
+TopLine=1
+Caret=1,1
+[..\TPhpPrown\Findes.php]
+TopLine=19
+Caret=9,41
+[..\TPhpPrown\iniRegExp.php]
+TopLine=1
+Caret=1,26
+[www\IniMenu.php]
+TopLine=53
+Caret=34,74

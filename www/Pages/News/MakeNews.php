@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                                 *** NewsView.php ***
+// PHP7/HTML5, EDGE/CHROME                                 *** MakeNews.php ***
 
 // ****************************************************************************
 // * doortry.ru                          Показать в колонке выбранные новости *
@@ -45,6 +45,20 @@ function getUrlNews()
          break;
       }
    }
+   return $Result;
+}
+
+function isNews()
+{
+            
+   $ret=getComRequest();
+   //echo '***'.$ret.'***';
+
+   $regNews="/News_/";
+   $s=Findes($regNews,$ret);
+   //echo '==='.$s.'==='.'<br>';
+   if ($s=='News_') $Result=True;
+   else $Result=False;
    return $Result;
 }
 
@@ -94,4 +108,4 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
    }
    return $Result;
 }
-// <!-- --> ************************************************** NewsView.php ***
+// <!-- --> ************************************************** MakeNews.php ***

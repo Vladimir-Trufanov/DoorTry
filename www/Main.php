@@ -20,6 +20,7 @@ require_once "iGetAbove.php";
 $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
+require_once $SiteHost."/TPhpPrown/Findes.php";
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 require_once $SiteHost."/TPhpPrown/getTranslit.php";
 require_once $SiteHost."/TPhpPrown/iniConstMem.php";
@@ -30,10 +31,10 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Подключаем задействованные классы
 
 // Подключаем рабочие модули сайта 
+require_once $SiteRoot."/ComRequest.php";
 require_once $SiteRoot."/IniMenu.php";
-require_once $SiteRoot."/isComRequest.php";
 require_once $SiteRoot."/MakeQrcode.php";   
-require_once $SiteRoot."/Pages/News/NewsView.php";   
+require_once $SiteRoot."/Pages/News/MakeNews.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
 require_once $SiteRoot."/Pages/Stih/Stih.php";   
