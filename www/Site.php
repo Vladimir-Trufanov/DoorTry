@@ -29,6 +29,9 @@ echo           '<h2>Штрихотворение</h2>';
                Stih();
 echo        '</aside>';
 echo     '</div>';
+         
+         echo 'Лента новостей: '.$s_NameNews;
+
          if (isNews()) {
 echo     '<aside class="LeftBar">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt);

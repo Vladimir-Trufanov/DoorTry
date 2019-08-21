@@ -33,7 +33,7 @@ function getValueSimpArr($aArray,$key)
    return $Result;
 }
 
-function getUrlNews()
+function getUrlNews($key)
 {
    $Result=NULL;
    global $aNews;
@@ -62,6 +62,27 @@ function isNews()
    return $Result;
 }
 
+function getNews()
+{
+   global $s_NameNews; 
+   $ret=getComRequest();
+   $regNews="/News_/";
+   $s=Findes($regNews,$ret);
+   if ($s=='News_') 
+   {
+      $Result=True;
+      echo $ret.'<br>';
+      echo $s.'<br>';
+      $str=substr($ret,5,strlen($ret)-5);
+      echo $str.'<br>';
+      $s_NameNews=prown\MakeSession('NameNews',$str,tStr,false);   // активированная лента новостей
+   }
+   else $Result=False;
+      global $s_Counter; 
+      echo $s_Counter.': '.$s_NameNews.'<br>';
+   return $Result;
+}
+
 function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
 {
    $Result = true;
@@ -85,6 +106,7 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt)
       // Выводим новости
       //echo '$p_FormNews='.$p_FormNews.'<br>';
       //echo '$p_AmtNews ='.$p_AmtNews.'<br>';
+      //$urlNews="http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack";
       $urlNews="http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack";
       
       
