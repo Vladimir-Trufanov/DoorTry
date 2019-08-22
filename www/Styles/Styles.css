@@ -88,6 +88,7 @@ table
 {
    float: right;
    width: 25%; 
+   text-align: center; 
 }
 /* 
    Форматируем шапку страницы, меню и заголовок страницы
@@ -165,22 +166,35 @@ footer
 {
 	margin-top: 1.5rem;
 	font-size: 1.4rem;	
-	padding: 1rem;
+	padding: 1rem 3rem 3rem 3rem;
 	background-color: black;
 	color: rgb(204,204,204);
+   clear: both;  
 }
 footer a 
 {
 	color: white;	
 }
+/*
 footer .p 
 {
    padding: 0 1rem 0 0;
 }
+
 footer 
 {
-   clear: both;  
 }
+*/
+footer .pLeft 
+{
+	float: left;
+}
+
+footer .pRight 
+{
+	float: right;
+}
+
 /*
    Форматируем показ кода
 */

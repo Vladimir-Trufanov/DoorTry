@@ -25,7 +25,7 @@ echo        '<article class="main">';
                PageContent();
 echo        '</article>';
 echo        '<aside class="RightBar">';
-echo           '<h2>Штрихотворение</h2>';
+echo           '<h2>Соревнование с хакерами</h2>';
                Stih();
 echo        '</aside>';
 echo     '</div>';
@@ -37,11 +37,10 @@ echo     '<aside class="LeftBar">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
 echo     '</aside>'; }
 echo  '</div>';
-   
 
 echo '<footer>';
-echo '<span class="p">Copyright © 2019 tve</span>';
-echo '<span class="p">Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></span>';
+echo '<div class="pLeft">Copyright © 2019 tve</div>';
+echo '<div class="pRight">Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></div>';
 echo '</footer>';
 echo '</div>';
 

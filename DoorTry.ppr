@@ -32,13 +32,13 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			-Stih
-				www\Pages\Stih\Stih.php
+			+Stihi
+				www\Pages\Stihi\Stih.php
 		-qrcode
 			-temp
 				www\qrcode\temp\test.png
@@ -83,7 +83,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\NoColNews.css
 			www\Styles\Styles.css
@@ -112,48 +112,16 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Site.php
-2=www\Pages\News\MakeNews.php
-3=www\Styles\NoColNews.css
-4=www\Styles\IsColNews.css
-5=www\Styles\Styles.css
-6=www\ComRequest.php
-7=..\TPhpPrown\iniRegExp.php
-8=www\IniMenu.php
-9=www\IniMem.php
-10=www\iHtmlBegin.php
+2=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\Styles\Styles.css
 [www\Main.php]
 TopLine=24
-Caret=1,24
+Caret=37,40
 [www\Site.php]
-TopLine=13
-Caret=12,33
-[www\Pages\News\MakeNews.php]
-TopLine=81
-Caret=9,92
-[www\Styles\NoColNews.css]
-TopLine=1
-Caret=75,1
-[www\Styles\IsColNews.css]
-TopLine=1
-Caret=66,1
+TopLine=19
+Caret=92,43
 [www\Styles\Styles.css]
-TopLine=69
-Caret=25,82
-[www\ComRequest.php]
-TopLine=1
-Caret=1,1
-[..\TPhpPrown\iniRegExp.php]
-TopLine=1
-Caret=1,26
-[www\IniMenu.php]
-TopLine=46
-Caret=34,74
-[www\IniMem.php]
-TopLine=7
-Caret=17,17
-[www\iHtmlBegin.php]
-TopLine=3
-Caret=29,22
+TopLine=163
+Caret=12,169

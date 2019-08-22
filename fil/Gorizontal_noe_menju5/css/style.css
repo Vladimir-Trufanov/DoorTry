@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+ }
+.page{
+    width:853px;
+    margin:200px auto;
+   }
+#menu_nav {
+	width:853px;
+	padding-left:6px;
+	display:inline-block;
+	list-style:none;
+    border-radius:5px;
+    border-bottom:0px solid #777;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background:url(../images/menu.png);	
+    -moz-box-shadow: 0 0 5px #00ccff;
+    -webkit-box-shadow: 0 0 5px#00ccff;
+    box-shadow: 0 0 5px #00ccff;
+    }
+#menu_nav li {               
+	padding:12px 0px 12px 0px;
+	float:left;
+	position:relative;
+	display:inline-block;
+    }
+#menu_nav li a {
+    text-decoration:none;
+    font-weight: bold;
+    font-size:15px;
+    color:#ccc;
+	padding:10px 15px 10px 15px;
+	border-right:0px solid #666;
+    -moz-transition: background-color 0.3s 0.01s ease;
+    -o-transition: background-color 0.3s 0.01s ease;
+    -webkit-transition: background-color 0.3s 0.01s ease;
+	}
+#menu_nav li a:hover {                       
+    background: #00ccff;
+    text-decoration:none;
+    color:#fff;	
+	}
+#menu_nav li a:active {
+	background:#00ccff;
+	}
+#menu_nav li a.first {
+	-moz-border-radius:5px 0px 0px 5px;
+	-webkit-border-radius:5px 0px 0px 5px;
+	border-radius:5px 0px 0px 5px;
+	}
+#menu_nav li a.first_left {
+	-moz-border-radius:0px 5px 5px 0px;
+	-webkit-border-radius:0px 5px 5px 0px;
+	border-radius:0px 5px 5px 0px;
+	}
+#menu_nav li a.first_center {
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;
+	border-radius:5px 5px 5px 5px;
+	}
+#menu_nav .clik_nav {                     
+	width:160px;
+	position:absolute;
+	top:44px;
+	left:0px;
+    border-top: 2px solid #00ccff;
+	background:url(../images/pinstriped_suit.png);
+	}
+#menu_nav .clik_nav li {                               
+	width:160px;
+	padding:0px;
+	}
+    #menu_nav .clik_nav li a {
+    font-weight: normal;
+    font-size:13px;
+	display:block;
+	border-bottom:1px solid #00ccff;				
+	}
+#menu_nav .clik_nav li a:hover {                                        
+	background:#00ccff;
+	}
+#menu_nav .clik_nav li a:active {
+	background:#00ccff;
+	}

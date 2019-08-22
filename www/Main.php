@@ -37,7 +37,7 @@ require_once $SiteRoot."/MakeQrcode.php";
 require_once $SiteRoot."/Pages/News/MakeNews.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
-require_once $SiteRoot."/Pages/Stih/Stih.php";   
+require_once $SiteRoot."/Pages/Stihi/Stih.php";   
 // Выполняем начальную инициализацию
 require_once $SiteRoot."/Inimem.php";   
 
