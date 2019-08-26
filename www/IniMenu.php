@@ -89,8 +89,9 @@ function TopMenu()
       echo '<li><a href="index.php?Com=SimPrincip">Простой принцип программирования</a></li>';
    else
       echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
-   // Устанавливаем остальные пункты
-   echo '<li><a href="##">Штрихотворения</a></li>';
+   // Подключаем показ стихотворения
+   echo '<li><a href="index.php?stihi=sorevnovanie-s-hakerami">Штрихотворения</a></li>';
+   // Подключаем вызов новостей
    echo '<li><a href="">Новости</a>';
       echo '<ul>';
       NewsMenu();

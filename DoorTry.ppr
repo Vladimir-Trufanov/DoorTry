@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -37,7 +37,9 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			+Stihi
+			-Stihi
+				-sorevnovanie-s-hakerami
+					www\Pages\Stihi\sorevnovanie-s-hakerami\Stih.php
 				www\Pages\Stihi\Stih.php
 		-qrcode
 			-temp
@@ -83,7 +85,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\NoColNews.css
 			www\Styles\Styles.css
@@ -101,6 +103,7 @@ DoorTry
 		www\iHtmlEnd.php
 		www\includErrs.php
 		www\index.php
+		www\IniCurrStih.php
 		www\IniMem.php
 		www\IniMenu.php
 		www\log.txt
@@ -110,18 +113,42 @@ DoorTry
 		www\Site.php
 		www\TPhpPrown.png
 [Open project files]
-0=www\Main.php
-1=www\Site.php
-2=www\Styles\Styles.css
+0=www\Styles\Styles.css
+1=www\iHtmlBegin.php
+2=www\Pages\News\MakeNews.php
+3=www\IniMenu.php
+4=www\ComRequest.php
+5=www\Pages\Stihi\sorevnovanie-s-hakerami\Stih.php
+6=www\IniCurrStih.php
+7=www\IniMem.php
+8=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
-[www\Main.php]
-TopLine=24
-Caret=37,40
-[www\Site.php]
-TopLine=19
-Caret=92,43
+Selected=www\IniCurrStih.php
 [www\Styles\Styles.css]
-TopLine=163
-Caret=12,169
+TopLine=82
+Caret=4,85
+[www\iHtmlBegin.php]
+TopLine=9
+Caret=1,26
+[www\Pages\News\MakeNews.php]
+TopLine=63
+Caret=1,64
+[www\IniMenu.php]
+TopLine=75
+Caret=39,93
+[www\ComRequest.php]
+TopLine=1
+Caret=9,18
+[www\Pages\Stihi\sorevnovanie-s-hakerami\Stih.php]
+TopLine=70
+Caret=1,79
+[www\IniCurrStih.php]
+TopLine=11
+Caret=30,33
+[www\IniMem.php]
+TopLine=25
+Caret=1,1
+[www\Main.php]
+TopLine=17
+Caret=23,35

@@ -22,7 +22,8 @@ echo  '<link href="Styles/Styles.css" rel="stylesheet">';
       if (isNews($s_NameNews)) 
 echo  '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
       else
-echo  '<link href="Styles/NoColNews.css" rel="stylesheet">'; 
+echo  '<link href="Styles/NoColNews.css" rel="stylesheet">';
+ 
 echo  '<link href="JS/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo  '<script src="/JS/TJsPrown.js"></script>';
 echo  '<script src="/JS/DoorTry.js"></script>';

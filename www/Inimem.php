@@ -34,7 +34,9 @@ $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчи
 $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов     
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
-
+// Каталог текущего стихотворения - записи базы данных
+$c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true);     
+$c_CurrStih=IniCurrStih($c_CurrStih);
 // Инициализируем параметры страницы сайта 
 $p_NewsForm=prown\MakeParm('NewsForm',frnSimple);                // форма представления новостей
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме

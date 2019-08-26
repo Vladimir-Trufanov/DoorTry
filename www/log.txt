@@ -62,3 +62,6 @@ Stack trace:
 [21-Aug-2019 22:18:44 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 131
 [21-Aug-2019 22:19:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\News\MakeNews.php on line 133
 [22-Aug-2019 16:40:17 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/Stih/Stih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 40
+[26-Aug-2019 17:11:15 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/iniCurrStih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 27
+[26-Aug-2019 17:12:59 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/IniCurrStih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 35
+[26-Aug-2019 17:14:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isCurrStih' (T_STRING), expecting '(' in C:\DoorTry\www\IniCurrStih.php on line 32

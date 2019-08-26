@@ -32,14 +32,25 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/ComRequest.php";
+require_once $SiteRoot."/IniCurrStih.php";
 require_once $SiteRoot."/IniMenu.php";
 require_once $SiteRoot."/MakeQrcode.php";   
 require_once $SiteRoot."/Pages/News/MakeNews.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
-require_once $SiteRoot."/Pages/Stihi/Stih.php";   
 // Выполняем начальную инициализацию
 require_once $SiteRoot."/Inimem.php";   
+
+// Подключаем динамические страницы с SEO-тегами, H1 и страницами
+if (isComRequest('ConnHandler','Com'))
+    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
+else
+    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
+// Подключаем ранее выбранное стихотворение
+require_once $SiteRoot."/Pages/Stihi/Stih.php";   
+
+// echo getComRequest('stihi').'<br>';
+//require_once $SiteRoot."/Pages/Stihi/sorevnovanie-s-hakerami/Stih.php";   
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
@@ -60,15 +71,6 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgCOOKIE);
 //\prown\ViewGlobal(avgSESSION);
 //\prown\ViewGlobal(avgGLOBALS);
-
-// Подключаем динамические страницы с SEO-тегами, H1 и страницами
-if (isComRequest('ConnHandler'))
-    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
-else
-    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
-    
-
-
 
 require_once $SiteRoot."/iHtmlBegin.php";
 require_once $SiteRoot."/Site.php";
