@@ -22,7 +22,7 @@ echo     '<div class="columnWrapper">';
 echo        '<article class="main">';
                MakeQrcode();
                MakeH1();
-               // echo  prown\getTranslit('Стихи=Соревнование с хакерами').'<br>';
+               echo  prown\getTranslit('Разные вместе').'<br>';
                PageContent();
 echo        '</article>';
 echo        '<aside class="RightBar">';

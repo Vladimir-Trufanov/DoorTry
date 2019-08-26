@@ -71,7 +71,9 @@ $Result = true;
    <p class="stihstr">июнь, 115 километр</p>
    <p class="stihstr">кабинет, декабрь, 1998</p>
 </p>
+<!-- 
 <p><img src="imgs/mule.jpg" alt="Ослик"></p>
+-->
 <?php
 return $Result;
 }

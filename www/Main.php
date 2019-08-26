@@ -34,7 +34,8 @@ require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 require_once $SiteRoot."/ComRequest.php";
 require_once $SiteRoot."/IniCurrStih.php";
 require_once $SiteRoot."/IniMenu.php";
-require_once $SiteRoot."/MakeQrcode.php";   
+require_once $SiteRoot."/MakeQrcode.php"; 
+// Подключаем управление новостями  
 require_once $SiteRoot."/Pages/News/MakeNews.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
@@ -46,7 +47,8 @@ if (isComRequest('ConnHandler','Com'))
     require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
 else
     require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
-// Подключаем ранее выбранное стихотворение
+// Подключаем управление стихами и ранее выбранное стихотворение
+require_once $SiteRoot."/Pages/Stihi/MakeStihi.php";   
 require_once $SiteRoot."/Pages/Stihi/Stih.php";   
 
 // echo getComRequest('stihi').'<br>';

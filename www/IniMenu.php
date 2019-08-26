@@ -77,6 +77,27 @@ function NewsMenu()
    }
    return $Result;
 }
+$aStihi=array
+(            
+   'Соревнование с хакерами' => 
+      'sorevnovanie-s-hakerami',   
+);
+// ****************************************************************************
+// *                       Вывести пункты новостного меню                     *
+// ****************************************************************************
+function StihiMenu()
+{
+   global $aStihi;
+   $Result = true;
+   foreach($aStihi as $k=>$v)
+   {
+      $s='<li class="menuli">'.
+         '<a href="index.php?Stihi='.prown\getTranslit($k).'"'.
+         '>'.$k.'</a></li>';
+      echo $s;
+   }
+   return $Result;
+}
 // ****************************************************************************
 // *                      Отработать пункты верхнего меню                     *
 // ****************************************************************************
@@ -90,7 +111,12 @@ function TopMenu()
    else
       echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
    // Подключаем показ стихотворения
-   echo '<li><a href="index.php?stihi=sorevnovanie-s-hakerami">Штрихотворения</a></li>';
+   //echo '<li><a href="index.php?stihi=sorevnovanie-s-hakerami">Штрихотворения</a></li>';
+   echo '<li><a href="">Штрихотворения</a>';
+      echo '<ul>';
+      StihiMenu();
+      echo '</ul>';
+   echo '</li>';
    // Подключаем вызов новостей
    echo '<li><a href="">Новости</a>';
       echo '<ul>';
