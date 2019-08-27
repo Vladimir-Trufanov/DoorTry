@@ -79,8 +79,8 @@ function NewsMenu()
 }
 $aStihi=array
 (            
-   'Соревнование с хакерами' => 
-      'sorevnovanie-s-hakerami',   
+   'Соревнование с хакерами' => 'http://localhost:82/Pages/Stihi/sorevnovanie-s-hakerami/',   
+   // 'Соревнование с хакерами' => 'sorevnovanie-s-hakerami',   
 );
 // ****************************************************************************
 // *                       Вывести пункты новостного меню                     *
@@ -94,6 +94,13 @@ function StihiMenu()
       $s='<li class="menuli">'.
          '<a href="index.php?Stihi='.prown\getTranslit($k).'"'.
          '>'.$k.'</a></li>';
+         
+         
+     //    'http://localhost:82/Pages/Stihi/sorevnovanie-s-hakerami/''
+         
+         
+         
+         
       echo $s;
    }
    return $Result;

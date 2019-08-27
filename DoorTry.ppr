@@ -38,7 +38,7 @@ DoorTry
 				www\Pages\News\WithImgTape.php
 			-Sshu
 			+Stihi
-				-sorevnovanie-s-hakerami
+				+sorevnovanie-s-hakerami
 					www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb
 					www\Pages\Stihi\sorevnovanie-s-hakerami\molody-dushoj.jpg
 					www\Pages\Stihi\sorevnovanie-s-hakerami\raznye-vmeste.jpg
@@ -95,7 +95,7 @@ DoorTry
 			www\Styles\IsColNews.css
 			www\Styles\NoColNews.css
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -121,24 +121,48 @@ DoorTry
 [Open project files]
 0=www\Styles\Styles.css
 1=www\IniMenu.php
-2=www\Main.php
-3=www\Pages\Stihi\MakeStihi.php
-4=www\Site.php
+2=www\Site.php
+3=www\iHtmlBegin.php
+4=www\ComRequest.php
+5=www\Pages\Stihi\MakeStihi.php
+6=www\Pages\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+7=www\IniMem.php
+8=www\Main.php
+9=www\iGetAbove.php
+10=www\index.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\IniMenu.php
 [www\Styles\Styles.css]
 TopLine=82
 Caret=4,85
 [www\IniMenu.php]
-TopLine=115
-Caret=16,117
-[www\Main.php]
-TopLine=55
-Caret=15,29
-[www\Pages\Stihi\MakeStihi.php]
-TopLine=97
-Caret=3,125
+TopLine=63
+Caret=91,82
 [www\Site.php]
-TopLine=17
+TopLine=23
 Caret=1,1
+[www\iHtmlBegin.php]
+TopLine=9
+Caret=1,1
+[www\ComRequest.php]
+TopLine=5
+Caret=1,20
+[www\Pages\Stihi\MakeStihi.php]
+TopLine=11
+Caret=51,21
+[www\Pages\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
+TopLine=23
+Caret=1,28
+[www\IniMem.php]
+TopLine=5
+Caret=1,19
+[www\Main.php]
+TopLine=11
+Caret=1,1
+[www\iGetAbove.php]
+TopLine=11
+Caret=1,1
+[www\index.php]
+TopLine=1
+Caret=1,18

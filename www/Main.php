@@ -51,7 +51,6 @@ else
 require_once $SiteRoot."/Pages/Stihi/MakeStihi.php";   
 require_once $SiteRoot."/Pages/Stihi/Stih.php";   
 
-// echo getComRequest('stihi').'<br>';
 //require_once $SiteRoot."/Pages/Stihi/sorevnovanie-s-hakerami/Stih.php";   
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
@@ -74,11 +73,16 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgSESSION);
 //\prown\ViewGlobal(avgGLOBALS);
 
-require_once $SiteRoot."/iHtmlBegin.php";
-require_once $SiteRoot."/Site.php";
-// Подключаем и запускаем регистратор времени загрузки страницы
-require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
-$oFixLoadTimer = new FixLoadTimer();
-require_once $SiteRoot."/iHtmlEnd.php";
-
+// Если поступил запрос на страницу со стихотворением, то запускаем страницу
+if (IsSet($_REQUEST['Stihi'])) MakeStih($SiteRoot,$SiteDevice);
+// В больштнстве остальных случаев запускаем главные страницы
+else
+{
+   require_once $SiteRoot."/iHtmlBegin.php";
+   require_once $SiteRoot."/Site.php";
+   // Подключаем и запускаем регистратор времени загрузки страницы
+   require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
+   $oFixLoadTimer = new FixLoadTimer();
+   require_once $SiteRoot."/iHtmlEnd.php";
+}
 // *************************************************************** Main.php ***

@@ -9,6 +9,24 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 05.06.2019
 
+function MakeStih($SiteRoot,$SiteDevice)
+{
+   $StihoPage=getComRequest('Stihi');
+   echo $StihoPage.'<br>';
+   $uripage=$SiteRoot.'/Pages/Stihi/'.$StihoPage.'/'.$StihoPage.'.php';  
+   echo $uripage.'<br>';
+   echo $SiteRoot.'<br>';
+   
+   //header( 'Location: '.'/Pages/Stihi/'.$StihoPage.'/'.$StihoPage.'.php'); 
+   header( 'Location: '.'/Pages/Stihi/'.$StihoPage); 
+  
+   /*
+      echo '<script>';
+      echo 'window.location.assign("'.$uripage.'")';
+      echo '</script>';
+   */
+}
+
 /*
 function ViewSimpArr($aArray)
 {

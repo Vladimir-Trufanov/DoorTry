@@ -15,16 +15,10 @@ global $SiteDevice;
 
 //require_once "Stih.php";   
 
-$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-// Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
-// страницы с выводом сообщений, а также комментариев для PHP5-PHP7
-//require_once $SiteRoot."/TDoorTryer/DoorTryerPage.php";
-
 
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
 define ("Tablet", "Tablet");     // "Устройство, запросившее сайт - планшет"  
-echo '***'.$SiteRoot.'<br>';
 
 ?>
    <!DOCTYPE html>
@@ -49,7 +43,6 @@ echo '***'.$SiteRoot.'<br>';
    <body>
 <?php
 //echo $SiteDevice.'<br>';
-echo '***'.$SiteRoot.'<br>';
 
 if ($SiteDevice==Mobile) 
 {   
