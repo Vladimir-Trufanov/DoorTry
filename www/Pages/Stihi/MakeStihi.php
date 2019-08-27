@@ -18,7 +18,13 @@ function MakeStih($SiteRoot,$SiteDevice)
    echo $SiteRoot.'<br>';
    
    //header( 'Location: '.'/Pages/Stihi/'.$StihoPage.'/'.$StihoPage.'.php'); 
-   header( 'Location: '.'/Pages/Stihi/'.$StihoPage); 
+   //header( 'Location: '.'/Pages/Stihi/'.$StihoPage); 
+   echo 'Location: '.'/Pages/Stihi/'.$StihoPage.'<br>'; 
+   
+   $page='/Pages/Stihi/'.$StihoPage;
+   echo "Location: http://".$_SERVER['HTTP_HOST'].$page;
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+
   
    /*
       echo '<script>';

@@ -43,16 +43,33 @@ define ("Tablet", "Tablet");     // "Устройство, запросивше�
    <body>
 <?php
 //echo $SiteDevice.'<br>';
+/*
+$StihoPage=getComRequest('Stihi');
+$page='/Pages/Stihi/'.$StihoPage;
+echo "Location: http://".$_SERVER['HTTP_HOST'].$page;
+*/
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+echo '***'.$SiteRoot.'<br>';
+
+echo $SiteRoot."/Pages/Stihi/Stih.php";   
+require_once $SiteRoot."/Pages/Stihi/Stih.php";   
+
+//$SiteRoot=$_SERVER['HTTP_HOST'];
+//echo '***'.$SiteRoot.'<br>';
+
 
 if ($SiteDevice==Mobile) 
 {   
    ?>
    <?php
+require_once $SiteRoot."/Pages/Stihi/Stih.php";   
 }
 else 
 {   
    ?>
   <?php
+require_once $SiteRoot."/Pages/Stihi/Stih.php"; 
+Stih();  
 }
 ?>
    Здравствуй, DoorTry!
