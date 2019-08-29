@@ -11,24 +11,15 @@
 
 function MakeStih($SiteRoot,$SiteDevice)
 {
-   $StihoPage=getComRequest('Stihi');
-   echo $StihoPage.'<br>';
-   $uripage=$SiteRoot.'/Pages/Stihi/'.$StihoPage.'/'.$StihoPage.'.php';  
-   echo $uripage.'<br>';
-   echo $SiteRoot.'<br>';
-   
-   //header( 'Location: '.'/Pages/Stihi/'.$StihoPage.'/'.$StihoPage.'.php'); 
-   //header( 'Location: '.'/Pages/Stihi/'.$StihoPage); 
-   echo 'Location: '.'/Pages/Stihi/'.$StihoPage.'<br>'; 
-   
+   // Определяем каталог страницы со стихотворением (где есть index.php)
+   $StihoPage=getComRequest('Stihi');  // sorevnovanie-s-hakerami
    $page='/Pages/Stihi/'.$StihoPage;
-   echo "Location: http://".$_SERVER['HTTP_HOST'].$page;
+   //echo "Location: http://".$_SERVER['HTTP_HOST'].$page;
+   // Отправляем заголовок страницы
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-
-  
    /*
       echo '<script>';
-      echo 'window.location.assign("'.$uripage.'")';
+      echo 'window.location.assign("'.$page.'")';
       echo '</script>';
    */
 }

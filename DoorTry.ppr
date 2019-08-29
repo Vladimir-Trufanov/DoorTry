@@ -38,13 +38,12 @@ DoorTry
 				www\Pages\News\WithImgTape.php
 			-Sshu
 			+Stihi
-				+sorevnovanie-s-hakerami
+				-sorevnovanie-s-hakerami
 					www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb
 					www\Pages\Stihi\sorevnovanie-s-hakerami\index.php
 					www\Pages\Stihi\sorevnovanie-s-hakerami\molody-dushoj.jpg
 					www\Pages\Stihi\sorevnovanie-s-hakerami\raznye-vmeste.jpg
 					www\Pages\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
-					www\Pages\Stihi\sorevnovanie-s-hakerami\Stih.php
 				www\Pages\Stihi\MakeNews.php
 				www\Pages\Stihi\MakeStihi.php
 				www\Pages\Stihi\Stih.php
@@ -126,14 +125,12 @@ DoorTry
 3=www\iHtmlBegin.php
 4=www\ComRequest.php
 5=www\Pages\Stihi\MakeStihi.php
-6=www\IniMem.php
-7=www\Main.php
-8=www\iGetAbove.php
-9=www\Pages\Stihi\sorevnovanie-s-hakerami\index.php
-10=www\Pages\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+6=www\Pages\Stihi\sorevnovanie-s-hakerami\index.php
+7=www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb
+8=www\Pages\Stihi\Stih.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Stihi\sorevnovanie-s-hakerami\index.php
+Selected=www\Pages\Stihi\MakeStihi.php
 [www\Styles\Styles.css]
 TopLine=82
 Caret=4,85
@@ -151,19 +148,13 @@ TopLine=5
 Caret=1,20
 [www\Pages\Stihi\MakeStihi.php]
 TopLine=9
-Caret=1,25
-[www\IniMem.php]
-TopLine=5
-Caret=1,19
-[www\Main.php]
-TopLine=11
-Caret=1,1
-[www\iGetAbove.php]
-TopLine=11
-Caret=1,1
+Caret=44,22
 [www\Pages\Stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=53
-Caret=8,72
-[www\Pages\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
-TopLine=17
-Caret=1,28
+TopLine=1
+Caret=43,59
+[www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb]
+TopLine=1
+Caret=1,2
+[www\Pages\Stihi\Stih.php]
+TopLine=1
+Caret=7,16

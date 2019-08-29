@@ -2,24 +2,29 @@
 // PHP7/HTML5, EDGE/CHROME                  *** sorevnovanie-s-hakerami.php ***
 
 // ****************************************************************************
-// *                                                                          *
+// *          Страница стихотворения "Соревнование с хакерами"                *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 06.02.2019
 
-global $SiteDevice;
-//global $SiteRoot;
-//require_once $SiteRoot."/Pages/Stihi/Stih.php";   
-
-//require_once "Stih.php";   
-
-
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
 define ("Tablet", "Tablet");     // "Устройство, запросившее сайт - планшет"  
 
+// Инициализируем корневой каталог сайта
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+// Инициализируем надсайтовый каталог и каталог хостинга
+require_once $SiteRoot."/iGetAbove.php";
+$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
+// Подключаем файлы библиотеки прикладных модулей
+require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
+// Подключаем собственно вкладываемое стихотворение, как функцию
+require_once $SiteRoot."/Pages/Stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
+// Формируем страницу окружения стихотворения
+$SiteDevice=prown\getSiteDevice();  // 'Computer','Mobile','Tablet'
 ?>
    <!DOCTYPE html>
    <html lang="ru">
@@ -42,37 +47,25 @@ define ("Tablet", "Tablet");     // "Устройство, запросивше�
    </head>
    <body>
 <?php
-//echo $SiteDevice.'<br>';
-/*
-$StihoPage=getComRequest('Stihi');
-$page='/Pages/Stihi/'.$StihoPage;
-echo "Location: http://".$_SERVER['HTTP_HOST'].$page;
-*/
-$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-echo '***'.$SiteRoot.'<br>';
 
-echo $SiteRoot."/Pages/Stihi/Stih.php";   
-require_once $SiteRoot."/Pages/Stihi/Stih.php";   
-
-//$SiteRoot=$_SERVER['HTTP_HOST'];
-//echo '***'.$SiteRoot.'<br>';
-
-
+// Делаем разметку страницы для смартфона
 if ($SiteDevice==Mobile) 
 {   
    ?>
    <?php
-require_once $SiteRoot."/Pages/Stihi/Stih.php";   
+   echo $SiteDevice.'<br>';
+   SorevnovanieSHakerami();  
 }
+// Делаем разметку страницы для компьютера
 else 
 {   
    ?>
-  <?php
-require_once $SiteRoot."/Pages/Stihi/Stih.php"; 
-Stih();  
+   <?php
+   echo $SiteDevice.'<br>';
+   SorevnovanieSHakerami();  
 }
+
 ?>
-   Здравствуй, DoorTry!
    </body> 
    </html>
 <?php

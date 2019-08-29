@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                                     *** Stih.php ***
+// PHP7/HTML5, EDGE/CHROME                  *** sorevnovanie-s-hakerami.php ***
 
 // ****************************************************************************
 // * doortry.ru          Вывести стихотворение со штрихкодом в правой колонке *
@@ -13,7 +13,7 @@ function Stih()
 {
 $Result = true;
 ?>
-<h2>Соревнование с хакерами</h2>
+<h2>Сcоревнование с хакерами</h2>
 <br>
 <p class="stihabz">
    <p class="stihstr">Бежал ноябрь, работа шла</p>
@@ -71,10 +71,7 @@ $Result = true;
    <p class="stihstr">июнь, 115 километр</p>
    <p class="stihstr">кабинет, декабрь, 1998</p>
 </p>
-<!-- 
-<p><img src="imgs/mule.jpg" alt="Ослик"></p>
--->
 <?php
 return $Result;
 }
-// <!-- --> ****************************************************** Stih.php ***
+// <!-- --> *********************************** sorevnovanie-s-hakerami.php ***
