@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -37,14 +37,13 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			+Stihi
+			-Stihi
 				-sorevnovanie-s-hakerami
 					www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb
 					www\Pages\Stihi\sorevnovanie-s-hakerami\index.php
 					www\Pages\Stihi\sorevnovanie-s-hakerami\molody-dushoj.jpg
 					www\Pages\Stihi\sorevnovanie-s-hakerami\raznye-vmeste.jpg
 					www\Pages\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
-				www\Pages\Stihi\MakeNews.php
 				www\Pages\Stihi\MakeStihi.php
 				www\Pages\Stihi\Stih.php
 		-qrcode
@@ -91,6 +90,15 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
+		+Stihi
+			+sorevnovanie-s-hakerami
+				www\Stihi\sorevnovanie-s-hakerami\idid.vb
+				www\Stihi\sorevnovanie-s-hakerami\index.php
+				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj.jpg
+				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste.jpg
+				www\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+			www\Stihi\MakeStihi.php
+			www\Stihi\Stih.php
 		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\NoColNews.css
@@ -119,42 +127,26 @@ DoorTry
 		www\Site.php
 		www\TPhpPrown.png
 [Open project files]
-0=www\Styles\Styles.css
+0=www\Main.php
 1=www\IniMenu.php
-2=www\Site.php
-3=www\iHtmlBegin.php
-4=www\ComRequest.php
-5=www\Pages\Stihi\MakeStihi.php
-6=www\Pages\Stihi\sorevnovanie-s-hakerami\index.php
-7=www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb
-8=www\Pages\Stihi\Stih.php
+2=www\Stihi\MakeStihi.php
+3=www\Stihi\Stih.php
+4=www\Stihi\sorevnovanie-s-hakerami\index.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Stihi\MakeStihi.php
-[www\Styles\Styles.css]
-TopLine=82
-Caret=4,85
+Selected=www\Stihi\sorevnovanie-s-hakerami\index.php
+[www\Main.php]
+TopLine=3
+Caret=26,51
 [www\IniMenu.php]
-TopLine=63
-Caret=59,77
-[www\Site.php]
-TopLine=23
+TopLine=101
+Caret=1,96
+[www\Stihi\MakeStihi.php]
+TopLine=11
+Caret=1,17
+[www\Stihi\Stih.php]
+TopLine=1
 Caret=1,1
-[www\iHtmlBegin.php]
-TopLine=9
-Caret=1,1
-[www\ComRequest.php]
-TopLine=5
-Caret=1,20
-[www\Pages\Stihi\MakeStihi.php]
-TopLine=9
-Caret=44,22
-[www\Pages\Stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=1
-Caret=43,59
-[www\Pages\Stihi\sorevnovanie-s-hakerami\idid.vb]
-TopLine=1
-Caret=1,2
-[www\Pages\Stihi\Stih.php]
-TopLine=1
-Caret=7,16
+[www\Stihi\sorevnovanie-s-hakerami\index.php]
+TopLine=15
+Caret=26,25

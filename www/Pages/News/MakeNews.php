@@ -41,10 +41,10 @@ function getUrlNews($key)
    {
       $kt=prown\getTranslit($k);
       
-      //echo $k.'='.$k.'<br>';
-      //echo $kt.'='.$kt.'<br>';
-      //echo $v.'='.$v.'<br>';
-
+      echo '$key='.$key.'<br>';
+      echo '$k  ='.$k.'<br>';
+      echo '$kt ='.$kt.'<br>';
+      echo '$v  ='.$v.'<br>';
       
       if ($key==$kt) 
       {
@@ -80,7 +80,16 @@ function isNews($News)
 function getNews()
 {
    global $s_NameNews; 
-   $ret=getComRequest();
+   $ret=getComRequest('Novosti');
+   echo '$ret='.$ret.'<br>';
+   if ($ret==NULL) $Result=False;
+   else
+   {
+      $Result=True;
+      // Изменяем признак активированной ленты новостей до конца сессии
+      $s_NameNews=prown\MakeSession('NameNews',$ret,tStr,false);   
+   }
+   /*
    $regNews="/News_/";
    $s=Findes($regNews,$ret);
    if ($s=='News_') 
@@ -96,6 +105,7 @@ function getNews()
    else $Result=False;
       //global $s_Counter; 
       //echo $s_Counter.': '.$s_NameNews.'<br>';
+   */
    return $Result;
 }
 
@@ -106,7 +116,6 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
    {
       echo '<h2>'.getH2_News($s_NameNews).'</h2>';
       echo '<p>';
-      $urlNews="http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack";
       $urlNews=getUrlNews($s_NameNews);
       if ($p_NewsForm==frnSimple) 
       {

@@ -13,8 +13,7 @@ function MakeStih($SiteRoot,$SiteDevice)
 {
    // Определяем каталог страницы со стихотворением (где есть index.php)
    $StihoPage=getComRequest('Stihi');  // sorevnovanie-s-hakerami
-   $page='/Pages/Stihi/'.$StihoPage;
-   //echo "Location: http://".$_SERVER['HTTP_HOST'].$page;
+   $page='/Stihi/'.$StihoPage;
    // Отправляем заголовок страницы
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    /*

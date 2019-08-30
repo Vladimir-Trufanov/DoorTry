@@ -22,16 +22,13 @@ echo     '<div class="columnWrapper">';
 echo        '<article class="main">';
                MakeQrcode();
                MakeH1();
-               echo  prown\getTranslit('Разные вместе').'<br>';
+               echo  prown\getTranslit('Лист').'<br>';
                PageContent();
 echo        '</article>';
 echo        '<aside class="RightBar">';
                Stih();
 echo        '</aside>';
 echo     '</div>';
-         
-         //echo 'Лента новостей: '.$s_NameNews;
-
          if (isNews($s_NameNews)) {
 echo     '<aside class="LeftBar">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);

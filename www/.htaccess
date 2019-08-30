@@ -59,7 +59,8 @@ php_flag session.use_trans_sid off
 ## 
 RewriteEngine On
 RewriteRule ^Podklyuchit-obrabotchik-oshibok-isklyucheniy$ index.php?Com=ConnHandler [L]
-RewriteRule ^Prostoy-printsip-programmirovaniya$ index.php?Com=SimPrincip [L]
+RewriteRule ^Prostoj-princip-programmirovaniya$ index.php?Com=SimPrincip [L]
+             prostoj-princip-programmirovaniya
 ## RewriteRule ^Redaktor_tekstov$ /TinyMCE/ [L]
 ## RewriteRule ^reset$ /Reset/ [L]
  

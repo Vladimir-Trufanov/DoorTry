@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 19.08.2019
+// Copyright © 2019 tve                              Посл.изменение: 30.08.2019
 
 /**
  *  Список новостных лент
@@ -51,6 +51,7 @@ $aNews=array
 (            
    'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
    'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
+   'Абвгде ёжзийк лмнопрстуф хцчш щьыъэюя'  => 'http://news.yandex.ru/society.rss',   
    'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
    'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
    'Яндекс Интернет'  => 'http://feeds.feedburner.com/yandex/MAOo',
@@ -69,9 +70,8 @@ function NewsMenu()
    $Result = true;
    foreach($aNews as $k=>$v)
    {
-      // echo '<li class="menuli"><a href="###">Яндекс-Новости</a></li>';
       $s='<li class="menuli">'.
-         '<a href="index.php?Com=News_'.prown\getTranslit($k).'"'.
+         '<a href="index.php?Novosti='.prown\getTranslit($k).'"'.
          '>'.$k.'</a></li>';
       echo $s;
    }
@@ -79,8 +79,7 @@ function NewsMenu()
 }
 $aStihi=array
 (            
-   'Соревнование с хакерами' => 'http://localhost:82/Pages/Stihi/sorevnovanie-s-hakerami/',   
-   // 'Соревнование с хакерами' => 'sorevnovanie-s-hakerami',   
+   'Соревнование с хакерами' => 'http://localhost:82/Stihi/sorevnovanie-s-hakerami/',   
 );
 // ****************************************************************************
 // *                       Вывести пункты новостного меню                     *
@@ -94,13 +93,6 @@ function StihiMenu()
       $s='<li class="menuli">'.
          '<a href="index.php?Stihi='.prown\getTranslit($k).'"'.
          '>'.$k.'</a></li>';
-         
-         
-     //    'http://localhost:82/Pages/Stihi/sorevnovanie-s-hakerami/''
-         
-         
-         
-         
       echo $s;
    }
    return $Result;
@@ -113,12 +105,15 @@ function TopMenu()
    $Result = true;
    echo '<ul>';
    // Переключаем пункты меню главных материалов сайта
-   if (isComRequest('ConnHandler'))
-      echo '<li><a href="index.php?Com=SimPrincip">Простой принцип программирования</a></li>';
+   if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
+      echo '<li><a href="index.php?List='.
+         'Prostoj-princip-programmirovaniya">'.
+         'Простой принцип программирования</a></li>';
    else
-      echo '<li><a href="index.php?Com=ConnHandler">Подключить обработчик ошибок/исключений</a></li>';
+      echo '<li><a href="index.php?List='.
+         'Podklyuchit-obrabotchik-oshibok-i-isklyuchenij">'.
+         'Подключить обработчик ошибок/исключений</a></li>';
    // Подключаем показ стихотворения
-   //echo '<li><a href="index.php?stihi=sorevnovanie-s-hakerami">Штрихотворения</a></li>';
    echo '<li><a href="">Штрихотворения</a>';
       echo '<ul>';
       StihiMenu();

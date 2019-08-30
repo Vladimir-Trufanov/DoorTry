@@ -22,7 +22,7 @@ $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 // Подключаем собственно вкладываемое стихотворение, как функцию
-require_once $SiteRoot."/Pages/Stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
+require_once $SiteRoot."/Stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
 // Формируем страницу окружения стихотворения
 $SiteDevice=prown\getSiteDevice();  // 'Computer','Mobile','Tablet'
 ?>

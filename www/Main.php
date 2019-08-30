@@ -40,19 +40,16 @@ require_once $SiteRoot."/Pages/News/MakeNews.php";
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
 // Выполняем начальную инициализацию
-require_once $SiteRoot."/Inimem.php";   
+require_once $SiteRoot."/IniMem.php";   
 
 // Подключаем динамические страницы с SEO-тегами, H1 и страницами
-if (isComRequest('ConnHandler','Com'))
+if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
     require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
 else
     require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 // Подключаем управление стихами и ранее выбранное стихотворение
-require_once $SiteRoot."/Pages/Stihi/MakeStihi.php";   
-require_once $SiteRoot."/Pages/Stihi/Stih.php";   
-
-//require_once $SiteRoot."/Pages/Stihi/sorevnovanie-s-hakerami/Stih.php";   
-
+require_once $SiteRoot."/Stihi/MakeStihi.php";   
+require_once $SiteRoot."/Stihi/Stih.php";   
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
