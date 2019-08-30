@@ -79,7 +79,7 @@ function NewsMenu()
 }
 $aStihi=array
 (            
-   'Соревнование с хакерами' => 'http://localhost:82/Stihi/sorevnovanie-s-hakerami/',   
+   'Соревнование с хакерами' => '*',   
 );
 // ****************************************************************************
 // *                       Вывести пункты новостного меню                     *
@@ -90,8 +90,13 @@ function StihiMenu()
    $Result = true;
    foreach($aStihi as $k=>$v)
    {
+      /*
       $s='<li class="menuli">'.
          '<a href="index.php?Stihi='.prown\getTranslit($k).'"'.
+         '>'.$k.'</a></li>';
+      */
+      $s='<li class="menuli">'.
+         '<a href="index.php?Stihi='.$k.'"'.
          '>'.$k.'</a></li>';
       echo $s;
    }

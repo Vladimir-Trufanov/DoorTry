@@ -48,8 +48,12 @@ if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
 else
     require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 // Подключаем управление стихами и ранее выбранное стихотворение
+/*
 require_once $SiteRoot."/Stihi/MakeStihi.php";   
-require_once $SiteRoot."/Stihi/Stih.php";   
+require_once $SiteRoot."/Stihi/Stih.php"; 
+*/  
+require_once $SiteRoot."/Стихи/MakeStihi.php";   
+require_once $SiteRoot."/Стихи/Stih.php";   
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
@@ -76,7 +80,14 @@ if (IsSet($_REQUEST['Stihi'])) MakeStih($SiteRoot,$SiteDevice);
 else
 {
    require_once $SiteRoot."/iHtmlBegin.php";
-   require_once $SiteRoot."/Site.php";
+   if ($SiteDevice==Mobile)
+   {   
+      require_once $SiteRoot."/MobiSite.php";
+   }
+   else 
+   {   
+      require_once $SiteRoot."/Site.php";
+   }
    // Подключаем и запускаем регистратор времени загрузки страницы
    require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();

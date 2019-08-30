@@ -1,0 +1,365 @@
+/** HTML5/CSS3, EDGE/CHROME                                  *** Styles.css ***
+ *
+ ******************************************************************************
+ * doortry.ru      Сайт сбора сообщений об ошибках/исключениях и формирования *
+ *           страницы с выводом сообщений, а также комментариев для PHP5-PHP7 *
+ ******************************************************************************
+ *
+ *                                                   Автор:       Труфанов В.Е.
+ *                                                   Дата создания:  09.04.2019
+ * Copyright © 2019 tve                              Посл.изменение: 12.07.2019
+ * 
+ *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
+**/
+
+/* 
+   Cбрасываем стили браузера 
+*/
+*
+{
+   box-sizing: border-box; 
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, 
+q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, 
+dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
+footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+   margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
+{
+   display: block;
+}
+/* 
+   Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+   списков и таблиц и определяем в процентах пространство документа 
+*/
+html
+{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+   font-size: 10px;
+}
+body 
+{
+   font-size: 1.6rem;  
+   width: 100%;
+   height: 100%;
+   /*background: yellow;*/
+}
+/*
+ol 
+{ 
+	padding-left: 1.4rem;
+	list-style: decimal;
+}
+*/
+table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* 
+   Позиционируем элементы разметки, порядок размещения текстов
+*/
+/*
+.LeftBar 
+{
+   float: left;
+}
+.columnWrapper 
+{
+   float: right;
+}
+.main 
+{
+   float: left;
+   width: 75%;
+   border-left: dashed 0.1rem rgb(153,153,153);
+   border-right: dashed 0.1rem rgb(153,153,153);
+   text-align: justify; 
+}
+.RightBar 
+{
+   float: right;
+   width: 25%; 
+   text-align: center; 
+}
+*/
+/* 
+   Форматируем шапку страницы, меню и заголовок страницы
+*/
+/*
+header 
+{
+	background-color:rgb(93,43,78); 
+	background-image: linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
+	padding-bottom: 3rem;
+}
+header h1, header h2 
+{
+	font-size: 3rem;	
+	color: white;
+	font-weight: bold;
+	padding-top: 3rem;
+	clear: both;
+	padding-left: 1rem;
+}
+*/
+/* 
+   Определяем общие параметры колонок новостей и стихотворений
+*/
+/*
+aside h2 
+{
+	font-size: 1.9rem;
+	margin-top: 1rem;	
+}
+aside h3 
+{
+	font-size: 1.8rem;
+	margin-top: 1rem;
+}
+aside p, aside li 
+{
+	font-size: 1.5rem;
+	margin-top: 1rem;	
+}
+*/
+/* 
+   Определяем параметры колонок текста главного материала
+*/
+/*
+.main h1, .main h2 
+{
+	font-size: 2.3rem;
+	margin-top: 1rem;	
+}
+.main h3 
+{
+	font-size: 2.2rem;
+	margin-top: 1rem;	
+}
+.main p 
+{
+	margin-bottom: 0.8rem;	
+}
+*/
+/* 
+ Устанавливаем поля во всех трех колонках вокруг содержимого
+*/
+/*
+.LeftBar 
+{
+   padding: 0 2rem 0 1rem;
+}
+.main 
+{
+   padding: 0 2rem;
+}
+.RightBar 
+{
+   padding: 0 1rem 0 2rem;
+}
+*/
+/* 
+ Форматируем элементы подвала страницы
+*/
+/*
+footer 
+{
+	margin-top: 1.5rem;
+	font-size: 1.4rem;	
+	padding: 1rem 3rem 3rem 3rem;
+	background-color: black;
+	color: rgb(204,204,204);
+   clear: both;  
+}
+footer a 
+{
+	color: white;	
+}
+*/
+/*
+footer .p 
+{
+   padding: 0 1rem 0 0;
+}
+
+footer 
+{
+}
+*/
+/*
+footer .pLeft 
+{
+	float: left;
+}
+
+footer .pRight 
+{
+	float: right;
+}
+*/
+/*
+   Форматируем показ кода
+*/
+/*
+.CodeText
+{
+   font-size: 1.75rem;	
+   padding: 1rem 0 2rem 0;
+}
+*/
+/*
+   Форматируем меню
+*/
+/*
+.TopMenu
+{
+	border-bottom: 0.1rem solid rgba(255,255,255,.5);	
+	background-color: rgb(25,25,25);
+   zoom: 1;	
+}
+.TopMenu li
+{
+	float: left;
+}
+.TopMenu a
+{
+	float: left;	
+	font-size: 1.4rem;
+	color: white;
+	font-weight: normal;
+   text-decoration: none;
+	padding: 1rem;
+	border-right: 0.1rem dashed rgba(255,255,255,.75);
+	transition: all .5s;
+}
+.TopMenu li:last-of-type a 
+{
+	border-right: none;	
+}
+.TopMenu a:hover
+{
+	background-color: rgb(93,43,78);
+}
+.TopMenu ul
+{
+   position: relative;
+   display: inline-block;
+}
+.TopMenu ul li
+{
+   display: inline-block;
+}
+.TopMenu ul ul
+{
+   display: none;
+   position: absolute;
+   margin-top: 3.6rem;
+   margin-left: -1rem;
+}
+.TopMenu li:hover ul
+{
+   display: block;
+}
+.TopMenu li:hover li
+{
+   display: block;
+}
+.menuli
+{
+  background-color: #f63;
+}
+.menuli a
+{
+   width: 100%; 
+}
+*/
+
+
+
+/* далее - не отработанное */
+
+
+
+
+
+/*
+nav ul, header h1, footer p 
+{
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+*/
+/*
+img {
+  max-width: 100%;
+}
+img.half {
+    max-width: 50%;
+}
+img.left {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+img.right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+*/
+/*
+@media (min-width: 481px) and (max-width:768px) {
+  .RightBar {
+    float: none;
+    width: auto;
+    clear: both;
+    border-top: 2px solid black;
+    padding-top: 10px;
+  }
+  .columnWrapper {
+    width: auto;
+  }
+  .main {
+    border-right: none;
+  }
+}
+
+@media (max-width:480px) {
+  .columnWrapper, .main, .LeftBar, .RightBar {
+    float: none;
+    width: auto;
+  }
+  .main {
+    border: none;
+  }
+  .LeftBar, .RightBar {
+    border-top: 2px solid black;
+    margin-top: 25px;
+    padding-top: 10px;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+  nav {
+   text-align: center;
+  }
+  nav li {
+    float: none;
+    display: inline-block;
+  }
+
+  nav a {
+    float: none;
+    display: inline-block;
+    border: none;
+  }
+}
+*/
