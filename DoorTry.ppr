@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -26,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
-			+DoorTry
+		-Pages
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -86,10 +86,10 @@ DoorTry
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		+Стихи
+		-Стихи
 			-Соревнование с хакерами
 				www\Стихи\Соревнование с хакерами\idid.vb
 				www\Стихи\Соревнование с хакерами\index.php
@@ -127,27 +127,35 @@ DoorTry
 4=www\Стихи\Stih.php
 5=www\Site.php
 6=www\iHtmlBegin.php
+7=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
+8=www\Стихи\Соревнование с хакерами\index.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\News\MakeNews.php
+Selected=www\Стихи\Соревнование с хакерами\index.php
 [www\Main.php]
-TopLine=28
-Caret=1,91
+TopLine=31
+Caret=1,53
 [www\TDoorTryer\DoorTryerPage.php]
 TopLine=165
 Caret=1,1
 [www\IniMenu.php]
-TopLine=51
-Caret=1,92
+TopLine=73
+Caret=42,73
 [www\Pages\News\MakeNews.php]
-TopLine=65
-Caret=6,84
+TopLine=43
+Caret=13,64
 [www\Стихи\Stih.php]
-TopLine=13
+TopLine=15
 Caret=6,16
 [www\Site.php]
 TopLine=5
 Caret=18,25
 [www\iHtmlBegin.php]
-TopLine=25
+TopLine=21
 Caret=1,1
+[www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
+TopLine=53
+Caret=1,1
+[www\Стихи\Соревнование с хакерами\index.php]
+TopLine=43
+Caret=1,64

@@ -70,8 +70,13 @@ function NewsMenu()
    foreach($aNews as $k=>$v)
    {
       $s='<li class="menuli">'.
+         '<a href="index.php?Новости='.$k.'"'.
+         '>'.$k.'</a></li>';
+      /*
+      $s='<li class="menuli">'.
          '<a href="index.php?Novosti='.prown\getTranslit($k).'"'.
          '>'.$k.'</a></li>';
+      */
       echo $s;
    }
    return $Result;
@@ -104,6 +109,15 @@ function TopMenu()
    $Result = true;
    echo '<ul>';
    // Переключаем пункты меню главных материалов сайта
+   if (isComRequest('Подключить обработчик ошибок и исключений','Лист'))
+      echo '<li><a href="index.php?Лист='.
+         'Простой принцип программирования">'.
+         'Простой принцип программирования</a></li>';
+   else
+      echo '<li><a href="index.php?Лист='.
+         'Подключить обработчик ошибок и исключений">'.
+         'Подключить обработчик ошибок и исключений</a></li>';
+   /*
    if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
       echo '<li><a href="index.php?List='.
          'Prostoj-princip-programmirovaniya">'.
@@ -112,6 +126,7 @@ function TopMenu()
       echo '<li><a href="index.php?List='.
          'Podklyuchit-obrabotchik-oshibok-i-isklyuchenij">'.
          'Подключить обработчик ошибок/исключений</a></li>';
+   */
    // Подключаем показ стихотворения
    echo '<li><a href="">Штрихотворения</a>';
       echo '<ul>';

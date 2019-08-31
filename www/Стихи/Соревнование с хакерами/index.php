@@ -54,7 +54,6 @@ if ($SiteDevice==Mobile)
 {   
    ?>
    <?php
-   echo $SiteDevice.'<br>';
    SorevnovanieSHakerami();  
 }
 // Делаем разметку страницы для компьютера
@@ -62,7 +61,6 @@ else
 {   
    ?>
    <?php
-   echo $SiteDevice.'<br>';
    SorevnovanieSHakerami();  
 }
 

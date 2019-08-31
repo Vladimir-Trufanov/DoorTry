@@ -48,7 +48,8 @@ if ($SiteDevice==Mobile)
 }
 else 
 {   
-   if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
+   //if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
+   if (isComRequest('Подключить обработчик ошибок и исключений','Лист'))
       require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
    else
       require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
