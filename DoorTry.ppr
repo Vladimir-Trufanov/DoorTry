@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -121,41 +121,13 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\TDoorTryer\DoorTryerPage.php
-2=www\IniMenu.php
-3=www\Pages\News\MakeNews.php
-4=www\Стихи\Stih.php
-5=www\Site.php
-6=www\iHtmlBegin.php
-7=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
-8=www\Стихи\Соревнование с хакерами\index.php
+1=www\.htaccess
 [Selected Project Files]
 Main=
-Selected=www\Стихи\Соревнование с хакерами\index.php
+Selected=www\.htaccess
 [www\Main.php]
 TopLine=31
 Caret=1,53
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=165
+[www\.htaccess]
+TopLine=51
 Caret=1,1
-[www\IniMenu.php]
-TopLine=73
-Caret=42,73
-[www\Pages\News\MakeNews.php]
-TopLine=43
-Caret=13,64
-[www\Стихи\Stih.php]
-TopLine=15
-Caret=6,16
-[www\Site.php]
-TopLine=5
-Caret=18,25
-[www\iHtmlBegin.php]
-TopLine=21
-Caret=1,1
-[www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
-TopLine=53
-Caret=1,1
-[www\Стихи\Соревнование с хакерами\index.php]
-TopLine=43
-Caret=1,64
