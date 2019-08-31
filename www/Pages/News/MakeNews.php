@@ -40,12 +40,12 @@ function getUrlNews($key)
    foreach($aNews as $k=>$v)
    {
       $kt=prown\getTranslit($k);
-      
+      /*
       echo '$key='.$key.'<br>';
       echo '$k  ='.$k.'<br>';
       echo '$kt ='.$kt.'<br>';
       echo '$v  ='.$v.'<br>';
-      
+      */
       if ($key==$kt) 
       {
          $Result=$v;
@@ -81,7 +81,7 @@ function getNews()
 {
    global $s_NameNews; 
    $ret=getComRequest('Novosti');
-   echo '$ret='.$ret.'<br>';
+   //echo '$ret='.$ret.'<br>';
    if ($ret==NULL) $Result=False;
    else
    {

@@ -9,6 +9,9 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 30.08.2019
 
+PageContent();
+
+/*
 echo  '<div class="pageWrapper">';
 echo  '<header>';
 echo  '<nav class="TopMenu">';
@@ -16,6 +19,7 @@ echo  '<nav class="TopMenu">';
 echo  '</nav>';
 echo  '<h2>DoorTry - коллекционер ошибок</h2>';
 echo  '</header>';
+*/
 /*
 echo  '<div class="contentWrapper">';
 echo     '<div class="columnWrapper">';
@@ -35,10 +39,12 @@ echo     '<aside class="LeftBar">';
 echo     '</aside>'; }
 echo  '</div>';
 */
+/*
 echo '<footer>';
 echo '<div class="pLeft">Copyright © 2019 tve</div>';
 echo '<div class="pRight">Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></div>';
 echo '</footer>';
 echo '</div>';
+*/
 
 // <!-- --> ************************************************** MobiSite.php ***

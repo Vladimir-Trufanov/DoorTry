@@ -26,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
-			-DoorTry
+		+Pages
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -81,15 +81,15 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		-Стихи
+		+Стихи
 			-Соревнование с хакерами
 				www\Стихи\Соревнование с хакерами\idid.vb
 				www\Стихи\Соревнование с хакерами\index.php
@@ -121,33 +121,33 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\IniMenu.php
-2=www\Стихи\MakeStihi.php
-3=www\iHtmlBegin.php
-4=www\iHtmlEnd.php
-5=www\Стихи\Соревнование с хакерами\index.php
-6=www\Styles\MobiStyles.css
+1=www\TDoorTryer\DoorTryerPage.php
+2=www\IniMenu.php
+3=www\Pages\News\MakeNews.php
+4=www\Стихи\Stih.php
+5=www\Site.php
+6=www\iHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
+Selected=www\Pages\News\MakeNews.php
 [www\Main.php]
-TopLine=66
-Caret=45,89
-[www\IniMenu.php]
-TopLine=103
-Caret=40,99
-[www\Стихи\MakeStihi.php]
-TopLine=5
-Caret=17,17
-[www\iHtmlBegin.php]
-TopLine=13
-Caret=1,22
-[www\iHtmlEnd.php]
-TopLine=1
+TopLine=28
+Caret=1,91
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=165
 Caret=1,1
-[www\Стихи\Соревнование с хакерами\index.php]
-TopLine=39
-Caret=1,63
-[www\Styles\MobiStyles.css]
-TopLine=363
-Caret=3,317
+[www\IniMenu.php]
+TopLine=51
+Caret=1,92
+[www\Pages\News\MakeNews.php]
+TopLine=65
+Caret=6,84
+[www\Стихи\Stih.php]
+TopLine=13
+Caret=6,16
+[www\Site.php]
+TopLine=5
+Caret=18,25
+[www\iHtmlBegin.php]
+TopLine=25
+Caret=1,1

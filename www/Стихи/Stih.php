@@ -13,7 +13,7 @@ function Stih()
 {
 $Result = true;
 ?>
-<h2>Сcоревнование с хакерами</h2>
+<h2>Соревнование с хакерами</h2>
 <br>
 <p class="stihabz">
    <p class="stihstr">Бежал ноябрь, работа шла</p>

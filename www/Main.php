@@ -40,18 +40,20 @@ require_once $SiteRoot."/Pages/News/MakeNews.php";
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
 // Выполняем начальную инициализацию
-require_once $SiteRoot."/IniMem.php";   
-
+require_once $SiteRoot."/IniMem.php"; 
 // Подключаем динамические страницы с SEO-тегами, H1 и страницами
-if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
-    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
-else
-    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
+if ($SiteDevice==Mobile)
+{   
+   require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
+}
+else 
+{   
+   if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
+      require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
+   else
+      require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
+}
 // Подключаем управление стихами и ранее выбранное стихотворение
-/*
-require_once $SiteRoot."/Stihi/MakeStihi.php";   
-require_once $SiteRoot."/Stihi/Stih.php"; 
-*/  
 require_once $SiteRoot."/Стихи/MakeStihi.php";   
 require_once $SiteRoot."/Стихи/Stih.php";   
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       

@@ -51,7 +51,6 @@ $aNews=array
 (            
    'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
    'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
-   'Абвгде ёжзийк лмнопрстуф хцчш щьыъэюя'  => 'http://news.yandex.ru/society.rss',   
    'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
    'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
    'Яндекс Интернет'  => 'http://feeds.feedburner.com/yandex/MAOo',
@@ -82,7 +81,7 @@ $aStihi=array
    'Соревнование с хакерами' => '*',   
 );
 // ****************************************************************************
-// *                       Вывести пункты новостного меню                     *
+// *                       Вывести пункты меню стихотворений                  *
 // ****************************************************************************
 function StihiMenu()
 {
@@ -90,11 +89,6 @@ function StihiMenu()
    $Result = true;
    foreach($aStihi as $k=>$v)
    {
-      /*
-      $s='<li class="menuli">'.
-         '<a href="index.php?Stihi='.prown\getTranslit($k).'"'.
-         '>'.$k.'</a></li>';
-      */
       $s='<li class="menuli">'.
          '<a href="index.php?Stihi='.$k.'"'.
          '>'.$k.'</a></li>';

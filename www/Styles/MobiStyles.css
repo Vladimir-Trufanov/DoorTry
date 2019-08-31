@@ -44,7 +44,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 html
 {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
-   font-size: 10px;
+   font-size: 20px;
 }
 body 
 {
@@ -283,8 +283,6 @@ footer .pRight
    width: 100%; 
 }
 */
-
-
 
 /* далее - не отработанное */
 

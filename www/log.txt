@@ -70,3 +70,9 @@ Stack trace:
 [30-Aug-2019 15:30:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$ret' (T_VARIABLE), expecting '(' in C:\DoorTry\www\Pages\News\MakeNews.php on line 85
 [30-Aug-2019 16:03:41 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/Stihi/MakeStihi.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 51
 [30-Aug-2019 16:57:22 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/MakeStihi.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 51
+[30-Aug-2019 21:11:03 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function SeoTags() in C:\DoorTry\www\iHtmlBegin.php:36
+Stack trace:
+#0 C:\DoorTry\www\Main.php(76): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\iHtmlBegin.php on line 36
