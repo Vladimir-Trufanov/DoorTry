@@ -26,46 +26,37 @@ require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 require_once $SiteRoot."/Стихи/Соревнование с хакерами/sorevnovanie-s-hakerami.php";   
 // Формируем страницу окружения стихотворения
 $SiteDevice=prown\getSiteDevice();  // 'Computer','Mobile','Tablet'
-?>
-   <!DOCTYPE html>
-   <html lang="ru">
-   <head>
-      <title>Соревнование с хакерами</title>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-      <meta name="description" content="
-         Бежал ноябрь, работа шла
-         В душе кипели страсти
-         Жил на работе - чуть дыша
-         На улице - ненастье
-      ">
-      <meta name="keywords" content="
-         стихи,всякие,разные,страсти,хакеры,защита,программирование,
-         девушки,встречи
-      ">
-      <!-- 
-      <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
-      -->
-   </head>
-   <body>
-<?php
-
+echo '<!DOCTYPE html>';
+echo '<html lang="ru">';
+echo '<head>';
+echo '<title>Соревнование с хакерами</title>';
+echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+echo '<meta name="description" content="'.
+         'Бежал ноябрь, работа шла'.
+         'В душе кипели страсти'.
+         'Жил на работе - чуть дыша'.
+         'На улице - ненастье'.
+     '">';
+echo '<meta name="keywords" content="'.
+         'стихи,всякие,разные,страсти,хакеры,защита,программирование,'.
+         'девушки,встречи'.
+     '">';
+echo '<link href="Stihi.css" rel="stylesheet">';
+echo '<!--'. 
+     '<link rel="stylesheet" type="text/css" href="Styles/Styles.css">'.
+     '-->';
+echo '</head>';
+echo '<body>';
 // Делаем разметку страницы для смартфона
 if ($SiteDevice==Mobile) 
 {   
-   ?>
-   <?php
    SorevnovanieSHakerami();  
 }
 // Делаем разметку страницы для компьютера
 else 
 {   
-   ?>
-   <?php
    SorevnovanieSHakerami();  
 }
-
-?>
-   </body> 
-   </html>
-<?php
+echo '</body>'; 
+echo '</html>';
 // <!-- --> *********************************** sorevnovanie-s-hakerami.php ***

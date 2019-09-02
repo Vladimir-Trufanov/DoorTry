@@ -1,0 +1,44 @@
+/** HTML5/CSS3, EDGE/CHROME                                   *** Stihi.css ***
+ *
+ ******************************************************************************
+ * doortry.ru     Отформатировать колонку со стихами для сайт сбора сообщений *
+ *                                                     об ошибках/исключениях *
+ ******************************************************************************
+ *
+ *                                                   Автор:       Труфанов В.Е.
+ *                                                   Дата создания:  09.04.2019
+ * Copyright © 2019 tve                              Посл.изменение: 02.09.2019
+ * 
+ *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
+**/
+.stihabzL 
+{
+   text-align: left; 
+}
+.stihabzR 
+{
+   text-align: right; 
+}
+.stihabz 
+{
+   text-align: center; 
+}
+.stihabz, .stihabzL, .stihabzR  
+{
+   margin: 0 0 2rem 0
+}
+.stihabz p, .stihabzL p, .stihabzR p  
+{
+   margin: 0 0 0.8rem 0
+}
+.stihabzPdp 
+{
+   text-align: center; 
+   margin: 3rem 0 0.5rem 0
+}
+.stihabzPdp p 
+{
+	font-size: 1.2rem;	
+	font-weight: bold;
+   margin: 0 0 0.5rem 0
+}

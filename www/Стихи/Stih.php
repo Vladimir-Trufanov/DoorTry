@@ -15,62 +15,61 @@ $Result = true;
 ?>
 <h2>Соревнование с хакерами</h2>
 <br>
-<p class="stihabz">
+<div class="stihabzL">
    <p class="stihstr">Бежал ноябрь, работа шла</p>
    <p class="stihstr">В душе кипели страсти</p>
    <p class="stihstr">Жил на работе - чуть дыша</p>
    <p class="stihstr">На улице - ненастье</p>
-</p>
-<p class="stihabz">
+</div>
+<div class="stihabzL">
    <p class="stihstr">А тут пришла проблема вдруг:</p>
    <p class="stihstr">"Там Учпрофстрой пытался взять</p>
    <p class="stihstr">программу Дмитрича опять!"</p>
    <p class="stihstr">Сгрудились девушки вокруг:</p>
-</p>
-<p class="stihabz">
+</div>
+<div class="stihabzL">
    <p class="stihstr">"Придумать нужно" - говорят</p>
    <p class="stihstr">"Защиту". И в глаза глядят</p>
-</p>
-<p class="stihabz">
+</div>
+<div class="stihabzL">
    <p class="stihstr">Придумать надо. Боль ясна.</p>
-   <p class="stihstr">Ну чтож, иду и думаю</p>
-</p>
-<p class="stihabz">
+   <p class="stihstr">Ну что ж, иду и думаю</p>
+</div>
+<div class="stihabzL">
    <p class="stihstr">На то мне голова дана</p>
    <p class="stihstr">Сажусь и программирую</p>
-</p>
-<p class="stihabz">
+</div>
+<div class="stihabzL">
    <p class="stihstr">Пытаюсь сделать, чтоб другие</p>
    <p class="stihstr">Могли программу нашу брать,</p>
-   <p class="stihstr">Но не могли бы запускать."</p>
+   <p class="stihstr">Но не могли бы запускать.</p>
    <p class="stihstr">... А думы в голове иные</p>
-</p>
-<p class="stihabz">
+</div>
+<div class="stihabzL">
    <p class="stihstr">Горят, как факел, в голове</p>
-   <p class="stihstr">Три милых буквы - "ич" и "е"</p>
-</p>
-<p class="stihabz2">
+   <p class="stihstr">Три милых буквы - "ич" и "е"...</p>
+</div>
+<div class="stihabzR">
    <p class="stihstr">Две недели пролетели</p>
    <p class="stihstr">Всё готово, как хотели</p>
-</p>
-<p class="stihabz2">
+</div>
+<div class="stihabzR">
    <p class="stihstr">Программу можно запускать,</p>
    <p class="stihstr">Но если буквы не зажечь</p>
    <p class="stihstr">Не избежать серьёзных встреч:</p>
    <p class="stihstr">"Нельзя программы воровать!"</p>
-</p>
-<p class="stihabz2">
+</div>
+<div class="stihabzR">
    <p class="stihstr">Раскроют хакеры игру</p>
    <p class="stihstr">Опять защиту сделаю</p>
    <p class="stihstr">Всё те же буквы я возьму</p>
    <p class="stihstr">Идею вскрою свежую</p>
-</p>
-<br>
-<p class="stihabz">
+</div>
+<div class="stihabzPdp">
    <p class="stihstr">январь, кабинет</p>
    <p class="stihstr">июнь, 115 километр</p>
    <p class="stihstr">кабинет, декабрь, 1998</p>
-</p>
+</div>
 <?php
 return $Result;
 }

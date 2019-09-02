@@ -19,6 +19,7 @@ if ($SiteDevice==Mobile)
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    SeoTags();
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
+   echo '<link href="Styles/Stihi.css" rel="stylesheet">';
    echo '<link href="JS/TJsPrown.css" rel="stylesheet" type="text/css">'; 
    echo '<script src="/JS/TJsPrown.js"></script>';
    echo '<script src="/JS/DoorTry.js"></script>';
@@ -35,6 +36,7 @@ else
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    SeoTags();
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
+   echo '<link href="Styles/Stihi.css" rel="stylesheet">';
    // Определяем заданную ленту новостей
    getNews();
    if (isNews($s_NameNews)) 

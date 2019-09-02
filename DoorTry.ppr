@@ -81,16 +81,17 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
+			www\Styles\Stihi.css
 			www\Styles\Styles.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		-Стихи
-			-Соревнование с хакерами
+		+Стихи
+			+Соревнование с хакерами
 				www\Стихи\Соревнование с хакерами\idid.vb
 				www\Стихи\Соревнование с хакерами\index.php
 				www\Стихи\Соревнование с хакерами\molody-dushoj.jpg
@@ -122,12 +123,36 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\.htaccess
+2=www\Стихи\Stih.php
+3=www\Styles\Styles.css
+4=www\Styles\Stihi.css
+5=www\iHtmlBegin.php
+6=www\Стихи\Соревнование с хакерами\index.php
+7=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\Стихи\Соревнование с хакерами\index.php
 [www\Main.php]
 TopLine=31
 Caret=1,53
 [www\.htaccess]
 TopLine=51
 Caret=1,1
+[www\Стихи\Stih.php]
+TopLine=7
+Caret=54,50
+[www\Styles\Styles.css]
+TopLine=85
+Caret=1,107
+[www\Styles\Stihi.css]
+TopLine=1
+Caret=16,41
+[www\iHtmlBegin.php]
+TopLine=29
+Caret=1,23
+[www\Стихи\Соревнование с хакерами\index.php]
+TopLine=25
+Caret=19,44
+[www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
+TopLine=1
+Caret=31,12
