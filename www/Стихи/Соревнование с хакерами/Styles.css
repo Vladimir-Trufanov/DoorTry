@@ -51,13 +51,6 @@ body
    width: 100%;
    height: 100%;
 }
-/*
-ol 
-{ 
-	padding-left: 1.4rem;
-	list-style: decimal;
-}
-*/
 table 
 {
 	border-collapse: collapse;
@@ -74,20 +67,30 @@ table
 #ImgVerh
 {
    float: right;
-   background: red;
 }
 #ImgStrap
 {
-   background: white;
-   width: 100%;
 }
 #StihNiz 
 {
    float: right;
-   background: blue;
+   background: yellow;
 }
 #ImgNiz
 {
    float: left;
-   background: green;
+}
+
+.Gallery
+{
+   margin-left: 6%;
+   width: 94%;
+}
+.imgCard
+{
+   width:100%;
+}
+.pCard
+{
+   text-align: center;
 }

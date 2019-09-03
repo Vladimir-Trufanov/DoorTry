@@ -125,33 +125,33 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
-2=www\Стихи\Соревнование с хакерами\Styles.css
-3=www\Стихи\Соревнование с хакерами\index.php
-4=www\Стихи\Соревнование с хакерами\idid.vb
-5=www\Site.php
-6=www\Pages\DoorTry\ConnHandler.php
+1=www\Стихи\Соревнование с хакерами\Styles.css
+2=www\Стихи\Соревнование с хакерами\index.php
+3=www\Site.php
+4=www\Pages\DoorTry\ConnHandler.php
+5=www\Стихи\Соревнование с хакерами\idid.vb
+6=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
 [Selected Project Files]
 Main=
-Selected=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
+Selected=www\Стихи\Соревнование с хакерами\Styles.css
 [www\Main.php]
 TopLine=31
 Caret=1,53
-[www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
-TopLine=72
-Caret=14,90
 [www\Стихи\Соревнование с хакерами\Styles.css]
-TopLine=66
-Caret=1,94
+TopLine=72
+Caret=1,97
 [www\Стихи\Соревнование с хакерами\index.php]
-TopLine=23
+TopLine=27
 Caret=1,1
-[www\Стихи\Соревнование с хакерами\idid.vb]
-TopLine=1
-Caret=26,5
 [www\Site.php]
 TopLine=13
 Caret=1,1
 [www\Pages\DoorTry\ConnHandler.php]
 TopLine=23
 Caret=31,40
+[www\Стихи\Соревнование с хакерами\idid.vb]
+TopLine=1
+Caret=15,4
+[www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
+TopLine=92
+Caret=5,114

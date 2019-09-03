@@ -80,14 +80,15 @@ function SorevnovanieSHakerami($SubPage=NULL)
       StihVerh();
       echo '</div>';
       echo '<div id="ImgVerh">';
-      echo 'ImgVerh';
+      ?>
+      <img src="molody-dushoj 811x1082.jpg" alt="Молоды душой">
+      <?php
       echo '</div>';
    echo '</div>';
 
    echo '<div id="ImgStrap">';
    ?>
-   <img src="Images/majskij-vecher-v-karelii.jpg" alt="Майский вечер в Карелии">
-   <img src="majskij-vecher-v-karelii.jpg" alt="Майский вечер в Карелии">
+   <img src="majskij-vecher-v-karelii 2416x503.jpg" alt="Майский вечер в Карелии">
    <?php
    echo '</div>';
 
@@ -96,11 +97,28 @@ function SorevnovanieSHakerami($SubPage=NULL)
       StihNiz();
       echo '</div>';
       echo '<div id="ImgNiz">';
-      echo 'ImgNiz';
+      ?>
+      <img src="raznye-vmeste 1280x850.jpg" alt="Разные вместе">
+      <?php
       echo '</div>';
    echo '</div>';
    $Result = true;
 ?>
+<div class="Gallery">
+ <div class="Card">
+   <img class="imgCard" 
+    src="majskij-vecher-v-karelii 2416x503.jpg" 
+    alt="Майский вечер в Карелии"
+   >
+   <p class="pCard"> 
+    tttryyy
+   </p>
+ </div>
+</div>
+
+
+   <?php
+   ?> 
 <?php
 return $Result;
 }
