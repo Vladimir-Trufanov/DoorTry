@@ -9,7 +9,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 22.08.2019
 
-function Stih()
+function Stih($SubPage=NULL)
 {
 $Result = true;
 ?>

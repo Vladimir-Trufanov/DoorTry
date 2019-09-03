@@ -26,8 +26,8 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
-			-DoorTry
+		+Pages
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -81,7 +81,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -94,9 +94,12 @@ DoorTry
 			+Соревнование с хакерами
 				www\Стихи\Соревнование с хакерами\idid.vb
 				www\Стихи\Соревнование с хакерами\index.php
-				www\Стихи\Соревнование с хакерами\molody-dushoj.jpg
-				www\Стихи\Соревнование с хакерами\raznye-vmeste.jpg
+				www\Стихи\Соревнование с хакерами\majskij-vecher-v-karelii.jpg
+				www\Стихи\Соревнование с хакерами\molody-dushoj 811x1082.jpg
+				www\Стихи\Соревнование с хакерами\raznye-vmeste 1280x850.jpg
 				www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
+				www\Стихи\Соревнование с хакерами\Stihi.css
+				www\Стихи\Соревнование с хакерами\Styles.css
 			www\Стихи\MakeStihi.php
 			www\Стихи\Stih.php
 		www\.htaccess
@@ -122,37 +125,33 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\.htaccess
-2=www\Стихи\Stih.php
-3=www\Styles\Styles.css
-4=www\Styles\Stihi.css
-5=www\iHtmlBegin.php
-6=www\Стихи\Соревнование с хакерами\index.php
-7=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
+1=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
+2=www\Стихи\Соревнование с хакерами\Styles.css
+3=www\Стихи\Соревнование с хакерами\index.php
+4=www\Стихи\Соревнование с хакерами\idid.vb
+5=www\Site.php
+6=www\Pages\DoorTry\ConnHandler.php
 [Selected Project Files]
 Main=
-Selected=www\Стихи\Соревнование с хакерами\index.php
+Selected=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
 [www\Main.php]
 TopLine=31
 Caret=1,53
-[www\.htaccess]
-TopLine=51
-Caret=1,1
-[www\Стихи\Stih.php]
-TopLine=7
-Caret=54,50
-[www\Styles\Styles.css]
-TopLine=85
-Caret=1,107
-[www\Styles\Stihi.css]
-TopLine=1
-Caret=16,41
-[www\iHtmlBegin.php]
-TopLine=29
-Caret=1,23
-[www\Стихи\Соревнование с хакерами\index.php]
-TopLine=25
-Caret=19,44
 [www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
+TopLine=72
+Caret=14,90
+[www\Стихи\Соревнование с хакерами\Styles.css]
+TopLine=66
+Caret=1,94
+[www\Стихи\Соревнование с хакерами\index.php]
+TopLine=23
+Caret=1,1
+[www\Стихи\Соревнование с хакерами\idid.vb]
 TopLine=1
-Caret=31,12
+Caret=26,5
+[www\Site.php]
+TopLine=13
+Caret=1,1
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=23
+Caret=31,40
