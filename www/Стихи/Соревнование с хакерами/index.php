@@ -41,8 +41,8 @@ echo '<meta name="keywords" content="'.
          'стихи,всякие,разные,страсти,хакеры,защита,программирование,'.
          'девушки,встречи'.
      '">';
-echo '<link href="Styles.css" rel="stylesheet" type="text/css">';
 echo '<link href="Stihi.css"  rel="stylesheet" type="text/css">';
+echo '<link href="Styles.css" rel="stylesheet" type="text/css">';
 echo '</head>';
 echo '<body>';
 // Делаем разметку страницы для смартфона
