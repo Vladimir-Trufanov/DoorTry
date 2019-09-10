@@ -8,8 +8,10 @@
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 30.08.2019
-
-PageContent();
+echo '<div class="main">';
+   MakeH1();
+   PageContent();
+echo '</div>';
 
 /*
 echo  '<div class="pageWrapper">';

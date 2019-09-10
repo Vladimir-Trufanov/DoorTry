@@ -44,11 +44,10 @@ require_once $SiteRoot."/IniMem.php";
 // Подключаем динамические страницы с SEO-тегами, H1 и страницами
 if ($SiteDevice==Mobile)
 {   
-   require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
+   require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 }
 else 
 {   
-   //if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
    if (isComRequest('Подключить обработчик ошибок и исключений','Лист'))
       require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
    else

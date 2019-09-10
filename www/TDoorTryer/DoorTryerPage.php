@@ -215,7 +215,8 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
    // Выводим сообщение об ошибке/исключении через сайт doortry.ru
    if ($FaultLocation==true)
    {
-      $uripage="http://kwinflatht.nichost.ru/error.php".
+      $uripage="http://doortry.ru/error.php".
+      //$uripage="http://kwinflatht.nichost.ru/error.php".
       //$uripage="http://localhost:82/error.php".
          "?estr=".urlencode($errstr).
          "&etype=".urlencode($errtype).

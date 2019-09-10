@@ -68,7 +68,49 @@ table
 /* 
    Позиционируем элементы разметки, порядок размещения текстов
 */
+.hh 
+{
+   width: 100%;
+   /*background-color: yellow;*/
+   text-align: center;
+   font-size: 1.8rem;  
+	font-weight: bold;
+}
+.main 
+{
+   width: 100%;
+   text-align: justify;
+   /*background-color: yellow;*/
+}
+.dAbz
+{
+   width: 100%;
+   /*background-color: #F3FD72;*/
+   background-color: white;
+   margin-top: 1rem;
+}
+#dImgSimPri
+{
+   width:98%;
+   margin-left: 1.2rem;
+}
+#ImgSimPri
+{
+   width:100%;
+}
+#dImgObrErr
+{
+   width:100%;
+}
+#ImgObrErr
+{
+   width:100%;
+}
+
+
+
 /*
+
 .LeftBar 
 {
    float: left;
