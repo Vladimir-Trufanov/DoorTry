@@ -71,6 +71,10 @@ $Result = true;
    <p class="stihstr">кабинет, декабрь, 1998</p>
 </div>
 <?php
+      echo '<div id="dImghStih">';
+      echo '<img id="ImghStih" src="sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';
+      echo '</div>';
+
 return $Result;
 }
 // <!-- --> *********************************** sorevnovanie-s-hakerami.php ***

@@ -7,13 +7,13 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 12.07.2019
+ * Copyright © 2019 tve                              Посл.изменение: 12.09.2019
  * 
  *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
 **/
 
 /* 
-   Cбрасываем стили браузера 
+ Cбрасываем стили браузера 
 */
 *
 {
@@ -38,8 +38,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
    display: block;
 }
 /* 
-   Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
-   списков и таблиц и определяем в процентах пространство документа 
+ Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+ списков и таблиц и определяем в процентах пространство документа 
 */
 html
 {
@@ -91,23 +91,72 @@ table
    text-align: center; 
 }
 /* 
-   Форматируем шапку страницы, меню и заголовок страницы
+ Форматируем шапку страницы, меню и заголовок страницы
 */
 header 
 {
 	background-color:rgb(93,43,78); 
-	background-image: linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
-	padding-bottom: 3rem;
+	background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
+   height:16rem;
+   margin-left:23rem;
 }
 header h1, header h2 
 {
 	font-size: 3rem;	
 	color: white;
 	font-weight: bold;
-	padding-top: 3rem;
-	clear: both;
+   padding-top: 3rem;
 	padding-left: 1rem;
 }
+/* 
+ Размещаем штроихкод с адресом сайта
+*/
+
+#hVerh
+{
+   width:100%;
+   /*height:10rem;*/
+   /*background:blue;*/
+   margin-left:0;
+   margin-right:0;
+}
+#dImghVerh
+{
+   float:left;
+   border:0.1rem solid black;
+   margin-left:3rem;
+   /*background:yellow;*/
+   /*width:10%;*/
+}
+#dNavH2Verh 
+{
+   /*height:5rem;*/
+   /*background:red;*/
+   /*width:90%;*/
+   /*padding-top:5rem;*/
+}
+#ImghVerh
+{
+   height:12rem;
+}
+
+#dImghStih
+{
+   /*float:left;*/
+   /*border:0.1rem solid black;*/
+   margin-top:3rem;
+   /*background:yellow;*/
+   /*width:10%;*/
+}
+#ImghStih
+{
+   height:16rem;
+}
+
+
+
+
+
 
 /* 
    Определяем общие параметры колонок новостей и стихотворений

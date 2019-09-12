@@ -27,16 +27,21 @@ function MakeQrcode()
    */
    
    // 2 штрих-код
-   //include "QrCode/qrlib.php";
-   //QRcode::png("TPhpPrown - библиотека PHP-прикладных функций","TPhpPrown.png","L",4,4);
-
+   /*
+   include "QrCode/qrlib.php";
+   QRcode::png("http://doortry.ru/%D0%A1%D1%82%D0%B8%D1%85%D0%B8/%D0%A1%D0%BE%D1%80%D0%B5%D0%B2%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%20%D1%85%D0%B0%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B8/","sorevnovanie-s-hakerami.png","L",4,4);
+   */
+   
    //QRcode::png("http://doortry.ru - Обработчик ошибок и исключений","doortry.png","L",4,4);
    //QRcode::png("http://ittve.me", "test.png", "L", 4, 4);
   
    // 3 штрих-код
-   //$backColor = 0xFFFF00; //0x555555;
-   //$foreColor = 0xFF00FF; //0x111111;
-   //QRcode::png("http://doortry.ru","doortry.png","L",4,4,false,$backColor,$foreColor);
+   /*
+   include "QrCode/qrlib.php";
+   $backColor = 0xFFFF00; //0x555555;
+   $foreColor = 0xFF00FF; //0x111111;
+   QRcode::png("http://doortry.ru/%D0%A1%D1%82%D0%B8%D1%85%D0%B8/%D0%A1%D0%BE%D1%80%D0%B5%D0%B2%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%20%D1%85%D0%B0%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B8/","sorevnovanie-s-hakerami.png","L",4,4,false,$backColor,$foreColor);
+   */
    return $Result;
 }
 // <!-- --> ************************************************ MakeQrcode.php ***

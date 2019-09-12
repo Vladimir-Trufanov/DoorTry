@@ -125,45 +125,25 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\Pages\DoorTry\ConnHandler.php
-2=www\Стихи\Соревнование с хакерами\idid.vb
-3=www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
-4=www\iHtmlBegin.php
-5=www\Styles\Styles.css
-6=www\MobiSite.php
-7=www\Styles\MobiStyles.css
-8=www\Pages\DoorTry\SimPrincip.php
-9=www\TDoorTryer\DoorTryerPage.php
+1=www\Стихи\Соревнование с хакерами\Styles.css
+2=www\Site.php
+3=www\Styles\Styles.css
+4=www\Стихи\Stih.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\DoorTry\SimPrincip.php
+Selected=www\Styles\Styles.css
 [www\Main.php]
 TopLine=25
 Caret=16,45
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=5
-Caret=61,34
-[www\Стихи\Соревнование с хакерами\idid.vb]
-TopLine=1
-Caret=15,4
-[www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php]
-TopLine=84
-Caret=11,104
-[www\iHtmlBegin.php]
-TopLine=9
-Caret=1,16
+[www\Стихи\Соревнование с хакерами\Styles.css]
+TopLine=77
+Caret=1,100
+[www\Site.php]
+TopLine=7
+Caret=52,23
 [www\Styles\Styles.css]
-TopLine=342
-Caret=1,353
-[www\MobiSite.php]
-TopLine=1
-Caret=1,11
-[www\Styles\MobiStyles.css]
-TopLine=73
-Caret=34,88
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=25
-Caret=4,25
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=131
-Caret=31,218
+TopLine=91
+Caret=37,112
+[www\Стихи\Stih.php]
+TopLine=57
+Caret=98,75

@@ -76,3 +76,10 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\iHtmlBegin.php on line 36
+[12-Sep-2019 16:53:34 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Class 'QRcode' not found in C:\DoorTry\www\MakeQrcode.php:39
+Stack trace:
+#0 C:\DoorTry\www\Site.php(35): MakeQrcode()
+#1 C:\DoorTry\www\Main.php(91): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\MakeQrcode.php on line 39
