@@ -126,24 +126,20 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Стихи\Соревнование с хакерами\Styles.css
-2=www\Site.php
-3=www\Styles\Styles.css
-4=www\Стихи\Stih.php
+2=www\Styles\Styles.css
+3=www\Site.php
 [Selected Project Files]
 Main=
 Selected=www\Styles\Styles.css
 [www\Main.php]
-TopLine=25
-Caret=16,45
+TopLine=57
+Caret=32,51
 [www\Стихи\Соревнование с хакерами\Styles.css]
 TopLine=77
 Caret=1,100
-[www\Site.php]
-TopLine=7
-Caret=52,23
 [www\Styles\Styles.css]
-TopLine=91
-Caret=37,112
-[www\Стихи\Stih.php]
-TopLine=57
-Caret=98,75
+TopLine=82
+Caret=15,97
+[www\Site.php]
+TopLine=1
+Caret=1,1

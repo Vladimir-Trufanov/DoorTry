@@ -22,7 +22,7 @@ function SeoTags()
 
 function MakeH1()
 {
-   echo "<h1>Подключить обработчик ошибок/исключений - Connect error/exception handler</h1>";
+   echo "<h1>Подключение обработчика ошибок/исключений - Connect error/exception handler</h1>";
 }
 
 function PageContent()

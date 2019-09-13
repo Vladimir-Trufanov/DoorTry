@@ -7,7 +7,7 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 12.09.2019
+ * Copyright © 2019 tve                              Посл.изменение: 13.09.2019
  * 
  *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
 **/
@@ -17,25 +17,24 @@
 */
 *
 {
-   box-sizing: border-box; 
+   box-sizing:border-box; 
 }
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, 
-q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, 
-dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
-thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
-footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video 
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,
+strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video 
 {
-   margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
+   margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
 	vertical-align: baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
 {
-   display: block;
+   display:block;
 }
 /* 
  Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
@@ -43,52 +42,35 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 */
 html
 {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
-   font-size: 10px;
+	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;	
+   font-size:10px;
 }
 body 
 {
-   font-size: 1.6rem;  
-   width: 100%;
-   height: 100%;
+   font-size:1.6rem;  
+   width:100%;
+   height:100%;
    /*background: yellow;*/
 }
-/*
-ol 
-{ 
-	padding-left: 1.4rem;
-	list-style: decimal;
-}
-*/
 table 
 {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse:collapse;
+	border-spacing:0;
 } 
 /* 
-   Позиционируем элементы разметки, порядок размещения текстов
+ Размещаем штроихкод с адресом сайта
 */
-.LeftBar 
+#dImghVerh
 {
-   float: left;
+   float:left;
+   /*border:0.1rem solid black;*/
+   border-left:0.1rem solid black;
+   border-bottom:0.1rem solid black;
+   margin-left:2rem;
 }
-.columnWrapper 
+#ImghVerh
 {
-   float: right;
-}
-.main 
-{
-   float: left;
-   width: 75%;
-   border-left: dashed 0.1rem rgb(153,153,153);
-   border-right: dashed 0.1rem rgb(153,153,153);
-   text-align: justify; 
-}
-.RightBar 
-{
-   float: right;
-   width: 25%; 
-   text-align: center; 
+   height:12rem;
 }
 /* 
  Форматируем шапку страницы, меню и заголовок страницы
@@ -97,314 +79,274 @@ header
 {
 	background-color:rgb(93,43,78); 
 	background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
-   height:16rem;
-   margin-left:23rem;
+   height:12.5rem;
+   margin-left:14.4rem;
 }
 header h1, header h2 
 {
-	font-size: 3rem;	
-	color: white;
-	font-weight: bold;
-   padding-top: 3rem;
-	padding-left: 1rem;
+	font-size:3rem;	
+	color:white;
+	font-weight:bold;
+   padding-top:2.4rem;
+	padding-left:1rem;
 }
-/* 
- Размещаем штроихкод с адресом сайта
-*/
-
-#hVerh
+#dVer
 {
-   width:100%;
-   /*height:10rem;*/
-   /*background:blue;*/
-   margin-left:0;
-   margin-right:0;
+   float:right;
+	color:white;
+   padding-top:1rem;   
+   padding-right:1rem;
 }
-#dImghVerh
+
+/* 
+ Позиционируем элементы разметки, порядок размещения текстов
+*/
+.LeftBar 
 {
    float:left;
-   border:0.1rem solid black;
-   margin-left:3rem;
-   /*background:yellow;*/
-   /*width:10%;*/
 }
-#dNavH2Verh 
+.columnWrapper 
 {
-   /*height:5rem;*/
-   /*background:red;*/
-   /*width:90%;*/
-   /*padding-top:5rem;*/
+   float:right;
 }
-#ImghVerh
+.main 
 {
-   height:12rem;
+   float:left;
+   width:75%;
+   border-left:dashed 0.1rem rgb(153,153,153);
+   border-right:dashed 0.1rem rgb(153,153,153);
+   text-align:justify; 
 }
-
+.RightBar 
+{
+   float:right;
+   width:25%; 
+   text-align:center; 
+}
+/* 
+ Позиционируем штрих-код стихотворения
+*/
 #dImghStih
 {
-   /*float:left;*/
-   /*border:0.1rem solid black;*/
    margin-top:3rem;
-   /*background:yellow;*/
-   /*width:10%;*/
 }
 #ImghStih
 {
    height:16rem;
 }
-
-
-
-
-
-
 /* 
-   Определяем общие параметры колонок новостей и стихотворений
+ Определяем общие параметры колонок новостей и стихотворений
 */
 aside h2 
 {
-	font-size: 1.9rem;
-	margin-top: 1rem;	
+	font-size:1.9rem;
+	margin-top:1rem;	
 }
 aside h3 
 {
-	font-size: 1.8rem;
-	margin-top: 1rem;
+	font-size:1.8rem;
+	margin-top:1rem;
 }
 aside p, aside li 
 {
-	font-size: 1.5rem;
-	margin-top: 1rem;	
+	font-size:1.5rem;
+	margin-top:1rem;	
 }
 /* 
-   Определяем параметры колонок текста главного материала
+ Определяем параметры колонок текста главного материала
 */
 .main h1, .main h2 
 {
-	font-size: 2.3rem;
-	margin-top: 1rem;	
+	font-size:2.3rem;
+	margin-top:1rem;	
 }
 .main h3 
 {
-	font-size: 2.2rem;
-	margin-top: 1rem;	
+	font-size:2.2rem;
+	margin-top:1rem;	
 }
 .main p 
 {
-	margin-bottom: 0.8rem;	
+	margin-bottom:0.8rem;	
 }
 /* 
  Устанавливаем поля во всех трех колонках вокруг содержимого
 */
 .LeftBar 
 {
-   padding: 0 2rem 0 1rem;
+   padding:0 2rem 0 1rem;
 }
 .main 
 {
-   padding: 0 2rem;
+   padding:0 2rem;
 }
 .RightBar 
 {
-   padding: 0 1rem 0 2rem;
+   padding:0 1rem 0 2rem;
 }
 /* 
  Форматируем элементы подвала страницы
 */
 footer 
 {
-	margin-top: 1.5rem;
-	font-size: 1.4rem;	
-	padding: 1rem 3rem 3rem 3rem;
-	background-color: black;
-	color: rgb(204,204,204);
-   clear: both;  
+	margin-top:1.5rem;
+	font-size:1.4rem;	
+	padding:1rem 3rem 3rem 3rem;
+	background-color:black;
+	color:rgb(204,204,204);
+   clear:both;  
 }
 footer a 
 {
-	color: white;	
+	color:white;	
 }
-/*
-footer .p 
-{
-   padding: 0 1rem 0 0;
-}
-
-footer 
-{
-}
-*/
 footer .pLeft 
 {
-	float: left;
+	float:left;
 }
 
 footer .pRight 
 {
-	float: right;
+	float:right;
 }
-
 /*
-   Форматируем показ кода
+ Форматируем показ кода
 */
 .CodeText
 {
-   font-size: 1.75rem;	
-   padding: 1rem 0 2rem 0;
+   font-size:1.75rem;	
+   padding:1rem 0 2rem 0;
 }
 /*
-   Форматируем меню
+ Форматируем меню
 */
 .TopMenu
 {
-	border-bottom: 0.1rem solid rgba(255,255,255,.5);	
-	background-color: rgb(25,25,25);
-   zoom: 1;	
+	border-bottom:0.1rem solid rgba(255,255,255,.5);	
+	background-color:rgb(25,25,25);
+   zoom:1;	
 }
 .TopMenu li
 {
-	float: left;
+	float:left;
 }
 .TopMenu a
 {
-	float: left;	
-	font-size: 1.4rem;
-	color: white;
-	font-weight: normal;
-   text-decoration: none;
-	padding: 1rem;
-	border-right: 0.1rem dashed rgba(255,255,255,.75);
-	transition: all .5s;
+	float:left;	
+	font-size:1.4rem;
+	color:white;
+	font-weight:normal;
+   text-decoration:none;
+	padding:1rem;
+	border-right:0.1rem dashed rgba(255,255,255,.75);
+	transition:all .5s;
 }
 .TopMenu li:last-of-type a 
 {
-	border-right: none;	
+	border-right:none;	
 }
 .TopMenu a:hover
 {
-	background-color: rgb(93,43,78);
+	background-color:rgb(93,43,78);
 }
 .TopMenu ul
 {
-   position: relative;
-   display: inline-block;
+   position:relative;
+   display:inline-block;
 }
 .TopMenu ul li
 {
-   display: inline-block;
+   display:inline-block;
 }
 .TopMenu ul ul
 {
-   display: none;
-   position: absolute;
-   margin-top: 3.6rem;
-   margin-left: -1rem;
+   display:none;
+   position:absolute;
+   margin-top:3.6rem;
+   margin-left:-1rem;
 }
 .TopMenu li:hover ul
 {
-   display: block;
+   display:block;
 }
 .TopMenu li:hover li
 {
-   display: block;
+   display:block;
 }
 .menuli
 {
-  background-color: #f63;
+  background-color:#f63;
 }
 .menuli a
 {
-   width: 100%; 
+   width:100%; 
 }
-
-
-
-
-/* далее - не отработанное */
-
-
-
-
-
 /*
-nav ul, header h1, footer p 
+@media (min-width: 481px) and (max-width:768px) 
 {
-  max-width: 1200px;
-  margin: 0 auto; 
+   .RightBar 
+   {
+      float:none;
+      width:auto;
+      clear:both;
+      border-top:2px solid black;
+      padding-top:10px;
+   }
+   .columnWrapper 
+   {
+      width:auto;
+   }
+   .main 
+   {
+      border-right:none;
+   }
 }
-*/
-img {
-  max-width: 100%;
-}
-img.half {
-    max-width: 50%;
-}
-img.left {
-    float: left;
-    margin: 0 10px 10px 0;
-}
-img.right {
-    float: right;
-    margin: 0 0 10px 10px;
-}
-
-/*
-@media (min-width: 481px) and (max-width:768px) {
-  .RightBar {
-    float: none;
-    width: auto;
-    clear: both;
-    border-top: 2px solid black;
-    padding-top: 10px;
-  }
-  .columnWrapper {
-    width: auto;
-  }
-  .main {
-    border-right: none;
-  }
-}
-
-@media (max-width:480px) {
-  .columnWrapper, .main, .LeftBar, .RightBar {
-    float: none;
-    width: auto;
-  }
-  .main {
-    border: none;
-  }
-  .LeftBar, .RightBar {
-    border-top: 2px solid black;
-    margin-top: 25px;
-    padding-top: 10px;
-  }
-  header h1 {
-    font-size: 1.5em;
-  }
-  nav {
-   text-align: center;
-  }
-  nav li {
-    float: none;
-    display: inline-block;
-  }
-
-  nav a {
-    float: none;
-    display: inline-block;
-    border: none;
-  }
+@media (max-width:480px) 
+{
+   .columnWrapper, .main, .LeftBar, .RightBar 
+   {
+      float:none;
+      width:auto;
+   }
+   .main 
+   {
+      border:none;
+   }
+   .LeftBar, .RightBar 
+   {
+      border-top:2px solid black;
+      margin-top:25px;
+      padding-top:10px;
+   }
+   header h1 
+   {
+      font-size:1.5em;
+   }
+   nav
+   {
+      text-align:center;
+   }
+   nav li 
+   {
+      float:none;
+     display:inline-block;
+   }
+   nav a 
+   {
+      float:none;
+      display:inline-block;
+      border:none;
+   }
 }
 */
 .dAbz
 {
-   margin-top: 1rem;
+   margin-top:1rem;
 }
-
 #dImgSimPri
 {
    width:98%;
-   margin-left: 1.2rem;
+   margin-left:1.2rem;
 }
 #ImgSimPri
 {
@@ -418,3 +360,4 @@ img.right {
 {
    width:100%;
 }
+/************************************************************** Styles.css ***/

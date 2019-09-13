@@ -48,7 +48,7 @@ if ($SiteDevice==Mobile)
 }
 else 
 {   
-   if (isComRequest('Подключить обработчик ошибок и исключений','Лист'))
+   if (isComRequest(ConnHandler,'Лист'))
       require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
    else
       require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';

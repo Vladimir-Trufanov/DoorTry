@@ -109,14 +109,16 @@ function TopMenu()
    $Result = true;
    echo '<ul>';
    // Переключаем пункты меню главных материалов сайта
-   if (isComRequest('Подключить обработчик ошибок и исключений','Лист'))
-      echo '<li><a href="index.php?Лист='.
-         'Простой принцип программирования">'.
-         'Простой принцип программирования</a></li>';
-   else
-      echo '<li><a href="index.php?Лист='.
-         'Подключить обработчик ошибок и исключений">'.
-         'Подключить обработчик ошибок и исключений</a></li>';
+   if (isComRequest(ConnHandler,'Лист'))
+      echo 
+         '<li>'.
+         '<a href="index.php?Лист='.SimPrincip.'">'.SimPrincip.'</a>'.
+         '</li>';
+   else                                               
+      echo 
+         '<li>'.
+         '<a href="index.php?Лист='.ConnHandler.'">'.ConnHandler.'</a>'.
+         '</li>';
    /*
    if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
       echo '<li><a href="index.php?List='.
