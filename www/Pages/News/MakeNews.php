@@ -120,6 +120,7 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
       echo '<h2>'.getH2_News($s_NameNews).'</h2>';
       echo '<p>';
       $urlNews=getUrlNews($s_NameNews);
+      //echo $urlNews.'<br>';
       if ($p_NewsForm==frnSimple) 
       {
          SimpleTape($urlNews,$p_NewsAmt);

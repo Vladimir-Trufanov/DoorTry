@@ -57,7 +57,7 @@ $aNews=array
    'Журнал Хакер'     => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
    'Google Новости'   => 'http://news.google.com/news?hl=ru&um=1&q='.
       '%D0%D2%C1%D7%C1+%C9%CE%D7%C1%CC%C9%C4%CF%D7&ie=windows-1251&output=rss',
-   '"Что достойно перевода"' => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
+   'Что достойно перевода!' => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
    'Новости Mail.ru'  => 'http://news.mail.ru/rss/',
 );
 // ****************************************************************************

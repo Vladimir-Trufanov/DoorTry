@@ -32,7 +32,7 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -128,18 +128,26 @@ DoorTry
 1=www\Стихи\Соревнование с хакерами\Styles.css
 2=www\Styles\Styles.css
 3=www\Site.php
+4=www\IniMenu.php
+5=www\Pages\News\MakeNews.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\Pages\News\MakeNews.php
 [www\Main.php]
-TopLine=57
+TopLine=67
 Caret=32,51
 [www\Стихи\Соревнование с хакерами\Styles.css]
 TopLine=77
 Caret=1,100
 [www\Styles\Styles.css]
-TopLine=82
-Caret=15,97
+TopLine=64
+Caret=40,91
 [www\Site.php]
-TopLine=1
+TopLine=31
 Caret=1,1
+[www\IniMenu.php]
+TopLine=41
+Caret=27,60
+[www\Pages\News\MakeNews.php]
+TopLine=101
+Caret=9,123
