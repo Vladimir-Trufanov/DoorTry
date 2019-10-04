@@ -60,6 +60,41 @@ $aNews=array
    'Что достойно перевода!' => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
    'Новости Mail.ru'  => 'http://news.mail.ru/rss/',
 );
+/*
+<nav class="TopMenu">
+   <ul id="bar">
+      <li><a href="index.php?Лист=Подключение обработчика ошибок и исключений">Подключение обработчика ошибок и исключений</a>
+      </li>
+      <li><a href="">Штрихотворения</a>
+         <ul>
+            <li class="menuli"><a href="index.php?Stihi=Соревнование с хакерами">Соревнование с хакерами</a>
+            </li>
+         </ul>
+      </li>
+      <li><a href="">Новости</a>
+         <ul>
+            <li class="menuli"><a href="index.php?Новости=Столица на Онего">Столица на Онего</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Ведомости России">Ведомости России</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Яндекс Общество">Яндекс Общество</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Новости Украины">Новости Украины</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Яндекс Интернет">Яндекс Интернет</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Журнал Хакер">Журнал Хакер</a>
+            </li><li class="menuli"><a href="index.php?Новости=Google Новости">Google Новости</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Что достойно перевода!">Что достойно перевода!</a>
+            </li>
+            <li class="menuli"><a href="index.php?Новости=Новости Mail.ru">Новости Mail.ru</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+</nav>
+*/
 // ****************************************************************************
 // *                       Вывести пункты новостного меню                     *
 // ****************************************************************************
@@ -107,7 +142,7 @@ function StihiMenu()
 function TopMenu()
 {
    $Result = true;
-   echo '<ul>';
+   echo '<ul id="bar">';
    // Переключаем пункты меню главных материалов сайта
    if (isComRequest(ConnHandler,'Лист'))
       echo 
@@ -130,13 +165,13 @@ function TopMenu()
          'Подключить обработчик ошибок/исключений</a></li>';
    */
    // Подключаем показ стихотворения
-   echo '<li><a href="">Штрихотворения</a>';
+   echo '<li><a href="#">Штрихотворения</a>';
       echo '<ul>';
       StihiMenu();
       echo '</ul>';
    echo '</li>';
    // Подключаем вызов новостей
-   echo '<li><a href="">Новости</a>';
+   echo '<li><a href="#">Новости</a>';
       echo '<ul>';
       NewsMenu();
       echo '</ul>';

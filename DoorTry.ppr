@@ -125,29 +125,17 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\Main.php
-1=www\Стихи\Соревнование с хакерами\Styles.css
-2=www\Styles\Styles.css
-3=www\Site.php
-4=www\IniMenu.php
-5=www\Pages\News\MakeNews.php
+1=www\IniMenu.php
+2=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\News\MakeNews.php
+Selected=www\Site.php
 [www\Main.php]
-TopLine=67
+TopLine=51
 Caret=32,51
-[www\Стихи\Соревнование с хакерами\Styles.css]
-TopLine=77
-Caret=1,100
-[www\Styles\Styles.css]
-TopLine=64
-Caret=40,91
-[www\Site.php]
-TopLine=31
-Caret=1,1
 [www\IniMenu.php]
-TopLine=41
+TopLine=55
 Caret=27,60
-[www\Pages\News\MakeNews.php]
-TopLine=101
-Caret=9,123
+[www\Site.php]
+TopLine=13
+Caret=17,23

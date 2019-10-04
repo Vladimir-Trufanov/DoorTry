@@ -20,7 +20,7 @@ echo '<div class="pageWrapper">';
          TopMenu();
       echo  '</nav>';
       echo '<div id="dVer">';
-      echo 'v1.2';
+      echo 'v1.3';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';
    echo '</header>';
