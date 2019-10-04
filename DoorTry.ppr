@@ -135,8 +135,8 @@ DoorTry
 Main=
 Selected=www\stihi\MakeStihi.php
 [www\IniMem.php]
-TopLine=11
-Caret=57,20
+TopLine=39
+Caret=57,49
 [www\stihi\sorevnovanie-s-hakerami\index.php]
 TopLine=23
 Caret=1,1
@@ -144,8 +144,8 @@ Caret=1,1
 TopLine=91
 Caret=1,1
 [www\Main.php]
-TopLine=81
-Caret=1,1
+TopLine=48
+Caret=21,51
 [www\stihi\MakeStihi.php]
-TopLine=9
-Caret=1,1
+TopLine=7
+Caret=4,24

@@ -16,6 +16,7 @@ function MakeStihi($SiteRoot,$SiteDevice)
    $page='/stihi/'.$StihoPage;
    // Запускаем сценарий стихотворения, отправляя заголовок страницы
    /*
+   echo('$StihoPag1='.$StihoPag1.'<br>');
    echo('$StihoPage='.$StihoPage.'<br>');
    echo('$page='.$page.'<br>');
    echo("Location: http://".$_SERVER['HTTP_HOST'].$page);
