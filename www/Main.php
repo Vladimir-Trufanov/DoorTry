@@ -48,14 +48,14 @@ if ($SiteDevice==Mobile)
 }
 else 
 {   
-   if (isComRequest(ConnHandler,'Лист'))
+   if (isComRequest(prown\getTranslit(ConnHandler),'list'))
       require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
    else
       require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 }
 // Подключаем управление стихами и ранее выбранное стихотворение
-require_once $SiteRoot."/Стихи/MakeStihi.php";   
-require_once $SiteRoot."/Стихи/Stih.php";   
+require_once $SiteRoot."/stihi/MakeStihi.php";   
+require_once $SiteRoot."/stihi/Stih.php";   
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
@@ -77,7 +77,7 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgGLOBALS);
 
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
-if (IsSet($_REQUEST['Stihi'])) MakeStih($SiteRoot,$SiteDevice);
+if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 // В больштнстве остальных случаев запускаем главные страницы
 else
 {

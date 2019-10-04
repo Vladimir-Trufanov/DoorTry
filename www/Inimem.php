@@ -30,7 +30,24 @@ define ("rciCookiUserYes", 2);   // пользователем разрешен�
 // Инициализируем общие переменные сайтового сценария
 $SiteDevice=prown\getSiteDevice();                 // 'Computer','Mobile','Tablet'
 $Uagent=$_SERVER['HTTP_USER_AGENT'];               // HTTP_USER_AGENT
-
+// Инициализируем массив новостных лент и массив стихотворений
+$aNews=array
+(            
+   'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
+   'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
+   'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
+   'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
+   'Яндекс Интернет'  => 'http://feeds.feedburner.com/yandex/MAOo',
+   'Журнал Хакер'     => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
+   'Google Новости'   => 'http://news.google.com/news?hl=ru&um=1&q='.
+      '%D0%D2%C1%D7%C1+%C9%CE%D7%C1%CC%C9%C4%CF%D7&ie=windows-1251&output=rss',
+   'Что достойно перевода!' => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
+   'Новости Mail.ru'  => 'http://news.mail.ru/rss/',
+);
+$aStihi=array
+(            
+   'Соревнование с хакерами' => '*',   
+);
 // Инициализируем переменные-кукисы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);          // число запросов сайта из браузера
 $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчик посещений текущим посетителем

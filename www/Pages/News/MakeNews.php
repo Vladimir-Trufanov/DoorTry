@@ -39,8 +39,7 @@ function getUrlNews($key)
    global $aNews;
    foreach($aNews as $k=>$v)
    {
-      $kt=$k;
-      //$kt=prown\getTranslit($k);
+      $kt=prown\getTranslit($k);
       /*
       echo '$key='.$key.'<br>';
       echo '$k  ='.$k.'<br>';
@@ -57,12 +56,12 @@ function getUrlNews($key)
 }
 function getH2_News($key)
 {
-   $Result=NULL;
    global $aNews;
+   $Result=NULL;
    foreach($aNews as $k=>$v)
    {
-      $kt=$k;
-      //$kt=prown\getTranslit($k);
+      //$kt=$k;
+      $kt=prown\getTranslit($k);
       if ($key==$kt) 
       {
          $Result=$k;
@@ -82,8 +81,8 @@ function isNews($News)
 function getNews()
 {
    global $s_NameNews; 
-   $ret=getComRequest('Новости');
-   //$ret=getComRequest('Novosti');
+   //$ret=getComRequest('Новости');
+   $ret=getComRequest('novosti');
    //echo '$ret='.$ret.'<br>';
    if ($ret==NULL) $Result=False;
    else

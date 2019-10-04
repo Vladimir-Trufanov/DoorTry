@@ -47,54 +47,6 @@
  *  Хакер
  *    $urlNews="http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack";
 **/
-$aNews=array
-(            
-   'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
-   'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
-   'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
-   'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
-   'Яндекс Интернет'  => 'http://feeds.feedburner.com/yandex/MAOo',
-   'Журнал Хакер'     => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
-   'Google Новости'   => 'http://news.google.com/news?hl=ru&um=1&q='.
-      '%D0%D2%C1%D7%C1+%C9%CE%D7%C1%CC%C9%C4%CF%D7&ie=windows-1251&output=rss',
-   'Что достойно перевода!' => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
-   'Новости Mail.ru'  => 'http://news.mail.ru/rss/',
-);
-/*
-<nav class="TopMenu">
-   <ul id="bar">
-      <li><a href="index.php?Лист=Подключение обработчика ошибок и исключений">Подключение обработчика ошибок и исключений</a>
-      </li>
-      <li><a href="">Штрихотворения</a>
-         <ul>
-            <li class="menuli"><a href="index.php?Stihi=Соревнование с хакерами">Соревнование с хакерами</a>
-            </li>
-         </ul>
-      </li>
-      <li><a href="">Новости</a>
-         <ul>
-            <li class="menuli"><a href="index.php?Новости=Столица на Онего">Столица на Онего</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Ведомости России">Ведомости России</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Яндекс Общество">Яндекс Общество</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Новости Украины">Новости Украины</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Яндекс Интернет">Яндекс Интернет</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Журнал Хакер">Журнал Хакер</a>
-            </li><li class="menuli"><a href="index.php?Новости=Google Новости">Google Новости</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Что достойно перевода!">Что достойно перевода!</a>
-            </li>
-            <li class="menuli"><a href="index.php?Новости=Новости Mail.ru">Новости Mail.ru</a>
-            </li>
-         </ul>
-      </li>
-   </ul>
-</nav>
-*/
 // ****************************************************************************
 // *                       Вывести пункты новостного меню                     *
 // ****************************************************************************
@@ -105,21 +57,12 @@ function NewsMenu()
    foreach($aNews as $k=>$v)
    {
       $s='<li class="menuli">'.
-         '<a href="index.php?Новости='.$k.'"'.
+         '<a href="index.php?novosti='.prown\getTranslit($k).'"'.
          '>'.$k.'</a></li>';
-      /*
-      $s='<li class="menuli">'.
-         '<a href="index.php?Novosti='.prown\getTranslit($k).'"'.
-         '>'.$k.'</a></li>';
-      */
       echo $s;
    }
    return $Result;
 }
-$aStihi=array
-(            
-   'Соревнование с хакерами' => '*',   
-);
 // ****************************************************************************
 // *                       Вывести пункты меню стихотворений                  *
 // ****************************************************************************
@@ -130,7 +73,7 @@ function StihiMenu()
    foreach($aStihi as $k=>$v)
    {
       $s='<li class="menuli">'.
-         '<a href="index.php?Stihi='.$k.'"'.
+         '<a href="index.php?stihi='.prown\getTranslit($k).'"'.
          '>'.$k.'</a></li>';
       echo $s;
    }
@@ -144,26 +87,16 @@ function TopMenu()
    $Result = true;
    echo '<ul id="bar">';
    // Переключаем пункты меню главных материалов сайта
-   if (isComRequest(ConnHandler,'Лист'))
+   if (isComRequest(prown\getTranslit(ConnHandler),'list'))
       echo 
          '<li>'.
-         '<a href="index.php?Лист='.SimPrincip.'">'.SimPrincip.'</a>'.
+         '<a href="index.php?list='.prown\getTranslit(SimPrincip).'">'.SimPrincip.'</a>'.
          '</li>';
    else                                               
       echo 
          '<li>'.
-         '<a href="index.php?Лист='.ConnHandler.'">'.ConnHandler.'</a>'.
+         '<a href="index.php?list='.prown\getTranslit(ConnHandler).'">'.ConnHandler.'</a>'.
          '</li>';
-   /*
-   if (isComRequest('Podklyuchit-obrabotchik-oshibok-i-isklyuchenij','List'))
-      echo '<li><a href="index.php?List='.
-         'Prostoj-princip-programmirovaniya">'.
-         'Простой принцип программирования</a></li>';
-   else
-      echo '<li><a href="index.php?List='.
-         'Podklyuchit-obrabotchik-oshibok-i-isklyuchenij">'.
-         'Подключить обработчик ошибок/исключений</a></li>';
-   */
    // Подключаем показ стихотворения
    echo '<li><a href="#">Штрихотворения</a>';
       echo '<ul>';

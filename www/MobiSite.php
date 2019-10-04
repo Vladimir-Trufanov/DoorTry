@@ -28,7 +28,7 @@ echo     '<div class="columnWrapper">';
 echo        '<article class="main">';
                MakeQrcode();
                MakeH1();
-               echo  prown\getTranslit('Лист').'<br>';
+               echo  prown\getTranslit('list').'<br>';
                PageContent();
 echo        '</article>';
 echo        '<aside class="RightBar">';

@@ -26,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
-			+DoorTry
+		-Pages
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -69,6 +69,7 @@ DoorTry
 			www\qrcode\qrtools.php
 			www\qrcode\qrvect.php
 			www\qrcode\README
+			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\test14b3cd3b8e3b7979585c1bb7dbe761f1.png-errors.txt
 			www\qrcode\test485a07b72d8cde6ed37b066818c7d95e.png-errors.txt
@@ -81,27 +82,27 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+Styles
+		+stihi
+			+sorevnovanie-s-hakerami
+				www\stihi\sorevnovanie-s-hakerami\idid.vb
+				www\stihi\sorevnovanie-s-hakerami\index.php
+				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii 2416x503.jpg
+				www\stihi\sorevnovanie-s-hakerami\molody-dushoj 808x808.jpg
+				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste 1280x850.jpg
+				www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+				www\stihi\sorevnovanie-s-hakerami\Stihi.css
+				www\stihi\sorevnovanie-s-hakerami\Styles.css
+			www\stihi\MakeStihi.php
+			www\stihi\Stih.php
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
 			www\Styles\Stihi.css
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		+Стихи
-			+Соревнование с хакерами
-				www\Стихи\Соревнование с хакерами\idid.vb
-				www\Стихи\Соревнование с хакерами\index.php
-				www\Стихи\Соревнование с хакерами\majskij-vecher-v-karelii 2416x503.jpg
-				www\Стихи\Соревнование с хакерами\molody-dushoj 808x808.jpg
-				www\Стихи\Соревнование с хакерами\raznye-vmeste 1280x850.jpg
-				www\Стихи\Соревнование с хакерами\sorevnovanie-s-hakerami.php
-				www\Стихи\Соревнование с хакерами\Stihi.css
-				www\Стихи\Соревнование с хакерами\Styles.css
-			www\Стихи\MakeStihi.php
-			www\Стихи\Stih.php
 		www\.htaccess
 		www\.user.ini
 		www\ComRequest.php
@@ -122,20 +123,29 @@ DoorTry
 		www\MakeQrcode.php
 		www\MobiSite.php
 		www\Site.php
+		www\sorevnovanie-s-hakerami.png
 		www\TPhpPrown.png
 [Open project files]
-0=www\Main.php
-1=www\IniMenu.php
-2=www\Site.php
+0=www\IniMem.php
+1=www\stihi\sorevnovanie-s-hakerami\index.php
+2=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+3=www\Main.php
+4=www\stihi\MakeStihi.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\stihi\MakeStihi.php
+[www\IniMem.php]
+TopLine=11
+Caret=57,20
+[www\stihi\sorevnovanie-s-hakerami\index.php]
+TopLine=23
+Caret=1,1
+[www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
+TopLine=91
+Caret=1,1
 [www\Main.php]
-TopLine=51
-Caret=32,51
-[www\IniMenu.php]
-TopLine=55
-Caret=27,60
-[www\Site.php]
-TopLine=13
-Caret=17,23
+TopLine=81
+Caret=1,1
+[www\stihi\MakeStihi.php]
+TopLine=9
+Caret=1,1
