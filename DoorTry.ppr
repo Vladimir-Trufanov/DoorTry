@@ -17,6 +17,9 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
+		-.well-known
+			-pki-validation
+				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -82,8 +85,8 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
 				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii 2416x503.jpg
@@ -127,25 +130,17 @@ DoorTry
 		www\TPhpPrown.png
 [Open project files]
 0=www\IniMem.php
-1=www\stihi\sorevnovanie-s-hakerami\index.php
-2=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
-3=www\Main.php
-4=www\stihi\MakeStihi.php
+1=www\Main.php
+2=www\.htaccess
 [Selected Project Files]
 Main=
-Selected=www\stihi\MakeStihi.php
+Selected=www\.htaccess
 [www\IniMem.php]
 TopLine=39
 Caret=57,49
-[www\stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=23
-Caret=1,1
-[www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
-TopLine=91
-Caret=1,1
 [www\Main.php]
 TopLine=48
 Caret=21,51
-[www\stihi\MakeStihi.php]
-TopLine=7
-Caret=4,24
+[www\.htaccess]
+TopLine=57
+Caret=1,63
