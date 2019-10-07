@@ -82,7 +82,7 @@ DoorTry
 			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
 			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
-		-stihi
+		+stihi
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -132,7 +132,7 @@ DoorTry
 1=www\Main.php
 2=www\.htaccess
 3=www\IniMenu.php
-4=www\Pages\News\MakeNews.php
+4=www\stihi\MakeStihi.php
 [Selected Project Files]
 Main=
 Selected=www\.htaccess
@@ -140,14 +140,14 @@ Selected=www\.htaccess
 TopLine=39
 Caret=57,49
 [www\Main.php]
-TopLine=48
-Caret=21,51
+TopLine=65
+Caret=3,80
 [www\.htaccess]
-TopLine=51
-Caret=1,72
-[www\IniMenu.php]
 TopLine=55
-Caret=1,68
-[www\Pages\News\MakeNews.php]
-TopLine=107
-Caret=12,125
+Caret=46,65
+[www\IniMenu.php]
+TopLine=53
+Caret=12,62
+[www\stihi\MakeStihi.php]
+TopLine=9
+Caret=30,16

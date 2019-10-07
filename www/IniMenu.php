@@ -56,10 +56,10 @@ function NewsMenu()
    $Result = true;
    foreach($aNews as $k=>$v)
    {
-      echo $s='<li class="menuli"><a href="';
+      echo '<li class="menuli"><a href="';
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
-         echo 'novosti=';
+         //echo 'novosti=';
       }
       else
       {
@@ -78,10 +78,18 @@ function StihiMenu()
    $Result = true;
    foreach($aStihi as $k=>$v)
    {
-      $s='<li class="menuli">'.
-         '<a href="index.php?stihi='.prown\getTranslit($k).'"'.
-         '>'.$k.'</a></li>';
-      echo $s;
+      echo '<li class="menuli"><a href="';
+      /*
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo 'stihi=';
+      }
+      else
+      {
+      */
+         echo 'stihi/';
+      //}
+      echo prown\getTranslit($k).'"'.'>'.$k.'</a></li>';
    }
    return $Result;
 }

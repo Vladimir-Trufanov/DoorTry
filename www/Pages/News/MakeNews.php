@@ -122,7 +122,7 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
       //echo $urlNews.'<br>';
       if ($p_NewsForm==frnSimple) 
       {
-         //SimpleTape($urlNews,$p_NewsAmt);
+         SimpleTape($urlNews,$p_NewsAmt);
       }
       else
       {
