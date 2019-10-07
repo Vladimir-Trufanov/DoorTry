@@ -61,7 +61,7 @@ RewriteEngine On
 ## Преобразовываем URL-запросы главных страниц сайта
 RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
 RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
-RewriteRule ^novosti=[a-z-]{1,}$ index.php?novosti=[a-z-]{1,} [L]
+RewriteRule ^(novosti=[a-z-]{1,})$ index.php?$1 [L]
 
 ## ^[0-9a-z_]+@[0-9a-z_^\.]+\.[a-z]{2,3}$
 
