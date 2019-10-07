@@ -56,10 +56,16 @@ function NewsMenu()
    $Result = true;
    foreach($aNews as $k=>$v)
    {
-      $s='<li class="menuli">'.
-         '<a href="index.php?novosti='.prown\getTranslit($k).'"'.
-         '>'.$k.'</a></li>';
-      echo $s;
+      echo $s='<li class="menuli"><a href="';
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo 'novosti=';
+      }
+      else
+      {
+         echo 'index.php?novosti=';
+      }
+      echo prown\getTranslit($k).'"'.'>'.$k.'</a></li>';
    }
    return $Result;
 }
@@ -88,15 +94,32 @@ function TopMenu()
    echo '<ul id="bar">';
    // Переключаем пункты меню главных материалов сайта
    if (isComRequest(prown\getTranslit(ConnHandler),'list'))
-      echo 
-         '<li>'.
-         '<a href="index.php?list='.prown\getTranslit(SimPrincip).'">'.SimPrincip.'</a>'.
-         '</li>';
-   else                                               
-      echo 
-         '<li>'.
-         '<a href="index.php?list='.prown\getTranslit(ConnHandler).'">'.ConnHandler.'</a>'.
-         '</li>';
+   {
+      echo '<li>';
+      // Для основного и контрольного сайтов выводим краткий URL
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo '<a href="'.prown\getTranslit(SimPrincip).'">'.SimPrincip.'</a>';
+      }
+      else
+      {
+         echo '<a href="index.php?list='.prown\getTranslit(SimPrincip).'">'.SimPrincip.'</a>';
+      }
+      echo '</li>';
+   }
+   else
+   {                                               
+      echo '<li>';
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo '<a href="'.prown\getTranslit(ConnHandler).'">'.ConnHandler.'</a>';
+      }
+      else
+      {
+         echo '<a href="index.php?list='.prown\getTranslit(ConnHandler).'">'.ConnHandler.'</a>';
+      }
+      echo '</li>';
+   }
    // Подключаем показ стихотворения
    echo '<li><a href="#">Штрихотворения</a>';
       echo '<ul>';

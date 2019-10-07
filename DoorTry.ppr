@@ -17,9 +17,6 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
-		-.well-known
-			-pki-validation
-				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -29,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -125,13 +122,17 @@ DoorTry
 		www\MainDoorTry.php
 		www\MakeQrcode.php
 		www\MobiSite.php
+		www\robots.txt
 		www\Site.php
+		www\sitemap.xml
 		www\sorevnovanie-s-hakerami.png
 		www\TPhpPrown.png
 [Open project files]
 0=www\IniMem.php
 1=www\Main.php
 2=www\.htaccess
+3=www\IniMenu.php
+4=www\Pages\News\MakeNews.php
 [Selected Project Files]
 Main=
 Selected=www\.htaccess
@@ -142,5 +143,11 @@ Caret=57,49
 TopLine=48
 Caret=21,51
 [www\.htaccess]
-TopLine=57
-Caret=1,63
+TopLine=51
+Caret=1,72
+[www\IniMenu.php]
+TopLine=55
+Caret=1,68
+[www\Pages\News\MakeNews.php]
+TopLine=107
+Caret=12,125

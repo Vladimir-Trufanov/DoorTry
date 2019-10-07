@@ -1,1 +1,2 @@
 [04-Oct-2019 17:30:30 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Стихи/MakeStihi.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 57
+[07-Oct-2019 08:04:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\DoorTry\www\IniMenu.php on line 103
