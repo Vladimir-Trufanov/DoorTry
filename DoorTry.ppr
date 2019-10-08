@@ -26,30 +26,19 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
 		-qrcode
 			-temp
-				www\qrcode\temp\test.png
-				www\qrcode\temp\test14b3cd3b8e3b7979585c1bb7dbe761f1.png
-				www\qrcode\temp\test485a07b72d8cde6ed37b066818c7d95e.png
-				www\qrcode\temp\test50d24d22fce856a20469727fc5a1b92f.png
-				www\qrcode\temp\test9d9859ebb4e825179a00a36b2d734ca0.png
-				www\qrcode\temp\testc134f9a08220e1da584c745cc71b8d9d.png
-				www\qrcode\temp\testc247c73ab14c5140e941c5bc3611580f.png
-				www\qrcode\temp\testda71b5daac6e0d773a00a9fff159a5c9.png
-				www\qrcode\temp\testdb2554bbb14951259ed70f8c9ba51693.png
-				www\qrcode\temp\testfacde18fb02ca1510477fb88ff14c01b.png
-				www\qrcode\temp\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png
 			www\qrcode\CHANGELOG
 			www\qrcode\index.php
 			www\qrcode\INSTALL
@@ -71,16 +60,6 @@ DoorTry
 			www\qrcode\README
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
-			www\qrcode\test14b3cd3b8e3b7979585c1bb7dbe761f1.png-errors.txt
-			www\qrcode\test485a07b72d8cde6ed37b066818c7d95e.png-errors.txt
-			www\qrcode\test50d24d22fce856a20469727fc5a1b92f.png-errors.txt
-			www\qrcode\test9d9859ebb4e825179a00a36b2d734ca0.png-errors.txt
-			www\qrcode\testc134f9a08220e1da584c745cc71b8d9d.png-errors.txt
-			www\qrcode\testc247c73ab14c5140e941c5bc3611580f.png-errors.txt
-			www\qrcode\testda71b5daac6e0d773a00a9fff159a5c9.png-errors.txt
-			www\qrcode\testdb2554bbb14951259ed70f8c9ba51693.png-errors.txt
-			www\qrcode\testfacde18fb02ca1510477fb88ff14c01b.png-errors.txt
-			www\qrcode\testfcba01b8b4dcf35b8e8cc5b3b2456df5.png-errors.txt
 			www\qrcode\VERSION
 		+stihi
 			-sorevnovanie-s-hakerami
@@ -100,7 +79,7 @@ DoorTry
 			www\Styles\NoColNews.css
 			www\Styles\Stihi.css
 			www\Styles\Styles.css
-		-TDoorTryer
+		+TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -130,9 +109,9 @@ DoorTry
 [Open project files]
 0=www\IniMem.php
 1=www\Main.php
-2=www\.htaccess
-3=www\IniMenu.php
-4=www\stihi\MakeStihi.php
+2=www\TDoorTryer\DoorTryerPage.php
+3=www\.htaccess
+4=www\Site.php
 [Selected Project Files]
 Main=
 Selected=www\.htaccess
@@ -141,13 +120,13 @@ TopLine=39
 Caret=57,49
 [www\Main.php]
 TopLine=65
-Caret=3,80
+Caret=1,80
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=209
+Caret=1,1
 [www\.htaccess]
-TopLine=55
-Caret=46,65
-[www\IniMenu.php]
-TopLine=53
-Caret=12,62
-[www\stihi\MakeStihi.php]
-TopLine=9
-Caret=30,16
+TopLine=47
+Caret=1,67
+[www\Site.php]
+TopLine=1
+Caret=8,1

@@ -16,12 +16,13 @@ function MakeStihi($SiteRoot,$SiteDevice)
    $page='/stihi/'.$StihoPage;
    // Запускаем сценарий стихотворения, отправляя заголовок страницы
    /*
-   echo('$StihoPag1='.$StihoPag1.'<br>');
    echo('$StihoPage='.$StihoPage.'<br>');
    echo('$page='.$page.'<br>');
    echo("Location: http://".$_SERVER['HTTP_HOST'].$page);
    */
-   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      Header("Location: https://".$_SERVER['HTTP_HOST'].$page);
+   else Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    // Запускаем сценарий стихотворения через javascript
    /*
    echo '<script>';

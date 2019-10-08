@@ -72,7 +72,7 @@ $Result = true;
 </div>
 <?php
       echo '<div id="dImghStih">';
-      echo '<img id="ImghStih" src="sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';
+      echo '<img id="ImghStih" src="stihi/sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';
       echo '</div>';
 
 return $Result;

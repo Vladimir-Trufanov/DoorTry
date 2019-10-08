@@ -63,15 +63,6 @@ RewriteRule ^home$ index.php [L]
 RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
 RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
 RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
-##RewriteRule ^(novosti=[a-z-]{1,})$ index.php?$1 [L]
-##RewriteRule ^stihi=([a-z-]{1,})$ stihi/$1 [L]
-##RewriteRule ^(stihi=[a-z-]{1,})$ index.php?$1 [L]
-##RewriteRule ^([a-z-]{1,})$ stihi/$1 [L]
-
-## ^[0-9a-z_]+@[0-9a-z_^\.]+\.[a-z]{2,3}$
-
-## RewriteRule ^Redaktor_tekstov$ /TinyMCE/ [L]
-## RewriteRule ^reset$ /Reset/ [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
 RewriteCond %{ENV:HTTPS} !on

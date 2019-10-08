@@ -215,7 +215,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
    // Выводим сообщение об ошибке/исключении через сайт doortry.ru
    if ($FaultLocation==true)
    {
-      $uripage="http://doortry.ru/error.php".
+      $uripage="https://doortry.ru/error.php".
       //$uripage="http://kwinflatht.nichost.ru/error.php".
       //$uripage="http://localhost:82/error.php".
          "?estr=".urlencode($errstr).
@@ -225,7 +225,8 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
          "&etrace=".urlencode($errtrace);
       // Вызываем страницу ошибки через javascript
       echo '<script>';
-      echo 'window.location.assign("'.$uripage.'")';
+      //echo 'window.location.assign("'.$uripage.'")';
+      echo 'location.replace("'.$uripage.'")';
       echo '</script>';
       // Вызываем страницу ошибки через отправку заголовка
       // Header("Location: ".$uripage);

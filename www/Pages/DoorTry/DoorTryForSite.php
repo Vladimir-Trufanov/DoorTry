@@ -260,7 +260,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
    // Выводим сообщение об ошибке/исключении через сайт doortry.ru
    if ($FaultLocation==true)
    {
-      $uripage="http://doortry.ru/error.php".
+      $uripage="https://doortry.ru/error.php".
          "?estr=".urlencode($errstr).
          "&etype=".urlencode($errtype).
          "&eline=".urlencode($errline).
@@ -268,7 +268,7 @@ function DoorTryExec($errstr,$errtype,$errline='',$errfile='',$errtrace='',$Make
          "&etrace=".urlencode($errtrace);
       // Вызываем страницу ошибки через javascript
       echo '<script>';
-      echo 'window.location.assign("'.$uripage.'")';
+      echo 'location.assign("'.$uripage.'")';
       echo '</script>';
    }
    // Выводим сообщение об ошибке/исключении на текущей странице
