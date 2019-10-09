@@ -13,7 +13,10 @@
 // echo '1. '.$_SERVER['REQUEST_URI'].'<br>';
 // header('Location: http://www.new-website.com');
 
-session_start(); 
+//session_start();
+// Отлаживаю счетчик посещаемости
+require_once $SiteRoot."/SchPos.php";
+SessStart('Home'); 
 
 // Инициализируем надсайтовый каталог и каталог хостинга
 require_once "iGetAbove.php";

@@ -1,29 +1,26 @@
 
-User-agent: Google
-Disallow: /
-Allow: /$
-Allow: /sitemap.xml$
-Allow: /Main.php?Com=Norms$
-Allow: /Main.php?Com=Laws$
-Allow: /Main.php?Com=Atfirst$
-Allow: /Normativy_po_otopleniyu$
+User-agent: Google 
+Allow: /$ 
+Allow: /sitemap.xml$ 
+Allow: /prostoj-princip-programmirovaniya$ 
+Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
+Allow: /stihi/sorevnovanie-s-hakerami 
+Disallow: / 
 
-User-agent: Yandex
-Disallow: /
-Allow: /$
-Allow: /sitemap.xml$
-Allow: /Main.php?Com=Norms$
-Allow: /Main.php?Com=Laws$
-Allow: /Main.php?Com=Atfirst$
-Allow: /Normativy_po_otopleniyu$
+User-agent: Yandex 
+Allow: /$ 
+Allow: /sitemap.xml$ 
+Allow: /prostoj-princip-programmirovaniya$ 
+Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
+Allow: /stihi/sorevnovanie-s-hakerami 
+Disallow: / 
 
-User-agent: *
-Disallow: /
-Allow: /$
-Allow: /sitemap.xml$
-Allow: /Main.php?Com=Norms$
-Allow: /Main.php?Com=Laws$
-Allow: /Main.php?Com=Atfirst$
-Allow: /Normativy_po_otopleniyu$
+User-agent: * 
+Allow: /$ 
+Allow: /sitemap.xml$ 
+Allow: /prostoj-princip-programmirovaniya$ 
+Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
+Allow: /stihi/sorevnovanie-s-hakerami 
+Disallow: / 
 
-Sitemap: https://kwinflat.ru/sitemap.xml
+Sitemap: https://doortry.ru/sitemap.xml

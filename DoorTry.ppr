@@ -40,6 +40,7 @@ DoorTry
 		-qrcode
 			-temp
 			www\qrcode\CHANGELOG
+			www\qrcode\doortry.png-errors.txt
 			www\qrcode\index.php
 			www\qrcode\INSTALL
 			www\qrcode\LICENSE
@@ -62,7 +63,7 @@ DoorTry
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
 		+stihi
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
 				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii 2416x503.jpg
@@ -72,6 +73,7 @@ DoorTry
 				www\stihi\sorevnovanie-s-hakerami\Stihi.css
 				www\stihi\sorevnovanie-s-hakerami\Styles.css
 			www\stihi\MakeStihi.php
+			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
 		-Styles
 			www\Styles\IsColNews.css
@@ -79,7 +81,7 @@ DoorTry
 			www\Styles\NoColNews.css
 			www\Styles\Stihi.css
 			www\Styles\Styles.css
-		+TDoorTryer
+		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		www\.htaccess
@@ -102,31 +104,32 @@ DoorTry
 		www\MakeQrcode.php
 		www\MobiSite.php
 		www\robots.txt
+		www\SchPos.php
 		www\Site.php
 		www\sitemap.xml
-		www\sorevnovanie-s-hakerami.png
 		www\TPhpPrown.png
+		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMem.php
-1=www\Main.php
-2=www\TDoorTryer\DoorTryerPage.php
-3=www\.htaccess
-4=www\Site.php
+1=www\Site.php
+2=www\SchPos.php
+3=www\stihi\sorevnovanie-s-hakerami\index.php
+4=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\Main.php
 [www\IniMem.php]
 TopLine=39
 Caret=57,49
-[www\Main.php]
-TopLine=65
-Caret=1,80
-[www\TDoorTryer\DoorTryerPage.php]
-TopLine=209
-Caret=1,1
-[www\.htaccess]
-TopLine=47
-Caret=1,67
 [www\Site.php]
+TopLine=35
+Caret=1,36
+[www\SchPos.php]
 TopLine=1
-Caret=8,1
+Caret=1,17
+[www\stihi\sorevnovanie-s-hakerami\index.php]
+TopLine=27
+Caret=17,27
+[www\Main.php]
+TopLine=1
+Caret=3,16

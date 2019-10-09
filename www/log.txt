@@ -2,3 +2,18 @@
 [07-Oct-2019 08:04:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\DoorTry\www\IniMenu.php on line 103
 [07-Oct-2019 20:18:33 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\DoorTry\www\IniMenu.php on line 95
 [08-Oct-2019 13:02:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\DoorTry\www\Main.php on line 70
+[09-Oct-2019 12:23:01 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function session_is_registered() in C:\DoorTry\www\SchPos.php:15
+Stack trace:
+#0 C:\DoorTry\www\Site.php(37): require_once()
+#1 C:\DoorTry\www\Main.php(91): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\SchPos.php on line 15
+[09-Oct-2019 12:23:46 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function session_is_registered() in C:\DoorTry\www\SchPos.php:15
+Stack trace:
+#0 C:\DoorTry\www\Site.php(37): require_once()
+#1 C:\DoorTry\www\Main.php(91): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\SchPos.php on line 15
+[09-Oct-2019 21:33:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\SchPos.php on line 14

@@ -21,6 +21,12 @@ $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
+
+// Отлаживаю счетчик посещаемости
+require_once $SiteRoot."/SchPos.php";
+SessStart('Stihi'); 
+
+
 // Подключаем собственно вкладываемое стихотворение, как функцию
 require_once $SiteRoot."/stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
 // Формируем страницу окружения стихотворения
@@ -31,10 +37,10 @@ echo '<head>';
 echo '<title>Соревнование с хакерами</title>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<meta name="description" content="'.
-         'Бежал ноябрь, работа шла'.
-         'В душе кипели страсти'.
-         'Жил на работе - чуть дыша'.
-         'На улице - ненастье'.
+         'Бежал ноябрь, работа шла '.
+         'В душе кипели страсти '.
+         'Жил на работе - чуть дыша '.
+         'На улице - ненастье '.
      '">';
 echo '<meta name="keywords" content="'.
          'стихи,всякие,разные,страсти,хакеры,защита,программирование,'.
