@@ -1,38 +1,12 @@
-[04-Oct-2019 17:30:30 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Стихи/MakeStihi.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 57
-[07-Oct-2019 08:04:10 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\DoorTry\www\IniMenu.php on line 103
-[07-Oct-2019 20:18:33 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\DoorTry\www\IniMenu.php on line 95
-[08-Oct-2019 13:02:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';' in C:\DoorTry\www\Main.php on line 70
-[09-Oct-2019 12:23:01 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function session_is_registered() in C:\DoorTry\www\SchPos.php:15
+[11-Oct-2019 21:42:22 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function PutString() in C:\TPhpTools\TPageStarter\PageStarterClass.php:79
 Stack trace:
-#0 C:\DoorTry\www\Site.php(37): require_once()
-#1 C:\DoorTry\www\Main.php(91): require_once('C:\\DoorTry\\www\\...')
-#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
-#3 {main}
-  thrown in C:\DoorTry\www\SchPos.php on line 15
-[09-Oct-2019 12:23:46 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function session_is_registered() in C:\DoorTry\www\SchPos.php:15
-Stack trace:
-#0 C:\DoorTry\www\Site.php(37): require_once()
-#1 C:\DoorTry\www\Main.php(91): require_once('C:\\DoorTry\\www\\...')
-#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
-#3 {main}
-  thrown in C:\DoorTry\www\SchPos.php on line 15
-[09-Oct-2019 21:33:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\SchPos.php on line 14
-[11-Oct-2019 16:25:05 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 0 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:34
-Stack trace:
-#0 C:\DoorTry\www\Main.php(46): PageStarter->__construct()
+#0 C:\DoorTry\www\Main.php(42): PageStarter->__construct('doortry.ru', 'Main')
 #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
-  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 34
-[11-Oct-2019 16:29:43 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 0 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:34
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 79
+[11-Oct-2019 22:29:40 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeOunInfo() in C:\TPhpTools\TPageStarter\PageStarterClass.php:144
 Stack trace:
-#0 C:\DoorTry\www\Main.php(46): PageStarter->__construct()
+#0 C:\DoorTry\www\Main.php(42): PageStarter->__construct('doortry.ru', 'Main')
 #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
-  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 34
-[11-Oct-2019 16:49:35 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 1 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:34
-Stack trace:
-#0 C:\DoorTry\www\Main.php(46): PageStarter->__construct('doortry.ru')
-#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 34
-[11-Oct-2019 17:01:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 115
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 144

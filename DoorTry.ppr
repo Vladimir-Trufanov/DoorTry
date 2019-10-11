@@ -119,7 +119,7 @@ DoorTry
 3=..\TPhpTools\TPageStarter\PageStarterClass.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=..\TPhpTools\TPageStarter\PageStarterClass.php
 [www\IniMem.php]
 TopLine=39
 Caret=57,49
@@ -127,8 +127,8 @@ Caret=57,49
 TopLine=19
 Caret=3,27
 [www\Main.php]
-TopLine=54
+TopLine=42
 Caret=1,42
 [..\TPhpTools\TPageStarter\PageStarterClass.php]
-TopLine=14
-Caret=51,99
+TopLine=100
+Caret=1,116
