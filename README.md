@@ -189,6 +189,35 @@ MakeCookie на сайте
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
 ***
+**Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 1 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected**
+
+    File: C:\TPhpTools\TPageStarter\PageStarterClass.php
+    Line: 34
+
+    E_ERROR [SHT]
+    Stack trace:
+    #0 C:\DoorTry\www\Main.php(46): PageStarter->__construct('doortry.ru')
+    #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+    #2 {main}
+
+В коде
+
+    "PageStarterClass.php"
+    34 public function __construct($iSiteName,$iPageName)
+    35 {
+    36    $SiteName=$iSiteName;
+    37    $PageName=$iPageName;
+    38 }
+    
+    "Main.php"
+    45 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
+    46 $oPageStarter = new PageStarter();
+    47 require_once $SiteRoot."/IniMem.php"; 
+
+Что было:
+***В функции-конструкторе класса объявлены два входных параметра, а при вызове - один
+###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
+
 
 
 

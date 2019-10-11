@@ -62,10 +62,11 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
+				www\stihi\sorevnovanie-s-hakerami\logis.txt
 				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii 2416x503.jpg
 				www\stihi\sorevnovanie-s-hakerami\molody-dushoj 808x808.jpg
 				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste 1280x850.jpg
@@ -99,37 +100,35 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\log.txt
+		www\logis.txt
+		www\logisi.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
 		www\MobiSite.php
 		www\robots.txt
-		www\SchPos.php
 		www\Site.php
 		www\sitemap.xml
+		www\stat.dat
 		www\TPhpPrown.png
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMem.php
-1=www\Site.php
-2=www\SchPos.php
-3=www\stihi\sorevnovanie-s-hakerami\index.php
-4=www\Main.php
+1=www\stihi\sorevnovanie-s-hakerami\index.php
+2=www\Main.php
+3=..\TPhpTools\TPageStarter\PageStarterClass.php
 [Selected Project Files]
 Main=
 Selected=www\Main.php
 [www\IniMem.php]
 TopLine=39
 Caret=57,49
-[www\Site.php]
-TopLine=35
-Caret=1,36
-[www\SchPos.php]
-TopLine=1
-Caret=1,17
 [www\stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=27
-Caret=17,27
+TopLine=19
+Caret=3,27
 [www\Main.php]
-TopLine=1
-Caret=3,16
+TopLine=54
+Caret=1,42
+[..\TPhpTools\TPageStarter\PageStarterClass.php]
+TopLine=14
+Caret=51,99

@@ -8,15 +8,10 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 31.07.2019
+// Copyright © 2019 tve                              Посл.изменение: 11.10.2019
       
 // echo '1. '.$_SERVER['REQUEST_URI'].'<br>';
 // header('Location: http://www.new-website.com');
-
-//session_start();
-// Отлаживаю счетчик посещаемости
-require_once $SiteRoot."/SchPos.php";
-SessStart('Home'); 
 
 // Инициализируем надсайтовый каталог и каталог хостинга
 require_once "iGetAbove.php";
@@ -32,6 +27,7 @@ require_once $SiteHost."/TPhpPrown/MakeParm.php";
 require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Подключаем задействованные классы
+require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/ComRequest.php";
@@ -42,7 +38,8 @@ require_once $SiteRoot."/MakeQrcode.php";
 require_once $SiteRoot."/Pages/News/MakeNews.php";   
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
-// Выполняем начальную инициализацию
+// Выполняем запуск сессии и начальную инициализацию
+$oPageStarter = new PageStarter('doortry.ru','Main');
 require_once $SiteRoot."/IniMem.php"; 
 // Подключаем динамические страницы с SEO-тегами, H1 и страницами
 if ($SiteDevice==Mobile)

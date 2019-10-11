@@ -23,8 +23,8 @@ $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
 
 // Отлаживаю счетчик посещаемости
-require_once $SiteRoot."/SchPos.php";
-SessStart('Stihi'); 
+//require_once $SiteRoot."/SchPos.php";
+//SessStart('Stihi'); 
 
 
 // Подключаем собственно вкладываемое стихотворение, как функцию

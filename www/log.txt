@@ -17,3 +17,22 @@ Stack trace:
 #3 {main}
   thrown in C:\DoorTry\www\SchPos.php on line 15
 [09-Oct-2019 21:33:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\SchPos.php on line 14
+[11-Oct-2019 16:25:05 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 0 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:34
+Stack trace:
+#0 C:\DoorTry\www\Main.php(46): PageStarter->__construct()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 34
+[11-Oct-2019 16:29:43 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 0 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:34
+Stack trace:
+#0 C:\DoorTry\www\Main.php(46): PageStarter->__construct()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 34
+[11-Oct-2019 16:49:35 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::__construct(), 1 passed in C:\DoorTry\www\Main.php on line 46 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:34
+Stack trace:
+#0 C:\DoorTry\www\Main.php(46): PageStarter->__construct('doortry.ru')
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 34
+[11-Oct-2019 17:01:54 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 115
