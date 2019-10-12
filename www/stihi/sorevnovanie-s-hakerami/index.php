@@ -21,19 +21,27 @@ $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
-
-// Отлаживаю счетчик посещаемости
-//require_once $SiteRoot."/SchPos.php";
-//SessStart('Stihi'); 
-
-
 // Подключаем собственно вкладываемое стихотворение, как функцию
 require_once $SiteRoot."/stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
+// Выполняем запуск сессии и начальную инициализацию
+session_start();
+//$oPageStarter = new PageStarter('Main');
 // Формируем страницу окружения стихотворения
 $SiteDevice=prown\getSiteDevice();  // 'Computer','Mobile','Tablet'
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
+// Добавляем Google аналитику
+echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
+echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36748654-2"></script>';
+echo '<script>';
+echo '  window.dataLayer = window.dataLayer || [];';
+echo '  function gtag(){dataLayer.push(arguments);}';
+echo "  gtag('js', new Date());";
+echo '';
+echo "  gtag('config', 'UA-36748654-2');";
+echo '</script>';
+//
 echo '<title>Соревнование с хакерами</title>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<meta name="description" content="'.

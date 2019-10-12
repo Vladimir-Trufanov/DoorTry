@@ -10,3 +10,19 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 144
+[12-Oct-2019 05:42:46 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::PutString(), 1 passed in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 109 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:86
+Stack trace:
+#0 C:\TPhpTools\TPageStarter\PageStarterClass.php(109): PageStarter->PutString('******Sat, 12 O...')
+#1 C:\DoorTry\www\Main.php(42): PageStarter->__construct('Main')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 86
+[12-Oct-2019 05:43:53 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PageStarter::PutString(), 1 passed in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 109 and exactly 2 expected in C:\TPhpTools\TPageStarter\PageStarterClass.php:86
+Stack trace:
+#0 C:\TPhpTools\TPageStarter\PageStarterClass.php(109): PageStarter->PutString('******Sat, 12 O...')
+#1 C:\DoorTry\www\Main.php(42): PageStarter->__construct('Main')
+#2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\TPhpTools\TPageStarter\PageStarterClass.php on line 86
+[12-Oct-2019 10:36:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'js' (T_STRING), expecting ',' or ';' in C:\DoorTry\www\iHtmlBegin.php on line 25
+[12-Oct-2019 10:37:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'config' (T_STRING), expecting ',' or ';' in C:\DoorTry\www\iHtmlBegin.php on line 27

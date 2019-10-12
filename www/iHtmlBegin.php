@@ -16,6 +16,17 @@ if ($SiteDevice==Mobile)
    echo '<!DOCTYPE html>';
    echo '<html lang="ru">';
    echo '<head>';
+   // Добавляем Google аналитику
+   echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
+   echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36748654-2"></script>';
+   echo '<script>';
+   echo '  window.dataLayer = window.dataLayer || [];';
+   echo '  function gtag(){dataLayer.push(arguments);}';
+   echo "  gtag('js', new Date());";
+   echo '';
+   echo "  gtag('config', 'UA-36748654-2');";
+   echo '</script>';
+   //
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    SeoTags();
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
@@ -33,6 +44,17 @@ else
    echo '<!DOCTYPE html>';
    echo '<html lang="ru">';
    echo '<head>';
+   // Добавляем Google аналитику
+   echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
+   echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36748654-2"></script>';
+   echo '<script>';
+   echo '  window.dataLayer = window.dataLayer || [];';
+   echo '  function gtag(){dataLayer.push(arguments);}';
+   echo "  gtag('js', new Date());";
+   echo '';
+   echo "  gtag('config', 'UA-36748654-2');";
+   echo '</script>';
+   //
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    SeoTags();
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
