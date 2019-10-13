@@ -30,7 +30,7 @@ if ($SiteDevice==Mobile)
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    // Указываем на используемую фавиконку
    echo '<link rel="icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
-   //echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
+   echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
    //
    SeoTags();
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
@@ -60,6 +60,10 @@ else
    echo '</script>';
    //
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+   // Указываем на используемую фавиконку
+   echo '<link rel="icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
+   echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
+   //
    SeoTags();
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
    echo '<link href="Styles/Stihi.css" rel="stylesheet">';

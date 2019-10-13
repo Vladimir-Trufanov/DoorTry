@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -26,8 +26,8 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
-			-DoorTry
+		+Pages
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -62,8 +62,8 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-stihi
-			-sorevnovanie-s-hakerami
+		+stihi
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -77,7 +77,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -112,12 +112,32 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iHtmlBegin.php
+2=www\stihi\sorevnovanie-s-hakerami\index.php
+3=www\Pages\DoorTry\SimPrincip.php
+4=www\Pages\DoorTry\ConnHandler.php
+5=www\Styles\Styles.css
+6=www\Pages\DoorTry\DoorTryForSite.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
+Selected=www\Styles\Styles.css
 [www\Main.php]
 TopLine=17
 Caret=1,44
 [www\iHtmlBegin.php]
-TopLine=15
-Caret=61,35
+TopLine=48
+Caret=4,67
+[www\stihi\sorevnovanie-s-hakerami\index.php]
+TopLine=21
+Caret=1,1
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=33
+Caret=1,47
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=38
+Caret=30,55
+[www\Styles\Styles.css]
+TopLine=205
+Caret=1,219
+[www\Pages\DoorTry\DoorTryForSite.php]
+TopLine=9
+Caret=1,1
