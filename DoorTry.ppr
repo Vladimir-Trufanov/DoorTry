@@ -90,7 +90,7 @@ DoorTry
 		www\ComRequest.php
 		www\doortry.png
 		www\error.php
-		www\favicon.ico
+		www\favicon.png
 		www\iGetAbove.php
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
@@ -99,9 +99,6 @@ DoorTry
 		www\IniCurrStih.php
 		www\IniMem.php
 		www\IniMenu.php
-		www\log.txt
-		www\logis.txt
-		www\logisi.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -110,29 +107,20 @@ DoorTry
 		www\Site.php
 		www\sitemap.xml
 		www\stat.dat
-		www\TPhpPrown.png
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\IniMem.php
-1=www\stihi\sorevnovanie-s-hakerami\index.php
-2=www\Main.php
-3=..\TPhpTools\TPageStarter\PageStarterClass.php
-4=www\iHtmlBegin.php
+0=www\Main.php
+1=www\iHtmlBegin.php
+2=www\stihi\sorevnovanie-s-hakerami\index.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
-[www\IniMem.php]
-TopLine=43
-Caret=57,49
-[www\stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=19
-Caret=1,42
+Selected=www\stihi\sorevnovanie-s-hakerami\index.php
 [www\Main.php]
-TopLine=44
+TopLine=8
 Caret=1,44
-[..\TPhpTools\TPageStarter\PageStarterClass.php]
-TopLine=86
-Caret=1,105
 [www\iHtmlBegin.php]
-TopLine=41
-Caret=7,47
+TopLine=13
+Caret=1,32
+[www\stihi\sorevnovanie-s-hakerami\index.php]
+TopLine=27
+Caret=3,46

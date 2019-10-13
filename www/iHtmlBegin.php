@@ -26,6 +26,9 @@ if ($SiteDevice==Mobile)
    echo '';
    echo "  gtag('config', 'UA-36748654-2');";
    echo '</script>';
+   // Указываем на используемую фавиконку
+   echo '<link rel="icon" href="https://doortry.ru/favicon.png" type="image/png">';
+   echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.png" type="image/png">';
    //
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    SeoTags();
