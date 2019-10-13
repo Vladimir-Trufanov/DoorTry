@@ -26,11 +26,12 @@ if ($SiteDevice==Mobile)
    echo '';
    echo "  gtag('config', 'UA-36748654-2');";
    echo '</script>';
-   // Указываем на используемую фавиконку
-   echo '<link rel="icon" href="https://doortry.ru/favicon.png" type="image/png">';
-   echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.png" type="image/png">';
    //
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+   // Указываем на используемую фавиконку
+   echo '<link rel="icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
+   //echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
+   //
    SeoTags();
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
    echo '<link href="Styles/Stihi.css" rel="stylesheet">';

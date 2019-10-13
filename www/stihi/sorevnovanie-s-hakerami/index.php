@@ -41,9 +41,6 @@ echo "  gtag('js', new Date());";
 echo '';
 echo "  gtag('config', 'UA-36748654-2');";
 echo '</script>';
-// Указываем на используемую фавиконку
-//echo '<link rel="icon" href="https://doortry.ru/favicon.png" type="image/png">';
-//echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.png" type="image/png">';
 //
 echo '<title>Соревнование с хакерами</title>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';

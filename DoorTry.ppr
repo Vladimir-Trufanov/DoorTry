@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -62,8 +62,9 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
+				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
 				www\stihi\sorevnovanie-s-hakerami\logis.txt
@@ -90,7 +91,7 @@ DoorTry
 		www\ComRequest.php
 		www\doortry.png
 		www\error.php
-		www\favicon.png
+		www\favicon.ico
 		www\iGetAbove.php
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
@@ -111,16 +112,12 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iHtmlBegin.php
-2=www\stihi\sorevnovanie-s-hakerami\index.php
 [Selected Project Files]
 Main=
-Selected=www\stihi\sorevnovanie-s-hakerami\index.php
+Selected=www\iHtmlBegin.php
 [www\Main.php]
-TopLine=8
+TopLine=17
 Caret=1,44
 [www\iHtmlBegin.php]
-TopLine=13
-Caret=1,32
-[www\stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=27
-Caret=3,46
+TopLine=15
+Caret=61,35
