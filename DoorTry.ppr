@@ -32,7 +32,7 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -110,34 +110,22 @@ DoorTry
 		www\stat.dat
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Main.php
-1=www\iHtmlBegin.php
-2=www\stihi\sorevnovanie-s-hakerami\index.php
-3=www\Pages\DoorTry\SimPrincip.php
-4=www\Pages\DoorTry\ConnHandler.php
-5=www\Styles\Styles.css
-6=www\Pages\DoorTry\DoorTryForSite.php
+0=www\Site.php
+1=..\TPhpTools\TPageStarter\PageStarterClass.php
+2=www\Main.php
+3=www\stihi\sorevnovanie-s-hakerami\index.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\stihi\sorevnovanie-s-hakerami\index.php
+[www\Site.php]
+TopLine=23
+Caret=15,35
+[..\TPhpTools\TPageStarter\PageStarterClass.php]
+TopLine=55
+Caret=63,73
 [www\Main.php]
-TopLine=17
-Caret=1,44
-[www\iHtmlBegin.php]
-TopLine=48
-Caret=4,67
+TopLine=35
+Caret=1,43
 [www\stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=21
-Caret=1,1
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=33
-Caret=1,47
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=38
-Caret=30,55
-[www\Styles\Styles.css]
-TopLine=205
-Caret=1,219
-[www\Pages\DoorTry\DoorTryForSite.php]
-TopLine=9
-Caret=1,1
+TopLine=13
+Caret=1,30

@@ -21,11 +21,13 @@ $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
 require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
+// Подключаем задействованные классы
+require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем собственно вкладываемое стихотворение, как функцию
 require_once $SiteRoot."/stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
 // Выполняем запуск сессии и начальную инициализацию
-session_start();
-//$oPageStarter = new PageStarter('Main');
+//session_start();
+$oStihiStarter = new PageStarter('Stihi');
 // Формируем страницу окружения стихотворения
 $SiteDevice=prown\getSiteDevice();  // 'Computer','Mobile','Tablet'
 echo '<!DOCTYPE html>';

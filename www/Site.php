@@ -32,8 +32,7 @@ echo '<div class="pageWrapper">';
             MakeQrcode();
             MakeH1();
             //echo  prown\getTranslit('Майский вечер в Карелии').'<br>';
-            
-            
+            //phpinfo();
             PageContent();
          echo '</article>';
          echo '<aside class="RightBar">';

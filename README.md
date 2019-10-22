@@ -218,8 +218,28 @@ MakeCookie на сайте
 ***В функции-конструкторе класса объявлены два входных параметра, а при вызове - один***
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
+***
+**simplexml_load_file(http://www.stolica.onego.ru/rss.php/feed.xml): failed to open stream: -"-"-**
 
+    File: C:\DoorTry\www\Pages\News\SimpleTape.php
+    Line: 23
 
+    E_WARNING [HND]
+    #0 C:\DoorTry\www\Pages\News\MakeNews.php(125): SimpleTape('http://www.stol...', '8')
+    #1 C:\DoorTry\www\Site.php(46): NewsView(true, '1', '8', 'stolica-na-oneg...')
+    #2 C:\DoorTry\www\Main.php(92): require_once('C:\\DoorTry\\www\\...')
+    #3 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+    #4 {main}
+
+В коде
+
+    "SimpleTape.php"
+    22 $url="http://www.stolica.onego.ru/rss.php/feed.xml";
+    23 $rss = simplexml_load_file($url);
+    
+Что было:
+***Ошибка или истекло время ожидания при открытии новостной ленты***
+###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 
 
 
