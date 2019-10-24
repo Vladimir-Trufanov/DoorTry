@@ -32,7 +32,7 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -62,12 +62,11 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
-				www\stihi\sorevnovanie-s-hakerami\logis.txt
 				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii 2416x503.jpg
 				www\stihi\sorevnovanie-s-hakerami\molody-dushoj 808x808.jpg
 				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste 1280x850.jpg
@@ -77,7 +76,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -98,8 +97,10 @@ DoorTry
 		www\includErrs.php
 		www\index.php
 		www\IniCurrStih.php
-		www\IniMem.php
+		www\Inimem.php
 		www\IniMenu.php
+		www\log.txt
+		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -114,18 +115,34 @@ DoorTry
 1=..\TPhpTools\TPageStarter\PageStarterClass.php
 2=www\Main.php
 3=www\stihi\sorevnovanie-s-hakerami\index.php
+4=www\iHtmlBegin.php
+5=www\Pages\DoorTry\SimPrincip.php
+6=www\Pages\DoorTry\ConnHandler.php
+7=www\Inimem.php
 [Selected Project Files]
 Main=
-Selected=www\stihi\sorevnovanie-s-hakerami\index.php
+Selected=www\Inimem.php
 [www\Site.php]
-TopLine=23
+TopLine=8
 Caret=15,35
 [..\TPhpTools\TPageStarter\PageStarterClass.php]
 TopLine=55
 Caret=63,73
 [www\Main.php]
-TopLine=35
-Caret=1,43
+TopLine=37
+Caret=3,56
 [www\stihi\sorevnovanie-s-hakerami\index.php]
 TopLine=13
 Caret=1,30
+[www\iHtmlBegin.php]
+TopLine=13
+Caret=1,1
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=23
+Caret=1,36
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=9
+Caret=88,29
+[www\Inimem.php]
+TopLine=23
+Caret=6,36

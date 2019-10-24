@@ -22,7 +22,17 @@ function SeoTags()
 
 function MakeH1()
 {
-   echo "<h1>Подключение обработчика ошибок/исключений - Connect error/exception handler</h1>";
+   global $SiteDevice;
+   if ($SiteDevice==Mobile) 
+   {   
+      echo '<div class="hh">';
+      echo "Подключение обработчика ошибок/исключений - Connect error/exception handler";
+      echo '</div>';
+   }
+   else
+   {
+      echo "<h1>Подключение обработчика ошибок/исключений - Connect error/exception handler</h1>";
+   }
 }
 
 function PageContent()

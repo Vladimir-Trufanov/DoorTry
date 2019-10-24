@@ -1,0 +1,1 @@
+[23-Oct-2019 21:21:38 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'print_r' (T_STRING), expecting ',' or ';' in C:\DoorTry\www\Site.php on line 40

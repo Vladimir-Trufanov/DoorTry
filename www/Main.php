@@ -43,17 +43,17 @@ require_once $SiteRoot."/Pages/News/WithImgTape.php";
 $oMainStarter = new PageStarter('Main');
 require_once $SiteRoot."/IniMem.php"; 
 // Подключаем динамические страницы с SEO-тегами, H1 и страницами
-if ($SiteDevice==Mobile)
-{   
-   require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
-}
-else 
-{   
+//if ($SiteDevice==Mobile)
+//{   
+//   require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
+//}
+//else 
+//{   
    if (isComRequest(prown\getTranslit(ConnHandler),'list'))
       require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
    else
       require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
-}
+//}
 // Подключаем управление стихами и ранее выбранное стихотворение
 require_once $SiteRoot."/stihi/MakeStihi.php";   
 require_once $SiteRoot."/stihi/Stih.php";   
