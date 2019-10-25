@@ -62,8 +62,8 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -98,7 +98,7 @@ DoorTry
 		www\includErrs.php
 		www\index.php
 		www\IniCurrStih.php
-		www\Inimem.php
+		www\IniMem.php
 		www\IniMenu.php
 		www\log.txt
 		www\logis.txt
@@ -113,21 +113,13 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Site.php
-1=www\Main.php
-2=www\IniMenu.php
-3=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+1=www\IniMem.php
 [Selected Project Files]
 Main=
-Selected=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+Selected=www\IniMem.php
 [www\Site.php]
-TopLine=28
-Caret=10,38
-[www\Main.php]
-TopLine=37
-Caret=3,56
-[www\IniMenu.php]
-TopLine=57
-Caret=72,69
-[www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
-TopLine=89
-Caret=43,104
+TopLine=11
+Caret=119,37
+[www\IniMem.php]
+TopLine=15
+Caret=76,17

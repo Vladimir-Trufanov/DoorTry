@@ -15,9 +15,16 @@
 
 function SeoTags()
 {
-    echo "<title>Простой принцип программирования</title>";
-    echo "<meta name=\"description\" content=\"Простой принцип программирования DO-or-TRY с автоматическим выводом и комментированием ошибок на сайте\">";
-    echo "<meta name=\"keywords\" content=\"система обработки ошибок (и исключений) на PHP,автоматический вывод ошибок на сайт\">";
+   echo '<title>Простой принцип программирования</title>';
+   echo '<meta name="description" content="Простой принцип программирования DO-or-TRY с автоматическим выводом и комментированием ошибок на сайте">';
+   echo '<meta name="keywords" content="система обработки ошибок (и исключений) на PHP,автоматический вывод ошибок на сайт">';
+   if (isComRequest(prown\getTranslit(SimPrincip),'list'))
+   {
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo '<link rel="canonical" href="https://doortry.ru"/>';
+      }
+   }
 }
 
 function MakeH1()
