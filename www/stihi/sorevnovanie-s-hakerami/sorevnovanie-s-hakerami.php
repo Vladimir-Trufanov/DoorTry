@@ -82,7 +82,7 @@ function SorevnovanieSHakerami($SubPage=NULL)
       echo '</div>';
       echo '<div id="dImgVerh">';
       ?>
-      <img id="ImgVerh" src="molody-dushoj 808x808.jpg" alt="Молоды душой">
+      <img id="ImgVerh" src="molody-dushoj_808x808.jpg" alt="Молоды душой">
       <p id="pVerh">Молоды душой</p>
       <?php
       echo '</div>';
@@ -90,7 +90,7 @@ function SorevnovanieSHakerami($SubPage=NULL)
    // Выводим разделитель частей стихотворения
    ?>
    <div id="divSeparator">
-      <img id="imgStrap" src="majskij-vecher-v-karelii 2416x503.jpg" alt="Майский вечер в Карелии">
+      <img id="imgStrap" src="majskij-vecher-v-karelii_2416x503.jpg" alt="Майский вечер в Карелии">
       <p id="pStrap">Майский вечер в Карелии</p>
    </div>
 
@@ -101,7 +101,7 @@ function SorevnovanieSHakerami($SubPage=NULL)
       echo '</div>';
       echo '<div id="dImgNiz">';
       ?>
-      <img id="ImgNiz" src="raznye-vmeste 1280x850.jpg" alt="Разные вместе">
+      <img id="ImgNiz" src="raznye-vmeste_1280x850.jpg" alt="Разные вместе">
       <p id="pNiz">Разные вместе</p>
       <?php
       echo '</div>';

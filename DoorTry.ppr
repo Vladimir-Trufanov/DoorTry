@@ -26,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
-			+DoorTry
+		-Pages
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -63,13 +63,14 @@ DoorTry
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
 		+stihi
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
-				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii 2416x503.jpg
-				www\stihi\sorevnovanie-s-hakerami\molody-dushoj 808x808.jpg
-				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste 1280x850.jpg
+				www\stihi\sorevnovanie-s-hakerami\logis.txt
+				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
+				www\stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
+				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
 				www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
 				www\stihi\sorevnovanie-s-hakerami\Stihi.css
 				www\stihi\sorevnovanie-s-hakerami\Styles.css
@@ -114,10 +115,10 @@ DoorTry
 0=www\Site.php
 1=www\Main.php
 2=www\IniMenu.php
-3=www\stihi\Stih.php
+3=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
 [Selected Project Files]
 Main=
-Selected=www\stihi\Stih.php
+Selected=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
 [www\Site.php]
 TopLine=28
 Caret=10,38
@@ -127,6 +128,6 @@ Caret=3,56
 [www\IniMenu.php]
 TopLine=57
 Caret=72,69
-[www\stihi\Stih.php]
-TopLine=53
-Caret=1,74
+[www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
+TopLine=89
+Caret=43,104
