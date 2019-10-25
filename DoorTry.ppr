@@ -32,7 +32,7 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -62,7 +62,7 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-stihi
+		+stihi
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
@@ -112,37 +112,21 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Site.php
-1=..\TPhpTools\TPageStarter\PageStarterClass.php
-2=www\Main.php
-3=www\stihi\sorevnovanie-s-hakerami\index.php
-4=www\iHtmlBegin.php
-5=www\Pages\DoorTry\SimPrincip.php
-6=www\Pages\DoorTry\ConnHandler.php
-7=www\Inimem.php
+1=www\Main.php
+2=www\IniMenu.php
+3=www\stihi\Stih.php
 [Selected Project Files]
 Main=
-Selected=www\Inimem.php
+Selected=www\stihi\Stih.php
 [www\Site.php]
-TopLine=8
-Caret=15,35
-[..\TPhpTools\TPageStarter\PageStarterClass.php]
-TopLine=55
-Caret=63,73
+TopLine=28
+Caret=10,38
 [www\Main.php]
 TopLine=37
 Caret=3,56
-[www\stihi\sorevnovanie-s-hakerami\index.php]
-TopLine=13
-Caret=1,30
-[www\iHtmlBegin.php]
-TopLine=13
-Caret=1,1
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=23
-Caret=1,36
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=9
-Caret=88,29
-[www\Inimem.php]
-TopLine=23
-Caret=6,36
+[www\IniMenu.php]
+TopLine=57
+Caret=72,69
+[www\stihi\Stih.php]
+TopLine=53
+Caret=1,74

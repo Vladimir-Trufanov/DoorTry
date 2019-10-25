@@ -13,6 +13,7 @@ function Stih($SubPage=NULL)
 {
 $Result = true;
 ?>
+<!--noindex-->
 <h2>Соревнование с хакерами</h2>
 <br>
 <div class="stihabzL">
@@ -70,6 +71,7 @@ $Result = true;
    <p class="stihstr">июнь, 115 километр</p>
    <p class="stihstr">кабинет, декабрь, 1998</p>
 </div>
+<!--/noindex-->
 <?php
       echo '<div id="dImghStih">';
       echo '<img id="ImghStih" src="stihi/sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';

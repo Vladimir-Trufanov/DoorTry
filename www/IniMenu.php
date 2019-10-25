@@ -65,7 +65,9 @@ function NewsMenu()
       {
          echo 'index.php?novosti=';
       }
-      echo prown\getTranslit($k).'"'.'>'.$k.'</a></li>';
+      echo prown\getTranslit($k).'"'.
+         ' rel="nofollow">'.      // исключили ссылку из индексирования
+         $k.'</a></li>';
    }
    return $Result;
 }
