@@ -114,8 +114,10 @@ function getNews()
 function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
 {  
    $Result = true;
+   // переключаемся на пользовательский обработчик
    if ($p_NewsView)
    {
+      $old_error_handler = set_error_handler("myErrorHandler");
       echo '<h2>'.getH2_News($s_NameNews).'</h2>';
       echo '<p>';
       $urlNews=getUrlNews($s_NameNews);
@@ -129,6 +131,9 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
          WithImgTape($urlNews,$p_NewsAmt);
       }
       echo '</p>';
+      
+      restore_error_handler();
+      echo "<b>restore_error_handler</b><br />\n";
    }
    return $Result;
    

@@ -31,9 +31,19 @@ function myErrorHandler($errno, $errstr, $errfile, $errline)
         break;
  
     case E_USER_NOTICE:
-        echo "<b>My NOTICE</b> [$errno] $errstr<br />\n";
+        //echo "<b>My NOTICE</b> [$errno] $errstr<br />\n";
         break;
- 
+    
+    case E_WARNING:
+        //echo "<b>My E_WARNING</b> [$errno] $errstr<br />\n";
+        //echo "<b>My E_WARNING</b><br />\n";
+        break;
+    
+    case E_NOTICE:
+        //echo "<b>My E_WARNING</b> [$errno] $errstr<br />\n";
+        //echo "<b>My E_Notice</b><br />\n";
+        break;
+    
     default:
         echo "Неизвестная ошибка: [$errno] $errstr<br />\n";
         break;
@@ -83,19 +93,27 @@ print_r($a);
 // переключаемся на пользовательский обработчик
 $old_error_handler = set_error_handler("myErrorHandler");
 //restore_error_handler();
+
+/*
 // проблема, мы передаем строку вместо массива
 echo "<br>1.----\nvector c - a warning\n";
 // Некорректный входной вектор, пропущен массив значений 
 $c = scale_by_log("not array", 2.3);
 var_dump($c); // NULL
+*/
+
+$a=0; $a=1/$a;
+
 restore_error_handler();
- 
+//$a=0; $a=1/$a;
+
+/* 
 // проблема, мы передаем строку вместо массива
 echo "<br>2.----\nvector c - a warning\n";
 // Некорректный входной вектор, пропущен массив значений 
 $c = scale_by_log("not array", 2.3);
 var_dump($c); // NULL
-   
+*/   
    return $Result;
 }
 // ********************************************************* DebugError.php *** 

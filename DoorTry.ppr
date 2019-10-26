@@ -26,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -112,20 +112,32 @@ DoorTry
 [Open project files]
 0=www\IniMem.php
 1=www\Main.php
-2=www\DebugError.php
-3=www\Site.php
+2=www\Site.php
+3=www\TDoorTryer\DoorTryerPage.php
+4=www\IniMenu.php
+5=www\Pages\News\MakeNews.php
+6=www\DebugError.php
 [Selected Project Files]
 Main=
-Selected=www\IniMem.php
+Selected=www\Pages\News\MakeNews.php
 [www\IniMem.php]
-TopLine=27
-Caret=4,36
+TopLine=21
+Caret=14,48
 [www\Main.php]
 TopLine=27
 Caret=36,34
-[www\DebugError.php]
-TopLine=85
-Caret=1,98
 [www\Site.php]
-TopLine=17
+TopLine=23
 Caret=15,36
+[www\TDoorTryer\DoorTryerPage.php]
+TopLine=25
+Caret=29,26
+[www\IniMenu.php]
+TopLine=49
+Caret=1,1
+[www\Pages\News\MakeNews.php]
+TopLine=111
+Caret=1,137
+[www\DebugError.php]
+TopLine=31
+Caret=11,43
