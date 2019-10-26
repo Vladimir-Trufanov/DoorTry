@@ -31,6 +31,7 @@ require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/ComRequest.php";
+require_once $SiteRoot."/DebugError.php";
 require_once $SiteRoot."/IniCurrStih.php";
 require_once $SiteRoot."/IniMenu.php";
 require_once $SiteRoot."/MakeQrcode.php"; 

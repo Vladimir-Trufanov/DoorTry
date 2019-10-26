@@ -1,0 +1,4 @@
+[26-Oct-2019 07:04:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\DoorTry\www\DebugError.php on line 16
+[26-Oct-2019 07:04:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\DoorTry\www\DebugError.php on line 16
+[26-Oct-2019 07:04:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\DoorTry\www\DebugError.php on line 16
+[26-Oct-2019 07:04:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\DoorTry\www\DebugError.php on line 16

@@ -33,6 +33,7 @@ echo '<div class="pageWrapper">';
             MakeH1();
             //echo  prown\getTranslit('Майский вечер в Карелии').'<br>';
             //phpinfo();
+            //DebugError();
             PageContent();
          echo '</article>';
          echo '<aside class="RightBar">';

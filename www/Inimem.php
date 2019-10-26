@@ -33,7 +33,7 @@ $Uagent=$_SERVER['HTTP_USER_AGENT'];               // HTTP_USER_AGENT
 // Инициализируем массив новостных лент и массив стихотворений
 $aNews=array
 (            
-   //'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
+   'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
    'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
    'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
    'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
