@@ -127,6 +127,9 @@ function TopMenu()
       StihiMenu();
       echo '</ul>';
    echo '</li>';
+
+   //echo '<li><a href="index.php?list=tabmenu">AJAKS-меню на Prototype</a></li>';
+
    // Подключаем вызов новостей
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';
