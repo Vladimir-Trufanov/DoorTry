@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -37,7 +37,7 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			-tabmenu
+			+tabmenu
 				-img
 					www\Pages\tabmenu\img\3d.gif
 					www\Pages\tabmenu\img\3d.jpg
@@ -57,7 +57,7 @@ DoorTry
 					www\Pages\tabmenu\js\prototype.js
 					www\Pages\tabmenu\js\scriptaculous.js
 				www\Pages\tabmenu\index.php
-			-wwwsortable
+			+wwwsortable
 				-css
 					www\Pages\wwwsortable\css\jquery-ui-1.8.14.custom.css
 				-scripts
@@ -150,9 +150,11 @@ DoorTry
 1=www\Site.php
 2=www\IniMenu.php
 3=www\Pages\News\MakeNews.php
+4=www\Pages\tabmenu\index.php
+5=www\Pages\wwwsortable\index.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\News\MakeNews.php
+Selected=www\Pages\wwwsortable\index.php
 [www\IniMem.php]
 TopLine=21
 Caret=19,23
@@ -163,5 +165,11 @@ Caret=1,1
 TopLine=113
 Caret=6,131
 [www\Pages\News\MakeNews.php]
-TopLine=113
+TopLine=109
 Caret=9,136
+[www\Pages\tabmenu\index.php]
+TopLine=1
+Caret=1,14
+[www\Pages\wwwsortable\index.php]
+TopLine=1
+Caret=4,9

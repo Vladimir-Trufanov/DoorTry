@@ -1,3 +1,25 @@
+
+
+<?php
+// PHP7/HTML5, EDGE/CHROME                                    *** index.php ***
+
+// ****************************************************************************
+// * doortry.ru                                       -------AJAKS-меню на Prototype *
+// *                                  ------https://ruseller.com/lessons.php?id=279 *
+// https://webformyself.com/dinamicheskaya-sortirovka-menyu-s-ispolzovaniem-metoda-ajax/
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  28.10.2019
+// Copyright © 2019 tve                              Посл.изменение: 28.10.2019
+
+?>
+
+
+
+
+
+
 <?php require_once 'db.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
