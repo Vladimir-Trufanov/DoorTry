@@ -75,10 +75,18 @@ if ($c_PersName<>$c_UserName)
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 
-// Если поступил запрос на страницу со стихотворением, то запускаем страницу
+// Если поступил запрос пробное меню, то запускаем страницу
+/*
 else if (isComRequest('tabmenu','list')) 
 {
    $page='/Pages/tabmenu';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
+*/
+else if (isComRequest('wwwsortable','list')) 
+{
+   $page='/Pages/wwwsortable';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }

@@ -37,7 +37,7 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Sshu
-			+tabmenu
+			-tabmenu
 				-img
 					www\Pages\tabmenu\img\3d.gif
 					www\Pages\tabmenu\img\3d.jpg
@@ -63,12 +63,7 @@ DoorTry
 				-scripts
 					www\Pages\wwwsortable\scripts\jquery-1.6.2.min.js
 					www\Pages\wwwsortable\scripts\jquery-ui-1.8.14.custom.min.js
-				www\Pages\wwwsortable\admin.php
-				www\Pages\wwwsortable\db.php
 				www\Pages\wwwsortable\index.php
-				www\Pages\wwwsortable\save.php
-				www\Pages\wwwsortable\test.sql
-				www\Pages\wwwsortable\Наглядность.xls
 		-qrcode
 			-temp
 			www\qrcode\CHANGELOG
@@ -148,10 +143,10 @@ DoorTry
 [Open project files]
 0=www\IniMem.php
 1=www\Site.php
-2=www\IniMenu.php
-3=www\Pages\News\MakeNews.php
-4=www\Pages\tabmenu\index.php
-5=www\Pages\wwwsortable\index.php
+2=www\Main.php
+3=www\IniMenu.php
+4=www\Pages\wwwsortable\index.php
+5=www\Pages\wwwsortable\db.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\wwwsortable\index.php
@@ -161,15 +156,15 @@ Caret=19,23
 [www\Site.php]
 TopLine=7
 Caret=1,1
+[www\Main.php]
+TopLine=69
+Caret=29,89
 [www\IniMenu.php]
-TopLine=113
-Caret=6,131
-[www\Pages\News\MakeNews.php]
-TopLine=109
-Caret=9,136
-[www\Pages\tabmenu\index.php]
-TopLine=1
-Caret=1,14
+TopLine=117
+Caret=71,132
 [www\Pages\wwwsortable\index.php]
+TopLine=27
+Caret=57,17
+[www\Pages\wwwsortable\db.php]
 TopLine=1
-Caret=4,9
+Caret=1,4

@@ -129,8 +129,9 @@ function TopMenu()
    echo '</li>';
 
    //echo '<li><a href="index.php?list=tabmenu">AJAKS-меню на Prototype</a></li>';
+   echo '<li><a href="index.php?list=wwwsortable">AJAKS-меню на JQuery</a></li>';
 
-   // Подключаем вызов новостей
+   // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';
       NewsMenu();
