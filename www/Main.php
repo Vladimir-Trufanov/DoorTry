@@ -90,6 +90,13 @@ else if (isComRequest('wwwsortable','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+else if (isComRequest('wwwadmin','list')) 
+{
+   $page='/Pages/wwwsortable/admin.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
+
 // В больштнстве остальных случаев запускаем главные страницы
 else
 {

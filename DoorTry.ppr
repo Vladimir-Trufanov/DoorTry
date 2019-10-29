@@ -63,6 +63,8 @@ DoorTry
 				-scripts
 					www\Pages\wwwsortable\scripts\jquery-1.6.2.min.js
 					www\Pages\wwwsortable\scripts\jquery-ui-1.8.14.custom.min.js
+				www\Pages\wwwsortable\admin.php
+				www\Pages\wwwsortable\db.php
 				www\Pages\wwwsortable\index.php
 		-qrcode
 			-temp
@@ -89,6 +91,9 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
+		-scripts
+			www\scripts\jquery-1.6.2.min.js
+			www\scripts\jquery-ui-1.8.14.custom.min.js
 		-stihi
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
@@ -129,6 +134,7 @@ DoorTry
 		www\IniCurrStih.php
 		www\IniMem.php
 		www\IniMenu.php
+		www\kwiflatn.db3
 		www\log.txt
 		www\logis.txt
 		www\Main.php
@@ -138,18 +144,20 @@ DoorTry
 		www\robots.txt
 		www\Site.php
 		www\sitemap.xml
+		www\sort.db3
 		www\stat.dat
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMem.php
 1=www\Site.php
 2=www\Main.php
-3=www\IniMenu.php
-4=www\Pages\wwwsortable\index.php
-5=www\Pages\wwwsortable\db.php
+3=www\Pages\wwwsortable\admin.php
+4=www\Pages\wwwsortable\db.php
+5=www\Pages\wwwsortable\index.php
+6=www\IniMenu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\wwwsortable\index.php
+Selected=www\Pages\wwwsortable\admin.php
 [www\IniMem.php]
 TopLine=21
 Caret=19,23
@@ -157,14 +165,17 @@ Caret=19,23
 TopLine=7
 Caret=1,1
 [www\Main.php]
-TopLine=69
-Caret=29,89
-[www\IniMenu.php]
-TopLine=117
-Caret=71,132
-[www\Pages\wwwsortable\index.php]
-TopLine=27
-Caret=57,17
+TopLine=75
+Caret=39,95
+[www\Pages\wwwsortable\admin.php]
+TopLine=67
+Caret=1,99
 [www\Pages\wwwsortable\db.php]
 TopLine=1
 Caret=1,4
+[www\Pages\wwwsortable\index.php]
+TopLine=63
+Caret=1,84
+[www\IniMenu.php]
+TopLine=123
+Caret=53,133
