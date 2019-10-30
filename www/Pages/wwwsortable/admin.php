@@ -71,9 +71,9 @@ $(document).ready(function()
    {
       axis: 'y',
 		opacity: 0.5,
-      /*
 		placeholder: 'ui-state-default',
 		containment: '.block',
+      /*
       */
 		stop: function()
       {
@@ -83,8 +83,7 @@ $(document).ready(function()
          {
 				url: 'save.php',
 				type: 'POST',
-				data: {masiv:arr}
-            /*,
+				data: {masiv:arr},
 				error: function()
             {
 					$('#res').text("Ошибка!");
@@ -93,12 +92,11 @@ $(document).ready(function()
             {
 					$('#res').show().text("Сохранено!").fadeOut(1000);
 				}
-            */
 			});
 		}
 	});
 });
-
+ 
 </script>
 
 </head>
@@ -107,12 +105,12 @@ $(document).ready(function()
    <?php
    echo 'Привет из админки!<br>';
 
-   echo "<ul id='sortable'>\r\n";
+   echo "<div class='block'><ul id='sortable'>\r\n";
    for($m=0; $m <count($row); $m++)
    {
        echo "<li id=".$row[$m][0]." class='ui-state-default'>".$row[$m][1]."</li>\r\n";
    }
-   echo "</ul>";
+   echo "</ul></div>";
 
 
 ?>
