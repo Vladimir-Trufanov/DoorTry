@@ -65,25 +65,35 @@ $row = getPmenu($db);
 
 <script type="text/javascript">
 
-$(document).ready(function(){
-	$('#sortable').sortable({
-		axis: 'y',
+$(document).ready(function()
+{
+	$('#sortable').sortable(
+   {
+      axis: 'y',
 		opacity: 0.5,
+      /*
 		placeholder: 'ui-state-default',
 		containment: '.block',
-		stop: function(){
+      */
+		stop: function()
+      {
 			var arr = $('#sortable').sortable("toArray");
 			//alert(arr);
-			$.ajax({
+			$.ajax(
+         {
 				url: 'save.php',
 				type: 'POST',
-				data: {masiv:arr},
-				error: function(){
+				data: {masiv:arr}
+            /*,
+				error: function()
+            {
 					$('#res').text("Ошибка!");
 				},
-				success: function(){
+				success: function()
+            {
 					$('#res').show().text("Сохранено!").fadeOut(1000);
 				}
+            */
 			});
 		}
 	});

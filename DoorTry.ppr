@@ -152,9 +152,8 @@ DoorTry
 1=www\Site.php
 2=www\Main.php
 3=www\Pages\wwwsortable\admin.php
-4=www\Pages\wwwsortable\db.php
-5=www\Pages\wwwsortable\index.php
-6=www\IniMenu.php
+4=www\Pages\wwwsortable\index.php
+5=www\IniMenu.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\wwwsortable\admin.php
@@ -168,11 +167,8 @@ Caret=1,1
 TopLine=75
 Caret=39,95
 [www\Pages\wwwsortable\admin.php]
-TopLine=67
-Caret=1,99
-[www\Pages\wwwsortable\db.php]
-TopLine=1
-Caret=1,4
+TopLine=76
+Caret=4,97
 [www\Pages\wwwsortable\index.php]
 TopLine=63
 Caret=1,84
