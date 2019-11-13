@@ -22,7 +22,8 @@
             });   
         }   
        
-        $(document).ready(function(){   
+        $(document).ready(function()
+        {   
             timer();   
             setInterval('timer()',1000);   
         });   

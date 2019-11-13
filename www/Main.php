@@ -75,7 +75,7 @@ if ($c_PersName<>$c_UserName)
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 
-// Если поступил запрос пробное меню, то запускаем страницу
+// Если поступил запрос на пробную страницу, то запускаем её
 /*
 else if (isComRequest('tabmenu','list')) 
 {
@@ -84,19 +84,6 @@ else if (isComRequest('tabmenu','list'))
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
 */
-else if (isComRequest('wwwsortable','list')) 
-{
-   $page='/Pages/wwwsortable';
-   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
-}
-else if (isComRequest('wwwadmin','list')) 
-{
-   $page='/Pages/wwwsortable/admin.php';
-   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
-}
-
 // В больштнстве остальных случаев запускаем главные страницы
 else
 {
@@ -112,6 +99,8 @@ else
    // Подключаем и запускаем регистратор времени загрузки страницы
    require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();
+   require_once $SiteRoot."/timer.php";
+   //require_once $SiteRoot."/DebugTimer.php";
    require_once $SiteRoot."/iHtmlEnd.php";
 }
 // *************************************************************** Main.php ***

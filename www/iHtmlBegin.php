@@ -64,6 +64,23 @@ else
    echo '<link rel="icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
    echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
    //
+  ?> 
+   <link rel="stylesheet" type="text/css" 
+      href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
+   <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+   </script>
+   <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous">
+   </script>
+    <?php
+
+   
+   //
    SeoTags();
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
    echo '<link href="Styles/Stihi.css" rel="stylesheet">';
@@ -77,6 +94,31 @@ else
    echo '<script src="/JS/TJsPrown.js"></script>';
    echo '<script src="/JS/DoorTry.js"></script>';
    echo '<script src="/JS/FixLoadTimer.js"></script>';
+   
+  ?> 
+  <script> 
+   
+        function timer()   
+        {   
+            $.ajax({   
+                url: "timer.php",   
+                cache: false,   
+                success: function(html){   
+                    $("#content").html(html);   
+                }   
+            });   
+        }   
+       
+        $(document).ready(function()
+        {   
+            timer();   
+            setInterval('timer()',1000);   
+        });  
+         
+    </script>
+   <?php
+
+   
    echo '</head>';
    echo '<body>';
 }
