@@ -65,6 +65,14 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
+		+SmartMenus
+			-res
+				-v6
+					www\SmartMenus\res\v6\sm-doortry.css
+			www\SmartMenus\jquery.min.js
+			www\SmartMenus\jquery.smartmenus.min.js
+			www\SmartMenus\sm-core-css.css
+			www\SmartMenus\sm-doortry.css
 		-stihi
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
@@ -116,52 +124,29 @@ DoorTry
 		www\sitemap.xml
 		www\stat.dat
 		www\timer.php
+		www\timer1.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Site.php
-1=www\Main.php
-2=www\IniMenu.php
-3=www\DebugTimer.php
-4=www\DebugError.php
-5=www\Pages\News\MakeNews.php
-6=www\iHtmlBegin.php
-7=www\IniMem.php
-8=..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php
-9=..\TPhpTools\TFixLoadTimer\FixLoadTimer.js
-10=www\timer.php
+1=www\iHtmlBegin.php
+2=www\Main.php
+3=www\SmartMenus\sm-doortry.css
+4=www\IniMenu.php
 [Selected Project Files]
 Main=
 Selected=www\iHtmlBegin.php
 [www\Site.php]
 TopLine=7
 Caret=1,1
-[www\Main.php]
-TopLine=93
-Caret=6,103
-[www\IniMenu.php]
-TopLine=113
-Caret=32,130
-[www\DebugTimer.php]
-TopLine=5
-Caret=1,31
-[www\DebugError.php]
-TopLine=3
-Caret=24,13
-[www\Pages\News\MakeNews.php]
-TopLine=115
-Caret=1,120
 [www\iHtmlBegin.php]
-TopLine=101
-Caret=9,117
-[www\IniMem.php]
-TopLine=39
-Caret=1,57
-[..\TPhpTools\TFixLoadTimer\FixLoadTimerClass.php]
-TopLine=33
+TopLine=167
+Caret=1,175
+[www\Main.php]
+TopLine=61
+Caret=3,71
+[www\SmartMenus\sm-doortry.css]
+TopLine=181
+Caret=1,167
+[www\IniMenu.php]
+TopLine=67
 Caret=1,1
-[..\TPhpTools\TFixLoadTimer\FixLoadTimer.js]
-TopLine=1
-Caret=83,54
-[www\timer.php]
-TopLine=1
-Caret=1,4
