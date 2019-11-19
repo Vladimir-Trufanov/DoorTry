@@ -101,7 +101,7 @@ $(document).ready(function()
          if (e.namespace == 'smapi')
          { 
             // your handler code
-            //alert('smapi');
+            //alert('AJAX скриптом управляется!');
             var $arr='Oppa';
             
             $.ajax({
@@ -120,11 +120,11 @@ $(document).ready(function()
          }
       });
       
-   /*
+   
    $(function()
    {
       var $mainMenuState = $('#main-menu-state');
-      alert('arr');
+      //alert('Гамбургер скриптом управляется!');
       if ($mainMenuState.length)
       {
          // animate mobile menu
@@ -150,7 +150,8 @@ $(document).ready(function()
          });
       }
    });
-   */
+   
+   
 }); // end ready
 </script>
 <?php
@@ -164,12 +165,11 @@ echo '<body>';
 
 <div class="gambur">
 
-<!-- 
 <input id="main-menu-state" type="checkbox"/>
 <label class="main-menu-btn" for="main-menu-state">
    <span class="main-menu-btn-icon"></span> Кнопка меню-гамбургера
 </label>
--->
+
 
 <ul id="main-menu" class="sm sm-doortry">
    <li><a href="index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij">
