@@ -162,15 +162,15 @@ echo '<body>';
 
 ?> 
 <!-- Mobile menu toggle button (hamburger/x icon) -->
-
+<!-- 
 <div class="gambur">
 
 <input id="main-menu-state" type="checkbox"/>
 <label class="main-menu-btn" for="main-menu-state">
    <span class="main-menu-btn-icon"></span> Кнопка меню-гамбургера
 </label>
-
-
+-->
+<!--
 <ul id="main-menu" class="sm sm-doortry">
    <li><a href="index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij">
       Подключение обработчика ошибок и исключений</a>
@@ -194,12 +194,10 @@ echo '<body>';
       </ul>
    </li>
 </ul>
+
 </div>
-
-<br><br><br><br>
+-->
 <div id="res">Сообщение</div>
-<br><br><br>
-
 <?php
 
 // ********************************************************* iHtmlBegin.php ***

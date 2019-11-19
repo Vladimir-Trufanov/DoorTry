@@ -88,6 +88,7 @@ header h1, header h2
 	color:white;
 	font-weight:bold;
    padding-top:2.4rem;
+   padding-bottom:2.4rem;
 	padding-left:1rem;
 }
 #dVer
@@ -220,6 +221,7 @@ footer .pRight
 /*
  Форматируем меню
 */
+/*
 .TopMenu
 {
 	border-bottom:0.1rem solid rgba(255,255,255,.5);	
@@ -281,6 +283,7 @@ footer .pRight
 {
    width:100%; 
 }
+*/
 /*
 @media (min-width: 481px) and (max-width:768px) 
 {

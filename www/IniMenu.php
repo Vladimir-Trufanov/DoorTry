@@ -92,7 +92,8 @@ function StihiMenu()
 function TopMenu()
 {
    $Result = true;
-   echo '<ul id="bar">';
+   //echo '<ul id="bar">';
+   echo '<ul id="main-menu" class="sm sm-doortry">';
    // Переключаем пункты меню главных материалов сайта
    if (isComRequest(prown\getTranslit(ConnHandler),'list'))
    {

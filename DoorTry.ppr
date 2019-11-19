@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -129,25 +129,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Site.php
-1=www\iHtmlBegin.php
-2=www\IniMenu.php
-3=www\SmartMenus\sm-doortry.css
-4=www\Styles\Styles.css
+1=www\IniMenu.php
+2=www\SmartMenus\sm-doortry.css
+3=www\Styles\Styles.css
+4=www\iHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
+Selected=www\Site.php
 [www\Site.php]
-TopLine=1
-Caret=1,1
-[www\iHtmlBegin.php]
-TopLine=125
-Caret=9,127
+TopLine=11
+Caret=7,35
 [www\IniMenu.php]
-TopLine=1
-Caret=1,1
+TopLine=89
+Caret=6,95
 [www\SmartMenus\sm-doortry.css]
-TopLine=272
-Caret=2,181
+TopLine=1
+Caret=21,23
 [www\Styles\Styles.css]
-TopLine=263
-Caret=1,1
+TopLine=79
+Caret=19,90
+[www\iHtmlBegin.php]
+TopLine=183
+Caret=1,201

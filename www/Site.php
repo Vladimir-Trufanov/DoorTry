@@ -10,19 +10,31 @@
 // Copyright © 2019 tve                              Посл.изменение: 13.09.2019
 
 echo '<div class="pageWrapper">';
+/*
+      echo '<input id="main-menu-state" type="checkbox"/>';
+      echo '<label class="main-menu-btn" for="main-menu-state">';
+      echo '<span class="main-menu-btn-icon"></span>'; // Кнопка меню-гамбургера
+      echo '</label>';
+*/
    // Штрих-код с адресом сайта
    echo '<div id="dImghVerh">';
    echo '<img id="ImghVerh" src="doortry.png" alt="doortry.ru">';
    echo '</div>';
    // Верхнее меню и название сайта
    echo '<header>';
-      echo '<nav class="TopMenu">';
-         TopMenu();
-      echo  '</nav>';
       echo '<div id="dVer">';
       echo 'v1.4';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';
+      
+      echo '<input id="main-menu-state" type="checkbox"/>';
+      echo '<label class="main-menu-btn" for="main-menu-state">';
+      echo '<span class="main-menu-btn-icon"></span>'; // Кнопка меню-гамбургера
+      echo '</label>';
+      
+      echo '<nav class="TopMenu">';
+         TopMenu();
+      echo  '</nav>';
    echo '</header>';
    // 2 или 3 колонки контента сайта
    echo '<div class="contentWrapper">';
