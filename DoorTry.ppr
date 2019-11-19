@@ -16,12 +16,12 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
@@ -65,11 +65,12 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		+SmartMenus
+		-SmartMenus
 			-res
 				-v6
 					www\SmartMenus\res\v6\sm-doortry.css
-			www\SmartMenus\jquery.min.js
+				-v7
+					www\SmartMenus\res\v7\sm-doortry.css
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
@@ -129,24 +130,24 @@ DoorTry
 [Open project files]
 0=www\Site.php
 1=www\iHtmlBegin.php
-2=www\Main.php
+2=www\IniMenu.php
 3=www\SmartMenus\sm-doortry.css
-4=www\IniMenu.php
+4=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
+Selected=www\SmartMenus\sm-doortry.css
 [www\Site.php]
-TopLine=7
+TopLine=1
 Caret=1,1
 [www\iHtmlBegin.php]
-TopLine=167
+TopLine=173
 Caret=1,175
-[www\Main.php]
-TopLine=61
-Caret=3,71
-[www\SmartMenus\sm-doortry.css]
-TopLine=181
-Caret=1,167
 [www\IniMenu.php]
-TopLine=67
+TopLine=1
+Caret=1,1
+[www\SmartMenus\sm-doortry.css]
+TopLine=165
+Caret=1,180
+[www\Styles\Styles.css]
+TopLine=263
 Caret=1,1
