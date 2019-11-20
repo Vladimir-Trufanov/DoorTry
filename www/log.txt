@@ -3,3 +3,21 @@
 [26-Oct-2019 07:04:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\DoorTry\www\DebugError.php on line 16
 [26-Oct-2019 07:04:58 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\DoorTry\www\DebugError.php on line 16
 [18-Nov-2019 22:01:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\DoorTry\www\iHtmlBegin.php on line 80
+[20-Nov-2019 22:12:30 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getPmenu() in C:\DoorTry\www\timer.php:67
+Stack trace:
+#0 C:\DoorTry\www\Main.php(102): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\timer.php on line 67
+[20-Nov-2019 22:12:37 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getPmenu() in C:\DoorTry\www\timer.php:67
+Stack trace:
+#0 C:\DoorTry\www\Main.php(102): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\timer.php on line 67
+[20-Nov-2019 22:28:00 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\DoorTry\www\timer.php:68
+Stack trace:
+#0 C:\DoorTry\www\Main.php(102): require_once()
+#1 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\timer.php on line 68

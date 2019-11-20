@@ -80,8 +80,76 @@ echo '<script src="/JS/FixLoadTimer.js"></script>';
 // Разворачиваем смартменю
 ?> 
 <script>
+
+function MakeSmartMenu()
+{
+   var Result=0;
+   $(document).ready(function() 
+   {
+      // Определяем время развертывания и сворачивания меню
+      $('.sm').smartmenus
+      ({
+         showFunction: function($ul,complete) 
+         {
+            $ul.slideDown(250,complete);
+         },
+         hideFunction: function($ul,complete) 
+         {
+            $ul.slideUp(250,complete);
+         }
+      });
+      // Определяем аякс-обработку по клику на пункте меню
+      $('#main-menu').on('click.smapi',function(e,item)
+      {
+         // check namespace if you need to differentiate from a regular DOM
+         // event fired inside the menu tree
+         if (e.namespace == 'smapi')
+         { 
+            // your handler code
+            //alert('AJAX скриптом управляется!');
+            var $arr='Oppa';
+            
+            
+            
+            
+            
+            
+            
+            
+            $.ajax({
+               url: 'SmartMenus/save.php',
+               type: 'POST',
+               data: {masiv:$arr},
+               error: function()
+               {
+                  $('#res').text("Ошибка!").fadeOut(1000);
+               },
+               success: function()
+               {
+                  $('#res').show().text("Сохраненоuu!").fadeOut(1000);
+               }
+			   });
+         }
+      });
+
+      
+   }); 
+   return Result;
+}
+MakeSmartMenu();
+
+
+
+
+
 $(document).ready(function() 
 {
+   
+   //function getTime(secs) {
+   //$(function(smartmenus)
+   //function MakeMe(smartmenus)
+   //{
+   /*
    $('.sm').smartmenus
    ({
       showFunction: function($ul,complete) 
@@ -93,7 +161,11 @@ $(document).ready(function()
          $ul.slideUp(250,complete);
       }
    });
-      
+   //}
+   //MakeMe(smartmenus); 
+   */  
+   
+   /*
       $('#main-menu').on('click.smapi', function(e,item)
       {
          // check namespace if you need to differentiate from a regular DOM
@@ -119,6 +191,7 @@ $(document).ready(function()
 			   });
          }
       });
+      */
       
    /*
    $(function()

@@ -23,6 +23,7 @@ echo '<div class="pageWrapper">';
    // Верхнее меню и название сайта
    echo '<header>';
       echo '<div id="dVer">';
+      echo '<div id="res"></div>';
       echo 'v1.4';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';

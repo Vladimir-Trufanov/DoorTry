@@ -69,6 +69,7 @@ DoorTry
 			-res
 				www\SmartMenus\res\sm-doortry.css
 			www\SmartMenus\jquery.smartmenus.min.js
+			www\SmartMenus\save.php
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
@@ -87,7 +88,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -131,21 +132,37 @@ DoorTry
 2=www\Styles\Styles.css
 3=www\SmartMenus\sm-doortry.css
 4=www\IniMenu.php
+5=www\DebugTimer.php
+6=www\Main.php
+7=www\SmartMenus\save.php
+8=www\timer.php
 [Selected Project Files]
 Main=
-Selected=www\IniMenu.php
+Selected=www\iHtmlBegin.php
 [www\Site.php]
-TopLine=37
-Caret=30,46
+TopLine=49
+Caret=27,26
 [www\iHtmlBegin.php]
-TopLine=79
-Caret=3,202
+TopLine=108
+Caret=13,113
 [www\Styles\Styles.css]
-TopLine=168
+TopLine=196
 Caret=1,223
 [www\SmartMenus\sm-doortry.css]
-TopLine=47
+TopLine=119
 Caret=1,146
 [www\IniMenu.php]
-TopLine=21
+TopLine=32
 Caret=16,59
+[www\DebugTimer.php]
+TopLine=19
+Caret=1,14
+[www\Main.php]
+TopLine=89
+Caret=1,1
+[www\SmartMenus\save.php]
+TopLine=1
+Caret=40,6
+[www\timer.php]
+TopLine=15
+Caret=13,68
