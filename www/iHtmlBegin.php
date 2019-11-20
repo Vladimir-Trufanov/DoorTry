@@ -120,7 +120,7 @@ $(document).ready(function()
          }
       });
       
-   
+   /*
    $(function()
    {
       var $mainMenuState = $('#main-menu-state');
@@ -150,6 +150,7 @@ $(document).ready(function()
          });
       }
    });
+   */
    
    
 }); // end ready
@@ -197,7 +198,7 @@ echo '<body>';
 
 </div>
 -->
-<div id="res">Сообщение</div>
 <?php
+//echo '<div id="res">Сообщение</div>';
 
 // ********************************************************* iHtmlBegin.php ***

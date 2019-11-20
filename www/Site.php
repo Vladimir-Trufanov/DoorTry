@@ -27,11 +27,12 @@ echo '<div class="pageWrapper">';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';
       
+      /*
       echo '<input id="main-menu-state" type="checkbox"/>';
       echo '<label class="main-menu-btn" for="main-menu-state">';
       echo '<span class="main-menu-btn-icon"></span>'; // Кнопка меню-гамбургера
       echo '</label>';
-      
+      */
       echo '<nav class="TopMenu">';
          TopMenu();
       echo  '</nav>';

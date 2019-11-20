@@ -56,7 +56,7 @@ function NewsMenu()
    $Result = true;
    foreach($aNews as $k=>$v)
    {
-      echo '<li class="menuli"><a href="';
+      echo '<li><a href="';
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
          //echo 'novosti=';
@@ -80,7 +80,7 @@ function StihiMenu()
    $Result = true;
    foreach($aStihi as $k=>$v)
    {
-      echo '<li class="menuli"><a href="';
+      echo '<li><a href="';
       echo 'index.php?stihi=';
       echo prown\getTranslit($k).'"'.'>'.$k.'</a></li>';
    }
@@ -92,7 +92,6 @@ function StihiMenu()
 function TopMenu()
 {
    $Result = true;
-   //echo '<ul id="bar">';
    echo '<ul id="main-menu" class="sm sm-doortry">';
    // Переключаем пункты меню главных материалов сайта
    if (isComRequest(prown\getTranslit(ConnHandler),'list'))

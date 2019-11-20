@@ -50,6 +50,7 @@ body
    font-size:1.6rem;  
    width:100%;
    height:100%;
+   min-width:532px;
    /*background: yellow;*/
 }
 table 
@@ -79,16 +80,17 @@ header
 {
 	background-color:rgb(93,43,78); 
 	background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
-   height:12.5rem;
+   height:12.4rem;
    margin-left:14.4rem;
+   min-width:128px;
 }
 header h1, header h2 
 {
 	font-size:3rem;	
 	color:white;
 	font-weight:bold;
-   padding-top:2.4rem;
-   padding-bottom:2.4rem;
+   padding-top:2.64rem;
+   padding-bottom:2.64rem;
 	padding-left:1rem;
 }
 #dVer
@@ -218,130 +220,9 @@ footer .pRight
    font-size:1.75rem;	
    padding:1rem 0 2rem 0;
 }
-/*
- Форматируем меню
-*/
-/*
-.TopMenu
-{
-	border-bottom:0.1rem solid rgba(255,255,255,.5);	
-	background-color:rgb(25,25,25);
-   zoom:1;	
-}
-.TopMenu li
-{
-	float:left;
-}
-.TopMenu a
-{
-	float:left;	
-	font-size:1.4rem;
-	color:white;
-	font-weight:normal;
-   text-decoration:none;
-	padding:1rem;
-	border-right:0.1rem dashed rgba(255,255,255,.75);
-	transition:all .5s;
-}
-.TopMenu li:last-of-type a 
-{
-	border-right:none;	
-}
-.TopMenu a:hover
-{
-	background-color:rgb(93,43,78);
-}
-.TopMenu ul
-{
-   position:relative;
-   display:inline-block;
-}
-.TopMenu ul li
-{
-   display:inline-block;
-}
-.TopMenu ul ul
-{
-   display:none;
-   position:absolute;
-   margin-top:3.6rem;
-   margin-left:-1rem;
-}
-.TopMenu li:hover ul
-{
-   display:block;
-}
-.TopMenu li:hover li
-{
-   display:block;
-}
-.menuli
-{
-  background-color:#f63;
-}
-.menuli a
-{
-   width:100%; 
-}
-*/
-/*
 @media (min-width: 481px) and (max-width:768px) 
 {
-   .RightBar 
-   {
-      float:none;
-      width:auto;
-      clear:both;
-      border-top:2px solid black;
-      padding-top:10px;
-   }
-   .columnWrapper 
-   {
-      width:auto;
-   }
-   .main 
-   {
-      border-right:none;
-   }
 }
-@media (max-width:480px) 
-{
-   .columnWrapper, .main, .LeftBar, .RightBar 
-   {
-      float:none;
-      width:auto;
-   }
-   .main 
-   {
-      border:none;
-   }
-   .LeftBar, .RightBar 
-   {
-      border-top:2px solid black;
-      margin-top:25px;
-      padding-top:10px;
-   }
-   header h1 
-   {
-      font-size:1.5em;
-   }
-   nav
-   {
-      text-align:center;
-   }
-   nav li 
-   {
-      float:none;
-     display:inline-block;
-   }
-   nav a 
-   {
-      float:none;
-      display:inline-block;
-      border:none;
-   }
-}
-*/
 .dAbz
 {
    margin-top:1rem;
