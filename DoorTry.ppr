@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -65,10 +65,12 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		+SmartMenus
+		-SmartMenus
 			-res
 				www\SmartMenus\res\sm-doortry.css
+			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\jquery.smartmenus.min.js
+			www\SmartMenus\MakeSmartMenu.js
 			www\SmartMenus\save.php
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
@@ -124,45 +126,12 @@ DoorTry
 		www\sitemap.xml
 		www\stat.dat
 		www\timer.php
-		www\timer1.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Site.php
-1=www\iHtmlBegin.php
-2=www\Styles\Styles.css
-3=www\SmartMenus\sm-doortry.css
-4=www\IniMenu.php
-5=www\DebugTimer.php
-6=www\Main.php
-7=www\SmartMenus\save.php
-8=www\timer.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
+Selected=www\Site.php
 [www\Site.php]
-TopLine=49
+TopLine=26
 Caret=27,26
-[www\iHtmlBegin.php]
-TopLine=108
-Caret=13,113
-[www\Styles\Styles.css]
-TopLine=196
-Caret=1,223
-[www\SmartMenus\sm-doortry.css]
-TopLine=119
-Caret=1,146
-[www\IniMenu.php]
-TopLine=32
-Caret=16,59
-[www\DebugTimer.php]
-TopLine=19
-Caret=1,14
-[www\Main.php]
-TopLine=89
-Caret=1,1
-[www\SmartMenus\save.php]
-TopLine=1
-Caret=40,6
-[www\timer.php]
-TopLine=15
-Caret=13,68
