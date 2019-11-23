@@ -65,7 +65,7 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		-SmartMenus
+		+SmartMenus
 			-res
 				www\SmartMenus\res\sm-doortry.css
 			www\SmartMenus\AjaxBase.db3
@@ -90,7 +90,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -128,26 +128,46 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\iHtmlBegin.php
-1=www\Site.php
-2=www\MobiSite.php
-3=www\Main.php
-4=www\Pages\News\MakeNews.php
+0=www\Site.php
+1=www\iHtmlBegin.php
+2=www\Pages\News\MakeNews.php
+3=www\SmartMenus\sm-doortry-mobi.css
+4=www\SmartMenus\sm-doortry.css
+5=www\Styles\Styles.css
+6=www\Styles\MobiStyles.css
+7=www\MobiSite.php
+8=www\IniMem.php
+9=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\MobiSite.php
-[www\iHtmlBegin.php]
-TopLine=41
-Caret=1,62
+Selected=www\Main.php
 [www\Site.php]
-TopLine=41
-Caret=1,64
-[www\MobiSite.php]
-TopLine=27
-Caret=5,42
-[www\Main.php]
-TopLine=37
-Caret=1,51
+TopLine=47
+Caret=1,65
+[www\iHtmlBegin.php]
+TopLine=53
+Caret=65,56
 [www\Pages\News\MakeNews.php]
-TopLine=55
+TopLine=1
 Caret=1,1
+[www\SmartMenus\sm-doortry-mobi.css]
+TopLine=3
+Caret=13,35
+[www\SmartMenus\sm-doortry.css]
+TopLine=23
+Caret=1,1
+[www\Styles\Styles.css]
+TopLine=171
+Caret=1,1
+[www\Styles\MobiStyles.css]
+TopLine=95
+Caret=1,107
+[www\MobiSite.php]
+TopLine=9
+Caret=30,22
+[www\IniMem.php]
+TopLine=39
+Caret=10,57
+[www\Main.php]
+TopLine=59
+Caret=1,50

@@ -4,13 +4,12 @@
  * doortry.ru/smartmenus        Сайт сбора сообщений об ошибках/исключениях и *
  *                         формирования страницы с выводом сообщений, а также *
  * комментариев в PHP5-PHP7. Подготовленные стили меню фрэймворка smartmenus. *
+ * ---------------------------- для мобильной версии ------------------------ *
  ******************************************************************************
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  13.10.2019
- * Copyright © 2019 tve                              Посл.изменение: 17.11.2019
- * 
- *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
+ * Copyright © 2019 tve                              Посл.изменение: 23.11.2019
 **/
 
 /* Общие настройки мобильной и настольной версий */
@@ -21,20 +20,19 @@
 	/*background-color:rgb(25,25,25);*/
 	background-color:yellow;
    zoom:1;	
-   /*z-index:1001;*/
-   /*height:3.4rem;*/
+   height:3.4rem;
 }
 /* Цвета названий пунктов меню и их фона */
 .sm-doortry a
 {
    color:white;
 	background-color:rgb(25,25,25);
-   font-size:1.4rem;
+   font-size:1.6rem;
 	font-weight:normal;
    text-decoration:none;
    text-shadow:none;
    text-align:left;
-	padding:1rem;
+	padding:0.8rem;
 	transition:all .5s;
 }
 .sm-doortry a:hover 

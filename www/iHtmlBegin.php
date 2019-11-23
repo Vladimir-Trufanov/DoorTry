@@ -42,44 +42,38 @@ echo '<script '.
      '</script>';
 // Подключаем SmartMenus
 echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
-echo '<link rel="stylesheet" href="SmartMenus/sm-core-css.css">';
-echo '<link rel="stylesheet" href="SmartMenus/sm-doortry.css">';
 echo '<script src="SmartMenus/jquery.smartmenus.min.js"></script>';
 echo '<script src="SmartMenus/MakeSmartMenu.js"></script>';
+echo '<link rel="stylesheet" href="SmartMenus/sm-core-css.css">';
 //
 SeoTags();
 // Делаем страницу для смартфона
-//if ($SiteDevice==Mobile) 
-//{   
+if ($SiteDevice==Mobile) 
+{   
+   //echo '<script>alert("Mobile");</script>';
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
    echo '<link href="Styles/Stihi.css" rel="stylesheet">';
-   // Определяем заданную ленту новостей
-   getNews();
-   if (isNews($s_NameNews)) 
-      echo '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
-   else
-      echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
-/*
+   echo '<link rel="stylesheet" href="SmartMenus/sm-doortry-mobi.css">';
 }
 // Делаем страницу для компьютера
 else 
 {   
+   //echo '<script>alert("Computer");</script>';
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
    echo '<link href="Styles/Stihi.css" rel="stylesheet">';
-   // Определяем заданную ленту новостей
-   getNews();
-   if (isNews($s_NameNews)) 
-      echo '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
-   else
-      echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
+   echo '<link rel="stylesheet" href="SmartMenus/sm-doortry.css">';
 }
-*/
+// Определяем заданную ленту новостей
+getNews();
+if (isNews($s_NameNews)) 
+   echo '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
+else
+   echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
 // Подключаем вспомогательные JS
 echo '<link href="JS/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/JS/TJsPrown.js"></script>';
 echo '<script src="/JS/DoorTry.js"></script>';
 echo '<script src="/JS/FixLoadTimer.js"></script>';
-
 // Разворачиваем смартменю
 ?> 
 <script>

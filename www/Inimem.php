@@ -54,6 +54,7 @@ $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчи
 $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов     
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
+$c_Topset=prown\MakeCookie('$Topset',7,tInt,true);               // смещение сверху контента мобиверсии
 // Каталог текущего стихотворения - записи базы данных
 $c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true);     
 $c_CurrStih=IniCurrStih($c_CurrStih);

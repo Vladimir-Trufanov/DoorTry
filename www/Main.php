@@ -45,9 +45,13 @@ $oMainStarter = new PageStarter('Main');
 require_once $SiteRoot."/IniMem.php"; 
 
 if (isComRequest(prown\getTranslit(ConnHandler),'list'))
+{
    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
+}
 else
+{
    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
+}
 
 // Подключаем управление стихами и ранее выбранное стихотворение
 require_once $SiteRoot."/stihi/MakeStihi.php";   
@@ -88,14 +92,14 @@ else if (isComRequest('tabmenu','list'))
 else
 {
    require_once $SiteRoot."/iHtmlBegin.php";
-   //if ($SiteDevice==Mobile)
-   //{   
+   if ($SiteDevice==Mobile)
+   {   
       require_once $SiteRoot."/MobiSite.php";
-   /*}
+   }
    else 
    {   
       require_once $SiteRoot."/Site.php";
-   }*/
+   }
    // Подключаем и запускаем регистратор времени загрузки страницы
    require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();
