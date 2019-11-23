@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -26,13 +26,13 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -128,10 +128,26 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Site.php
+0=www\iHtmlBegin.php
+1=www\Site.php
+2=www\MobiSite.php
+3=www\Main.php
+4=www\Pages\News\MakeNews.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
+Selected=www\MobiSite.php
+[www\iHtmlBegin.php]
+TopLine=41
+Caret=1,62
 [www\Site.php]
-TopLine=26
-Caret=27,26
+TopLine=41
+Caret=1,64
+[www\MobiSite.php]
+TopLine=27
+Caret=5,42
+[www\Main.php]
+TopLine=37
+Caret=1,51
+[www\Pages\News\MakeNews.php]
+TopLine=55
+Caret=1,1

@@ -49,10 +49,17 @@ echo '<script src="SmartMenus/MakeSmartMenu.js"></script>';
 //
 SeoTags();
 // Делаем страницу для смартфона
-if ($SiteDevice==Mobile) 
-{   
+//if ($SiteDevice==Mobile) 
+//{   
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
    echo '<link href="Styles/Stihi.css" rel="stylesheet">';
+   // Определяем заданную ленту новостей
+   getNews();
+   if (isNews($s_NameNews)) 
+      echo '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
+   else
+      echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
+/*
 }
 // Делаем страницу для компьютера
 else 
@@ -65,13 +72,8 @@ else
       echo '<link href="Styles/IsColNews.css" rel="stylesheet">'; 
    else
       echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
-   ?> 
-   <script>
-   /* 
-   */
-   </script>
-   <?php
 }
+*/
 // Подключаем вспомогательные JS
 echo '<link href="JS/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/JS/TJsPrown.js"></script>';

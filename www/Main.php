@@ -88,14 +88,14 @@ else if (isComRequest('tabmenu','list'))
 else
 {
    require_once $SiteRoot."/iHtmlBegin.php";
-   if ($SiteDevice==Mobile)
-   {   
+   //if ($SiteDevice==Mobile)
+   //{   
       require_once $SiteRoot."/MobiSite.php";
-   }
+   /*}
    else 
    {   
       require_once $SiteRoot."/Site.php";
-   }
+   }*/
    // Подключаем и запускаем регистратор времени загрузки страницы
    require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();
