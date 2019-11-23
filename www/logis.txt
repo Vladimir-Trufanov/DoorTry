@@ -1994,3 +1994,37 @@ Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36
 Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
 ===Main===Sat, 23 Nov 2019 22:25:36 +0300 IP: ::1 URL: /index.php?novosti=novosti-ukrainy 
 Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+***Main***Sat, 23 Nov 2019 22:31:24 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:31:28 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:31:48 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:31:55 +0300 IP: ::1 URL: /index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:32:09 +0300 IP: ::1 URL: /index.php?list=prostoj-princip-programmirovaniya 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:32:27 +0300 IP: ::1 URL: /index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:33:17 +0300 IP: ::1 URL: /index.php?novosti=yandeks-internet 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+***Main***Sat, 23 Nov 2019 22:46:39 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:46:47 +0300 IP: ::1 URL: /index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:46:57 +0300 IP: ::1 URL: /index.php?stihi=sorevnovanie-s-hakerami 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:47:01 +0300 IP: ::1 URL: /index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:47:06 +0300 IP: ::1 URL: /index.php?novosti=novosti-ukrainy 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:47:26 +0300 IP: ::1 URL: /index.php?novosti=novosti-ukrainy 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:47:30 +0300 IP: ::1 URL: /index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:47:43 +0300 IP: ::1 URL: /index.php?novosti=yandeks-obshchestvo 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:47:50 +0300 IP: ::1 URL: /index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 
+===Main===Sat, 23 Nov 2019 22:48:07 +0300 IP: ::1 URL: /index.php?novosti=yandeks-internet 
+Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Mobile Safari/537.36 

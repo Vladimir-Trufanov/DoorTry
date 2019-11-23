@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 11.10.2019
+// Copyright © 2019 tve                              Посл.изменение: 23.11.2019
       
 // echo '1. '.$_SERVER['REQUEST_URI'].'<br>';
 // header('Location: http://www.new-website.com');
@@ -43,7 +43,7 @@ require_once $SiteRoot."/Pages/News/WithImgTape.php";
 //session_start();
 $oMainStarter = new PageStarter('Main');
 require_once $SiteRoot."/IniMem.php"; 
-
+// Подключаем нужную главную страницу
 if (isComRequest(prown\getTranslit(ConnHandler),'list'))
 {
    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
@@ -52,7 +52,15 @@ else
 {
    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 }
-
+// Регулируем верхнее смещение контента главной страницы по её типу
+if (isComRequest(prown\getTranslit(ConnHandler),'list'))
+{
+   $c_Topset=prown\MakeCookie('Topset',7,tInt);  
+}
+elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
+{
+   $c_Topset=prown\MakeCookie('Topset',8.4,tInt);  
+}
 // Подключаем управление стихами и ранее выбранное стихотворение
 require_once $SiteRoot."/stihi/MakeStihi.php";   
 require_once $SiteRoot."/stihi/Stih.php";   

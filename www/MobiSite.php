@@ -7,17 +7,9 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 30.08.2019
+// Copyright © 2019 tve                              Посл.изменение: 23.11.2019
 
 // Регулируем верхнее смещение контента главной страницы по её типу
-if (isComRequest(prown\getTranslit(ConnHandler),'list'))
-{
-   $c_Topset=prown\MakeCookie('Topset',6,tInt);  
-}
-elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
-{
-   $c_Topset=prown\MakeCookie('Topset',6,tInt);  
-}
 echo '<style type="text/css"> .main';
 echo '{margin-top:'.$c_Topset.'rem;}';
 echo '</style>';
