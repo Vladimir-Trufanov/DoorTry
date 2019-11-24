@@ -26,22 +26,10 @@ function SeoTags()
       }
    }
 }
-
 function MakeH1()
 {
-   global $SiteDevice;
-   if ($SiteDevice==Mobile) 
-   {   
-      echo '<div class="hh">';
-      echo "Простой принцип программирования - Simple programming principle";
-      echo '</div>';
-   }
-   else
-   {
-      echo "<h1>Простой принцип программирования - Simple programming principle</h1>";
-   }
+   echo "<h1>Простой принцип программирования - Simple programming principle</h1>";
 }
-
 function PageContent()
 {
    $Result = true;

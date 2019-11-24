@@ -51,9 +51,9 @@ else
       // Новости
       if (isNews($s_NameNews)) 
       {
-         //echo '<aside class="LeftBar">';
+      echo '<div class="dAbz">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
-         //echo '</aside>'; 
+      echo '</div>';
       }
 }
 echo '</div>';

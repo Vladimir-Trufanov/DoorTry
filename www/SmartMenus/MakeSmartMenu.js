@@ -47,7 +47,7 @@ function MakeSmartMenu()
             // your handler code
             var $arr=IncPosi();
             console.log('$arr='+$arr);
-            alert('AJAX скриптом управляется!');
+            //alert('AJAX скриптом управляется!');
             $.ajax({
                url: 'SmartMenus/save.php',
                type: 'POST',

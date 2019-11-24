@@ -12,29 +12,16 @@
 
 // Переадресация страницы:
 // 'Podklyuchit-obrabotchik-oshibok-isklyucheniy'='index.php?Com=ConnHandler'
-
 function SeoTags()
 {
     echo "<title>Подключение обработчика ошибок/исключений</title>";
     echo "<meta name=\"description\" content=\"Сайт используется для обработки ошибок/исключений и их комментирования в PHP5-PHP7. Показан способ для подключения этой возможности к Вашим сайтам.\">";
     echo "<meta name=\"keywords\" content=\"универсальная обработка ошибок и исключений PHP5-7, принцип DO-or-TRY, Делай или Пробуй\">";
 }
-
 function MakeH1()
 {
-   global $SiteDevice;
-   if ($SiteDevice==Mobile) 
-   {   
-      echo '<div class="hh">';
-      echo "Подключение обработчика ошибок/исключений - Connect error/exception handler";
-      echo '</div>';
-   }
-   else
-   {
-      echo "<h1>Подключение обработчика ошибок/исключений - Connect error/exception handler</h1>";
-   }
+   echo "<h1>Подключение обработчика ошибок/исключений - Connect error/exception handler</h1>";
 }
-
 function PageContent()
 {
    $Result = true;

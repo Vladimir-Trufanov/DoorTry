@@ -1,4 +1,4 @@
-/** HTML5/CSS3, EDGE/CHROME                                  *** Styles.css ***
+/** HTML5/CSS3, EDGE/CHROME                              *** MobiStyles.css ***
  *
  ******************************************************************************
  * doortry.ru      Сайт сбора сообщений об ошибках/исключениях и формирования *
@@ -7,17 +7,15 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 12.07.2019
- * 
- *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
+ * Copyright © 2019 tve                              Посл.изменение: 24.11.2019
 **/
 
-/* 
-   Cбрасываем стили браузера 
-*/
+/**
+ *   Cбрасываем стили браузера 
+**/
 *
 {
-   box-sizing: border-box; 
+   box-sizing:border-box; 
 }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, 
@@ -27,54 +25,45 @@ thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video 
 {
-   margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+   margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
 {
-   display: block;
+   display:block;
 }
-/* 
-   Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
-   списков и таблиц и определяем в процентах пространство документа 
-*/
+/**
+ * Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+ * списков и таблиц и определяем в процентах пространство документа 
+**/
 html
 {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
-   //font-size: 20px;
-   font-size: 10px;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;	
+   font-size:10px;
 }
 body 
 {
-   font-size: 1.6rem;  
-   width: 100%;
-   height: 100%;
+   font-size:1.6rem;  
+   width:100%;
+   height:100%;
    /*background: yellow;*/
 }
-/*
-ol 
-{ 
-	padding-left: 1.4rem;
-	list-style: decimal;
-}
-*/
 table 
 {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse:collapse;
+	border-spacing:0;
 } 
-/* 
- Форматируем шапку страницы, меню и заголовок страницы
-*/
+/**
+ * Форматируем шапку страницы, меню и заголовок страницы
+**/
 header 
 {
 	background-color:rgb(93,43,78); 
 	background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
    height:12.4rem;
-   //margin-left:14.4rem;
    min-width:128px;
 }
 header #dVer
@@ -91,45 +80,27 @@ header h1, header h2
 	font-weight:bold;
    padding-top:1.8rem;
    padding-bottom:1.8rem;
-	padding-left:1rem;
+   margin-left:1rem;
+   margin-right:1rem;
 }
-
-/* 
-   Позиционируем элементы разметки, порядок размещения текстов
-*/
+/**
+ * Позиционируем элементы разметки, порядок размещения текстов
+**/
 .main 
 {
-   //margin-top: 7rem;
-   width: 100%;
-   text-align: justify;
-   /*background-color: yellow;*/
+   width:100%;
+   text-align:justify;
+   margin-left:1rem;
+   margin-right:1rem;
+   /*background-color:yellow;*/
 }
-
-
-
-.hh 
-{
-   width: 100%;
-   /*background-color: yellow;*/
-   text-align: center;
-   font-size: 1.8rem;  
-	font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
 .dAbz
 {
-   width: 100%;
-   /*background-color: #F3FD72;*/
-   background-color: white;
-   margin-top: 1rem;
+   width:100%;
+   background-color:white;
+   margin-top:1rem;
+   margin-left:1rem;
+   margin-right:1rem;
 }
 #dImgSimPri
 {
@@ -148,3 +119,4 @@ header h1, header h2
 {
    width:100%;
 }
+/*********************************************************** MobiStyles.css ***/

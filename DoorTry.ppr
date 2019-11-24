@@ -27,7 +27,7 @@ DoorTry
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
 		+Pages
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -132,18 +132,42 @@ DoorTry
 1=www\iHtmlBegin.php
 2=www\MobiSite.php
 3=www\Main.php
+4=www\Pages\News\MakeNews.php
+5=www\Pages\DoorTry\SimPrincip.php
+6=www\SmartMenus\MakeSmartMenu.js
+7=www\Styles\MobiStyles.css
+8=www\IniMem.php
+9=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Styles\MobiStyles.css
 [www\Site.php]
-TopLine=47
-Caret=1,65
+TopLine=28
+Caret=1,47
 [www\iHtmlBegin.php]
 TopLine=39
 Caret=5,61
 [www\MobiSite.php]
-TopLine=3
-Caret=75,10
+TopLine=35
+Caret=18,56
 [www\Main.php]
 TopLine=43
 Caret=43,62
+[www\Pages\News\MakeNews.php]
+TopLine=109
+Caret=48,121
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=35
+Caret=22,39
+[www\SmartMenus\MakeSmartMenu.js]
+TopLine=41
+Caret=1,1
+[www\Styles\MobiStyles.css]
+TopLine=79
+Caret=1,85
+[www\IniMem.php]
+TopLine=43
+Caret=49,63
+[www\Styles\Styles.css]
+TopLine=203
+Caret=1,226

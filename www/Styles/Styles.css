@@ -7,14 +7,12 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 13.09.2019
- * 
- *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
+ * Copyright © 2019 tve                              Посл.изменение: 24.11.2019
 **/
 
-/* 
- Cбрасываем стили браузера 
-*/
+/**
+ * Cбрасываем стили браузера 
+**/
 *
 {
    box-sizing:border-box; 
@@ -30,16 +28,16 @@ time,mark,audio,video
 	padding:0;
 	border:0;
 	font-size:100%;
-	vertical-align: baseline;
+	vertical-align:baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
 {
    display:block;
 }
-/* 
- Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
- списков и таблиц и определяем в процентах пространство документа 
-*/
+/**
+ * Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+ * списков и таблиц и определяем в процентах пространство документа 
+**/
 html
 {
 	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;	
@@ -58,13 +56,12 @@ table
 	border-collapse:collapse;
 	border-spacing:0;
 } 
-/* 
- Размещаем штроихкод с адресом сайта
-*/
+/**
+ * Размещаем штрих-код с адресом сайта
+**/
 #dImghVerh
 {
    float:left;
-   /*border:0.1rem solid black;*/
    border-left:0.1rem solid black;
    border-bottom:0.1rem solid black;
    margin-left:2rem;
@@ -73,9 +70,9 @@ table
 {
    height:12rem;
 }
-/* 
- Форматируем шапку страницы, меню и заголовок страницы
-*/
+/**
+ * Форматируем шапку страницы, меню и заголовок страницы
+**/
 header 
 {
 	background-color:rgb(93,43,78); 
@@ -100,10 +97,9 @@ header h1, header h2
    padding-top:1rem;   
    padding-right:1rem;
 }
-
-/* 
- Позиционируем элементы разметки, порядок размещения текстов
-*/
+/**
+ * Позиционируем элементы разметки, порядок размещения текстов
+**/
 .LeftBar 
 {
    float:left;
@@ -126,9 +122,9 @@ header h1, header h2
    width:25%; 
    text-align:center; 
 }
-/* 
- Позиционируем штрих-код стихотворения
-*/
+/**
+ * Позиционируем штрих-код стихотворения
+**/
 #dImghStih
 {
    margin-top:3rem;
@@ -137,9 +133,9 @@ header h1, header h2
 {
    height:16rem;
 }
-/* 
- Определяем общие параметры колонок новостей и стихотворений
-*/
+/**
+ * Определяем общие параметры колонок новостей и стихотворений
+**/
 aside h2 
 {
 	font-size:1.9rem;
@@ -155,9 +151,9 @@ aside p, aside li
 	font-size:1.5rem;
 	margin-top:1rem;	
 }
-/* 
- Определяем параметры колонок текста главного материала
-*/
+/**
+ * Определяем параметры колонок текста главного материала
+**/
 .main h1, .main h2 
 {
 	font-size:2.3rem;
@@ -172,9 +168,9 @@ aside p, aside li
 {
 	margin-bottom:0.8rem;	
 }
-/* 
- Устанавливаем поля во всех трех колонках вокруг содержимого
-*/
+/**
+ * Устанавливаем поля во всех трех колонках вокруг содержимого
+**/
 .LeftBar 
 {
    padding:0 2rem 0 1rem;
@@ -187,9 +183,9 @@ aside p, aside li
 {
    padding:0 1rem 0 2rem;
 }
-/* 
- Форматируем элементы подвала страницы
-*/
+/**
+ * Форматируем элементы подвала страницы
+**/
 footer 
 {
 	margin-top:1.5rem;
@@ -207,14 +203,13 @@ footer .pLeft
 {
 	float:left;
 }
-
 footer .pRight 
 {
 	float:right;
 }
-/*
- Форматируем показ кода
-*/
+/**
+ * Форматируем показ кода
+**/
 .CodeText
 {
    font-size:1.75rem;	
@@ -226,6 +221,8 @@ footer .pRight
 .dAbz
 {
    margin-top:1rem;
+   margin-left:1rem;
+   margin-right:1rem;
 }
 #dImgSimPri, #dImgSimPri2
 {

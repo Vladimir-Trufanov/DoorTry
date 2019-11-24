@@ -59,7 +59,8 @@ $c_Topset=prown\MakeCookie('$Topset',7,tInt,true);               // смещен
 $c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true);     
 $c_CurrStih=IniCurrStih($c_CurrStih);
 // Инициализируем параметры страницы сайта 
-$p_NewsForm=prown\MakeParm('NewsForm',frnSimple);                // форма представления новостей
+//$p_NewsForm=prown\MakeParm('NewsForm',frnSimple);                // форма представления новостей
+$p_NewsForm=prown\MakeParm('NewsForm',frnWithImg);                // форма представления новостей
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
 $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - разворачивать новости при загрузке
 

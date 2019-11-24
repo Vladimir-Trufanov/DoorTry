@@ -118,8 +118,8 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
    if ($p_NewsView)
    {
       //$old_error_handler = set_error_handler("myErrorHandler");
-      echo '<h2>'.getH2_News($s_NameNews).'</h2>';
-      echo '<p>';
+      echo '<h1>'.getH2_News($s_NameNews).'</h1>';
+      //echo '<p>';'.getH2_News($s_NameNews).'r</h1>";
       $urlNews=getUrlNews($s_NameNews);
       //echo $urlNews.'<br>';
       if ($p_NewsForm==frnSimple) 
@@ -130,7 +130,7 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
       {
          WithImgTape($urlNews,$p_NewsAmt);
       }
-      echo '</p>';
+      //echo '</p>';
       
       //restore_error_handler();
       //echo "<b>restore_error_handler</b><br />\n";
