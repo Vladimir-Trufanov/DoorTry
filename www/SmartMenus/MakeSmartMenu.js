@@ -64,7 +64,7 @@ function MakeSmartMenu()
          }
       });
       // Определяем обработку меню-гамбургера
-      /*
+      
       $(function()
       {
          var $mainMenuState = $('#main-menu-state');
@@ -95,7 +95,7 @@ function MakeSmartMenu()
             });
          }
       });
-      */
+      
    }); // end ready
    return Result;
 }

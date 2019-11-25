@@ -9,7 +9,7 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  13.10.2019
- * Copyright © 2019 tve                              Посл.изменение: 23.11.2019
+ * Copyright © 2019 tve                              Посл.изменение: 25.11.2019
 **/
 
 /* Общие настройки мобильной и настольной версий */
@@ -104,6 +104,8 @@
 /**
  * Определяем настройки компьютерной версии меню
 **/ 
+
+/*
 @media (min-width: 768px) 
 {
 .sm-doortry a
@@ -146,7 +148,9 @@
 {
    white-space:nowrap;
 }
+*/
 /* Управление стрелкой в разворачиваемся меню */
+/*
 .sm-doortry a .sub-arrow::before
 {
    display:none;
@@ -180,10 +184,11 @@
    border-color: #2b82ac transparent transparent transparent;
 }
 }
-/* Your rules to style the menu in mobile view (collapsible mode) here... */
+*/
+
+/*
 @media (min-width: 768px) 
 {
-  /* start... (it's not recommended editing these rules) */
   .sm-mytheme ul{position:absolute;width:12rem;}
   .sm-mytheme li{float:left;}
   .sm-mytheme.sm-rtl li{float:right;}
@@ -191,100 +196,107 @@
   .sm-mytheme a{white-space:nowrap;}
   .sm-mytheme ul a,.sm-mytheme.sm-vertical a{white-space:normal;}
   .sm-mytheme .sm-nowrap > li > a,.sm-mytheme .sm-nowrap > li > :not(ul) a{white-space:nowrap;}
-  /* ...end */
-
-  /* Your rules to style the menu in desktop view here... */
 }
+*/
 
 
-/* для гамбургера */
-.main-menu-btn 
+
+
+/**
+ * Определяем настройки гамбургера-меню
+**/ 
+.main-menu-btn  /* Позиционирум текст-изображение гамбургера-меню */
 {
-  position: relative;
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  text-indent: 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+   position:relative;
+   display:inline-block;
+   width:28px;
+   height:28px;
+   text-indent:28px;
+   white-space:nowrap;
+   overflow:hidden;
+   cursor:pointer;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
-/* hamburger icon */
+/* Строим иконку гамбургера-меню */
 .main-menu-btn-icon, .main-menu-btn-icon:before, .main-menu-btn-icon:after
 {
-  position: absolute;
-  top: 50%;
-  left: 2px;
-  height: 2px;
-  width: 24px;
-  background: #bbb;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+   position:absolute;
+   top:50%;
+   left:2px;
+   height:2px;
+   width:24px;
+   background:#bbb;
+   -webkit-transition:all 0.25s;
+   transition:all 0.25s;
 }
 .main-menu-btn-icon:before 
 {
-  content: '';
-  top: -7px;
-  left: 0;
+   content:'';
+   top:-7px;
+   left:0;
 }
 .main-menu-btn-icon:after 
 {
-  content: '';
-  top: 7px;
-  left: 0;
+   content:'';
+   top:7px;
+   left:0;
 }
-/* x icon */
+/* Строим иконку гамбургера-меню при свернутом меню */
 #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon 
 {
-  height: 0;
-  background: transparent;
+   height:0;
+   background:transparent;
 }
 #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before 
 {
-  top: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+   top:0;
+   -webkit-transform:rotate(-45deg);
+   transform:rotate(-45deg);
 }
 #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after
 {
-  top: 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+   top:0;
+   -webkit-transform:rotate(45deg);
+   transform:rotate(45deg);
 }
-/* hide menu state checkbox (keep it visible to screen readers) */
+/* Скрываем флажок состояния меню (сохраняем видимым при чтении с экрана) */
 #main-menu-state 
 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(1px,1px,1px,1px);
+   position:absolute;
+   width:1px;
+   height:1px;
+   margin:-1px;
+   border:0;
+   padding:0;
+   overflow:hidden;
+   clip:rect(1px,1px,1px,1px);
 }
-/* hide the menu in mobile view */
+/* Скрываем меню при отсутствии необходимости в нем */
 #main-menu-state:not(:checked) ~ #main-menu 
 {
-  display: none;
+   display:none;
 }
 #main-menu-state:checked ~ #main-menu 
 {
-  display: block;
+   display:block;
 }
-@media (min-width: 768px)
-{
+
+//@media (min-width: 768px)
+//{
   /* hide the button in desktop view */
+  /*
   .main-menu-btn {
     position: absolute;
     top: -99999px;
   }
+  */
   /* always show the menu in desktop view */
-  #main-menu-state:not(:checked) ~ #main-menu {
+ 
+  /*#main-menu-state:not(:checked) ~ #main-menu {
     display: block;
   }
-}
+  */
+//}
 
 
 
