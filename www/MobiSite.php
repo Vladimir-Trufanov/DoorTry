@@ -42,7 +42,7 @@ echo '<div class="main">';
    {   
       if (isNews($s_NameNews)) 
       {
-         echo '<div class="dAbz">';
+         echo '<div class="News">';
          NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
          echo '</div>';
       }

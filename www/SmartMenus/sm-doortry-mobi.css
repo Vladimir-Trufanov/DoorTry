@@ -9,7 +9,7 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  13.10.2019
- * Copyright © 2019 tve                              Посл.изменение: 25.11.2019
+ * Copyright © 2019 tve                              Посл.изменение: 26.11.2019
 **/
 
 /* Общие настройки мобильной и настольной версий */
@@ -102,107 +102,6 @@
    content:'-';
 }
 /**
- * Определяем настройки компьютерной версии меню
-**/ 
-
-/*
-@media (min-width: 768px) 
-{
-.sm-doortry a
-{
-   border-right:0.1rem dashed rgba(255,255,255,.75);
-}
-.sm-doortry li:last-of-type a
-{
-	border-right:none;	
-}
-.sm-doortry li ul li a
-{
-	border-right:none;	
-}
-.sm-doortry li ul li a 
-{
-   text-align:left;
-}
-.sm-doortry ul 
-{
-   position:absolute;
-}
-.sm-doortry li 
-{
-   float:left;
-}
-.sm-doortry ul li
-{
-   float:none;
-}
-.sm-doortry a 
-{
-   white-space:nowrap;
-}
-.sm-doortry ul a
-{
-   white-space:normal;
-}
-.sm-doortry .sm-nowrap > li > a, .sm-doortry .sm-nowrap > li > :not(ul) a 
-{
-   white-space:nowrap;
-}
-*/
-/* Управление стрелкой в разворачиваемся меню */
-/*
-.sm-doortry a .sub-arrow::before
-{
-   display:none;
-}
-.sm-doortry .scroll-up, .sm-doortry .scroll-down 
-{
-   position:absolute;
-   display:none;
-   visibility:hidden;
-   overflow:hidden;
-   background:#fff;
-   height:20px;
-}
-.sm-doortry .scroll-up-arrow, .sm-doortry .scroll-down-arrow 
-{
-   position:absolute;
-   top:-2px;
-   left:50%;
-   margin-left:-8px;
-   width:0;
-   height:0;
-   overflow:hidden;
-   border-width:8px;
-   border-style:dashed dashed solid dashed;
-   border-color:transparent transparent #2b82ac transparent;  
-}
-.sm-doortry .scroll-down-arrow 
-{
-   top:6px;
-   border-style:solid dashed dashed dashed;
-   border-color: #2b82ac transparent transparent transparent;
-}
-}
-*/
-
-/*
-@media (min-width: 768px) 
-{
-  .sm-mytheme ul{position:absolute;width:12rem;}
-  .sm-mytheme li{float:left;}
-  .sm-mytheme.sm-rtl li{float:right;}
-  .sm-mytheme ul li,.sm-mytheme.sm-rtl ul li,.sm-mytheme.sm-vertical li{float:none;}
-  .sm-mytheme a{white-space:nowrap;}
-  .sm-mytheme ul a,.sm-mytheme.sm-vertical a{white-space:normal;}
-  .sm-mytheme .sm-nowrap > li > a,.sm-mytheme .sm-nowrap > li > :not(ul) a{white-space:nowrap;}
-}
-*/
-
-
-
-
-/**
  * Определяем настройки гамбургера
 **/ 
 .main-menu-btn  /* Позиционирум текст-изображение гамбургера-меню */
@@ -235,7 +134,7 @@
 .main-menu-btn-icon:before 
 {
    content:'';
-   top:-7px;
+   top:-7.4px;
    left:0;
 }
 .main-menu-btn-icon:after 
@@ -283,24 +182,10 @@
 {
    display:block;
 }
-
-//@media (min-width: 768px)
-//{
-  /* hide the button in desktop view */
-  /*
-  .main-menu-btn {
-    position: absolute;
-    top: -99999px;
-  }
-  */
-  /* always show the menu in desktop view */
- 
-  /*#main-menu-state:not(:checked) ~ #main-menu {
-    display: block;
-  }
-  */
-//}
-
-
-
+@media (min-width: 320px)
+{
+}
+@media (min-width: 480px)
+{
+}
 /*                                                      *** sm-doortry.css ***/

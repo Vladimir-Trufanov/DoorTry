@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 30.08.2019
+// Copyright © 2019 tve                              Посл.изменение: 26.11.2019
 
 /**
  *  Список новостных лент
@@ -92,12 +92,12 @@ function StihiMenu()
 function TopMenu()
 {
    $Result = true;
+   // Формируем кнопку гамбургера (в компьютерном варианте она скрыта)
    echo '<input id="main-menu-state" type="checkbox"/>';
    echo '<label class="main-menu-btn" for="main-menu-state">';
       echo '<span class="main-menu-btn-icon"></span>'; // Кнопка меню-гамбургера
    echo '</label>';
-
-   
+   // Формируем смарт-меню
    echo '<ul id="main-menu" class="sm sm-doortry">';
    // Переключаем пункты меню главных материалов сайта
    if (isComRequest(prown\getTranslit(ConnHandler),'list'))
