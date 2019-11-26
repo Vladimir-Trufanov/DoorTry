@@ -55,11 +55,11 @@ else
 // Регулируем верхнее смещение контента главной страницы по её типу
 if (isComRequest(prown\getTranslit(ConnHandler),'list'))
 {
-   $c_Topset=prown\MakeCookie('Topset',7,tInt);  
+   $c_Topset=prown\MakeCookie('Topset',1,tInt);  
 }
 elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
 {
-   $c_Topset=prown\MakeCookie('Topset',8.4,tInt);  
+   $c_Topset=prown\MakeCookie('Topset',1,tInt);  
 }
 // Подключаем управление стихами и ранее выбранное стихотворение
 require_once $SiteRoot."/stihi/MakeStihi.php";   

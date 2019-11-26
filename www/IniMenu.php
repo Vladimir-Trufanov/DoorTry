@@ -92,6 +92,12 @@ function StihiMenu()
 function TopMenu()
 {
    $Result = true;
+   echo '<input id="main-menu-state" type="checkbox"/>';
+   echo '<label class="main-menu-btn" for="main-menu-state">';
+      echo '<span class="main-menu-btn-icon"></span>'; // Кнопка меню-гамбургера
+   echo '</label>';
+
+   
    echo '<ul id="main-menu" class="sm sm-doortry">';
    // Переключаем пункты меню главных материалов сайта
    if (isComRequest(prown\getTranslit(ConnHandler),'list'))

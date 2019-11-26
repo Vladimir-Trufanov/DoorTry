@@ -59,11 +59,18 @@ table
 /**
  * Форматируем шапку страницы, меню и заголовок страницы
 **/
+#res
+{
+	font-size:1.2rem;	
+	color:red;
+	font-weight:bold;
+   /*display:none;*/
+}
 header 
 {
 	background-color:rgb(93,43,78); 
 	background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
-   height:12.4rem;
+   height:9.8rem; 
    min-width:128px;
 }
 header #dVer
@@ -79,10 +86,20 @@ header h1, header h2
 	color:white;
 	font-weight:bold;
    padding-top:1.8rem;
-   padding-bottom:1.8rem;
+   /*padding-bottom:1rem;*/
    margin-left:1rem;
    margin-right:1rem;
 }
+
+/*
+header #gamburg
+{
+   float:right;
+   padding-top:-4rem;   
+   padding-right:1rem; 
+}
+*/
+
 /**
  * Позиционируем элементы разметки, порядок размещения текстов
 **/

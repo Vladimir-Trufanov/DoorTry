@@ -203,11 +203,14 @@
 
 
 /**
- * Определяем настройки гамбургера-меню
+ * Определяем настройки гамбургера
 **/ 
 .main-menu-btn  /* Позиционирум текст-изображение гамбургера-меню */
 {
-   position:relative;
+   position:relative; 
+   top:0.5rem;   
+   left:1rem; 
+   
    display:inline-block;
    width:28px;
    height:28px;

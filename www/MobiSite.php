@@ -13,55 +13,47 @@
 echo '<style type="text/css"> .main';
 echo '{margin-top:'.$c_Topset.'rem;}';
 echo '</style>';
-// Верхнее меню и название сайта
+// Выводим название сайта и главное меню
+echo '<div id="res"></div>'; // Резервное сообщение
 echo '<header>';
+   // Размещаем div c версией сайта и кратким инфо-сообщением
    echo '<div id="dVer">';
-   echo '<div id="res"></div>';
    echo 'v1.4';
    echo '</div>';
    echo  '<h2>DoorTry - коллекционер ошибок</h2>';
-
-echo '<div class="gambur">';
-   echo '<input id="main-menu-state" type="checkbox"/>';
-   echo '<label class="main-menu-btn" for="main-menu-state">';
-      echo '<span class="main-menu-btn-icon"></span>'; // Кнопка меню-гамбургера
-   echo '</label>';
-   echo '<nav>'; 
+   // Размещаем гамбургер-меню
+   echo '<div id="gamburg">';
       TopMenu(); 
-   echo '</nav>';
-echo '</div>';
-
+   echo '</div>';
 echo '</header>';
-
-
 // Главные статьи, cтихотворения, новости
 echo '<div class="main">';
-if (isComRequest(prown\getTranslit(ConnHandler),'list'))
-{
-   MakeH1();
-   PageContent();
-}
-elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
-{
-   MakeH1();
-   PageContent();
-}
-else
-{   
-   if (isNews($s_NameNews)) 
+   if (isComRequest(prown\getTranslit(ConnHandler),'list'))
    {
-      echo '<div class="dAbz">';
-      NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
-      echo '</div>';
+      MakeH1();
+      PageContent();
    }
-}
+   elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
+   {
+      MakeH1();
+      PageContent();
+   }
+   else
+   {   
+      if (isNews($s_NameNews)) 
+      {
+         echo '<div class="dAbz">';
+         NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
+         echo '</div>';
+      }
+   }
+echo '</div>';
 /*
 MakeQrcode();
 echo  prown\getTranslit('Майский вечер в Карелии').'<br>';
 phpinfo();
 DebugError();
 */
-echo '</div>';
 /*
 echo '<footer>';
 echo '<div class="pLeft">Copyright © 2019 tve</div>';
