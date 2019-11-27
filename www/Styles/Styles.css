@@ -212,20 +212,80 @@ footer .pRight
 **/
 .CodeText
 {
-   font-size:1.6rem;	
-	font-weight:bold;
+   background:yellow;
+/*
    padding:1rem 0 1rem 1rem;
    float:left;
    color:gray;
    font-family:monospace;
    text-align:left;
+*/   
+   /*
+   width:50%;
+   overflow-x:scroll;
+   */
    /*
    border-right:1px solid gray;}
    */
+   /*
    body {margin:0px; margin-left:5px;}
    td {vertical-align:top;}
    code {white-space:nowrap;}
+   */
 }
+code
+{
+   overflow:auto;
+   white-space:nowrap;
+/*   display:block;
+   background:#EFF4DC;
+   margin:1rem;
+   white-space:nowrap; */
+   /*overflow-x:auto;*/
+/*
+   font-size:1.6rem;	
+	font-weight:bold;
+   width:100%;
+   overflow-y:auto;
+   background:#EFF4DC;
+   border:1px solid gray;
+   margin-top:1rem;
+   padding-right:5rem;
+   padding:1rem 1rem;
+*/
+}
+
+/*
+code, .TopScroll
+{
+   overflow-x:scroll; 
+   overflow-y:hidden;
+}
+*/
+.TopScroll, .CodeText
+{
+   width: 300px; 
+   border: none 0px RED;
+   overflow-x:scroll; 
+  /* overflow-y:hidden; */
+}
+.TopScroll
+{
+   height: 20px; 
+}
+.CodeText
+{
+   height: 80px; 
+}
+.CodeTexti
+{
+   /*display:none;*/ 
+}
+.div1 {width:1000px; height: 20px; background:red;}
+.div2 {width:1000px; height: 200px; background-color: #88FF88;
+overflow: auto;}
+.div3 {/*width:1000px;*/ height: 20px; background:red;}
+
 @media (min-width: 481px) and (max-width:768px) 
 {
 }

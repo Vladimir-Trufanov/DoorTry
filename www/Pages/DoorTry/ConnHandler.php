@@ -48,12 +48,35 @@ function PageContent()
    Включить в состав сайта модуль сценария DoorTryerPage.php, реализующего обработку ошибок/исключений.
    </div>
    <?php
+   
+      
+   ?>
+   <div class="TopScroll">
+      <code class="CodeTexti"><br>
+      </code>
+   </div>
+   <div class="CodeText">
+      <code>
+         Текст<br>
+         aaaa bbbb cccc dddd aaaa bbbb cccc dddd aaaa<br>
+         bbbb cccc dddd aaaa bbbb cccc dddd aaaa bbbb<br> 
+         cccc dddd aaaa bbbb cccc dddd aaaa bbbb cccc<br> 
+         dddd
+      </code>
+   </div>
+   <?php
+   
+
+   
+   /*
    global $SiteRoot;
    echo '<div class="CodeText">';
    $f2=$SiteRoot."/Pages/DoorTry/DoorTryForSite.php";
    $stx=show_source($f2,true);
    echo $stx;
    echo '</div>';
+   */
+   
    return $Result;
 }
 // <!-- --> *********************************************** ConnHandler.php ***
