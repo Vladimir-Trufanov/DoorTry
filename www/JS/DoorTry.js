@@ -1,35 +1,20 @@
-// JavaScript Document
-// console.log('SiteHost');
+// PHP7/HTML5, EDGE/CHROME                                   *** DoorTry.js ***
 
-// Горизонтальная полоса прокрутки сверху и снизу
+// ****************************************************************************
+// * doortry.ru    Сайт сбора сообщений об ошибках/исключениях и формирования *
+// *         страницы с выводом сообщений, а также комментариев для PHP5-PHP7 *
+// *                          (функциональные модули обеспечения сайта на js) *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  03.06.2019
+// Copyright © 2019 tve                              Посл.изменение: 29.11.2019
+
+// Обеспечить горизонтальную прокрутку кодов и сверху, и снизу
 // https://www.it-swarm.net/ru/javascript/gorizontalnaya-polosa-prokrutki-sverhu-i-snizu-tablicy/970615983/
-$(function(){
-    $(".TopScroll").scroll(function(){
-        $(".CodeText")
-            .scrollLeft($(".TopScroll").scrollLeft());
-    });
-    $(".CodeText").scroll(function(){
-        $(".TopScroll")
-            .scrollLeft($(".CodeText").scrollLeft());
-    }); 
-});
-/*
-$(function(){
-    $(".TopScroll").scroll(function(){
-        $("code")
-            .scrollLeft($(".TopScroll").scrollLeft());
-    });
-    $("code").scroll(function(){
-        $(".TopScroll")
-            .scrollLeft($("code").scrollLeft());
-    });
-});
-*/
-
-
 // https://github.com/avianey/jqDoubleScroll
 $(document).ready(function(){
-   /*$('#double-scroll').doubleScroll();*/
    $('.CodeText').doubleScroll({resetOnWindowResize:true});
 });
+// ************************************************************* DoorTry.js ***
                              
