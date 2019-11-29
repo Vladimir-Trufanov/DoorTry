@@ -73,6 +73,7 @@ else
 echo '<link href="JS/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/JS/TJsPrown.js"></script>';
 echo '<script src="/JS/DoorTry.js"></script>';
+echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
 echo '<script src="/JS/FixLoadTimer.js"></script>';
 // Разворачиваем смартменю
 ?> 

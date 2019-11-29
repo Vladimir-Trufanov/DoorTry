@@ -25,3 +25,11 @@ $(function(){
     });
 });
 */
+
+
+// https://github.com/avianey/jqDoubleScroll
+$(document).ready(function(){
+   /*$('#double-scroll').doubleScroll();*/
+   $('.CodeText').doubleScroll({resetOnWindowResize:true});
+});
+                             

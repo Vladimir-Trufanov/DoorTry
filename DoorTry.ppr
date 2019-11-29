@@ -24,6 +24,7 @@ DoorTry
 		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
+			www\JS\jquery.doubleScroll.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
 		+Pages
@@ -65,7 +66,7 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		+SmartMenus
+		-SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\MakeSmartMenu.js
@@ -133,13 +134,14 @@ DoorTry
 4=www\Styles\MobiStyles.css
 5=www\SmartMenus\sm-doortry-mobi.css
 6=www\MobiSite.php
-7=www\Styles\Styles.css
-8=www\iHtmlBegin.php
-9=www\JS\DoorTry.js
-10=www\Pages\DoorTry\ConnHandler.php
+7=www\iHtmlBegin.php
+8=www\JS\DoorTry.js
+9=www\Pages\DoorTry\ConnHandler.php
+10=www\JS\jquery.doubleScroll.js
+11=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\DoorTry\ConnHandler.php
+Selected=www\Styles\Styles.css
 [www\IniMenu.php]
 TopLine=77
 Caret=1,101
@@ -161,15 +163,18 @@ Caret=1,93
 [www\MobiSite.php]
 TopLine=29
 Caret=1,1
-[www\Styles\Styles.css]
-TopLine=245
-Caret=27,270
 [www\iHtmlBegin.php]
-TopLine=67
-Caret=1,1
+TopLine=59
+Caret=47,76
 [www\JS\DoorTry.js]
-TopLine=1
-Caret=34,15
+TopLine=18
+Caret=43,32
 [www\Pages\DoorTry\ConnHandler.php]
-TopLine=39
-Caret=35,55
+TopLine=45
+Caret=6,67
+[www\JS\jquery.doubleScroll.js]
+TopLine=11
+Caret=1,1
+[www\Styles\Styles.css]
+TopLine=198
+Caret=1,218
