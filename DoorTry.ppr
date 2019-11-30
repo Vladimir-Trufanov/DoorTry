@@ -27,8 +27,8 @@ DoorTry
 			www\JS\jquery.doubleScroll.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
-			+DoorTry
+		-Pages
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -66,7 +66,7 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		-SmartMenus
+		+SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\MakeSmartMenu.js
@@ -89,7 +89,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -127,34 +127,30 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\IniMenu.php
-1=www\SmartMenus\sm-doortry.css
-2=www\Main.php
-3=www\IniMem.php
-4=www\Styles\MobiStyles.css
-5=www\SmartMenus\sm-doortry-mobi.css
-6=www\MobiSite.php
+0=www\Main.php
+1=..\TPhpPrown\MakeCookie.php
+2=www\SmartMenus\MakeSmartMenu.js
+3=www\iHtmlBegin.php
+4=www\IniMem.php
+5=www\JS\TJsPrown.js
 [Selected Project Files]
 Main=
-Selected=www\MobiSite.php
-[www\IniMenu.php]
-TopLine=77
-Caret=1,101
-[www\SmartMenus\sm-doortry.css]
-TopLine=12
-Caret=72,12
+Selected=www\Main.php
 [www\Main.php]
-TopLine=39
-Caret=1,7
+TopLine=44
+Caret=25,130
+[..\TPhpPrown\MakeCookie.php]
+TopLine=31
+Caret=4,48
+[www\SmartMenus\MakeSmartMenu.js]
+TopLine=27
+Caret=1,50
+[www\iHtmlBegin.php]
+TopLine=55
+Caret=1,43
 [www\IniMem.php]
-TopLine=41
-Caret=60,68
-[www\Styles\MobiStyles.css]
-TopLine=129
-Caret=1,152
-[www\SmartMenus\sm-doortry-mobi.css]
-TopLine=93
-Caret=1,93
-[www\MobiSite.php]
-TopLine=29
-Caret=1,1
+TopLine=39
+Caret=1,60
+[www\JS\TJsPrown.js]
+TopLine=79
+Caret=1,85

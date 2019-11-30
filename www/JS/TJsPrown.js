@@ -35,7 +35,7 @@ function ViewLocalStorage()
          console.log('--- localStorage ---');
 }
 
-
+/*
 // Значения name и value являются обязательными, а остальные не обязательны.
 // http://www.codenet.ru/webmast/js/Cookies.php 
 function setCookie(name,value,expires,path,domain,secure) 
@@ -48,6 +48,68 @@ function setCookie(name,value,expires,path,domain,secure)
       ((domain) ? "; domain=" + domain : "") +
       ((secure) ? "; secure" : "");
 }
+*/
+
+
+// https://learn.javascript.ru/cookie
+function setCookie(name,value,options={}) 
+{
+   options=
+   {
+      /*path:'/',
+      // при необходимости добавьте другие значения по умолчанию
+      max-age:44236800 // 512д*24ч*60м*60с=44236800с */
+   };
+   /*
+   if (options.expires.toUTCString) 
+   {
+      options.expires=options.expires.toUTCString();
+   }
+   */
+   let updatedCookie=encodeURIComponent(name)+"="+encodeURIComponent(value);
+   for (let optionKey in options) 
+   {
+      updatedCookie+="; "+optionKey;
+      let optionValue=options[optionKey];
+      if (optionValue!==true) 
+      {
+         updatedCookie+="="+optionValue;
+      }
+   }
+   //document.cookie=updatedCookie;
+   console.log("document.cookie="+updatedCookie);
+}
+
+
+
+// https://ruseller.com/lessons.php?id=593 
+function set_cookie ( name, value, exp_y, exp_m, exp_d, path, domain, secure )
+{
+  var cookie_string = name + "=" + escape ( value );
+ 
+  if ( exp_y )
+  {
+    var expires = new Date ( exp_y, exp_m, exp_d );
+    cookie_string += "; expires=" + expires.toGMTString();
+  }
+ 
+  if ( path )
+        cookie_string += "; path=" + escape ( path );
+ 
+  if ( domain )
+        cookie_string += "; domain=" + escape ( domain );
+  
+  if ( secure )
+        cookie_string += "; secure";
+  
+  //document.cookie = cookie_string;
+  console.log("document.cookie="+cookie_string);
+
+}
+
+
+
+
 // Для получения значения кукисов в JavaScript, можно воспользоваться 
 // document.cookie. Обычно, document.cookie имеет строку следующего формата:
 // foo=bar;this=that;somename=somevalue;.....
@@ -76,6 +138,46 @@ function getCookie(name)
 	}
 	return(setStr);
 }
+
+
+//https://html5css.ru/js/js_cookies.php
+function get_Cookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function trass_Cookie(cname) 
+{
+   var trass='';
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) 
+    {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') 
+        {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) 
+        {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+
 // ****************************************************************************
 // *                               Удалить кукис                              *
 // ****************************************************************************
@@ -84,6 +186,14 @@ function DeleteCookie(name)
    var date = new Date(0);
    document.cookie = name+"=; path=/; expires=" + date.toUTCString();
 }
+
+function delete_cookie ( cookie_name )
+{
+  var cookie_date = new Date ( );  // Текущая дата и время
+  cookie_date.setTime ( cookie_date.getTime() - 1 );
+  document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
+}
+
 // ****************************************************************************
 // *              Определить, включены ли у пользователя cookie               *
 // ****************************************************************************
