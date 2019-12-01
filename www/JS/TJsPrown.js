@@ -52,31 +52,48 @@ function setCookie(name,value,expires,path,domain,secure)
 
 
 // https://learn.javascript.ru/cookie
-function setCookie(name,value,options={}) 
+function setcookie(name,value,Duration) 
 {
+   // Определяем параметры кукиса по умолчанию
    options=
    {
-      /*path:'/',
-      // при необходимости добавьте другие значения по умолчанию
-      max-age:44236800 // 512д*24ч*60м*60с=44236800с */
+      'path':'/',
+      'max-age':44236800, // 512д*24ч*60м*60с=44236800с - последняя дата
+      'expires':512,      // 512д - число дней использования (вместо max-age)
+      //'secure':true,
+      'samesite':'strict' // использовать кукисы только своего сайта
    };
-   /*
-   if (options.expires.toUTCString) 
+   // Выщитываем, когда задан expires, последнюю дату кукиса 
+   if (Duration)
    {
-      options.expires=options.expires.toUTCString();
+      options['expires']=Duration;
+      options['max-age']=Duration*24*60*60;
    }
-   */
+   var last_date=new Date();
+   last_date.setDate(last_date.getDate()+options['expires']);
+   //
    let updatedCookie=encodeURIComponent(name)+"="+encodeURIComponent(value);
    for (let optionKey in options) 
    {
+      console.log("optionKey="+optionKey);
       updatedCookie+="; "+optionKey;
-      let optionValue=options[optionKey];
+      var optionValue=options[optionKey];
+      // Преобразовываем expires 
+      if (optionKey=='expires')
+      {
+         optionValue=last_date.toUTCString();
+      } 
+      // Преобразовываем все параметы, кроме secure
       if (optionValue!==true) 
       {
          updatedCookie+="="+optionValue;
       }
+      console.log("optionValue="+optionValue);
+      
+      
    }
-   //document.cookie=updatedCookie;
+   
+   document.cookie=updatedCookie;
    console.log("document.cookie="+updatedCookie);
 }
 

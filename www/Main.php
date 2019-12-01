@@ -115,22 +115,23 @@ else
    \prown\ViewGlobal(avgCOOKIE);
    ?>
       <script  language="JavaScript">
-      //DeleteCookie("aInusl");
-      delete_cookie("$Topset");                         
+      DeleteCookie("usia");
+      //delete_cookie("$Topset");                         
       //setCookie("foo", "bar", "Mon, 27-Jan-2020 00:00:00 GMT", "/");
-      setCookie('us','John',{'secure':true,'max-age':3600});
-      var CurrStih="<?php echo $c_CurrStih; ?>";
-      console.log("CurrStih="+CurrStih);
+      setcookie('usi','John',12);
+      
+      //var CurrStih="<?php echo $c_CurrStih; ?>";
+      //console.log("CurrStih="+CurrStih);
       
       // установка куки без срока хранения
-      set_cookie ( "un1", "Vasja" );
+      //set_cookie ( "un1", "Vasja" );
       // Установка куки со сроком хранения до 15 февраля 2020:
-      set_cookie ( "un2", "Vasja", 2020, 01, 15 );
-      var x = document.cookie;
-      console.log("x="+x);
+      //set_cookie ( "un2", "Vasja", 2020, 01, 15 );
+      //var x = document.cookie;
+      //console.log("x="+x);
 
-      un2=getCookie("un2");
-      console.log("un2="+un2);
+      //un2=getCookie("un2");
+      //console.log("un2="+un2);
       
       </script>
    <?php
