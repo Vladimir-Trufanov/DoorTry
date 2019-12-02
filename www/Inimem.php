@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 13.09.2019
+// Copyright © 2019 tve                              Посл.изменение: 02.12.2019
 
 // Определяем сайтовые константы
 define ("Atfirst",    "atf");    // Перевести переменные в начальные условия  
@@ -28,12 +28,12 @@ define ("rciCookiUserNo", 1);    // браузером кукисы разреш
 define ("rciCookiUserYes", 2);   // пользователем разрешено использование кукисов
 
 // Инициализируем общие переменные сайтового сценария
-$SiteDevice=prown\getSiteDevice();                 // 'Computer','Mobile','Tablet'
-$Uagent=$_SERVER['HTTP_USER_AGENT'];               // HTTP_USER_AGENT
+$SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
+$Uagent=$_SERVER['HTTP_USER_AGENT'];     // HTTP_USER_AGENT
 // Инициализируем массив новостных лент и массив стихотворений
 $aNews=array
 (            
-   'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
+   //'Столица на Онего' => 'http://www.stolica.onego.ru/rss.php/feed.xml',   
    'Ведомости России' => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
    'Яндекс Общество'  => 'http://news.yandex.ru/society.rss',   
    'Новости Украины'  => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
@@ -56,8 +56,17 @@ $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // поряд�
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
 $c_Topset=prown\MakeCookie('$Topset',1,tInt,true);               // смещение сверху контента мобиверсии
 // Каталог текущего стихотворения - записи базы данных
-$c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true);     
+$c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true); 
 $c_CurrStih=IniCurrStih($c_CurrStih);
+// Регулируем верхнее смещение контента главной страницы по её типу
+if (isComRequest(prown\getTranslit(ConnHandler),'list'))
+{
+   $c_Topset=prown\MakeCookie('Topset',1,tInt);  
+}
+elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
+{
+   $c_Topset=prown\MakeCookie('Topset',1,tInt);  
+}
 // Инициализируем параметры страницы сайта 
 if ($SiteDevice==Mobile) 
 {   
@@ -69,7 +78,6 @@ else
 }
 $p_NewsAmt=prown\MakeParm('NewsAmt',8);                          // количество новостей в форме
 $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - разворачивать новости при загрузке
-
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 $s_NameNews=prown\MakeSession('NameNews',NotNews,tStr,true);     // активированная лента новостей

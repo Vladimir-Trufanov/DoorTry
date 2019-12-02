@@ -6,6 +6,9 @@
 остальные ошибки вылавливаются после завершения работы сценария через register_shutdown_function, через try-catch-error обрабатываются исключения
 ***
 ## содержание
+
+**v1.5. Главное меню подключено через фрэймворк SmartMenus jQuery Plugin - v1.1.0 - September 17, 2017 http://www.smartmenus.org/** 
+
 ### [1. Общие переменные сайтового сценария](#obshchie-peremennye-sajtovogo-scenariya)
 ### [2. Командные запросы сайта](#komandnyye-zaprosy-sayta)
 ### [3. Необработанные ошибки и комментарии](#neobrabotannye-oshibki)

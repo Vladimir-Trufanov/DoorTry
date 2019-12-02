@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 23.11.2019
+// Copyright © 2019 tve                              Посл.изменение: 02.12.2019
       
 // echo '1. '.$_SERVER['REQUEST_URI'].'<br>';
 // header('Location: http://www.new-website.com');
@@ -28,10 +28,9 @@ require_once $SiteHost."/TPhpPrown/MakeSession.php";
 require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
-
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/ComRequest.php";
-require_once $SiteRoot."/DebugError.php";
+//require_once $SiteRoot."/DebugError.php";
 require_once $SiteRoot."/IniCurrStih.php";
 require_once $SiteRoot."/IniMenu.php";
 require_once $SiteRoot."/MakeQrcode.php"; 
@@ -52,18 +51,9 @@ else
 {
    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 }
-// Регулируем верхнее смещение контента главной страницы по её типу
-if (isComRequest(prown\getTranslit(ConnHandler),'list'))
-{
-   $c_Topset=prown\MakeCookie('Topset',1,tInt);  
-}
-elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
-{
-   $c_Topset=prown\MakeCookie('Topset',1,tInt);  
-}
 // Подключаем управление стихами и ранее выбранное стихотворение
 require_once $SiteRoot."/stihi/MakeStihi.php";   
-require_once $SiteRoot."/stihi/Stih.php";   
+require_once $SiteRoot."/stihi/Stih.php";  
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
@@ -79,13 +69,11 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
-
 //\prown\ViewGlobal(avgSESSION);
 //\prown\ViewGlobal(avgGLOBALS);
 
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
-
 // Если поступил запрос на пробную страницу, то запускаем её
 /*
 else if (isComRequest('tabmenu','list')) 
@@ -110,31 +98,9 @@ else
    // Подключаем и запускаем регистратор времени загрузки страницы
    require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();
-   require_once $SiteRoot."/timer.php";
+   //require_once $SiteRoot."/timer.php";
    //require_once $SiteRoot."/DebugTimer.php";
-   \prown\ViewGlobal(avgCOOKIE);
-   ?>
-      <script  language="JavaScript">
-      DeleteCookie("usia");
-      //delete_cookie("$Topset");                         
-      //setCookie("foo", "bar", "Mon, 27-Jan-2020 00:00:00 GMT", "/");
-      setcookie('usi','John',12);
-      
-      //var CurrStih="<?php echo $c_CurrStih; ?>";
-      //console.log("CurrStih="+CurrStih);
-      
-      // установка куки без срока хранения
-      //set_cookie ( "un1", "Vasja" );
-      // Установка куки со сроком хранения до 15 февраля 2020:
-      //set_cookie ( "un2", "Vasja", 2020, 01, 15 );
-      //var x = document.cookie;
-      //console.log("x="+x);
-
-      //un2=getCookie("un2");
-      //console.log("un2="+un2);
-      
-      </script>
-   <?php
+   //\prown\ViewGlobal(avgCOOKIE);
    require_once $SiteRoot."/iHtmlEnd.php";
 }
 // *************************************************************** Main.php ***

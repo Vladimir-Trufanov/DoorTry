@@ -75,7 +75,7 @@ function setcookie(name,value,Duration)
    let updatedCookie=encodeURIComponent(name)+"="+encodeURIComponent(value);
    for (let optionKey in options) 
    {
-      console.log("optionKey="+optionKey);
+      //console.log("optionKey="+optionKey);
       updatedCookie+="; "+optionKey;
       var optionValue=options[optionKey];
       // Преобразовываем expires 
@@ -83,14 +83,12 @@ function setcookie(name,value,Duration)
       {
          optionValue=last_date.toUTCString();
       } 
-      // Преобразовываем все параметы, кроме secure
+      // Преобразовываем все параметры, кроме secure
       if (optionValue!==true) 
       {
          updatedCookie+="="+optionValue;
       }
-      console.log("optionValue="+optionValue);
-      
-      
+      //console.log("optionValue="+optionValue);
    }
    
    document.cookie=updatedCookie;

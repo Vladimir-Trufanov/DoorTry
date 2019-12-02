@@ -46,8 +46,9 @@ function MakeSmartMenu()
          { 
             // your handler code
             var $arr=IncPosi();
-            console.log('$arr='+$arr);
+            //console.log('$arr='+$arr);
             //alert('AJAX скриптом управляется!');
+            /*
             $.ajax({
                url: 'SmartMenus/save.php',
                type: 'POST',
@@ -61,6 +62,7 @@ function MakeSmartMenu()
                   $('#res').show().text("Сохранено!").fadeOut(1000);
                }
 			   });
+            */
          }
       });
       // Определяем обработку меню-гамбургера
