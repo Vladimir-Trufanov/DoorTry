@@ -21,19 +21,19 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -66,7 +66,7 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		+SmartMenus
+		-SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\jquery.smartmenus.min.js
 			www\SmartMenus\MakeSmartMenu.js
@@ -89,7 +89,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -106,6 +106,7 @@ DoorTry
 		www\doortry.png
 		www\error.php
 		www\favicon.ico
+		www\get-info.php
 		www\iGetAbove.php
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
@@ -114,7 +115,6 @@ DoorTry
 		www\IniCurrStih.php
 		www\IniMem.php
 		www\IniMenu.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -127,42 +127,34 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\iHtmlBegin.php
-1=www\IniMem.php
-2=www\Main.php
-3=www\SmartMenus\MakeSmartMenu.js
-4=..\TPhpPrown\MakeCookie.php
-5=www\Pages\News\MakeNews.php
-6=www\Site.php
-7=www\Styles\MobiStyles.css
-8=www\MobiSite.php
+0=www\get-info.php
+1=www\JS\DoorTry.js
+2=www\JS\FixLoadTimer.js
+3=www\Site.php
+4=www\iHtmlBegin.php
+5=www\Main.php
+6=..\TPhpPrown\MakeCookie.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\MobiStyles.css
-[www\iHtmlBegin.php]
-TopLine=43
-Caret=1,43
-[www\IniMem.php]
-TopLine=56
-Caret=1,81
-[www\Main.php]
-TopLine=82
-Caret=49,84
-[www\SmartMenus\MakeSmartMenu.js]
+Selected=www\get-info.php
+[www\get-info.php]
+TopLine=1
+Caret=20,7
+[www\JS\DoorTry.js]
 TopLine=48
-Caret=15,65
-[..\TPhpPrown\MakeCookie.php]
-TopLine=55
-Caret=1,56
-[www\Pages\News\MakeNews.php]
-TopLine=115
-Caret=1,1
+Caret=9,67
+[www\JS\FixLoadTimer.js]
+TopLine=111
+Caret=10,121
 [www\Site.php]
-TopLine=9
-Caret=17,27
-[www\Styles\MobiStyles.css]
-TopLine=95
-Caret=6,117
-[www\MobiSite.php]
-TopLine=27
-Caret=1,1
+TopLine=39
+Caret=32,51
+[www\iHtmlBegin.php]
+TopLine=71
+Caret=1,86
+[www\Main.php]
+TopLine=25
+Caret=6,104
+[..\TPhpPrown\MakeCookie.php]
+TopLine=43
+Caret=32,60

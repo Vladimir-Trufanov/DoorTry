@@ -101,6 +101,7 @@ else
    //require_once $SiteRoot."/timer.php";
    //require_once $SiteRoot."/DebugTimer.php";
    //\prown\ViewGlobal(avgCOOKIE);
+   //require_once $SiteRoot."/get-info.php";
    require_once $SiteRoot."/iHtmlEnd.php";
 }
 // *************************************************************** Main.php ***

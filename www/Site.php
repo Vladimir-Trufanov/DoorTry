@@ -48,11 +48,14 @@ echo '<div class="pageWrapper">';
       // Новости
       if (isNews($s_NameNews)) 
       {
+         echo '<div class="info">195<br><br><br><br><br><br>';
+   echo '</div>';
+
+      
          echo '<aside class="LeftBar">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
          echo '</aside>'; 
       }
-   echo '</div>';
    // Подвал
    echo '<footer>';
       echo '<div class="pLeft">Copyright © 2019 tve</div>';
