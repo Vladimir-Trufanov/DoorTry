@@ -134,7 +134,7 @@ function TopMenu()
       echo '</ul>';
    echo '</li>';
    // Пример подключения к меню пробной страницы
-   //echo '<li><a href="index.php?list=tabmenu">AJAKS-меню на Prototype</a></li>';
+   echo '<li><a href="index.php?list=proba">Пробная страница</a></li>';
    // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';

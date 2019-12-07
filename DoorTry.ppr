@@ -21,14 +21,14 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
-			-DoorTry
+		+Pages
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -37,6 +37,182 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
+			+Proba
+				-simpletest
+					-docs
+						-en
+							www\Pages\Proba\simpletest\docs\en\authentication_documentation.html
+							www\Pages\Proba\simpletest\docs\en\browser_documentation.html
+							www\Pages\Proba\simpletest\docs\en\docs.css
+							www\Pages\Proba\simpletest\docs\en\expectation_documentation.html
+							www\Pages\Proba\simpletest\docs\en\form_testing_documentation.html
+							www\Pages\Proba\simpletest\docs\en\group_test_documentation.html
+							www\Pages\Proba\simpletest\docs\en\index.html
+							www\Pages\Proba\simpletest\docs\en\mock_objects_documentation.html
+							www\Pages\Proba\simpletest\docs\en\overview.html
+							www\Pages\Proba\simpletest\docs\en\partial_mocks_documentation.html
+							www\Pages\Proba\simpletest\docs\en\reporter_documentation.html
+							www\Pages\Proba\simpletest\docs\en\unit_test_documentation.html
+							www\Pages\Proba\simpletest\docs\en\web_tester_documentation.html
+						-fr
+							www\Pages\Proba\simpletest\docs\fr\authentication_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\browser_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\docs.css
+							www\Pages\Proba\simpletest\docs\fr\expectation_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\form_testing_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\group_test_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\index.html
+							www\Pages\Proba\simpletest\docs\fr\mock_objects_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\overview.html
+							www\Pages\Proba\simpletest\docs\fr\partial_mocks_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\reporter_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\unit_test_documentation.html
+							www\Pages\Proba\simpletest\docs\fr\web_tester_documentation.html
+					-extensions
+						-testdox
+							www\Pages\Proba\simpletest\extensions\testdox\test.php
+						www\Pages\Proba\simpletest\extensions\pear_test_case.php
+						www\Pages\Proba\simpletest\extensions\testdox.php
+					-test
+						-site
+							www\Pages\Proba\simpletest\test\site\file.html
+						-support
+							-collector
+								www\Pages\Proba\simpletest\test\support\collector\collectable.1
+								www\Pages\Proba\simpletest\test\support\collector\collectable.2
+							www\Pages\Proba\simpletest\test\support\empty_test_file.php
+							www\Pages\Proba\simpletest\test\support\failing_test.php
+							www\Pages\Proba\simpletest\test\support\latin1_sample
+							www\Pages\Proba\simpletest\test\support\passing_test.php
+							www\Pages\Proba\simpletest\test\support\spl_examples.php
+							www\Pages\Proba\simpletest\test\support\supplementary_upload_sample.txt
+							www\Pages\Proba\simpletest\test\support\test1.php
+							www\Pages\Proba\simpletest\test\support\upload_sample.txt
+						www\Pages\Proba\simpletest\test\acceptance_test.php
+						www\Pages\Proba\simpletest\test\adapter_test.php
+						www\Pages\Proba\simpletest\test\all_tests.php
+						www\Pages\Proba\simpletest\test\authentication_test.php
+						www\Pages\Proba\simpletest\test\autorun_test.php
+						www\Pages\Proba\simpletest\test\bad_test_suite.php
+						www\Pages\Proba\simpletest\test\browser_test.php
+						www\Pages\Proba\simpletest\test\collector_test.php
+						www\Pages\Proba\simpletest\test\command_line_test.php
+						www\Pages\Proba\simpletest\test\compatibility_test.php
+						www\Pages\Proba\simpletest\test\cookies_test.php
+						www\Pages\Proba\simpletest\test\detached_test.php
+						www\Pages\Proba\simpletest\test\dumper_test.php
+						www\Pages\Proba\simpletest\test\eclipse_test.php
+						www\Pages\Proba\simpletest\test\encoding_test.php
+						www\Pages\Proba\simpletest\test\errors_test.php
+						www\Pages\Proba\simpletest\test\exceptions_test.php
+						www\Pages\Proba\simpletest\test\expectation_test.php
+						www\Pages\Proba\simpletest\test\form_test.php
+						www\Pages\Proba\simpletest\test\frames_test.php
+						www\Pages\Proba\simpletest\test\http_test.php
+						www\Pages\Proba\simpletest\test\interfaces_test.php
+						www\Pages\Proba\simpletest\test\interfaces_test_php5_1.php
+						www\Pages\Proba\simpletest\test\live_test.php
+						www\Pages\Proba\simpletest\test\mock_objects_test.php
+						www\Pages\Proba\simpletest\test\page_test.php
+						www\Pages\Proba\simpletest\test\parse_error_test.php
+						www\Pages\Proba\simpletest\test\parsing_test.php
+						www\Pages\Proba\simpletest\test\php_parser_test.php
+						www\Pages\Proba\simpletest\test\reflection_php4_test.php
+						www\Pages\Proba\simpletest\test\reflection_php5_test.php
+						www\Pages\Proba\simpletest\test\remote_test.php
+						www\Pages\Proba\simpletest\test\shell_test.php
+						www\Pages\Proba\simpletest\test\shell_tester_test.php
+						www\Pages\Proba\simpletest\test\simpletest_test.php
+						www\Pages\Proba\simpletest\test\socket_test.php
+						www\Pages\Proba\simpletest\test\tag_test.php
+						www\Pages\Proba\simpletest\test\test_with_parse_error.php
+						www\Pages\Proba\simpletest\test\unit_tester_test.php
+						www\Pages\Proba\simpletest\test\unit_tests.php
+						www\Pages\Proba\simpletest\test\url_test.php
+						www\Pages\Proba\simpletest\test\user_agent_test.php
+						www\Pages\Proba\simpletest\test\visual_test.php
+						www\Pages\Proba\simpletest\test\web_tester_test.php
+						www\Pages\Proba\simpletest\test\xml_test.php
+					www\Pages\Proba\simpletest\authentication.php
+					www\Pages\Proba\simpletest\autorun.php
+					www\Pages\Proba\simpletest\browser.php
+					www\Pages\Proba\simpletest\collector.php
+					www\Pages\Proba\simpletest\compatibility.php
+					www\Pages\Proba\simpletest\cookies.php
+					www\Pages\Proba\simpletest\default_reporter.php
+					www\Pages\Proba\simpletest\detached.php
+					www\Pages\Proba\simpletest\dumper.php
+					www\Pages\Proba\simpletest\eclipse.php
+					www\Pages\Proba\simpletest\encoding.php
+					www\Pages\Proba\simpletest\errors.php
+					www\Pages\Proba\simpletest\exceptions.php
+					www\Pages\Proba\simpletest\expectation.php
+					www\Pages\Proba\simpletest\form.php
+					www\Pages\Proba\simpletest\frames.php
+					www\Pages\Proba\simpletest\HELP_MY_TESTS_DONT_WORK_ANYMORE
+					www\Pages\Proba\simpletest\http.php
+					www\Pages\Proba\simpletest\invoker.php
+					www\Pages\Proba\simpletest\LICENSE
+					www\Pages\Proba\simpletest\mock_objects.php
+					www\Pages\Proba\simpletest\page.php
+					www\Pages\Proba\simpletest\php_parser.php
+					www\Pages\Proba\simpletest\README
+					www\Pages\Proba\simpletest\reflection_php4.php
+					www\Pages\Proba\simpletest\reflection_php5.php
+					www\Pages\Proba\simpletest\remote.php
+					www\Pages\Proba\simpletest\reporter.php
+					www\Pages\Proba\simpletest\scorer.php
+					www\Pages\Proba\simpletest\selector.php
+					www\Pages\Proba\simpletest\shell_tester.php
+					www\Pages\Proba\simpletest\simpletest.php
+					www\Pages\Proba\simpletest\socket.php
+					www\Pages\Proba\simpletest\tag.php
+					www\Pages\Proba\simpletest\test_case.php
+					www\Pages\Proba\simpletest\tidy_parser.php
+					www\Pages\Proba\simpletest\unit_tester.php
+					www\Pages\Proba\simpletest\url.php
+					www\Pages\Proba\simpletest\user_agent.php
+					www\Pages\Proba\simpletest\VERSION
+					www\Pages\Proba\simpletest\web_tester.php
+					www\Pages\Proba\simpletest\xml.php
+				-TPhpPrown
+					www\Pages\Proba\TPhpPrown\CtrlArray.php
+					www\Pages\Proba\TPhpPrown\CtrlNumber.php
+					www\Pages\Proba\TPhpPrown\Findes.php
+					www\Pages\Proba\TPhpPrown\GetAbove.php
+					www\Pages\Proba\TPhpPrown\getSiteDevice.php
+					www\Pages\Proba\TPhpPrown\getTranslit.php
+					www\Pages\Proba\TPhpPrown\iniConstMem.php
+					www\Pages\Proba\TPhpPrown\iniErrMessage.php
+					www\Pages\Proba\TPhpPrown\iniRegExp.php
+					www\Pages\Proba\TPhpPrown\isCalcInBrowser.php
+					www\Pages\Proba\TPhpPrown\isCookie.php
+					www\Pages\Proba\TPhpPrown\isCountArrays.php
+					www\Pages\Proba\TPhpPrown\isSubstrInUri.php
+					www\Pages\Proba\TPhpPrown\iViewArray.php
+					www\Pages\Proba\TPhpPrown\LICENSE
+					www\Pages\Proba\TPhpPrown\MakeCookie.php
+					www\Pages\Proba\TPhpPrown\MakeParm.php
+					www\Pages\Proba\TPhpPrown\MakeRegExp.php
+					www\Pages\Proba\TPhpPrown\MakeSession.php
+					www\Pages\Proba\TPhpPrown\MakeType.php
+					www\Pages\Proba\TPhpPrown\MakeUserError.php
+					www\Pages\Proba\TPhpPrown\Mobile_Detect.php
+					www\Pages\Proba\TPhpPrown\NoZero.php
+					www\Pages\Proba\TPhpPrown\Number1string.php
+					www\Pages\Proba\TPhpPrown\Number2string.php
+					www\Pages\Proba\TPhpPrown\PullArray.php
+					www\Pages\Proba\TPhpPrown\SqueezeArrays.php
+					www\Pages\Proba\TPhpPrown\StringFilters.php
+					www\Pages\Proba\TPhpPrown\TestNumerical.php
+					www\Pages\Proba\TPhpPrown\ViewGlobal.php
+					www\Pages\Proba\TPhpPrown\ViewSimpleArray.php
+				-TPhpPrownTests
+					www\Pages\Proba\TPhpPrownTests\Findes_test.php
+					www\Pages\Proba\TPhpPrownTests\isCalcInBrowser_test.php
+					www\Pages\Proba\TPhpPrownTests\MakeType_test.php
+				www\Pages\Proba\FunctionsBlock.php
+				www\Pages\Proba\ProbaTest.php
 			-Sshu
 		-qrcode
 			-temp
@@ -115,6 +291,7 @@ DoorTry
 		www\IniCurrStih.php
 		www\IniMem.php
 		www\IniMenu.php
+		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -128,33 +305,33 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\get-info.php
-1=www\JS\DoorTry.js
-2=www\JS\FixLoadTimer.js
-3=www\Site.php
-4=www\iHtmlBegin.php
-5=www\Main.php
-6=..\TPhpPrown\MakeCookie.php
+1=www\IniMenu.php
+2=www\Main.php
+3=www\Pages\Proba\ProbaTest.php
+4=www\Pages\Proba\simpletest\autorun.php
+5=www\Pages\Proba\TPhpPrown\Findes.php
+6=www\Pages\DoorTry\ConnHandler.php
 [Selected Project Files]
 Main=
-Selected=www\get-info.php
+Selected=www\Pages\Proba\ProbaTest.php
 [www\get-info.php]
 TopLine=1
-Caret=20,7
-[www\JS\DoorTry.js]
-TopLine=48
-Caret=9,67
-[www\JS\FixLoadTimer.js]
-TopLine=111
-Caret=10,121
-[www\Site.php]
-TopLine=39
-Caret=32,51
-[www\iHtmlBegin.php]
-TopLine=71
-Caret=1,86
+Caret=54,16
+[www\IniMenu.php]
+TopLine=123
+Caret=61,137
 [www\Main.php]
-TopLine=25
-Caret=6,104
-[..\TPhpPrown\MakeCookie.php]
-TopLine=43
-Caret=32,60
+TopLine=63
+Caret=37,81
+[www\Pages\Proba\ProbaTest.php]
+TopLine=9
+Caret=1,68
+[www\Pages\Proba\simpletest\autorun.php]
+TopLine=1
+Caret=1,1
+[www\Pages\Proba\TPhpPrown\Findes.php]
+TopLine=1
+Caret=1,1
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=39
+Caret=1,57

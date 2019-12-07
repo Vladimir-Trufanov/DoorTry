@@ -75,14 +75,14 @@ if ($c_PersName<>$c_UserName)
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 // Если поступил запрос на пробную страницу, то запускаем её
-/*
-else if (isComRequest('tabmenu','list')) 
+
+else if (isComRequest('proba','list')) 
 {
-   $page='/Pages/tabmenu';
+   $page='/Pages/Proba/ProbaTest.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
-*/
+
 // В больштнстве остальных случаев запускаем главные страницы
 else
 {
