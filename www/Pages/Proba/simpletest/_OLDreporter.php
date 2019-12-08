@@ -1,8 +1,5 @@
 <?php
 /**
- *  Модификация файла от tve, 08.12.2019. Оригинал файла _OLDreporter.php
- *  http://simpletest.sourceforge.net/
- *  
  *  base include file for SimpleTest
  *  @package    SimpleTest
  *  @subpackage UnitTester
@@ -22,16 +19,19 @@ require_once(dirname(__FILE__) . '/scorer.php');
  *    @package SimpleTest
  *    @subpackage UnitTester
  */
-class HtmlReporter extends SimpleReporter 
-{
-   // Определить кодировку вывода сведений о прохождении тестов.
-   // Первый вывод будет отправлен в веб-браузер при первом запуске теста. 
-   private $character_set;
-   function __construct($character_set="utf-8") 
-   {
-      parent::__construct();
-      $this->character_set = $character_set;
-   }
+class HtmlReporter extends SimpleReporter {
+    private $character_set;
+
+    /**
+     *    Does nothing yet. The first output will
+     *    be sent on the first test start. For use
+     *    by a web browser.
+     *    @access public
+     */
+    function __construct($character_set = 'ISO-8859-1') {
+        parent::__construct();
+        $this->character_set = $character_set;
+    }
 
     /**
      *    Paints the top of the web page setting the
@@ -40,15 +40,15 @@ class HtmlReporter extends SimpleReporter
      *    @access public
      */
     function paintHeader($test_name) {
-        //$this->sendNoCacheHeaders();
-        //print "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">";
-        //print "<html>\n<head>\n<title>$test_name</title>\n";
-        //print "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" .
-        //        $this->character_set . "\">\n";
+        $this->sendNoCacheHeaders();
+        print "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">";
+        print "<html>\n<head>\n<title>$test_name</title>\n";
+        print "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" .
+                $this->character_set . "\">\n";
         print "<style type=\"text/css\">\n";
-        print $this->getxCss() . "\n";
+        print $this->getCss() . "\n";
         print "</style>\n";
-        //print "</head>\n<body>\n";
+        print "</head>\n<body>\n";
         //print "<h1>$test_name</h1>\n";
         //echo 'Привет';
         flush();
@@ -75,7 +75,7 @@ class HtmlReporter extends SimpleReporter
      *    @return string            CSS code as text.
      *    @access protected
      */
-    protected function getxCss() {
+    protected function getCss() {
         return ".fail { background-color: inherit; color: red; }" .
                 ".pass { background-color: inherit; color: green; }" .
                 " pre { background-color: lightgray; color: inherit; }";
@@ -98,7 +98,7 @@ class HtmlReporter extends SimpleReporter
         print "<strong>" . $this->getFailCount() . "</strong> fails and ";
         print "<strong>" . $this->getExceptionCount() . "</strong> exceptions.";
         print "</div>\n";
-        print "\nyyy\n</body>\n</html>\n";
+        print "</body>\n</html>\n";
     }
 
     /**

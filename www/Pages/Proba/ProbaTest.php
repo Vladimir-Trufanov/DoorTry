@@ -67,7 +67,9 @@ $ModeError=-1;
 require_once(dirname(__FILE__).'/TPhpPrownTests/Findes_test.php');
 
 ?>
+<!-- 
 </body> 
 </html>
+-->
 <?php
 // <!-- --> ************************************************* ProbaTest.php ***

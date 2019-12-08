@@ -133,6 +133,7 @@ DoorTry
 						www\Pages\Proba\simpletest\test\visual_test.php
 						www\Pages\Proba\simpletest\test\web_tester_test.php
 						www\Pages\Proba\simpletest\test\xml_test.php
+					www\Pages\Proba\simpletest\_OLDreporter.php
 					www\Pages\Proba\simpletest\authentication.php
 					www\Pages\Proba\simpletest\autorun.php
 					www\Pages\Proba\simpletest\browser.php
@@ -307,13 +308,10 @@ DoorTry
 0=www\get-info.php
 1=www\IniMenu.php
 2=www\Main.php
-3=www\Pages\Proba\ProbaTest.php
-4=www\Pages\Proba\simpletest\autorun.php
-5=www\Pages\Proba\TPhpPrown\Findes.php
-6=www\Pages\DoorTry\ConnHandler.php
+3=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Proba\ProbaTest.php
+Selected=www\Site.php
 [www\get-info.php]
 TopLine=1
 Caret=54,16
@@ -323,15 +321,6 @@ Caret=61,137
 [www\Main.php]
 TopLine=63
 Caret=37,81
-[www\Pages\Proba\ProbaTest.php]
-TopLine=9
-Caret=1,68
-[www\Pages\Proba\simpletest\autorun.php]
-TopLine=1
+[www\Site.php]
+TopLine=55
 Caret=1,1
-[www\Pages\Proba\TPhpPrown\Findes.php]
-TopLine=1
-Caret=1,1
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=39
-Caret=1,57
