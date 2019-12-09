@@ -8,6 +8,14 @@
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 07.12.2019
+
+// Инициализируем корневой каталог сайта, надсайтовый каталог и каталог хостинга
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+require_once $SiteRoot."/iGetAbove.php";
+$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,24 +57,18 @@ $point  - позиция начала найденного фрагмента п
 
 <?php
 echo '<div id="CodeFunction"';
-$f2=dirname(__FILE__).'/TPhpPrown/Findes.php';
+$f2=$SiteRoot.'/TPhpPrown/Findes.php';
 $stx=show_source($f2,true);
 echo $stx;
 echo '</div>';
 ?>
-
-
-
- - - -<br>
 <?php
-
 // Запускаем тестирование и трассировку выбранных функций
-require_once(dirname(__FILE__).'/simpletest/autorun.php');
-require_once(dirname(__FILE__).'/TPhpPrown/Findes.php');
-require_once(dirname(__FILE__).'/FunctionsBlock.php');
+require_once($SiteRoot.'/simpletest/autorun.php');
+require_once($SiteRoot.'/TPhpPrown/Findes.php');
+require_once($SiteRoot.'/FunctionsBlock.php');
 $ModeError=-1;
-require_once(dirname(__FILE__).'/TPhpPrownTests/Findes_test.php');
-
+require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
 ?>
 <!-- 
 </body> 

@@ -98,7 +98,7 @@ class HtmlReporter extends SimpleReporter
         print "<strong>" . $this->getFailCount() . "</strong> fails and ";
         print "<strong>" . $this->getExceptionCount() . "</strong> exceptions.";
         print "</div>\n";
-        print "\nyyy\n</body>\n</html>\n";
+        print "</body>\n</html>\n";
     }
 
     /**
