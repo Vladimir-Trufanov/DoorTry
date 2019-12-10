@@ -32,6 +32,7 @@ require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 require_once $SiteRoot."/ComRequest.php";
 //require_once $SiteRoot."/DebugError.php";
 require_once $SiteRoot."/IniCurrStih.php";
+require_once $SiteRoot."/IniTPhpPrown.php";
 require_once $SiteRoot."/IniMenu.php";
 require_once $SiteRoot."/MakeQrcode.php"; 
 // Подключаем управление новостями  
@@ -72,10 +73,11 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgSESSION);
 //\prown\ViewGlobal(avgGLOBALS);
 
+// Если поступил запрос по библиотеке TPhpPrown, то запускаем страницу
+if (IsSet($_REQUEST['TPhpPrown'])) MakeTPhpPrown($SiteRoot,$SiteDevice);
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 // Если поступил запрос на пробную страницу, то запускаем её
-
 else if (isComRequest('proba','list')) 
 {
    $page='/Pages/Proba/ProbaTest.php';

@@ -6,3 +6,11 @@
 [03-Dec-2019 15:27:00 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''fio'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\DoorTry\www\get-info.php on line 6
 [03-Dec-2019 15:41:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')', expecting ']' in C:\DoorTry\www\get-info.php on line 7
 [03-Dec-2019 19:21:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\iHtmlBegin.php on line 89
+[10-Dec-2019 21:55:37 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function TPhpPrownMenu(), 0 passed in C:\DoorTry\www\IniMenu.php on line 133 and exactly 1 expected in C:\DoorTry\www\IniTPhpPrown.php:24
+Stack trace:
+#0 C:\DoorTry\www\IniMenu.php(133): TPhpPrownMenu()
+#1 C:\DoorTry\www\Site.php(30): TopMenu()
+#2 C:\DoorTry\www\Main.php(97): require_once('C:\\DoorTry\\www\\...')
+#3 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
+#4 {main}
+  thrown in C:\DoorTry\www\IniTPhpPrown.php on line 24

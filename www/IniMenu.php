@@ -127,6 +127,12 @@ function TopMenu()
       }
       echo '</li>';
    }
+   // Подключаем сведения о библиотеке TPhpPrown                                                    
+   echo '<li><a href="#">TPhpPrown</a>';
+      echo '<ul>';
+      TPhpPrownMenu();
+      echo '</ul>';
+   echo '</li>';
    // Подключаем показ стихотворения
    echo '<li><a href="#">Штрихотворения</a>';
       echo '<ul>';

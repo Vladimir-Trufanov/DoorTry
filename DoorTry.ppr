@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -38,9 +38,11 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Proba
-				www\Pages\Proba\FunctionsBlock.php
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
+			-TPhpPrown
+				-vybrat-iz-stroki-podstroku-sootvetstvuyushchuyu-regulyarnomu-vyrazheniyu
+					www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-sootvetstvuyushchuyu-regulyarnomu-vyrazheniyu\index.php
 		-qrcode
 			-temp
 			www\qrcode\CHANGELOG
@@ -69,7 +71,7 @@ DoorTry
 		-scripts
 			www\scripts\jquery-1.6.2.min.js
 			www\scripts\jquery-ui-1.8.14.custom.min.js
-		+simpletest
+		-simpletest
 			-docs
 				-en
 					www\simpletest\docs\en\authentication_documentation.html
@@ -271,8 +273,9 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		+TPhpPrownTests
+		-TPhpPrownTests
 			www\TPhpPrownTests\Findes_test.php
+			www\TPhpPrownTests\FunctionsBlock.php
 			www\TPhpPrownTests\isCalcInBrowser_test.php
 			www\TPhpPrownTests\MakeType_test.php
 		www\.htaccess
@@ -283,7 +286,6 @@ DoorTry
 		www\doortry.png
 		www\error.php
 		www\favicon.ico
-		www\FunctionsBlock.php
 		www\get-info.php
 		www\iGetAbove.php
 		www\iHtmlBegin.php
@@ -293,6 +295,7 @@ DoorTry
 		www\IniCurrStih.php
 		www\IniMem.php
 		www\IniMenu.php
+		www\IniTPhpPrown.php
 		www\log.txt
 		www\logis.txt
 		www\Main.php
@@ -307,21 +310,37 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\get-info.php
-1=www\IniMenu.php
-2=www\Site.php
-3=www\simpletest\reporter.php
+1=www\Site.php
+2=www\TPhpPrownTests\Findes_test.php
+3=www\Pages\Proba\ProbaTest.php
+4=www\Pages\DoorTry\ConnHandler.php
+5=www\IniMenu.php
+6=www\IniTPhpPrown.php
+7=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\simpletest\reporter.php
+Selected=www\IniTPhpPrown.php
 [www\get-info.php]
 TopLine=1
 Caret=54,16
+[www\Site.php]
+TopLine=21
+Caret=1,21
+[www\TPhpPrownTests\Findes_test.php]
+TopLine=37
+Caret=1,1
+[www\Pages\Proba\ProbaTest.php]
+TopLine=11
+Caret=83,23
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=11
+Caret=1,1
 [www\IniMenu.php]
 TopLine=123
-Caret=61,137
-[www\Site.php]
-TopLine=43
-Caret=1,1
-[www\simpletest\reporter.php]
-TopLine=83
-Caret=16,101
+Caret=21,133
+[www\IniTPhpPrown.php]
+TopLine=37
+Caret=4,52
+[www\Main.php]
+TopLine=61
+Caret=49,77
