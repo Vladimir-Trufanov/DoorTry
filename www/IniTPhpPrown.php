@@ -16,7 +16,7 @@
 // ****************************************************************************
 $aTPhpPrown=array
 (            
-   'Findes' => 'выбрать из строки подстроку, соответствующую регулярному выражению',   
+   'Findes' => 'выбрать из строки подстроку по регулярному выражению',   
 );
 // ****************************************************************************
 // *                  Вывести пункты меню по библиотеке TPhpPrown             *
@@ -27,30 +27,87 @@ function TPhpPrownMenu()
    $Result = true;
    foreach($aTPhpPrown as $k=>$v)
    {
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo '<li><a href="';
+         echo 'TPhpPrown/';
+         echo prown\getTranslit($v).'"'.'>'.$k.'</a></li>';
+      }
+      else
+      {
       echo '<li><a href="';
       echo 'index.php?TPhpPrown=';
       echo prown\getTranslit($v).'"'.'>'.$k.'</a></li>';
+      }
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    }
    return $Result;
 }
-
+// ****************************************************************************
+// *   Выбрать имя функции, соответствующее транслиту, например: 'Findes' =>  *
+// *'vybrat-iz-stroki-podstroku-sootvetstvuyushchuyu-regulyarnomu-vyrazheniyu'*
+// ****************************************************************************
+function getFunc($inv)
+{
+   global $aTPhpPrown;
+   $Result='';
+   foreach($aTPhpPrown as $k=>$v)
+   {
+      if (prown\getTranslit($v)==$inv)
+      {
+         $Result=$k;
+      }
+   }
+   if ($Result=='')
+   {
+      $TypeExp='E_USER_ERROR';
+      throw new $TypeExp("[getFunc] Не найдена функция, соответствующая транслиту");
+   }
+   return $Result;
+}
+// ****************************************************************************
+// *                  Запустить сценарий публикации функции                   *
+// ****************************************************************************
 function MakeTPhpPrown($SiteRoot,$SiteDevice)
 {
    // Определяем каталог страницы с заданной функцией (где есть index.php)
-   $FuncPage=getComRequest('TPhpPrown');  
-   $page='/Pages/TPhpPrown/'.$FuncPage;
+   //$translit=getComRequest('TPhpPrown');  
+   //$FuncPage=getFunc($translit);  
+   //$page='/Pages/TPhpPrown/_'.$FuncPage.'.php';
    // Запускаем сценарий публикации функции, отправляя заголовок страницы
    /*
+   echo('$translit='.$translit.'<br>');
    echo('$FuncPage='.$FuncPage.'<br>');
    echo('$page='.$page.'<br>');
    echo("Location: http://".$_SERVER['HTTP_HOST'].$page);
    */
-   
+
+
+   // Определяем имя загружаемого сценария
+   $translit=getComRequest('TPhpPrown');  
+   //$FuncPage=getFunc($translit);  
+   $page='/Pages/TPhpPrown/'.$translit.'.php';
+   // Запускаем сценарий публикации функции, отправляя заголовок страницы
+   /*
+   echo('$translit='.$translit.'<br>');
+   //echo('$FuncPage='.$FuncPage.'<br>');
+   echo('$page='.$page.'<br>');
+   echo("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   */
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       Header("Location: https://".$_SERVER['HTTP_HOST'].$page);
    else Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   
-   // Запускаем сценарий стихотворения через javascript
+   // Запускаем сценарий через javascript
    /*
    echo '<script>';
    echo 'location.replace("'.$page.'")';

@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -27,7 +27,7 @@ DoorTry
 			www\JS\jquery.doubleScroll.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -40,9 +40,8 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			-TPhpPrown
-				-vybrat-iz-stroki-podstroku-sootvetstvuyushchuyu-regulyarnomu-vyrazheniyu
-					www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-sootvetstvuyushchuyu-regulyarnomu-vyrazheniyu\index.php
+			+TPhpPrown
+				www\Pages\TPhpPrown\_Findes.php
 		-qrcode
 			-temp
 			www\qrcode\CHANGELOG
@@ -311,36 +310,36 @@ DoorTry
 [Open project files]
 0=www\get-info.php
 1=www\Site.php
-2=www\TPhpPrownTests\Findes_test.php
-3=www\Pages\Proba\ProbaTest.php
+2=www\iHtmlBegin.php
+3=www\Pages\TPhpPrown\_Findes.php
 4=www\Pages\DoorTry\ConnHandler.php
-5=www\IniMenu.php
-6=www\IniTPhpPrown.php
-7=www\Main.php
+5=www\IniMem.php
+6=www\IniMenu.php
+7=www\IniTPhpPrown.php
 [Selected Project Files]
 Main=
-Selected=www\IniTPhpPrown.php
+Selected=www\IniMem.php
 [www\get-info.php]
 TopLine=1
 Caret=54,16
 [www\Site.php]
-TopLine=21
-Caret=1,21
-[www\TPhpPrownTests\Findes_test.php]
-TopLine=37
+TopLine=5
 Caret=1,1
-[www\Pages\Proba\ProbaTest.php]
-TopLine=11
-Caret=83,23
+[www\iHtmlBegin.php]
+TopLine=9
+Caret=1,17
+[www\Pages\TPhpPrown\_Findes.php]
+TopLine=43
+Caret=1,54
 [www\Pages\DoorTry\ConnHandler.php]
-TopLine=11
+TopLine=1
+Caret=1,20
+[www\IniMem.php]
+TopLine=1
 Caret=1,1
 [www\IniMenu.php]
-TopLine=123
-Caret=21,133
+TopLine=49
+Caret=1,68
 [www\IniTPhpPrown.php]
-TopLine=37
-Caret=4,52
-[www\Main.php]
-TopLine=61
-Caret=49,77
+TopLine=27
+Caret=16,33
