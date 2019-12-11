@@ -21,3 +21,5 @@ Stack trace:
 #2 C:\DoorTry\www\index.php(22): require_once('C:\\DoorTry\\www\\...')
 #3 {main}
   thrown in C:\DoorTry\www\IniTPhpPrown.php on line 46
+[11-Dec-2019 21:59:06 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in C:\DoorTry\www\IniTPhpPrown.php on line 41
+[11-Dec-2019 21:59:06 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in C:\DoorTry\www\IniTPhpPrown.php on line 41

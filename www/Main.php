@@ -73,8 +73,6 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgSESSION);
 //\prown\ViewGlobal(avgGLOBALS);
 
-// Если поступил запрос по библиотеке TPhpPrown, то запускаем страницу
-if (IsSet($_REQUEST['TPhpPrown'])) MakeTPhpPrown($SiteRoot,$SiteDevice);
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 // Если поступил запрос на пробную страницу, то запускаем её
