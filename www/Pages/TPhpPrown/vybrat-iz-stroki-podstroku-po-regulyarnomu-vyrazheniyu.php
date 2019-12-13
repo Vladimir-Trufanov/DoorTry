@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                                  *** _Findes.php ***
+// PHP7      *** vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php ***
 
 // ****************************************************************************
 // * DoorTry-TPhpPrown            Страница функции Findes - выбрать из строки *
@@ -10,13 +10,24 @@
 //                                                   Дата создания:  07.12.2019
 // Copyright © 2019 tve                              Посл.изменение: 11.12.2019
 
-// Подгружаем рабочие модули
+// Определяем страничные константы
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
+define ("NotTest", "NotTest");   // "Тест не запускался"  
+define ("WasTest", "WasTest");   // "Тест уже запускался"
+// Инициализируем корневой, надсайтовый каталог и каталог хостинга
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-require_once($SiteRoot.'/simpletest/autorun.php');
+//require_once($SiteRoot.'/iGetAbove.php');
+//$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
+//$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
+// Подгружаем рабочие модули
 require_once($SiteRoot.'/TPhpPrown/getSiteDevice.php');
+require_once($SiteRoot.'/TPhpPrown/MakeCookie.php');
+require_once $SiteRoot.'/TPhpPrown/ViewGlobal.php';
 require_once($SiteRoot.'/TPhpPrownTests/FunctionsBlock.php');
+// Подключаем задействованные классы
+//require_once $SiteHost.'/TPhpTools/TPageStarter/PageStarterClass.php';
+
 $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 // Формируем часть страницы с описанием функции
 ?>
@@ -34,6 +45,9 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 принцип DO-or-TRY, делай или пробуй">
 
 <?php
+// Инициализируем сессионные переменные
+//$c_MakeTest=prown\MakeCookie('MakeTest',NotTest,tStr,true);  // "тест ещё не запускался
+
 if ($SiteDevice==Mobile) 
 {   
    //echo '<script>alert("Mobile");</script>';
@@ -59,11 +73,87 @@ echo '<script '.
      '</script>';
 // Обеспечиваем двойной скролл для кода;
 echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
-echo '<script>'.'$(document).ready(function(){
+/*
+echo 
+'<script>'.
+'$(document).ready(function(){
    $(".CodeText").doubleScroll({resetOnWindowResize:true});
-});'.'</script>';
-
+   $("#submit").button();
+});'.
+'</script>';
+*/
 ?>
+
+<script>
+$(document).ready(function(){
+   $(".CodeText").doubleScroll({resetOnWindowResize:true});
+   $("#submit").button();
+});
+</script>
+
+
+
+<script>
+// https://learn.javascript.ru/cookie
+function setcookie(name,value,Duration) 
+{
+   // Определяем параметры кукиса по умолчанию
+   options=
+   {
+      'path':'/',
+      'max-age':44236800, // 512д*24ч*60м*60с=44236800с - последняя дата
+      'expires':512,      // 512д - число дней использования (вместо max-age)
+      //'secure':true,
+      'samesite':'strict' // использовать кукисы только своего сайта
+   };
+   // Выщитываем, когда задан expires, последнюю дату кукиса 
+   if (Duration)
+   {
+      options['expires']=Duration;
+      options['max-age']=Duration*24*60*60;
+   }
+   var last_date=new Date();
+   last_date.setDate(last_date.getDate()+options['expires']);
+   //
+   let updatedCookie=encodeURIComponent(name)+"="+encodeURIComponent(value);
+   for (let optionKey in options) 
+   {
+      //console.log("optionKey="+optionKey);
+      updatedCookie+="; "+optionKey;
+      var optionValue=options[optionKey];
+      // Преобразовываем expires 
+      if (optionKey=='expires')
+      {
+         optionValue=last_date.toUTCString();
+      } 
+      // Преобразовываем все параметры, кроме secure
+      if (optionValue!==true) 
+      {
+         updatedCookie+="="+optionValue;
+      }
+      //console.log("optionValue="+optionValue);
+   }
+   console.log(' ');
+   console.log(' ');
+   console.log(' ');
+
+   document.cookie=updatedCookie;
+   console.log("document.cookie="+updatedCookie);
+}
+
+function DeleteCookie(name)
+{
+   var date = new Date(0);
+   document.cookie = name+"=; path=/; expires=" + date.toUTCString();
+}
+
+
+function isClick() 
+{
+   //alert("isClick");
+   DeleteCookie('MakeTest');
+}
+</script>
 </head>
 <body>
 <div class="TPhpPrown">
@@ -100,13 +190,38 @@ $f2=$SiteRoot.'/TPhpPrown/Findes.php';
 $stx=show_source($f2,true);
 echo $stx;
 echo '</div>';
-?>
-<p><br><strong>Сообщения выполненного теста функции</strong></p>
-<?php
-// Запускаем тестирование и трассировку выбранных функций
-$ModeError=-1;
-require_once($SiteRoot.'/TPhpPrown/Findes.php');
-require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
+
+ if (!(IsSet($_COOKIE['MakeTest'])))
+{
+   //echo 'Кукиса MakeTest нет';
+   ?>
+   <p><br><strong>Сообщения выполненного теста функции</strong></p>
+   <script>
+      setcookie("MakeTest","<?php echo WasTest;?>");
+   </script>
+   <?php
+   // Запускаем тестирование и трассировку выбранных функций
+   require_once($SiteRoot.'/simpletest/autorun.php');
+   $ModeError=-1;
+   require_once($SiteRoot.'/TPhpPrown/Findes.php');
+   require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
+}
+ else
+ {
+   //echo $_COOKIE['MakeTest'];
+   ?>
+   <form action="vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php">
+      <!-- 
+      <button id="button" onclick="isClick()" formmethod="post">
+      "Протестировать функцию!"
+      </button>
+       -->
+      <input type="submit" value="Протестировать функцию!" 
+      formmethod="post" onclick="isClick()" id="submit"> 
+   </form>
+   <?php
+ }
+//\prown\ViewGlobal(avgCOOKIE);
 ?>
 </div>
 <!-- 
@@ -114,4 +229,4 @@ require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
 </html>
 -->
 <?php
-// <!-- --> ************************************************* ProbaTest.php ***
+// <!-- <p><input type="submit"></p> --> **** vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php ***

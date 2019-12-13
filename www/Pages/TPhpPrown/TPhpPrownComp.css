@@ -45,14 +45,14 @@ body
    margin:0 0 0 0;
    padding:0 0 0 0;
 }
-.CodeText
+.TPhpPrown .CodeText
 {
    width:100%;
    background:#EFF4DC;
    margin:0 0 0 0;
    padding:.6rem 0 .6rem 0;
 }
-code
+.TPhpPrown code
 {
    white-space:nowrap;
    font-size:1.6rem;	
@@ -60,4 +60,16 @@ code
    margin:0 0 0 0;
    padding:0 0 0 0;
 }
+.TPhpPrown input 
+{
+   color:#0000BF;
+   font-size:1.7rem;	
+	font-weight:bold;
+   border:solid .1rem #ccc;
+   border-radius:.4rem;
+   height:4rem;
+   padding:.5rem;
+   background:white;
+}
+
 /******************************************************* TPhpPrownComp.css ***/

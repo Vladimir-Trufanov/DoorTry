@@ -16,18 +16,18 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 			www\JS\TJsPrown.css
 			www\JS\TJsPrown.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -40,7 +40,7 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\TPhpPrownComp.css
 				www\Pages\TPhpPrown\TPhpPrownMobi.css
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
@@ -242,7 +242,7 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		-TPhpPrown
+		+TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -311,13 +311,33 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Pages\TPhpPrown\TPhpPrownComp.css
-1=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+1=www\IniMem.php
+2=www\JS\TJsPrown.js
+3=www\TPhpPrown\ViewGlobal.php
+4=www\TPhpPrown\MakeCookie.php
+5=www\Main.php
+6=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\TPhpPrownComp.css
+Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [www\Pages\TPhpPrown\TPhpPrownComp.css]
 TopLine=39
-Caret=17,40
+Caret=17,66
+[www\IniMem.php]
+TopLine=27
+Caret=53,54
+[www\JS\TJsPrown.js]
+TopLine=74
+Caret=4,95
+[www\TPhpPrown\ViewGlobal.php]
+TopLine=153
+Caret=92,164
+[www\TPhpPrown\MakeCookie.php]
+TopLine=49
+Caret=6,70
+[www\Main.php]
+TopLine=35
+Caret=1,1
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=95
-Caret=52,104
+TopLine=91
+Caret=24,220
