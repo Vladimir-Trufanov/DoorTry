@@ -1,0 +1,63 @@
+/** HTML5/CSS3, EDGE/CHROME                           *** TPhpPrownComp.css ***
+ *
+ ******************************************************************************
+ * doortry.ru      Сайт сбора сообщений об ошибках/исключениях и формирования *
+ *           страницы с выводом сообщений, а также комментариев для PHP5-PHP7 *
+ ******************************************************************************
+ *
+ *                                                   Автор:       Труфанов В.Е.
+ *                                                   Дата создания:  09.04.2019
+ * Copyright © 2019 tve                              Посл.изменение: 29.11.2019
+**/
+
+/**
+ * Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+ * списков и таблиц и определяем в процентах пространство документа 
+**/
+html
+{
+	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;	
+   font-size:10px;
+}
+body 
+{
+   font-size:1.6rem;  
+   width:100%;
+   height:100%;
+   min-width:532px;
+   /*background: yellow;*/
+}
+.TPhpPrown
+{
+   padding-right:1rem;
+   /*background: yellow;*/
+}
+.TPhpPrown h4 
+{
+   margin:0 0 1rem 0;
+   padding:0 0 0 0;
+	color:#0000BF;
+   font-size:1.8rem;	
+}
+.TPhpPrown h5 
+{
+   font-size:1.4rem;	
+   margin:0 0 0 0;
+   padding:0 0 0 0;
+}
+.CodeText
+{
+   width:100%;
+   background:#EFF4DC;
+   margin:0 0 0 0;
+   padding:.6rem 0 .6rem 0;
+}
+code
+{
+   white-space:nowrap;
+   font-size:1.6rem;	
+	font-weight:bold;
+   margin:0 0 0 0;
+   padding:0 0 0 0;
+}
+/******************************************************* TPhpPrownComp.css ***/

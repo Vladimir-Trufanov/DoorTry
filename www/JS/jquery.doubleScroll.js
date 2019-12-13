@@ -34,7 +34,7 @@
 			resetOnWindowResize: false, // recompute the top ScrollBar requirements when the window is resized
 			timeToWaitForResize: 30 // wait for the last update event (usefull when browser fire resize event constantly during ressing)
 		};
-	
+
 		$.extend(true, options, userOptions);
 	
 		// do not modify
