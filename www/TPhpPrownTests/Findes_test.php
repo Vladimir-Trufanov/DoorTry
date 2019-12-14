@@ -30,7 +30,7 @@ class test_Findes extends UnitTestCase
       $this->assertEqual($point,0);
       MakeTestMessage($prefix,'Фрагмент '.'"Это"'.' найден с позиции 0',80);
       
-      $preg="/".'Findes'."/u";
+      $preg="/Findes/u";
       $prefix='Findes("'.$preg.'","'.$string.'",$point); ';
       $Result=\prown\Findes($preg,$string,$point);
       $this->assertEqual($point,59);     // 59 позиция, а не 32, так как UTF8
@@ -55,16 +55,16 @@ class test_Findes extends UnitTestCase
       $this->assertEqual($Result,'');
       MakeTestMessage($prefix,'Фрагмент '.'"строки"'.' не найден',80);
   }
-   // Здесь строка, как число. Ожидалось исключение, но 
+   // Здесь строка представлена, как число. Ожидалось исключение, но 
    // поиск обработан. Пусть так и остается.
    function test_Findes_Except()
    {
-      $string=12;
-      $preg="12/u";
-      $prefix='$string=12; '.'$preg="/12/u";'.'Findes($preg,$string,$point); ';
+      $string=1234;
+      $preg="/12/u";
+      $prefix='$string=1234; '.'$preg="/12/u"; '.'Findes($preg,$string,$point); ';
       $Result=\prown\Findes($preg,$string,$point);
       $this->assertEqual($point,0);
-      MakeTestMessage($prefix,'Поиск в строке, как число обработан!',80);
+      MakeTestMessage($prefix,'Поиск в строке, представленной как число, обработан!',80);
   }
 }
 // ******************************************************** Findes_test.php ***

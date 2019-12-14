@@ -242,7 +242,7 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		-TPhpPrown
+		+TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -315,11 +315,12 @@ DoorTry
 2=www\IniMenu.php
 3=www\stihi\MakeStihi.php
 4=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-5=www\TPhpPrownTests\Findes_test.php
-6=www\TPhpPrownTests\FunctionsBlock.php
+5=www\TPhpPrownTests\FunctionsBlock.php
+6=www\TPhpPrownTests\Findes_test.php
+7=www\TPhpPrown\Findes.php
 [Selected Project Files]
 Main=
-Selected=www\TPhpPrownTests\Findes_test.php
+Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [www\Pages\TPhpPrown\TPhpPrownComp.css]
 TopLine=5
 Caret=1,5
@@ -333,11 +334,14 @@ Caret=1,1
 TopLine=11
 Caret=41,29
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=207
-Caret=3,224
-[www\TPhpPrownTests\Findes_test.php]
-TopLine=35
-Caret=47,64
+TopLine=179
+Caret=20,194
 [www\TPhpPrownTests\FunctionsBlock.php]
 TopLine=77
 Caret=1,94
+[www\TPhpPrownTests\Findes_test.php]
+TopLine=3
+Caret=48,64
+[www\TPhpPrown\Findes.php]
+TopLine=11
+Caret=17,6
