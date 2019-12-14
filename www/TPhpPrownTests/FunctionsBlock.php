@@ -72,15 +72,29 @@ function MakeTest($SiteAbove,$aPhpPrown)
       } 
    }
 }
+
+/*
+function mb_str_pad ($input,$pad_length,$pad_string,$pad_style,$encoding="UTF-8")
+{
+   return str_pad($input,strlen($input)-mb_strlen($input,$encoding)+$pad_length,$pad_string,$pad_style);
+};
+*/
+function mb_str_padi($input, $pad_length, $pad_string = '-', $pad_type = STR_PAD_RIGHT)
+{
+	$diff = strlen($input) - mb_strlen($input);
+	return str_pad($input, $pad_length + $diff, $pad_string, $pad_type);
+}
+
+
 // ****************************************************************************
 // *        Вывести сообщение по завершении очередного теста/подтеста         *
 // ****************************************************************************
-function MakeTestMessage($Name,$Name2='')
+function MakeTestMessage($Name,$Name2='',$len=64)
 {
    echo 
       "<span style=\"color:#993300; font-weight:bold; ".
       "font-family:'Anonymous Pro', monospace; font-size:0.9em\">".' '.
-      str_pad($Name,33,'-').' '.
+      mb_str_padi($Name,$len,'.').' '.
       "</span>";
    echo 
       "<span style=\"color:#993300; font-weight:bold; ".
