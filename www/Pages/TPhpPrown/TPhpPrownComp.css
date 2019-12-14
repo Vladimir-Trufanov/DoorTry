@@ -60,16 +60,11 @@ body
    margin:0 0 0 0;
    padding:0 0 0 0;
 }
-.TPhpPrown input 
+.TPhpPrown #button
 {
-   color:#0000BF;
+   margin:2rem 0 2rem 0;
    font-size:1.7rem;	
 	font-weight:bold;
-   border:solid .1rem #ccc;
-   border-radius:.4rem;
-   height:4rem;
-   padding:.5rem;
-   background:white;
 }
 
 /******************************************************* TPhpPrownComp.css ***/

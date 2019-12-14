@@ -8,12 +8,13 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 11.12.2019
+// Copyright © 2019 tve                              Посл.изменение: 14.12.2019
 
 // Определяем страничные константы
+define ("Script", "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
-define ("NotTest", "NotTest");   // "Тест не запускался"  
+//define ("NotTest", "NotTest");   // "Тест не запускался"  
 define ("WasTest", "WasTest");   // "Тест уже запускался"
 // Инициализируем корневой, надсайтовый каталог и каталог хостинга
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
@@ -87,7 +88,7 @@ echo
 <script>
 $(document).ready(function(){
    $(".CodeText").doubleScroll({resetOnWindowResize:true});
-   $("#submit").button();
+   $("#button").button();
 });
 </script>
 
@@ -151,7 +152,8 @@ function DeleteCookie(name)
 function isClick() 
 {
    //alert("isClick");
-   DeleteCookie('MakeTest');
+   DeleteCookie('WasTest');
+   location.replace("<?php echo Script;?>"+".php");
 }
 </script>
 </head>
@@ -190,15 +192,19 @@ $f2=$SiteRoot.'/TPhpPrown/Findes.php';
 $stx=show_source($f2,true);
 echo $stx;
 echo '</div>';
-
- if (!(IsSet($_COOKIE['MakeTest'])))
+// Размечаем низ страницы в случае, когда следует запустить тест
+// (то есть, когда кукис $_COOKIE['WasTest'] ещё не установлен):
+// так как теги </body> и </html> ставятся внутри теста, то закрываем
+// только <div class="TPhpPrown"> тегом </div> 
+if (!(IsSet($_COOKIE['WasTest'])))
 {
    //echo 'Кукиса MakeTest нет';
    ?>
    <p><br><strong>Сообщения выполненного теста функции</strong></p>
    <script>
-      setcookie("MakeTest","<?php echo WasTest;?>");
+      setcookie("WasTest","<?php echo WasTest;?>");
    </script>
+   </div>
    <?php
    // Запускаем тестирование и трассировку выбранных функций
    require_once($SiteRoot.'/simpletest/autorun.php');
@@ -206,27 +212,16 @@ echo '</div>';
    require_once($SiteRoot.'/TPhpPrown/Findes.php');
    require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
 }
- else
- {
-   //echo $_COOKIE['MakeTest'];
+// Размечаем низ страницы в случае, когда устанавливаем кнопку для теста
+else
+{
+   //echo $_COOKIE['WasTest'];
    ?>
-   <form action="vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php">
-      <!-- 
-      <button id="button" onclick="isClick()" formmethod="post">
-      "Протестировать функцию!"
-      </button>
-       -->
-      <input type="submit" value="Протестировать функцию!" 
-      formmethod="post" onclick="isClick()" id="submit"> 
-   </form>
+   <button id="button" onclick="isClick()">"Протестировать функцию!"</button>
+   </div></body></html>
    <?php
- }
+}
 //\prown\ViewGlobal(avgCOOKIE);
 ?>
-</div>
-<!-- 
-</body> 
-</html>
--->
 <?php
 // <!-- <p><input type="submit"></p> --> **** vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php ***

@@ -218,7 +218,7 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-stihi
+		+stihi
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
@@ -311,33 +311,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Pages\TPhpPrown\TPhpPrownComp.css
-1=www\IniMem.php
-2=www\JS\TJsPrown.js
-3=www\TPhpPrown\ViewGlobal.php
-4=www\TPhpPrown\MakeCookie.php
-5=www\Main.php
-6=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+1=www\Main.php
+2=www\IniMenu.php
+3=www\stihi\MakeStihi.php
+4=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+Selected=www\Pages\TPhpPrown\TPhpPrownComp.css
 [www\Pages\TPhpPrown\TPhpPrownComp.css]
-TopLine=39
-Caret=17,66
-[www\IniMem.php]
-TopLine=27
-Caret=53,54
-[www\JS\TJsPrown.js]
-TopLine=74
-Caret=4,95
-[www\TPhpPrown\ViewGlobal.php]
-TopLine=153
-Caret=92,164
-[www\TPhpPrown\MakeCookie.php]
-TopLine=49
-Caret=6,70
+TopLine=71
+Caret=1,63
 [www\Main.php]
-TopLine=35
+TopLine=79
 Caret=1,1
+[www\IniMenu.php]
+TopLine=101
+Caret=1,1
+[www\stihi\MakeStihi.php]
+TopLine=11
+Caret=41,29
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=91
-Caret=24,220
+TopLine=207
+Caret=3,224
