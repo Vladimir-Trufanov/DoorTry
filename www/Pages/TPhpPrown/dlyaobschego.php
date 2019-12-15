@@ -200,61 +200,54 @@ $Result  - найденный фрагментов после работы ре�
 // Загружаем в страницу код функции
 echo '<div class="CodeText">';
 $f2=$SiteRoot.'/TPhpPrown/Findes.php';
-$f2=$SiteRoot.'/TPhpPrown/Fil1.php';
-$f2=$SiteRoot.'/TPhpPrown/Fil.php';
+$f3=$SiteRoot.'/TPhpPrown/Fil.php';
+$content=file_get_contents($f2);
+$content=file_get_contents($f3);
+echo '***'.urlencode($content).'***'.'<br>';
+$content=file_get_contents_utf8($f3);
+echo '*7*'.$content.'*7*'.'<br>';
 
-$string=file_get_contents($f2);
-//$string = "The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.";
-echo mb_detect_encoding($string).'<br>';
-//$pattern = "/quick([a-zA-Z0-9А-Яа-яЁё\s\.-]*)fox/u";
-//$pattern = "/23([a-zA-Z0-9А-Яа-яЁё\s\.-:]*)2019/u";
-$pattern = "/Автор([a-zA-Z0-9А-Яа-яЁё\s\.-:]*)Труфанов\s/u";
-$replacement = "";
-$itog=preg_replace($pattern,$replacement,$string);
-echo $string.' --> <br>'.$itog.'<br>';
 
-/*
-$content="The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.";
-echo mb_detect_encoding($content).'<br>';
-echo mb_detect_encoding(highlight_string($content,true)).'<br>';
-echo '*1*'.$content.'*1*'.'<br>';
+echo 'Проверка<br>';
+$f3=$SiteRoot.'/TPhpPrown/Fil.php';
+if (file_exists($f3))
+{
+   echo 'Существует<br>';
+   if (is_readable($f3))
+   {
+      echo 'Можно читать<br>';
+      $f=fopen($f3,'r');
+      if (!($f==false))
+      {
+         echo 'Открылся<br>';
+         $content=urlencode(fread($f,65));
+         echo '*2*'.$content.'*2*'.'<br>';
+         //echo '*3*'.urldecode($content).'*3*'.'<br>';
+         echo '*4*'.htmlentities($content).'*4*'.'<br>';
+      }
+   }
+}
+else
+{
+   echo 'Нет его<br>';
+}
 
-$pattern = "/23([a-zA-Z0-9А-Яа-яЁё\s\.-]*)2019/u";
-$replacement = "";
-preg_replace($pattern,$replacement,$content).'<br>';
-echo '*2*'.$content.'*2*'.'<br>';
-*/
 
-/*
-echo '*2*'.urlencode($content).'*2*'.'<br>';
-*/
-echo '*3*<br>'.highlight_string($itog,true).'<br>*3*'.'<br>';
 
 //echo '***'.$f2.'***';
 // Вырезаем комментарий, который уже представлен
 //$pattern = "/Функция([a-zA-ZА-Яа-яЁё\s\.\/\n\r\t\v\f-]*)не был найден/u";
-//$pattern = "/Функция([a-zA-ZА-Яа-яЁё\s\.\/\n\r\t\v\f-]*)не был найден/u";
+$pattern = "/Функция([a-zA-ZА-Яа-яЁё\s\.\/\n\r\t\v\f-]*)не был найден/u";
 // Преобразуем текст в раскрашенный код
-/*
 $stx=show_source($f2,true);
 //preg_replace($pattern,'',$f2);
-echo $stx.'<br><br>';
-*/
-/*
-//$pattern = "/\.([a-zA-ZА-Яа-яЁё0-9\s:\.]{0,})\./u";
-$pattern = "/\.([a-zA-ZА-Яа-яЁё0-9\s:\.]{0,})\./u";
-$replacement = "";
-preg_replace($pattern,$replacement,$stx).'<br>';
 echo $stx;
-*/
 echo '</div>';
 
-$string = "The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.";
-echo mb_detect_encoding($string).'<br>';
-//$pattern = "/quick([a-zA-Z0-9А-Яа-яЁё\s\.-]*)fox/u";
-$pattern = "/23([a-zA-Z0-9А-Яа-яЁё\s\.-]*)2019/u";
+$string = "The quickВИст brown ИКЩЦТ BROWN fox jumped over the lazy dog.";
+$pattern = "/quick([a-zA-ZА-Яа-яЁё\s\.-]*)fox/u";
 $replacement = "";
-echo $string.' --> <br>';
+echo $string.' --> ';
 echo preg_replace($pattern,$replacement,$string).'<br>';
 
 // Размечаем низ страницы в случае, когда следует запустить тест

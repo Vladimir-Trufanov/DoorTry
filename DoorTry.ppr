@@ -21,7 +21,7 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
@@ -41,6 +41,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
 			+TPhpPrown
+				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\TPhpPrownComp.css
 				www\Pages\TPhpPrown\TPhpPrownMobi.css
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
@@ -245,6 +246,8 @@ DoorTry
 		+TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
+			www\TPhpPrown\fil.php
+			www\TPhpPrown\fil1.php
 			www\TPhpPrown\Findes.php
 			www\TPhpPrown\GetAbove.php
 			www\TPhpPrown\getSiteDevice.php
@@ -274,7 +277,7 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		+TPhpPrownTests
+		-TPhpPrownTests
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
 			www\TPhpPrownTests\isCalcInBrowser_test.php
@@ -297,7 +300,6 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\IniTPhpPrown.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -313,11 +315,8 @@ DoorTry
 0=www\Pages\TPhpPrown\TPhpPrownComp.css
 1=www\Main.php
 2=www\IniMenu.php
-3=www\stihi\MakeStihi.php
+3=www\Pages\TPhpPrown\dlyaobschego.php
 4=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-5=www\TPhpPrownTests\FunctionsBlock.php
-6=www\TPhpPrownTests\Findes_test.php
-7=www\TPhpPrown\Findes.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
@@ -330,18 +329,9 @@ Caret=1,1
 [www\IniMenu.php]
 TopLine=101
 Caret=1,1
-[www\stihi\MakeStihi.php]
-TopLine=11
-Caret=41,29
+[www\Pages\TPhpPrown\dlyaobschego.php]
+TopLine=185
+Caret=1,207
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=179
-Caret=20,194
-[www\TPhpPrownTests\FunctionsBlock.php]
-TopLine=77
-Caret=1,94
-[www\TPhpPrownTests\Findes_test.php]
-TopLine=3
-Caret=48,64
-[www\TPhpPrown\Findes.php]
-TopLine=11
-Caret=17,6
+TopLine=205
+Caret=57,211
