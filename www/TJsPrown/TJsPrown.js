@@ -92,11 +92,11 @@ function setcookie(name,value,Duration)
    }
    
    document.cookie=updatedCookie;
-   console.log("document.cookie="+updatedCookie);
+   //console.log("document.cookie="+updatedCookie);
 }
 
 
-
+/*
 // https://ruseller.com/lessons.php?id=593 
 function set_cookie ( name, value, exp_y, exp_m, exp_d, path, domain, secure )
 {
@@ -121,7 +121,7 @@ function set_cookie ( name, value, exp_y, exp_m, exp_d, path, domain, secure )
   console.log("document.cookie="+cookie_string);
 
 }
-
+*/
 
 
 
@@ -201,14 +201,14 @@ function DeleteCookie(name)
    var date = new Date(0);
    document.cookie = name+"=; path=/; expires=" + date.toUTCString();
 }
-
+/*
 function delete_cookie ( cookie_name )
 {
   var cookie_date = new Date ( );  // Текущая дата и время
   cookie_date.setTime ( cookie_date.getTime() - 1 );
   document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
 }
-
+*/
 // ****************************************************************************
 // *              Определить, включены ли у пользователя cookie               *
 // ****************************************************************************

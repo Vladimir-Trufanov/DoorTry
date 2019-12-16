@@ -1,1 +1,0 @@
-The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.

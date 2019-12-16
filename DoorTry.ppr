@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -25,9 +25,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-			www\JS\TJsPrown.css
-			www\JS\TJsPrown.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -40,7 +38,7 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\TPhpPrownComp.css
 				www\Pages\TPhpPrown\TPhpPrownMobi.css
@@ -70,9 +68,6 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-scripts
-			www\scripts\jquery-1.6.2.min.js
-			www\scripts\jquery-ui-1.8.14.custom.min.js
 		-simpletest
 			-docs
 				-en
@@ -243,11 +238,12 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		+TPhpPrown
+		-TJsPrown
+			www\TJsPrown\TJsPrown.css
+			www\TJsPrown\TJsPrown.js
+		-TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
-			www\TPhpPrown\fil.php
-			www\TPhpPrown\fil1.php
 			www\TPhpPrown\Findes.php
 			www\TPhpPrown\GetAbove.php
 			www\TPhpPrown\getSiteDevice.php
@@ -312,30 +308,10 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Pages\TPhpPrown\TPhpPrownComp.css
-1=www\Main.php
-2=www\IniMenu.php
-3=www\Pages\TPhpPrown\dlyaobschego.php
-4=www\TPhpPrown\Findes.php
-5=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+0=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\TPhpPrown\Findes.php
-[www\Pages\TPhpPrown\TPhpPrownComp.css]
-TopLine=5
-Caret=1,5
+Selected=www\Main.php
 [www\Main.php]
 TopLine=79
 Caret=1,1
-[www\IniMenu.php]
-TopLine=101
-Caret=1,1
-[www\Pages\TPhpPrown\dlyaobschego.php]
-TopLine=185
-Caret=1,207
-[www\TPhpPrown\Findes.php]
-TopLine=37
-Caret=1,52
-[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=207
-Caret=16,215
