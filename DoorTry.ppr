@@ -316,10 +316,11 @@ DoorTry
 1=www\Main.php
 2=www\IniMenu.php
 3=www\Pages\TPhpPrown\dlyaobschego.php
-4=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+4=www\TPhpPrown\Findes.php
+5=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+Selected=www\TPhpPrown\Findes.php
 [www\Pages\TPhpPrown\TPhpPrownComp.css]
 TopLine=5
 Caret=1,5
@@ -332,6 +333,9 @@ Caret=1,1
 [www\Pages\TPhpPrown\dlyaobschego.php]
 TopLine=185
 Caret=1,207
+[www\TPhpPrown\Findes.php]
+TopLine=37
+Caret=1,52
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=205
-Caret=57,211
+TopLine=207
+Caret=16,215

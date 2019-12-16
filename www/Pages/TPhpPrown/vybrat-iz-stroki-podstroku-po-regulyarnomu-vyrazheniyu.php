@@ -199,19 +199,37 @@ $Result  - найденный фрагментов после работы ре�
 
 // Загружаем в страницу код функции
 echo '<div class="CodeText">';
-$f2=$SiteRoot.'/TPhpPrown/Findes.php';
-$f2=$SiteRoot.'/TPhpPrown/Fil1.php';
-$f2=$SiteRoot.'/TPhpPrown/Fil.php';
+$FileSpec=$SiteRoot.'/TPhpPrown/Findes.php';
+$FileContent=file_get_contents($FileSpec);
+//echo mb_detect_encoding($FileContent).'<br>';
+//echo '---<br>'.$FileContent.'<br>---<br>';
+$FileCode=highlight_string($FileContent,true);
+echo '=1=<br>'.$FileCode.'<br>=1=<br>';
 
-$string=file_get_contents($f2);
+//$pattern="/Автор([a-zA-Z0-9А-Яа-яЁё\s\.-:,]*)Труфанов\s/u";
+//$pattern="/\/\/\sФункция([a-zA-Z0-9А-Яа-яЁё\s\.-:,]*)ачу\s/u";
+//$pattern="/\/\/\sФункция([a-zA-Z0-9А-Яа-яЁё\s\.\n\r-:,]*)Findes\s/u";
+//$pattern="/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)-qwerty-/u";
+//$pattern="/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)не был найден/u";
+$pattern="/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)function/u";
+$replacement='function';
+$FileItog=preg_replace($pattern,$replacement,$FileContent);
+
+
+$FileCode=highlight_string($FileItog,true);
+echo '*2*<br>'.$FileCode.'<br>*2*<br>';
+
+//$f2=$SiteRoot.'/TPhpPrown/Fil1.php';
+//$f2=$SiteRoot.'/TPhpPrown/Fil.php';
+//$string=file_get_contents($f2);
 //$string = "The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.";
-echo mb_detect_encoding($string).'<br>';
+//echo mb_detect_encoding($string).'<br>';
 //$pattern = "/quick([a-zA-Z0-9А-Яа-яЁё\s\.-]*)fox/u";
 //$pattern = "/23([a-zA-Z0-9А-Яа-яЁё\s\.-:]*)2019/u";
-$pattern = "/Автор([a-zA-Z0-9А-Яа-яЁё\s\.-:]*)Труфанов\s/u";
-$replacement = "";
-$itog=preg_replace($pattern,$replacement,$string);
-echo $string.' --> <br>'.$itog.'<br>';
+//$pattern = "/Автор([a-zA-Z0-9А-Яа-яЁё\s\.-:]*)Труфанов\s/u";
+//$replacement = "";
+//$itog=preg_replace($pattern,$replacement,$string);
+//echo $string.' --> <br>'.$itog.'<br>';
 
 /*
 $content="The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.";
@@ -228,7 +246,7 @@ echo '*2*'.$content.'*2*'.'<br>';
 /*
 echo '*2*'.urlencode($content).'*2*'.'<br>';
 */
-echo '*3*<br>'.highlight_string($itog,true).'<br>*3*'.'<br>';
+//echo '*3*<br>'.highlight_string($itog,true).'<br>*3*'.'<br>';
 
 //echo '***'.$f2.'***';
 // Вырезаем комментарий, который уже представлен
@@ -249,6 +267,7 @@ echo $stx;
 */
 echo '</div>';
 
+/*
 $string = "The 23quickВИст. brown 23.04.2019 ИКЩЦТ BROWN - fox2019 jumped over the lazy dog.";
 echo mb_detect_encoding($string).'<br>';
 //$pattern = "/quick([a-zA-Z0-9А-Яа-яЁё\s\.-]*)fox/u";
@@ -256,6 +275,7 @@ $pattern = "/23([a-zA-Z0-9А-Яа-яЁё\s\.-]*)2019/u";
 $replacement = "";
 echo $string.' --> <br>';
 echo preg_replace($pattern,$replacement,$string).'<br>';
+*/
 
 // Размечаем низ страницы в случае, когда следует запустить тест
 // (то есть, когда кукис $_COOKIE['WasTest'] ещё не установлен):
