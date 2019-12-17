@@ -14,7 +14,7 @@ echo '<style type="text/css"> .main';
 echo '{margin-top:'.$c_Topset.'rem;}';
 echo '</style>';
 // Выводим название сайта и главное меню
-echo '<div id="res"></div>'; // Резервное сообщение
+//echo '<div id="res"></div>'; // Резервное сообщение
 echo '<header>';
    // Размещаем div c версией сайта и кратким инфо-сообщением
    echo '<div id="dVer">';

@@ -82,7 +82,6 @@ else if (isComRequest('proba','list'))
    //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
-
 // В больштнстве остальных случаев запускаем главные страницы
 else
 {

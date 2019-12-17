@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -25,7 +25,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -38,10 +38,8 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
-				www\Pages\TPhpPrown\TPhpPrownComp.css
-				www\Pages\TPhpPrown\TPhpPrownMobi.css
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 		-qrcode
 			-temp
@@ -214,8 +212,8 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-stihi
-			-sorevnovanie-s-hakerami
+		+stihi
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -229,19 +227,21 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
 			www\Styles\Stihi.css
 			www\Styles\Styles.css
+			www\Styles\TPhpPrownComp.css
+			www\Styles\TPhpPrownMobi.css
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		-TPhpPrown
+		+TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -309,9 +309,21 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
+1=www\Styles\TPhpPrownMobi.css
+2=www\stihi\sorevnovanie-s-hakerami\Styles.css
+3=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [www\Main.php]
-TopLine=79
-Caret=1,1
+TopLine=85
+Caret=1,85
+[www\Styles\TPhpPrownMobi.css]
+TopLine=6
+Caret=1,12
+[www\stihi\sorevnovanie-s-hakerami\Styles.css]
+TopLine=27
+Caret=1,39
+[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
+TopLine=141
+Caret=6,145

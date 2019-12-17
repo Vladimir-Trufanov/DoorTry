@@ -83,6 +83,6 @@ MakeSmartMenu();
 <?php
 echo '</head>';
 echo '<body>';
-echo '<div id="res">Сообщение</div>';
+//echo '<div id="res">Сообщение</div>';
 
 // ********************************************************* iHtmlBegin.php ***

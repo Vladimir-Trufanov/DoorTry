@@ -55,25 +55,42 @@ echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>'
 if ($SiteDevice==Mobile) 
 {   
    //echo '<script>alert("Mobile");</script>';
-   echo '<link href="TPhpPrownMobi.css" rel="stylesheet">';
+   echo '<link href="/Styles/TPhpPrownMobi.css" rel="stylesheet">';
 }
 else 
 {   
    //echo '<script>alert("Computer");</script>';
-   echo '<link href="TPhpPrownComp.css" rel="stylesheet">';
+   echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
 }
 // Подключаем JS-библиотеку
 echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/TJsPrown/TJsPrown.js"></script>';
-
+// Обрабатываем клик по кнопке для перезагрузки страницы с учетом .htaccess
+if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+{
+   ?><script>
+   function isClick() 
+   {
+      //alert("isClick");
+      DeleteCookie('WasTest');
+      location.replace("<?php echo Script; ?>");
+   }
+   </script><?php
+} 
+else 
+{
+   ?><script>
+   function isClick() 
+   {
+      //alert("isClick");
+      DeleteCookie('WasTest');
+      location.replace("<?php echo Script;?>"+".php");
+   }
+   </script><?php
+}
+// Инициируем двойную прокрутку и реакцию кнопки
 ?>
 <script>
-function isClick() 
-{
-   //alert("isClick");
-   DeleteCookie('WasTest');
-   location.replace("<?php echo Script;?>"+".php");
-}
 $(document).ready(function(){
    $(".CodeText").doubleScroll({resetOnWindowResize:true});
    $("#button").button();
@@ -82,15 +99,10 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="TPhpPrown">
-<h4 id="findes">Findes - выбрать из строки подстроку, соответствующую 
-регулярному выражению.</h4>
-<h5><span class="letter">Ф</span>ункция выполняет конкретную и часто возникающую задачу - выбрать из строки 
-подстроку по заданному регулярному выражению и узнать её начальную позицию 
-в этой строке.</h5> 
-<h5><span class="letter">F</span>indes возвращает первое или единственное вхождение подстроки в исходной 
-строке, а в случае неудачи возвращает пустую строку.</h5>
-<h5><span class="letter">Ч</span>ерез третий параметр функция по ссылке возвращает позицию найденного 
-фрагмента, начиная с нулевого значения, или -1, если фрагмент не найден.</h5>
+<h4 id="findes">Findes - выбрать из строки подстроку, соответствующую регулярному выражению.</h4>
+<h5><span class="letter">Ф</span>ункция выполняет конкретную и часто возникающую задачу - выбрать из строки подстроку по заданному регулярному выражению и узнать её начальную позицию в этой строке.</h5> 
+<h5><span class="letter">F</span>indes возвращает первое или единственное вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку.</h5>
+<h5><span class="letter">Ч</span>ерез третий параметр функция по ссылке возвращает позицию найденного фрагмента, начиная с нулевого значения, или -1, если фрагмент не найден.</h5>
 <p><strong>Синтаксис</strong></p>
 <pre>
 $Result=Findes($preg,$string,&amp;$point)
