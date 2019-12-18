@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -309,21 +309,21 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\Styles\TPhpPrownMobi.css
-2=www\stihi\sorevnovanie-s-hakerami\Styles.css
-3=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+1=www\stihi\sorevnovanie-s-hakerami\Styles.css
+2=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+3=www\Styles\TPhpPrownMobi.css
 [Selected Project Files]
 Main=
 Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [www\Main.php]
 TopLine=85
 Caret=1,85
-[www\Styles\TPhpPrownMobi.css]
-TopLine=6
-Caret=1,12
 [www\stihi\sorevnovanie-s-hakerami\Styles.css]
 TopLine=27
 Caret=1,39
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=141
-Caret=6,145
+TopLine=107
+Caret=7,120
+[www\Styles\TPhpPrownMobi.css]
+TopLine=3
+Caret=1,1
