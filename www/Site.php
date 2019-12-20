@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('Майский вечер в Карелии').'<br>';
+            //echo  prown\getTranslit('определить общие константы и переменные').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();

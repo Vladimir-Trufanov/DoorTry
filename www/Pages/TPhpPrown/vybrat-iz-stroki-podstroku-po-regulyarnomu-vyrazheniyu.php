@@ -34,7 +34,7 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку">
 <meta name="keywords" content=
 "findes,выбрать соответствующую регулярному выражению подстроку,
-принцип DO-or-TRY, делай или пробуй">
+принцип DO-or-TRY, делай или пробуй,TPhpPrown">
 <?php
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 

@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			+DoorTry
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -40,6 +40,7 @@ DoorTry
 			-Sshu
 			+TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 		-qrcode
 			-temp
@@ -212,8 +213,8 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -227,7 +228,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -308,22 +309,26 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Main.php
-1=www\stihi\sorevnovanie-s-hakerami\Styles.css
-2=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-3=www\Styles\TPhpPrownMobi.css
+0=www\stihi\sorevnovanie-s-hakerami\Styles.css
+1=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+2=www\IniTPhpPrown.php
+3=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+4=www\TPhpPrown\iniConstMem.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-[www\Main.php]
-TopLine=85
-Caret=1,85
+Selected=www\TPhpPrown\iniConstMem.php
 [www\stihi\sorevnovanie-s-hakerami\Styles.css]
 TopLine=27
 Caret=1,39
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=107
-Caret=7,120
-[www\Styles\TPhpPrownMobi.css]
-TopLine=3
+TopLine=119
+Caret=1,130
+[www\IniTPhpPrown.php]
+TopLine=15
 Caret=1,1
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
+TopLine=85
+Caret=18,97
+[www\TPhpPrown\iniConstMem.php]
+TopLine=13
+Caret=60,36
