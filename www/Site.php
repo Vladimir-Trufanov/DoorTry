@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('определить общие константы и переменные').'<br>';
+            //echo  prown\getTranslit('определить популярные регулярные выражения PHP').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();

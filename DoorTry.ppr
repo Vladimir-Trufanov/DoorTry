@@ -40,7 +40,9 @@ DoorTry
 			-Sshu
 			+TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 		-qrcode
 			-temp
@@ -228,7 +230,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -310,25 +312,29 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\stihi\sorevnovanie-s-hakerami\Styles.css
-1=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-2=www\IniTPhpPrown.php
-3=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
-4=www\TPhpPrown\iniConstMem.php
+1=www\Site.php
+2=www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
+3=www\IniTPhpPrown.php
+4=www\TPhpPrown\iniRegExp.php
+5=www\Styles\TPhpPrownComp.css
 [Selected Project Files]
 Main=
-Selected=www\TPhpPrown\iniConstMem.php
+Selected=www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 [www\stihi\sorevnovanie-s-hakerami\Styles.css]
-TopLine=27
-Caret=1,39
-[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=119
-Caret=1,130
+TopLine=25
+Caret=69,27
+[www\Site.php]
+TopLine=17
+Caret=15,33
+[www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php]
+TopLine=1
+Caret=199,78
 [www\IniTPhpPrown.php]
-TopLine=15
-Caret=1,1
-[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
-TopLine=85
-Caret=18,97
-[www\TPhpPrown\iniConstMem.php]
 TopLine=13
-Caret=60,36
+Caret=1,23
+[www\TPhpPrown\iniRegExp.php]
+TopLine=3
+Caret=28,26
+[www\Styles\TPhpPrownComp.css]
+TopLine=21
+Caret=17,40

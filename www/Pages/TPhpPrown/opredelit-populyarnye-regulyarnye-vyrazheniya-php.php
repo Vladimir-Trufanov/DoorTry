@@ -1,9 +1,9 @@
 <?php
-// PHP7                   *** opredelit-obshchie-konstanty-i-peremennye.php ***
+// PHP7           *** opredelit-populyarnye-regulyarnye-vyrazheniya-php.php ***
 
 // ****************************************************************************
-// * DoorTry-TPhpPrown          Страница вспомогательного модуля iniConstMem- *
-// *                       определить общие константы и переменные библиотеки *
+// * DoorTry-TPhpPrown            Страница вспомогательного модуля iniRegExp- *
+// *                           определить популярные регулярные выражения PHP *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
@@ -11,7 +11,7 @@
 // Copyright © 2019 tve                              Посл.изменение: 20.12.2019
 
 // Определяем страничные константы
-define ("Script", "opredelit-obshchie-konstanty-i-peremennye"); 
+define ("Script", "opredelit-populyarnye-regulyarnye-vyrazheniya-php"); 
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
 // Инициализируем корневой каталог 
@@ -25,13 +25,12 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 <html lang="ru">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>iniConstMem - определить общие константы и переменные библиотеки</title>
+<title>iniRegExp - определить популярные регулярные выражения PHP</title>
 <meta name="description" content=
-"iniConstMem определяет общие константы и переменные библиотеки TPhpPrown: для 
-указания режимов вывода сообщений, определения типов переменных, используемых 
-в библиотеке">
+"iniRegExp собирает в одном файле часто используемые регулярные выражения в 
+библиотеке TPhpPrown и других PHP-сценариях">
 <meta name="keywords" content=                                          
-"iniConstMem,определить общие константы и переменные библиотеки,
+"iniRegExp,определить популярные регулярные выражения PHP,
 принцип DO-or-TRY,делай или пробуй,TPhpPrown">
 <?php
 // Подключаем jquery/jquery-ui
@@ -63,7 +62,7 @@ else
 // Подключаем JS-библиотеку
 echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/TJsPrown/TJsPrown.js"></script>';
-// Инициируем двойную прокрутку и реакцию кнопки
+// Инициируем двойную прокрутку
 ?>
 <script>
 $(document).ready(function(){
@@ -73,26 +72,20 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="TPhpPrown">
-<h4 id="iniconstmem">iniConstMem - определить общие константы и переменные библиотеки.</h4>
-<h5><span class="letter">М</span>одуль определяет общие константы (а также переменные), которые используются в различных функциях библиотеки и в вызывающих их внешних программах, и сценариях.</h5>
-<h5><span class="letter">П</span>ервая группа констант используются для указания режимов вывода сообщений библиотеки. TPhpPrown позволяет выводить сообщения четырьмя способами:</h5>
-<h5>в текущей позиции сайта,</h5>
-<h5>через исключение с пользовательской ошибкой,</h5>
-<h5>в дополнительном блоке для сообщения (в дополнительном div-е),</h5>
-<h5>в диалоговом окне с помощью jQueryUi.</h5>
-<br>
-<h5><span class="letter">В</span>торая группа констант определяет семь типов переменных, используемых в библиотеке.</h5>
+<h4 id="iniregexp">iniRegExp - определить популярные регулярные выражения PHP.</h4>
+<h5><span class="letter">М</span>одуль собирает в одном файле часто используемые регулярные выражения в библиотеке TPhpPrown и других PHP-сценариях.</h5>
+<h5><span class="letter">Б</span>ольшинство регулярных выражений не используют модификаторы, так как они  ориентированы на латинские символы и цифры.</h5>
+<h5><span class="letter">В</span> тех случаях, когда используется кириллица в тексте поиска и в регулярном выражении (например, при поиске фамилии-инициалов), то употребляется модификатор “/u”.</h5>
+<h5><span class="letter">П</span>ри отлавливании и проверке адреса электронной почты в регулярном выражении используется модификатор “/i”, заставляющий проверять и большие (верхнего регистра - прописные) буквы, и малые (нижнего регистра - строчные).</h5>
 <?php
 // Загружаем в страницу код функции
 echo '<div class="CodeText">';
-$FileSpec=$SiteRoot.'/TPhpPrown/iniConstMem.php';
+$FileSpec=$SiteRoot.'/TPhpPrown/iniRegExp.php';
 $FileContent=file_get_contents($FileSpec);
-//echo mb_detect_encoding($FileContent).'<br>';
-//echo '---<br>'.$FileContent.'<br>---<br>';
-// Вырезаем комментарий, который уже представлен
-//$pattern="/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)библиотеке./u";
-$pattern="/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)\/\/\s---/u";
-$replacement='// ---';
+//$pattern="/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)\/\/\s---/u";
+//$pattern="/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)\"-:,=&;]+)строчные/u";
+$pattern="/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)\"-:,=&;]+)\/\/\s\"дол/u";
+$replacement='// "дол';
 $FileItog=preg_replace($pattern,$replacement,$FileContent);
 // Преобразуем текст в раскрашенный код и показываем его
 $FileCode=highlight_string($FileItog,true);
