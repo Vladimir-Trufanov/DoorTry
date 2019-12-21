@@ -158,7 +158,7 @@ else
 {
    //echo $_COOKIE['WasTest'];
    ?>
-   <!-- <button id="button" onclick="isClick()">"Протестировать функцию!"</button>  -->
+   <button id="button" onclick="isClick()">"Протестировать функцию!"</button> 
    </div></body></html>
    <?php
 }
