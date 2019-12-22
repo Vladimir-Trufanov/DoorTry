@@ -11,7 +11,8 @@
 
 // Регулируем верхнее смещение контента главной страницы по её типу
 echo '<style type="text/css"> .main';
-echo '{margin-top:'.$c_Topset.'rem;}';
+//echo '{margin-top:'.$c_Topset.'rem;}';
+echo '{margin-top:1rem;}';
 echo '</style>';
 // Выводим название сайта и главное меню
 //echo '<div id="res"></div>'; // Резервное сообщение
@@ -39,16 +40,18 @@ echo '<div class="main">';
       PageContent();
    }
    else
-   {   
-      if (isNews($s_NameNews)) 
+   {
+      $News=getComRequest('novosti');
+      if ($News==NULL) 
       {
-         echo '<div class="News">';
-         NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
-         echo '</div>';
+         MakeH1();
+         PageContent();
       }
       else
       {
-         echo 'Привет!';
+         echo '<div class="News">';
+         NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$News);
+         echo '</div>';
       }
    }
 echo '</div>';

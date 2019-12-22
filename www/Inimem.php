@@ -58,6 +58,7 @@ $c_Topset=prown\MakeCookie('$Topset',1,tInt,true);               // смещен
 // Каталог текущего стихотворения - записи базы данных
 $c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true); 
 $c_CurrStih=IniCurrStih($c_CurrStih);
+/*
 // Регулируем верхнее смещение контента главной страницы по её типу
 if (isComRequest(prown\getTranslit(ConnHandler),'list'))
 {
@@ -69,8 +70,9 @@ elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
 }
 else // для мобильных новостей
 {
-   $c_Topset=prown\MakeCookie('Topset',-2,tInt);  
+   $c_Topset=prown\MakeCookie('Topset',-1,tInt);  
 }
+*/
 // Инициализируем параметры страницы сайта 
 if ($SiteDevice==Mobile) 
 {   

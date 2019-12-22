@@ -17,7 +17,6 @@ html
 }
 body 
 {
-   font-size:4rem; 
    width:100%;
    height:100%; 
    /*background:red;*/
@@ -35,17 +34,17 @@ body
 .TPhpPrown h4 
 {
 	color:#0000BF;
-   font-size:1.8rem;	
+   font-size:120%;
 }
 .TPhpPrown h5 
 {
-   font-size:1.4rem;	
+   font-size:110%;
    text-align:justify; 
 }
 pre
 {
    width:100%;
-   font-size:1.2rem;	
+   /*font-size:1.2rem;*/	
    white-space:pre-wrap;
 }
 .TPhpPrown .CodeText
@@ -57,20 +56,20 @@ pre
 .TPhpPrown code
 {
    white-space:nowrap;
-   font-size:1.2rem;	
-	font-weight:bold;
+   /*font-size:1.2rem;	
+	font-weight:bold;*/
 }
 .TPhpPrown #button
 {
 	color:#0000BF;
-   font-size:4.7rem;	
+   /*font-size:4.7rem;*/	
 	font-weight:bold;
 }
 .TPhpPrown .letter 
 {
    color:#FF8015;         
-   font-size:100%;   
-	font-weight:bold;
+   /*font-size:100%;   
+	font-weight:bold;*/
    position:relative; 
 }
 /******************************************************* TPhpPrownMobi.css ***/

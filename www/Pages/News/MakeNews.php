@@ -80,8 +80,7 @@ function isNews($News)
 
 function getNews()
 {
-   global $s_NameNews,$SiteDevice; 
-   //$ret=getComRequest('Новости');
+   global $s_NameNews; 
    $ret=getComRequest('novosti');
    //echo '$ret='.$ret.'<br>';
    if ($ret==NULL) $Result=False;
@@ -89,11 +88,7 @@ function getNews()
    {
       $Result=True;
       // Изменяем признак активированной ленты новостей до конца сессии
-      // только в компьютерной версии
-      if ($SiteDevice==Computer)
-      {
-         $s_NameNews=prown\MakeSession('NameNews',$ret,tStr,false); 
-      }  
+      $s_NameNews=prown\MakeSession('NameNews',$ret,tStr,false); 
    }
    return $Result;
 }
