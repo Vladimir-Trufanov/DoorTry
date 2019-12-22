@@ -133,34 +133,37 @@ $FileItog=preg_replace($pattern,$replacement,$FileContent);
 $FileCode=highlight_string($FileItog,true);
 echo $FileCode;
 echo '</div>';
-
-// Размечаем низ страницы в случае, когда следует запустить тест
-// (то есть, когда кукис $_COOKIE['WasTest'] ещё не установлен):
-// так как теги </body> и </html> ставятся внутри теста, то закрываем
-// только <div class="TPhpPrown"> тегом </div> 
-if (!(IsSet($_COOKIE['WasTest'])))
-{
-   //echo 'Кукиса WasTest нет';
-   ?>
-   <p><br><strong>Сообщения выполненного теста функции</strong></p>
-   <script>
-      setcookie("WasTest","<?php echo WasTest;?>");
-   </script>
-   <?php
-   // Запускаем тестирование и трассировку выбранных функций
-   require_once($SiteRoot.'/simpletest/autorun.php');
-   $ModeError=-1;
-   require_once($SiteRoot.'/TPhpPrown/Findes.php');
-   require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
-}
-// Размечаем низ страницы в случае, когда устанавливаем кнопку для теста
-else
-{
-   //echo $_COOKIE['WasTest'];
-   ?>
-   <button id="button" onclick="isClick()">"Протестировать функцию!"</button> 
-   </div></body></html>
-   <?php
+// В компьютерной версии даем возможность запускать тест
+if ($SiteDevice==Computer) 
+{   
+   // Размечаем низ страницы в случае, когда следует запустить тест
+   // (то есть, когда кукис $_COOKIE['WasTest'] ещё не установлен):
+   // так как теги </body> и </html> ставятся внутри теста, то закрываем
+   // только <div class="TPhpPrown"> тегом </div> 
+   if (!(IsSet($_COOKIE['WasTest'])))
+   {
+      //echo 'Кукиса WasTest нет';
+      ?>
+      <p><br><strong>Сообщения выполненного теста функции</strong></p>
+      <script>
+         setcookie("WasTest","<?php echo WasTest;?>");
+      </script>
+      <?php
+      // Запускаем тестирование и трассировку выбранных функций
+      require_once($SiteRoot.'/simpletest/autorun.php');
+      $ModeError=-1;
+      require_once($SiteRoot.'/TPhpPrown/Findes.php');
+      require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
+   }
+   // Размечаем низ страницы в случае, когда устанавливаем кнопку для теста
+   else
+   {
+      //echo $_COOKIE['WasTest'];
+      ?>
+      <button id="button" onclick="isClick()">"Протестировать функцию!"</button> 
+      </div></body></html>
+      <?php
+   }
 }
 ?>
 <?php

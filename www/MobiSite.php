@@ -46,6 +46,10 @@ echo '<div class="main">';
          NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
          echo '</div>';
       }
+      else
+      {
+         echo 'Привет!';
+      }
    }
 echo '</div>';
 /*

@@ -67,6 +67,10 @@ elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
 {
    $c_Topset=prown\MakeCookie('Topset',1,tInt);  
 }
+else // для мобильных новостей
+{
+   $c_Topset=prown\MakeCookie('Topset',-2,tInt);  
+}
 // Инициализируем параметры страницы сайта 
 if ($SiteDevice==Mobile) 
 {   

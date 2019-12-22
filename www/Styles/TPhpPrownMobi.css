@@ -9,71 +9,68 @@
  *                                                   Дата создания:  17.12.2019
  * Copyright © 2019 tve                              Посл.изменение: 17.12.2019
 **/
+
 html
 {
 	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;	
-   font-size:14px;
+   font-size:10px;
 }
 body 
 {
    font-size:4rem; 
    width:100%;
    height:100%; 
-   background:red;
+   /*background:red;*/
 }
 .TPhpPrown
 {
+   font-size:100%;
    margin-top:0rem;
-   width:130%;
-   /*
-   height:100%; 
-   */
-   /*padding:2rem;
-   margin:2rem -12rem 2rem 2rem;*/
-   background:yellow;
+   width:100%;
+   text-align:center; 
+   padding-right:3rem;
+   padding-left:2rem;
+   /*background:yellow;*/
 }
 .TPhpPrown h4 
 {
-   margin:0 0 1rem 0;
-   padding:0 0 0 0;
 	color:#0000BF;
    font-size:1.8rem;	
 }
-/*
 .TPhpPrown h5 
 {
    font-size:1.4rem;	
-   margin:0 0 0 0;
-   padding:0 0 0 0;
+   text-align:justify; 
+}
+pre
+{
+   width:100%;
+   font-size:1.2rem;	
+   white-space:pre-wrap;
 }
 .TPhpPrown .CodeText
 {
    width:100%;
    background:#EFF4DC;
-   margin:0 0 0 0;
-   padding:.6rem 0 .6rem 0;
+   text-align:left; 
 }
 .TPhpPrown code
 {
    white-space:nowrap;
-   font-size:1.6rem;	
+   font-size:1.2rem;	
 	font-weight:bold;
-   margin:0 0 0 0;
-   padding:0 0 0 0;
 }
 .TPhpPrown #button
 {
 	color:#0000BF;
-   margin:2rem 0 2rem 0;
    font-size:4.7rem;	
 	font-weight:bold;
 }
 .TPhpPrown .letter 
 {
    color:#FF8015;         
-   font-size:120%;   
+   font-size:100%;   
 	font-weight:bold;
    position:relative; 
 }
-*/
 /******************************************************* TPhpPrownMobi.css ***/

@@ -31,7 +31,7 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -311,18 +311,38 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\stihi\sorevnovanie-s-hakerami\Styles.css
-1=www\Styles\TPhpPrownMobi.css
-2=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+0=www\Styles\Styles.css
+1=www\MobiSite.php
+2=www\IniMem.php
+3=www\IniMenu.php
+4=www\Main.php
+5=www\iHtmlBegin.php
+6=www\Pages\News\MakeNews.php
+7=www\Styles\TPhpPrownMobi.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-[www\stihi\sorevnovanie-s-hakerami\Styles.css]
-TopLine=25
-Caret=69,27
+Selected=www\Main.php
+[www\Styles\Styles.css]
+TopLine=31
+Caret=27,23
+[www\MobiSite.php]
+TopLine=21
+Caret=24,51
+[www\IniMem.php]
+TopLine=21
+Caret=54,31
+[www\IniMenu.php]
+TopLine=53
+Caret=1,1
+[www\Main.php]
+TopLine=75
+Caret=1,1
+[www\iHtmlBegin.php]
+TopLine=35
+Caret=1,53
+[www\Pages\News\MakeNews.php]
+TopLine=39
+Caret=32,93
 [www\Styles\TPhpPrownMobi.css]
-TopLine=9
-Caret=16,15
-[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=143
-Caret=79,161
+TopLine=22
+Caret=19,27

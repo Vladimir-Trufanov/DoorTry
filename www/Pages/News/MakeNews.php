@@ -80,7 +80,7 @@ function isNews($News)
 
 function getNews()
 {
-   global $s_NameNews; 
+   global $s_NameNews,$SiteDevice; 
    //$ret=getComRequest('Новости');
    $ret=getComRequest('novosti');
    //echo '$ret='.$ret.'<br>';
@@ -89,25 +89,12 @@ function getNews()
    {
       $Result=True;
       // Изменяем признак активированной ленты новостей до конца сессии
-      $s_NameNews=prown\MakeSession('NameNews',$ret,tStr,false);   
+      // только в компьютерной версии
+      if ($SiteDevice==Computer)
+      {
+         $s_NameNews=prown\MakeSession('NameNews',$ret,tStr,false); 
+      }  
    }
-   /*
-   $regNews="/News_/";
-   $s=Findes($regNews,$ret);
-   if ($s=='News_') 
-   {
-      $Result=True;
-      //echo $ret.'<br>';
-      //echo $s.'<br>';
-      $str=substr($ret,5,strlen($ret)-5);
-      //echo $str.'<br>';
-      // Изменяем признак активированной ленты новостей до конца сессии
-      $s_NameNews=prown\MakeSession('NameNews',$str,tStr,false);   
-   }
-   else $Result=False;
-      //global $s_Counter; 
-      //echo $s_Counter.': '.$s_NameNews.'<br>';
-   */
    return $Result;
 }
 
