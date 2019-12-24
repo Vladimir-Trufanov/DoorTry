@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('определить популярные регулярные выражения PHP').'<br>';
+            //echo  prown\getTranslit('о библиотеке').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();
@@ -42,8 +42,6 @@ echo '<div class="pageWrapper">';
       // Новости
       if (isNews($s_NameNews)) 
       {
-         //echo '<div class="info">195<br><br><br><br><br><br>';
-         //echo '</div>';
          echo '<aside class="LeftBar">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
          echo '</aside>'; 

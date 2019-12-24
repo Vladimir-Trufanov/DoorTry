@@ -10,10 +10,9 @@
 // Copyright © 2019 tve                              Посл.изменение: 23.11.2019
 
 // Регулируем верхнее смещение контента главной страницы по её типу
-echo '<style type="text/css"> .main';
-//echo '{margin-top:'.$c_Topset.'rem;}';
-echo '{margin-top:1rem;}';
-echo '</style>';
+//echo '<style type="text/css"> .main';
+//echo '{margin-top:1rem;}';
+//echo '</style>';
 // Выводим название сайта и главное меню
 //echo '<div id="res"></div>'; // Резервное сообщение
 echo '<header>';

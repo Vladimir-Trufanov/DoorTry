@@ -102,6 +102,7 @@ h1
    text-align:justify;
    /* Делаем отступы текста от границ                                */
    /* (когда было margin к body, то не срабатывало с правой стороны) */
+   margin-top:1rem;
    padding-left:1rem;
    padding-right:1rem;
    /*background-color:yellow;*/

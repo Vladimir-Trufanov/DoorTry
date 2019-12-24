@@ -4,7 +4,8 @@ Allow: /$
 Allow: /sitemap.xml$ 
 Allow: /prostoj-princip-programmirovaniya$ 
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
-Allow: /stihi/sorevnovanie-s-hakerami 
+Allow: /stihi
+Allow: /TPhpPrown 
 Disallow: / 
 
 User-agent: Yandex 
@@ -12,7 +13,8 @@ Allow: /$
 Allow: /sitemap.xml$ 
 Allow: /prostoj-princip-programmirovaniya$ 
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
-Allow: /stihi/sorevnovanie-s-hakerami 
+Allow: /stihi
+Allow: /TPhpPrown 
 Disallow: / 
 
 User-agent: * 
@@ -20,7 +22,8 @@ Allow: /$
 Allow: /sitemap.xml$ 
 Allow: /prostoj-princip-programmirovaniya$ 
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
-Allow: /stihi/sorevnovanie-s-hakerami 
+Allow: /stihi
+Allow: /TPhpPrown 
 Disallow: / 
 
 Sitemap: https://doortry.ru/sitemap.xml

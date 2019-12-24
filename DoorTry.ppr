@@ -31,7 +31,7 @@ DoorTry
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -40,9 +40,10 @@ DoorTry
 			-Sshu
 			+TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
-				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
+				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
+				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 		-qrcode
 			-temp
@@ -244,7 +245,7 @@ DoorTry
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		+TPhpPrown
+		-TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -312,33 +313,29 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\Main.php
-2=www\iHtmlBegin.php
-3=www\IniMem.php
-4=www\MobiSite.php
-5=www\ComRequest.php
-6=www\Pages\News\MakeNews.php
+1=www\Site.php
+2=www\IniTPhpPrown.php
+3=www\Styles\TPhpPrownComp.css
+4=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+5=www\Pages\TPhpPrown\o-biblioteke.php
 [Selected Project Files]
 Main=
-Selected=www\IniMem.php
+Selected=www\Pages\TPhpPrown\o-biblioteke.php
 [www\IniMenu.php]
-TopLine=51
+TopLine=125
 Caret=1,1
-[www\Main.php]
-TopLine=68
-Caret=5,76
-[www\iHtmlBegin.php]
-TopLine=35
-Caret=1,53
-[www\IniMem.php]
-TopLine=55
-Caret=3,61
-[www\MobiSite.php]
-TopLine=3
-Caret=32,14
-[www\ComRequest.php]
-TopLine=7
+[www\Site.php]
+TopLine=5
+Caret=15,33
+[www\IniTPhpPrown.php]
+TopLine=17
+Caret=72,12
+[www\Styles\TPhpPrownComp.css]
+TopLine=33
 Caret=1,1
-[www\Pages\News\MakeNews.php]
-TopLine=69
-Caret=35,86
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
+TopLine=67
+Caret=34,77
+[www\Pages\TPhpPrown\o-biblioteke.php]
+TopLine=65
+Caret=143,76
