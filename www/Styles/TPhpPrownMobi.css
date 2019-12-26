@@ -44,7 +44,6 @@ body
 pre
 {
    width:100%;
-   /*font-size:1.2rem;*/	
    white-space:pre-wrap;
 }
 .TPhpPrown .CodeText
@@ -56,20 +55,34 @@ pre
 .TPhpPrown code
 {
    white-space:nowrap;
-   /*font-size:1.2rem;	
-	font-weight:bold;*/
 }
 .TPhpPrown #button
 {
 	color:#0000BF;
-   /*font-size:4.7rem;*/	
 	font-weight:bold;
 }
 .TPhpPrown .letter 
 {
    color:#FF8015;         
-   /*font-size:100%;   
-	font-weight:bold;*/
    position:relative; 
 }
+#AboutTPhpPrown blockquote
+{
+   background:#FFE9EF;
+   padding:0.4rem 2rem 0.4rem 2rem;
+   font-size:96%; 
+	font-weight:bold;
+   text-align:right; 
+   width:80%;
+   margin-left:10%; 
+   border-radius:1rem; 
+}
+#AboutTPhpPrown .letter 
+{
+   color:#FF8015;         
+   font-size:100%;   
+	font-weight:bold;
+   position:relative; 
+}
+
 /******************************************************* TPhpPrownMobi.css ***/

@@ -18,14 +18,14 @@ require_once "iGetAbove.php";
 $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
-require_once $SiteHost."/TPhpPrown/Findes.php";
-require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
-require_once $SiteHost."/TPhpPrown/getTranslit.php";
-require_once $SiteHost."/TPhpPrown/iniConstMem.php";
-require_once $SiteHost."/TPhpPrown/MakeCookie.php";
-require_once $SiteHost."/TPhpPrown/MakeParm.php";
-require_once $SiteHost."/TPhpPrown/MakeSession.php";
-require_once $SiteHost."/TPhpPrown/ViewGlobal.php";
+require_once $SiteRoot."/TPhpPrown/Findes.php";
+require_once $SiteRoot."/TPhpPrown/getSiteDevice.php";
+require_once $SiteRoot."/TPhpPrown/getTranslit.php";
+require_once $SiteRoot."/TPhpPrown/iniConstMem.php";
+require_once $SiteRoot."/TPhpPrown/MakeCookie.php";
+require_once $SiteRoot."/TPhpPrown/MakeParm.php";
+require_once $SiteRoot."/TPhpPrown/MakeSession.php";
+require_once $SiteRoot."/TPhpPrown/ViewGlobal.php";
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 

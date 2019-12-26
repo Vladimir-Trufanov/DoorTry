@@ -231,7 +231,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -300,7 +300,6 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\IniTPhpPrown.php
-		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -313,29 +312,13 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\Site.php
-2=www\IniTPhpPrown.php
-3=www\Styles\TPhpPrownComp.css
-4=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
-5=www\Pages\TPhpPrown\o-biblioteke.php
+1=www\Pages\TPhpPrown\o-biblioteke.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\TPhpPrown\o-biblioteke.php
 [www\IniMenu.php]
 TopLine=125
 Caret=1,1
-[www\Site.php]
-TopLine=5
-Caret=15,33
-[www\IniTPhpPrown.php]
-TopLine=17
-Caret=72,12
-[www\Styles\TPhpPrownComp.css]
-TopLine=33
-Caret=1,1
-[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
-TopLine=67
-Caret=34,77
 [www\Pages\TPhpPrown\o-biblioteke.php]
-TopLine=65
-Caret=143,76
+TopLine=1
+Caret=72,10
