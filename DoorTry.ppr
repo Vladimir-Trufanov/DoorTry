@@ -245,7 +245,7 @@ DoorTry
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		-TPhpPrown
+		+TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -313,12 +313,24 @@ DoorTry
 [Open project files]
 0=www\IniMenu.php
 1=www\Pages\TPhpPrown\o-biblioteke.php
+2=www\TPhpPrown\isCalcInBrowser.php
+3=www\TPhpPrown\MakeUserError.php
+4=www\TPhpPrown\iniConstMem.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\o-biblioteke.php
+Selected=www\TPhpPrown\isCalcInBrowser.php
 [www\IniMenu.php]
 TopLine=125
 Caret=1,1
 [www\Pages\TPhpPrown\o-biblioteke.php]
 TopLine=1
 Caret=72,10
+[www\TPhpPrown\isCalcInBrowser.php]
+TopLine=43
+Caret=1,1
+[www\TPhpPrown\MakeUserError.php]
+TopLine=83
+Caret=32,76
+[www\TPhpPrown\iniConstMem.php]
+TopLine=7
+Caret=1,1

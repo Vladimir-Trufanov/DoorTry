@@ -45,7 +45,7 @@ function isComRequest($subs,$Com='Com')
 // ****************************************************************************
 // http://form.guide/php-form/php-form-checkbox.html
 // http://dnzl.ru/view_post.php?id=182
-function MakeTest($SiteAbove,$aPhpPrown)
+function MakeTest($SiteRoot,$aPhpPrown)
 {
    if(isset($_POST['formSubmit'])) 
    {
@@ -58,15 +58,15 @@ function MakeTest($SiteAbove,$aPhpPrown)
          $aDoor=$_POST['formDoor'];
          $N=count($aDoor);
          // Запускаем тестирование и трассировку выбранных функций
-         require_once(dirname(__FILE__).'/simpletest/autorun.php');
-         $ModeError=-1;
+         require_once($SiteRoot.'/simpletest/autorun.php');
+
          foreach($aPhpPrown as $k=>$v)
          {
             //echo '<input type="checkbox" checked name="formDoor[]" value="'.$k.'"/>'.$k.' - '.$v.'<br>';
             if(IsChecked('formDoor',$k))
             {
                //echo $k.' тестируется.<br>';
-               require_once $SiteAbove."/TPhpPrownTests/".$k."_test.php";
+               require_once $SiteRoot."/TPhpPrownTests/".$k."_test.php";
             }
          }
       } 

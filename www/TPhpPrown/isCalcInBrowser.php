@@ -20,7 +20,7 @@
  
 // Синтаксис:
 //
-//   $Result=isCalcInBrowser($UserAgent);
+//   $Result=isCalcInBrowser($UserAgent,$ModeError=rvsCurrentPos);
 //
 // Параметры:
 //
@@ -59,6 +59,7 @@ Firefox/65.0	                                                      Firefox  +
 Trident/7.0                                                            Avant  -
 */
 
+require_once "iniConstMem.php";
 require_once "iniErrMessage.php";
 require_once "iniRegExp.php";
 require_once "Findes.php";
@@ -67,19 +68,19 @@ require_once "MakeUserError.php";
 // ****************************************************************************
 // *             Собственно определить версию/подверсию браузера              *
 // ****************************************************************************
-function MakeNumbVer($Browser,$str,&$Ver,&$Point)
+function MakeNumbVer($Browser,$str,&$Ver,&$Point,$ModeError=rvsCurrentPos)
 {
    $Point=0; 
    $Ver=\prown\Findes(regInteger,$str,$Point);
    if ($Ver=='')
    {
-      \prown\MakeUserError(InverBrowsers.' ['.$Browser.'->"'.$str.'"]');
+      \prown\MakeUserError(InverBrowsers.' ['.$Browser.'->"'.$str.'"]','TPhpPrown',$ModeError);
    }
 }
 // ****************************************************************************
 // *     Определить присутствие браузера в UserAgent и выделить версию        *
 // ****************************************************************************
-function VerOneBrowser($UserAgent,$Browser)
+function VerOneBrowser($UserAgent,$Browser,$ModeError=rvsCurrentPos)
 {
    $Ver=0;
    $Result=false;
@@ -87,7 +88,7 @@ function VerOneBrowser($UserAgent,$Browser)
    $value=preg_match_all($pattern,$UserAgent,$matches,PREG_OFFSET_CAPTURE);
    if ($value>1)
    {
-      \prown\MakeUserError(ManyBrowsersRec.' ['.$Browser.'->'.$value.']');
+      \prown\MakeUserError(ManyBrowsersRec.' ['.$Browser.'->'.$value.']','TPhpPrown',$ModeError);
       $Result=true;
    } 
    else if ($value==1)
@@ -115,13 +116,13 @@ function VerOneBrowser($UserAgent,$Browser)
       // Выделяем подстроку после имени браузера
       $str=substr($UserAgent,$Point+strlen($Browser)+1,8);
       // Определяем версию браузера и позицию в строке
-      MakeNumbVer($Browser,$str,$Ver,$Point);
+      MakeNumbVer($Browser,$str,$Ver,$Point,$ModeError);
       // Для Safari получаем 5-разрядную версию
       if ($Browser=='Safari')
       {
          $Ver=$Ver*1000;
          $str=substr($str,$Point+4,4);
-         MakeNumbVer($Browser,$str,$Ver2,$Point);
+         MakeNumbVer($Browser,$str,$Ver2,$Point,$ModeError);
          $Ver=$Ver+$Ver2;
       }
       //echo '<br>$ver='.$Ver.'<br>';
@@ -132,13 +133,13 @@ function VerOneBrowser($UserAgent,$Browser)
 // *   Проанализировать UserAgent браузера по версиям родительских браузеров  *
 // *               и определить работает ли функция Calc для CSS              *
 // ****************************************************************************
-function isCalcInBrowser($UserAgent)
+function isCalcInBrowser($UserAgent,$ModeError=rvsCurrentPos)
 {
    $Result=false;
    // Вначале проверяем по браузеру Chrome. Если он есть и версия больше 55,
    // то Calc работает, иначе смотрим дальше
    $Browser="Chrome";
-   $Ver=VerOneBrowser($UserAgent,$Browser);
+   $Ver=VerOneBrowser($UserAgent,$Browser,$ModeError);
    if ($Ver>55)
    {
       $Result=true;
@@ -148,7 +149,7 @@ function isCalcInBrowser($UserAgent)
       // Далее проверяем по браузеру Safari. Если он есть и версия больше 537.35,
       // то Calc работает, иначе смотрим дальше
       $Browser="Safari";
-      $Ver=VerOneBrowser($UserAgent,$Browser);
+      $Ver=VerOneBrowser($UserAgent,$Browser,$ModeError);
       if ($Ver>537035)
       {
          $Result=true;
@@ -158,7 +159,7 @@ function isCalcInBrowser($UserAgent)
          // Далее проверяем по браузеру Firefox. Если он есть и версия 
          // больше 30, то Calc работает, иначе смотрим дальше
          $Browser="Firefox";
-         $Ver=VerOneBrowser($UserAgent,$Browser);
+         $Ver=VerOneBrowser($UserAgent,$Browser,$ModeError);
          if ($Ver>30)
          {
             $Result=true;
