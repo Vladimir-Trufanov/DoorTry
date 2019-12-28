@@ -69,6 +69,7 @@ function MakeTest($SiteRoot,$aPhpPrown)
                require_once $SiteRoot."/TPhpPrownTests/".$k."_test.php";
             }
          }
+         require_once $SiteRoot."/TPhpPrownTests/"."FinalMessage_test.php";
       } 
    }
 }

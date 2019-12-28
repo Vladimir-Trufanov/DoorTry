@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('о библиотеке').'<br>';
+            //echo  prown\getTranslit('сформировать сообщение об ошибке в жёсткой системе').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();

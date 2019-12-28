@@ -38,7 +38,6 @@ class test_MakeType extends UnitTestCase
       $value=100; $Result=\prown\MakeType($value,tBool);
       $this->assertTrue($Result);
       MakeTestMessage('test_MakeType_Boolean: ','Преобразования целого к логическому типу');
-      MakeTitle("Тесты завершены!");
   }
 }
 // ****************************************************** MakeType_test.php ***

@@ -20,7 +20,7 @@ require_once $SiteRoot."/iGetAbove.php";
 $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
-require_once $SiteHost."/TPhpPrown/getSiteDevice.php";
+require_once $SiteRoot."/TPhpPrown/getSiteDevice.php";
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем собственно вкладываемое стихотворение, как функцию

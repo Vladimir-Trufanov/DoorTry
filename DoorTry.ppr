@@ -21,7 +21,7 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
@@ -44,6 +44,7 @@ DoorTry
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
+				www\Pages\TPhpPrown\sformirovat-soobshchenie-ob-oshibke-v-zhyostkoj-sisteme.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 		-qrcode
 			-temp
@@ -231,7 +232,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		-Styles
+		+Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -242,7 +243,7 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
-		-TJsPrown
+		+TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		+TPhpPrown
@@ -277,11 +278,13 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		-TPhpPrownTests
+		+TPhpPrownTests
+			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
 			www\TPhpPrownTests\isCalcInBrowser_test.php
 			www\TPhpPrownTests\MakeType_test.php
+			www\TPhpPrownTests\MakeUserError_test.php
 		www\.htaccess
 		www\.user.ini
 		www\ComRequest.php
@@ -300,6 +303,7 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\IniTPhpPrown.php
+		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -312,25 +316,17 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\Pages\TPhpPrown\o-biblioteke.php
-2=www\TPhpPrown\isCalcInBrowser.php
-3=www\TPhpPrown\MakeUserError.php
-4=www\TPhpPrown\iniConstMem.php
+1=www\Pages\TPhpPrown\sformirovat-soobshchenie-ob-oshibke-v-zhyostkoj-sisteme.php
+2=www\sitemap.xml
 [Selected Project Files]
 Main=
-Selected=www\TPhpPrown\isCalcInBrowser.php
+Selected=www\sitemap.xml
 [www\IniMenu.php]
 TopLine=125
 Caret=1,1
-[www\Pages\TPhpPrown\o-biblioteke.php]
+[www\Pages\TPhpPrown\sformirovat-soobshchenie-ob-oshibke-v-zhyostkoj-sisteme.php]
 TopLine=1
-Caret=72,10
-[www\TPhpPrown\isCalcInBrowser.php]
-TopLine=43
-Caret=1,1
-[www\TPhpPrown\MakeUserError.php]
-TopLine=83
-Caret=32,76
-[www\TPhpPrown\iniConstMem.php]
-TopLine=7
-Caret=1,1
+Caret=72,2
+[www\sitemap.xml]
+TopLine=37
+Caret=26,53

@@ -9,7 +9,7 @@
 // * Copyright © 2019 tve                          Дата создания:  17.02.2019 *
 // ****************************************************************************
 
-require_once "iniConstMem.php";
+require_once "iniConstMem.php";    
 
 // Синтаксис
 //
@@ -31,26 +31,26 @@ require_once "iniConstMem.php";
 
 // Зарегистрированные ошибки/исключения
 //   
-// 1. Неверно указан тип ошибки
+//   define ("WrongTypeError", "Неверно указан тип ошибки");
 
 /**
  * "Жёсткой" системой обработки ошибок/исключений называется механизм вывода
  * сообщений с помощью функции MakeUserError и реализующий 4 режима работы: 
  * 
- * в режиме $Mode==rvsCurrentPos просто выводится сообщение в 
+ * в режиме $Mode=rvsCurrentPos просто выводится сообщение в 
  * текущей позиции сайта. Данный режим используется при тестировании модулей;
  * 
- * в режиме по умолчанию $Mode==rvsTriggerError вызывается 
+ * в режиме по умолчанию $Mode=rvsTriggerError вызывается 
  * исключение с пользовательской ошибкой через trigger_error($Message,$errtype), 
  * где $Message - текст сообщения, $errtype может быть одним из значений 
  * E_USER_ERROR, E_USER_WARNING, E_USER_NOTICE, E_USER_DEPRECATED. 
  * По умолчанию E_USER_ERROR;
  * 
- * в режиме $Mode==rvsMakeDiv предполагается, что ошибка произошла
+ * в режиме $Mode=rvsMakeDiv предполагается, что ошибка произошла
  * в php-коде до разворачивания html-страницы и, в этом случае, формируется 
  * дополнительный div сообщения с id="Ers";
  * 
- * в режиме $Mode==rvsDialogWindow разворачивается сообщение в 
+ * в режиме $Mode=rvsDialogWindow разворачивается сообщение в 
  * диалоговом окне с помощью JQueryUI. В этом случае на вызывающем сайте должны 
  * быть подключены модули jquery,jquery-ui,jquery-ui.css, например от Microsoft:
  * 
@@ -72,9 +72,8 @@ require_once "iniConstMem.php";
  * об ошибке выполняется на отдельной странице;
  *    в) по умолчанию функция генерирует неконтроллируемую ошибку/исключение:
  * trigger_error($Message,E_USER_ERROR), предполагая на верхнем уровне обработку
- * ошибки через сайт doortry.ru, где неконтроллируемая ошибка возникает не 
- * чистом экране с трассировкой всплывания исключения;
- *    
+ * ошибки через сайт doortry.ru, где неконтроллируемая ошибка возникает на 
+ * странице исключения с трассировкой его всплывания;
 **/
 
 // ****************************************************************************
@@ -88,15 +87,15 @@ function MakeMode2($Mess,$Prefix)
    echo "</div>";
 ?>
 <script>
-   $(document).ready(function() {
-   $('#Ers').dialog
-   ({
-      width: 600,
-      position: 'left top',
-      show: {effect:'slideDown'},
-      hide: {effect:'explode', delay:250, duration:1000, easing:'easeInQuad'}
+   $(document).ready(function(){
+      $('#Ers').dialog
+      ({
+         width: 600,
+         position: 'left top',
+         show: {effect:'slideDown'},
+         hide: {effect:'explode', delay:250, duration:1000, easing:'easeInQuad'}
+      });
    });
-   }); // end ready
 </script>
 <?php
 }
@@ -117,11 +116,9 @@ function MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR)
       echo "<div id=\"Ers\" style=\"z-index:999; background: yellow; \">";
       echo 
       "<span style=\"
-      
          color:red; 
          font-weight:bold; 
          font-size:1.0em;
-
       \">".
       $Message.
       "</span>";
