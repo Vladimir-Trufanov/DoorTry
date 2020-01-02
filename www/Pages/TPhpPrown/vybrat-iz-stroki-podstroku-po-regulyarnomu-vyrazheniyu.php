@@ -35,6 +35,7 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 <meta name="keywords" content=
 "findes,выбрать соответствующую регулярному выражению подстроку,
 принцип DO-or-TRY, делай или пробуй,TPhpPrown">
+
 <?php
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 

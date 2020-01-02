@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('сформировать сообщение об ошибке в жёсткой системе').'<br>';
+            //echo  prown\getTranslit('вывести сообщение разработчика об ошибке').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();
