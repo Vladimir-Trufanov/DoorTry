@@ -114,29 +114,53 @@ $(document).ready(function(){
 <h5><span class="letter">В</span> случае противоречивой информации, например для UserAgent: <em><strong>Mozilla/5.0 (Windows NT 6.1; Win64; x86) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36</strong></em> определится, что функция Calc работает по Safari/537.36  (хотя по Chrome/55.0.2883.87 этого не следует).</h5>
 <p><strong>Синтаксис</strong></p>
 <pre>
-$Result=Findes($preg,$string,&amp;$point)
+$Result=isCalcInBrowser($UserAgent,$ModeError=rvsCurrentPos);
 </pre>
 <p><strong>Параметры</strong></p>
 <pre>
-$preg   - текст регулярного выражения;
-$string - текст, который должен быть обработан регулярным выражением;
-$point  - позиция начала найденного фрагмента после работы регулярного 
-выражения (параметр по ссылке). $point=-1, если фрагмент не найден.
+$UserAgent - UserAgent браузера.
+$ModeError - режим вывода сообщений об ошибке (по умолчанию в текущей позиции сайта)
 </pre>
 <p><strong>Возвращаемое значение</strong></p>
 <pre>
-$Result  - найденный фрагментов после работы регулярного выражения или пустая строка, если фрагмент не найден.
+$Result=true, если версии UserAgent показывают о возможности работы функция Calc в CSS.
+</pre>
+<p><strong>Зарегистрированные ошибки/исключения:</strong></p>
+<pre>
+ManyBrowsersRec - "В UserAgent присутствует несколько браузеров";
+InverBrowsers   - "Неверная или отсутствует версия браузера".
+</pre>
+<p><strong>Фрагменты содержимого UserAgent некоторых браузеров на 13.02.2019 и возможность работы функция Calc в CSS:</strong></p>
+<pre>
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,like Gecko)	
+
+Chrome/56.0.2924.92  Safari/537.36                                   Орбитум  +
+Сhrome/61.0.3163.69  Safari/537.36 Freeu/61.0.3163.69                  Freeu  +
+Chrome/61.0.3163.79  Safari/537.36 Maxthon/5.2.6.1000                Maxthon  +
+Chrome/61.0.3163.125 Safari/537.36 Amigo/61.0.3163.125                 Amigo  +
+Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134                        Edge  +
+Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.116                   Opera  +
+Chrome/71.0.3578.98  Safari/537.36                                    Chrome  +
+Chrome/71.0.3578.99  Safari/537.36 YaBrowser/19.1.0.2644              Yandex  +
+		
+Safari/534.57.2                                                       Safari  -
+Safari/537.21        QupZilla/1.8.6                                 QupZilla  -
+		
+Firefox/31.0         K-Meleon/75.1                                  K-Meleon  +
+Firefox/65.0                                                         Firefox  +
+
+Trident/7.0                                                            Avant  -
 </pre>
 <?php
 // Загружаем в страницу код функции
 echo '<div class="CodeText">';
-$FileSpec=$SiteRoot.'/TPhpPrown/Findes.php';
+$FileSpec=$SiteRoot.'/TPhpPrown/isCalcInBrowser.php';
 $FileContent=file_get_contents($FileSpec);
 //echo mb_detect_encoding($FileContent).'<br>';
 //echo '---<br>'.$FileContent.'<br>---<br>';
 // Вырезаем комментарий, который уже представлен
-$pattern="/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)function/u";
-$replacement='function';
+$pattern="/\/\/\sСинтаксис:([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)\"-:,=&;]+)require/u";
+$replacement='require';
 $FileItog=preg_replace($pattern,$replacement,$FileContent);
 // Преобразуем текст в раскрашенный код и показываем его
 $FileCode=highlight_string($FileItog,true);
@@ -160,8 +184,8 @@ if ($SiteDevice==Computer)
       <?php
       // Запускаем тестирование и трассировку выбранных функций
       require_once($SiteRoot.'/simpletest/autorun.php');
-      require_once($SiteRoot.'/TPhpPrown/Findes.php');
-      require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
+      require_once($SiteRoot.'/TPhpPrown/isCalcInBrowser.php');
+      require_once($SiteRoot.'/TPhpPrownTests/isCalcInBrowser_test.php');
    }
    // Размечаем низ страницы в случае, когда устанавливаем кнопку для теста
    else
