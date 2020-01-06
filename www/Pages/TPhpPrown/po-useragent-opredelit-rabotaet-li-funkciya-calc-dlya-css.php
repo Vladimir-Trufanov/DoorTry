@@ -119,7 +119,7 @@ $Result=isCalcInBrowser($UserAgent,$ModeError=rvsCurrentPos);
 <p><strong>Параметры</strong></p>
 <pre>
 $UserAgent - UserAgent браузера.
-$ModeError - режим вывода сообщений об ошибке (по умолчанию в текущей позиции сайта)
+$ModeError - режим вывода сообщений об ошибке (по умолчанию - в текущей позиции сайта)
 </pre>
 <p><strong>Возвращаемое значение</strong></p>
 <pre>

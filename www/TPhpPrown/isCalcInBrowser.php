@@ -96,7 +96,7 @@ function MakeNumbVer($Browser,$str,&$Ver,&$Point,$ModeError=rvsCurrentPos)
    $Ver=\prown\Findes(regInteger,$str,$Point);
    if ($Ver=='')
    {
-      \prown\MakeUserError(InverBrowsers.' ['.$Browser.'->"'.$str.'"]','TPhpPrown',$ModeError);
+      \prown\MakeUserError(InverBrowsers.' ['.$Browser.', ver='.$str.']','TPhpPrown',$ModeError);
    }
 }
 // ****************************************************************************
@@ -122,13 +122,6 @@ function VerOneBrowser($UserAgent,$Browser,$ModeError=rvsCurrentPos)
    if ($Result)
    {
       $findes=$matches[0]; 
-      /*
-      for ($j=0; $j<count($findes); $j++)
-      {
-         $findes[$j][0].' Point = '.
-         $findes[$j][1].'<br>';  
-      }
-      */
       // Вытаскиваем массив вхождений и определяем позицию последнего 
       // (или единственного) вхождения
       for ($i=0; $i<count($findes); $i++)
@@ -147,7 +140,6 @@ function VerOneBrowser($UserAgent,$Browser,$ModeError=rvsCurrentPos)
          MakeNumbVer($Browser,$str,$Ver2,$Point,$ModeError);
          $Ver=$Ver+$Ver2;
       }
-      //echo '<br>$ver='.$Ver.'<br>';
    }
    return $Ver;
 }

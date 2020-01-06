@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 07.12.2019
+// Copyright © 2019 tve                              Посл.изменение: 06.01.2020
 
 // ****************************************************************************
 // *             Проверить, выбрана ли указанная функция библиотеки           *
@@ -90,6 +90,14 @@ function mb_str_padi($input, $pad_length, $pad_string = '-', $pad_type = STR_PAD
 // ****************************************************************************
 // *        Вывести сообщение по завершении очередного теста/подтеста         *
 // ****************************************************************************
+function SimpleMessage($Name2=' ')
+{
+   echo 
+      "<span style=\"color:#993300; font-weight:bold; ".
+      "font-family:'Anonymous Pro', monospace; font-size:0.9em\">".
+      $Name2.
+      "</span>"."<br>";
+}
 function MakeTestMessage($Name,$Name2='',$len=64)
 {
    echo 
@@ -97,11 +105,7 @@ function MakeTestMessage($Name,$Name2='',$len=64)
       "font-family:'Anonymous Pro', monospace; font-size:0.9em\">".' '.
       mb_str_padi($Name,$len,'.').' '.
       "</span>";
-   echo 
-      "<span style=\"color:#993300; font-weight:bold; ".
-      "font-family:'Anonymous Pro', monospace; font-size:0.9em\">".
-      $Name2.
-      "</span>"."<br>";
+   SimpleMessage($Name2);
 }
 // ****************************************************************************
 // *         Вывести заголовок очередной тестируемой функции TPhpPrown        *

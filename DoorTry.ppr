@@ -279,7 +279,7 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		-TPhpPrownTests
+		+TPhpPrownTests
 			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
@@ -317,29 +317,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\TPhpPrown\MakeUserError.php
-2=www\TPhpPrown\iniErrMessage.php
-3=www\TPhpPrown\Findes.php
-4=www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
-5=www\TPhpPrown\isCalcInBrowser.php
+1=www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+2=www\TPhpPrownTests\isCalcInBrowser_test.php
+3=www\TPhpPrownTests\FunctionsBlock.php
+4=www\TPhpPrown\isCalcInBrowser.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+Selected=www\TPhpPrownTests\isCalcInBrowser_test.php
 [www\IniMenu.php]
 TopLine=125
 Caret=6,125
-[www\TPhpPrown\MakeUserError.php]
-TopLine=51
-Caret=1,79
-[www\TPhpPrown\iniErrMessage.php]
-TopLine=1
-Caret=25,16
-[www\TPhpPrown\Findes.php]
-TopLine=35
-Caret=1,1
 [www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php]
-TopLine=138
-Caret=72,152
+TopLine=128
+Caret=63,122
+[www\TPhpPrownTests\isCalcInBrowser_test.php]
+TopLine=73
+Caret=60,91
+[www\TPhpPrownTests\FunctionsBlock.php]
+TopLine=97
+Caret=33,93
 [www\TPhpPrown\isCalcInBrowser.php]
-TopLine=42
-Caret=1,53
+TopLine=61
+Caret=41,81
