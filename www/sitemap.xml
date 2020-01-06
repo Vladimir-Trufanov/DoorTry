@@ -49,14 +49,20 @@
       <priority>0.3</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
-      <lastmod>2019-12-22</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css</loc>
+      <lastmod>2020-01-06</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/TPhpPrown/vyvesti-soobshchenie-razrabotchika-ob-oshibke</loc>
+      <loc>https://doortry.ru/TPhpPrown/soobshchenie-razrabotchika-ob-oshibke</loc>
       <lastmod>2020-01-02</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
+   </url>
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
+      <lastmod>2019-12-22</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
    </url>

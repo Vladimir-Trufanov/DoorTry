@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -45,8 +45,8 @@ DoorTry
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+				www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-				www\Pages\TPhpPrown\vyvesti-soobshchenie-razrabotchika-ob-oshibke.php
 		-qrcode
 			-temp
 			www\qrcode\CHANGELOG
@@ -233,7 +233,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -247,7 +247,7 @@ DoorTry
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		+TPhpPrown
+		-TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -279,7 +279,7 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		+TPhpPrownTests
+		-TPhpPrownTests
 			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
@@ -317,25 +317,21 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
-2=www\TPhpPrownTests\isCalcInBrowser_test.php
-3=www\TPhpPrownTests\FunctionsBlock.php
-4=www\TPhpPrown\isCalcInBrowser.php
+1=www\Pages\DoorTry\ConnHandler.php
+2=www\Pages\DoorTry\SimPrincip.php
+3=www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
 [Selected Project Files]
 Main=
-Selected=www\TPhpPrownTests\isCalcInBrowser_test.php
+Selected=www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
 [www\IniMenu.php]
 TopLine=125
-Caret=6,125
-[www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php]
-TopLine=128
-Caret=63,122
-[www\TPhpPrownTests\isCalcInBrowser_test.php]
-TopLine=73
-Caret=60,91
-[www\TPhpPrownTests\FunctionsBlock.php]
-TopLine=97
-Caret=33,93
-[www\TPhpPrown\isCalcInBrowser.php]
-TopLine=61
-Caret=41,81
+Caret=57,145
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=1
+Caret=56,24
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=5
+Caret=1,1
+[www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php]
+TopLine=1
+Caret=1,1

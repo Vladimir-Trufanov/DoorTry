@@ -14,9 +14,14 @@
 // 'Podklyuchit-obrabotchik-oshibok-isklyucheniy'='index.php?Com=ConnHandler'
 function SeoTags()
 {
-    echo "<title>Подключение обработчика ошибок/исключений</title>";
-    echo "<meta name=\"description\" content=\"Сайт используется для обработки ошибок/исключений и их комментирования в PHP5-PHP7. Показан способ для подключения этой возможности к Вашим сайтам.\">";
-    echo "<meta name=\"keywords\" content=\"универсальная обработка ошибок и исключений PHP5-7, принцип DO-or-TRY, Делай или Пробуй\">";
+    echo '<title>Подключение обработчика ошибок/исключений</title>';
+    echo '<meta name="description" '.
+      'content="Сайт используется для обработки ошибок/исключений и их '.
+      'комментирования в PHP5-PHP7. Показан способ для подключения этой '.
+      'возможности к Вашим сайтам.">';
+    echo '<meta name="keywords" '.
+      'content="универсальная обработка ошибок и исключений PHP5-7, '.
+      'принцип DO-or-TRY, Делай или Пробуй, #doortry">';
 }
 function MakeH1()
 {
