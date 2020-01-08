@@ -12,7 +12,7 @@
 // Copyright © 2019 tve                              Посл.изменение: 02.01.2020
 
 // Статистика ключевых слов:
-//    "как вывести сообщение об ошибке на PHP" - 11 показов за декабрь 
+//    "как вывести сообщение об ошибке на PHP" - 11 показов за декабрь 2019
 //    "сообщение разработчика об ошибке"       - 134
 //    "сообщение разработчика"                 - 3112
 //    "сформировать исключение"                - 100
@@ -144,7 +144,7 @@ $(document).ready(function(){
 <pre>
 $Mess    - текст сообщения об ошибке/исключении;
 $Prefix  - префикс сообщения, указывающий на программную систему, в модуле которой возникла ошибка/исключение;
-$Mode   - режим вывода сообщений: rvsCurrentPos, rvsTriggerError, rvsMakeDiv, rvsDialogWindow;
+$Mode    - режим вывода сообщений: rvsCurrentPos, rvsTriggerError, rvsMakeDiv, rvsDialogWindow;
 $errtype - тип ошибки/исключения: E_USER_ERROR,E_USER_WARNING,E_USER_NOTICE,E_USER_DEPRECATED;
 </pre>
 <p><strong>Возвращаемое значение</strong></p>
@@ -198,4 +198,4 @@ if ($SiteDevice==Computer)
 }
 ?>
 <?php
-// <!-- --> ************************************* soobshchenie-razrabotchika-ob-oshibke.php ***
+// <!-- --> ********************* soobshchenie-razrabotchika-ob-oshibke.php ***

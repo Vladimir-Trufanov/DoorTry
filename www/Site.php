@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('по UserAgent определить работает ли функция Calc для CSS').'<br>';
+            //echo  prown\getTranslit('преобразовать значение к заданному типу').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();

@@ -18,26 +18,40 @@ class test_MakeType extends UnitTestCase
    function test_MakeType_Simple()
    {
       MakeTitle("MakeType");
+      SimpleMessage();
       $string='1958';
       $Result=\prown\MakeType($string,tInt);
       $this->assertEqual($Result,1958);
       $this->assertNotEqual($Result,'1959');  
-      MakeTestMessage('test_MakeType_Simple: ','Преобразование "1958"-->1958 выполнено');
+      MakeTestMessage(
+         '$string="1958"; $Result=\prown\MakeType($string,tInt); ',
+         'Преобразование строчного "1958" к целому 1958',70);
   }
    // Преобразование целого числа к логической переменной
    function test_MakeType_Boolean()
    {
       $value=0; $Result=\prown\MakeType($value,tBool);
       $this->assertFalse($Result);
+      MakeTestMessage(
+         '$value=0; $Result=\prown\MakeType($value,tBool); ',
+         'Преобразования целого = 0 к логическому типу: False',70);
       $value=1; $Result=\prown\MakeType($value,tBool);
       $this->assertTrue($Result);
+      MakeTestMessage(
+         '$value=1; $Result=\prown\MakeType($value,tBool); ',
+         'Преобразования целого = 1 к логическому типу: True',70);
       $value=-1; $Result=\prown\MakeType($value,tBool);
       $this->assertTrue($Result);
+      MakeTestMessage(
+         '$value=-1; $Result=\prown\MakeType($value,tBool); ',
+         'Преобразования целого = -1 к логическому типу: True',70);
       $value=-10; $Result=\prown\MakeType($value,tBool);
       $this->assertTrue($Result);
-      $value=100; $Result=\prown\MakeType($value,tBool);
+      $Result=\prown\MakeType(100,tBool);
       $this->assertTrue($Result);
-      MakeTestMessage('test_MakeType_Boolean: ','Преобразования целого к логическому типу');
+      MakeTestMessage(
+         '$Result=\prown\MakeType(100,tBool); ',
+         'Преобразования целого = 100 к логическому типу: True',70);
   }
 }
 // ****************************************************** MakeType_test.php ***

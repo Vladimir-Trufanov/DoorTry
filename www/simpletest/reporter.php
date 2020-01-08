@@ -45,9 +45,13 @@ class HtmlReporter extends SimpleReporter
         //print "<html>\n<head>\n<title>$test_name</title>\n";
         //print "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" .
         //        $this->character_set . "\">\n";
+
+        /*  Закомментирован вывод 08.01.2020, так как выдавал ошибку разметки в тесте на doortry.ru
         print "<style type=\"text/css\">\n";
         print $this->getxCss() . "\n";
         print "</style>\n";
+        */
+
         //print "</head>\n<body>\n";
         //print "<h1>$test_name</h1>\n";
         //echo 'Привет';

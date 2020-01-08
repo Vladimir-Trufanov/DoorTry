@@ -25,8 +25,8 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		+Pages
-			+DoorTry
+		-Pages
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -38,13 +38,14 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 				www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 		-qrcode
@@ -72,7 +73,7 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-simpletest
+		+simpletest
 			-docs
 				-en
 					www\simpletest\docs\en\authentication_documentation.html
@@ -319,10 +320,18 @@ DoorTry
 0=www\IniMenu.php
 1=www\Pages\DoorTry\ConnHandler.php
 2=www\Pages\DoorTry\SimPrincip.php
-3=www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
+3=www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
+4=www\simpletest\autorun.php
+5=www\simpletest\unit_tester.php
+6=www\simpletest\test_case.php
+7=www\simpletest\invoker.php
+8=www\simpletest\errors.php
+9=www\MobiSite.php
+10=www\simpletest\_OLDreporter.php
+11=www\simpletest\reporter.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
+Selected=www\simpletest\reporter.php
 [www\IniMenu.php]
 TopLine=125
 Caret=57,145
@@ -332,6 +341,30 @@ Caret=56,24
 [www\Pages\DoorTry\SimPrincip.php]
 TopLine=5
 Caret=1,1
-[www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php]
+[www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php]
+TopLine=167
+Caret=7,187
+[www\simpletest\autorun.php]
 TopLine=1
 Caret=1,1
+[www\simpletest\unit_tester.php]
+TopLine=1
+Caret=1,1
+[www\simpletest\test_case.php]
+TopLine=1
+Caret=1,1
+[www\simpletest\invoker.php]
+TopLine=1
+Caret=1,1
+[www\simpletest\errors.php]
+TopLine=7
+Caret=1,1
+[www\MobiSite.php]
+TopLine=6
+Caret=22,13
+[www\simpletest\_OLDreporter.php]
+TopLine=42
+Caret=1,48
+[www\simpletest\reporter.php]
+TopLine=44
+Caret=1,55

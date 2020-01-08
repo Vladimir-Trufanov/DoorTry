@@ -45,7 +45,7 @@ class HtmlReporter extends SimpleReporter {
         print "<html>\n<head>\n<title>$test_name</title>\n";
         print "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" .
                 $this->character_set . "\">\n";
-        print "<style type=\"text/css\">\n";
+        print "<style type=\"text/css\">\nfirst\n";
         print $this->getCss() . "\n";
         print "</style>\n";
         print "</head>\n<body>\n";
