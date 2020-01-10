@@ -1,5 +1,5 @@
 <?php
-// PHP7   *** po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php ***
+// PHP7                *** opredelit-rabotaet-li-funkciya-calc-dlya-css.php ***
 
 // ****************************************************************************
 // * DoorTry-TPhpPrown    Страница функции isCalcInBrowser - проанализировать *
@@ -11,8 +11,14 @@
 //                                                   Дата создания:  03.01.2020
 // Copyright © 2020 tve                              Посл.изменение: 03.01.2020
 
+// Статистика ключевых слов:
+//    "какие браузеры поддерживают функцию calc" - 0 показов за декабрь 2019
+//    "функция calc для css"                     - 18
+//    "поддержка функции Calc"                   - 7
+//    "возможности функции Calc"                 - 14
+
 // Определяем страничные константы
-define ("Script", "po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css"); 
+define ("Script", "opredelit-rabotaet-li-funkciya-calc-dlya-css"); 
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
 define ("WasTest", "WasTest");   // "Тест уже запускался"
@@ -30,12 +36,11 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>isCalcInBrowser - по UserAgent определить работает ли функция Calc для CSS</title>
 <meta name="description" content=
-"Функция isCalcInBrowser указывает о возможности работы функция Calc в CSS, 
-просматривая содержимое строки UserAgent, перебирая названия браузеров и 
-проверяя их версии">
+"isCalcInBrowser определяет возможность использования в браузере функция Calc 
+для CSS. Для этого функция анализирует номера версий браузеров, указанные в UserAgent">
 <meta name="keywords" content=
-"isCalcInBrowser, определить работает ли функция Calc в CSS, принцип DO-or-TRY, 
-делай или пробуй, TPhpPrown">
+"isCalcInBrowser, какие браузеры поддерживают функцию calc, функция calc для css, 
+поддержка функции Calc, возможности функции Calc, TPhpPrown">
 <?php
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 
@@ -101,7 +106,7 @@ $(document).ready(function(){
 <h4 id="iscalcinbrowser">isCalcInBrowser - проанализировать UserAgent браузера 
 по версиям родительских браузеров и определить работает ли функция Calc для CSS.</h4>
 
-<h5><span class="letter">Ф</span>ункция isCalcInBrowser указывает о возможности работы функция Calc в CSS, просматривая содержимое строки UserAgent, перебирая имена всех родительских браузеров и проверяя их версии.</h5> 
+<h5><span class="letter">I</span>sCalcInBrowser указывает о возможности работы функция Calc в CSS, просматривая содержимое строки UserAgent, перебирая список родительских браузеров и анализируя их версии.</h5> 
 <blockquote>
 <p>Родительскими браузерами в функции isCalcInBrowser называются наименования браузеров, которые упоминает разработчик в строке UserAgent текущего браузера, то есть того, который показывает в текущий момент страницу сайта.</p>
 </blockquote>
@@ -199,4 +204,4 @@ if ($SiteDevice==Computer)
 }
 ?>
 <?php
-// <!-- --> ***** po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+// <!-- --> ************** opredelit-rabotaet-li-funkciya-calc-dlya-css.php ***

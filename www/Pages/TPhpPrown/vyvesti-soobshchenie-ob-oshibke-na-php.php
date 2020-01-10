@@ -1,5 +1,5 @@
 <?php
-// PHP7                       *** soobshchenie-razrabotchika-ob-oshibke.php ***
+// PHP7                      *** vyvesti-soobshchenie-ob-oshibke-na-php.php ***
 
 // ****************************************************************************
 // * DoorTry-TPhpPrown     Страница функции MakeUserError - вывести сообщение *
@@ -18,7 +18,7 @@
 //    "сформировать исключение"                - 100
 
 // Определяем страничные константы
-define ("Script", "soobshchenie-razrabotchika-ob-oshibke"); 
+define ("Script", "vyvesti-soobshchenie-ob-oshibke-na-php"); 
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
 define ("WasTest", "WasTest");   // "Тест уже запускался"
@@ -36,11 +36,10 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>MakeUserError - вывести сообщение разработчика об ошибке или сформировать исключение</title>
 <meta name="description" content=
-"Функция предназначена для того, чтобы вывести сообщение об ошибке для сайта на PHP. Она 
-используется для сообщений разработчика в текстах библиотек прикладных функций и классов 
-TPhpPrown и TPhpTools. Параметры функции позволяют запрограммировать представление текста
-сообщения в текущей позиции сайта либо сформировать исключение и выбросить текст отдельной
-странице.">
+"MakeUserError выводит сообщение об ошибке для сайта на PHP. Функция используется 
+в библиотеках прикладных функций и классов TPhpPrown и TPhpTools. Параметры 
+функции позволяют разработчику представить текст сообщения в текущей позиции сайта 
+либо выбросить текст на отдельной странице с помощью исключения.">
 <meta name="keywords" content=
 "MakeUserError, как вывести сообщение об ошибке на PHP, сообщение разработчика, 
 сформировать исключение, принцип DO-or-TRY, делай или пробуй, TPhpPrown">
@@ -198,4 +197,4 @@ if ($SiteDevice==Computer)
 }
 ?>
 <?php
-// <!-- --> ********************* soobshchenie-razrabotchika-ob-oshibke.php ***
+// <!-- --> ******************** vyvesti-soobshchenie-ob-oshibke-na-php.php ***

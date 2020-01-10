@@ -38,16 +38,16 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
-				www\Pages\TPhpPrown\po-useragent-opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
 				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
-				www\Pages\TPhpPrown\soobshchenie-razrabotchika-ob-oshibke.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+				www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 		-qrcode
 			-temp
 			www\qrcode\CHANGELOG
@@ -305,7 +305,6 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\IniTPhpPrown.php
-		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -321,9 +320,13 @@ DoorTry
 1=www\Pages\DoorTry\ConnHandler.php
 2=www\Pages\DoorTry\SimPrincip.php
 3=www\iHtmlBegin.php
+4=www\Site.php
+5=www\IniTPhpPrown.php
+6=www\sitemap.xml
+7=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 [Selected Project Files]
 Main=
-Selected=www\iHtmlBegin.php
+Selected=www\sitemap.xml
 [www\IniMenu.php]
 TopLine=125
 Caret=57,145
@@ -336,3 +339,15 @@ Caret=1,1
 [www\iHtmlBegin.php]
 TopLine=77
 Caret=118,97
+[www\Site.php]
+TopLine=29
+Caret=74,33
+[www\IniTPhpPrown.php]
+TopLine=51
+Caret=26,24
+[www\sitemap.xml]
+TopLine=51
+Caret=26,71
+[www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php]
+TopLine=1
+Caret=72,2

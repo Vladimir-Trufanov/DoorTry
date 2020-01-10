@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('преобразовать значение к заданному типу').'<br>';
+            //echo  prown\getTranslit('вывести сообщение об ошибке на php').'<br>';
             //phpinfo();
             //DebugError();
             PageContent();
