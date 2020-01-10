@@ -25,7 +25,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -73,7 +73,7 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		+simpletest
+		-simpletest
 			-docs
 				-en
 					www\simpletest\docs\en\authentication_documentation.html
@@ -320,18 +320,10 @@ DoorTry
 0=www\IniMenu.php
 1=www\Pages\DoorTry\ConnHandler.php
 2=www\Pages\DoorTry\SimPrincip.php
-3=www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
-4=www\simpletest\autorun.php
-5=www\simpletest\unit_tester.php
-6=www\simpletest\test_case.php
-7=www\simpletest\invoker.php
-8=www\simpletest\errors.php
-9=www\MobiSite.php
-10=www\simpletest\_OLDreporter.php
-11=www\simpletest\reporter.php
+3=www\iHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\simpletest\reporter.php
+Selected=www\iHtmlBegin.php
 [www\IniMenu.php]
 TopLine=125
 Caret=57,145
@@ -341,30 +333,6 @@ Caret=56,24
 [www\Pages\DoorTry\SimPrincip.php]
 TopLine=5
 Caret=1,1
-[www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php]
-TopLine=167
-Caret=7,187
-[www\simpletest\autorun.php]
-TopLine=1
-Caret=1,1
-[www\simpletest\unit_tester.php]
-TopLine=1
-Caret=1,1
-[www\simpletest\test_case.php]
-TopLine=1
-Caret=1,1
-[www\simpletest\invoker.php]
-TopLine=1
-Caret=1,1
-[www\simpletest\errors.php]
-TopLine=7
-Caret=1,1
-[www\MobiSite.php]
-TopLine=6
-Caret=22,13
-[www\simpletest\_OLDreporter.php]
-TopLine=42
-Caret=1,48
-[www\simpletest\reporter.php]
-TopLine=44
-Caret=1,55
+[www\iHtmlBegin.php]
+TopLine=77
+Caret=118,97

@@ -36,7 +36,7 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"'.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
@@ -72,7 +72,7 @@ else
 // Подключаем вспомогательные JS
 echo '<link href="TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/JS/DoorTry.js"></script>';
-echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 echo '<script src="/JS/FixLoadTimer.js"></script>';
 echo '<script src="/TJsPrown/TJsPrown.js"></script>';
 // Разворачиваем смартменю
