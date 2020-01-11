@@ -31,23 +31,6 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 "Библиотека PHP-прикладных функций TPhpPrown - результат практического программирования сайтов на PHP. Каждая функция библиотеки выполняет свою прикладную задачу: проверяет какое-либо условие в свершившемся событии или какую-нибудь возможность для предстоящего действия, или выполняет само это действие, проверяет определенные характеристики или устанавливает некоторые значения.">
 <meta name="keywords" content=                                          
 "принцип программирования DO-or-TRY, делай или пробуй, TPhpPrown">
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(56869024, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/56869024" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
 <?php
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 
@@ -58,12 +41,12 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"'.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
 // Обеспечиваем двойной скролл для кода;
-echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
 {   

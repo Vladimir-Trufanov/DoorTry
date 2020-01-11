@@ -97,8 +97,6 @@ MakeSmartMenu();
 <noscript><div><img src="https://mc.yandex.ru/watch/56869024" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-
-
 <?php
 echo '</head>';
 echo '<body>';

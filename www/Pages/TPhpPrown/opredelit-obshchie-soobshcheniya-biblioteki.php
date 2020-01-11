@@ -42,12 +42,12 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"'.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
 // Обеспечиваем двойной скролл для кода;
-echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
 {   
@@ -76,7 +76,7 @@ $(document).ready(function(){
 <h5><span class="letter">М</span>одуль собирает в одном файле константы, соответствующие пользовательским ошибочным сообщениям и предупреждениям со всех функций библиотеки.</h5>
 <?php
 // Загружаем в страницу код функции
-echo '<div class="CodeText">';
+echo '<br><div class="CodeText">';
 $FileSpec=$SiteRoot.'/TPhpPrown/iniErrMessage.php';
 $FileContent=file_get_contents($FileSpec);
 $pattern="/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)\/\/\sisCalcInBrowser/u";
@@ -85,7 +85,7 @@ $FileItog=preg_replace($pattern,$replacement,$FileContent);
 // Преобразуем текст в раскрашенный код и показываем его
 $FileCode=highlight_string($FileItog,true);
 echo $FileCode;
-echo '</div>';
+echo '</div></div>';
 ?>
 <?php
 // <!-- --> *************** opredelit-obshchie-soobshcheniya-biblioteki.php ***
