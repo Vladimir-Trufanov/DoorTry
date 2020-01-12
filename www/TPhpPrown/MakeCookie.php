@@ -13,20 +13,22 @@
 
 // Синтаксис:
 //
-//   $Result=MakeCookie($Name,$Value,$Type=tStr,$Init=false,$Duration=0x6FFFFFFF);
+//   $Result=MakeCookie($Name,$Value,$Type=tStr,$Init=false,$Duration=44236800);
 
 // Параметры:
 //
-//   $Name  - имя кукиса в браузере клиента (как правило, по имени кукиса 
+//   $Name     - имя кукиса в браузере клиента (как правило, по имени кукиса 
 //      формируется глобальная переменная сайтовой страницы добавлением префикса
 //      "с_". Например: "BrowEntry" --> "$с_BrowEntry");
-//   $Value - значение кукиса браузера, это же значение во внутреннем массиве
+//   $Value    - значение кукиса браузера, это же значение во внутреннем массиве
 //      $_COOKIE и у соответствующей глобальной переменной сайтовой страницы;
-//   $Type  - константа, определяющая тип значения: tArr, tObj, tInt, tFloat, 
-//      tStr, tBool, tNull. По умолчанию - tStr.
-//   $Init  = true, это означает, что требуется установить указанное значение 
+//   $Type     - константа, определяющая тип значения: tArr, tObj, tInt, tFloat, 
+//      tStr, tBool, tNull. По умолчанию - tStr;
+//   $Init     = true, это означает, что требуется установить указанное значение 
 //      кукиса, только в том случае, если кукиса еще не было. В обычных условиях
-//      (по умолчанию, когда $Init=false) значение кукиса меняется всегда.
+//      (по умолчанию, когда $Init=false) значение кукиса меняется всегда;
+//   $Duration - время жизни кукиса (по умолчанию 44236800 = 512 дней =
+//      512д*24ч*60м*60с)
 
 // Возвращаемое значение: 
 //
@@ -41,9 +43,10 @@
 
 require_once "MakeType.php";
 
-function _MakeCookie($Name,$Value,$Type,$Duration)
+function _MakeCookie($Name,$Value,$Type,$Dur)
 {
    $Result=MakeType($Value,$Type);
+   $Duration=time()+$Dur;
    // Отправляем новое куки браузеру
    setcookie($Name,$Value,$Duration);
    /*
@@ -62,7 +65,7 @@ function _MakeCookie($Name,$Value,$Type,$Duration)
    return $Result;
 }
 
-function MakeCookie($Name,$Value,$Type=tStr,$Init=false,$Duration=0x6FFFFFFF)
+function MakeCookie($Name,$Value,$Type=tStr,$Init=false,$Duration=44236800)
 {
    // Устанавливаем значение, если инициализация
    if ($Init==true) 
