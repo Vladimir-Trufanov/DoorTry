@@ -51,12 +51,12 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"'.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
 // Обеспечиваем двойной скролл для кода;
-echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
 {   
@@ -170,7 +170,7 @@ $FileItog=preg_replace($pattern,$replacement,$FileContent);
 // Преобразуем текст в раскрашенный код и показываем его
 $FileCode=highlight_string($FileItog,true);
 echo $FileCode;
-echo '</div>';
+echo '</div></div>';
 // В компьютерной версии даем возможность запускать тест
 if ($SiteDevice==Computer) 
 {   
@@ -198,7 +198,7 @@ if ($SiteDevice==Computer)
       //echo $_COOKIE['WasTest'];
       ?>
       <button id="button" onclick="isClick()">Протестировать функцию!</button> 
-      </div></body></html>
+      </body></html>
       <?php
    }
 }

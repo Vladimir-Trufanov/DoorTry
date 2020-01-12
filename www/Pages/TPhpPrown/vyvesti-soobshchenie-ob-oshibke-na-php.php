@@ -53,21 +53,19 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"'.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
 // Обеспечиваем двойной скролл для кода;
-echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
 {   
-   //echo '<script>alert("Mobile");</script>';
    echo '<link href="/Styles/TPhpPrownMobi.css" rel="stylesheet">';
 }
 else 
 {   
-   //echo '<script>alert("Computer");</script>';
    echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
 }
 // Подключаем JS-библиотеку
@@ -79,7 +77,6 @@ if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.n
    ?><script>
    function isClick() 
    {
-      //alert("isClick");
       DeleteCookie('WasTest');
       location.replace("<?php echo Script; ?>");
    }
@@ -90,7 +87,6 @@ else
    ?><script>
    function isClick() 
    {
-      //alert("isClick");
       DeleteCookie('WasTest');
       location.replace("<?php echo Script;?>"+".php");
    }
@@ -135,16 +131,17 @@ $(document).ready(function(){
 <p><span class="letter">Ф</span>ункция MakeUserError выделяет два вида ошибок (контроллируемые и неконтроллируемые) и определяет их следующим образом:</p>
 <p>а) ошибка является <span class="letter">контроллируемой</span> в случае, когда известно в каком месте сайта она может возникнуть и, таким образом, сообщение об ошибке можно вывести на экран по разметке сайта;</p>
 <p>б) в остальных случаях ошибка является <span class="letter">неконтроллируемой</span> и вывод сообщения об ошибке выполняется на отдельной странице;</p>
-<p>в) по умолчанию функция генерирует неконтроллируемую ошибку/исключение:  <strong>trigger_error ($Message, E_USER_ERROR)</strong>, предполагая на верхнем уровне обработку ошибки через сайт <a href="http://doortry.ru">doortry.ru</a>, где неконтроллируемая ошибка возникает на странице исключения с трассировкой его всплывания;</p>
+<p>в) по умолчанию функция генерирует неконтроллируемую ошибку/исключение:  <strong>trigger_error ($Message, E_USER_ERROR)</strong>, предполагая на верхнем уровне обработку ошибки через сайт <a href="http://doortry.ru">doortry.ru</a>.</p>
 </div>
 <p><strong>Синтаксис</strong></p>
-<pre>MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR)</pre>
+<pre>MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR,$div='Ers')</pre>
 <p><strong>Параметры</strong></p>
 <pre>
 $Mess    - текст сообщения об ошибке/исключении;
 $Prefix  - префикс сообщения, указывающий на программную систему, в модуле которой возникла ошибка/исключение;
 $Mode    - режим вывода сообщений: rvsCurrentPos, rvsTriggerError, rvsMakeDiv, rvsDialogWindow;
 $errtype - тип ошибки/исключения: E_USER_ERROR,E_USER_WARNING,E_USER_NOTICE,E_USER_DEPRECATED;
+$div     - имя div-а для сообщения в режимах rvsMakeDiv,rvsDialogWindow. По умолчанию 'Ers'.
 </pre>
 <p><strong>Возвращаемое значение</strong></p>
 <pre>
@@ -163,7 +160,7 @@ $FileItog=preg_replace($pattern,$replacement,$FileContent);
 // Преобразуем текст в раскрашенный код и показываем его
 $FileCode=highlight_string($FileItog,true);
 echo $FileCode;
-echo '</div>';
+echo '</div></div>';
 // В компьютерной версии даем возможность запускать тест
 if ($SiteDevice==Computer) 
 {   
@@ -191,7 +188,7 @@ if ($SiteDevice==Computer)
       //echo $_COOKIE['WasTest'];
       ?>
       <button id="button" onclick="isClick()">Протестировать функцию!</button> 
-      </div></body></html>
+      </body></html>
       <?php
    }
 }

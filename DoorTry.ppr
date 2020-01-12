@@ -248,7 +248,7 @@ DoorTry
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		-TPhpPrown
+		+TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -280,7 +280,7 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		-TPhpPrownTests
+		+TPhpPrownTests
 			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
@@ -317,13 +317,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
+1=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
+2=www\TPhpPrownTests\MakeUserError_test.php
+3=www\TPhpPrown\MakeUserError.php
+4=www\TPhpPrown\MakeCookie.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
+Selected=www\TPhpPrownTests\MakeUserError_test.php
 [www\IniMenu.php]
 TopLine=131
 Caret=57,145
-[www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php]
-TopLine=31
-Caret=64,45
+[www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php]
+TopLine=137
+Caret=235,134
+[www\TPhpPrownTests\MakeUserError_test.php]
+TopLine=21
+Caret=24,38
+[www\TPhpPrown\MakeUserError.php]
+TopLine=117
+Caret=9,83
+[www\TPhpPrown\MakeCookie.php]
+TopLine=35
+Caret=38,52

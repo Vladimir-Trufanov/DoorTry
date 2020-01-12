@@ -5,7 +5,7 @@
 // * TPhpPrown     Вывести сообщение разработчика об ошибке в программируемом *
 // *                      модуле или сформировать пользовательское исключение *
 // *                                                                          *
-// * v1.3, 02.01.2020                              Автор:       Труфанов В.Е. *
+// * v1.4, 12.01.2020                              Автор:       Труфанов В.Е. *
 // * Copyright © 2019 tve                          Дата создания:  17.02.2019 *
 // ****************************************************************************
 
@@ -13,17 +13,19 @@ require_once "iniConstMem.php";
 
 // Синтаксис
 //
-//   MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR)
+//   MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR,$div='Ers')
 
 // Параметры
 //
 //   $Mess    - текст сообщения об ошибке/исключении;
 //   $Prefix  - префикс сообщения, указывающий на программную систему, в модуле
-//       которой возникла ошибка/исключение;
-//   $Mode   - режим вывода сообщений: rvsCurrentPos, rvsTriggerError, 
-//       rvsMakeDiv,rvsDialogWindow;
+//              которой возникла ошибка/исключение;
+//   $Mode    - режим вывода сообщений: rvsCurrentPos, rvsTriggerError, 
+//              rvsMakeDiv,rvsDialogWindow;
 //   $errtype - тип ошибки/исключения: E_USER_ERROR, E_USER_WARNING, 
-//       E_USER_NOTICE, E_USER_DEPRECATED;
+//              E_USER_NOTICE, E_USER_DEPRECATED;
+//   $div     - имя div-а для сообщения в режимах rvsMakeDiv,rvsDialogWindow. 
+//              По умолчанию 'Ers'.
 
 // Возвращаемое значение 
 //
@@ -80,16 +82,16 @@ require_once "iniConstMem.php";
 // ****************************************************************************
 // *       Развернуть сообщение в диалоговом окне  с помощью JQueryUI         *
 // ****************************************************************************
-function MakeMode2($Mess,$Prefix)
+function MakeMode2($Mess,$Prefix,$div)
 {
    $title="Сообщение  [".$Prefix."]";
-   echo "<div id=\"Ers\" title=\"".$title."\">";
+   echo '<div id="'.$div.'" title="'.$title.'">';
    echo $Mess;
    echo "</div>";
 ?>
 <script>
    $(document).ready(function(){
-      $('#Ers').dialog
+      $('#<?php echo $div; ?>').dialog
       ({
          width: 600,
          position: 'left top',
@@ -104,30 +106,21 @@ function MakeMode2($Mess,$Prefix)
 // *                    Cгенерировать ошибку/исключение или                   *
 // *                  просто сформировать сообщение об ошибке                 *
 // ****************************************************************************
-function MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR)
+function MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR,$div='Ers')
 {
    $Result=true;
    $Message='['.$Prefix.'] '.$Mess;
    if ($Mode==rvsCurrentPos)
    {
-      echo '<pre>'.$Message.'<br>'.'</pre>';
+      echo $Message;
    } 
    else if ($Mode==rvsMakeDiv)
    {
-      echo "<div id=\"Ers\" style=\"z-index:999; background: yellow; \">";
-      echo 
-      "<span style=\"
-         color:red; 
-         font-weight:bold; 
-         font-size:1.0em;
-      \">".
-      $Message.
-      "</span>";
-      echo "</div>";
+      echo '<div id="'.$div.'">'.$Message.'</div>';
    } 
    elseif ($Mode==rvsDialogWindow)
    {
-      MakeMode2($Mess,$Prefix);
+      MakeMode2($Mess,$Prefix,$div);
    } 
    else
    {
@@ -136,7 +129,7 @@ function MakeUserError($Mess,$Prefix='TPhpPrown',$Mode=0,$errtype=E_USER_ERROR)
       // Выдаем исключение, если неверно указан тип ошибки
       if ($Result=false)
       {
-         trigger_error($Prefix.': '.WrongTypeError,E_USER_ERROR);
+         trigger_error($Prefix.': '.WrongTypeError,$errtype);
       }   
    }
    return $Result; 
