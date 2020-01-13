@@ -78,8 +78,8 @@ if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 // Если поступил запрос на пробную страницу, то запускаем её
 else if (isComRequest('proba','list')) 
 {
-   //$page='/Pages/Proba/ProbaTest.php';
-   //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   $page='/Pages/Proba/ProbaTest.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
 // В больштнстве остальных случаев запускаем главные страницы

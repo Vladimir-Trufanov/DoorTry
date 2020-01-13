@@ -15,51 +15,89 @@ require_once $SiteRoot."/iGetAbove.php";
 $SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
 $SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 
+// https://qunitjs.com/
 
 ?>
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
 <head>
-<title>Findes - выбрать из строки подстроку, соответствующую регулярному выражению</title>
-<meta charset="utf-8">
+  <meta charset="utf-8">
+  <title>Mangled date examples</title>
+  <script>
+  function prettyDate(now, time){
+    var date = new Date(time || ""),
+      diff = (((new Date(now)).getTime() - date.getTime()) / 1000),
+      day_diff = Math.floor(diff / 86400);
+ 
+    if ( isNaN(day_diff) || day_diff < 0 || day_diff >= 31 )
+      return;
+ 
+    return day_diff == 0 && (
+        diff < 60 && "just now" ||
+        diff < 120 && "1 minute ago" ||
+        diff < 3600 && Math.floor( diff / 60 ) +
+          " minutes ago" ||
+        diff < 7200 && "1 hour ago" ||
+        diff < 86400 && Math.floor( diff / 3600 ) +
+          " hours ago") ||
+      day_diff == 1 && "Yesterday" ||
+      day_diff < 7 && day_diff + " days ago" ||
+      day_diff < 31 && Math.ceil( day_diff / 7 ) +
+        " weeks ago";
+  }
+  window.onload = function() {
+    var links = document.getElementsByTagName("a");
+    for ( var i = 0; i < links.length; i++ ) {
+      if ( links[i].title ) {
+        var date = prettyDate("2008-01-28T22:25:00Z",
+          links[i].title);
+        if ( date ) {
+          links[i].innerHTML = date;
+        }
+      }
+    }
+  };
+  </script>
 </head>
 <body>
-<h4 id="findes">Findes - выбрать из строки подстроку, соответствующую регулярному выражению.</h4>
-<h5>Функция выполняет конкретную и часто возникающую задачу - выбрать из строки подстроку по заданному регулярному выражению и узнать её начальную позицию в этой строке.</h5>
-<h5>Функция возвращает первое или единственное вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку.</h5>
-<h5 id="vers">v1.1, 02.04.2019-23.05.2019</h5>
-<p><strong>Синтаксис</strong></p>
-<pre><code>$Result=Findes($preg,$string,&amp;$point)
-</code></pre>
-<p><strong>Параметры</strong></p>
-<pre><code>$preg   - текст регулярного выражения;
-$string - текст, который должен быть обработан регулярным выражением;
-$point  - позиция начала найденного фрагмента после работы регулярного 
-выражения (параметр по ссылке). $point=-1, если фрагмент не найден.
-</code></pre>
-<p><strong>Возвращаемое значение</strong></p>
-<pre><code>$Result  - найденный фрагментов после работы регулярного выражения или
-пустая строка, если фрагмент не найден.
-</code></pre>
-
-<?php
-echo '<div id="CodeFunction"';
-$f2=$SiteRoot.'/TPhpPrown/Findes.php';
-$stx=show_source($f2,true);
-echo $stx;
-echo '</div>';
-?>
-<?php
-// Запускаем тестирование и трассировку выбранных функций
-require_once($SiteRoot.'/simpletest/autorun.php');
-require_once($SiteRoot.'/TPhpPrown/Findes.php');
-require_once($SiteRoot.'/TPhpPrownTests/FunctionsBlock.php');
-$ModeError=-1;
-require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
-?>
-<!-- 
-</body> 
+ 
+<ul>
+  <li class="entry">
+    <p>blah blah blah...</p>
+    <small class="extra">
+      Posted <span class="time">
+        <a href="#2008/01/blah/57/" title="2008-01-28T20:24:17Z">
+          <span>January 28th, 2008</span>
+        </a>
+      </span>
+      by <span class="author"><a href="#john/">John Resig</a></span>
+    </small>
+  </li>
+  <!-- more list items -->
+</ul>
+ 
+</body>
 </html>
--->
+ 
+<ul>
+  <li class="entry">
+    <p>blah blah blah...</p>
+    <small class="extra">
+      Posted <span class="time">
+        <a href="#2008/01/blah/57/" title="2008-01-28T20:24:17Z">
+          <span>January 28th, 2008</span>
+        </a>
+      </span>
+      by <span class="author"><a href="#john/">John Resig</a></span>
+    </small>
+  </li>
+  <!-- more list items -->
+</ul>
+ 
+</body>
+</html>
+
+
 <?php
 // <!-- --> ************************************************* ProbaTest.php ***
