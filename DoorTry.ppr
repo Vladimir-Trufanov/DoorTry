@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -25,7 +25,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -38,7 +38,7 @@ DoorTry
 			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
@@ -248,7 +248,7 @@ DoorTry
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		+TPhpPrown
+		-TPhpPrown
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
@@ -280,7 +280,7 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
-		+TPhpPrownTests
+		-TPhpPrownTests
 			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
@@ -305,6 +305,7 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\IniTPhpPrown.php
+		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -319,10 +320,11 @@ DoorTry
 0=www\IniMenu.php
 1=www\TPhpPrown\MakeCookie.php
 2=www\IniMem.php
-3=www\Pages\TPhpPrown\o-biblioteke.php
+3=www\TJsPrown\TJsPrown.js
+4=www\TPhpPrown\Findes.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\o-biblioteke.php
+Selected=www\TJsPrown\TJsPrown.js
 [www\IniMenu.php]
 TopLine=143
 Caret=57,145
@@ -332,6 +334,9 @@ Caret=10,68
 [www\IniMem.php]
 TopLine=48
 Caret=48,63
-[www\Pages\TPhpPrown\o-biblioteke.php]
-TopLine=129
-Caret=117,104
+[www\TJsPrown\TJsPrown.js]
+TopLine=65
+Caret=5,88
+[www\TPhpPrown\Findes.php]
+TopLine=18
+Caret=1,37
