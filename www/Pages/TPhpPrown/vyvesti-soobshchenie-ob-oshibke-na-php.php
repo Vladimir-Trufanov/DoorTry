@@ -45,6 +45,11 @@ $SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 сформировать исключение, принцип DO-or-TRY, делай или пробуй, TPhpPrown">
 <?php
 // Подключаем jquery/jquery-ui
+if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+{
+   echo '<link rel="canonical" '.
+   'href="https://doortry.ru/TPhpPrown/vyvesti-soobshchenie-ob-oshibke-na-php"/>';
+}
 echo '<link rel="stylesheet" type="text/css" '. 
      'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
 echo '<script '.

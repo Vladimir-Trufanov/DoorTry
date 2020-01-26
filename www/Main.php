@@ -10,22 +10,42 @@
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 02.12.2019
       
-// echo '1. '.$_SERVER['REQUEST_URI'].'<br>';
-// header('Location: http://www.new-website.com');
-
-// Инициализируем надсайтовый каталог и каталог хостинга
-require_once "iGetAbove.php";
-$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
-$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем файлы библиотеки прикладных модулей
-require_once $SiteRoot."/TPhpPrown/Findes.php";
-require_once $SiteRoot."/TPhpPrown/getSiteDevice.php";
-require_once $SiteRoot."/TPhpPrown/getTranslit.php";
-require_once $SiteRoot."/TPhpPrown/iniConstMem.php";
-require_once $SiteRoot."/TPhpPrown/MakeCookie.php";
-require_once $SiteRoot."/TPhpPrown/MakeParm.php";
-require_once $SiteRoot."/TPhpPrown/MakeSession.php";
-require_once $SiteRoot."/TPhpPrown/ViewGlobal.php";
+$TPhpPrown=$_SERVER['DOCUMENT_ROOT'];
+
+//$TPhpPrown='https://doortry.ru';
+require_once $TPhpPrown."/TPhpPrown/Findes.php";
+require_once $TPhpPrown."/TPhpPrown/getAbove.php";
+require_once $TPhpPrown."/TPhpPrown/getSiteDevice.php";
+
+/*
+$ih=require_once('https://doortry.ru/TPhpPrown/getSiteDevice.php');
+if ($ih) {echo 'true<br>';} else {echo 'false<br>';}  
+$SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
+*/
+
+require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
+require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
+require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
+require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
+require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
+require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
+      
+// Подключаем файлы библиотеки прикладных модулей
+// Директива Allow_url_incldue позволяет использование оберток Fopen, которые поддерживают работу с URL, в функциях // Include, Include_once, Require, Require_once.
+//
+// Директива Allow_url_include требует включения опции Allow_url_fopen.
+//Директива Allow_url_fopen включает поддержку оберток URL (URL wrappers), которые позволяют работать с объектами ////URL как// с обычными файлами. Обертки, доступные по умолчанию, служат для работы с удаленными файлами с //////использованием Ftp или Http протокола.
+//a
+
+//require_once $SiteRoot."/TPhpPrown/Findes.php";
+//require_once 'https://doortry.ru/TPhpPrown/Findes.php';
+
+// Инициализируем корневой каталог, надсайтовый каталог и каталог хостинга
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+$SiteAbove=prown\GetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost=prown\GetAbove($SiteAbove);      // Каталог хостинга
+
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 
@@ -91,7 +111,21 @@ else
       require_once $SiteRoot."/MobiSite.php";
    }
    else 
-   {   
+   {
+      echo $SiteRoot."/TPhpPrown/Findes.php".'<br>';
+      echo $SiteAbove."/TPhpPrown/Findes.php".'<br>';
+      echo $SiteHost."/TPhpPrown/Findes.php".'<br>';
+      
+
+      //$FileSpec='https://doortry.ru/Pages/TPhpPrown/o-biblioteke.php';
+      $FileSpec='https://doortry.ru/TPhpPrown/getSiteDevice.php';
+      //require_once ($FileSpec);
+      $FileContent=file_get_contents($FileSpec);
+      //echo mb_detect_encoding($FileContent).'<br>';
+      echo '-b-<br>'.$FileContent.'<br>-e-<br>';
+
+      
+      
       require_once $SiteRoot."/Site.php";
    }
    // Подключаем и запускаем регистратор времени загрузки страницы

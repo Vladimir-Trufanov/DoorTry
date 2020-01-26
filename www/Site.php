@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 13.09.2019
+// Copyright © 2019 tve                              Посл.изменение: 26.01.2020
 
 echo '<div class="pageWrapper">';
    // Штрих-код с адресом сайта
@@ -18,7 +18,7 @@ echo '<div class="pageWrapper">';
    echo '<header>';
       echo '<div id="dVer">';
       //echo '<div id="res"></div>';
-      echo 'v1.5';
+      echo 'v1.6';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';
       echo '<nav>'; TopMenu(); echo '</nav>';

@@ -35,10 +35,10 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			+Proba
+			-Proba
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
@@ -249,10 +249,12 @@ DoorTry
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		-TPhpPrown
+			-fil
+				www\TPhpPrown\fil\.htaccess
 			www\TPhpPrown\CtrlArray.php
 			www\TPhpPrown\CtrlNumber.php
 			www\TPhpPrown\Findes.php
-			www\TPhpPrown\GetAbove.php
+			www\TPhpPrown\getAbove.php
 			www\TPhpPrown\getSiteDevice.php
 			www\TPhpPrown\getTranslit.php
 			www\TPhpPrown\iniConstMem.php
@@ -280,6 +282,8 @@ DoorTry
 			www\TPhpPrown\TestNumerical.php
 			www\TPhpPrown\ViewGlobal.php
 			www\TPhpPrown\ViewSimpleArray.php
+			www\TPhpPrown\пример_регекс.txt
+			www\TPhpPrown\регекс_тест.html
 		-TPhpPrownTests
 			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
@@ -296,7 +300,6 @@ DoorTry
 		www\error.php
 		www\favicon.ico
 		www\get-info.php
-		www\iGetAbove.php
 		www\iHtmlBegin.php
 		www\iHtmlEnd.php
 		www\includErrs.php
@@ -305,6 +308,7 @@ DoorTry
 		www\IniMem.php
 		www\IniMenu.php
 		www\IniTPhpPrown.php
+		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -318,29 +322,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\IniMenu.php
-1=www\TPhpPrown\MakeCookie.php
-2=www\Main.php
-3=www\Site.php
-4=www\Pages\Proba\ProbaTest.php
-5=www\Pages\Proba\tests.js
+1=www\IniMem.php
+2=www\TPhpPrown\getSiteDevice.php
+3=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+4=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Proba\ProbaTest.php
+Selected=www\Main.php
 [www\IniMenu.php]
 TopLine=137
-Caret=4,143
-[www\TPhpPrown\MakeCookie.php]
-TopLine=59
-Caret=10,68
-[www\Main.php]
-TopLine=69
-Caret=4,82
-[www\Site.php]
+Caret=6,143
+[www\IniMem.php]
+TopLine=11
+Caret=1,32
+[www\TPhpPrown\getSiteDevice.php]
 TopLine=1
 Caret=1,1
-[www\Pages\Proba\ProbaTest.php]
-TopLine=7
-Caret=1,19
-[www\Pages\Proba\tests.js]
-TopLine=1
-Caret=1,4
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
+TopLine=77
+Caret=1,91
+[www\Main.php]
+TopLine=115
+Caret=47,121

@@ -1,0 +1,149 @@
+[26-Jan-2020 09:15:14 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://kwinflatht.nichost.ru/TPhpPrown/Findes.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 09:16:51 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://kwinflatht.nichost.ru/TPhpPrown/Findes.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 09:59:27 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://doortry.ru/TPhpPrown/Findes.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 09:59:27 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://doortry.ru/TPhpPrown/Findes.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 10:42:52 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/ComRequest.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 39
+[26-Jan-2020 10:45:35 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/ComRequest.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 36
+[26-Jan-2020 11:14:47 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://doortry.ru/TPhpPrown/getAbove.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 18
+[26-Jan-2020 11:16:19 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\IniMem.php:31
+Stack trace:
+#0 C:\DoorTry\www\Main.php(60): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\IniMem.php on line 31
+[26-Jan-2020 11:20:39 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\MakeCookie() in C:\DoorTry\www\IniMem.php:52
+Stack trace:
+#0 C:\DoorTry\www\Main.php(60): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\IniMem.php on line 52
+[26-Jan-2020 11:25:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:20
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 20
+[26-Jan-2020 11:31:28 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:20
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 20
+[26-Jan-2020 11:31:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:20
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 20
+[26-Jan-2020 11:33:16 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:20
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 20
+[26-Jan-2020 12:39:45 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 12:41:10 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 12:50:51 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 12:50:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 12:58:08 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 12:58:08 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 12:59:34 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 15:03:23 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:21
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 21
+[26-Jan-2020 15:08:30 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Main.php on line 129
+[26-Jan-2020 15:10:10 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:11:19 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\IniMem.php:31
+Stack trace:
+#0 C:\DoorTry\www\Main.php(64): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\IniMem.php on line 31
+[26-Jan-2020 15:12:27 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getTranslit() in C:\DoorTry\www\Main.php:66
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 66
+[26-Jan-2020 15:27:57 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\IniMem.php:31
+Stack trace:
+#0 C:\DoorTry\www\Main.php(64): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\IniMem.php on line 31
+[26-Jan-2020 15:27:57 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\IniMem.php:31
+Stack trace:
+#0 C:\DoorTry\www\Main.php(64): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\IniMem.php on line 31
+[26-Jan-2020 15:29:03 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\IniMem.php:31
+Stack trace:
+#0 C:\DoorTry\www\Main.php(64): require_once()
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\IniMem.php on line 31
+[26-Jan-2020 15:29:49 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:30:07 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:30:07 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:31:05 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:31:05 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:31:06 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
+[26-Jan-2020 15:31:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\getSiteDevice() in C:\DoorTry\www\Main.php:22
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 22
