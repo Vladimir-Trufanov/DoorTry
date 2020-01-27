@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                               *** iHtmlBegin.php ***
+// PHP7/HTML5, EDGE/CHROME                             *** iniHtmlBegin.php ***
 
 // ****************************************************************************
 // * doortry.ru                                         Загрузить начало HTML * 
@@ -102,4 +102,4 @@ echo '</head>';
 echo '<body>';
 //echo '<div id="res">Сообщение</div>';
 
-// ********************************************************* iHtmlBegin.php ***
+// ******************************************************* iniHtmlBegin.php ***

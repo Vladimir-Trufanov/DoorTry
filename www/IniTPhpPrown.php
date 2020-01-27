@@ -1,5 +1,5 @@
 <?php 
-// PHP7/HTML5, EDGE/CHROME                             *** IniTPhpPrown.php ***
+// PHP7/HTML5, EDGE/CHROME                             *** iniTPhpPrown.php ***
 
 // ****************************************************************************
 // * doortry.ru                    Произвести установки глобальных переменных *
@@ -94,4 +94,4 @@ function TPhpPrownList()
    }
    return $Result;
 }
-// ******************************************************* IniTPhpPrown.php *** 
+// ******************************************************* iniTPhpPrown.php *** 

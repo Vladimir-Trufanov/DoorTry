@@ -21,7 +21,7 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
@@ -300,16 +300,15 @@ DoorTry
 		www\error.php
 		www\favicon.ico
 		www\get-info.php
-		www\iHtmlBegin.php
-		www\iHtmlEnd.php
 		www\includErrs.php
 		www\index.php
-		www\IniCurrStih.php
-		www\IniMem.php
-		www\IniMenu.php
-		www\IniTPhpPrown.php
+		www\iniCurrStih.php
+		www\iniHtmlBegin.php
+		www\iniHtmlEnd.php
+		www\iniMem.php
+		www\iniMenu.php
+		www\iniTPhpPrown.php
 		www\log.txt
-		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -321,18 +320,34 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\IniMenu.php
-1=www\index.php
-2=www\Main.php
+0=www\index.php
+1=www\Main.php
+2=www\iniMenu.php
+3=www\iniTPhpPrown.php
+4=www\Site.php
+5=www\JS\DoorTry.js
+6=www\iniHtmlBegin.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
-[www\IniMenu.php]
-TopLine=116
-Caret=6,143
+Selected=www\JS\DoorTry.js
 [www\index.php]
 TopLine=11
 Caret=1,1
 [www\Main.php]
-TopLine=102
-Caret=1,116
+TopLine=69
+Caret=56,48
+[www\iniMenu.php]
+TopLine=1
+Caret=66,154
+[www\iniTPhpPrown.php]
+TopLine=98
+Caret=61,97
+[www\Site.php]
+TopLine=8
+Caret=4,49
+[www\JS\DoorTry.js]
+TopLine=47
+Caret=41,67
+[www\iniHtmlBegin.php]
+TopLine=67
+Caret=1,74

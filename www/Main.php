@@ -39,9 +39,9 @@ require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/ComRequest.php";
 //require_once $SiteRoot."/DebugError.php";
-require_once $SiteRoot."/IniCurrStih.php";
-require_once $SiteRoot."/IniTPhpPrown.php";
-require_once $SiteRoot."/IniMenu.php";
+require_once $SiteRoot."/iniCurrStih.php";
+require_once $SiteRoot."/iniTPhpPrown.php";
+require_once $SiteRoot."/iniMenu.php";
 require_once $SiteRoot."/MakeQrcode.php"; 
 // Подключаем управление новостями  
 require_once $SiteRoot."/Pages/News/MakeNews.php";   
@@ -50,7 +50,7 @@ require_once $SiteRoot."/Pages/News/WithImgTape.php";
 // Выполняем запуск сессии и начальную инициализацию
 //session_start();
 $oMainStarter = new PageStarter('Main');
-require_once $SiteRoot."/IniMem.php"; 
+require_once $SiteRoot."/iniMem.php"; 
 // Подключаем нужную главную страницу
 if (isComRequest(prown\getTranslit(ConnHandler),'list'))
 {
@@ -93,7 +93,7 @@ else if (isComRequest('proba','list'))
 // В большинстве остальных случаев запускаем главные страницы
 else
 {
-   require_once $SiteRoot."/iHtmlBegin.php";
+   require_once $SiteRoot."/iniHtmlBegin.php";
    if ($SiteDevice==Mobile)
    {   
       require_once $SiteRoot."/MobiSite.php";
@@ -112,6 +112,6 @@ else
    //require_once $SiteRoot."/DebugTimer.php";
    //\prown\ViewGlobal(avgCOOKIE);
    //require_once $SiteRoot."/get-info.php";
-   require_once $SiteRoot."/iHtmlEnd.php";
+   require_once $SiteRoot."/iniHtmlEnd.php";
 }
 // *************************************************************** Main.php ***

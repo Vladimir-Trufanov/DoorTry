@@ -1,5 +1,5 @@
 <?php 
-// PHP7/HTML5, EDGE/CHROME                                   *** IniMem.php ***
+// PHP7/HTML5, EDGE/CHROME                                   *** iniMem.php ***
 
 // ****************************************************************************
 // * doortry.ru                    Произвести установки глобальных переменных *
@@ -72,4 +72,4 @@ $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - ра�
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 $s_NameNews=prown\MakeSession('NameNews',NotNews,tStr,true);     // активированная лента новостей
 
-// ************************************************************* IniMem.php *** 
+// ************************************************************* iniMem.php *** 

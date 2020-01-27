@@ -46,30 +46,6 @@ echo '<div class="pageWrapper">';
             NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews);
          echo '</aside>'; 
       }
-      
-      /*
-      echo '
-      <ul>
-      <li>
-         <a href="index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij">
-         Подключение обработчика ошибок и исключений</a>
-      </li>
-      <li>
-         <a href="/Pages/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php">Findes</a>
-      </li>
-      <li>
-         <a href="/TPhpPrown/Findes.php">Findes.php</a>
-      </li>
-      <li>
-         <a href="/Pages/TPhpPrown/opredelit-obshchie-konstanty-i-peremennye.php">iniConstMem</a>
-      </li>
-      </ul> ';
-      */
-      
-      
-      
-      
-      
    // Подвал
    echo '<footer>';
       echo '<div class="pLeft">Copyright © 2019 tve</div>';

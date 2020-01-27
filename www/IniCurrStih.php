@@ -1,5 +1,5 @@
 <?php 
-// PHP7/HTML5, EDGE/CHROME                              *** IniCurrStih.php ***
+// PHP7/HTML5, EDGE/CHROME                              *** iniCurrStih.php ***
 
 // ****************************************************************************
 // * doortry.ru      Произвести инициализацию настроек текущего стихотворения *
@@ -27,10 +27,10 @@ function isCurrStih($CurrStih)
 // ****************************************************************************
 // *        Произвести инициализацию настроек текущего стихотворения          *
 // ****************************************************************************
-function IniCurrStih($CurrStih)
+function iniCurrStih($CurrStih)
 {  
    $Result = 'sorevnovanie-s-hakerami';
    if (isCurrStih($CurrStih)) $Result = $CurrStih;
    return $Result;
 }
-// ******************************************************** IniCurrStih.php *** 
+// ******************************************************** iniCurrStih.php *** 

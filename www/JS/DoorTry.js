@@ -39,24 +39,23 @@ $(document).ready(function(){
    });
    */
 
-   
+   // закрыто до разборки 27.01.2020
    $.getJSON('get-info.php','contact=12',function(data)
    { // ajax-запрос, данные с сервера запишутся в переменную
-      console.log('data: '+data.brat.fio);
+      // закрыто до разборки 27.01.2020 console.log('data: '+data.brat.fio);
    });
    
-
    $.get('get-info.php',function(data)
    { // ajax-запрос, данные с сервера запишутся в переменную 
       console.log('data: '+data);
       var arr=JSON.parse(data);
       //alert(arr.brat.fio);
-      console.log('brat: '+arr.brat.fio);
+      // закрыто до разборки 27.01.2020 console.log('brat: '+arr.brat.fio);
       
       var htmlstr='<table>'; i=0;
       $.each(arr,function(rod,rodinfo)
       {  // цикл по сотрудникам
-         console.log('i='+i+': '+rod+'-'+rodinfo.fio+'-'+rodinfo.birthday);
+         // закрыто до разборки 27.01.2020 console.log('i='+i+': '+rod+'-'+rodinfo.fio+'-'+rodinfo.birthday);
          htmlstr+='<tr>';
          htmlstr+='<td>'+rodinfo.fio+'</td>';      // первая колонка - ФИО
          htmlstr+='<td>'+rodinfo.birthday+'</td>'; // вторая колонка - Дата рождения
@@ -65,9 +64,9 @@ $(document).ready(function(){
       });
       htmlstr+='</table>';
       //htmlstr='table';
-      $('div.info').html(htmlstr); // в div с классом info выводим получившуюся таблицу с данными
+      // закрыто до разборки 27.01.2020 $('div.info').html(htmlstr); // в div с классом info выводим получившуюся таблицу с данными
    });
-
+   .//
 });
 
 
