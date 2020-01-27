@@ -147,3 +147,42 @@ Stack trace:
 #0 C:\DoorTry\www\index.php(19): require_once()
 #1 {main}
   thrown in C:\DoorTry\www\Main.php on line 22
+[27-Jan-2020 06:05:40 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/Pages/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 28
+[27-Jan-2020 06:08:05 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://kwinflatht.nichost.ru/Pages/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 29
+[27-Jan-2020 06:09:46 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'https://kwinflatht.nichost.ru/Pages/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 29
+[27-Jan-2020 12:14:51 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''***'' (T_CONSTANT_ENCAPSED_STRING) in C:\DoorTry\www\Main.php on line 165
+[27-Jan-2020 12:28:18 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
+[27-Jan-2020 14:12:04 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
+[27-Jan-2020 14:12:04 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
+[27-Jan-2020 14:12:54 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
+[27-Jan-2020 14:13:47 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
+[27-Jan-2020 14:15:03 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
+[27-Jan-2020 14:15:03 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\Findes() in C:\DoorTry\www\Main.php:166
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 166
