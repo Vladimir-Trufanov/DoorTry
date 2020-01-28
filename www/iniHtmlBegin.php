@@ -18,15 +18,18 @@ echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<link rel="icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
 echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
 // Добавляем Google аналитику
-echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
-echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36748654-2"></script>';
-echo '<script>';
-echo '  window.dataLayer = window.dataLayer || [];';
-echo '  function gtag(){dataLayer.push(arguments);}';
-echo "  gtag('js', new Date());";
-echo '';
-echo "  gtag('config', 'UA-36748654-2');";
-echo '</script>';
+if ($_SERVER['HTTP_HOST']=='doortry.ru')
+{
+   echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
+   echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36748654-2"></script>';
+   echo '<script>';
+   echo '  window.dataLayer = window.dataLayer || [];';
+   echo '  function gtag(){dataLayer.push(arguments);}';
+   echo "  gtag('js', new Date());";
+   echo '';
+   echo "  gtag('config', 'UA-36748654-2');";
+   echo '</script>';
+}
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 
      'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
@@ -76,11 +79,11 @@ echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 echo '<script src="/JS/FixLoadTimer.js"></script>';
 echo '<script src="/TJsPrown/TJsPrown.js"></script>';
 // Разворачиваем смартменю
-?> 
-<script>
-MakeSmartMenu();
-</script>
-
+echo '<script> MakeSmartMenu(); </script>';
+// Подключаем яндекс-метрику
+if ($_SERVER['HTTP_HOST']=='doortry.ru')
+{
+echo '
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -96,8 +99,8 @@ MakeSmartMenu();
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/56869024" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-<?php
+';
+}
 echo '</head>';
 echo '<body>';
 //echo '<div id="res">Сообщение</div>';

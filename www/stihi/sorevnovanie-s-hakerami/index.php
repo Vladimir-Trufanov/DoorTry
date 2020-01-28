@@ -7,20 +7,21 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 06.02.2019
+// Copyright © 2019 tve                              Посл.изменение: 28.01.2020
 
 define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
 define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
 define ("Tablet", "Tablet");     // "Устройство, запросившее сайт - планшет"  
 
-// Инициализируем корневой каталог сайта
+// Подключаем файлы библиотеки прикладных модулей:
+$TPhpPrown=$_SERVER['DOCUMENT_ROOT'];
+//$TPhpPrown='https://doortry.ru';
+require_once $TPhpPrown."/TPhpPrown/getAbove.php";
+require_once $TPhpPrown."/TPhpPrown/getSiteDevice.php";
+// Инициализируем корневой каталог, надсайтовый каталог и каталог хостинга
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-// Инициализируем надсайтовый каталог и каталог хостинга
-require_once $SiteRoot."/iGetAbove.php";
-$SiteAbove = iGetAbove($SiteRoot);      // Надсайтовый каталог
-$SiteHost = iGetAbove($SiteAbove);      // Каталог хостинга
-// Подключаем файлы библиотеки прикладных модулей
-require_once $SiteRoot."/TPhpPrown/getSiteDevice.php";
+$SiteAbove=prown\GetAbove($SiteRoot);      // Надсайтовый каталог
+$SiteHost=prown\GetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем собственно вкладываемое стихотворение, как функцию

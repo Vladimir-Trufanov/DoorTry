@@ -219,8 +219,8 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-stihi
-			-sorevnovanie-s-hakerami
+		+stihi
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -284,7 +284,7 @@ DoorTry
 			www\TPhpPrown\ViewSimpleArray.php
 			www\TPhpPrown\пример_регекс.txt
 			www\TPhpPrown\регекс_тест.html
-		-TPhpPrownTests
+		+TPhpPrownTests
 			www\TPhpPrownTests\FinalMessage_test.php
 			www\TPhpPrownTests\Findes_test.php
 			www\TPhpPrownTests\FunctionsBlock.php
@@ -327,27 +327,31 @@ DoorTry
 4=www\Site.php
 5=www\JS\DoorTry.js
 6=www\iniHtmlBegin.php
+7=www\TPhpPrownTests\MakeUserError_test.php
 [Selected Project Files]
 Main=
-Selected=www\JS\DoorTry.js
+Selected=www\TPhpPrownTests\MakeUserError_test.php
 [www\index.php]
 TopLine=11
 Caret=1,1
 [www\Main.php]
-TopLine=69
-Caret=56,48
+TopLine=10
+Caret=1,37
 [www\iniMenu.php]
-TopLine=1
-Caret=66,154
+TopLine=115
+Caret=1,124
 [www\iniTPhpPrown.php]
-TopLine=98
+TopLine=97
 Caret=61,97
 [www\Site.php]
-TopLine=8
+TopLine=22
 Caret=4,49
 [www\JS\DoorTry.js]
 TopLine=47
-Caret=41,67
-[www\iniHtmlBegin.php]
-TopLine=67
 Caret=1,74
+[www\iniHtmlBegin.php]
+TopLine=89
+Caret=1,86
+[www\TPhpPrownTests\MakeUserError_test.php]
+TopLine=35
+Caret=6,58

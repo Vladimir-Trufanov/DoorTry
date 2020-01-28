@@ -13,7 +13,9 @@
 // Обеспечить горизонтальную прокрутку кодов и сверху, и снизу
 // https://www.it-swarm.net/ru/javascript/gorizontalnaya-polosa-prokrutki-sverhu-i-snizu-tablicy/970615983/
 // https://github.com/avianey/jqDoubleScroll
-$(document).ready(function(){
+
+$(document).ready
+(function(){
    $('.CodeText').doubleScroll({resetOnWindowResize:true});
    
    /*
@@ -39,10 +41,12 @@ $(document).ready(function(){
    });
    */
 
+
    // закрыто до разборки 27.01.2020
+   /*
    $.getJSON('get-info.php','contact=12',function(data)
    { // ajax-запрос, данные с сервера запишутся в переменную
-      // закрыто до разборки 27.01.2020 console.log('data: '+data.brat.fio);
+      console.log('data: '+data.brat.fio);
    });
    
    $.get('get-info.php',function(data)
@@ -50,12 +54,12 @@ $(document).ready(function(){
       console.log('data: '+data);
       var arr=JSON.parse(data);
       //alert(arr.brat.fio);
-      // закрыто до разборки 27.01.2020 console.log('brat: '+arr.brat.fio);
+      console.log('brat: '+arr.brat.fio);
       
       var htmlstr='<table>'; i=0;
       $.each(arr,function(rod,rodinfo)
       {  // цикл по сотрудникам
-         // закрыто до разборки 27.01.2020 console.log('i='+i+': '+rod+'-'+rodinfo.fio+'-'+rodinfo.birthday);
+         console.log('i='+i+': '+rod+'-'+rodinfo.fio+'-'+rodinfo.birthday);
          htmlstr+='<tr>';
          htmlstr+='<td>'+rodinfo.fio+'</td>';      // первая колонка - ФИО
          htmlstr+='<td>'+rodinfo.birthday+'</td>'; // вторая колонка - Дата рождения
@@ -64,16 +68,10 @@ $(document).ready(function(){
       });
       htmlstr+='</table>';
       //htmlstr='table';
-      // закрыто до разборки 27.01.2020 $('div.info').html(htmlstr); // в div с классом info выводим получившуюся таблицу с данными
+      $('div.info').html(htmlstr); // в div с классом info выводим получившуюся таблицу с данными
    });
-   .//
+   */
 });
-
-
-
-
-
-
 
 // ************************************************************* DoorTry.js ***
                              
