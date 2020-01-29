@@ -36,7 +36,7 @@
 //      значения указан неверно
 
 //require_once "MakeType.php";
-
+require_once "iniConstMem.php";
 
 define ('avgAll',    0);    // Все массивы
 define ('avgCOOKIE', 1);    // Массив значений $_COOKIE, переданных скрипту через HTTP Cookies
@@ -181,6 +181,13 @@ function ViewGlobal($Parm)
         //echo "<h2>".$Caption."</h2>";
         if (IsSet($_SESSION))
         ViewArr("Переменные сессии, которые доступны для текущего скрипта \$_SESSION",$_SESSION,"\$_SESSION");
+    }
+    
+    elseif ($Parm==avgFILES)
+    {
+        //if (IsSet($_FILES))
+        //ViewArr("Элементы \$_FILES, загруженные в текущий скрипт через метод HTTP POST",$_FILES,"\$_FILES");
+        //else echo 'Нет загруженных файлов!<br>';
     }
 }
 

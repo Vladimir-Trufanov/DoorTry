@@ -218,29 +218,71 @@ foreach($photos as $n=>$img)
 <?php
 */
 
-?>
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Download Images</title>
-</head>
+// define error page
+//$error = 'http://localhost/phpsols/error.php';
+$error = $SiteRoot.'/Pages/Proba/error.php';
+// define the path to the download folder
+$filepath = 'C:/DoorTry/www/Pages/Proba/images/';
+$getfile = NULL;
+// block any attempt to explore the filesystem
+if (isset($_GET['file']) && basename($_GET['file']) == $_GET['file']) 
+{
+   $getfile = $_GET['file'];
+}
+else 
+{
+   echo 'header("Location: $error");';
+   exit;
+}
 
-<body>
-    <p><a href="download.php?file=maiko.jpg">Download image 1</a></p>
-    <p><a href="download.php?file=basin.jpg">Download image 2</a></p>
-    <p><a href="download.php?file=logis.txt">logis.txt</a></p>
-</body>
-</html>
-<?php
+/*
+if ($getfile) 
+{
+   $path = $filepath . $getfile;
+   // check that it exists and is readable
+   if (file_exists($path) && is_readable($path)) 
+   {
+      // send the appropriate headers
+      header('Content-Type: application/octet-stream');
+      header('Content-Length: '. filesize($path));
+      header('Content-Disposition: attachment; filename=' . $getfile);
+      header('Content-Transfer-Encoding: binary');
+   	// open the file in binary read-only mode
+	   // suppress error messages if the file can't be opened
+      $file = @fopen($path, 'r');
+      if ($file) 
+      {
+         // stream the file and exit the script when complete
+         fpassthru($file);
+         exit;
+      }
+         else 
+      {
+         echo '2 header("Location: $error");';
+      }
+	}
+   else 
+   {
+      echo '3 header("Location: $error");';
+	}
+  
+   // 
+   //   // вариант 14-года  
+   //   // output the file content
+   //   readfile($path);
+   //} 
+   //else 
+   //{
+   //   header("Location: $error");
+   //}
+   //
+}
+*/
 //include 'C:/DoorTry/www/Pages/Proba/images/logis.txt'; 
 $c='C:/DoorTry/www/Pages/Proba/images/logis.txt'; 
-$c=$SiteRoot.'/Pages/Proba/images/logis.txt'; 
 $c='C:/DoorTry/www/Pages/Proba/images/getTranslit.php'; 
-$c=$SiteRoot.'/Pages/Proba/images/getTranslit.php'; 
 eval(file_get_contents($c));
-//echo file_get_contents($c);
 echo  prown\getTranslit('вывести сообщение об ошибке на php').'<br>';
-echo 'Завершение до четвертого варианта!<br>';
+echo 'Завершение четвертого варианта!<br>';
 
 // <!-- --> ************************************************* ProbaTest.php ***

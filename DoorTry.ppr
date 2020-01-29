@@ -21,11 +21,11 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
@@ -35,8 +35,22 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			-Proba
+			+Proba
+				-img
+					www\Pages\Proba\img\1580231235.png
+					www\Pages\Proba\img\1580231270.jpeg
+					www\Pages\Proba\img\1580231284.jpeg
+				-TPhpProw
+					www\Pages\Proba\TPhpProw\CtrlArray.php
+					www\Pages\Proba\TPhpProw\CtrlNumber.php
+				www\Pages\Proba\blog.php
+				www\Pages\Proba\contact.php
+				www\Pages\Proba\download.php
+				www\Pages\Proba\error.php
+				www\Pages\Proba\gallery.php
+				www\Pages\Proba\index_01.php
 				www\Pages\Proba\ProbaTest.php
+				www\Pages\Proba\ViewSimpleArray.php
 			-Sshu
 			-TPhpPrown
 				www\Pages\TPhpPrown\dlyaobschego.php
@@ -219,8 +233,8 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+stihi
-			+sorevnovanie-s-hakerami
+		-stihi
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -248,6 +262,10 @@ DoorTry
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
+		-TPhpProw
+			www\TPhpProw\CtrlArray.php
+			www\TPhpProw\CtrlNumber.php
+			www\TPhpProw\NoZero.php
 		-TPhpPrown
 			-fil
 				www\TPhpPrown\fil\.htaccess
@@ -309,6 +327,7 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\log.txt
+		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -321,37 +340,21 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\iniMenu.php
-3=www\iniTPhpPrown.php
-4=www\Site.php
-5=www\JS\DoorTry.js
-6=www\iniHtmlBegin.php
-7=www\TPhpPrownTests\MakeUserError_test.php
+1=www\Pages\Proba\ProbaTest.php
+2=www\Pages\Proba\download.php
+3=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\TPhpPrownTests\MakeUserError_test.php
+Selected=www\Main.php
 [www\index.php]
 TopLine=11
 Caret=1,1
+[www\Pages\Proba\ProbaTest.php]
+TopLine=223
+Caret=1,243
+[www\Pages\Proba\download.php]
+TopLine=273
+Caret=3,280
 [www\Main.php]
-TopLine=10
-Caret=1,37
-[www\iniMenu.php]
-TopLine=115
-Caret=1,124
-[www\iniTPhpPrown.php]
-TopLine=97
-Caret=61,97
-[www\Site.php]
-TopLine=22
-Caret=4,49
-[www\JS\DoorTry.js]
-TopLine=47
-Caret=1,74
-[www\iniHtmlBegin.php]
-TopLine=89
-Caret=1,86
-[www\TPhpPrownTests\MakeUserError_test.php]
-TopLine=35
-Caret=6,58
+TopLine=5
+Caret=1,1

@@ -1,1 +1,13 @@
 [27-Jan-2020 20:40:07 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/iniCurrStih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 42
+[28-Jan-2020 23:11:45 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'DOCUMENT_ROOT' (T_STRING) in C:\DoorTry\www\Main.php on line 41
+[28-Jan-2020 23:15:47 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\NoZero() in C:\DoorTry\www\Main.php:36
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 36
+[28-Jan-2020 23:26:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\NoZero() in C:\DoorTry\www\Main.php:36
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 36
+[29-Jan-2020 20:45:32 Asia/Kuwait] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\DoorTry\www\TPhpPrown\Findes.php on line 2

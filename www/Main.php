@@ -30,6 +30,13 @@ require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
+
+
+//require_once 'http://localhost:82/TPhpProw/NoZero.php';
+//prown\NoZero(5);
+
+
+
 // Инициализируем корневой каталог, надсайтовый каталог и каталог хостинга
 $SiteRoot=$_SERVER['DOCUMENT_ROOT'];
 $SiteAbove=prown\GetAbove($SiteRoot);      // Надсайтовый каталог
