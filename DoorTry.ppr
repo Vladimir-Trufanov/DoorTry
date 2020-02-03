@@ -35,24 +35,12 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			+Proba
-				-img
-					www\Pages\Proba\img\1580231235.png
-					www\Pages\Proba\img\1580231270.jpeg
-					www\Pages\Proba\img\1580231284.jpeg
-				-TPhpProw
-					www\Pages\Proba\TPhpProw\CtrlArray.php
-					www\Pages\Proba\TPhpProw\CtrlNumber.php
-				www\Pages\Proba\blog.php
-				www\Pages\Proba\contact.php
-				www\Pages\Proba\download.php
-				www\Pages\Proba\error.php
-				www\Pages\Proba\gallery.php
-				www\Pages\Proba\index_01.php
+			-Proba
+				www\Pages\Proba\log.txt
 				www\Pages\Proba\ProbaTest.php
-				www\Pages\Proba\ViewSimpleArray.php
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
+				www\Pages\TPhpPrown\dispTPhpPrown.php
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
@@ -60,6 +48,7 @@ DoorTry
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
 				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
+				www\Pages\TPhpPrown\viewTPhpPrown.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 		-qrcode
@@ -87,144 +76,6 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-simpletest
-			-docs
-				-en
-					www\simpletest\docs\en\authentication_documentation.html
-					www\simpletest\docs\en\browser_documentation.html
-					www\simpletest\docs\en\docs.css
-					www\simpletest\docs\en\expectation_documentation.html
-					www\simpletest\docs\en\form_testing_documentation.html
-					www\simpletest\docs\en\group_test_documentation.html
-					www\simpletest\docs\en\index.html
-					www\simpletest\docs\en\mock_objects_documentation.html
-					www\simpletest\docs\en\overview.html
-					www\simpletest\docs\en\partial_mocks_documentation.html
-					www\simpletest\docs\en\reporter_documentation.html
-					www\simpletest\docs\en\unit_test_documentation.html
-					www\simpletest\docs\en\web_tester_documentation.html
-				-fr
-					www\simpletest\docs\fr\authentication_documentation.html
-					www\simpletest\docs\fr\browser_documentation.html
-					www\simpletest\docs\fr\docs.css
-					www\simpletest\docs\fr\expectation_documentation.html
-					www\simpletest\docs\fr\form_testing_documentation.html
-					www\simpletest\docs\fr\group_test_documentation.html
-					www\simpletest\docs\fr\index.html
-					www\simpletest\docs\fr\mock_objects_documentation.html
-					www\simpletest\docs\fr\overview.html
-					www\simpletest\docs\fr\partial_mocks_documentation.html
-					www\simpletest\docs\fr\reporter_documentation.html
-					www\simpletest\docs\fr\unit_test_documentation.html
-					www\simpletest\docs\fr\web_tester_documentation.html
-			-extensions
-				-testdox
-					www\simpletest\extensions\testdox\test.php
-				www\simpletest\extensions\pear_test_case.php
-				www\simpletest\extensions\testdox.php
-			-test
-				-site
-					www\simpletest\test\site\file.html
-				-support
-					-collector
-						www\simpletest\test\support\collector\collectable.1
-						www\simpletest\test\support\collector\collectable.2
-					www\simpletest\test\support\empty_test_file.php
-					www\simpletest\test\support\failing_test.php
-					www\simpletest\test\support\latin1_sample
-					www\simpletest\test\support\passing_test.php
-					www\simpletest\test\support\spl_examples.php
-					www\simpletest\test\support\supplementary_upload_sample.txt
-					www\simpletest\test\support\test1.php
-					www\simpletest\test\support\upload_sample.txt
-				www\simpletest\test\acceptance_test.php
-				www\simpletest\test\adapter_test.php
-				www\simpletest\test\all_tests.php
-				www\simpletest\test\authentication_test.php
-				www\simpletest\test\autorun_test.php
-				www\simpletest\test\bad_test_suite.php
-				www\simpletest\test\browser_test.php
-				www\simpletest\test\collector_test.php
-				www\simpletest\test\command_line_test.php
-				www\simpletest\test\compatibility_test.php
-				www\simpletest\test\cookies_test.php
-				www\simpletest\test\detached_test.php
-				www\simpletest\test\dumper_test.php
-				www\simpletest\test\eclipse_test.php
-				www\simpletest\test\encoding_test.php
-				www\simpletest\test\errors_test.php
-				www\simpletest\test\exceptions_test.php
-				www\simpletest\test\expectation_test.php
-				www\simpletest\test\form_test.php
-				www\simpletest\test\frames_test.php
-				www\simpletest\test\http_test.php
-				www\simpletest\test\interfaces_test.php
-				www\simpletest\test\interfaces_test_php5_1.php
-				www\simpletest\test\live_test.php
-				www\simpletest\test\mock_objects_test.php
-				www\simpletest\test\page_test.php
-				www\simpletest\test\parse_error_test.php
-				www\simpletest\test\parsing_test.php
-				www\simpletest\test\php_parser_test.php
-				www\simpletest\test\reflection_php4_test.php
-				www\simpletest\test\reflection_php5_test.php
-				www\simpletest\test\remote_test.php
-				www\simpletest\test\shell_test.php
-				www\simpletest\test\shell_tester_test.php
-				www\simpletest\test\simpletest_test.php
-				www\simpletest\test\socket_test.php
-				www\simpletest\test\tag_test.php
-				www\simpletest\test\test_with_parse_error.php
-				www\simpletest\test\unit_tester_test.php
-				www\simpletest\test\unit_tests.php
-				www\simpletest\test\url_test.php
-				www\simpletest\test\user_agent_test.php
-				www\simpletest\test\visual_test.php
-				www\simpletest\test\web_tester_test.php
-				www\simpletest\test\xml_test.php
-			www\simpletest\_OLDreporter.php
-			www\simpletest\authentication.php
-			www\simpletest\autorun.php
-			www\simpletest\browser.php
-			www\simpletest\collector.php
-			www\simpletest\compatibility.php
-			www\simpletest\cookies.php
-			www\simpletest\default_reporter.php
-			www\simpletest\detached.php
-			www\simpletest\dumper.php
-			www\simpletest\eclipse.php
-			www\simpletest\encoding.php
-			www\simpletest\errors.php
-			www\simpletest\exceptions.php
-			www\simpletest\expectation.php
-			www\simpletest\form.php
-			www\simpletest\frames.php
-			www\simpletest\HELP_MY_TESTS_DONT_WORK_ANYMORE
-			www\simpletest\http.php
-			www\simpletest\invoker.php
-			www\simpletest\LICENSE
-			www\simpletest\mock_objects.php
-			www\simpletest\page.php
-			www\simpletest\php_parser.php
-			www\simpletest\README
-			www\simpletest\reflection_php4.php
-			www\simpletest\reflection_php5.php
-			www\simpletest\remote.php
-			www\simpletest\reporter.php
-			www\simpletest\scorer.php
-			www\simpletest\selector.php
-			www\simpletest\shell_tester.php
-			www\simpletest\simpletest.php
-			www\simpletest\socket.php
-			www\simpletest\tag.php
-			www\simpletest\test_case.php
-			www\simpletest\tidy_parser.php
-			www\simpletest\unit_tester.php
-			www\simpletest\url.php
-			www\simpletest\user_agent.php
-			www\simpletest\VERSION
-			www\simpletest\web_tester.php
-			www\simpletest\xml.php
 		-SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\jquery.smartmenus.min.js
@@ -259,58 +110,13 @@ DoorTry
 		-TDoorTryer
 			www\TDoorTryer\DoorTryerMessage.php
 			www\TDoorTryer\DoorTryerPage.php
+			www\TDoorTryer\LICENSE
 		-TJsPrown
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
-		-TPhpProw
-			www\TPhpProw\CtrlArray.php
-			www\TPhpProw\CtrlNumber.php
-			www\TPhpProw\NoZero.php
-		-TPhpPrown
-			-fil
-				www\TPhpPrown\fil\.htaccess
-			www\TPhpPrown\CtrlArray.php
-			www\TPhpPrown\CtrlNumber.php
-			www\TPhpPrown\Findes.php
-			www\TPhpPrown\getAbove.php
-			www\TPhpPrown\getSiteDevice.php
-			www\TPhpPrown\getTranslit.php
-			www\TPhpPrown\iniConstMem.php
-			www\TPhpPrown\iniErrMessage.php
-			www\TPhpPrown\iniRegExp.php
-			www\TPhpPrown\isCalcInBrowser.php
-			www\TPhpPrown\isCookie.php
-			www\TPhpPrown\isCountArrays.php
-			www\TPhpPrown\isSubstrInUri.php
-			www\TPhpPrown\iViewArray.php
-			www\TPhpPrown\LICENSE
-			www\TPhpPrown\MakeCookie.php
-			www\TPhpPrown\MakeParm.php
-			www\TPhpPrown\MakeRegExp.php
-			www\TPhpPrown\MakeSession.php
-			www\TPhpPrown\MakeType.php
-			www\TPhpPrown\MakeUserError.php
-			www\TPhpPrown\Mobile_Detect.php
-			www\TPhpPrown\NoZero.php
-			www\TPhpPrown\Number1string.php
-			www\TPhpPrown\Number2string.php
-			www\TPhpPrown\PullArray.php
-			www\TPhpPrown\SqueezeArrays.php
-			www\TPhpPrown\StringFilters.php
-			www\TPhpPrown\TestNumerical.php
-			www\TPhpPrown\ViewGlobal.php
-			www\TPhpPrown\ViewSimpleArray.php
-			www\TPhpPrown\пример_регекс.txt
-			www\TPhpPrown\регекс_тест.html
-		+TPhpPrownTests
-			www\TPhpPrownTests\FinalMessage_test.php
-			www\TPhpPrownTests\Findes_test.php
-			www\TPhpPrownTests\FunctionsBlock.php
-			www\TPhpPrownTests\isCalcInBrowser_test.php
-			www\TPhpPrownTests\MakeType_test.php
-			www\TPhpPrownTests\MakeUserError_test.php
 		www\.htaccess
 		www\.user.ini
+		www\Common.php
 		www\ComRequest.php
 		www\DebugError.php
 		www\DebugTimer.php
@@ -321,11 +127,13 @@ DoorTry
 		www\includErrs.php
 		www\index.php
 		www\iniCurrStih.php
+		www\iniErrDoorTry.php
 		www\iniHtmlBegin.php
 		www\iniHtmlEnd.php
 		www\iniMem.php
 		www\iniMenu.php
 		www\iniTPhpPrown.php
+		www\iniWorkSpace.php
 		www\log.txt
 		www\logis.txt
 		www\Main.php
@@ -340,21 +148,37 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\index.php
-1=www\Pages\Proba\ProbaTest.php
-2=www\Pages\Proba\download.php
-3=www\Main.php
+1=www\Main.php
+2=www\iniTPhpPrown.php
+3=www\Common.php
+4=www\Pages\TPhpPrown\viewTPhpPrown.php
+5=www\iniMem.php
+6=www\iniErrDoorTry.php
+7=www\Pages\TPhpPrown\dispTPhpPrown.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Pages\TPhpPrown\viewTPhpPrown.php
 [www\index.php]
-TopLine=11
-Caret=1,1
-[www\Pages\Proba\ProbaTest.php]
-TopLine=223
-Caret=1,243
-[www\Pages\Proba\download.php]
-TopLine=273
-Caret=3,280
-[www\Main.php]
 TopLine=5
+Caret=1,33
+[www\Main.php]
+TopLine=33
+Caret=1,26
+[www\iniTPhpPrown.php]
+TopLine=39
+Caret=1,46
+[www\Common.php]
+TopLine=37
+Caret=1,54
+[www\Pages\TPhpPrown\viewTPhpPrown.php]
+TopLine=59
+Caret=38,112
+[www\iniMem.php]
+TopLine=17
 Caret=1,1
+[www\iniErrDoorTry.php]
+TopLine=15
+Caret=1,16
+[www\Pages\TPhpPrown\dispTPhpPrown.php]
+TopLine=7
+Caret=1,23

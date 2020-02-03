@@ -1,57 +1,14 @@
 <?php
-// PHP7                                               *** dispTPhpPrown.php ***
+// PHP7                                               *** viewTPhpPrown.php ***
 
 // ****************************************************************************
-// * DoorTry-TPhpPrown                            Диспетчер страниц TPhpPrown *
+// * DoorTry-TPhpPrown         Вывод в браузер управляемой страницы TPhpPrown *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 02.02.2020
+// Copyright © 2019 tve                              Посл.изменение: 03.02.2020
 
-function DispatchTPhpPrown()
-{
-   // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
-   require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
-   $_WORKSPACE=iniWorkSpace();
-   $SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
-   $SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
-   $SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
-   $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
-   $UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
-   // Подключаем файлы библиотеки прикладных модулей:
-   $TPhpPrown=$SiteHost.'/TPhpPrown';
-   require_once $TPhpPrown."/TPhpPrown/Findes.php";
-   require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
-   require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
-   require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-   require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
-   require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
-   require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
-   // Определяем страничные константы
-   define ("Script", "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
-   define ("WasTest", "WasTest");   // "Тест уже запускался"
-   // Подгружаем рабочие модули
-  // require_once($SiteRoot.'/TPhpPrownTests/FunctionsBlock.php');
-   echo 'DispatchTPhpPrown()';
-}
-
-require_once $_SERVER['DOCUMENT_ROOT']."/TDoorTryer/DoorTryerPage.php";
-try 
-{
-   DispatchTPhpPrown();
-}
-catch (E_EXCEPTION $e) 
-{
-   DoorTryPage($e);
-}
-
-
-
-
-
-/*
-// Формируем часть страницы с описанием функции
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -153,7 +110,7 @@ $Result  - найденный фрагментов после работы ре�
 <?php
 // Загружаем в страницу код функции
 echo '<div class="CodeText">';
-$FileSpec=$SiteRoot.'/TPhpPrown/Findes.php';
+$FileSpec=$TPhpPrown.'/TPhpPrown/Findes.php';
 $FileContent=file_get_contents($FileSpec);
 //echo mb_detect_encoding($FileContent).'<br>';
 //echo '---<br>'.$FileContent.'<br>---<br>';
@@ -198,5 +155,4 @@ if ($SiteDevice==Computer)
 }
 ?>
 <?php
-*/
-// <!-- --> ********************************************* dispTPhpPrown.php ***
+// <!-- --> ********************************************* viewTPhpPrown.php ***

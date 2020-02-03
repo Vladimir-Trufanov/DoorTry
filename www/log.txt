@@ -1,13 +1,31 @@
-[27-Jan-2020 20:40:07 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/iniCurrStih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 42
-[28-Jan-2020 23:11:45 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'DOCUMENT_ROOT' (T_STRING) in C:\DoorTry\www\Main.php on line 41
-[28-Jan-2020 23:15:47 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\NoZero() in C:\DoorTry\www\Main.php:36
+[02-Feb-2020 06:57:44 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/TPhpPrown/Findes.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 24
+[02-Feb-2020 07:11:31 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/TPhpPrown/getAbove.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 24
+[02-Feb-2020 07:12:12 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpPrown/TPhpPrown/getSiteDevice.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 24
+[03-Feb-2020 15:27:20 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 40
+[03-Feb-2020 15:31:59 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 40
+[03-Feb-2020 15:35:01 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 40
+[03-Feb-2020 15:36:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 40
+[03-Feb-2020 15:38:18 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 52
+[03-Feb-2020 15:40:02 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 54
+[03-Feb-2020 15:40:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 54
+[03-Feb-2020 15:41:47 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 56
+[03-Feb-2020 15:43:01 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function isComRequest() in C:\DoorTry\www\Main.php:48
 Stack trace:
 #0 C:\DoorTry\www\index.php(19): require_once()
 #1 {main}
-  thrown in C:\DoorTry\www\Main.php on line 36
-[28-Jan-2020 23:26:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\NoZero() in C:\DoorTry\www\Main.php:36
+  thrown in C:\DoorTry\www\Main.php on line 48
+[03-Feb-2020 15:43:38 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getComRequest() in C:\DoorTry\www\Pages\News\MakeNews.php:84
 Stack trace:
-#0 C:\DoorTry\www\index.php(19): require_once()
-#1 {main}
-  thrown in C:\DoorTry\www\Main.php on line 36
-[29-Jan-2020 20:45:32 Asia/Kuwait] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\DoorTry\www\TPhpPrown\Findes.php on line 2
+#0 C:\DoorTry\www\iniHtmlBegin.php(70): getNews()
+#1 C:\DoorTry\www\Main.php(89): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\Pages\News\MakeNews.php on line 84
+[03-Feb-2020 15:45:36 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 40
+[03-Feb-2020 15:48:31 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 28
+[03-Feb-2020 15:57:46 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 48
+[03-Feb-2020 15:59:25 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 48
+[03-Feb-2020 16:00:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 48
+[03-Feb-2020 16:01:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 58
+[03-Feb-2020 16:02:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 58
+[03-Feb-2020 16:03:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 48

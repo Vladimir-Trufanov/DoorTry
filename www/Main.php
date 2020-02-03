@@ -9,42 +9,28 @@
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
 // Copyright © 2019 tve                              Посл.изменение: 27.01.2020
-      
+
+// Инициализируем рабочее пространство: корневой каталог сайта и т.д.
+require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
+$_WORKSPACE=iniWorkSpace();
+$SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
+$SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
+$SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
+$SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
+$UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
 // Подключаем файлы библиотеки прикладных модулей:
-// а) директива Allow_url_include позволяет использоваnm обертки Fopen, 
-// которые поддерживают работу с URL, в функциях Include, Include_once, 
-// Require, Require_once. Директива Allow_url_include требует включения 
-// опции Allow_url_fopen;
-// б) директива Allow_url_fopen включает поддержку оберток URL (URL wrappers), 
-// которые позволяют работать с объектами URL, как с обычными файлами. Обертки,
-// доступные по умолчанию, служат для работы с удаленными файлами с 
-// использованием Ftp или Http протокола.
-$TPhpPrown=$_SERVER['DOCUMENT_ROOT'];
-//$TPhpPrown='https://doortry.ru';
+$TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/Findes.php";
-require_once $TPhpPrown."/TPhpPrown/getAbove.php";
-require_once $TPhpPrown."/TPhpPrown/getSiteDevice.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
 require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
 require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
-
-
-//require_once 'http://localhost:82/TPhpProw/NoZero.php';
-//prown\NoZero(5);
-
-
-
-// Инициализируем корневой каталог, надсайтовый каталог и каталог хостинга
-$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-$SiteAbove=prown\GetAbove($SiteRoot);      // Надсайтовый каталог
-$SiteHost=prown\GetAbove($SiteAbove);      // Каталог хостинга
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 
-require_once $SiteRoot."/ComRequest.php";
+require_once $SiteRoot."/Common.php";
 //require_once $SiteRoot."/DebugError.php";
 require_once $SiteRoot."/iniCurrStih.php";
 require_once $SiteRoot."/iniTPhpPrown.php";

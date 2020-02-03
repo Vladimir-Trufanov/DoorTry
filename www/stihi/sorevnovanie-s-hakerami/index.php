@@ -9,19 +9,16 @@
 //                                                   Дата создания:  07.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 28.01.2020
 
-define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
-define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
-define ("Tablet", "Tablet");     // "Устройство, запросившее сайт - планшет"  
-
+// Инициализируем рабочее пространство: корневой каталог сайта и т.д.
+require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
+$_WORKSPACE=iniWorkSpace();
+$SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
+$SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
+$SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
+$SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
 // Подключаем файлы библиотеки прикладных модулей:
-$TPhpPrown=$_SERVER['DOCUMENT_ROOT'];
-//$TPhpPrown='https://doortry.ru';
-require_once $TPhpPrown."/TPhpPrown/getAbove.php";
-require_once $TPhpPrown."/TPhpPrown/getSiteDevice.php";
-// Инициализируем корневой каталог, надсайтовый каталог и каталог хостинга
-$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
-$SiteAbove=prown\GetAbove($SiteRoot);      // Надсайтовый каталог
-$SiteHost=prown\GetAbove($SiteAbove);      // Каталог хостинга
+$TPhpPrown=$SiteHost.'/TPhpPrown';
+require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем собственно вкладываемое стихотворение, как функцию
@@ -30,7 +27,6 @@ require_once $SiteRoot."/stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.p
 //session_start();
 $oStihiStarter = new PageStarter('Stihi');
 // Формируем страницу окружения стихотворения
-$SiteDevice=prown\getSiteDevice();  // 'Computer','Mobile','Tablet'
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
