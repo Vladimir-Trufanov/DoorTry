@@ -20,6 +20,7 @@ $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
 $UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
 // Подключаем файлы библиотеки прикладных модулей:
 $TPhpPrown=$SiteHost.'/TPhpPrown';
+require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
 require_once $TPhpPrown."/TPhpPrown/Findes.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
 require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
@@ -45,7 +46,7 @@ require_once $SiteRoot."/Pages/News/WithImgTape.php";
 $oMainStarter = new PageStarter('Main');
 require_once $SiteRoot."/iniMem.php"; 
 // Подключаем нужную главную страницу
-if (isComRequest(prown\getTranslit(ConnHandler),'list'))
+if (prown\isComRequest(prown\getTranslit(ConnHandler),'list'))
 {
    require $SiteRoot.'/Pages/DoorTry/ConnHandler.php';
 }
@@ -77,7 +78,7 @@ if ($c_PersName<>$c_UserName)
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 // Если поступил запрос на пробную страницу, то запускаем её
-else if (isComRequest('proba','list')) 
+else if (prown\isComRequest('proba','list')) 
 {
    $page='/Pages/Proba/ProbaTest.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);

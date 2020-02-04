@@ -12,7 +12,7 @@
 function MakeStihi($SiteRoot,$SiteDevice)
 {
    // Определяем каталог страницы со стихотворением (где есть index.php)
-   $StihoPage=getComRequest('stihi');  // sorevnovanie-s-hakerami
+   $StihoPage=prown\getComRequest('stihi');  // sorevnovanie-s-hakerami
    $page='/stihi/'.$StihoPage;
    // Запускаем сценарий стихотворения, отправляя заголовок страницы
    /*

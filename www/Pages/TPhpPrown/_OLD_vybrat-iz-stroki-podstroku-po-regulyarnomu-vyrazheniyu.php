@@ -8,24 +8,20 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 04.02.2020
+// Copyright © 2019 tve                              Посл.изменение: 16.12.2019
 
-function SeoTags()
-{
-   echo '<title>Findes - выбрать из строки подстроку, соответствующую регулярному выражению</title>';
-   echo '<meta name="description" content=
-"Findes выбирает из строки подстроку по заданному регулярному выражению и узнаёт
-её начальную позицию в этой строке. Функция возвращает первое или единственное 
-вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку">';
-   echo '<meta name="keywords" content=
-"findes,выбрать соответствующую регулярному выражению подстроку,
-принцип DO-or-TRY, делай или пробуй,TPhpPrown">';
-}
-
-
+// Определяем страничные константы
+define ("Script", "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
+define ("Computer", "Computer"); // "Устройство, запросившее сайт - компьютер"  
+define ("Mobile", "Mobile");     // "Устройство, запросившее сайт - смартфон"  
+define ("WasTest", "WasTest");   // "Тест уже запускался"
+// Инициализируем корневой каталог 
+$SiteRoot=$_SERVER['DOCUMENT_ROOT'];
+// Подгружаем рабочие модули
+require_once($SiteRoot.'/TPhpPrown/getSiteDevice.php');
+require_once($SiteRoot.'/TPhpPrownTests/FunctionsBlock.php');
+$SiteDevice=prown\getSiteDevice();       // 'Computer','Mobile','Tablet'
 // Формируем часть страницы с описанием функции
-function prb()
-{
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -172,5 +168,4 @@ if ($SiteDevice==Computer)
 }
 ?>
 <?php
-}
 // <!-- --> **** vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php ***

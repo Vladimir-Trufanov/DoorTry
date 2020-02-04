@@ -100,7 +100,7 @@ function TopMenu()
    // Формируем смарт-меню
    echo '<ul id="main-menu" class="sm sm-doortry">';
    // Переключаем пункты меню главных материалов сайта
-   if (isComRequest(prown\getTranslit(ConnHandler),'list'))
+   if (prown\isComRequest(prown\getTranslit(ConnHandler),'list'))
    {
       echo '<li>';
       // Для основного и контрольного сайтов выводим краткий URL

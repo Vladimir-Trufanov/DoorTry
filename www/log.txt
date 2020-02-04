@@ -29,3 +29,40 @@ Stack trace:
 [03-Feb-2020 16:01:12 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 58
 [03-Feb-2020 16:02:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 58
 [03-Feb-2020 16:03:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting '{' in C:\DoorTry\www\Common.php on line 48
+[04-Feb-2020 14:16:01 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function isComRequest() in C:\DoorTry\www\Main.php:48
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 48
+[04-Feb-2020 14:17:59 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function isComRequest() in C:\DoorTry\www\Main.php:81
+Stack trace:
+#0 C:\DoorTry\www\index.php(19): require_once()
+#1 {main}
+  thrown in C:\DoorTry\www\Main.php on line 81
+[04-Feb-2020 14:18:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function isComRequest() in C:\DoorTry\www\Pages\DoorTry\SimPrincip.php:22
+Stack trace:
+#0 C:\DoorTry\www\iniHtmlBegin.php(52): SeoTags()
+#1 C:\DoorTry\www\Main.php(90): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\Pages\DoorTry\SimPrincip.php on line 22
+[04-Feb-2020 14:19:38 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getComRequest() in C:\DoorTry\www\Pages\News\MakeNews.php:84
+Stack trace:
+#0 C:\DoorTry\www\iniHtmlBegin.php(70): getNews()
+#1 C:\DoorTry\www\Main.php(90): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\Pages\News\MakeNews.php on line 84
+[04-Feb-2020 14:20:25 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function isComRequest() in C:\DoorTry\www\iniMenu.php:103
+Stack trace:
+#0 C:\DoorTry\www\Site.php(24): TopMenu()
+#1 C:\DoorTry\www\Main.php(100): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\iniMenu.php on line 103
+[04-Feb-2020 14:21:37 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getComRequest() in C:\DoorTry\www\stihi\MakeStihi.php:15
+Stack trace:
+#0 C:\DoorTry\www\Main.php(79): MakeStihi('C:\\DoorTry\\www', 'Computer')
+#1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\stihi\MakeStihi.php on line 15

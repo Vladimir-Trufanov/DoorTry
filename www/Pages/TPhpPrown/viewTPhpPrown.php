@@ -9,21 +9,13 @@
 //                                                   Дата создания:  07.12.2019
 // Copyright © 2019 tve                              Посл.изменение: 03.02.2020
 
-?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Findes - выбрать из строки подстроку, соответствующую регулярному выражению</title>
-<meta name="description" content=
-"Findes выбирает из строки подстроку по заданному регулярному выражению и узнаёт
-её начальную позицию в этой строке. Функция возвращает первое или единственное 
-вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку">
-<meta name="keywords" content=
-"findes,выбрать соответствующую регулярному выражению подстроку,
-принцип DO-or-TRY, делай или пробуй,TPhpPrown">
+echo '<!DOCTYPE html>';
+echo '<html lang="ru">';
+echo '<head>';
+echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+SeoTags();
 
-<?php
+/*
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 
      'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
@@ -86,6 +78,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+
 <div class="TPhpPrown">
 <h4 id="findes">Findes - выбрать из строки подстроку, соответствующую регулярному выражению.</h4>
 <h5><span class="letter">Ф</span>ункция выполняет конкретную и часто возникающую задачу - выбрать из строки подстроку по заданному регулярному выражению и узнать её начальную позицию в этой строке.</h5> 
@@ -155,4 +148,5 @@ if ($SiteDevice==Computer)
 }
 ?>
 <?php
+*/
 // <!-- --> ********************************************* viewTPhpPrown.php ***

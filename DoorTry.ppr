@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -39,9 +39,11 @@ DoorTry
 				www\Pages\Proba\log.txt
 				www\Pages\Proba\ProbaTest.php
 			-Sshu
-			+TPhpPrown
+			-TPhpPrown
+				www\Pages\TPhpPrown\_OLD_vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\dispTPhpPrown.php
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
@@ -148,37 +150,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\index.php
-1=www\Main.php
-2=www\iniTPhpPrown.php
-3=www\Common.php
-4=www\Pages\TPhpPrown\viewTPhpPrown.php
-5=www\iniMem.php
-6=www\iniErrDoorTry.php
-7=www\Pages\TPhpPrown\dispTPhpPrown.php
+1=www\Pages\TPhpPrown\viewTPhpPrown.php
+2=www\Pages\TPhpPrown\dispTPhpPrown.php
+3=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+4=www\Pages\DoorTry\SimPrincip.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\viewTPhpPrown.php
+Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [www\index.php]
 TopLine=5
 Caret=1,33
-[www\Main.php]
-TopLine=33
-Caret=1,26
-[www\iniTPhpPrown.php]
-TopLine=39
-Caret=1,46
-[www\Common.php]
-TopLine=37
-Caret=1,54
 [www\Pages\TPhpPrown\viewTPhpPrown.php]
-TopLine=59
-Caret=38,112
-[www\iniMem.php]
-TopLine=17
-Caret=1,1
-[www\iniErrDoorTry.php]
-TopLine=15
-Caret=1,16
-[www\Pages\TPhpPrown\dispTPhpPrown.php]
 TopLine=7
-Caret=1,23
+Caret=1,18
+[www\Pages\TPhpPrown\dispTPhpPrown.php]
+TopLine=45
+Caret=6,56
+[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
+TopLine=9
+Caret=1,14
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=9
+Caret=1,30

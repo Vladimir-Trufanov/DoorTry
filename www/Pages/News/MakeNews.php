@@ -81,7 +81,7 @@ function isNews($News)
 function getNews()
 {
    global $s_NameNews; 
-   $ret=getComRequest('novosti');
+   $ret=prown\getComRequest('novosti');
    //echo '$ret='.$ret.'<br>';
    if ($ret==NULL) $Result=False;
    else

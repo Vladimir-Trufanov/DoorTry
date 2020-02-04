@@ -19,7 +19,7 @@ function SeoTags()
    echo '<meta name="description" content="Простой принцип программирования DO-or-TRY с автоматическим выводом и комментированием ошибок на сайте">';
    echo '<meta name="keywords" content="система обработки ошибок (и исключений) на PHP, '.
       'автоматический вывод ошибок на сайт, #doortry">';
-   if (isComRequest(prown\getTranslit(SimPrincip),'list'))
+   if (prown\isComRequest(prown\getTranslit(SimPrincip),'list'))
    {
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
