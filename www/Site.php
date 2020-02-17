@@ -33,7 +33,7 @@ echo '<div class="pageWrapper">';
             //echo  prown\getTranslit('вывести сообщение об ошибке на php').'<br>';
             //phpinfo();
             //DebugError();
-            PageContent();
+            PageContent($SiteHost);
          echo '</article>';
          echo '<aside class="RightBar">';
             Stih();

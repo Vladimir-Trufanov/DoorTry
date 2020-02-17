@@ -66,3 +66,7 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(19): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\stihi\MakeStihi.php on line 15
+[17-Feb-2020 12:02:59 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iGetAbove.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\MainDoorTry.php on line 24
+[17-Feb-2020 12:18:10 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iGetAbove.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\MainDoorTry.php on line 24
+[17-Feb-2020 12:32:08 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iGetAbove.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\MainDoorTry.php on line 24
+[17-Feb-2020 14:50:49 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'iGetAbove.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\MainDoorTry.php on line 24

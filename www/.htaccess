@@ -62,7 +62,7 @@ RewriteEngine On
 RewriteRule ^home$ index.php [L]
 RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
 RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
-## Преобразовываем URL-запросы на функции TPhpPrown
+## Преобразовываем URL-запросы на страницы функций TPhpPrown
 RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/$1.php [L]
 ## Преобразовываем URL-запросы новостных страниц
 RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]

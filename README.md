@@ -55,7 +55,7 @@
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 ***
 **setcookie() expects parameter 3 to be integer, string given**  
-  
+
 
     File: /home/kwinflatht/TPhpPrown/MakeCookie.php  
     Line: 16  
@@ -137,7 +137,7 @@ MakeCookie на сайте
 ***
 **Cannot redeclare prown\_MakeCookie() (previously declared**   
 
-      
+
     File: C:\TPhpPrown\MakeCookie.php  
     Line: 56  
       
@@ -172,7 +172,7 @@ MakeCookie на сайте
 
 ***
 **Undefined index: BrowEntry**  
-  
+
 
     File: C:\DoorTry\www\Inimem.php  
     Line: 35  
@@ -196,7 +196,7 @@ MakeCookie на сайте
 
     File: C:\TPhpTools\TPageStarter\PageStarterClass.php
     Line: 34
-
+    
     E_ERROR [SHT]
     Stack trace:
     #0 C:\DoorTry\www\Main.php(46): PageStarter->__construct('doortry.ru')
@@ -226,7 +226,7 @@ MakeCookie на сайте
 
     File: C:\DoorTry\www\Pages\News\SimpleTape.php
     Line: 23
-
+    
     E_WARNING [HND]
     #0 C:\DoorTry\www\Pages\News\MakeNews.php(125): SimpleTape('http://www.stol...', '8')
     #1 C:\DoorTry\www\Site.php(46): NewsView(true, '1', '8', 'stolica-na-oneg...')
@@ -239,7 +239,7 @@ MakeCookie на сайте
     "SimpleTape.php"
     22 $url="http://www.stolica.onego.ru/rss.php/feed.xml";
     23 $rss = simplexml_load_file($url);
-    
+
 Что было:
 ***Ошибка или истекло время ожидания при открытии новостной ленты***
 
@@ -252,8 +252,9 @@ MakeCookie на сайте
        if ($_SERVER['HTTP_HOST']=='doortry.ru') $Result=true;
        return $Result;
     }
-    
-    
+
+
+​    
     [PHP] syntax error, unexpected ';', expecting '{'
     
     File: C:\DoorTry\www\Common.php
@@ -262,6 +263,20 @@ MakeCookie на сайте
     E_PARSE [SHT]
 
 долго не мог понять ошибку - видел точку с запятой и не понимал что это ошибка - глаза были запривычены
+
+еще ошибка
+
+[PHP] Methods with the same name as their class will not be constructors in a future version of PHP; TestSuite has a deprecated constructor
+
+File: C:\TSimpleTest\test_case.php
+Line: 476
+
+E_DEPRECATED [HND]
+#0 C:\TSimpleTest\autorun.php(12): require_once('C:\\TSimpleTest\\...')
+#1 C:\TPhpPrown\TPhpPrownTests\FunctionsBlock.php(96): require_once('C:\\TSimpleTest\\...')
+#2 C:\TPhpPrown\www\Main.php(97): MakeTest('C:\\TPhpPrown\\ww...', Array)
+#3 C:\TPhpPrown\www\index.php(24): require_once('C:\\TPhpPrown\\ww...')
+#4 {main}
 
 ###### [к содержанию](#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5)
 

@@ -43,7 +43,7 @@ function TPhpPrownMenu()
       else
       {
          echo '<li><a href="';
-         echo '/Pages/TPhpPrown/dispTPhpPrown.php?list='.prown\getTranslit($v).'"'.'>';
+         echo '/Pages/TPhpPrown/_dispTPhpPrown.php?list='.prown\getTranslit($v).'"'.'>';
          //echo '/Pages/TPhpPrown/'.prown\getTranslit($v).'.php'.'"'.'>';
          echo $k.'</a>'.$v.'</li>';
       }

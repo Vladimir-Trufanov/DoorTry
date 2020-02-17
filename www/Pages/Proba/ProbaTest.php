@@ -9,65 +9,49 @@
 //                                                   Дата создания:  07.12.2019
 // Copyright © 2019 tve                              Посл.изменение: 02.02.2020
 
-function DispatchTPhpPrown()
-{
-   // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
-   require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
-   $_WORKSPACE=iniWorkSpace();
-   $SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
-   $SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
-   $SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
-   $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
-   $UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
-   // Подключаем файлы библиотеки прикладных модулей:
-   $TPhpPrown=$SiteHost.'/TPhpPrown';
-   require_once $TPhpPrown."/TPhpPrown/Findes.php";
-   require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
-   require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
-   require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-   require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
-   require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
-   require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
-   // Определяем страничные константы
-   define ("Script", "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
-   define ("WasTest", "WasTest");   // "Тест уже запускался"
-   // Подгружаем рабочие модули
-  // require_once($SiteRoot.'/TPhpPrownTests/FunctionsBlock.php');
-   echo 'DispatchTPhpPrown()';
-}
+require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
+$_WORKSPACE=iniWorkSpace();
+$SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
+$SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
+$SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
+$SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
+$UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
+// Подключаем файлы библиотеки прикладных модулей:
+$TPhpPrown=$SiteHost.'/TPhpPrown';
+require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
+require_once $TPhpPrown."/TPhpPrown/Findes.php";
+require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
+require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
+require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
+require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
+require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
+require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 
-require_once $_SERVER['DOCUMENT_ROOT']."/TDoorTryer/DoorTryerPage.php";
-try 
-{
-   DispatchTPhpPrown();
-}
-catch (E_EXCEPTION $e) 
-{
-   DoorTryPage($e);
-}
+echo '<!DOCTYPE html>';
+echo '<html lang="ru">';
+echo '<head>';
+echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+echo '<title>Подключение обработчика ошибок/исключений</title>';
+echo '<meta name="description" '.
+     'content="Сайт используется для обработки ошибок/исключений и их '.
+     'комментирования в PHP5-PHP7. Показан способ для подключения этой '.
+     'возможности к Вашим сайтам.">';
+echo '<meta name="keywords" '.
+     'content="универсальная обработка ошибок и исключений PHP5-7, '.
+     'принцип DO-or-TRY, Делай или Пробуй, #doortry">';
+
+//echo '<script src="../../TJsPrown/jquery.min.js">'.'</script>';
+//echo '<script src="https://doortry.ru/TJsPrown/jquery.min.js">'.'</script>';
 
 
+echo '<script type="text/javascript" src="jquery-1.6.4.min.js"></script>';
+echo '<script type="text/javascript" src="jquery.cookie.js"></script>';
+echo '<script type="text/javascript" src="TJsPrown.js"></script>';
 
 
 
 /*
-// Формируем часть страницы с описанием функции
-?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<title>Findes - выбрать из строки подстроку, соответствующую регулярному выражению</title>
-<meta name="description" content=
-"Findes выбирает из строки подстроку по заданному регулярному выражению и узнаёт
-её начальную позицию в этой строке. Функция возвращает первое или единственное 
-вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку">
-<meta name="keywords" content=
-"findes,выбрать соответствующую регулярному выражению подстроку,
-принцип DO-or-TRY, делай или пробуй,TPhpPrown">
-
-<?php
-// Подключаем jquery/jquery-ui
+      // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 
      'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
 echo '<script '.
@@ -80,123 +64,60 @@ echo '<script '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
-// Обеспечиваем двойной скролл для кода;
-echo '<script src="/JS/jquery.doubleScroll.js"></script>';
-// Подключаем особенности стиля для компьютерной и мобильной версий
-if ($SiteDevice==Mobile) 
-{   
-   //echo '<script>alert("Mobile");</script>';
-   echo '<link href="/Styles/TPhpPrownMobi.css" rel="stylesheet">';
-}
-else 
-{   
-   //echo '<script>alert("Computer");</script>';
-   echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
-}
-// Подключаем JS-библиотеку
-echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
-echo '<script src="/TJsPrown/TJsPrown.js"></script>';
-// Обрабатываем клик по кнопке для перезагрузки страницы с учетом .htaccess
-if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
-{
-   ?><script>
-   function isClick() 
-   {
-      //alert("isClick");
-      DeleteCookie('WasTest');
-      location.replace("<?php echo Script; ?>");
-   }
-   </script><?php
-} 
-else 
-{
-   ?><script>
-   function isClick() 
-   {
-      //alert("isClick");
-      DeleteCookie('WasTest');
-      location.replace("<?php echo Script;?>"+".php");
-   }
-   </script><?php
-}
-// Инициируем двойную прокрутку и реакцию кнопки
-?>
-<script>
-$(document).ready(function(){
-   $(".CodeText").doubleScroll({resetOnWindowResize:true});
-   $("#button").button();
-});
-</script>
-</head>
-<body>
-<div class="TPhpPrown">
-<h4 id="findes">Findes - выбрать из строки подстроку, соответствующую регулярному выражению.</h4>
-<h5><span class="letter">Ф</span>ункция выполняет конкретную и часто возникающую задачу - выбрать из строки подстроку по заданному регулярному выражению и узнать её начальную позицию в этой строке.</h5> 
-<h5><span class="letter">F</span>indes возвращает первое или единственное вхождение подстроки в исходной строке, а в случае неудачи возвращает пустую строку.</h5>
-<h5><span class="letter">Ч</span>ерез третий параметр функция по ссылке возвращает позицию найденного фрагмента, начиная с нулевого значения, или -1, если фрагмент не найден.</h5>
-<p><strong>Синтаксис</strong></p>
-<pre>
-$Result=Findes($preg,$string,&amp;$point)
-</pre>
-<p><strong>Параметры</strong></p>
-<pre>
-$preg   - текст регулярного выражения;
-$string - текст, который должен быть обработан регулярным выражением;
-$point  - позиция начала найденного фрагмента после работы регулярного 
-выражения (параметр по ссылке). $point=-1, если фрагмент не найден.
-</pre>
-<p><strong>Возвращаемое значение</strong></p>
-<pre>
-$Result  - найденный фрагментов после работы регулярного выражения или пустая строка, если фрагмент не найден.
-</pre>
-</div>
-<?php
-// Загружаем в страницу код функции
-echo '<div class="CodeText">';
-$FileSpec=$SiteRoot.'/TPhpPrown/Findes.php';
-$FileContent=file_get_contents($FileSpec);
-//echo mb_detect_encoding($FileContent).'<br>';
-//echo '---<br>'.$FileContent.'<br>---<br>';
-// Вырезаем комментарий, который уже представлен
-$pattern="/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)function/u";
-$replacement='function';
-$FileItog=preg_replace($pattern,$replacement,$FileContent);
-// Преобразуем текст в раскрашенный код и показываем его
-$FileCode=highlight_string($FileItog,true);
-echo $FileCode;
-echo '</div>';
-// В компьютерной версии даем возможность запускать тест
-if ($SiteDevice==Computer) 
-{   
-   // Размечаем низ страницы в случае, когда следует запустить тест
-   // (то есть, когда кукис $_COOKIE['WasTest'] ещё не установлен):
-   // так как теги </body> и </html> ставятся внутри теста, то закрываем
-   // только <div class="TPhpPrown"> тегом </div> 
-   if (!(IsSet($_COOKIE['WasTest'])))
-   {
-      //echo 'Кукиса WasTest нет';
-      ?>
-      <p><br><strong>Сообщения выполненного теста функции</strong></p>
-      <script>
-         setcookie("WasTest","<?php echo WasTest;?>");
-      </script>
-      <?php
-      // Запускаем тестирование и трассировку выбранных функций
-      require_once($SiteRoot.'/simpletest/autorun.php');
-      require_once($SiteRoot.'/TPhpPrown/Findes.php');
-      require_once($SiteRoot.'/TPhpPrownTests/Findes_test.php');
-   }
-   // Размечаем низ страницы в случае, когда устанавливаем кнопку для теста
-   else
-   {
-      //echo $_COOKIE['WasTest'];
-      ?>
-      <button id="button" onclick="isClick()">Протестировать функцию!</button> 
-      </body></html>
-      <?php
-   }
-}
-?>
-<?php
 */
+      
+?>
+
+<?php
+echo '</head>';
+echo '<body>';
+?>
+
+<script>
+$(document).ready(function()
+{
+   console.log(window.innerHeight);
+   console.log(window.innerWidth);
+
+
+setcookie('name1','value1',100) 
+});
+setcookie('name2','value2',100) 
+//Получение cookie
+$.cookie('cookie_name1', 'Значение кука1');
+var test = $.cookie('cookie_name1');
+//Проверка. существует ли кук
+if($.cookie('cookie_name1')) console.log('***'+test+'***');
+
+
+//Получение cookie
+//var test = $.cookie('cookie_name1');
+
+//Проверка. существует ли кук
+//if($.cookie('cookie_name1')) alert(test);
+
+
+//Удаление cookie
+//$.cookie('cookie_name2', null);
+
+</script>
+
+
+
+
+
+
+<?php
+echo '<div class="info">';
+echo '***<br>';
+echo 'Всем привет!<br>';
+echo '***<br>';
+echo '</div>';
+echo '<div id="res"></div>';
+echo '</body>';
+echo '</html>';
+?>
+<?php
+//prown\ViewGlobal(avgSERVER);
+prown\ViewGlobal(avgCOOKIE);
 // <!-- --> ********************************************* dispTPhpPrown.php ***

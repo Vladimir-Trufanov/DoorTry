@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 23.11.2019
+// Copyright © 2019 tve                              Посл.изменение: 09.02.2020
 
 // Регулируем верхнее смещение контента главной страницы по её типу
 //echo '<style type="text/css"> .main';
@@ -28,19 +28,19 @@ echo '<header>';
 echo '</header>';
 // Главные статьи, cтихотворения, новости
 echo '<div class="main">';
-   if (isComRequest(prown\getTranslit(ConnHandler),'list'))
+   if (prown\isComRequest(prown\getTranslit(ConnHandler),'list'))
    {
       MakeH1();
       PageContent();
    }
-   elseif (isComRequest(prown\getTranslit(SimPrincip),'list'))
+   elseif (prown\isComRequest(prown\getTranslit(SimPrincip),'list'))
    {
       MakeH1();
       PageContent();
    }
    else
    {
-      $News=getComRequest('novosti');
+      $News=prown\getComRequest('novosti');
       if ($News==NULL) 
       {
          MakeH1();

@@ -1,34 +1,19 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                         *** DoorTryerMessage.php ***
-
+// PHP7/HTML5, EDGE/CHROME                             *** DoorTryError.php ***
 // ****************************************************************************
-// * doortry.ru                        Вывести сообщение об ошибке/исключении *
+// * doortry.ru      Разобрать параметры запроса и вывести страницу с ошибкой *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  10.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 31.05.2019
+//                                                   Дата создания:  09.04.2019
+// Copyright © 2019 tve                              Посл.изменение: 17.02.2020
 
-/**
- * Сообщение об ошибке или исключении собирается на основании 5 параметров:
- * $errstr - текст сообщения; $errtype - тип сообщения; $errline - строка 
- * сценария, где произошла ошибка или исключение; $errfile - файл сценария; 
- * $errtrace - трассировка всплывания сообщения
-**/
 // ------------------------------------------ Используемые регулярные выражения
-// "фрагмент с типом ошибки с начала строки до ":"
-define ("regErrorType",   "/^[A-Za-z_]{1,}:/u");
 // "префикс ошибки" с начала строки
 define ("regPrefix",      "/^\[[A-Za-z_А-Яа-яЁё\s()]{1,}\]/u");
-// "фрагмент трассировки с начала строки до "thrown"
-define ("regThrown",      "/^[\s\S]{1,}thrown/u");
-// "фрагмент от "#2" до конца строки
-define ("regTrace2",      "/#2[\s\S]{1,}$/u");
-// "фрагмент трассировки в сообщении об ошибке"
-define ("regTrace",       "/Stack trace:[\s\S]{1,}$/u");
 
 // ****************************************************************************
-// *    Выбрать из строки подстроку, соответствующую регулярному выражению    *                          *
+// *    Выбрать из строки подстроку, соответствующую регулярному выражению    *  
 // ****************************************************************************
 function findes($preg,$string,&$point=0)
 {
@@ -61,4 +46,52 @@ function DoorTryMessage($ierrstr,$errtype,$errline='',$errfile='',$errtrace='')
    echo "</pre>";
    echo "</div>";
 }
-// *************************************************** DoorTryerMessage.php ***
+
+$errstr='';    
+if (IsSet($_GET['estr'])) 
+{
+   $errstr=urldecode($_GET['estr']);
+}
+$errtype='';    
+if (IsSet($_GET['etype'])) 
+{
+   $errtype=urldecode($_GET['etype']);
+}
+$errline='';    
+if (IsSet($_GET['eline'])) 
+{
+   $errline=urldecode($_GET['eline']);
+}
+$errfile='';    
+if (IsSet($_GET['efile'])) 
+{
+   $errfile=urldecode($_GET['efile']);
+}
+$errtrace='';    
+if (IsSet($_GET['etrace'])) 
+{
+   $errtrace=urldecode($_GET['etrace']);
+}
+
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <title>Обработчик ошибок и исключений</title>
+   <meta charset="utf-8">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+   <meta name="viewport" content="width=device-width"> 
+   <meta name="description" content="DoorTry - обработчик ошибок и исключений">
+   <meta name="keywords" content="DoorTry - обработчик ошибок и исключений">
+   <!-- 
+   <link href="Styles/Styles.css" rel="stylesheet">
+   -->
+</head>
+<body>
+<?php
+DoorTryMessage($errstr,$errtype,$errline,$errfile,$errtrace);
+?>
+</body> 
+</html>
+<?php
+// ******************************************************* DoorTryError.php ***

@@ -21,14 +21,13 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		-JS
+		+JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
 			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
-				www\Pages\DoorTry\DoorTryForSite.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
 			-News
@@ -36,21 +35,25 @@ DoorTry
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
 			-Proba
-				www\Pages\Proba\log.txt
+				www\Pages\Proba\jquery.cookie.js
+				www\Pages\Proba\jquery-1.6.4.min.js
 				www\Pages\Proba\ProbaTest.php
+				www\Pages\Proba\TJsPrown.css
+				www\Pages\Proba\TJsPrown.js
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
+				www\Pages\TPhpPrown\_CodePart.php
+				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_OLD_vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-				www\Pages\TPhpPrown\dispTPhpPrown.php
+				www\Pages\TPhpPrown\_TestPart.php
+				www\Pages\TPhpPrown\_viewTPhpPrown.php
 				www\Pages\TPhpPrown\dlyaobschego.php
-				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
 				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
-				www\Pages\TPhpPrown\viewTPhpPrown.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 		-qrcode
@@ -109,21 +112,18 @@ DoorTry
 			www\Styles\Styles.css
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
-		-TDoorTryer
-			www\TDoorTryer\DoorTryerMessage.php
-			www\TDoorTryer\DoorTryerPage.php
-			www\TDoorTryer\LICENSE
 		-TJsPrown
+			www\TJsPrown\jquery.min.js
 			www\TJsPrown\TJsPrown.css
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
+		www\check.php
 		www\Common.php
-		www\ComRequest.php
 		www\DebugError.php
 		www\DebugTimer.php
 		www\doortry.png
-		www\error.php
+		www\DoorTryError.php
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -145,30 +145,39 @@ DoorTry
 		www\robots.txt
 		www\Site.php
 		www\sitemap.xml
+		www\sort.db3
 		www\stat.dat
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\index.php
-1=www\Pages\TPhpPrown\viewTPhpPrown.php
-2=www\Pages\TPhpPrown\dispTPhpPrown.php
-3=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-4=www\Pages\DoorTry\SimPrincip.php
+0=www\Main.php
+1=www\iniTPhpPrown.php
+2=www\iniHtmlBegin.php
+3=www\Pages\TPhpPrown\_dispTPhpPrown.php
+4=www\Pages\TPhpPrown\_CodePart.php
+5=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+6=www\Pages\TPhpPrown\_viewTPhpPrown.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-[www\index.php]
-TopLine=5
-Caret=1,33
-[www\Pages\TPhpPrown\viewTPhpPrown.php]
-TopLine=7
-Caret=1,18
-[www\Pages\TPhpPrown\dispTPhpPrown.php]
+Selected=www\Pages\TPhpPrown\_CodePart.php
+[www\Main.php]
+TopLine=85
+Caret=75,11
+[www\iniTPhpPrown.php]
+TopLine=25
+Caret=34,46
+[www\iniHtmlBegin.php]
+TopLine=59
+Caret=1,78
+[www\Pages\TPhpPrown\_dispTPhpPrown.php]
 TopLine=45
-Caret=6,56
+Caret=1,65
+[www\Pages\TPhpPrown\_CodePart.php]
+TopLine=15
+Caret=1,23
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=9
-Caret=1,14
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=9
-Caret=1,30
+TopLine=15
+Caret=23,17
+[www\Pages\TPhpPrown\_viewTPhpPrown.php]
+TopLine=35
+Caret=39,57

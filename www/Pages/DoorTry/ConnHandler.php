@@ -27,7 +27,7 @@ function MakeH1()
 {
    echo "<h1>Подключение обработчика ошибок/исключений - Connect error/exception handler</h1>";
 }
-function PageContent()
+function PageContent($SiteHost)
 {
    $Result = true;
    ?>
@@ -54,9 +54,8 @@ function PageContent()
    </div>
    <?php
 
-   global $SiteRoot;
    echo '<div class="CodeText">';
-   $f2=$SiteRoot."/Pages/DoorTry/DoorTryForSite.php";
+   $f2=$SiteHost."/TDoorTryer/DoorTryerPage.php";
    $stx=show_source($f2,true);
    echo $stx;
    echo '</div>';

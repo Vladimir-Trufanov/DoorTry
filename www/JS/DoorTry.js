@@ -14,9 +14,13 @@
 // https://www.it-swarm.net/ru/javascript/gorizontalnaya-polosa-prokrutki-sverhu-i-snizu-tablicy/970615983/
 // https://github.com/avianey/jqDoubleScroll
 
-$(document).ready
-(function(){
+$(document).ready(function()
+{
+   // Инициируем двойную прокрутку с css-классом CodeText
    $('.CodeText').doubleScroll({resetOnWindowResize:true});
+   // Инициируем реакцию кнопки c идентификатором button
+   $("#button").button();
+
    
    /*
    //$.getJSON('get-info.php').success(function(data)
@@ -72,6 +76,19 @@ $(document).ready
    });
    */
 });
+// Обрабатать клик по кнопке для перезагрузки страницы с учетом .htaccess
+function isOnDoortryClick() 
+{
+   //alert("isClick");
+   DeleteCookie('WasTest');
+   location.replace("<?php echo Script; ?>");
+}
+function isOnLocalClick() 
+{
+   //alert("isClick");
+   DeleteCookie('WasTest');
+   location.replace("<?php echo Script;?>"+".php");
+}
 
 // ************************************************************* DoorTry.js ***
                              

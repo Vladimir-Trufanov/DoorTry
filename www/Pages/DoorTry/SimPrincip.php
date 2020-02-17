@@ -31,7 +31,7 @@ function MakeH1()
 {
    echo "<h1>Простой принцип программирования - Simple programming principle</h1>";
 }
-function PageContent()
+function PageContent($SiteHost)
 {
    $Result = true;
    //global $SiteDevice;

@@ -8,17 +8,31 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 26.01.2020
+// Copyright © 2019 tve                              Посл.изменение: 17.02.2020
 
+// Инициализируем рабочее пространство: корневой каталог сайта и т.д.
+require_once 'iniWorkSpace.php';
+$_WORKSPACE=iniWorkSpace();
+
+$SiteRoot    = $_WORKSPACE[wsSiteRoot];     // Корневой каталог сайта
+$SiteAbove   = $_WORKSPACE[wsSiteAbove];    // Надсайтовый каталог
+$SiteHost    = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
+$SiteDevice  = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
+/*
+$UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
+$TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта
+$Ip          = $_WORKSPACE[wsRemoteAddr];   // IP-адрес запроса сайта
+$SiteName    = $_WORKSPACE[wsSiteName];     // Доменное имя сайта
+*/
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
-require_once $_SERVER['DOCUMENT_ROOT']."/TDoorTryer/DoorTryerPage.php";
+require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
    // Запускаем сценарий сайта
    require_once $_SERVER['DOCUMENT_ROOT']."/Main.php";
    // Запускаем примеры ошибок и исключений
-   //require_once $_SERVER['DOCUMENT_ROOT']."/MainDoorTry.php";
+   // require_once $_SERVER['DOCUMENT_ROOT']."/MainDoorTry.php";
 }
 catch (E_EXCEPTION $e) 
 {

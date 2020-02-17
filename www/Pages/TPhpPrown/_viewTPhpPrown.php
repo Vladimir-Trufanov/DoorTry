@@ -1,0 +1,74 @@
+<?php
+// PHP7                                              *** _viewTPhpPrown.php ***
+
+// ****************************************************************************
+// * DoorTry-TPhpPrown         Вывод в браузер управляемой страницы TPhpPrown *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  07.12.2019
+// Copyright © 2019 tve                              Посл.изменение: 03.02.2020
+
+echo '<!DOCTYPE html>';
+echo '<html lang="ru">';
+echo '<head>';
+echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
+
+SeoTags();
+
+// Подключаем jquery/jquery-ui
+echo '<link rel="stylesheet" type="text/css" '. 
+     'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
+echo '<script '.
+     'src="https://code.jquery.com/jquery-3.3.1.min.js" '.
+     'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+echo '<script '.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
+     'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+// Обеспечиваем двойной скролл для кода;
+echo '<script src="/JS/jquery.doubleScroll.js"></script>';
+// Подключаем особенности стиля для компьютерной и мобильной версий
+if ($SiteDevice==Mobile) 
+{   
+   echo '<link href="/Styles/TPhpPrownMobi.css" rel="stylesheet">';
+}
+else 
+{   
+   echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
+}
+// Подключаем JS-библиотеки
+echo '<script src="/JS/DoorTry.js"></script>';
+echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
+echo '<script src="/TJsPrown/TJsPrown.js"></script>';
+
+echo '</head>';
+echo '<body>';
+
+echo '<div class="TPhpPrown">';
+DescriptPart();
+echo '</div>';
+
+// Загружаем в страницу код функции
+echo '<div class="CodeText">';
+CodePart($TPhpPrown,FuncFile,Pattern,Replacement);
+echo '</div>';
+
+// В компьютерной версии даем возможность запускать тест
+if ($SiteDevice==Computer) 
+{ 
+   echo 'Запускаем тест<br>';
+   //TestPart();
+   echo '</body>';
+   echo '</html>';
+}
+else
+{
+   echo '</body>';
+   echo '</html>';
+}
+
+// <!-- --> ******************************************** _viewTPhpPrown.php ***

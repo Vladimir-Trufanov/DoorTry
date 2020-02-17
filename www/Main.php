@@ -8,16 +8,8 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 27.01.2020
+// Copyright © 2019 tve                              Посл.изменение: 17.02.2020
 
-// Инициализируем рабочее пространство: корневой каталог сайта и т.д.
-require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
-$_WORKSPACE=iniWorkSpace();
-$SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
-$SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
-$SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
-$SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
-$UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
 // Подключаем файлы библиотеки прикладных модулей:
 $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
