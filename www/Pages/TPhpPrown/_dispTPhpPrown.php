@@ -34,6 +34,7 @@ $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
 require_once $TPhpPrown."/TPhpPrown/MakeUserError.php";
+require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
 // Определяем страничные константы
 define ("WasTest", "WasTest");   // "Тест уже запускался"
 // Подгружаем рабочие модули
@@ -60,8 +61,9 @@ else
 {
    // Загружаем контент выбранной страницы
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');
-   require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
    require_once $SiteRoot."/Pages/TPhpPrown/_CodePart.php";
+   require_once $SiteRoot."/Pages/TPhpPrown/_TestPart.php";
+   // Формируем и выводим страницу
    require_once $SiteRoot."/Pages/TPhpPrown/_viewTPhpPrown.php";
    //print_r('$Parm='.$Parm.'<br>');
 }

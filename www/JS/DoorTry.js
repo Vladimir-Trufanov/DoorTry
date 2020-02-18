@@ -76,19 +76,6 @@ $(document).ready(function()
    });
    */
 });
-// Обрабатать клик по кнопке для перезагрузки страницы с учетом .htaccess
-function isOnDoortryClick() 
-{
-   //alert("isClick");
-   DeleteCookie('WasTest');
-   location.replace("<?php echo Script; ?>");
-}
-function isOnLocalClick() 
-{
-   //alert("isClick");
-   DeleteCookie('WasTest');
-   location.replace("<?php echo Script;?>"+".php");
-}
 
 // ************************************************************* DoorTry.js ***
                              

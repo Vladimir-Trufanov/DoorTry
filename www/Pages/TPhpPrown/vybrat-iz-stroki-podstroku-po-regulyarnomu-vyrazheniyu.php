@@ -10,16 +10,16 @@
 //                                                   Дата создания:  07.12.2019
 // Copyright © 2019 tve                              Посл.изменение: 04.02.2020
 
-function SeoTags()
-{
 // Определяем константу вызова страницы, имя файла, регулярка вырезания 
 // фрагмента исх.текста
-define ("Script",      "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
-define ("FuncFile",    "Findes.php"); 
+define ("ScriptName",  "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
+define ("FuncName",    "Findes"); 
 define ("Pattern",     "/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)function/u");
 define ("Replacement", "function");
+define ("Testing", "Yes");
 
-
+function SeoTags()
+{
 // Определяем SEO-теги
    echo '<title>Findes - выбрать из строки подстроку, соответствующую регулярному выражению</title>';
    echo '<meta name="description" content=

@@ -29,6 +29,10 @@ echo '<script '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
+// Подключаем JS-библиотеки
+echo '<script src="/JS/DoorTry.js"></script>';
+echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
+echo '<script src="/TJsPrown/TJsPrown.js"></script>';
 // Обеспечиваем двойной скролл для кода;
 echo '<script src="/JS/jquery.doubleScroll.js"></script>';
 // Подключаем особенности стиля для компьютерной и мобильной версий
@@ -40,10 +44,6 @@ else
 {   
    echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
 }
-// Подключаем JS-библиотеки
-echo '<script src="/JS/DoorTry.js"></script>';
-echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
-echo '<script src="/TJsPrown/TJsPrown.js"></script>';
 
 echo '</head>';
 echo '<body>';
@@ -54,21 +54,19 @@ echo '</div>';
 
 // Загружаем в страницу код функции
 echo '<div class="CodeText">';
-CodePart($TPhpPrown,FuncFile,Pattern,Replacement);
+CodePart($TPhpPrown,FuncName.'.php',Pattern,Replacement);
 echo '</div>';
 
 // В компьютерной версии даем возможность запускать тест
 if ($SiteDevice==Computer) 
-{ 
-   echo 'Запускаем тест<br>';
-   //TestPart();
-   echo '</body>';
-   echo '</html>';
+{
+   $Testing=Testing;
+   if  ($Testing=="Yes") TestPart($SiteHost,$Parm);
+   else {echo '</body>'; echo '</html>';}
 }
 else
 {
-   echo '</body>';
-   echo '</html>';
+   echo '</body>'; echo '</html>';
 }
 
 // <!-- --> ******************************************** _viewTPhpPrown.php ***
