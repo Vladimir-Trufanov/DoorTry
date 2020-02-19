@@ -13,9 +13,7 @@ echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
-
 SeoTags();
-
 // Подключаем jquery/jquery-ui
 echo '<link rel="stylesheet" type="text/css" '. 
      'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
@@ -44,29 +42,34 @@ else
 {   
    echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
 }
-
 echo '</head>';
 echo '<body>';
-
 echo '<div class="TPhpPrown">';
 DescriptPart();
 echo '</div>';
-
-// Загружаем в страницу код функции
-echo '<div class="CodeText">';
-CodePart($TPhpPrown,FuncName.'.php',Pattern,Replacement);
-echo '</div>';
-
-// В компьютерной версии даем возможность запускать тест
-if ($SiteDevice==Computer) 
-{
-   $Testing=Testing;
-   if  ($Testing=="Yes") TestPart($SiteHost,$Parm);
-   else {echo '</body>'; echo '</html>';}
-}
-else
+// Завершаем страницу, если выводится только описательная часть
+if (FuncName=="No")
 {
    echo '</body>'; echo '</html>';
+} 
+// В большинстве случаев, когда страница посвящена конкретной функции,
+// выводим код функции и тест её
+else
+{ 
+   // Загружаем в страницу код функции
+   echo '<div class="CodeText">';
+   CodePart($TPhpPrown,FuncName.'.php',Pattern,Replacement);
+   echo '</div>';
+   // В компьютерной версии даем возможность запускать тест
+   if ($SiteDevice==Computer) 
+   {
+      $Testing=Testing;
+      if  ($Testing=="Yes") TestPart($SiteHost,$Parm);
+      else {echo '</body>'; echo '</html>';}
+   }
+   else
+   {
+      echo '</body>'; echo '</html>';
+   }
 }
-
 // <!-- --> ******************************************** _viewTPhpPrown.php ***

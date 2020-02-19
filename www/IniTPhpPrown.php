@@ -9,7 +9,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  10.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 02.02.2019
+// Copyright © 2019 tve                              Посл.изменение: 19.02.2020
 
 // ****************************************************************************
 // *            Проинициализировать массив функций библиотеки TPhpPrown       *
@@ -44,7 +44,6 @@ function TPhpPrownMenu()
       {
          echo '<li><a href="';
          echo '/Pages/TPhpPrown/_dispTPhpPrown.php?list='.prown\getTranslit($v).'"'.'>';
-         //echo '/Pages/TPhpPrown/'.prown\getTranslit($v).'.php'.'"'.'>';
          echo $k.'</a>'.$v.'</li>';
       }
    }
@@ -76,19 +75,14 @@ function TPhpPrownList()
          
          if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
          {
-            //echo 'doortry.ru: '.$k.'==>'.$v.'<br>';
             echo '<h4><a '.
                'href="/TPhpPrown/'.prown\getTranslit($v).'">'.
                $k.'</a>'.' - '.$ext.'.</h4>';
-            //echo '<li><a href="';
-            //echo '/TPhpPrown/'.prown\getTranslit($v).'"'.'>';
-            //echo $k.'</a></li>';
          }
          else
          {
-            //echo 'localhost: '.$k.'==>'.$v.'<br>';
             echo '<h4><a '.
-               'href="/Pages/TPhpPrown/'.prown\getTranslit($v).'.php">'.
+               'href="/Pages/TPhpPrown/_dispTPhpPrown.php?list='.prown\getTranslit($v).'">'.
                $k.'</a>'.' - '.$ext.'.</h4>';
          }
       }

@@ -21,12 +21,12 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
-		+JS
+		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			+DoorTry
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
@@ -44,11 +44,12 @@ DoorTry
 			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
-				www\Pages\TPhpPrown\_OLD_vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\_TestPart.php
 				www\Pages\TPhpPrown\_viewTPhpPrown.php
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
+				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye Ч копи€.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
@@ -150,30 +151,18 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Pages\TPhpPrown\_CodePart.php
-1=www\Pages\TPhpPrown\_dispTPhpPrown.php
+0=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+1=www\Pages\TPhpPrown\o-biblioteke.php
 2=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
-3=www\Pages\TPhpPrown\_viewTPhpPrown.php
-4=www\Pages\TPhpPrown\_TestPart.php
-5=www\JS\DoorTry.js
 [Selected Project Files]
 Main=
-Selected=www\JS\DoorTry.js
-[www\Pages\TPhpPrown\_CodePart.php]
-TopLine=12
-Caret=1,15
-[www\Pages\TPhpPrown\_dispTPhpPrown.php]
-TopLine=5
-Caret=10,18
+Selected=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
+TopLine=9
+Caret=1,50
+[www\Pages\TPhpPrown\o-biblioteke.php]
+TopLine=25
+Caret=1,38
 [www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=13
+TopLine=1
 Caret=1,20
-[www\Pages\TPhpPrown\_viewTPhpPrown.php]
-TopLine=45
-Caret=41,65
-[www\Pages\TPhpPrown\_TestPart.php]
-TopLine=3
-Caret=1,14
-[www\JS\DoorTry.js]
-TopLine=65
-Caret=1,79
