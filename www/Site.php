@@ -18,7 +18,7 @@ echo '<div class="pageWrapper">';
    echo '<header>';
       echo '<div id="dVer">';
       //echo '<div id="res"></div>';
-      echo 'v1.6';
+      echo 'v1.7';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';
       echo '<nav>'; TopMenu(); echo '</nav>';
