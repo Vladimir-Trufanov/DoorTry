@@ -49,11 +49,11 @@ DoorTry
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
-				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye Ч копи€.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu Ч копи€.php
 				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
@@ -151,18 +151,14 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
-1=www\Pages\TPhpPrown\o-biblioteke.php
-2=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+0=www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+1=www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
-[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
-TopLine=9
-Caret=1,50
-[www\Pages\TPhpPrown\o-biblioteke.php]
-TopLine=25
-Caret=1,38
-[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
-TopLine=1
-Caret=1,20
+Selected=www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
+[www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php]
+TopLine=100
+Caret=1,111
+[www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php]
+TopLine=16
+Caret=34,24
