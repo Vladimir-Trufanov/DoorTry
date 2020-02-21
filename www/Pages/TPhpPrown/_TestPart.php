@@ -34,7 +34,7 @@ function TestPart($SiteHost,$Parm)
       // Готовим ссылку для кнопки на doortry.ru
       if (isHost('doortry.ru','kwinflatht.nichost.ru'))
       {
-         $ListName="_dispTPhpPrown.php?list=".ScriptName;
+         $ListName=ScriptName;
       }
       // Готовим ссылку для кнопки на localhost
       else
@@ -47,7 +47,6 @@ function TestPart($SiteHost,$Parm)
          function isOnButtonClick() 
          {
             var cScript="<?php echo $ListName; ?>";
-            //alert(cScript);
             DeleteCookie('WasTest');
             location.replace(cScript);
          }

@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
@@ -149,14 +149,26 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
-1=www\Site.php
+0=www\Site.php
+1=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+2=www\Pages\DoorTry\SimPrincip.php
+3=www\Pages\DoorTry\ConnHandler.php
+4=www\MobiSite.php
 [Selected Project Files]
 Main=
-Selected=www\Site.php
-[www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php]
-TopLine=87
-Caret=3,87
+Selected=www\MobiSite.php
 [www\Site.php]
-TopLine=5
+TopLine=9
 Caret=17,21
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
+TopLine=21
+Caret=5,47
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=19
+Caret=1,1
+[www\Pages\DoorTry\ConnHandler.php]
+TopLine=9
+Caret=1,1
+[www\MobiSite.php]
+TopLine=23
+Caret=28,34

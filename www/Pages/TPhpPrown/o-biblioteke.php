@@ -15,7 +15,7 @@ define ("ScriptName", "o-biblioteke");
 // FuncName="No", так как на странице должна быть только описательная часть
 define ("FuncName",   "No"); 
 
-require_once $SiteRoot."/IniTPhpPrown.php";
+require_once $SiteRoot."/iniTPhpPrown.php";
 
 function SeoTags()
 {

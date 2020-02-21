@@ -139,8 +139,8 @@ function TopMenu()
       StihiMenu();
       echo '</ul>';
    echo '</li>';
-   // Пример подключения к меню пробной страницы
-   echo '<li><a href="index.php?list=proba">Пробная страница</a></li>';
+   // Подключаем пробную страницу
+   //echo '<li><a href="index.php?list=proba">Пробная страница</a></li>';
    // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';

@@ -18,7 +18,7 @@
 echo '<header>';
    // Размещаем div c версией сайта и кратким инфо-сообщением
    echo '<div id="dVer">';
-   echo 'v1.5';
+   echo 'v1.7';
    echo '</div>';
    echo  '<h2>DoorTry - коллекционер ошибок</h2>';
    // Размещаем гамбургер-меню
@@ -31,12 +31,12 @@ echo '<div class="main">';
    if (prown\isComRequest(prown\getTranslit(ConnHandler),'list'))
    {
       MakeH1();
-      PageContent();
+      PageContent($SiteHost);
    }
    elseif (prown\isComRequest(prown\getTranslit(SimPrincip),'list'))
    {
       MakeH1();
-      PageContent();
+      PageContent($SiteHost);
    }
    else
    {
@@ -44,7 +44,7 @@ echo '<div class="main">';
       if ($News==NULL) 
       {
          MakeH1();
-         PageContent();
+         PageContent($SiteHost);
       }
       else
       {
