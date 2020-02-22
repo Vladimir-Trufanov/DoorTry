@@ -106,6 +106,7 @@ $Result=true, если сообщение сформировано без оши
 </pre>
 <p><strong>Зарегистрированные ошибки/исключения</strong></p>
 <pre>define ("WrongTypeError", "Неверно указан тип ошибки");</pre>
+</div>
 <?php
 }
 // <!-- --> ******************** vyvesti-soobshchenie-ob-oshibke-na-php.php ***

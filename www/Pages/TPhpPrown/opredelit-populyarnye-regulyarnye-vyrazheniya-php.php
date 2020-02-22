@@ -34,7 +34,6 @@ function DescriptPart()
 {
 ?>
 <div class="TPhpPrown">
-<div class="TPhpPrown">
 <h4 id="iniregexp">iniRegExp - определить популярные регулярные выражения PHP.</h4>
 <h5><span class="letter">М</span>одуль собирает в одном файле часто используемые
    регулярные выражения в библиотеке TPhpPrown и других PHP-сценариях.</h5>
@@ -48,6 +47,7 @@ function DescriptPart()
    проверять и большие (верхнего регистра - прописные) буквы, 
    и малые (нижнего регистра - строчные).</h5>
 </div>
+<br>
 <?php
 }
 // <!-- --> ***************** opredelit-obshchie-konstanty-i-peremennye.php ***

@@ -150,25 +150,13 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Site.php
-1=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
-2=www\Pages\DoorTry\SimPrincip.php
-3=www\Pages\DoorTry\ConnHandler.php
-4=www\MobiSite.php
+1=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 [Selected Project Files]
 Main=
-Selected=www\MobiSite.php
+Selected=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 [www\Site.php]
 TopLine=9
 Caret=17,21
-[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
-TopLine=21
-Caret=5,47
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=19
-Caret=1,1
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=9
-Caret=1,1
-[www\MobiSite.php]
-TopLine=23
-Caret=28,34
+[www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php]
+TopLine=83
+Caret=30,100
