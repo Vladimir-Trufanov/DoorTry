@@ -34,7 +34,7 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			-Proba
+			+Proba
 				www\Pages\Proba\jquery.cookie.js
 				www\Pages\Proba\jquery-1.6.4.min.js
 				www\Pages\Proba\ProbaTest.php
@@ -151,12 +151,40 @@ DoorTry
 [Open project files]
 0=www\Site.php
 1=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
+2=www\iniMem.php
+3=www\Pages\Proba\ProbaTest.php
+4=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+5=www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
+6=www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
+7=www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+8=www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
+Selected=www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
 [www\Site.php]
 TopLine=9
 Caret=17,21
 [www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php]
 TopLine=83
 Caret=30,100
+[www\iniMem.php]
+TopLine=37
+Caret=1,1
+[www\Pages\Proba\ProbaTest.php]
+TopLine=81
+Caret=1,1
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php]
+TopLine=48
+Caret=1,57
+[www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php]
+TopLine=19
+Caret=1,1
+[www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php]
+TopLine=19
+Caret=1,1
+[www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php]
+TopLine=27
+Caret=1,1
+[www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php]
+TopLine=41
+Caret=1,47
