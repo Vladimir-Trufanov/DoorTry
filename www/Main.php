@@ -79,13 +79,13 @@ else if (prown\isComRequest('proba','list'))
 // В большинстве остальных случаев запускаем главные страницы
 else
 {
-   require_once $SiteRoot."/iniHtmlBegin.php";
+   require_once $SiteRoot."/iniHtmlBegin.php";                
    if ($SiteDevice==Mobile)
    {   
       require_once $SiteRoot."/MobiSite.php";
    }
    else 
-   {
+   {                                             
       //echo $SiteRoot."/TPhpPrown/Findes.php".'<br>';
       //echo $SiteAbove."/TPhpPrown/Findes.php".'<br>';
       //echo $SiteHost."/TPhpPrown/Findes.php".'<br>';
