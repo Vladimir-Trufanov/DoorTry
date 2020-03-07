@@ -26,7 +26,7 @@ DoorTry
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
 		+Pages
-			+DoorTry
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-LastError
@@ -34,7 +34,7 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			+Proba
+			-Proba
 				www\Pages\Proba\jquery.cookie.js
 				www\Pages\Proba\jquery-1.6.4.min.js
 				www\Pages\Proba\ProbaTest.php
@@ -47,8 +47,9 @@ DoorTry
 				www\Pages\TPhpPrown\_TestPart.php
 				www\Pages\TPhpPrown\_viewTPhpPrown.php
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
-				www\Pages\TPhpPrown\opredelit-obshchie-konstanty-i-peremennye.php
+				www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
@@ -150,25 +151,13 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\iniMem.php
-1=..\TPhpPrown\TPhpPrown\MakeCookie.php
-2=www\Main.php
-3=www\iniWorkSpace.php
-4=www\Pages\Proba\ProbaTest.php
+1=www\Main.php
 [Selected Project Files]
 Main=
 Selected=www\Main.php
 [www\iniMem.php]
 TopLine=41
 Caret=1,1
-[..\TPhpPrown\TPhpPrown\MakeCookie.php]
-TopLine=111
-Caret=6,93
 [www\Main.php]
-TopLine=64
-Caret=6,99
-[www\iniWorkSpace.php]
-TopLine=105
-Caret=1,1
-[www\Pages\Proba\ProbaTest.php]
-TopLine=57
-Caret=1,122
+TopLine=73
+Caret=1,101

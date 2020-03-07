@@ -1,0 +1,2 @@
+[07-Mar-2020 08:06:41 Asia/Kuwait] PHP Fatal error:  Cannot redeclare test_MakeType::test_MakeType_Simple() in C:\TPhpPrown\TPhpPrownTests\MakeType_test.php on line 30
+[07-Mar-2020 11:51:21 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/opredelit-obshchie-konstanty.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 63
