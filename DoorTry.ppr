@@ -46,6 +46,7 @@ DoorTry
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
 				www\Pages\TPhpPrown\_viewTPhpPrown.php
+				www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
@@ -152,12 +153,24 @@ DoorTry
 [Open project files]
 0=www\iniMem.php
 1=www\Main.php
+2=www\index.php
+3=www\iniTPhpPrown.php
+4=www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 [www\iniMem.php]
-TopLine=41
-Caret=1,1
+TopLine=15
+Caret=27,11
 [www\Main.php]
-TopLine=73
+TopLine=31
 Caret=1,101
+[www\index.php]
+TopLine=9
+Caret=56,33
+[www\iniTPhpPrown.php]
+TopLine=15
+Caret=53,17
+[www\Pages\TPhpPrown\blok-obshchih-funkcij.php]
+TopLine=41
+Caret=36,16
