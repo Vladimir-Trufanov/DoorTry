@@ -2,8 +2,7 @@
 // PHP7                                                   *** _CodePart.php ***
 
 // ****************************************************************************
-// * DoorTry-TPhpPrown            ---------Страница функции Findes - выбрать из строки *
-// *                         ------подстроку, соответствующую регулярному выражению *
+// * DoorTry-TPhpPrown   Вывести на страницу функции расцвеченный код функции *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
@@ -14,7 +13,6 @@ function CodePart($TPhpPrown,$FuncFile,$pattern,$replacement)
 {
 $FileSpec=$TPhpPrown.'/TPhpPrown/'.$FuncFile;
 $FileContent=file_get_contents($FileSpec);
-//echo '---<br>'.$FileContent.'<br>---<br>';
 // Вырезаем комментарий, который уже представлен
 $FileItog=preg_replace($pattern,$replacement,$FileContent);
 // Преобразуем текст в раскрашенный код и показываем его

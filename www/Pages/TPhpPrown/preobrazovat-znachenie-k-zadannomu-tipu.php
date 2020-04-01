@@ -20,11 +20,8 @@
 // фрагмента исх.текста, заместитель выреза и команду выполнения теста
 define ("ScriptName", "preobrazovat-znachenie-k-zadannomu-tipu"); 
 define ("FuncName",    "MakeType"); 
-//define ("Pattern",     "/\/\/\sВ([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)\"-_:,=&;}{]+)require/u");
-//define ("Replacement", "require");
 define ("Pattern",     "/\/\/\sВ([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)\"-_:,=&;}{]+)require_once 'iniC/u");
 define ("Replacement", "require_once 'iniC");
-
 define ("Testing",     "Yes");
 // Определяем SEO-теги
 function SeoTags()
