@@ -7,8 +7,9 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 17.02.2020
+// Copyright © 2019 tve                              Посл.изменение: 02.04.2020
 
+session_start();
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
@@ -33,6 +34,7 @@ try
 $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
+require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/MakeUserError.php";
 require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
 // Определяем страничные константы
@@ -59,13 +61,32 @@ else if (!isTPhpPrownFunc($Parm,$aTPhpPrown))
 // подключаем страницу библиотеки
 else
 {
+   
+   // http://localhost:82/Pages/TPhpPrown/_dispTPhpPrown.php?list=
+   //    ustanovit-novoe-znachenie-cookie-v-brauzere
+   // https://doortry.ru/TPhpPrown/
+   //    ustanovit-novoe-znachenie-cookie-v-brauzere 
+   // https://kwinflatht.nichost.ru/TPhpPrown/
+   //    ustanovit-novoe-znachenie-cookie-v-brauzere 
+   
+   // http://localhost:84/index.php
+   // ?formDoor%5B%5D=MakeCookie&formSubmit=%D0%9F%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C  
+   
    // Загружаем контент выбранной страницы
+   prown\ConsoleLog('$Parm',$Parm);
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');
+   prown\ConsoleLog('FuncName',FuncName);
    require_once $SiteRoot."/Pages/TPhpPrown/_CodePart.php";
    require_once $SiteRoot."/Pages/TPhpPrown/_TestPart.php";
+   // Отлавливаем страницу о MakeCookie и подгружаем дополнительные файлы
+   if (FuncName=='MakeCookie') 
+   {
+      require_once($SiteHost.'/TPhpPrown/TPhpPrown/'.FuncName.'.php');
+      require_once($SiteHost.'/TPhpPrown/TPhpPrownTests/'.FuncName.'_test_D.php');
+      require_once($SiteHost.'/TPhpPrown/TPhpPrownTests/'.FuncName.'_test_I.php');
+   }
    // Формируем и выводим страницу
    require_once $SiteRoot."/Pages/TPhpPrown/_viewTPhpPrown.php";
-   //print_r('$Parm='.$Parm.'<br>');
 }
 // ----------------------------------------------------------------------------
 }

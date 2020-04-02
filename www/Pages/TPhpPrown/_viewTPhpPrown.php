@@ -7,8 +7,22 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 03.02.2020
+// Copyright © 2019 tve                              Посл.изменение: 02.04.2020
 
+// Если подключается страница о MakeCookie, то инициализируем сессионную 
+// переменную для возможного теста MakeCookie
+// и делаем подготовку текущего прохода этого теста
+if (FuncName=='MakeCookie') 
+{
+   prown\ConsoleLog('1Поймали MakeCookie');
+   // if (prown\isComRequest(ToTest,'formSubmit')) MakeCookieTest();
+   prown\ConsoleLog('prown\getComRequest("list")', prown\getComRequest("list"));
+   prown\ConsoleLog('prown\getComRequest("formSubmit")', prown\getComRequest("formSubmit"));
+   prown\ConsoleLog('prown\getComRequest("formDoor%5B%5D")', prown\getComRequest("formDoor%5B%5D"));
+   
+   MakeCookieTest();
+}
+// Выводим разметку страницы
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';

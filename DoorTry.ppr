@@ -16,7 +16,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -25,7 +25,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		-Pages
+		+Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -41,7 +41,7 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -154,16 +154,40 @@ DoorTry
 [Open project files]
 0=www\iniMem.php
 1=www\Main.php
-2=www\index.php
+2=www\Pages\TPhpPrown\_dispTPhpPrown.php
+3=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php
+4=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php
+5=www\Pages\TPhpPrown\_viewTPhpPrown.php
+6=www\Pages\TPhpPrown\_TestPart.php
+7=..\TPhpPrown\TPhpPrownTests\MakeCookie_test.php
+8=www\index.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php
 [www\iniMem.php]
-TopLine=11
-Caret=27,11
+TopLine=17
+Caret=1,26
 [www\Main.php]
 TopLine=17
-Caret=7,46
+Caret=1,38
+[www\Pages\TPhpPrown\_dispTPhpPrown.php]
+TopLine=13
+Caret=1,13
+[..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php]
+TopLine=1
+Caret=22,17
+[..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php]
+TopLine=65
+Caret=7,99
+[www\Pages\TPhpPrown\_viewTPhpPrown.php]
+TopLine=11
+Caret=97,21
+[www\Pages\TPhpPrown\_TestPart.php]
+TopLine=7
+Caret=1,29
+[..\TPhpPrown\TPhpPrownTests\MakeCookie_test.php]
+TopLine=19
+Caret=28,23
 [www\index.php]
-TopLine=4
-Caret=56,33
+TopLine=25
+Caret=1,1

@@ -9,10 +9,10 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  30.03.2020
-// Copyright © 2020 tve                              Посл.изменение: 30.03.2020
+// Copyright © 2020 tve                              Посл.изменение: 02.04.2020
 
 // Статистика ключевых слов:
-//    "установка COOKIE"                            - x показов за декабрь 2019
+//    "установка COOKIE"                             - x показов за декабрь 2019
 //    "замена куки"                                  - x
 //    "установить новый cookie"                      - x
 //    "использование куки без перезагрузки страницы" - x
@@ -23,8 +23,7 @@ define ("ScriptName",  "ustanovit-novoe-znachenie-cookie-v-brauzere");
 define ("FuncName",    "MakeCookie"); 
 define ("Pattern",     "/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)\"-_:,=&;}{]+)require_once\s\"C/u");
 define ("Replacement", 'require_once "C');
-//define ("Testing",     "Yes");
-define ("Testing",     "No");
+define ("Testing",     "Yes");
 // Определяем SEO-теги
 function SeoTags()
 {
