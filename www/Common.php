@@ -30,7 +30,7 @@ function isDoortry()
 // *                      Определить работаем ли на хостинге                  *
 // ****************************************************************************
 function isNichost()
-{
+{ 
    $Result=false;
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {

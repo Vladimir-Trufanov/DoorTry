@@ -14,13 +14,10 @@
 // и делаем подготовку текущего прохода этого теста
 if (FuncName=='MakeCookie') 
 {
-   prown\ConsoleLog('1Поймали MakeCookie');
-   // if (prown\isComRequest(ToTest,'formSubmit')) MakeCookieTest();
-   prown\ConsoleLog('prown\getComRequest("list")', prown\getComRequest("list"));
-   prown\ConsoleLog('prown\getComRequest("formSubmit")', prown\getComRequest("formSubmit"));
-   prown\ConsoleLog('prown\getComRequest("formDoor%5B%5D")', prown\getComRequest("formDoor%5B%5D"));
-   
-   MakeCookieTest();
+   if (!IsSet($_COOKIE['WasTest']))
+   {
+      MakeCookieTest(entryDoorTry);
+   }
 }
 // Выводим разметку страницы
 echo '<!DOCTYPE html>';

@@ -34,7 +34,6 @@ require_once $SiteRoot."/Pages/News/MakeNews.php";
 require_once $SiteRoot."/Pages/News/SimpleTape.php";   
 require_once $SiteRoot."/Pages/News/WithImgTape.php";   
 // Выполняем запуск сессии и начальную инициализацию
-//session_start();
 $oMainStarter = new PageStarter('Main');
 require_once $SiteRoot."/iniMem.php"; 
 // Подключаем нужную главную страницу

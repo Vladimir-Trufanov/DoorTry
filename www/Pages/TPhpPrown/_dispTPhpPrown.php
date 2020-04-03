@@ -61,21 +61,8 @@ else if (!isTPhpPrownFunc($Parm,$aTPhpPrown))
 // подключаем страницу библиотеки
 else
 {
-   
-   // http://localhost:82/Pages/TPhpPrown/_dispTPhpPrown.php?list=
-   //    ustanovit-novoe-znachenie-cookie-v-brauzere
-   // https://doortry.ru/TPhpPrown/
-   //    ustanovit-novoe-znachenie-cookie-v-brauzere 
-   // https://kwinflatht.nichost.ru/TPhpPrown/
-   //    ustanovit-novoe-znachenie-cookie-v-brauzere 
-   
-   // http://localhost:84/index.php
-   // ?formDoor%5B%5D=MakeCookie&formSubmit=%D0%9F%D1%80%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C  
-   
    // Загружаем контент выбранной страницы
-   prown\ConsoleLog('$Parm',$Parm);
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');
-   prown\ConsoleLog('FuncName',FuncName);
    require_once $SiteRoot."/Pages/TPhpPrown/_CodePart.php";
    require_once $SiteRoot."/Pages/TPhpPrown/_TestPart.php";
    // Отлавливаем страницу о MakeCookie и подгружаем дополнительные файлы
