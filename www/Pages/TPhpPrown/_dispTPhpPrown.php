@@ -9,6 +9,9 @@
 //                                                   Дата создания:  07.12.2019
 // Copyright © 2019 tve                              Посл.изменение: 02.04.2020
 
+// Определяем страничные константы
+define ("WasTest", "WasTest");   // "Тест уже запускался"
+
 session_start();
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
@@ -34,15 +37,22 @@ try
 $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
+require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/MakeUserError.php";
-require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
-// Определяем страничные константы
-define ("WasTest", "WasTest");   // "Тест уже запускался"
+   
+require_once($TPhpPrown.'/TPhpPrownTests/MakeCookie_test_D.php');
+require_once($TPhpPrown.'/TPhpPrownTests/MakeCookie_test_I.php');
+
+
+
+
+
 // Подгружаем рабочие модули
 require_once $SiteRoot."/Common.php";
 require_once $SiteRoot."/iniErrDoorTry.php";
 require_once $SiteRoot."/iniTPhpPrown.php";
+
 // Определяем переданный параметр
 $Parm=prown\getComRequest('list');
 // Если параметр в запросе не был указан, то выводим сообщение 
@@ -65,16 +75,26 @@ else
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');
    require_once $SiteRoot."/Pages/TPhpPrown/_CodePart.php";
    require_once $SiteRoot."/Pages/TPhpPrown/_TestPart.php";
-   // Отлавливаем страницу о MakeCookie и подгружаем дополнительные файлы
-   if (FuncName=='MakeCookie') 
+
+   if (defined("FuncName")&&(FuncName=='MakeCookie')) 
    {
-      require_once($SiteHost.'/TPhpPrown/TPhpPrown/'.FuncName.'.php');
-      require_once($SiteHost.'/TPhpPrown/TPhpPrownTests/'.FuncName.'_test_D.php');
-      require_once($SiteHost.'/TPhpPrown/TPhpPrownTests/'.FuncName.'_test_I.php');
-   }
+      //prown\ConsoleLog('Поймали MakeCookie');
+      if (FuncName=='MakeCookie') 
+      {
+         if (!IsSet($_COOKIE['WasTest']))
+         {
+            MakeCookieTest(entryDoorTry);
+         }
+      }
+
+   }  
+   
+   require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
    // Формируем и выводим страницу
    require_once $SiteRoot."/Pages/TPhpPrown/_viewTPhpPrown.php";
 }
+
+
 // ----------------------------------------------------------------------------
 }
 catch (E_EXCEPTION $e) 

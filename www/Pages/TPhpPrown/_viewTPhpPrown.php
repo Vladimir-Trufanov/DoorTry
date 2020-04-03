@@ -12,6 +12,7 @@
 // Если подключается страница о MakeCookie, то инициализируем сессионную 
 // переменную для возможного теста MakeCookie
 // и делаем подготовку текущего прохода этого теста
+/*
 if (FuncName=='MakeCookie') 
 {
    if (!IsSet($_COOKIE['WasTest']))
@@ -19,6 +20,7 @@ if (FuncName=='MakeCookie')
       MakeCookieTest(entryDoorTry);
    }
 }
+*/
 // Выводим разметку страницы
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
