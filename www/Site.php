@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('установить новое значение COOKIE в браузере').'<br>';
+            //echo  prown\getTranslit('Отработать регулярное выражение на тексте').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost);

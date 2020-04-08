@@ -48,12 +48,12 @@ DoorTry
 				www\Pages\TPhpPrown\_viewTPhpPrown.php
 				www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 				www\Pages\TPhpPrown\dlyaobschego.php
-				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
+				www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
 				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 				www\Pages\TPhpPrown\ustanovit-novoe-znachenie-cookie-v-brauzere.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
@@ -96,7 +96,6 @@ DoorTry
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
-				www\stihi\sorevnovanie-s-hakerami\logis.txt
 				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
@@ -138,7 +137,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -156,12 +154,12 @@ DoorTry
 1=www\Main.php
 2=www\index.php
 3=www\Pages\TPhpPrown\_viewTPhpPrown.php
-4=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php
-5=www\Pages\TPhpPrown\_dispTPhpPrown.php
-6=www\Common.php
+4=www\Pages\TPhpPrown\_dispTPhpPrown.php
+5=..\TPhpPrown\TPhpPrown\MakeRegExp.php
+6=www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
 [Selected Project Files]
 Main=
-Selected=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php
+Selected=www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
@@ -174,12 +172,13 @@ Caret=1,1
 [www\Pages\TPhpPrown\_viewTPhpPrown.php]
 TopLine=23
 Caret=1,23
-[..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php]
-TopLine=70
-Caret=1,91
 [www\Pages\TPhpPrown\_dispTPhpPrown.php]
 TopLine=1
 Caret=1,1
-[www\Common.php]
-TopLine=19
-Caret=1,39
+[..\TPhpPrown\TPhpPrown\MakeRegExp.php]
+TopLine=27
+Caret=15,48
+Mark1=1,25
+[www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php]
+TopLine=15
+Caret=43,18
