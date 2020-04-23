@@ -157,9 +157,10 @@ DoorTry
 4=www\Pages\TPhpPrown\_dispTPhpPrown.php
 5=..\TPhpPrown\TPhpPrown\MakeRegExp.php
 6=www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
+7=www\sitemap.xml
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
+Selected=www\sitemap.xml
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
@@ -180,5 +181,8 @@ TopLine=27
 Caret=15,48
 Mark1=1,25
 [www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php]
-TopLine=15
+TopLine=37
 Caret=43,18
+[www\sitemap.xml]
+TopLine=49
+Caret=1,69
