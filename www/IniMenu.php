@@ -147,6 +147,8 @@ function TopMenu()
       NewsMenu();
       echo '</ul>';
    echo '</li>';
+   // Подключаем страницу с инструментами и документацией
+   echo '<li><a href="index.php?list=instrumenty">Инструменты</a></li>';
    //echo '<li><a href="#">SoftШутки</a></li>';
    echo '</ul>';
    return $Result;

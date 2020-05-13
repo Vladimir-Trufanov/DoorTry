@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  09.04.2019
-// Copyright © 2019 tve                              Посл.изменение: 17.02.2020
+// Copyright © 2019 tve                              Посл.изменение: 13.05.2020
 
 // Подключаем файлы библиотеки прикладных модулей:
 $TPhpPrown=$SiteHost.'/TPhpPrown';
@@ -72,6 +72,12 @@ if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
 else if (prown\isComRequest('proba','list')) 
 {
    $page='/Pages/Proba/ProbaTest.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
+else if (prown\isComRequest('instrumenty','list')) 
+{
+   $page='/Pages/Instrumenty/indexInstrumenty.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }

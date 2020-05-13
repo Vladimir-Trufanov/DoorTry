@@ -29,6 +29,9 @@ DoorTry
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
+			+Instrumenty
+				www\Pages\Instrumenty\indexInstrumenty.php
+				www\Pages\Instrumenty\Instrumenty.php
 			-LastError
 			-News
 				www\Pages\News\MakeNews.php
@@ -41,7 +44,7 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			-Sshu
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -96,6 +99,7 @@ DoorTry
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
+				www\stihi\sorevnovanie-s-hakerami\logis.txt
 				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
@@ -151,38 +155,29 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\iniMem.php
-1=www\Main.php
-2=www\index.php
+1=www\Pages\Instrumenty\indexInstrumenty.php
+2=www\Pages\TPhpPrown\_dispTPhpPrown.php
 3=www\Pages\TPhpPrown\_viewTPhpPrown.php
-4=www\Pages\TPhpPrown\_dispTPhpPrown.php
-5=..\TPhpPrown\TPhpPrown\MakeRegExp.php
-6=www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
-7=www\sitemap.xml
+4=www\Main.php
+5=www\Pages\Instrumenty\Instrumenty.php
 [Selected Project Files]
 Main=
-Selected=www\sitemap.xml
+Selected=www\Pages\Instrumenty\Instrumenty.php
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
-[www\Main.php]
-TopLine=27
-Caret=21,41
-[www\index.php]
-TopLine=17
+[www\Pages\Instrumenty\indexInstrumenty.php]
+TopLine=60
+Caret=1,84
+[www\Pages\TPhpPrown\_dispTPhpPrown.php]
+TopLine=19
 Caret=1,1
 [www\Pages\TPhpPrown\_viewTPhpPrown.php]
-TopLine=23
-Caret=1,23
-[www\Pages\TPhpPrown\_dispTPhpPrown.php]
-TopLine=1
-Caret=1,1
-[..\TPhpPrown\TPhpPrown\MakeRegExp.php]
-TopLine=27
-Caret=15,48
-Mark1=1,25
-[www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php]
-TopLine=37
-Caret=43,18
-[www\sitemap.xml]
-TopLine=49
-Caret=1,69
+TopLine=56
+Caret=1,82
+[www\Main.php]
+TopLine=71
+Caret=29,80
+[www\Pages\Instrumenty\Instrumenty.php]
+TopLine=11
+Caret=86,13

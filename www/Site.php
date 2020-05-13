@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('Отработать регулярное выражение на тексте').'<br>';
+            //echo  prown\getTranslit('Инструменты').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost);
