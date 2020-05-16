@@ -156,10 +156,9 @@ DoorTry
 [Open project files]
 0=www\iniMem.php
 1=www\Pages\Instrumenty\indexInstrumenty.php
-2=www\Pages\TPhpPrown\_dispTPhpPrown.php
-3=www\Pages\TPhpPrown\_viewTPhpPrown.php
-4=www\Main.php
-5=www\Pages\Instrumenty\Instrumenty.php
+2=www\Main.php
+3=www\Pages\Instrumenty\Instrumenty.php
+4=www\Styles\InstrumentyComp.css
 [Selected Project Files]
 Main=
 Selected=www\Pages\Instrumenty\Instrumenty.php
@@ -167,17 +166,14 @@ Selected=www\Pages\Instrumenty\Instrumenty.php
 TopLine=17
 Caret=1,26
 [www\Pages\Instrumenty\indexInstrumenty.php]
-TopLine=60
-Caret=1,84
-[www\Pages\TPhpPrown\_dispTPhpPrown.php]
-TopLine=19
-Caret=1,1
-[www\Pages\TPhpPrown\_viewTPhpPrown.php]
-TopLine=56
-Caret=1,82
+TopLine=64
+Caret=53,72
 [www\Main.php]
-TopLine=71
+TopLine=5
 Caret=29,80
 [www\Pages\Instrumenty\Instrumenty.php]
-TopLine=11
-Caret=86,13
+TopLine=23
+Caret=10,37
+[www\Styles\InstrumentyComp.css]
+TopLine=32
+Caret=47,46

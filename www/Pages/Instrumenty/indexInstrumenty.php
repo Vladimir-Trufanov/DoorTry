@@ -69,7 +69,7 @@ try
    }
    else 
    {   
-      //echo '<link href="/Styles/InstrumentyComp.css" rel="stylesheet">';
+      echo '<link href="/Styles/InstrumentyComp.css" rel="stylesheet">';
    }
    echo '</head>';
    echo '<body>';
