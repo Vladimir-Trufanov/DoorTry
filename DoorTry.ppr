@@ -169,11 +169,11 @@ Caret=1,26
 TopLine=64
 Caret=53,72
 [www\Main.php]
-TopLine=5
+TopLine=51
 Caret=29,80
 [www\Pages\Instrumenty\Instrumenty.php]
-TopLine=23
-Caret=10,37
+TopLine=63
+Caret=7,82
 [www\Styles\InstrumentyComp.css]
-TopLine=32
-Caret=47,46
+TopLine=33
+Caret=4,53
