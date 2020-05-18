@@ -161,7 +161,7 @@ DoorTry
 4=www\Styles\InstrumentyComp.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\Instrumenty\Instrumenty.php
+Selected=www\Styles\InstrumentyComp.css
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
@@ -169,11 +169,11 @@ Caret=1,26
 TopLine=64
 Caret=53,72
 [www\Main.php]
-TopLine=51
+TopLine=52
 Caret=29,80
 [www\Pages\Instrumenty\Instrumenty.php]
-TopLine=63
-Caret=7,82
+TopLine=14
+Caret=10,23
 [www\Styles\InstrumentyComp.css]
-TopLine=33
-Caret=4,53
+TopLine=29
+Caret=21,39

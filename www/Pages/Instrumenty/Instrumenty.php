@@ -19,7 +19,13 @@ echo ("Информационная страница об инструмента
       <th class="comment">Адрес сайта и комментарий</th>
       <th colspan="2">Документация и примеры</th>
    </tr>
-   
+   <tr class="separator">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+
    <!-- jQuery -->
    <tr>
       <td rowspan="4" class="first">jQuery</td>
@@ -45,6 +51,12 @@ echo ("Информационная страница об инструмента
    <tr>
       <td><a href="http://uroki-jquery.ru/">http://uroki-jquery.ru/</td>
       <td>ПИШИ МЕНЬШЕ - ДЕЛАЙ БОЛЬШЕ. Практические примеры с jQuery.</td>
+   </tr>
+   <tr class="separator">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
    </tr>
    
    <!-- jQuery Mobile -->
@@ -84,6 +96,12 @@ echo ("Информационная страница об инструмента
    <tr>
       <td><a href="https://devcolibri.com/android-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D1%8F-jquerymobile/">https://devcolibri.com/android-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D1%8F-jquerymobile/</td>
       <td>В данном уроке используется JQueryMobile, как движок, для создания приложения. Это даёт возможность создать вид и некий функционал приложения с помощью HTML5, CSS3, JavaScript. Такое приложение может быть доступно в двух режимах: оффлайн – когда все файлы(странички) находятся внутри приложения или онлайн – когда странички или данные получаются удаленно.</td>
+   </tr>
+   <tr class="separator">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
    </tr>
 </table>
 <?php
