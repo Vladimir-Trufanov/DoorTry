@@ -26,6 +26,44 @@ echo ("Информационная страница об инструмента
       <td></td>
    </tr>
 
+   <!-- Font Awesome -->
+   <tr>
+      <td rowspan="4" class="first">Font Awesome</td>
+      <td class="second"><a href="https://fontawesome.ru/">https://fontawesome.ru/</td>
+      <td><a href="https://fontawesome.ru/get-started/">https://fontawesome.ru/get-started/</td>
+      <td>Начало работы. Легкие и быстрые способы подключить Font Awesome 4.7.0 на ваш сайт.</td>
+   </tr>
+   <tr>
+      <td rowspan="3" class="third">
+         <p>Font Awesome. Иконочный шрифт и CSS-инструментарий.</p>
+         <p>Font Awesome предлагает вам масштабируемые векторные иконки, которые вы можете с легкостью персонализировать — размер, цвет, тени и все, что можно сделать силами CSS. Один шрифт, 675 иконок. Единой коллекцией Font Awesome является графическим языком интернет-пространства. Нет необходимости в JavaScript. Масштабируемая векторная графика обозначает, что иконки будут выглядеть великолепно в любом размере. Управление через CSS. Легко настроить цвет иконок, размер, тени и все остальное, что возможно с помощью CSS. Иконки Font Awesome векторные, а это значит, что они великолепны на экранах высокого разрешения.</p>
+      </td>
+      <td><a href="https://fontawesome.ru/examples/">https://fontawesome.ru/examples/</td>
+      <td>
+         <p>Примеры. Несколько простых примеров, показывающих как пользоваться Font Awesome.</p> 
+         <p>После того, как вы подключили Font Awesome к своему проекту, иконки можно вызывать с помощью тега 
+         <strong><</strong>i<strong>></strong>.</p>
+      </td>
+   </tr>
+   <tr>
+      <td><a href="https://fontawesome.ru/accessibility/">
+         https://fontawesome.ru/accessibility/</td>
+      <td>
+         <p>Общедоступность. Сделайте ваши иконки прекрасными для всех ваших пользователей.</p> 
+         <p>Иконки - символы, которые могут передать тонны информации и очень помогают людям понять направления, знаки и интерфейсы. Поэтому важно создавать их такими, чтобы они были доступны большинству пользователей. Современные версии вспомогательных технологий, таких как чтение с экрана, будут читать таблицы стилей сгенерированного контента (как объявить иконки Font Awesome), а также спецсимволы юникода.</p> 
+      </td>
+   </tr>
+   <tr>
+      <td><a href="https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself">https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself</td>
+      <td>Font Awesome 5.13.1 - The next generation of our icon</td>
+   </tr>
+   <tr class="separator">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+
    <!-- jQuery -->
    <tr>
       <td rowspan="4" class="first">jQuery</td>

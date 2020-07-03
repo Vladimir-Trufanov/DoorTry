@@ -71,16 +71,14 @@ echo '<script '.
 <?php
 echo '</head>';
 echo '<body>';
+/*
 ?>
-
 <script>
 $(document).ready(function()
 {
    console.log(window.innerHeight);
    console.log(window.innerWidth);
-
-
-setcookie('name1','value1',100) 
+   setcookie('name1','value1',100) 
 });
 setcookie('name2','value2',100) 
 //Получение cookie
@@ -88,36 +86,41 @@ $.cookie('cookie_name1', 'Значение кука1');
 var test = $.cookie('cookie_name1');
 //Проверка. существует ли кук
 if($.cookie('cookie_name1')) console.log('***'+test+'***');
-
-
 //Получение cookie
 //var test = $.cookie('cookie_name1');
-
 //Проверка. существует ли кук
 //if($.cookie('cookie_name1')) alert(test);
-
-
 //Удаление cookie
 //$.cookie('cookie_name2', null);
-
 </script>
-
-
-
-
-
-
 <?php
+*/
 echo '<div class="info">';
 echo '***<br>';
 echo 'Всем привет!<br>';
 echo '***<br>';
 echo '</div>';
+
+?>
+
+<div>
+   <img class="imgCard" id="Rocary" 
+   src="https://3.downloader.disk.yandex.ru/preview/72929e9c7c66f597b4f92c15b812cc3dbf08221c0e969a6663f79a4ece7ef206/inf/DhLO1VNSy6snhnvOdCmJUcSnXDlNO2C_9P8eTvVJCRrdN8LxBBo8Z_Uz8bPLQj88iGyLe-r0UBJ9MmzptJzqSw%3D%3D?uid=195746226&filename=IMG_2548.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=195746226&tknv=v2&size=1578x762"
+   <!-- 
+   src="https://3.downloader.disk.yandex.ru/preview/72929e9c7c66f597b4f92c15b812cc3dbf08221c0e969a6663f79a4ece7ef206/inf/DhLO1VNSy6snhnvOdCmJUcSnXDlNO2C_9P8eTvVJCRrdN8LxBBo8Z_Uz8bPLQj88iGyLe-r0UBJ9MmzptJzqSw==?uid=195746226&filename=IMG_2548.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&tknv=v2&owner_uid=195746226&size=1600x762"
+   src="/Images/nasampo.jpg" 
+   -->
+   alt="Хочешь кваску">
+</div>
+<?php
+
+
+
 echo '<div id="res"></div>';
 echo '</body>';
 echo '</html>';
 ?>
 <?php
 //prown\ViewGlobal(avgSERVER);
-prown\ViewGlobal(avgCOOKIE);
+//prown\ViewGlobal(avgCOOKIE);
 // <!-- --> ********************************************* dispTPhpPrown.php ***

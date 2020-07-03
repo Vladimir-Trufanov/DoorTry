@@ -37,7 +37,7 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			-Proba
+			+Proba
 				www\Pages\Proba\jquery.cookie.js
 				www\Pages\Proba\jquery-1.6.4.min.js
 				www\Pages\Proba\ProbaTest.php
@@ -158,10 +158,9 @@ DoorTry
 1=www\Pages\Instrumenty\indexInstrumenty.php
 2=www\Main.php
 3=www\Pages\Instrumenty\Instrumenty.php
-4=www\Styles\InstrumentyComp.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\InstrumentyComp.css
+Selected=www\Pages\Instrumenty\Instrumenty.php
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
@@ -169,11 +168,8 @@ Caret=1,26
 TopLine=64
 Caret=53,72
 [www\Main.php]
-TopLine=52
+TopLine=56
 Caret=29,80
 [www\Pages\Instrumenty\Instrumenty.php]
-TopLine=14
-Caret=10,23
-[www\Styles\InstrumentyComp.css]
-TopLine=29
-Caret=21,39
+TopLine=39
+Caret=57,49
