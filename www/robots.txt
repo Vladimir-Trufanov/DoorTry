@@ -6,6 +6,7 @@ Allow: /prostoj-princip-programmirovaniya$
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
 Allow: /stihi
 Allow: /TPhpPrown 
+Disallow: /instrumenty 
 Disallow: / 
 
 User-agent: Yandex 
@@ -15,6 +16,7 @@ Allow: /prostoj-princip-programmirovaniya$
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
 Allow: /stihi
 Allow: /TPhpPrown 
+Disallow: /instrumenty 
 Disallow: / 
 
 User-agent: * 
@@ -24,6 +26,7 @@ Allow: /prostoj-princip-programmirovaniya$
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
 Allow: /stihi
 Allow: /TPhpPrown 
+Disallow: /instrumenty 
 Disallow: / 
 
 Sitemap: https://doortry.ru/sitemap.xml

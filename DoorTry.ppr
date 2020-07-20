@@ -158,9 +158,12 @@ DoorTry
 1=www\Pages\Instrumenty\indexInstrumenty.php
 2=www\Main.php
 3=www\Pages\Instrumenty\Instrumenty.php
+4=www\robots.txt
+5=www\.htaccess
+6=www\iniMenu.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Instrumenty\Instrumenty.php
+Selected=www\robots.txt
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
@@ -172,4 +175,14 @@ TopLine=56
 Caret=29,80
 [www\Pages\Instrumenty\Instrumenty.php]
 TopLine=39
-Caret=57,49
+Caret=77,45
+[www\robots.txt]
+TopLine=5
+Caret=1,30
+[www\.htaccess]
+TopLine=53
+Caret=38,62
+[www\iniMenu.php]
+TopLine=137
+Caret=26,153
+Mark1=1,158

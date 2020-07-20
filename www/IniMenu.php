@@ -148,7 +148,14 @@ function TopMenu()
       echo '</ul>';
    echo '</li>';
    // Подключаем страницу с инструментами и документацией
-   echo '<li><a href="index.php?list=instrumenty">Инструменты</a></li>';
+   if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+   {
+      echo '<li><a href="instrumenty">Инструменты</a></li>';
+   }
+   else
+   {
+      echo '<li><a href="index.php?list=instrumenty">Инструменты</a></li>';
+   }
    //echo '<li><a href="#">SoftШутки</a></li>';
    echo '</ul>';
    return $Result;
