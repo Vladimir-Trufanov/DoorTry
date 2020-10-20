@@ -8,13 +8,13 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  07.12.2019
-// Copyright © 2019 tve                              Посл.изменение: 04.02.2020
+// Copyright © 2019 tve                              Посл.изменение: 20.10.2020
 
 // Определяем константу вызова страницы, имя файла, регулярку вырезания 
 // фрагмента исх.текста, заместитель выреза и команду выполнения теста
 define ("ScriptName",  "vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu"); 
 define ("FuncName",    "Findes"); 
-define ("Pattern",     "/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)function/u");
+define ("Pattern",     "/\/\/\sФункция([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-_:,=&;]+)function/u");
 define ("Replacement", "function");
 define ("Testing", "Yes");
 

@@ -44,7 +44,7 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			-Sshu
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -156,33 +156,20 @@ DoorTry
 [Open project files]
 0=www\iniMem.php
 1=www\Pages\Instrumenty\indexInstrumenty.php
-2=www\Main.php
-3=www\Pages\Instrumenty\Instrumenty.php
-4=www\robots.txt
-5=www\.htaccess
-6=www\iniMenu.php
+2=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
+3=www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 [Selected Project Files]
 Main=
-Selected=www\robots.txt
+Selected=www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 [www\iniMem.php]
 TopLine=17
 Caret=1,26
 [www\Pages\Instrumenty\indexInstrumenty.php]
-TopLine=64
+TopLine=52
 Caret=53,72
-[www\Main.php]
-TopLine=56
-Caret=29,80
-[www\Pages\Instrumenty\Instrumenty.php]
-TopLine=39
-Caret=77,45
-[www\robots.txt]
-TopLine=5
-Caret=1,30
-[www\.htaccess]
-TopLine=53
-Caret=38,62
-[www\iniMenu.php]
-TopLine=137
-Caret=26,153
-Mark1=1,158
+[www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php]
+TopLine=1
+Caret=75,11
+[www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php]
+TopLine=3
+Caret=1,18
