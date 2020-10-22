@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('Инструменты').'<br>';
+            echo  prown\getTranslit('Установить значение сессионной переменной').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost);
