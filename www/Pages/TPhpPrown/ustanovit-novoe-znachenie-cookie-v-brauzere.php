@@ -42,7 +42,7 @@ function DescriptPart()
 {
 ?>
 <div class="TPhpPrown">
-<h4 id="maketype">MakeCookie - установить новое значение COOKIE в браузере, 
+<h4 id="makecookie">MakeCookie - установить новое значение COOKIE в браузере, 
 заменить это значение во внутреннем массиве $_COOKIE и установить новое значение
 переменной-кукиса в сценарии</h4>
 
@@ -67,7 +67,7 @@ function DescriptPart()
 <p><strong>Синтаксис</strong></p>
 <pre>$Result=MakeCookie($Name,$Value=null,$Type=tStr,$Init=false,$Duration=cook512,
    $Options=["path"=>"/","domain"=>"","secure"=>false,"httponly"=>false,"samesite"=>null],
-   $ModeError=rvsTriggerError)</pre>
+   $ModeError=rvsTriggerError);</pre>
 
 <p><strong>Параметры</strong></p>
 <pre>

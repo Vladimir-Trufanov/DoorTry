@@ -58,36 +58,42 @@
       <loc>https://doortry.ru/TPhpPrown/opredelit-populyarnye-regulyarnye-vyrazheniya-php</loc>
       <lastmod>2019-12-22</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
+      <priority>0.305</priority>
    </url>
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-rabotaet-li-funkciya-calc-dlya-css</loc>
       <lastmod>2020-01-11</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
-   </url>
-   <url>
-      <loc>https://doortry.ru/TPhpPrown/otrabotat-regulyarnoe-vyrazhenie-na-tekste </loc>
-      <lastmod>2020-04-08</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
-   </url>
-   <url>
-      <loc>https://doortry.ru/TPhpPrown/preobrazovat-znachenie-k-zadannomu-tipu</loc>
-      <lastmod>2020-01-08</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
+      <priority>0.306</priority>
    </url>
    <url>
       <loc>https://doortry.ru/TPhpPrown/ustanovit-novoe-znachenie-cookie-v-brauzere</loc>
       <lastmod>2020-04-06</lastmod>
       <changefreq>monthly</changefreq>
-       <priority>0.3</priority>
+       <priority>0.307</priority>
+   </url>
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/otrabotat-regulyarnoe-vyrazhenie-na-tekste </loc>
+      <lastmod>2020-04-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.308</priority>
+   </url>
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/preobrazovat-znachenie-k-zadannomu-tipu</loc>
+      <lastmod>2020-01-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.309</priority>
    </url>
    <url>
       <loc>https://doortry.ru/TPhpPrown/vyvesti-soobshchenie-ob-oshibke-na-php</loc>
       <lastmod>2020-01-11</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
+      <priority>0.310</priority>
+   </url>
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/ustanovit-znachenie-sessionnoj-peremennoj</loc>
+      <lastmod>2020-01-11</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.311</priority>
    </url>
 </urlset>

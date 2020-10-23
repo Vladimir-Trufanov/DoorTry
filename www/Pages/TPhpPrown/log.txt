@@ -1,0 +1,1 @@
+[23-Oct-2020 21:56:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in C:\DoorTry\www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php on line 27

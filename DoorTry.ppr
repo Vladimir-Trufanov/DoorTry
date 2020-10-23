@@ -21,6 +21,7 @@ DoorTry
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
 			www\Images\Index.png
+			www\Images\nasampo.jpg
 		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
@@ -29,7 +30,7 @@ DoorTry
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
-			+Instrumenty
+			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
 			-LastError
@@ -37,7 +38,7 @@ DoorTry
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
-			+Proba
+			-Proba
 				www\Pages\Proba\jquery.cookie.js
 				www\Pages\Proba\jquery-1.6.4.min.js
 				www\Pages\Proba\ProbaTest.php
@@ -52,13 +53,14 @@ DoorTry
 				www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 				www\Pages\TPhpPrown\dlyaobschego.php
 				www\Pages\TPhpPrown\o-biblioteke.php
-				www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php
+				www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
 				www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
 				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 				www\Pages\TPhpPrown\ustanovit-novoe-znachenie-cookie-v-brauzere.php
+				www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 		-qrcode
@@ -109,7 +111,8 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		-Styles
+		+Styles
+			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
@@ -160,10 +163,10 @@ DoorTry
 3=www\Main.php
 4=www\iniMenu.php
 5=www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php
-6=..\TPhpPrown\TPhpPrown\MakeSession.php
+6=www\sitemap.xml
 [Selected Project Files]
 Main=
-Selected=..\TPhpPrown\TPhpPrown\MakeSession.php
+Selected=www\sitemap.xml
 [www\iniMem.php]
 TopLine=37
 Caret=1,65
@@ -172,7 +175,7 @@ TopLine=52
 Caret=53,72
 [www\Site.php]
 TopLine=17
-Caret=13,33
+Caret=15,33
 [www\Main.php]
 TopLine=63
 Caret=1,1
@@ -180,8 +183,8 @@ Caret=1,1
 TopLine=141
 Caret=1,1
 [www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php]
-TopLine=1
-Caret=36,18
-[..\TPhpPrown\TPhpPrown\MakeSession.php]
-TopLine=11
-Caret=49,18
+TopLine=81
+Caret=20,107
+[www\sitemap.xml]
+TopLine=74
+Caret=82,94

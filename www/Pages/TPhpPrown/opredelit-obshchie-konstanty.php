@@ -12,7 +12,7 @@
 
 // Определяем константу вызова страницы, имя файла, регулярку вырезания 
 // фрагмента исх.текста, заместитель выреза и команду выполнения теста
-define ("ScriptName", "opredelit-obshchie-konstanty-i-peremennye"); 
+define ("ScriptName", "opredelit-obshchie-konstanty"); 
 // FuncName="No", так как на странице должна быть только описательная часть
 define ("FuncName",    "iniConstMem"); 
 define ("Pattern",     "/\/\/\sМодуль([0-9a-zA-Zа-яёА-ЯЁ\s\.\$\n\r\(\)-:,=&;]+)\/\/\s---/u");
@@ -22,7 +22,7 @@ define ("Testing", "No");
 function SeoTags()
 {
 // Определяем SEO-теги
-   echo '<title>iniConstMem - определить общие константы и переменные библиотеки</title>';
+   echo '<title>iniConstMem - определить общие константы библиотеки</title>';
    echo '<meta name="description" content=
 "iniConstMem определяет общие константы библиотеки TPhpPrown. Это типы устройств, 
 через браузеры которых может читаться сайт; специальные параметры длительности 
