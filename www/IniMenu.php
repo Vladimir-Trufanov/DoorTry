@@ -141,6 +141,12 @@ function TopMenu()
    echo '</li>';
    // Подключаем пробную страницу
    //echo '<li><a href="index.php?list=proba">Пробная страница</a></li>';
+   // Подключаем страницы для проверки FsbProba
+   /*
+   echo '<li><a href="index.php?fsb=probaPolityConfident">probaPolityConfident</a></li>';
+   echo '<li><a href="index.php?fsb=probaPolzoSogl">probaPolzoSogl</a></li>';
+   echo '<li><a href="index.php?fsb=FsbProba">FsbProba</a></li>';
+   */
    // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';

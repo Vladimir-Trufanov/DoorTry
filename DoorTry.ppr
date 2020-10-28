@@ -17,6 +17,10 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
+		+Fsb
+			www\Fsb\FsbProba.php
+			www\Fsb\PolityConfident.php
+			www\Fsb\PolzoSogl.php
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
@@ -26,7 +30,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		+Pages
+		-Pages
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -45,13 +49,14 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			-Sshu
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
 				www\Pages\TPhpPrown\_viewTPhpPrown.php
 				www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
@@ -111,7 +116,7 @@ DoorTry
 			www\stihi\MakeStihi.php
 			www\stihi\sorevnovanie-s-hakerami.png
 			www\stihi\Stih.php
-		+Styles
+		-Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
@@ -161,12 +166,10 @@ DoorTry
 1=www\Pages\Instrumenty\indexInstrumenty.php
 2=www\Main.php
 3=www\iniMenu.php
-4=www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php
-5=www\Site.php
-6=..\TPhpPrown\TPhpPrown\MakeSession.php
+4=www\Fsb\FsbProba.php
 [Selected Project Files]
 Main=
-Selected=..\TPhpPrown\TPhpPrown\MakeSession.php
+Selected=www\iniMenu.php
 [www\iniMem.php]
 TopLine=37
 Caret=1,65
@@ -174,17 +177,11 @@ Caret=1,65
 TopLine=52
 Caret=53,72
 [www\Main.php]
-TopLine=79
-Caret=1,1
+TopLine=67
+Caret=24,91
 [www\iniMenu.php]
-TopLine=141
-Caret=1,1
-[www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php]
-TopLine=51
-Caret=33,69
-[www\Site.php]
-TopLine=29
-Caret=1,1
-[..\TPhpPrown\TPhpPrown\MakeSession.php]
-TopLine=17
-Caret=1,36
+TopLine=133
+Caret=6,149
+[www\Fsb\FsbProba.php]
+TopLine=1
+Caret=72,2

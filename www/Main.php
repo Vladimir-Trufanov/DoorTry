@@ -75,6 +75,23 @@ else if (prown\isComRequest('proba','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+// Если поступил запрос по политике конфиденциальности FsbProba, то запускаем её
+else if (prown\isComRequest('probaPolityConfident','fsb')) 
+{
+   $page='/Fsb/PolityConfident.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
+else if (prown\isComRequest('probaPolzoSogl','fsb')) 
+{
+   $page='/Fsb/PolzoSogl.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
+else if (prown\isComRequest('FsbProba','fsb')) 
+{
+   $page='/Fsb/FsbProba.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
 else if (prown\isComRequest('instrumenty','list')) 
 {
    $page='/Pages/Instrumenty/indexInstrumenty.php';
