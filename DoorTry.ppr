@@ -102,7 +102,7 @@ DoorTry
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
 		-stihi
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -169,7 +169,7 @@ DoorTry
 4=www\Fsb\FsbProba.php
 [Selected Project Files]
 Main=
-Selected=www\iniMenu.php
+Selected=www\Main.php
 [www\iniMem.php]
 TopLine=37
 Caret=1,65
@@ -177,10 +177,10 @@ Caret=1,65
 TopLine=52
 Caret=53,72
 [www\Main.php]
-TopLine=67
-Caret=24,91
+TopLine=55
+Caret=1,78
 [www\iniMenu.php]
-TopLine=133
+TopLine=67
 Caret=6,149
 [www\Fsb\FsbProba.php]
 TopLine=1
