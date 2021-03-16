@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('Установить значение сессионной переменной').'<br>';
+            echo  prown\getTranslit('Обслуживатель баз данных SQLite3').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost);

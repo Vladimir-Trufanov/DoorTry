@@ -20,7 +20,7 @@ $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
 $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
 // Подключаем задействованные классы
-require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
+require_once $SiteHost."/TPhpTools/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем собственно вкладываемое стихотворение, как функцию
 require_once $SiteRoot."/stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
 // Выполняем запуск сессии и начальную инициализацию

@@ -21,7 +21,7 @@ require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 // Подключаем задействованные классы
-require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
+require_once $SiteHost."/TPhpTools/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 
 require_once $SiteRoot."/Common.php";
 //require_once $SiteRoot."/DebugError.php";
@@ -68,6 +68,13 @@ if ($c_PersName<>$c_UserName)
 
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
+// Если поступил запрос на пробную BaseMaker страницу, то запускаем её
+else if (prown\isComRequest('basemaker','list')) 
+{
+   $page='/Pages/BaseMaker/ProbaTest.php';
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
+}
 // Если поступил запрос на пробную страницу, то запускаем её
 else if (prown\isComRequest('proba','list')) 
 {
@@ -114,7 +121,7 @@ else
       require_once $SiteRoot."/Site.php";
    }
    // Подключаем и запускаем регистратор времени загрузки страницы
-   require_once $SiteHost."/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
+   require_once $SiteHost."/TPhpTools/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();
    //require_once $SiteRoot."/timer.php";
    //require_once $SiteRoot."/DebugTimer.php";

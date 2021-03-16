@@ -17,7 +17,10 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
-		+Fsb
+		-.well-known
+			-pki-validation
+				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
+		-Fsb
 			www\Fsb\FsbProba.php
 			www\Fsb\PolityConfident.php
 			www\Fsb\PolzoSogl.php
@@ -26,11 +29,20 @@ DoorTry
 			www\Images\DoorTry2.png
 			www\Images\Index.png
 			www\Images\nasampo.jpg
+		-JqueryFW
+			-deploy
+				-images
+					www\JqueryFW\deploy\images\ajax-loader.gif
+				www\JqueryFW\deploy\jquery.mobile-1.3.2.min.css
+				www\JqueryFW\deploy\jquery.mobile-1.3.2.min.js
+				www\JqueryFW\deploy\jquery-2.2.4.min.js
 		-JS
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		-Pages
+		+Pages
+			+Basemaker
+				www\Pages\Basemaker\ProbaTest.php
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -102,7 +114,7 @@ DoorTry
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
 		-stihi
-			+sorevnovanie-s-hakerami
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -149,6 +161,7 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
+		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -167,21 +180,33 @@ DoorTry
 2=www\Main.php
 3=www\iniMenu.php
 4=www\Fsb\FsbProba.php
+5=www\Site.php
+6=www\index.php
+7=www\Pages\Basemaker\ProbaTest.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\Pages\Basemaker\ProbaTest.php
 [www\iniMem.php]
-TopLine=37
+TopLine=48
 Caret=1,65
 [www\Pages\Instrumenty\indexInstrumenty.php]
-TopLine=52
+TopLine=55
 Caret=53,72
 [www\Main.php]
-TopLine=55
-Caret=1,78
+TopLine=64
+Caret=39,72
 [www\iniMenu.php]
-TopLine=67
-Caret=6,149
+TopLine=132
+Caret=38,145
 [www\Fsb\FsbProba.php]
 TopLine=1
 Caret=72,2
+[www\Site.php]
+TopLine=16
+Caret=13,33
+[www\index.php]
+TopLine=13
+Caret=1,1
+[www\Pages\Basemaker\ProbaTest.php]
+TopLine=75
+Caret=49,98

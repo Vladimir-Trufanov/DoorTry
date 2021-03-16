@@ -141,6 +141,8 @@ function TopMenu()
    echo '</li>';
    // Подключаем пробную страницу
    //echo '<li><a href="index.php?list=proba">Пробная страница</a></li>';
+   // Подключаем пробную  по BaseMaker
+   echo '<li><a href="index.php?list=basemaker">Пробная BaseMaker страница</a></li>';
    // Подключаем страницы для проверки FsbProba
    /*
    echo '<li><a href="index.php?fsb=probaPolityConfident">probaPolityConfident</a></li>';
