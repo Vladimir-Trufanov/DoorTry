@@ -53,6 +53,13 @@ function UnlinkFileBase($filename)
    } 
 }
 
+// Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
+// страницы с выводом сообщений, а также комментариев для PHP5-PHP7
+require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
+try 
+{
+
+// Запускаем сценарий сайта
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
@@ -68,7 +75,9 @@ echo '***<br>';
 echo 'Всем привет!<br>';
 echo '***<br>';
 
-     // Проверяем существование и удаляем файл базы данных 
+      //filemtime('генерируем отладочное исключение'); 
+
+      // Проверяем существование и удаляем файл базы данных 
       $filename=$_SERVER['DOCUMENT_ROOT'].'/basemaker.db3';
       echo 'Проверяется существование и удаляется старый файл базы данных: ';  
       UnlinkFileBase($filename);
@@ -92,6 +101,16 @@ echo '***<br>';
       PragmaBaseTest($pdo);
       OkMessage();
 
+      PointMessage('Через PDO строятся таблицы и объект PDO уничтожается');                                    
+      CreateBaseTest($pdo);
+      unset($pdo); // удалили объект класса
+      OkMessage();
+      
+      // Заново создаем базу данных и подключаем к ней TBaseMaker
+      $db = new ttools\BaseMaker($pathBase,$username,$password);
+      // Тестируем Values, Rows методы
+      test_ValueRow($db);
+
 
 
 
@@ -106,4 +125,12 @@ echo '</body>';
 echo '</html>';
 //prown\ViewGlobal(avgSERVER);
 //prown\ViewGlobal(avgCOOKIE);
+
+// Выполняем обработку исключений на верхнем уровне
+}
+catch (E_EXCEPTION $e) 
+{
+   DoorTryPage($e);
+}
+
 // <!-- --> ********************************************* dispTPhpPrown.php ***
