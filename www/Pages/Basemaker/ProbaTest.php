@@ -26,39 +26,11 @@ $TPhpTools=$SiteHost.'/TPhpTools';
 require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
 require_once $TPhpTools."/TPhpTools/TBaseMaker/BaseMakerClass.php";
 
-$classTT='BaseMaker';
-require_once $TPhpTools."/TPhpToolsTests/T".$classTT."_CreateBaseTest.php";
-require_once $TPhpTools."/TPhpToolsTests/T".$classTT."_PragmaTest.php";
-require_once $TPhpTools."/TPhpToolsTests/T".$classTT."_ValueRow.php";
-require_once $TPhpTools."/TPhpToolsTests/T".$classTT."_Query.php";
-require_once $TPhpTools."/TPhpToolsTests/T".$classTT."_UpdateInsert.php";
-
-
-
-// ****************************************************************************
-// *            Проверить существование и удалить файл базы данных            *
-// ****************************************************************************
-function UnlinkFileBase($filename)
-{
-   if (file_exists($filename)) 
-   {
-      if (!unlink($filename))
-      {
-         // Выводим сообщение о неудачном удалении файла базы данных в случаях:
-         // а) база данных подключена к стороннему приложению;
-         // б) база данных еще привязана к другому объекту класса;
-         // в) прочее
-         throw new Exception("Не удалось удалить тестовую базу данных $filename!");
-      } 
-   } 
-}
-
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
-
 // Запускаем сценарий сайта
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
@@ -71,54 +43,25 @@ echo '</head>';
 
 echo '<body>';
 echo '<div>';
+
+/*
 echo '***<br>';
 echo 'Всем привет!<br>';
 echo '***<br>';
+*/
 
-      //filemtime('генерируем отладочное исключение'); 
+$classTT='BaseMaker';
 
-      // Проверяем существование и удаляем файл базы данных 
-      $filename=$_SERVER['DOCUMENT_ROOT'].'/basemaker.db3';
-      echo 'Проверяется существование и удаляется старый файл базы данных: ';  
-      UnlinkFileBase($filename);
-      echo 'Ok<br>';
-
-      echo 'Создается объект PDO и файл тестовой базы данных: ';
-      $pathBase='sqlite:'.$filename; 
-      $username='tve';
-      $password='23ety17';     
-      // Подключаем PDO к базе
-      $pdo = new PDO(
-      $pathBase, 
-      $username,
-      $password,
-      array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
-      );
-      echo 'Ok<br>';
-
-      PointMessage('Проверяются настройки целостности по внешним ключам:'); 
-      // (по запросу PRAGMA:foreign_keys)                                    
-      PragmaBaseTest($pdo);
-      OkMessage();
-
-      PointMessage('Через PDO строятся таблицы и объект PDO уничтожается');                                    
-      CreateBaseTest($pdo);
-      unset($pdo); // удалили объект класса
-      OkMessage();
-      
-      // Заново создаем базу данных и подключаем к ней TBaseMaker
-      $db = new ttools\BaseMaker($pathBase,$username,$password);
-      // Тестируем Values, Rows методы
-      test_ValueRow($db);
-
-
-
-
-
-
-
-
-
+require_once $TPhpTools."/TPhpToolsTests/T_ToolsTestCommon.php";
+if ($classTT=='BaseMaker')
+{
+   require_once $TPhpTools."/TPhpToolsTests/TBaseMaker_CreateBaseTest.php";
+   require_once $TPhpTools."/TPhpToolsTests/TBaseMaker_PragmaTest.php";
+   require_once $TPhpTools."/TPhpToolsTests/TBaseMaker_ValueRow.php";
+   require_once $TPhpTools."/TPhpToolsTests/TBaseMaker_Query.php";
+   require_once $TPhpTools."/TPhpToolsTests/TBaseMaker_UpdateInsert.php";
+}
+$shellTest=NULL; require_once $TPhpTools."/TPhpToolsTests/T".$classTT."__test.php";
 
 echo '</div>';
 echo '</body>';
@@ -132,5 +75,4 @@ catch (E_EXCEPTION $e)
 {
    DoorTryPage($e);
 }
-
 // <!-- --> ********************************************* dispTPhpPrown.php ***

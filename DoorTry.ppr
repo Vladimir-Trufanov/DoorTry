@@ -205,8 +205,8 @@ Caret=72,2
 TopLine=17
 Caret=13,33
 [www\index.php]
-TopLine=23
+TopLine=30
 Caret=1,47
 [www\Pages\Basemaker\ProbaTest.php]
-TopLine=85
-Caret=24,112
+TopLine=43
+Caret=2,64
