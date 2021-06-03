@@ -43,9 +43,19 @@ DoorTry
 			www\JS\jquery.doubleScroll.js
 		+Pages
 			+Basemaker
+				-images
+					www\Pages\Basemaker\images\photo.jpg
+					www\Pages\Basemaker\images\stamp.png
+				www\Pages\Basemaker\dave.png
+				www\Pages\Basemaker\dave1.png
 				www\Pages\Basemaker\log.txt
+				www\Pages\Basemaker\photo.jpeg
 				www\Pages\Basemaker\ProbaTest.php
 				www\Pages\Basemaker\ProbaTestBMaker.php
+				www\Pages\Basemaker\sean.png
+				www\Pages\Basemaker\sean1.png
+				www\Pages\Basemaker\stamp.png
+				www\Pages\Basemaker\Styles.css
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -188,9 +198,10 @@ DoorTry
 6=www\index.php
 7=www\MobiSite.php
 8=www\Pages\Basemaker\ProbaTest.php
+9=www\Pages\Basemaker\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\Basemaker\ProbaTest.php
+Selected=www\Pages\Basemaker\Styles.css
 [www\iniMem.php]
 TopLine=35
 Caret=1,65
@@ -216,5 +227,9 @@ Caret=1,47
 TopLine=7
 Caret=1,1
 [www\Pages\Basemaker\ProbaTest.php]
-TopLine=32
-Caret=22,38
+TopLine=163
+Caret=4,171
+[www\Pages\Basemaker\Styles.css]
+TopLine=7
+Caret=17,30
+Mark1=7,33

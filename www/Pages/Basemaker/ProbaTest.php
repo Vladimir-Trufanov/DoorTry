@@ -27,6 +27,7 @@ echo '<title>Проба BaseMaker</title>';
 echo '<meta name="description" content="Проба Img">';
 echo '<meta name="keywords"    content="Проба Img">';
 
+/*
 echo '
    <script>
    function sizePic() 
@@ -43,22 +44,47 @@ echo '
    }
    </script>
 ';
+*/
+echo '<link rel="stylesheet" type="text/css" href="Styles.css">';
 
 echo '</head>';
+echo '<body><div id="All">';
 
-echo '<body>';
-echo '<div>';
+// Размечаем область загруженного изображения и подписи
+echo '<div  id="View">';
+echo '<div  id="Photo">';
+ViewPhoto();
+echo '</div>';
+echo '<div  id="Stamp">';
+ViewStamp();
+echo '</div>';
+echo '</div>';
 
+// Размечаем область изображения с подписью
+echo '<div  id="Proba">';
+ViewProba();
+echo '</div>';
+
+// Размечаем область управления загрузкой и подписанием
+echo '<div  id="Lead">';
+ViewLead();
+echo '</div>';
+
+
+/*
 echo '***<br>';
 echo 'Всем привет!<br>';
-
-  echo '<pre>';
-  print_r(gd_info());
-  echo '</pre>';
-
-
+echo '<pre>';
+print_r(gd_info());
+echo '</pre>';
 echo '***<br>';
+*/
+
 //MakeStamp();
+
+
+
+/*
 echo '
   <p>Размер подписи: <input type="range" min="1" max="5" id="sizeStamp" 
      oninput="sizeStamp()" value="3"></p>
@@ -71,7 +97,7 @@ echo '
 ';
 
 
-/*
+
 
 $im = imagecreatefrompng('sean.png');
 
@@ -106,8 +132,7 @@ imagedestroy($im);
 
 
 */
-echo '</div>';
-echo '</body>';
+echo '</div></body>';
 echo '</html>';
 //prown\ViewGlobal(avgSERVER);
 //prown\ViewGlobal(avgCOOKIE);
@@ -140,7 +165,25 @@ function MakeStamp()
    imagedestroy($im);
    echo 'Сделано!';
 }
-
-
+// Вывести изображение последнего загруженного фото
+function ViewPhoto()
+{
+   echo '<p><img src="images/photo.jpg" alt="" id="pic"></p>';
+}
+// Вывести изображение подписи последних размеров
+function ViewStamp()
+{
+   echo '<p><img src="images/stamp.png" alt="" id="picStamp"></p>';
+}
+// Вывести изображение c подписью
+function ViewProba()
+{
+   echo '<p><img src="images/proba.png" alt="" id="picProba"></p>';
+}
+// Вывести область управления
+function ViewLead()
+{
+   echo 'Lead';
+}
 
 // <!-- --> ********************************************* dispTPhpPrown.php ***

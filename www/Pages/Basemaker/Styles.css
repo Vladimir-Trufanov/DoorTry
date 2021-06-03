@@ -1,0 +1,96 @@
+/** HTML5/CSS3, EDGE/CHROME                                  *** Styles.css ***
+
+ ******************************************************************************
+ * KwinTiny         Определить стили документа за границами области редактора *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  03.06.2021
+ Copyright © 2021 tve                                Посл.изменение: 03.06.2021
+*/
+
+html{font-family:'Anonymous Pro',monospace;font-size:16px;}
+body{height:100%;}
+/* Все секции представляем, как блоки */
+article, aside, details, div, figcaption, figure, footer, header, hgroup, 
+menu, nav, section 
+{display: block;}
+
+/** 
+  Выравниваем 
+*/
+html, body, #All, #View
+{
+	margin:0;
+   padding:0;
+	vertical-align:baseline;
+}
+html, body, #All, #View, #Photo, #Stamp, #Lead
+{
+   overflow:auto;
+	border:0;
+}
+#Proba
+{
+   border:.4rem double gray;
+}
+#All
+{
+   position:fixed;
+   width:100%;
+   height:100%;
+}
+/**
+  Для отладки расскрашиваем дивы
+*/
+body{background:aqua;} 
+#View{background:magenta;}
+#Photo{background:yellow;}
+#Stamp{background:red;}
+#Proba{background:olive;}
+#Lead{background:purple;}
+
+#View, #Proba, #Lead
+{
+   /*position:fixed;*/
+   padding:.5rem;
+}
+#View
+{
+/*
+   top:0;
+   left:0;
+   width:45%
+   height:90%;
+*/
+}
+#Proba
+{
+
+/*
+   top:0;
+   left:45%;
+   width:55%
+   height:40%;
+*/
+}
+#picProba
+{
+  /* width:100%*/
+  /*height:50%*/
+}
+#Lead
+{
+/*
+   bottom:0;
+   left:0;
+   width:100%
+   height:10%;
+   */
+}
+
+/*
+ *************************************************************** Styles.css ***
+*/	
+	
+
