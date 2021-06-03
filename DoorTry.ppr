@@ -5,6 +5,7 @@ Compilator.CompileOnBackground=0
 Compilator.ProgSaveAll=0
 Compilator.ProgRunSelection=0
 Compilator.LogType=0
+Compilator.LogEncoding=0
 DefaultDir=C:\DoorTry\www
 DefaultCP=0
 LogtoEnd=1
@@ -42,7 +43,9 @@ DoorTry
 			www\JS\jquery.doubleScroll.js
 		+Pages
 			+Basemaker
+				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTest.php
+				www\Pages\Basemaker\ProbaTestBMaker.php
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
@@ -143,6 +146,7 @@ DoorTry
 			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
+		www\basemaker.db3
 		www\check.php
 		www\Common.php
 		www\DebugError.php
@@ -182,31 +186,35 @@ DoorTry
 4=www\Fsb\FsbProba.php
 5=www\Site.php
 6=www\index.php
-7=www\Pages\Basemaker\ProbaTest.php
+7=www\MobiSite.php
+8=www\Pages\Basemaker\ProbaTest.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\Basemaker\ProbaTest.php
 [www\iniMem.php]
-TopLine=49
+TopLine=35
 Caret=1,65
 [www\Pages\Instrumenty\indexInstrumenty.php]
 TopLine=56
 Caret=53,72
 [www\Main.php]
-TopLine=64
+TopLine=72
 Caret=39,72
 [www\iniMenu.php]
-TopLine=132
+TopLine=115
 Caret=38,145
 [www\Fsb\FsbProba.php]
 TopLine=1
 Caret=72,2
 [www\Site.php]
-TopLine=17
+TopLine=13
 Caret=13,33
 [www\index.php]
 TopLine=30
 Caret=1,47
+[www\MobiSite.php]
+TopLine=7
+Caret=1,1
 [www\Pages\Basemaker\ProbaTest.php]
-TopLine=43
-Caret=2,64
+TopLine=32
+Caret=22,38
