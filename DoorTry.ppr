@@ -227,9 +227,9 @@ Caret=1,47
 TopLine=7
 Caret=1,1
 [www\Pages\Basemaker\ProbaTest.php]
-TopLine=163
-Caret=4,171
+TopLine=55
+Caret=22,56
 [www\Pages\Basemaker\Styles.css]
-TopLine=7
-Caret=17,30
-Mark1=7,33
+TopLine=62
+Caret=18,76
+Mark1=7,85

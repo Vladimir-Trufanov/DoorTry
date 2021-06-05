@@ -48,7 +48,8 @@ echo '
 echo '<link rel="stylesheet" type="text/css" href="Styles.css">';
 
 echo '</head>';
-echo '<body><div id="All">';
+echo '<body>';
+echo '<div id="All">';
 
 // Размечаем область загруженного изображения и подписи
 echo '<div  id="View">';
@@ -65,6 +66,8 @@ echo '<div  id="Proba">';
 ViewProba();
 echo '</div>';
 
+
+echo '</div>';
 // Размечаем область управления загрузкой и подписанием
 echo '<div  id="Lead">';
 ViewLead();
@@ -132,7 +135,7 @@ imagedestroy($im);
 
 
 */
-echo '</div></body>';
+echo '</body>';
 echo '</html>';
 //prown\ViewGlobal(avgSERVER);
 //prown\ViewGlobal(avgCOOKIE);
@@ -168,22 +171,25 @@ function MakeStamp()
 // Вывести изображение последнего загруженного фото
 function ViewPhoto()
 {
-   echo '<p><img src="images/photo.jpg" alt="" id="pic"></p>';
+   echo 'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo ';
+   //echo '<img src="images/photo.jpg" alt="" id="pic">';
 }
 // Вывести изображение подписи последних размеров
 function ViewStamp()
 {
-   echo '<p><img src="images/stamp.png" alt="" id="picStamp"></p>';
+   echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp ';
+   //echo '<p><img src="images/stamp.png" alt="" id="picStamp"></p>';
 }
 // Вывести изображение c подписью
 function ViewProba()
 {
-   echo '<p><img src="images/proba.png" alt="" id="picProba"></p>';
+   //echo '<img src="images/proba.png" alt="" id="picProba">';
+   echo 'Proba - Подписанная фотография';
 }
 // Вывести область управления
 function ViewLead()
 {
-   echo 'Lead';
+   echo 'Lead Управление';
 }
 
 // <!-- --> ********************************************* dispTPhpPrown.php ***
