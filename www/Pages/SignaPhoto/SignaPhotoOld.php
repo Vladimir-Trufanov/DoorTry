@@ -6,13 +6,12 @@ $SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог с�
 $SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
 $SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
 $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
-$UserAgent  = $_WORKSPACE[wsUserAgent];   // HTTP_USER_AGENT
 // Подключаем файлы библиотеки прикладных модулей:
 $TPhpPrown=$SiteHost.'/TPhpPrown';
-require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
+//require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
 // Подключаем файлы библиотеки прикладных классов:
-$TPhpTools=$SiteHost.'/TPhpTools';
-require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
+//$TPhpTools=$SiteHost.'/TPhpTools';
+//require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
@@ -26,6 +25,63 @@ echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<title>Проба BaseMaker</title>';
 echo '<meta name="description" content="Проба Img">';
 echo '<meta name="keywords"    content="Проба Img">';
+
+echo '<script src="SignaPhoto.js"></script>';
+echo '<script '.
+     'src="https://code.jquery.com/jquery-3.3.1.min.js" '.
+     'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+// Как можно раньше (до полной загрузки страницы) определяем
+// ориентацию смартфона
+echo '
+   <script>
+   SiteDevice="Computer";
+';
+   if ($SiteDevice=='Mobile')
+   {
+   
+      console.log(SiteDevice);
+      // Определяем защишенность сайта, для того чтобы правильно сформулировать 
+      // в запросе "http" или "https"
+      $https="<?php echo $_SERVER['HTTPS']; ?>"
+      if ($https=='off') $https='http'
+      else $https='https'; 
+      console.log($https);
+      // Готовим вызов страницы c разметкой для режима "мобильный и портретный"
+      // и перезапускем страницу
+      $page=$https+'://'+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
+      console.log($page);
+      window.location = $page;
+      //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+
+
+
+
+      /*
+      //MobiMarkup();
+      ?>
+      
+    	function showLoc() 
+      {
+         var x = window.location;
+         var t = ['Property-Typeof-Value', 'window.location - ' + (typeof x) + ' - ' + x ];
+         for (var prop in x)
+         {
+            t.push(prop + ' - ' + (typeof x[prop]) + ' - ' +  (x[prop] || 'n/a'));
+         }
+         alert(t.join('\n'));
+      }
+      
+      SiteDevice="<?php echo $SiteDevice; ?>";
+      //SiteDevice=MakeSiteDevice("<?php echo $SiteDevice; ?>");
+      //doOnOrientationChange();
+      <?php
+      */
+   }
+echo '
+   </script>
+';
 
 /*
 echo '
@@ -45,7 +101,58 @@ echo '
    </script>
 ';
 */
-echo '<link rel="stylesheet" type="text/css" href="Styles.css">';
+
+// Переопределяем стили
+if ($SiteDevice=='Mobile') 
+   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
+else 
+   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
+// 
+// Подключаем скрипты по завершению загрузки страницы
+echo '<script>$(document).ready(function() {';
+   // Переопределяем разметку
+   if ($SiteDevice=='Mobile')
+   {
+      //MobiMarkup();
+      /*
+      ?>
+      console.log(SiteDevice);
+      
+      
+      $page='http://localhost:82';
+      $page='http://'+"<?php echo $_SERVER['HTTP_HOST']; ?>"
+      
+      $https="<?php echo $_SERVER['HTTPS']; ?>"
+      if ($https=='off') $https='http'
+      else $https='https'; 
+      console.log($https);
+      
+      $page=$page+'/Pages/SignaPhoto/SignaPhotoPortrait.php';
+      $page=$https+'://'+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
+      console.log($page);
+      window.location = $page;
+      //Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+
+      
+      
+      //SiteDevice=MakeSiteDevice("<?php echo $SiteDevice; ?>",true);
+      //doOnOrientationChange();
+      //showLoc();
+      //window.location = "http://localhost:82/Pages/SignaPhoto/SignapPhoto.php";
+      //window.location = '<?php echo $_SERVER["HTTP_HOST"]; ?>'+'/index.php?list=signapphoto';
+      //console.log('<?php echo $_SERVER["HTTP_HOST"]; ?>'+'/index.php?list=signapphoto');
+      //window.location = '<?php echo $_SERVER["HTTP_HOST"]; ?>'+'/index.php?list=signapphoto'; 
+      <?php
+      */
+   }
+   else 
+   {
+      //DescMarkup();
+      ?>
+      SiteDevice=MakeSiteDevice("<?php echo $SiteDevice; ?>",true);
+      <?php
+   }
+echo '});</script>';
 
 echo '</head>';
 echo '<body>';
@@ -63,6 +170,17 @@ echo '</div>';
 
 // Размечаем область изображения с подписью
 echo '<div  id="Proba">';
+echo '$SiteDevice='.$SiteDevice.'<br>';
+echo '$SiteHost='.$SiteHost.'<br>';
+echo '$_SERVER["SERVER_NAME"]='.$_SERVER["SERVER_NAME"].'<br>';
+echo '$_SERVER["QUERY_STRING"]='.$_SERVER["QUERY_STRING"].'<br>';
+echo '$_SERVER["DOCUMENT_ROOT"]='.$_SERVER["DOCUMENT_ROOT"].'<br>';
+echo '$_SERVER["HTTP_HOST"]='.$_SERVER["HTTP_HOST"].'<br>';
+echo '$_SERVER["HTTPS"]='.$_SERVER["HTTPS"].'<br>';
+echo '$_SERVER["SCRIPT_FILENAME"]='.$_SERVER["SCRIPT_FILENAME"].'<br>';
+echo '$_SERVER["REQUEST_URI"]='.$_SERVER["REQUEST_URI"].'<br>';
+
+
 ViewProba();
 echo '</div>';
 
@@ -189,7 +307,9 @@ function ViewProba()
 // Вывести область управления
 function ViewLead()
 {
-   echo 'Lead Управление';
+   echo 'Lead Управление<br>';
+   echo '<div id="SiteDevice">Устройство неизвестное</div>';
+
 }
 
 // <!-- --> ********************************************* dispTPhpPrown.php ***
