@@ -30,10 +30,36 @@ try
    require_once 'SignaPhotoHtml.php';
    HtmlBegin();
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
-
+   // Как можно раньше (до полной загрузки страницы) определяем
+   // ориентацию смартфона и формируем URL:
+   // $SignaPortraitUrl, $SignaUrl
+   ?>
+      <script>
+      // Определяем защишенность сайта, для того чтобы правильно сформулировать 
+      // в запросе http или https
+      $https='<?php echo $_SERVER["HTTPS"];?>';
+      if ($https=="off") $https="http"
+      else $https="https"; 
+      console.log($https);
+      // Готовим URL для мобильно-портретной разметки, то есть разметки
+      // для jQuery-мobile c двумя страницами 
+      $SignaPortraitUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
+      console.log($SignaPortraitUrl);
+      // Готовим URL для настольно-ландшафтной разметки (одностраничной)
+      $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphoto";
+      console.log($SignaUrl);
+      </script>
+   <?php
+   
    echo '</head>';
    echo '<body>';
-   echo 'Мобильнай и портретный';
+   echo 'PORTRAIT';
+   
+   // Подключаем скрипты по завершению загрузки страницы
+   echo '<script>$(document).ready(function() {';
+   //echo 'alert("SignaPhotoPortrait");';
+   echo '});</script>';
+
    /*
    echo '***<br>';
    echo 'Всем привет!<br>';

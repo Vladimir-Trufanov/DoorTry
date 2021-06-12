@@ -57,10 +57,10 @@ body
 /**
   Для отладки расскрашиваем дивы
 */
-body{background:purple;} 
+body{background:yellow;} 
 #All{background:white;}
 #View{background:magenta;}
-#Photo{background:yellow;}
+#Photo{background:purple;}
 #Stamp{background:red;}
 #Proba{background:olive;}
 #Lead{background:aqua;}

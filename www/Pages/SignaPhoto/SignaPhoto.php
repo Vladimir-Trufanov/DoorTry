@@ -31,34 +31,38 @@ try
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
 
    // Как можно раньше (до полной загрузки страницы) определяем
-   // ориентацию смартфона
-   echo '
+   // ориентацию смартфона и формируем URL:
+   // $SignaPortraitUrl, $SignaUrl
+   ?>
       <script>
-      SiteDevice="Computer";
-   ';
-   if ($SiteDevice=='Mobile')
-   {
-      ?>
-      console.log(SiteDevice);
       // Определяем защишенность сайта, для того чтобы правильно сформулировать 
-      // в запросе "http" или "https"
-      $https="<?php echo $_SERVER['HTTPS']; ?>"
-      if ($https=='off') $https='http'
-      else $https='https'; 
+      // в запросе http или https
+      $https='<?php echo $_SERVER["HTTPS"];?>';
+      if ($https=="off") $https="http"
+      else $https="https"; 
       console.log($https);
-      // Готовим вызов страницы c разметкой для режима "мобильный и портретный"
-      // и перезапускем страницу
-      $page=$https+'://'+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
-      console.log($page);
-      window.location = $page;
-      <?php
-   }
-   echo '
+      // Готовим URL для мобильно-портретной разметки, то есть разметки
+      // для jQuery-мobile c двумя страницами 
+      $SignaPortraitUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
+      console.log($SignaPortraitUrl);
+      // Готовим URL для настольно-ландшафтной разметки (одностраничной)
+      $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphoto";
+      console.log($SignaUrl);
       </script>
-   ';
+   <?php
+
    echo '</head>';
    echo '<body>';
-   echo 'Компьютер или мобильнай и ландшафтный';
+   
+   echo 'LANDSCAPE';
+   
+   // Подключаем скрипты по завершению загрузки страницы
+   echo '<script>$(document).ready(function() {';
+   //echo 'alert("SignaPhoto");';
+   echo '});</script>';
+
+   
+   
    /*
    echo '***<br>';
    echo 'Всем привет!<br>';

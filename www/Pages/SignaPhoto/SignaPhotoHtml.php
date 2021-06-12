@@ -32,4 +32,21 @@ function HtmlBegin()
       '</script>';
    return $Result;
 }
+// ****************************************************************************
+// *                       Определить ориентацию устройства                   *
+// ****************************************************************************
+function DeviceOrient($SiteDevice)
+{
+   $DeviceOrient="LANDSCAPE";
+   if ($SiteDevice=='Mobile')
+   {
+      ?>
+      <script>
+      if (window.orientation==0) {<?php $DeviceOrient="PORTRAIT"; ?>};
+      </script>
+      <?php
+   }
+   return $DeviceOrient;
+}
+
 // *** <!-- --> **************************************** SignaPhotoHtml.php ***

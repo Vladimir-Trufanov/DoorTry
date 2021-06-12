@@ -44,7 +44,7 @@ echo '
       console.log(SiteDevice);
       // Определяем защишенность сайта, для того чтобы правильно сформулировать 
       // в запросе "http" или "https"
-      $https="<?php echo $_SERVER['HTTPS']; ?>"
+      $https="<?php echo $_SERVER['HTTPS']; ?>";
       if ($https=='off') $https='http'
       else $https='https'; 
       console.log($https);

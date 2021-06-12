@@ -18,7 +18,7 @@ function sayLogic($logic)
    return $Result;
 }
 // ****************************************************************************
-// *        Преобразовать логическое значение в соответствующий текст         *
+// *        =-----Преобразовать логическое значение в соответствующий текст         *
 // ****************************************************************************
 function MakeSiteDevice($Name,$isElem=false)
 {
@@ -54,24 +54,63 @@ function MakeSiteDevice($Name,$isElem=false)
 window.addEventListener('orientationchange',doOnOrientationChange);
 function doOnOrientationChange() 
 {
-   $('#OriChange').remove();
-   if (window.orientation==0)
+   // Если ориентация портретная, то запускаем страницу с разметкой для jQuery 
+   // mobile c двумя страницами 
+   $DeviceOrient="Orient "+window.orientation;
+   //alert($DeviceOrient);
+   if (window.orientation==0) 
    {
-      $('#Play').css('display','block');
+      //alert($SignaPortraitUrl);
+      window.location = $SignaPortraitUrl;
    }
-   else
+   if (window.orientation==180) window.location = $SignaPortraitUrl;
+   if (window.orientation==90) 
    {
-      $('#Play').css('display','none');
-      var cHtml='<div id="OriChange">'+SiteDevice+' поверните, игра запустится!</div>';
-      $('#Main').prepend(cHtml);
-      $('#OriChange').css('font-size','3.6rem');
-      $('#OriChange').css('width','77rem');
-      $('#OriChange').css('padding-left','2rem');
-      $('#OriChange').css('margin-top','4rem');
-      $('#OriChange').css('margin-left','auto');
-      $('#OriChange').css('margin-right','auto');
-      $('#OriChange').css('font-weight','bold');
-      $('#OriChange').css('color','#E00B0B');
+      //alert($SignaUrl);
+      window.location = $SignaUrl;
+   }
+   if (window.orientation==-90) 
+   {
+      window.location = $SignaUrl;
    }
 }
+
+/*
+function doOnOrientationChange($isStart=false) 
+{
+   $SiteDevice='<?php echo $SiteDevice; ?>';
+   console.log('*** '+$SiteDevice+' ***');
+   console.log('*** $isStart='+sayLogic($isStart)+' ***');
+    
+
+   if ($SiteDevice=='Mobile')
+   {
+      // Определяем защишенность сайта, для того чтобы правильно сформулировать 
+      // в запросе "http" или "https"
+      $https='<?php echo $_SERVER["HTTPS"]; ?>';
+      if ($https=='off') $https='http'
+      else $https='https'; 
+      console.log($https);
+      // Если ориентация портретная, то запускаем страницу с разметкой для jQuery 
+      // mobile c двумя страницами 
+      if (window.orientation==0)
+      {
+         // Готовим вызов страницы c разметкой для режима "мобильный и портретный"
+         // и перезапускем страницу
+         $page=$https+'://'+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
+         console.log($page);
+         //window.location = $page;
+      }
+      // Если ориентация ландшафтная, то запускаем страницу с компьютерной,
+      // настольной разметкой (при начальном запуске пропускаем ветвление)
+      if ($isStart) {}
+      else
+      {
+         $page=$https+'://'+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphoto";
+         console.log($page);
+         window.location = $page;
+      }
+   }
+}
+*/
 // ********************************************************** SignaPhoto.js ***
