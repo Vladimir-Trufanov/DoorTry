@@ -54,6 +54,13 @@ function MakeSiteDevice($Name,$isElem=false)
 window.addEventListener('orientationchange',doOnOrientationChange);
 function doOnOrientationChange() 
 {
+   if ((window.orientation==0)||(window.orientation==180)) 
+      window.location = $SignaPortraitUrl;
+   if ((window.orientation==90)||(window.orientation==-90)) 
+      window.location = $SignaUrl;
+
+
+/*
    // Если ориентация портретная, то запускаем страницу с разметкой для jQuery 
    // mobile c двумя страницами 
    $DeviceOrient="Orient "+window.orientation;
@@ -63,7 +70,10 @@ function doOnOrientationChange()
       //alert($SignaPortraitUrl);
       window.location = $SignaPortraitUrl;
    }
-   if (window.orientation==180) window.location = $SignaPortraitUrl;
+   if (window.orientation==180) 
+   {
+      window.location = $SignaPortraitUrl;
+   }
    if (window.orientation==90) 
    {
       //alert($SignaUrl);
@@ -73,6 +83,7 @@ function doOnOrientationChange()
    {
       window.location = $SignaUrl;
    }
+*/
 }
 
 /*

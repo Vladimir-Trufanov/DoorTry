@@ -18,7 +18,7 @@ $SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
 $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
 // Подключаем файлы библиотеки прикладных модулей:
 $TPhpPrown=$SiteHost.'/TPhpPrown';
-//require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
+require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 // Подключаем файлы библиотеки прикладных классов:
 //$TPhpTools=$SiteHost.'/TPhpTools';
 //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
@@ -27,9 +27,13 @@ $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
+   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);   // число запросов страницы
+   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
+
    require_once 'SignaPhotoHtml.php';
    HtmlBegin();
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
+
    // Как можно раньше (до полной загрузки страницы) определяем
    // ориентацию смартфона и формируем URL:
    // $SignaPortraitUrl, $SignaUrl
@@ -48,12 +52,18 @@ try
       // Готовим URL для настольно-ландшафтной разметки (одностраничной)
       $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphoto";
       console.log($SignaUrl);
+      //doOnOrientationChange();
+      
+      $SiteDevice='<?php echo $SiteDevice; ?>';
+      //alert($SiteDevice);
+      
       </script>
    <?php
    
    echo '</head>';
    echo '<body>';
-   echo 'PORTRAIT';
+   
+   echo $c_SignaPhoto; echo ': PORTRAIT<br>';
    
    // Подключаем скрипты по завершению загрузки страницы
    echo '<script>$(document).ready(function() {';
