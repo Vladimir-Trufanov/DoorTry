@@ -13,9 +13,13 @@
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
 // ****************************************************************************
-function HtmlBegin()
+function IniPage(&$c_SignaPhoto)
 {
    $Result=true;
+   // Инициируем или изменяем счетчик числа запросов страницы
+   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);  
+   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
+   // Загружаем заголовочную часть страницы
    echo '<!DOCTYPE html>';
    echo '<html lang="ru">';
    echo '<head>';
@@ -30,6 +34,14 @@ function HtmlBegin()
       'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
       'crossorigin="anonymous">'.
       '</script>';
+   return $Result;
+}
+// ****************************************************************************
+// *                         Завершить HTML-страницу сайта                    *
+// ****************************************************************************
+function FinaPage()
+{
+   $Result=true;
    return $Result;
 }
 // ****************************************************************************

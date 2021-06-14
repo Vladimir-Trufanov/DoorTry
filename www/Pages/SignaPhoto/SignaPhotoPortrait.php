@@ -27,13 +27,9 @@ require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
-   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);   // число запросов страницы
-   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
-
    require_once 'SignaPhotoHtml.php';
-   
    // Готовим начало страницы для подписывания фотографий
-   HtmlBegin();
+   IniPage($c_SignaPhoto);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
    // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
    // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 

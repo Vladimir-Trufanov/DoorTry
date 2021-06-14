@@ -27,13 +27,9 @@ require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
-   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);   // число запросов страницы
-   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
-
    require_once 'SignaPhotoHtml.php';
-   
    // Готовим начало страницы для подписывания фотографий
-   HtmlBegin();
+   IniPage($c_SignaPhoto);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
    // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
    // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
@@ -50,15 +46,35 @@ try
    echo '</head>';
    echo '<body>';
    
-   echo $c_SignaPhoto; echo ': LANDSCAPE<br>';
-   
    // Подключаем скрипты по завершению загрузки страницы
    echo '<script>$(document).ready(function() {';
    //echo 'alert("SignaPhoto");';
    echo '});</script>';
-
    
    
+   
+   // Размечаем область изображений
+   echo '<div id="All">';
+      // Размечаем область оригинального изображения и образца подписи
+      echo '<div  id="View">';
+      echo '<div  id="Photo">';
+      //ViewPhoto();
+      echo '</div>';
+      echo '<div  id="Stamp">';
+      //ViewStamp();
+      echo '</div>';
+      echo '</div>';
+      // Размечаем область изображения с подписью
+      echo '<div  id="Proba">';
+      //ViewProba();
+      echo '</div>';
+   echo '</div>';
+   
+   // Размечаем область управления загрузкой и подписанием
+   echo '<div  id="Lead">';
+   echo $c_SignaPhoto; echo ': LANDSCAPE<br>';
+   //ViewLead();
+   echo '</div>';
    /*
    echo '***<br>';
    echo 'Всем привет!<br>';
