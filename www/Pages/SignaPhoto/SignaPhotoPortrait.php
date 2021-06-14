@@ -31,35 +31,17 @@ try
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
 
    require_once 'SignaPhotoHtml.php';
-   HtmlBegin();
-   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
-
-   // Как можно раньше (до полной загрузки страницы) определяем
-   // ориентацию смартфона и формируем URL:
-   // $SignaPortraitUrl, $SignaUrl
-   ?>
-      <script>
-      // Определяем защишенность сайта, для того чтобы правильно сформулировать 
-      // в запросе http или https
-      $https='<?php echo $_SERVER["HTTPS"];?>';
-      if ($https=="off") $https="http"
-      else $https="https"; 
-      console.log($https);
-      // Готовим URL для мобильно-портретной разметки, то есть разметки
-      // для jQuery-мobile c двумя страницами 
-      $SignaPortraitUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
-      console.log($SignaPortraitUrl);
-      // Готовим URL для настольно-ландшафтной разметки (одностраничной)
-      $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphoto";
-      console.log($SignaUrl);
-      //doOnOrientationChange();
-      
-      $SiteDevice='<?php echo $SiteDevice; ?>';
-      //alert($SiteDevice);
-      
-      </script>
-   <?php
    
+   // Готовим начало страницы для подписывания фотографий
+   HtmlBegin();
+   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
+   // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
+   // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
+   // использует две разметки: для страницы на компьютере и ландшафтной странице
+   // на смартфоне - простая разметка на дивах; а для портретной страницы на 
+   // смартфоне с помощью jquery mobile 
+   MakeTextPages();
+
    echo '</head>';
    echo '<body>';
    

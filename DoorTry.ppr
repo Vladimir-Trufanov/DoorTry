@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
@@ -41,7 +41,7 @@ DoorTry
 			www\JS\DoorTry.js
 			www\JS\FixLoadTimer.js
 			www\JS\jquery.doubleScroll.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -62,13 +62,14 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+SignaPhoto
+			-SignaPhoto
 				-images
 					www\Pages\SignaPhoto\images\photo.jpg
 					www\Pages\SignaPhoto\images\proba.png
 					www\Pages\SignaPhoto\images\stamp.png
 				www\Pages\SignaPhoto\dave.png
 				www\Pages\SignaPhoto\dave1.png
+				www\Pages\SignaPhoto\log.txt
 				www\Pages\SignaPhoto\photo.jpeg
 				www\Pages\SignaPhoto\proba.png
 				www\Pages\SignaPhoto\sean.png
@@ -205,9 +206,10 @@ DoorTry
 5=www\index.php
 6=www\Pages\SignaPhoto\SignaPhotoPortrait.php
 7=www\Pages\SignaPhoto\SignaPhoto.php
+8=www\Pages\SignaPhoto\SignaPhotoHtml.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoPortrait.php
+Selected=www\Pages\SignaPhoto\SignaPhoto.php
 [www\iniMem.php]
 TopLine=43
 Caret=1,46
@@ -218,8 +220,8 @@ Caret=1,54
 TopLine=131
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=53
-Caret=43,58
+TopLine=47
+Caret=97,56
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
 TopLine=57
 Caret=23,60
@@ -227,8 +229,11 @@ Caret=23,60
 TopLine=13
 Caret=68,20
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=34
-Caret=9,58
+TopLine=30
+Caret=1,45
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=39
-Caret=1,57
+TopLine=28
+Caret=47,51
+[www\Pages\SignaPhoto\SignaPhotoHtml.php]
+TopLine=33
+Caret=48,43
