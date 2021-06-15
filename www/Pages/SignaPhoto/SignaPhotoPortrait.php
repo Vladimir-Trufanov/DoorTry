@@ -43,38 +43,64 @@ try
    // в соответствии с размером экрана, аналог device-width; 
    // позволяем работать в полноэкранном режиме на мобильных устройствах Apple.
    echo "
-      <!-- <meta name='viewport' content='width=device-width,initial-scale=1'/> -->
-      <meta name='viewport' content='width=310,initial-scale=1'/>
+      <meta name='viewport' content='width=device-width,initial-scale=1'/> 
       <meta content='true' name='HandheldFriendly'/>
       <meta content='width' name='MobileOptimized'/>
       <meta content='yes' name='apple-mobile-web-app-capable'/>
    ";
+   
+   // Подключаем jquery/jquery-ui
+
    echo '
-      <link rel="stylesheet" href="Jsx/jquery-ui.min.css" />
-      <link rel="stylesheet" href="Jsx/jquery.mobile-1.4.5.min.css" />
-      <link rel="stylesheet" type="text/css" href="Stylesm.css">
-      <script src="Jsx/jquery-ui.min.js"></script>
-      <script src="Jsx/jquery.mobile-1.4.5.min.js"></script>
-      <script src="Jsx/TJsPrown.js"></script>
-      <script src="Jsx/IttvePW.js"></script>
+      <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
+      <script src="/Jsx/jquery-1.11.1.min.js"></script>
+      <script src="/Jsx/jquery-ui.min.js"></script>
    ';
-   // Подключаем скрипты по завершению загрузки страницы
-   echo '<script>$(document).ready(function() {';
-   //echo 'alert("SignaPhotoPortrait");';
-   echo '});</script>';
+
+
+/*
+echo '<link rel="stylesheet" type="text/css" '. 
+     'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
+echo '<script '.
+     'src="https://code.jquery.com/jquery-3.3.1.min.js" '.
+     'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+echo '<script '.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
+     'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+*/
    
    
+   echo '
+      <link rel="stylesheet" href="/Jsx/jquery.mobile-1.4.5.min.css" />
+      <link rel="stylesheet" type="text/css" href="Stylesm.css">
+      <script src="/Jsx/jquery.mobile-1.4.5.min.js"></script> 
+      <script src="/Jsx/TJsPrown.js"></script>
+   ';
    // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
    // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
    // использует две разметки: для страницы на компьютере и ландшафтной странице
    // на смартфоне - простая разметка на дивах; а для портретной страницы на 
    // смартфоне с помощью jquery mobile 
    MakeTextPages();
+   // Подключаем скрипты по завершению загрузки страницы
+   echo '<script>$(document).ready(function() {';
+   echo '
+      ApartButtons();
+      //var elemi = document.getElementById("aHome");
+      //elemi.innerHTML=$SignaHome;
+   ';
+   echo '});</script>';
+   
+   
 
    echo '</head>';
    echo '<body>';
    
-   markupMobileSite('Это заголовок статьи',$c_SignaPhoto);
+   markupMobileSite($c_SignaPhoto);
 
 
 

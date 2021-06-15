@@ -31,6 +31,15 @@ if ($_SERVER['HTTP_HOST']=='doortry.ru')
    echo '</script>';
 }
 // Подключаем jquery/jquery-ui
+
+   echo '
+      <link rel="stylesheet" href="Jsx/jquery-ui.min.css"/> 
+      <script src="Jsx/jquery-1.11.1.min.js"></script>
+      <script src="Jsx/jquery-ui.min.js"></script>
+   ';
+
+
+/*
 echo '<link rel="stylesheet" type="text/css" '. 
      'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
 echo '<script '.
@@ -43,6 +52,8 @@ echo '<script '.
      'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
      'crossorigin="anonymous">'.
      '</script>';
+*/
+
 // Подключаем SmartMenus
 echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 echo '<script src="SmartMenus/jquery.smartmenus.min.js"></script>';
@@ -74,9 +85,9 @@ else
    echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
 // Подключаем вспомогательные JS
 echo '<link href="TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
-echo '<script src="/JS/DoorTry.js"></script>';
-echo '<script src="/JS/jquery.doubleScroll.js"></script>';
-echo '<script src="/JS/FixLoadTimer.js"></script>';
+echo '<script src="/Jsx/DoorTry.js"></script>';
+echo '<script src="/Jsx/jquery.doubleScroll.js"></script>';
+echo '<script src="/Jsx/FixLoadTimer.js"></script>';
 echo '<script src="/TJsPrown/TJsPrown.js"></script>';
 // Разворачиваем смартменю
 echo '<script> MakeSmartMenu(); </script>';

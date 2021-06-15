@@ -42,11 +42,11 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 // Подключаем JS-библиотеки
-echo '<script src="/JS/DoorTry.js"></script>';
+echo '<script src="/Jsx/DoorTry.js"></script>';
 echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/TJsPrown/TJsPrown.js"></script>';
 // Обеспечиваем двойной скролл для кода;
-echo '<script src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script src="/Jsx/jquery.doubleScroll.js"></script>';
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
 {   

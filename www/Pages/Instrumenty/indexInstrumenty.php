@@ -59,7 +59,7 @@ try
      'crossorigin="anonymous">'.
      '</script>';
    // Подключаем JS-библиотеки
-   //echo '<script src="/JS/DoorTry.js"></script>';
+   //echo '<script src="/Jsx/DoorTry.js"></script>';
    //echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
    //echo '<script src="/TJsPrown/TJsPrown.js"></script>';
    // Подключаем особенности стиля для компьютерной и мобильной версий

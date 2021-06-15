@@ -29,7 +29,31 @@ function IniPage(&$c_SignaPhoto)
    echo '<meta name="keywords"    content="Проба Img">';
 
    echo '<script src="SignaPhoto.js"></script>';
-   echo '<script src="Jsx/jquery-1.11.1.min.js"></script>';
+   //echo '<script src="Jsx/jquery-1.11.1.min.js"></script>';
+   
+   
+   /*
+   echo '<link rel="stylesheet" type="text/css" '. 
+     'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
+   echo '<script '.
+     'src="https://code.jquery.com/jquery-3.3.1.min.js" '.
+     'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+   echo '<script '.
+     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
+     'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
+     'crossorigin="anonymous">'.
+     '</script>';
+   */
+   
+   
+   
+   
+   
+   
+   
+   
    return $Result;
 }
 // ****************************************************************************
@@ -58,11 +82,22 @@ function MakeTextPages()
       //console.log($https);
       // Готовим URL для мобильно-портретной разметки, то есть разметки
       // для jQuery-мobile c двумя страницами 
-      $SignaPortraitUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphotoportrait";
+      $SignaPortraitUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"?list=signaphotoportrait";
       //console.log($SignaPortraitUrl);
       // Готовим URL для настольно-ландшафтной разметки (одностраничной)
-      $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"/index.php?list=signaphoto";
+      $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"?list=signaphoto";
       //console.log($SignaUrl);
+      
+      // Готовим URL для перезапуска сайта - "Home"
+      $SignaHome=
+               '<a id="aHome" href="'+'https://kwinflat.ru'+'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>';
+      console.log($SignaHome);
+
+      $SignaHome=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>";
+      $SignaHome=
+               '<a id="aHome" href="'+$SignaHome+'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>';
+      console.log($SignaHome);
+
    </script> <?php
 }
 
@@ -91,36 +126,52 @@ function ViewLead()
 {
    echo 'Lead Управление<br>';
    echo '<div id="SiteDevice">Устройство неизвестное</div>';
-
 }
 
 // Выполнить разметку мобильных подстраниц "Подписать фотографию"
-function markupMobileSite($TitleMain,$c_SignaPhoto)
+function markupMobileSite($c_SignaPhoto)
 {
+   /*
    echo '
    <div data-role = "page" id = "page1">
       <div data-role = "header">
          <div data-role="controlgroup" data-type="horizontal"> 
          <div id="bTasks" class="dibtn">
-         <a href="https://kwinflat.ru"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
+         <a id="aHome" href="'.'https://kwinflat.ru'.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
          </div>
    ';
-   echo  '<div id="c1Title"> <h1>'.$TitleMain.'</h1></div>';
+   */
+   /*
+   echo '
+   <div data-role = "page" id = "page1">
+      <div data-role = "header">
+         <div data-role="controlgroup" data-type="horizontal"> 
+         <div id="bTasks" class="dibtn">
+         <a id="aHome" href="'.'http://localhost:82/'.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
+         </div>
+   ';
+   */
+   echo '
+   <div data-role = "page" id = "page1">
+      <div data-role = "header">
+         <div data-role="controlgroup" data-type="horizontal"> 
+         <div id="bTasks" class="dibtn">
+         <a id="aHome" href="'.'http://kwinflatht.nichost.ru'.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
+         </div>
+   ';
+   echo  '<div id="c1Title"> <h1>'.'Подготовка фото для подписания'.'</h1></div>';
    echo '
          <div id="bHandoright" class="dibtn">
-         <a href="#"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"> </i></a>
+         <a href="#page2"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"> </i></a>
          </div>
          </div>
       </div>
       <div role="main" class="ui-content" id="cCenter">
    ';
-   //require_once 'Pages/cCenter.php';
-   //echo 'Pages/cCenter.php';
    ViewPhoto();
    echo '
       </div>
       <div data-role = "footer">
-      <p>For more information <a href = "#page2">click here</a></p>
    ';
    echo $c_SignaPhoto; echo ': PORTRAIT<br>';
    echo '
@@ -132,13 +183,13 @@ function markupMobileSite($TitleMain,$c_SignaPhoto)
       <div data-role = "header">
          <div data-role="controlgroup" data-type="horizontal"> 
          <div id="bTasks" class="dibtn">
-         <a href="https://kwinflat.ru"><i class="fa fa-hand-o-left fa-lg" aria-hidden="true"> </i></a>
+         <a href="#page1"><i class="fa fa-hand-o-left fa-lg" aria-hidden="true"> </i></a>
          </div>
    ';
-   echo  '<div id="c2Title"> <h1>Текст фрагмента программы</h1></div>';
+   echo  '<div id="c2Title"> <h1>Подписанная фотография</h1></div>';
    echo '
          <div id="bHandoright" class="dibtn">
-         <a href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"> </i></a>
+         <a href="http://localhost:82/"><i class="fa fa-sign-out fa-lg" aria-hidden="true"> </i></a>
          </div>
          </div>
       </div>
@@ -147,8 +198,7 @@ function markupMobileSite($TitleMain,$c_SignaPhoto)
    ViewProba();
    echo '
       </div>
-      <div data-role = "footer">
-         <p><a href = "#page1">Back to previous page</a></p>';
+      <div data-role = "footer">';
    echo $c_SignaPhoto; echo ': PORTRAIT<br>';
    echo '
       </div>

@@ -83,7 +83,7 @@ echo '<script '.
      'crossorigin="anonymous">'.
      '</script>';
 // Обеспечиваем двойной скролл для кода;
-echo '<script type="text/javascript" src="/JS/jquery.doubleScroll.js"></script>';
+echo '<script type="text/javascript" src="/Jsx/jquery.doubleScroll.js"></script>';
 /*
 echo 
 '<script>'.

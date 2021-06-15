@@ -21,48 +21,6 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
-		-font-awesome-4.7.0
-			-css
-				www\font-awesome-4.7.0\css\font-awesome.css
-				www\font-awesome-4.7.0\css\font-awesome.min.css
-			-fonts
-				www\font-awesome-4.7.0\fonts\FontAwesome.otf
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
-				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
-			-less
-				www\font-awesome-4.7.0\less\animated.less
-				www\font-awesome-4.7.0\less\bordered-pulled.less
-				www\font-awesome-4.7.0\less\core.less
-				www\font-awesome-4.7.0\less\fixed-width.less
-				www\font-awesome-4.7.0\less\font-awesome.less
-				www\font-awesome-4.7.0\less\icons.less
-				www\font-awesome-4.7.0\less\larger.less
-				www\font-awesome-4.7.0\less\list.less
-				www\font-awesome-4.7.0\less\mixins.less
-				www\font-awesome-4.7.0\less\path.less
-				www\font-awesome-4.7.0\less\rotated-flipped.less
-				www\font-awesome-4.7.0\less\screen-reader.less
-				www\font-awesome-4.7.0\less\stacked.less
-				www\font-awesome-4.7.0\less\variables.less
-			-scss
-				www\font-awesome-4.7.0\scss\_animated.scss
-				www\font-awesome-4.7.0\scss\_bordered-pulled.scss
-				www\font-awesome-4.7.0\scss\_core.scss
-				www\font-awesome-4.7.0\scss\_fixed-width.scss
-				www\font-awesome-4.7.0\scss\_icons.scss
-				www\font-awesome-4.7.0\scss\_larger.scss
-				www\font-awesome-4.7.0\scss\_list.scss
-				www\font-awesome-4.7.0\scss\_mixins.scss
-				www\font-awesome-4.7.0\scss\_path.scss
-				www\font-awesome-4.7.0\scss\_rotated-flipped.scss
-				www\font-awesome-4.7.0\scss\_screen-reader.scss
-				www\font-awesome-4.7.0\scss\_stacked.scss
-				www\font-awesome-4.7.0\scss\_variables.scss
-				www\font-awesome-4.7.0\scss\font-awesome.scss
-			www\font-awesome-4.7.0\HELP-US-OUT.txt
 		-Fsb
 			www\Fsb\FsbProba.php
 			www\Fsb\PolityConfident.php
@@ -288,7 +246,9 @@ DoorTry
 					www\Jsx\images\icons-svg\video-black.svg
 					www\Jsx\images\icons-svg\video-white.svg
 				www\Jsx\images\ajax-loader.gif
-			www\Jsx\IttvePW.js
+			www\Jsx\DoorTry.js
+			www\Jsx\FixLoadTimer.js
+			www\Jsx\jquery.doubleScroll.js
 			www\Jsx\jquery.mobile-1.4.5.min.css
 			www\Jsx\jquery.mobile-1.4.5.min.js
 			www\Jsx\jquery.mobile-1.4.5.min.map
@@ -299,7 +259,7 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -320,227 +280,268 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+SignaPhoto
+			-SignaPhoto
+				-font-awesome-4.7.0
+					-css
+						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.css
+						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.min.css
+					-fonts
+						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\FontAwesome.otf
+						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
+						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
+						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
+						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
+						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
+					-less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\animated.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\bordered-pulled.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\core.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\fixed-width.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\font-awesome.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\icons.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\larger.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\list.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\mixins.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\path.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\rotated-flipped.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\screen-reader.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\stacked.less
+						www\Pages\SignaPhoto\font-awesome-4.7.0\less\variables.less
+					-scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_animated.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_bordered-pulled.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_core.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_fixed-width.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_icons.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_larger.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_list.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_mixins.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_path.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_rotated-flipped.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_screen-reader.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_stacked.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_variables.scss
+						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\font-awesome.scss
+					www\Pages\SignaPhoto\font-awesome-4.7.0\HELP-US-OUT.txt
 				-images
 					www\Pages\SignaPhoto\images\photo.jpg
 					www\Pages\SignaPhoto\images\proba.png
 					www\Pages\SignaPhoto\images\stamp.png
-				-Jsx
+				-Jsx1
 					-images
 						-icons-png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\action-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\action-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\alert-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\alert-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-d-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-d-l-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-d-l-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-d-r-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-d-r-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-d-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-l-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-l-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-r-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-r-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-u-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-u-l-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-u-l-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-u-r-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-u-r-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\arrow-u-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\audio-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\audio-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\back-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\back-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\bars-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\bars-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\bullets-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\bullets-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\calendar-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\calendar-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\camera-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\camera-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-d-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-d-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-l-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-l-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-r-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-r-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-u-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\carat-u-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\check-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\check-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\clock-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\clock-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\cloud-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\cloud-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\comment-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\comment-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\delete-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\delete-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\edit-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\edit-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\eye-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\eye-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\forbidden-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\forbidden-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\forward-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\forward-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\gear-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\gear-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\grid-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\grid-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\heart-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\heart-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\home-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\home-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\info-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\info-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\location-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\location-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\lock-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\lock-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\mail-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\mail-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\minus-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\minus-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\navigation-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\navigation-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\phone-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\phone-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\plus-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\plus-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\power-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\power-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\recycle-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\recycle-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\refresh-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\refresh-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\search-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\search-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\shop-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\shop-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\star-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\star-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\tag-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\tag-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\user-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\user-white.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\video-black.png
-							www\Pages\SignaPhoto\Jsx\images\icons-png\video-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\action-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\action-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\alert-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\alert-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-d-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-d-l-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-d-l-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-d-r-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-d-r-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-d-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-l-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-l-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-r-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-r-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-u-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-u-l-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-u-l-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-u-r-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-u-r-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\arrow-u-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\audio-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\audio-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\back-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\back-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\bars-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\bars-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\bullets-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\bullets-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\calendar-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\calendar-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\camera-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\camera-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-d-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-d-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-l-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-l-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-r-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-r-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-u-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\carat-u-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\check-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\check-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\clock-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\clock-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\cloud-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\cloud-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\comment-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\comment-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\delete-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\delete-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\edit-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\edit-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\eye-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\eye-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\forbidden-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\forbidden-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\forward-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\forward-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\gear-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\gear-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\grid-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\grid-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\heart-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\heart-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\home-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\home-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\info-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\info-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\location-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\location-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\lock-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\lock-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\mail-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\mail-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\minus-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\minus-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\navigation-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\navigation-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\phone-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\phone-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\plus-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\plus-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\power-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\power-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\recycle-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\recycle-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\refresh-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\refresh-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\search-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\search-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\shop-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\shop-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\star-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\star-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\tag-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\tag-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\user-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\user-white.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\video-black.png
+							www\Pages\SignaPhoto\Jsx1\images\icons-png\video-white.png
 						-icons-svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\action-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\action-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\alert-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\alert-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-d-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-d-l-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-d-l-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-d-r-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-d-r-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-d-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-l-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-l-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-r-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-r-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-u-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-u-l-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-u-l-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-u-r-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-u-r-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\arrow-u-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\audio-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\audio-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\back-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\back-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\bars-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\bars-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\bullets-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\bullets-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\calendar-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\calendar-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\camera-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\camera-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-d-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-d-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-l-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-l-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-r-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-r-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-u-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\carat-u-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\check-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\check-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\clock-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\clock-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\cloud-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\cloud-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\comment-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\comment-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\delete-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\delete-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\edit-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\edit-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\eye-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\eye-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\forbidden-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\forbidden-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\forward-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\forward-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\gear-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\gear-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\grid-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\grid-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\heart-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\heart-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\home-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\home-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\info-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\info-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\location-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\location-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\lock-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\lock-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\mail-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\mail-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\minus-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\minus-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\navigation-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\navigation-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\phone-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\phone-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\plus-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\plus-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\power-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\power-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\recycle-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\recycle-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\refresh-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\refresh-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\search-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\search-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\shop-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\shop-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\star-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\star-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\tag-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\tag-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\user-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\user-white.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\video-black.svg
-							www\Pages\SignaPhoto\Jsx\images\icons-svg\video-white.svg
-						www\Pages\SignaPhoto\Jsx\images\ajax-loader.gif
-					www\Pages\SignaPhoto\Jsx\IttvePW.js
-					www\Pages\SignaPhoto\Jsx\jquery.mobile-1.4.5.min.css
-					www\Pages\SignaPhoto\Jsx\jquery.mobile-1.4.5.min.js
-					www\Pages\SignaPhoto\Jsx\jquery.mobile-1.4.5.min.map
-					www\Pages\SignaPhoto\Jsx\jquery.smartmenus.js
-					www\Pages\SignaPhoto\Jsx\jquery-1.11.1.min.js
-					www\Pages\SignaPhoto\Jsx\jquery-1.11.1.min.map
-					www\Pages\SignaPhoto\Jsx\jquery-ui.min.css
-					www\Pages\SignaPhoto\Jsx\jquery-ui.min.js
-					www\Pages\SignaPhoto\Jsx\TJsPrown.css
-					www\Pages\SignaPhoto\Jsx\TJsPrown.js
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\action-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\action-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\alert-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\alert-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-d-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-d-l-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-d-l-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-d-r-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-d-r-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-d-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-l-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-l-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-r-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-r-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-u-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-u-l-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-u-l-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-u-r-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-u-r-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\arrow-u-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\audio-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\audio-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\back-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\back-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\bars-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\bars-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\bullets-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\bullets-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\calendar-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\calendar-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\camera-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\camera-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-d-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-d-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-l-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-l-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-r-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-r-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-u-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\carat-u-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\check-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\check-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\clock-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\clock-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\cloud-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\cloud-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\comment-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\comment-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\delete-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\delete-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\edit-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\edit-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\eye-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\eye-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\forbidden-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\forbidden-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\forward-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\forward-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\gear-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\gear-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\grid-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\grid-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\heart-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\heart-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\home-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\home-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\info-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\info-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\location-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\location-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\lock-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\lock-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\mail-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\mail-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\minus-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\minus-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\navigation-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\navigation-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\phone-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\phone-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\plus-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\plus-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\power-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\power-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\recycle-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\recycle-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\refresh-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\refresh-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\search-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\search-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\shop-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\shop-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\star-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\star-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\tag-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\tag-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\user-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\user-white.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\video-black.svg
+							www\Pages\SignaPhoto\Jsx1\images\icons-svg\video-white.svg
+						www\Pages\SignaPhoto\Jsx1\images\ajax-loader.gif
+					www\Pages\SignaPhoto\Jsx1\jquery.mobile-1.4.5.min.css
+					www\Pages\SignaPhoto\Jsx1\jquery.mobile-1.4.5.min.js
+					www\Pages\SignaPhoto\Jsx1\jquery.mobile-1.4.5.min.map
+					www\Pages\SignaPhoto\Jsx1\jquery.smartmenus.js
+					www\Pages\SignaPhoto\Jsx1\jquery-1.11.1.min.js
+					www\Pages\SignaPhoto\Jsx1\jquery-1.11.1.min.map
+					www\Pages\SignaPhoto\Jsx1\jquery-ui.min.css
+					www\Pages\SignaPhoto\Jsx1\jquery-ui.min.js
+					www\Pages\SignaPhoto\Jsx1\TJsPrown.css
+					www\Pages\SignaPhoto\Jsx1\TJsPrown.js
 				www\Pages\SignaPhoto\dave.png
 				www\Pages\SignaPhoto\dave1.png
 				www\Pages\SignaPhoto\log.txt
@@ -674,45 +675,49 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\iniMem.php
-1=www\Main.php
-2=www\iniMenu.php
-3=www\Pages\SignaPhoto\SignaPhoto.js
-4=www\Pages\SignaPhoto\SignaPhoto_m.css
-5=www\Pages\SignaPhoto\SignaPhotoPortrait.php
-6=www\Pages\SignaPhoto\SignaPhoto.php
-7=www\Pages\DisplayParm.php
-8=www\Jsx\TJsPrown.js
-9=www\Pages\SignaPhoto\SignaPhotoHtml.php
+1=www\iniMenu.php
+2=www\Pages\SignaPhoto\SignaPhoto.js
+3=www\Pages\SignaPhoto\SignaPhoto_m.css
+4=www\Pages\SignaPhoto\SignaPhotoPortrait.php
+5=www\Pages\SignaPhoto\SignaPhoto.php
+6=www\Pages\SignaPhoto\SignaPhotoHtml.php
+7=www\iniHtmlBegin.php
+8=www\Pages\Instrumenty\indexInstrumenty.php
+9=www\Pages\TPhpPrown\_viewTPhpPrown.php
+10=www\Pages\TPhpPrown\dlyaobschego.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoPortrait.php
+Selected=www\Pages\TPhpPrown\dlyaobschego.php
 [www\iniMem.php]
-TopLine=27
+TopLine=33
 Caret=1,46
-[www\Main.php]
-TopLine=54
-Caret=1,54
 [www\iniMenu.php]
-TopLine=131
+TopLine=116
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=47
-Caret=97,56
+TopLine=13
+Caret=1,20
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
 TopLine=57
 Caret=23,60
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=51
-Caret=4,77
+TopLine=71
+Caret=9,94
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=9
+TopLine=21
 Caret=45,21
-[www\Pages\DisplayParm.php]
-TopLine=1
-Caret=1,1
-[www\Jsx\TJsPrown.js]
-TopLine=93
-Caret=1,93
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=25
-Caret=1,33
+TopLine=99
+Caret=7,99
+[www\iniHtmlBegin.php]
+TopLine=81
+Caret=53,95
+[www\Pages\Instrumenty\indexInstrumenty.php]
+TopLine=53
+Caret=29,62
+[www\Pages\TPhpPrown\_viewTPhpPrown.php]
+TopLine=36
+Caret=24,49
+[www\Pages\TPhpPrown\dlyaobschego.php]
+TopLine=77
+Caret=47,86
