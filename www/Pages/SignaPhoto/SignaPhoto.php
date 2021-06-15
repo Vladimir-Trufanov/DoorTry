@@ -8,25 +8,27 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  01.06.2021
-// Copyright © 2021 tve                              Посл.изменение: 10.06.2021
+// Copyright © 2021 tve                              Посл.изменение: 15.06.2021
 
+// Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
 $SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
 $SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
 $SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
 $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
-// Подключаем файлы библиотеки прикладных модулей:
-$TPhpPrown=$SiteHost.'/TPhpPrown';
-require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-// Подключаем файлы библиотеки прикладных классов:
-//$TPhpTools=$SiteHost.'/TPhpTools';
-//require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
+   // Подключаем файлы библиотеки прикладных модулей:
+   $TPhpPrown=$SiteHost.'/TPhpPrown';
+   require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
+   // Подключаем файлы библиотеки прикладных классов:
+   $TPhpTools=$SiteHost.'/TPhpTools';
+   //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
+   // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto);
@@ -58,15 +60,15 @@ try
       // Размечаем область оригинального изображения и образца подписи
       echo '<div  id="View">';
       echo '<div  id="Photo">';
-      //ViewPhoto();
+      ViewPhoto();
       echo '</div>';
       echo '<div  id="Stamp">';
-      //ViewStamp();
+      ViewStamp();
       echo '</div>';
       echo '</div>';
       // Размечаем область изображения с подписью
       echo '<div  id="Proba">';
-      //ViewProba();
+      ViewProba();
       echo '</div>';
    echo '</div>';
    

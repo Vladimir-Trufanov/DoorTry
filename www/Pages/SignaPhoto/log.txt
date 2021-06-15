@@ -2,3 +2,6 @@
 Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 30
+[15-Jun-2021 07:57:50 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/cCenter.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 121
+[15-Jun-2021 07:59:24 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/cCenter.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 121
+[15-Jun-2021 09:40:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 154

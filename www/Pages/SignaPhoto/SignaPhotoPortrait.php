@@ -10,27 +10,60 @@
 //                                                   Дата создания:  10.06.2021
 // Copyright © 2021 tve                              Посл.изменение: 10.06.2021
 
+// Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
 $SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
 $SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
 $SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
 $SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
-// Подключаем файлы библиотеки прикладных модулей:
-$TPhpPrown=$SiteHost.'/TPhpPrown';
-require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-// Подключаем файлы библиотеки прикладных классов:
-//$TPhpTools=$SiteHost.'/TPhpTools';
-//require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
+   // Подключаем файлы библиотеки прикладных модулей:
+   $TPhpPrown=$SiteHost.'/TPhpPrown';
+   require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
+   // Подключаем файлы библиотеки прикладных классов:
+   $TPhpTools=$SiteHost.'/TPhpTools';
+   //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
+   // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
+   echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
+   // Включаем набор meta-тегов для сайтов с адаптивным дизайном:
+   // константой device-width задаёт ширину страницы в соответствии с размером 
+   // экрана и определяем неизменный начальный масштаб страницы;
+   // указываем, что страница оптимизирована под мобильные устройства на Palm 
+   // и Blackberry, в таком браузере как AvantGo и других;
+   // для мобильных браузеров IE Mobile или Pocket IE определяем ширина страницы
+   // в соответствии с размером экрана, аналог device-width; 
+   // позволяем работать в полноэкранном режиме на мобильных устройствах Apple.
+   echo "
+      <!-- <meta name='viewport' content='width=device-width,initial-scale=1'/> -->
+      <meta name='viewport' content='width=310,initial-scale=1'/>
+      <meta content='true' name='HandheldFriendly'/>
+      <meta content='width' name='MobileOptimized'/>
+      <meta content='yes' name='apple-mobile-web-app-capable'/>
+   ";
+   echo '
+      <link rel="stylesheet" href="Jsx/jquery-ui.min.css" />
+      <link rel="stylesheet" href="Jsx/jquery.mobile-1.4.5.min.css" />
+      <link rel="stylesheet" type="text/css" href="Stylesm.css">
+      <script src="Jsx/jquery-ui.min.js"></script>
+      <script src="Jsx/jquery.mobile-1.4.5.min.js"></script>
+      <script src="Jsx/TJsPrown.js"></script>
+      <script src="Jsx/IttvePW.js"></script>
+   ';
+   // Подключаем скрипты по завершению загрузки страницы
+   echo '<script>$(document).ready(function() {';
+   //echo 'alert("SignaPhotoPortrait");';
+   echo '});</script>';
+   
+   
    // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
    // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
    // использует две разметки: для страницы на компьютере и ландшафтной странице
@@ -41,12 +74,9 @@ try
    echo '</head>';
    echo '<body>';
    
-   echo $c_SignaPhoto; echo ': PORTRAIT<br>';
-   
-   // Подключаем скрипты по завершению загрузки страницы
-   echo '<script>$(document).ready(function() {';
-   //echo 'alert("SignaPhotoPortrait");';
-   echo '});</script>';
+   markupMobileSite('Это заголовок статьи',$c_SignaPhoto);
+
+
 
    /*
    echo '***<br>';

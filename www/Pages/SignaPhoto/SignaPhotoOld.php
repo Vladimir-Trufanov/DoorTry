@@ -286,30 +286,5 @@ function MakeStamp()
    imagedestroy($im);
    echo 'Сделано!';
 }
-// Вывести изображение последнего загруженного фото
-function ViewPhoto()
-{
-   echo 'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo ';
-   //echo '<img src="images/photo.jpg" alt="" id="pic">';
-}
-// Вывести изображение подписи последних размеров
-function ViewStamp()
-{
-   echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp ';
-   //echo '<p><img src="images/stamp.png" alt="" id="picStamp"></p>';
-}
-// Вывести изображение c подписью
-function ViewProba()
-{
-   //echo '<img src="images/proba.png" alt="" id="picProba">';
-   echo 'Proba - Подписанная фотография';
-}
-// Вывести область управления
-function ViewLead()
-{
-   echo 'Lead Управление<br>';
-   echo '<div id="SiteDevice">Устройство неизвестное</div>';
-
-}
 
 // <!-- --> ********************************************* dispTPhpPrown.php ***
