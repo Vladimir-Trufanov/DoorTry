@@ -31,7 +31,7 @@ try
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
-   IniPage($c_SignaPhoto);
+   IniPage($c_SignaPhoto,$UrlHome);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
    echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
    // Включаем набор meta-тегов для сайтов с адаптивным дизайном:
@@ -90,8 +90,6 @@ echo '<script '.
    echo '<script>$(document).ready(function() {';
    echo '
       ApartButtons();
-      //var elemi = document.getElementById("aHome");
-      //elemi.innerHTML=$SignaHome;
    ';
    echo '});</script>';
    
@@ -100,7 +98,7 @@ echo '<script '.
    echo '</head>';
    echo '<body>';
    
-   markupMobileSite($c_SignaPhoto);
+   markupMobileSite($c_SignaPhoto,$UrlHome);
 
 
 

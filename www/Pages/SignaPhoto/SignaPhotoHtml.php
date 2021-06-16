@@ -13,12 +13,16 @@
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
 // ****************************************************************************
-function IniPage(&$c_SignaPhoto)
+function IniPage(&$c_SignaPhoto,&$UrlHome)
 {
    $Result=true;
    // Инициируем или изменяем счетчик числа запросов страницы
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);  
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
+   // Определяем Url домашней страницы
+   $UrlHome='https://doortry.ru';
+   if ($_SERVER["SERVER_NAME"]=='kwinflatht.nichost.ru') $UrlHome='http://kwinflatht.nichost.ru';
+
    // Загружаем заголовочную часть страницы
    echo '<!DOCTYPE html>';
    echo '<html lang="ru">';
@@ -87,22 +91,8 @@ function MakeTextPages()
       // Готовим URL для настольно-ландшафтной разметки (одностраничной)
       $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"?list=signaphoto";
       //console.log($SignaUrl);
-      
-      // Готовим URL для перезапуска сайта - "Home"
-      $SignaHome=
-               '<a id="aHome" href="'+'https://kwinflat.ru'+'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>';
-      console.log($SignaHome);
-
-      $SignaHome=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>";
-      $SignaHome=
-               '<a id="aHome" href="'+$SignaHome+'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>';
-      console.log($SignaHome);
-
    </script> <?php
 }
-
-
-
 // Вывести изображение последнего загруженного фото
 function ViewPhoto()
 {
@@ -129,7 +119,7 @@ function ViewLead()
 }
 
 // Выполнить разметку мобильных подстраниц "Подписать фотографию"
-function markupMobileSite($c_SignaPhoto)
+function markupMobileSite($c_SignaPhoto,$UrlHome)
 {
    /*
    echo '
@@ -156,7 +146,7 @@ function markupMobileSite($c_SignaPhoto)
       <div data-role = "header">
          <div data-role="controlgroup" data-type="horizontal"> 
          <div id="bTasks" class="dibtn">
-         <a id="aHome" href="'.'http://kwinflatht.nichost.ru'.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
+         <a id="aHome" href="'.$UrlHome.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
          </div>
    ';
    echo  '<div id="c1Title"> <h1>'.'Подготовка фото для подписания'.'</h1></div>';
@@ -189,7 +179,7 @@ function markupMobileSite($c_SignaPhoto)
    echo  '<div id="c2Title"> <h1>Подписанная фотография</h1></div>';
    echo '
          <div id="bHandoright" class="dibtn">
-         <a href="http://localhost:82/"><i class="fa fa-sign-out fa-lg" aria-hidden="true"> </i></a>
+         <a href="'.$UrlHome.'"><i class="fa fa-sign-out fa-lg" aria-hidden="true"> </i></a>
          </div>
          </div>
       </div>
