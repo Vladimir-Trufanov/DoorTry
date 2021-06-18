@@ -25,6 +25,7 @@ try
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
+   require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
    // Подключаем файлы библиотеки прикладных классов:
    $TPhpTools=$SiteHost.'/TPhpTools';
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
@@ -70,6 +71,20 @@ try
    echo '
       ApartButtons();
    ';
+   
+   echo '
+      document.getElementsByName("myfileIs")[0].
+      addEventListener("change", function(){
+         hello(this);
+      });
+      
+      function hello(elem) 
+      {
+         console.log("Hello");
+         console.log("File Name: ",elem.value);
+      }
+   ';
+   
    echo '});</script>';
    
    
@@ -77,7 +92,7 @@ try
    echo '</head>';
    echo '<body>';
    
-   markupMobileSite($c_SignaPhoto,$UrlHome);
+   markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot);
 
 
 

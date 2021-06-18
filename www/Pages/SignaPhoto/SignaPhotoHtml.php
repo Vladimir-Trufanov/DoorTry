@@ -90,7 +90,7 @@ function MakeTextPages()
       //console.log($SignaPortraitUrl);
       // Готовим URL для настольно-ландшафтной разметки (одностраничной)
       $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"?list=signaphoto";
-      //console.log($SignaUrl);
+      console.log($SignaUrl);
    </script> <?php
 }
 // Вывести изображение последнего загруженного фото
@@ -145,7 +145,7 @@ function ViewLead()
 }
 
 // Выполнить разметку мобильных подстраниц "Подписать фотографию"
-function markupMobileSite($c_SignaPhoto,$UrlHome)
+function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
 {
    echo '
    <div data-role = "page" id = "page1">
@@ -176,9 +176,39 @@ function markupMobileSite($c_SignaPhoto,$UrlHome)
       </div>
       <div data-role = "footer">
    ';
+  
    echo $c_SignaPhoto; echo ': PORTRAIT<br>';
+   
+   /* 1
+   ?>
+   <form>
+   <p><input placeholder="Ваше имя" name="user=4"></p>
+   <p><input type="submit" value="Отправить" formaction="handler.php" formmethod="get"></p>
+   </form>
+   <?php
+   */ 
+   
+   /* 2
    echo '
-      </div>
+   <form action="" method="get" enctype="multipart/form-data" id="uploadiImage">
+   <input type="hidden" name="MAX_FILE_SIZE" value="57200" id="inhCard">
+   <input type="file" name="image" id="image" id="infCard">
+   <input type="submit" name="UploadImg" id="upload" value="Загрузить">
+   <!-- <img class="imgCard" src="sampo.jpg" alt="FileName"> -->
+   </form>
+   ';
+   */
+   
+   require_once "UploadImg.php";
+   
+   ?>
+   <div class="upload-btn-wrapper">
+      <button class="btn" onClick ="hello()">Upload a file</button>
+      <input type="file" name="myfileIs"/>
+   </div>
+   <?php
+   
+   echo '
       </div>
    '; 
    echo '

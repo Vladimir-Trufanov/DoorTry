@@ -255,6 +255,7 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
+		-KwinTiny
 		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
@@ -319,13 +320,15 @@ DoorTry
 						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_variables.scss
 						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\font-awesome.scss
 					www\Pages\SignaPhoto\font-awesome-4.7.0\HELP-US-OUT.txt
-				+images
+				-images
 					www\Pages\SignaPhoto\images\photo.jpg
 					www\Pages\SignaPhoto\images\proba.png
 					www\Pages\SignaPhoto\images\stamp.png
+				-KwinTiny
 				www\Pages\SignaPhoto\dave.png
 				www\Pages\SignaPhoto\dave1.png
 				www\Pages\SignaPhoto\log.txt
+				www\Pages\SignaPhoto\openfile.png
 				www\Pages\SignaPhoto\photo.jpeg
 				www\Pages\SignaPhoto\proba.png
 				www\Pages\SignaPhoto\sean.png
@@ -338,6 +341,12 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoOld.php
 				www\Pages\SignaPhoto\SignaPhotoPortrait.php
 				www\Pages\SignaPhoto\stamp.png
+				www\Pages\SignaPhoto\Upload.php
+				www\Pages\SignaPhoto\UploadImg.php
+				www\Pages\SignaPhoto\xxProba.php
+				www\Pages\SignaPhoto\xxStyle.css
+				www\Pages\SignaPhoto\xxUpload.js
+				www\Pages\SignaPhoto\xxUpload.php
 			-Sshu
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
@@ -455,37 +464,49 @@ DoorTry
 2=www\Pages\SignaPhoto\SignaPhotoHtml.php
 3=www\Pages\SignaPhoto\SignaPhoto.php
 4=www\Pages\SignaPhoto\SignaPhotoPortrait.php
-5=www\Pages\SignaPhoto\SignaPhoto.js
-6=www\Pages\SignaPhoto\SignaPhoto.css
-7=www\Pages\SignaPhoto\SignaPhotoOld.php
-8=www\Pages\SignaPhoto\SignaPhoto_m.css
+5=www\Pages\SignaPhoto\SignaPhoto_m.css
+6=www\Main.php
+7=www\Pages\SignaPhoto\xxProba.php
+8=www\Pages\SignaPhoto\xxStyle.css
+9=www\Pages\SignaPhoto\xxUpload.php
+10=www\Pages\SignaPhoto\xxUpload.js
+11=www\Pages\SignaPhoto\UploadImg.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoHtml.php
+Selected=www\Pages\SignaPhoto\xxUpload.php
 [www\iniMem.php]
 TopLine=33
 Caret=1,46
 [www\iniMenu.php]
-TopLine=116
+TopLine=137
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=127
-Caret=6,138
+TopLine=80
+Caret=7,93
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=49
-Caret=1,73
+TopLine=12
+Caret=1,20
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=73
-Caret=1,85
-[www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=47
-Caret=1,1
-[www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=46
-Caret=1,77
-[www\Pages\SignaPhoto\SignaPhotoOld.php]
-TopLine=233
-Caret=1,254
+TopLine=98
+Caret=1,29
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
-TopLine=96
-Caret=16,110
+TopLine=110
+Caret=38,135
+[www\Main.php]
+TopLine=75
+Caret=36,87
+[www\Pages\SignaPhoto\xxProba.php]
+TopLine=15
+Caret=61,36
+[www\Pages\SignaPhoto\xxStyle.css]
+TopLine=1
+Caret=1,31
+[www\Pages\SignaPhoto\xxUpload.php]
+TopLine=1
+Caret=27,18
+[www\Pages\SignaPhoto\xxUpload.js]
+TopLine=1
+Caret=4,14
+[www\Pages\SignaPhoto\UploadImg.php]
+TopLine=83
+Caret=1,101

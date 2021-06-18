@@ -5,3 +5,11 @@ Stack trace:
 [15-Jun-2021 07:57:50 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/cCenter.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 121
 [15-Jun-2021 07:59:24 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/cCenter.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 121
 [15-Jun-2021 09:40:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 154
+[18-Jun-2021 17:23:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 202
+[18-Jun-2021 20:55:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php on line 80
+[18-Jun-2021 20:56:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\ViewGlobal() in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php:95
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php(202): require_once()
+#1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoPortrait.php(94): markupMobileSite(340, 'https://doortry...')
+#2 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php on line 95

@@ -71,4 +71,14 @@ function ApartButtons()
    $('#c1Title').css('width',String(nWidth)+'px');
    $('#c2Title').css('width',String(nWidth)+'px');
 }
+
+/*
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+$('input[name="myfile"]').on('change', hello);
+function hello() 
+{
+   console.log("hello");
+}
+*/
+
 // ********************************************************** SignaPhoto.js ***
