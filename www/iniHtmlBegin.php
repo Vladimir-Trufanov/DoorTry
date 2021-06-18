@@ -84,11 +84,11 @@ if (isNews($s_NameNews))
 else
    echo '<link href="Styles/NoColNews.css" rel="stylesheet">';
 // Подключаем вспомогательные JS
-echo '<link href="TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
+echo '<link href="Jsx/TJsPrown.css" rel="stylesheet" type="text/css">'; 
 echo '<script src="/Jsx/DoorTry.js"></script>';
 echo '<script src="/Jsx/jquery.doubleScroll.js"></script>';
 echo '<script src="/Jsx/FixLoadTimer.js"></script>';
-echo '<script src="/TJsPrown/TJsPrown.js"></script>';
+echo '<script src="/Jsx/TJsPrown.js"></script>';
 // Разворачиваем смартменю
 echo '<script> MakeSmartMenu(); </script>';
 // Подключаем яндекс-метрику

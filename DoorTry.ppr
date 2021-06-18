@@ -319,7 +319,7 @@ DoorTry
 						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_variables.scss
 						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\font-awesome.scss
 					www\Pages\SignaPhoto\font-awesome-4.7.0\HELP-US-OUT.txt
-				-images
+				+images
 					www\Pages\SignaPhoto\images\photo.jpg
 					www\Pages\SignaPhoto\images\proba.png
 					www\Pages\SignaPhoto\images\stamp.png
@@ -338,7 +338,6 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoOld.php
 				www\Pages\SignaPhoto\SignaPhotoPortrait.php
 				www\Pages\SignaPhoto\stamp.png
-				www\Pages\SignaPhoto\Stylesm.css
 			-Sshu
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
@@ -416,10 +415,6 @@ DoorTry
 			www\Styles\Styles.css
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
-		-TJsPrown
-			www\TJsPrown\jquery.min.js
-			www\TJsPrown\TJsPrown.css
-			www\TJsPrown\TJsPrown.js
 		www\.htaccess
 		www\.user.ini
 		www\basemaker.db3
@@ -460,9 +455,13 @@ DoorTry
 2=www\Pages\SignaPhoto\SignaPhotoHtml.php
 3=www\Pages\SignaPhoto\SignaPhoto.php
 4=www\Pages\SignaPhoto\SignaPhotoPortrait.php
+5=www\Pages\SignaPhoto\SignaPhoto.js
+6=www\Pages\SignaPhoto\SignaPhoto.css
+7=www\Pages\SignaPhoto\SignaPhotoOld.php
+8=www\Pages\SignaPhoto\SignaPhoto_m.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoPortrait.php
+Selected=www\Pages\SignaPhoto\SignaPhotoHtml.php
 [www\iniMem.php]
 TopLine=33
 Caret=1,46
@@ -470,11 +469,23 @@ Caret=1,46
 TopLine=116
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=115
-Caret=49,122
+TopLine=127
+Caret=6,138
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=19
-Caret=34,34
+TopLine=49
+Caret=1,73
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=79
-Caret=43,101
+TopLine=73
+Caret=1,85
+[www\Pages\SignaPhoto\SignaPhoto.js]
+TopLine=47
+Caret=1,1
+[www\Pages\SignaPhoto\SignaPhoto.css]
+TopLine=46
+Caret=1,77
+[www\Pages\SignaPhoto\SignaPhotoOld.php]
+TopLine=233
+Caret=1,254
+[www\Pages\SignaPhoto\SignaPhoto_m.css]
+TopLine=96
+Caret=16,110

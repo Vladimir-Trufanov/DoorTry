@@ -1,16 +1,15 @@
-/** HTML5/CSS3, EDGE/CHROME                                  *** Styles.css ***
+/** HTML5/CSS3, EDGE/CHROME                            *** SignaPhoto_m.css ***
 
  ******************************************************************************
- * KwinTiny         Определить стили документа за границами области редактора *
+ *    Определить стили портретной (мобильной) версии "Подписать фотографию"   *
  ******************************************************************************
 
                                                      Автор:       Труфанов В.Е.
                                                      Дата создания:  03.06.2021
- Copyright © 2021 tve                                Посл.изменение: 03.06.2021
+ Copyright © 2021 tve                                Посл.изменение: 17.06.2021
 */
 
 html{font-family:'Anonymous Pro',monospace;font-size:16px;}
-
 /* Содержим поля в ширине блока (кроме margin) */
 * {box-sizing:border-box;}
 /* Выравниваем базовую линию блока по базовой линии родителя */
@@ -56,7 +55,6 @@ body
 }
 /**
   Для отладки расскрашиваем дивы
-*/
 body{background:yellow;} 
 #All{background:white;}
 #View{background:magenta;}
@@ -64,74 +62,62 @@ body{background:yellow;}
 #Stamp{background:red;}
 #Proba{background:olive;}
 #Lead{background:aqua;}
-/** Оформляем скелет разметки 
-#All,#Lead {position:fixed; width:100%; overflow:auto;}
-#All  {top:0;    height:82%;}
-#Lead {bottom:0; height:18%;}
-
-
-/** Размечаем правую и левую колонки области просмотра 
-#View  {width:48%; float:left;  height:100%;}
-#Proba {width:52%; float:right; height:100%;}
-Формируем область для показа загруженной фотографии и подписи 
-#Photo {height:81%;}
-#Stamp {height:19%;}
 */
 
+/* Определяем размер и зеленый цвет заголовков */
+h1 
+{
+  font: bold italic 1.4rem Baskerville, "Palatino Linotype", "Times New Roman", serif;
+  /*color: #46874D;*/
+  text-align: center;
+}
+.dibtn, #bTasks, #bHandoright
+{ 
+  border-radius: 5px;
+  width: 35px; 
+  border: 4px double #3388CC; 
+  padding: 3px 3px 3px 3px; /* Поля вокруг текста */
+  text-decoration: none; /* Убираем подчёркивание */
+  text-align: center;
+}
+#bTasks
+{
+  float: left;
+  margin-left: 5px;
+}
+#c1Title, #c2Title
+{
+  float: left;
+  margin-left: 5px;
+}
+#bHandoright
+{
+  float: left;
+  margin-left: 5px;
+}
+
+/* Левое окно мобильной разметки */
+#cCenter  
+{
+  text-align: justify;
+  padding: 0;
+}
+/* Правое окно мобильной разметки */
+#exPhp  
+{
+  text-align: justify;
+}
+#pic, #picProba
+{
+   width: 100%;
+}
+#picStamp
+{
+   width: 40%;
+   margin: .2rem 30% .2rem 30%;
+}
 /*
-html, body, #All, #View, #Photo, #Stamp, #Lead
-{
-   overflow:auto;
-	border:0;
-}
-#Proba
-{
-   border:.4rem double gray;
-}
-*/
-/*
-*/
-
-/*
-#View, #Proba, #Lead
-{
-   position:fixed;
-   padding:.5rem;/
-}
-#Photi
-{
-   position:fixed;
-   top:0;
-   left:0;
-}
-#pic
-{
-   width:20%;
-  height:50%
-}
-
-#Proba
-{
-
-
-   top:0;
-   left:45%;
-   width:55%
-   height:40%;
-
-}
-#Lead
-{
-
-   bottom:0;
-   left:0;
-   width:100%
-   height:10%;
-  
-}
- */
-/*
- *************************************************************** Styles.css ***
+ ********************************************************* SignaPhoto_m.css ***
 */	
 	
 

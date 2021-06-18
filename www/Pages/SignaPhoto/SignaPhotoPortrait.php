@@ -32,7 +32,7 @@ try
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome);
-   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
+   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
    echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
    // Включаем набор meta-тегов для сайтов с адаптивным дизайном:
    // константой device-width задаёт ширину страницы в соответствии с размером 
@@ -48,35 +48,14 @@ try
       <meta content='width' name='MobileOptimized'/>
       <meta content='yes' name='apple-mobile-web-app-capable'/>
    ";
-   
    // Подключаем jquery/jquery-ui
-
    echo '
       <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
       <script src="/Jsx/jquery-1.11.1.min.js"></script>
       <script src="/Jsx/jquery-ui.min.js"></script>
    ';
-
-
-/*
-echo '<link rel="stylesheet" type="text/css" '. 
-     'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
-echo '<script '.
-     'src="https://code.jquery.com/jquery-3.3.1.min.js" '.
-     'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
-     'crossorigin="anonymous">'.
-     '</script>';
-echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
-     'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
-     'crossorigin="anonymous">'.
-     '</script>';
-*/
-   
-   
    echo '
       <link rel="stylesheet" href="/Jsx/jquery.mobile-1.4.5.min.css" />
-      <link rel="stylesheet" type="text/css" href="Stylesm.css">
       <script src="/Jsx/jquery.mobile-1.4.5.min.js"></script> 
       <script src="/Jsx/TJsPrown.js"></script>
    ';
@@ -99,6 +78,14 @@ echo '<script '.
    echo '<body>';
    
    markupMobileSite($c_SignaPhoto,$UrlHome);
+
+
+
+   
+
+
+
+
 
 
 

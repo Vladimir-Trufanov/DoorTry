@@ -96,20 +96,46 @@ function MakeTextPages()
 // Вывести изображение последнего загруженного фото
 function ViewPhoto()
 {
-   echo 'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo ';
-   //echo '<img src="images/photo.jpg" alt="" id="pic">';
+   // Debug1: Выводим просто заполнитель
+   /*
+   echo 
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo';
+   */
+   // Debug2: Выводим просто изображение
+   echo '<img src="images/photo.jpg" alt="" id="pic">';
+   //echo '<img src="images/stamp.png" alt="" id="picStamp">';
+   /* 
+   $im = imagecreatefrompng('dave.png');
+   if($im && imagefilter($im, IMG_FILTER_GRAYSCALE))
+   {
+      echo 'Изображение преобразовано к градациям серого.';
+      imagepng($im, 'dave1.png');
+   }
+   else
+   {
+      echo 'Преобразование не удалось.';
+   }
+   imagedestroy($im);
+   */   
 }
 // Вывести изображение подписи последних размеров
 function ViewStamp()
 {
-   echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp ';
-   //echo '<p><img src="images/stamp.png" alt="" id="picStamp"></p>';
+   /*
+   echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp '.
+      'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp'.
+      'Stamp Stamp Stamp Stamp Stamp Stamp';
+   */
+   echo '<img src="images/stamp.png" alt="" id="picStamp">';
 }
 // Вывести изображение c подписью
 function ViewProba()
 {
-   //echo '<img src="images/proba.png" alt="" id="picProba">';
-   echo 'Proba - Подписанная фотография';
+   echo '<img src="images/proba.png" alt="" id="picProba">';
+   //echo 'Proba - Подписанная фотография';
 }
 // Вывести область управления
 function ViewLead()
@@ -121,26 +147,6 @@ function ViewLead()
 // Выполнить разметку мобильных подстраниц "Подписать фотографию"
 function markupMobileSite($c_SignaPhoto,$UrlHome)
 {
-   /*
-   echo '
-   <div data-role = "page" id = "page1">
-      <div data-role = "header">
-         <div data-role="controlgroup" data-type="horizontal"> 
-         <div id="bTasks" class="dibtn">
-         <a id="aHome" href="'.'https://kwinflat.ru'.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
-         </div>
-   ';
-   */
-   /*
-   echo '
-   <div data-role = "page" id = "page1">
-      <div data-role = "header">
-         <div data-role="controlgroup" data-type="horizontal"> 
-         <div id="bTasks" class="dibtn">
-         <a id="aHome" href="'.'http://localhost:82/'.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
-         </div>
-   ';
-   */
    echo '
    <div data-role = "page" id = "page1">
       <div data-role = "header">
@@ -158,7 +164,14 @@ function markupMobileSite($c_SignaPhoto,$UrlHome)
       </div>
       <div role="main" class="ui-content" id="cCenter">
    ';
+
+   echo '<div id="Photo">';
    ViewPhoto();
+   echo '</div>';
+   echo '<div id="Stamp">';
+   ViewStamp();
+   echo '</div>';
+
    echo '
       </div>
       <div data-role = "footer">
@@ -185,7 +198,10 @@ function markupMobileSite($c_SignaPhoto,$UrlHome)
       </div>
       <div role="main" class="ui-content" id="exPhp">
    ';
+   // Размечаем область изображения с подписью
+   echo '<div  id="Proba">';
    ViewProba();
+   echo '</div>';
    echo '
       </div>
       <div data-role = "footer">';
@@ -195,10 +211,5 @@ function markupMobileSite($c_SignaPhoto,$UrlHome)
    </div>
    ';
 }
-
-
-
-
-
 
 // *** <!-- --> **************************************** SignaPhotoHtml.php ***

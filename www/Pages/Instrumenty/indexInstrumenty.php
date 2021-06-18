@@ -60,8 +60,8 @@ try
      '</script>';
    // Подключаем JS-библиотеки
    //echo '<script src="/Jsx/DoorTry.js"></script>';
-   //echo '<link href="/TJsPrown/TJsPrown.css" rel="stylesheet" type="text/css">'; 
-   //echo '<script src="/TJsPrown/TJsPrown.js"></script>';
+   //echo '<link href="/Jsx/TJsPrown.css" rel="stylesheet" type="text/css">'; 
+   //echo '<script src="/Jsx/TJsPrown.js"></script>';
    // Подключаем особенности стиля для компьютерной и мобильной версий
    if ($SiteDevice==Mobile) 
    {   
