@@ -72,37 +72,12 @@ try
       ApartButtons();
    ';
    
-   echo '
-      document.getElementsByName("myfileIs")[0].
-      addEventListener("change", function(){
-         hello(this);
-      });
-      
-      function hello(elem) 
-      {
-         console.log("Hello");
-         console.log("File Name: ",elem.value);
-      }
-   ';
    
    echo '});</script>';
-   
-   
-
    echo '</head>';
    echo '<body>';
    
    markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot);
-
-
-
-   
-
-
-
-
-
-
 
    /*
    echo '***<br>';

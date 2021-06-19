@@ -31,33 +31,7 @@ function IniPage(&$c_SignaPhoto,&$UrlHome)
    echo '<title>Подписать фотографию</title>';
    echo '<meta name="description" content="Проба Img">';
    echo '<meta name="keywords"    content="Проба Img">';
-
    echo '<script src="SignaPhoto.js"></script>';
-   //echo '<script src="Jsx/jquery-1.11.1.min.js"></script>';
-   
-   
-   /*
-   echo '<link rel="stylesheet" type="text/css" '. 
-     'href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">';
-   echo '<script '.
-     'src="https://code.jquery.com/jquery-3.3.1.min.js" '.
-     'integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" '.
-     'crossorigin="anonymous">'.
-     '</script>';
-   echo '<script '.
-     'src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" '.
-     'integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" '.
-     'crossorigin="anonymous">'.
-     '</script>';
-   */
-   
-   
-   
-   
-   
-   
-   
-   
    return $Result;
 }
 // ****************************************************************************
@@ -90,7 +64,7 @@ function MakeTextPages()
       //console.log($SignaPortraitUrl);
       // Готовим URL для настольно-ландшафтной разметки (одностраничной)
       $SignaUrl=$https+"://"+"<?php echo $_SERVER['HTTP_HOST'] ?>"+"?list=signaphoto";
-      console.log($SignaUrl);
+      //console.log($SignaUrl);
    </script> <?php
 }
 // Вывести изображение последнего загруженного фото
@@ -135,7 +109,6 @@ function ViewStamp()
 function ViewProba()
 {
    echo '<img src="images/proba.png" alt="" id="picProba">';
-   //echo 'Proba - Подписанная фотография';
 }
 // Вывести область управления
 function ViewLead()
@@ -147,70 +120,58 @@ function ViewLead()
 // Выполнить разметку мобильных подстраниц "Подписать фотографию"
 function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
 {
+   // Начинаем 1 страницу
+   echo '<div data-role = "page" id = "page1">';
+   // Выводим заголовок 1 страницы с двумя кнопками навигации
    echo '
-   <div data-role = "page" id = "page1">
       <div data-role = "header">
          <div data-role="controlgroup" data-type="horizontal"> 
-         <div id="bTasks" class="dibtn">
-         <a id="aHome" href="'.$UrlHome.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
-         </div>
-   ';
-   echo  '<div id="c1Title"> <h1>'.'Подготовка фото для подписания'.'</h1></div>';
-   echo '
-         <div id="bHandoright" class="dibtn">
-         <a href="#page2"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"> </i></a>
-         </div>
+            <div id="bTasks" class="dibtn">
+               <a href="'.$UrlHome.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
+            </div>
+            <div id="c1Title"> <h1>'.'Подготовка фото для подписания'.'</h1></div>
+            <div id="bHandoright" class="dibtn">
+               <a href="#page2"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"> </i></a>
+            </div>
          </div>
       </div>
-      <div role="main" class="ui-content" id="cCenter">
    ';
-
+   // Выводим контент: фотографию и штамп   
+   echo '<div role="main" class="ui-content" id="cCenter">';
    echo '<div id="Photo">';
-   ViewPhoto();
+      ViewPhoto();
    echo '</div>';
    echo '<div id="Stamp">';
-   ViewStamp();
+      ViewStamp();
    echo '</div>';
+   echo '</div>  ';
+   // Выводим подвал с кнопками обработкт фотографий
+   // https://habr.com/ru/post/245689/
+   echo '<div data-role = "footer">';
 
-   echo '
-      </div>
-      <div data-role = "footer">
-   ';
-  
-   echo $c_SignaPhoto; echo ': PORTRAIT<br>';
-   
-   /* 1
    ?>
-   <form>
-   <p><input placeholder="Ваше имя" name="user=4"></p>
-   <p><input type="submit" value="Отправить" formaction="handler.php" formmethod="get"></p>
-   </form>
-   <?php
-   */ 
-   
-   /* 2
-   echo '
-   <form action="" method="get" enctype="multipart/form-data" id="uploadiImage">
-   <input type="hidden" name="MAX_FILE_SIZE" value="57200" id="inhCard">
-   <input type="file" name="image" id="image" id="infCard">
-   <input type="submit" name="UploadImg" id="upload" value="Загрузить">
-   <!-- <img class="imgCard" src="sampo.jpg" alt="FileName"> -->
-   </form>
-   ';
-   */
-   
-   require_once "UploadImg.php";
-   
-   ?>
-   <div class="upload-btn-wrapper">
-      <button class="btn" onClick ="hello()">Upload a file</button>
-      <input type="file" name="myfileIs"/>
+   <!-- Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши  -->
+   <div class="navButtons" onclick="FindFile();" title="Загрузка файла">
+      <img src="openfile.png"   width=100% height=100%/></a>
    </div>
+   <!-- Делаем форму   -->
+   <form action="xxUpload.php?c=x" target="rFrame" method="POST" enctype="multipart/form-data">  
+   <!-- Формируем спрятанные элементы -->
+   <div class="hiddenInput">
+   <input type="file"   id="my_hidden_file" accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">  
+   <input type="submit" id="my_hidden_load" style="display: none" value='Загрузить'>  
+   </div></form>
+   <!-- И скрытый iframe таргет  -->
+   <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>  
+   <!-- Подключаем скрипты -->
+   <script src="xxUpload.js"> </script>
    <?php
    
-   echo '
-      </div>
-   '; 
+   echo '</div>';
+   // Завершаем 1 страницу 
+   echo '</div>'; 
+   
+   // Начинаем 2 страницу
    echo '
    <div data-role = "page" id = "page2">
       <div data-role = "header">
