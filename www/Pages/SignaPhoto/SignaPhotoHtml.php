@@ -148,22 +148,7 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
    // Выводим подвал с кнопками обработкт фотографий
    // https://habr.com/ru/post/245689/
    echo '<div data-role = "footer">';
-
-   ?>
-   <!-- Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши  -->
-   <div class="navButtons" onclick="FindFile();" title="Загрузка файла">
-      <img src="openfile.png"   width=100% height=100%/></a>
-   </div>
-   <!-- Делаем форму   -->
-   <form action="SignaPhotoUpload.php?c=x" target="rFrame" method="POST" enctype="multipart/form-data">  
-   <!-- Формируем спрятанные элементы -->
-   <div class="hiddenInput">
-   <input type="file"   id="my_hidden_file" accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">  
-   <input type="submit" id="my_hidden_load" style="display: none" value='Загрузить'>  
-   </div></form>
-   <!-- И скрытый iframe таргет  -->
-   <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>  
-   <?php
+   LoadImg();
    
    echo '</div>';
    // Завершаем 1 страницу 
@@ -198,6 +183,37 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
    echo '
       </div>
    </div>
+   ';
+}
+
+
+function LoadImg()
+{ 
+   $RequestFile='photo';
+   // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
+   echo '
+      <div class="navButtons" onclick="FindFile();" title="Загрузка файла">
+         <img src="openfile.png"   width=100% height=100%/></a>
+      </div>
+   ';
+   // Начинаем форму запроса изображения по типу: photo, stamp, proba
+   echo '
+      <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
+      'target="rFrame" method="POST" enctype="multipart/form-data">';  
+   // Формируем два inputа для обеспечения ввода в диве с нулевыми размерами,
+   // для того чтобы их скрыть
+   echo'
+   <div class="hiddenInput">
+      <input type="file"    id="my_hidden_file" '.
+         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">'.
+      '<input type="submit" id="my_hidden_load" '.
+         'style="display:none" value="Загрузить">'.
+   '</div>';
+   // Завершаем форму запроса
+   echo '</form>';
+   // Заготавливаем скрытый фрэйм для обработки загружаемого изображения 
+   echo '
+      <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>   
    ';
 }
 
