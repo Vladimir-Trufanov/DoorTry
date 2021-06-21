@@ -155,7 +155,7 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
       <img src="openfile.png"   width=100% height=100%/></a>
    </div>
    <!-- Делаем форму   -->
-   <form action="xxUpload.php?c=x" target="rFrame" method="POST" enctype="multipart/form-data">  
+   <form action="SignaPhotoUpload.php?c=x" target="rFrame" method="POST" enctype="multipart/form-data">  
    <!-- Формируем спрятанные элементы -->
    <div class="hiddenInput">
    <input type="file"   id="my_hidden_file" accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">  
@@ -163,8 +163,6 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
    </div></form>
    <!-- И скрытый iframe таргет  -->
    <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>  
-   <!-- Подключаем скрипты -->
-   <script src="xxUpload.js"> </script>
    <?php
    
    echo '</div>';

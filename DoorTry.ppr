@@ -327,13 +327,6 @@ DoorTry
 				-KwinTiny
 				-tempi
 					www\Pages\SignaPhoto\tempi\x25.jpg
-				-ארה
-					www\Pages\SignaPhoto\ארה\Upload.php
-					www\Pages\SignaPhoto\ארה\UploadImg.php
-					www\Pages\SignaPhoto\ארה\xxProba.php
-					www\Pages\SignaPhoto\ארה\xxStyle.css
-					www\Pages\SignaPhoto\ארה\xxUpload.js
-					www\Pages\SignaPhoto\ארה\xxUpload.php
 				www\Pages\SignaPhoto\dave.png
 				www\Pages\SignaPhoto\dave1.png
 				www\Pages\SignaPhoto\log.txt
@@ -349,6 +342,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
 				www\Pages\SignaPhoto\SignaPhotoOld.php
 				www\Pages\SignaPhoto\SignaPhotoPortrait.php
+				www\Pages\SignaPhoto\SignaPhotoUpload.php
 				www\Pages\SignaPhoto\stamp.png
 			-Sshu
 			-TPhpPrown
@@ -469,9 +463,11 @@ DoorTry
 4=www\Pages\SignaPhoto\SignaPhotoPortrait.php
 5=www\Pages\SignaPhoto\SignaPhoto_m.css
 6=www\Main.php
+7=www\Pages\SignaPhoto\SignaPhoto.js
+8=www\Pages\SignaPhoto\SignaPhotoUpload.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhoto_m.css
+Selected=www\Pages\SignaPhoto\SignaPhotoHtml.php
 [www\iniMem.php]
 TopLine=33
 Caret=1,46
@@ -479,17 +475,23 @@ Caret=1,46
 TopLine=137
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=139
-Caret=1,152
+TopLine=150
+Caret=38,158
 [www\Pages\SignaPhoto\SignaPhoto.php]
 TopLine=12
 Caret=1,20
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=65
+TopLine=71
 Caret=1,77
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
-TopLine=117
+TopLine=119
 Caret=1,150
 [www\Main.php]
 TopLine=75
 Caret=4,86
+[www\Pages\SignaPhoto\SignaPhoto.js]
+TopLine=61
+Caret=18,75
+[www\Pages\SignaPhoto\SignaPhotoUpload.php]
+TopLine=1
+Caret=1,1

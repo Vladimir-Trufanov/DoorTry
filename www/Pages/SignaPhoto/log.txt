@@ -13,3 +13,5 @@ Stack trace:
 #1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoPortrait.php(94): markupMobileSite(340, 'https://doortry...')
 #2 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php on line 95
+[21-Jun-2021 11:48:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 204
+[21-Jun-2021 11:49:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 204
