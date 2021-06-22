@@ -125,8 +125,7 @@ h1
       overflow: hidden;
       display:block;  
       height:50px;  
-      width:50px;  
-      /*margin:100px;*/
+      width:13%;  
       -moz-box-shadow:5px 5px 7px rgba(3,33,33,.7);  
       -webkit-box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
       box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
@@ -151,22 +150,22 @@ h1
 #btnLoadImg
 {
    margin-top:0;
-   margin-left:.5rem;
+   margin-left:5%;
 }
 #btnLoadStamp
 {
    margin-top:0;
-   margin-left:5.5rem;
+   margin-left:23%;
 }
 #btnRegister
 {
    margin-top:0;
-   margin-left:10.5rem;
+   margin-left:64%;
 }
 #btnIndoor
 {
    margin-top:0;
-   margin-left:15.5rem;
+   margin-left:82%;
 }
 
 

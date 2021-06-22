@@ -200,8 +200,8 @@ function LoadImg()
    $RequestFile='photo';
    // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
    echo '
-      <div id="btnLoadImg" class="navButtons" onclick="FindFile();" title="Загрузка файла">
-         <img src="openfile.png"   width=100% height=100%/></img>
+      <div id="btnLoadImg" class="navButtons" onclick="FindFileImg();" title="Загрузка файла">
+         <img src="buttons/image128.png"   width=100% height=100%/></img>
       </div>
    ';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
@@ -212,9 +212,9 @@ function LoadImg()
    // для того чтобы их скрыть
    echo'
    <div class="hiddenInput">
-      <input type="file"    id="my_hidden_file" '.
-         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">'.
-      '<input type="submit" id="my_hidden_load" '.
+      <input type="file"    id="my_hidden_fileImg" '.
+         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFileImg();">'.
+      '<input type="submit" id="my_hidden_loadImg" '.
          'style="display:none" value="Загрузить">'.
    '</div>';
    // Завершаем форму запроса
@@ -226,8 +226,8 @@ function LoadStamp()
    $RequestFile='stamp';
    // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
    echo '
-      <div id="btnLoadStamp" class="navButtons" onclick="FindFile();" title="Загрузка файла">
-         <img src="openfile.png"   width=100% height=100%/></img>
+      <div id="btnLoadStamp" class="navButtons" onclick="FindFileStamp();" title="Загрузка файла">
+         <img src="buttons/stamp128.png"   width=100% height=100%/></img>
       </div>
    ';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
@@ -238,9 +238,9 @@ function LoadStamp()
    // для того чтобы их скрыть
    echo'
    <div class="hiddenInput">
-      <input type="file"    id="my_hidden_file" '.
-         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">'.
-      '<input type="submit" id="my_hidden_load" '.
+      <input type="file"    id="my_hidden_fileStamp" '.
+         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFileStamp();">'.
+      '<input type="submit" id="my_hidden_loadStamp" '.
          'style="display:none" value="Загрузить">'.
    '</div>';
    // Завершаем форму запроса
@@ -252,7 +252,7 @@ function Register()
    echo '
       <div id="btnRegister" class="navButtons" title="Загрузка файла">
          <a  href="Register.html">
-         <img src="openfile.png"   width=100% height=100%/></img>
+         <img src="buttons/register128.png"   width=100% height=100%/></img>
          </a>
      </div>
     ';
@@ -262,8 +262,8 @@ function Indoor()
 { 
    echo '
       <div id="btnIndoor" class="navButtons" title="Загрузка файла">
-         <a  href="Register.html">
-         <img src="openfile.png"   width=100% height=100%/></img>
+         <a  href="Indoor.html">
+         <img src="buttons/input128.png"   width=100% height=100%/></img>
          </a>
      </div>
     ';

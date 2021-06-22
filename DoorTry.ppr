@@ -278,6 +278,11 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			+SignaPhoto
+				-buttons
+					www\Pages\SignaPhoto\buttons\image128.png
+					www\Pages\SignaPhoto\buttons\input128.png
+					www\Pages\SignaPhoto\buttons\register128.png
+					www\Pages\SignaPhoto\buttons\stamp128.png
 				-font-awesome-4.7.0
 					-css
 						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.css
@@ -326,9 +331,9 @@ DoorTry
 					www\Pages\SignaPhoto\images\stamp.png
 				-KwinTiny
 				-tempi
-					www\Pages\SignaPhoto\tempi\x25.jpg
 				www\Pages\SignaPhoto\dave.png
 				www\Pages\SignaPhoto\dave1.png
+				www\Pages\SignaPhoto\Indoor.html
 				www\Pages\SignaPhoto\log.txt
 				www\Pages\SignaPhoto\openfile.png
 				www\Pages\SignaPhoto\photo.jpeg
@@ -467,10 +472,9 @@ DoorTry
 5=www\Pages\SignaPhoto\SignaPhoto_m.css
 6=www\Pages\SignaPhoto\SignaPhoto.js
 7=www\Pages\SignaPhoto\SignaPhotoUpload.php
-8=www\Pages\SignaPhoto\Register.html
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhoto_m.css
+Selected=www\Pages\SignaPhoto\SignaPhoto.js
 [www\iniMem.php]
 TopLine=17
 Caret=1,46
@@ -478,23 +482,20 @@ Caret=1,46
 TopLine=137
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=240
-Caret=25,264
+TopLine=166
+Caret=4,159
 [www\Pages\SignaPhoto\SignaPhoto.php]
 TopLine=53
 Caret=104,69
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=57
+TopLine=67
 Caret=1,77
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
 TopLine=140
-Caret=18,169
+Caret=19,163
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=61
-Caret=18,75
+TopLine=63
+Caret=72,78
 [www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=44
-Caret=2,41
-[www\Pages\SignaPhoto\Register.html]
-TopLine=1
-Caret=1,18
+TopLine=6
+Caret=21,66
