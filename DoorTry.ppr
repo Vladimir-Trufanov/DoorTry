@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
@@ -256,7 +256,7 @@ DoorTry
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
 		-KwinTiny
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -277,7 +277,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			-SignaPhoto
+			+SignaPhoto
 				-font-awesome-4.7.0
 					-css
 						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.css
@@ -333,6 +333,9 @@ DoorTry
 				www\Pages\SignaPhoto\openfile.png
 				www\Pages\SignaPhoto\photo.jpeg
 				www\Pages\SignaPhoto\proba.png
+				www\Pages\SignaPhoto\Register.html
+				www\Pages\SignaPhoto\Register.php
+				www\Pages\SignaPhoto\RegisterOld.php
 				www\Pages\SignaPhoto\sean.png
 				www\Pages\SignaPhoto\sean1.png
 				www\Pages\SignaPhoto\SignaPhoto.css
@@ -462,12 +465,12 @@ DoorTry
 3=www\Pages\SignaPhoto\SignaPhoto.php
 4=www\Pages\SignaPhoto\SignaPhotoPortrait.php
 5=www\Pages\SignaPhoto\SignaPhoto_m.css
-6=www\Main.php
-7=www\Pages\SignaPhoto\SignaPhoto.js
-8=www\Pages\SignaPhoto\SignaPhotoUpload.php
+6=www\Pages\SignaPhoto\SignaPhoto.js
+7=www\Pages\SignaPhoto\SignaPhotoUpload.php
+8=www\Pages\SignaPhoto\Register.html
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoHtml.php
+Selected=www\Pages\SignaPhoto\SignaPhoto_m.css
 [www\iniMem.php]
 TopLine=17
 Caret=1,46
@@ -475,23 +478,23 @@ Caret=1,46
 TopLine=137
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=178
-Caret=1,219
+TopLine=240
+Caret=25,264
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=68
-Caret=1,97
+TopLine=53
+Caret=104,69
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=71
+TopLine=57
 Caret=1,77
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
-TopLine=123
-Caret=1,150
-[www\Main.php]
-TopLine=1
-Caret=1,23
+TopLine=140
+Caret=18,169
 [www\Pages\SignaPhoto\SignaPhoto.js]
 TopLine=61
 Caret=18,75
 [www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=27
-Caret=1,27
+TopLine=44
+Caret=2,41
+[www\Pages\SignaPhoto\Register.html]
+TopLine=1
+Caret=1,18

@@ -149,6 +149,14 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
    // https://habr.com/ru/post/245689/
    echo '<div data-role = "footer">';
    LoadImg();
+   LoadStamp();
+   Register();
+   Indoor();
+
+   // Заготавливаем скрытый фрэйм для обработки загружаемого изображения 
+   echo '
+      <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>   
+   ';
    
    echo '</div>';
    // Завершаем 1 страницу 
@@ -192,8 +200,8 @@ function LoadImg()
    $RequestFile='photo';
    // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
    echo '
-      <div class="navButtons" onclick="FindFile();" title="Загрузка файла">
-         <img src="openfile.png"   width=100% height=100%/></a>
+      <div id="btnLoadImg" class="navButtons" onclick="FindFile();" title="Загрузка файла">
+         <img src="openfile.png"   width=100% height=100%/></img>
       </div>
    ';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
@@ -211,10 +219,54 @@ function LoadImg()
    '</div>';
    // Завершаем форму запроса
    echo '</form>';
-   // Заготавливаем скрытый фрэйм для обработки загружаемого изображения 
+}
+
+function LoadStamp()
+{ 
+   $RequestFile='stamp';
+   // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
    echo '
-      <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>   
+      <div id="btnLoadStamp" class="navButtons" onclick="FindFile();" title="Загрузка файла">
+         <img src="openfile.png"   width=100% height=100%/></img>
+      </div>
    ';
+   // Начинаем форму запроса изображения по типу: photo, stamp, proba
+   echo '
+      <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
+      'target="rFrame" method="POST" enctype="multipart/form-data">';  
+   // Формируем два inputа для обеспечения ввода в диве с нулевыми размерами,
+   // для того чтобы их скрыть
+   echo'
+   <div class="hiddenInput">
+      <input type="file"    id="my_hidden_file" '.
+         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFile();">'.
+      '<input type="submit" id="my_hidden_load" '.
+         'style="display:none" value="Загрузить">'.
+   '</div>';
+   // Завершаем форму запроса
+   echo '</form>';
+}
+
+function Register()
+{ 
+   echo '
+      <div id="btnRegister" class="navButtons" title="Загрузка файла">
+         <a  href="Register.html">
+         <img src="openfile.png"   width=100% height=100%/></img>
+         </a>
+     </div>
+    ';
+}
+
+function Indoor()
+{ 
+   echo '
+      <div id="btnIndoor" class="navButtons" title="Загрузка файла">
+         <a  href="Register.html">
+         <img src="openfile.png"   width=100% height=100%/></img>
+         </a>
+     </div>
+    ';
 }
 
 // *** <!-- --> **************************************** SignaPhotoHtml.php ***

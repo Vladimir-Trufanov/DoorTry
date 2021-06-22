@@ -24,8 +24,21 @@ try
 {
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
+   require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
    require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 
+if (prown\isComRequest('Privet','img')) 
+{
+   echo 'Зкшмуе<br>';
+   echo 'Зкшмуе<br>';
+   echo 'Зкшмуе<br>';
+   echo 'Зкшмуе<br>';
+   echo 'Зкшмуе<br>';
+   echo 'Зкшмуе<br>';
+   echo 'Зкшмуе<br>';
+}
+else
+{
 
 
 
@@ -39,8 +52,9 @@ function get_file_extension($file_name)
 {
   return substr(strrchr($file_name,'.'),1);
 }
- 
- 
+// Определяем каталог для сохранения изображений 
+
+  
 // определяем куда скопируем файл пользователя
  $dir = 'tempi/';  
  $exti= get_file_extension(basename($_FILES['loadfile']['name']));
@@ -49,6 +63,9 @@ function get_file_extension($file_name)
  
 echo '++++'.$file.'+++++<br>'; 
 echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
+echo '++++ $SiteRoot '.$_FILES['loadfile']['name'].'+++++<br>'; 
+echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
+echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
 //копируем файл и получаем результат
  $success = move_uploaded_file($_FILES['loadfile']['tmp_name'], $file);  
 //вызываем callback функцию и передаем ей результат
@@ -56,11 +73,9 @@ echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>';
 
 
    //prown\ViewGlobal(avgGET);
+   }
 }
 catch (E_EXCEPTION $e) 
 {
    DoorTryPage($e);
 }
-
-
-?> 

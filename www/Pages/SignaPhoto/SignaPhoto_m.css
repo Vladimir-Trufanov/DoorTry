@@ -118,14 +118,15 @@ h1
 }
 
 /* CSS Document */
-.navButtons{  
+.navButtons
+{  
       border:1px gray solid;
       position:absolute;
       overflow: hidden;
       display:block;  
       height:50px;  
       width:50px;  
-      margin:10px;
+      /*margin:100px;*/
       -moz-box-shadow:5px 5px 7px rgba(3,33,33,.7);  
       -webkit-box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
       box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
@@ -147,7 +148,26 @@ h1
       height:0px;  
       width:0px;  
   }
-
+#btnLoadImg
+{
+   margin-top:0;
+   margin-left:.5rem;
+}
+#btnLoadStamp
+{
+   margin-top:0;
+   margin-left:5.5rem;
+}
+#btnRegister
+{
+   margin-top:0;
+   margin-left:10.5rem;
+}
+#btnIndoor
+{
+   margin-top:0;
+   margin-left:15.5rem;
+}
 
 
 /*
