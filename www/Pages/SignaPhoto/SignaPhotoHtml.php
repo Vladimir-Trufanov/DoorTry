@@ -10,6 +10,86 @@
 //                                                   Дата создания:  10.06.2021
 // Copyright © 2021 tve                              Посл.изменение: 14.06.2021
 
+
+// Выполнить разметку мобильных подстраниц "Подписать фотографию"
+function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileStamp)
+{
+   // Начинаем 1 страницу
+   echo '<div data-role = "page" id = "page1">';
+   // Выводим заголовок 1 страницы с двумя кнопками навигации
+   echo '
+      <div data-role = "header">
+         <div data-role="controlgroup" data-type="horizontal"> 
+            <div id="bTasks" class="dibtn">
+               <a href="'.$UrlHome.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
+            </div>
+            <div id="c1Title"> <h1>'.'Подготовка фото для подписания'.'</h1></div>
+            <div id="bHandoright" class="dibtn">
+               <a href="#page2"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"> </i></a>
+            </div>
+         </div>
+      </div>
+   ';
+   // Выводим контент: фотографию и штамп   
+   echo '<div role="main" class="ui-content" id="cCenter">';
+   echo '<div id="Photo">';
+      ViewPhoto($c_FileImg);
+   echo '</div>';
+   echo '<div id="Stamp">';
+      ViewStamp($c_FileStamp);
+   echo '</div>';
+   echo '</div>  ';
+   // Выводим подвал с кнопками обработкт фотографий
+   // https://habr.com/ru/post/245689/
+   echo '<div data-role = "footer">';
+   LoadImg();
+   LoadStamp();
+   Register();
+   Indoor();
+   // Заготавливаем скрытый фрэйм для обработки загружаемого изображения 
+   // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
+   // echo '<iframe id="rFrame" name="rFrame" style="display: none"> </iframe>';
+   // Завершаем подвал
+   echo '</div>';
+   // Завершаем 1 страницу 
+   echo '</div>'; 
+   
+   // Начинаем 2 страницу
+   echo '
+   <div data-role = "page" id = "page2">
+   ';
+   // Выводим кнопки управления и заголовок
+   echo '
+      <div data-role = "header">
+         <div data-role="controlgroup" data-type="horizontal"> 
+         <div id="bTasks" class="dibtn">
+            <a href="#page1"><i class="fa fa-hand-o-left fa-lg" aria-hidden="true"> </i></a>
+         </div>
+         <div id="c2Title"> <h1>Подписанная фотография</h1></div>
+         <div id="bHandoright" class="dibtn">
+            <a href="'.$UrlHome.'"><i class="fa fa-sign-out fa-lg" aria-hidden="true"> </i></a>
+         </div>
+         </div>
+      </div>
+   ';
+   // Размечаем область изображения с подписью
+   echo '<div role="main" class="ui-content" id="exPhp">';
+   echo '<div  id="Proba">';
+   ViewProba();
+   echo '</div>';
+   echo '</div>';
+   // Размечаем подвал с двумя кнопками действий
+   echo '<div data-role = "footer">';
+   Subscribe();
+   Tunein();
+   echo '</div>';
+   // Завершаем 2 страницу 
+   echo '</div>'; 
+}
+
+
+
+
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
 // ****************************************************************************
@@ -68,7 +148,7 @@ function MakeTextPages()
    </script> <?php
 }
 // Вывести изображение последнего загруженного фото
-function ViewPhoto()
+function ViewPhoto($c_FileImg)
 {
    // Debug1: Выводим просто заполнитель
    /*
@@ -79,7 +159,7 @@ function ViewPhoto()
       'Photo Photo Photo';
    */
    // Debug2: Выводим просто изображение
-   echo '<img src="images/photo.jpg" alt="" id="pic">';
+   echo '<img src="'.$c_FileImg.'" alt="" id="pic">';
    //echo '<img src="images/stamp.png" alt="" id="picStamp">';
    /* 
    $im = imagecreatefrompng('dave.png');
@@ -96,14 +176,14 @@ function ViewPhoto()
    */   
 }
 // Вывести изображение подписи последних размеров
-function ViewStamp()
+function ViewStamp($c_FileStamp)
 {
    /*
    echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp '.
       'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp'.
       'Stamp Stamp Stamp Stamp Stamp Stamp';
    */
-   echo '<img src="images/stamp.png" alt="" id="picStamp">';
+   echo '<img src="'.$c_FileStamp.'" alt="" id="picStamp">';
 }
 // Вывести изображение c подписью
 function ViewProba()
@@ -115,83 +195,6 @@ function ViewLead()
 {
    echo 'Lead Управление<br>';
    echo '<div id="SiteDevice">Устройство неизвестное</div>';
-}
-
-// Выполнить разметку мобильных подстраниц "Подписать фотографию"
-function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot)
-{
-   // Начинаем 1 страницу
-   echo '<div data-role = "page" id = "page1">';
-   // Выводим заголовок 1 страницы с двумя кнопками навигации
-   echo '
-      <div data-role = "header">
-         <div data-role="controlgroup" data-type="horizontal"> 
-            <div id="bTasks" class="dibtn">
-               <a href="'.$UrlHome.'"><i class="fa fa-tasks fa-lg" aria-hidden="true"> </i></a>
-            </div>
-            <div id="c1Title"> <h1>'.'Подготовка фото для подписания'.'</h1></div>
-            <div id="bHandoright" class="dibtn">
-               <a href="#page2"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"> </i></a>
-            </div>
-         </div>
-      </div>
-   ';
-   // Выводим контент: фотографию и штамп   
-   echo '<div role="main" class="ui-content" id="cCenter">';
-   echo '<div id="Photo">';
-      ViewPhoto();
-   echo '</div>';
-   echo '<div id="Stamp">';
-      ViewStamp();
-   echo '</div>';
-   echo '</div>  ';
-   // Выводим подвал с кнопками обработкт фотографий
-   // https://habr.com/ru/post/245689/
-   echo '<div data-role = "footer">';
-   LoadImg();
-   LoadStamp();
-   Register();
-   Indoor();
-
-   // Заготавливаем скрытый фрэйм для обработки загружаемого изображения 
-   echo '
-      <iframe id="rFrame" name="rFrame" style="display: none"> </iframe>   
-   ';
-   
-   echo '</div>';
-   // Завершаем 1 страницу 
-   echo '</div>'; 
-   
-   // Начинаем 2 страницу
-   echo '
-   <div data-role = "page" id = "page2">
-      <div data-role = "header">
-         <div data-role="controlgroup" data-type="horizontal"> 
-         <div id="bTasks" class="dibtn">
-         <a href="#page1"><i class="fa fa-hand-o-left fa-lg" aria-hidden="true"> </i></a>
-         </div>
-   ';
-   echo  '<div id="c2Title"> <h1>Подписанная фотография</h1></div>';
-   echo '
-         <div id="bHandoright" class="dibtn">
-         <a href="'.$UrlHome.'"><i class="fa fa-sign-out fa-lg" aria-hidden="true"> </i></a>
-         </div>
-         </div>
-      </div>
-      <div role="main" class="ui-content" id="exPhp">
-   ';
-   // Размечаем область изображения с подписью
-   echo '<div  id="Proba">';
-   ViewProba();
-   echo '</div>';
-   echo '
-      </div>
-      <div data-role = "footer">';
-   echo $c_SignaPhoto; echo ': PORTRAIT<br>';
-   echo '
-      </div>
-   </div>
-   ';
 }
 
 
@@ -257,13 +260,32 @@ function Register()
      </div>
     ';
 }
-
 function Indoor()
 { 
    echo '
       <div id="btnIndoor" class="navButtons" title="Загрузка файла">
          <a  href="Indoor.html">
          <img src="buttons/input128.png"   width=100% height=100%/></img>
+         </a>
+     </div>
+    ';
+}
+function Subscribe()
+{ 
+   echo '
+      <div id="btnSubscribe" class="navButtons" title="Загрузка файла">
+         <a  href="Subscribe.html">
+         <img src="buttons/subscribe128.png"   width=100% height=100%/></img>
+         </a>
+     </div>
+    ';
+}
+function Tunein()
+{ 
+   echo '
+      <div id="btnTunein" class="navButtons" title="Загрузка файла">
+         <a  href="Tunein.html">
+         <img src="buttons/tunein128.png"   width=100% height=100%/></img>
          </a>
      </div>
     ';

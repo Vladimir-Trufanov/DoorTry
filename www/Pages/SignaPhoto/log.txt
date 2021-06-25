@@ -15,3 +15,33 @@ Stack trace:
   thrown in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php on line 95
 [21-Jun-2021 11:48:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 204
 [21-Jun-2021 11:49:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 204
+[25-Jun-2021 20:20:15 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 20:30:52 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 20:44:49 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 21:05:21 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 21:05:34 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 21:06:21 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151

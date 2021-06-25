@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  01.06.2021
-// Copyright © 2021 tve                              Посл.изменение: 15.06.2021
+// Copyright © 2021 tve                              Посл.изменение: 25.06.2021
 
 // Выполнить callback функцию основного окна,
 // которой вернем ответ по окончанию загрузки 
@@ -36,6 +36,7 @@ try
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
    require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
+   require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 
    if (prown\isComRequest('photo','img')) 
@@ -43,19 +44,35 @@ try
       // Определяем каталог для сохранения изображений 
       $dir = 'images/';  
       $exti= get_file_extension(basename($_FILES['loadfile']['name']));
+      // Переносим в загрузочный каталог начальный файл изображения
       $name = 'photo'; // basename($_FILES['loadfile']['name']);  
       $file = $dir . $name.'.'.$exti;  
-      
-      echo '++++'.$file.'+++++<br>'; 
-      echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
-      echo '++++ $SiteRoot '.$_FILES['loadfile']['name'].'+++++<br>'; 
-      echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
-      echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
-     
+      $c_FileImg=prown\MakeCookie('FileImg',$file,tStr);  
       // Копируем файл и получаем результат
-      $success = move_uploaded_file($_FILES['loadfile']['tmp_name'], $file);  
+      $success = move_uploaded_file($_FILES['loadfile']['tmp_name'],$file); 
+      if ($success)
+      {
+         // Копируем оригинал на подписанную фотографию
+         $newfile = $dir.'proba.png';
+         if (!copy($file,$newfile)) 
+         {
+            echo "не удалось скопировать $file...\n";
+         }
+         // Выходим на вторую страницу
+         // $page='/Pages/SignaPhoto/SignaPhotoPortrait.php#page2';
+         $page='/Pages/SignaPhoto/SignaPhotoPortrait.php';
+         Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+      }
+      else
+      {
+         //echo '$file:                       '.$file.'<br>'; 
+         //echo '$SiteRoot:                   '.$SiteRoot.'<br>'; 
+         //echo '$_FILES["loadfile"]["name"]: '.$_FILES['loadfile']['name'].'<br>'; 
+         echo "Ошибка: файл ".$_FILES['loadfile']['name']." не загружен!<br>";  
+      }
       // Вызываем callback функцию и передаем ей результат
-      jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
+      // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
+      // jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
       //prown\ViewGlobal(avgGET);
    }
    else 
@@ -65,18 +82,26 @@ try
       $exti= get_file_extension(basename($_FILES['loadfile']['name']));
       $name = 'stamp'; // basename($_FILES['loadfile']['name']);  
       $file = $dir . $name.'.'.$exti;  
-     
-      echo '===++++'.$file.'+++++<br>'; 
-      echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
-      echo '++++ $SiteRoot '.$_FILES['loadfile']['name'].'+++++<br>'; 
-      echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
-      echo '++++ $SiteRoot '.$SiteRoot.'+++++<br>'; 
-      //prown\ViewGlobal(avgGET);
-      
+      $c_FileStamp=prown\MakeCookie('FileStamp',$file,tStr);  
       // Копируем файл и получаем результат
-      $success = move_uploaded_file($_FILES['loadfile']['tmp_name'], $file);  
+      $success = move_uploaded_file($_FILES['loadfile']['tmp_name'], $file); 
+      if ($success)
+      {
+         // Обновляем страницу
+         $page='/Pages/SignaPhoto/SignaPhotoPortrait.php';
+         Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+      }
+      else
+      {
+         //echo '$file:                       '.$file.'<br>'; 
+         //echo '$SiteRoot:                   '.$SiteRoot.'<br>'; 
+         //echo '$_FILES["loadfile"]["name"]: '.$_FILES['loadfile']['name'].'<br>'; 
+         echo "Ошибка: файл ".$_FILES['loadfile']['name']." не загружен!<br>";  
+      }
       // Вызываем callback функцию и передаем ей результат
-      jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
+      // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
+      // jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
+      //prown\ViewGlobal(avgGET);
    }
 }
 catch (E_EXCEPTION $e) 

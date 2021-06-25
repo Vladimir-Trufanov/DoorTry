@@ -30,6 +30,7 @@ try
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
+    
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';

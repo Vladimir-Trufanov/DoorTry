@@ -29,6 +29,10 @@ try
    // Подключаем файлы библиотеки прикладных классов:
    $TPhpTools=$SiteHost.'/TPhpTools';
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
+   
+   $c_FileImg=prown\MakeCookie('FileImg','images/iphoto.jpg',tStr,true);
+   $c_FileStamp=prown\MakeCookie('FileStamp','images/istamp.png',tStr,true);
+
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
@@ -77,7 +81,7 @@ try
    echo '</head>';
    echo '<body>';
    
-   markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot);
+   markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileStamp);
 
    /*
    echo '***<br>';
