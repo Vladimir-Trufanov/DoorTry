@@ -88,6 +88,29 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileSta
 }
 
 
+function MakeStamp()
+{
+   // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
+   $stamp = imagecreatefrompng('images/stamp.png');
+   $im = imagecreatefromjpeg('images/photo.jpg');
+   // Установка полей для штампа и получение высоты/ширины штампа
+   $marge_right = 10;
+   $marge_bottom = 10;
+   $sx = imagesx($stamp);
+   $sy = imagesy($stamp);
+   // Копирование изображения штампа на фотографию с помощью смещения края
+   // и ширины фотографии для расчёта позиционирования штампа.
+   imagecopy($im,$stamp,imagesx($im)-$sx-$marge_right,imagesy($im)-$sy-$marge_bottom,0,0,imagesx($stamp),imagesy($stamp));
+   // Вывод и освобождение памяти
+   //header('Content-type: image/png');
+   imagepng($im, 'images/proba.png');
+   imagedestroy($im);
+      /*
+
+   */
+   echo '<br>Сделано!<br>';
+}
+
 
 
 // ****************************************************************************
@@ -274,7 +297,7 @@ function Subscribe()
 { 
    echo '
       <div id="btnSubscribe" class="navButtons" title="Загрузка файла">
-         <a  href="Subscribe.html">
+         <a  href="Subscribe.php">
          <img src="buttons/subscribe128.png"   width=100% height=100%/></img>
          </a>
      </div>
