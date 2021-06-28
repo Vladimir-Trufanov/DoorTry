@@ -29,14 +29,11 @@ try
    // Подключаем файлы библиотеки прикладных классов:
    $TPhpTools=$SiteHost.'/TPhpTools';
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
-   
-   $c_FileImg=prown\MakeCookie('FileImg','images/iphoto.jpg',tStr,true);
-   $c_FileStamp=prown\MakeCookie('FileStamp','images/istamp.png',tStr,true);
 
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
-   IniPage($c_SignaPhoto,$UrlHome);
+   IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
    echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
    // Включаем набор meta-тегов для сайтов с адаптивным дизайном:
@@ -54,11 +51,11 @@ try
       <meta content='yes' name='apple-mobile-web-app-capable'/>
    ";
    // Подключаем jquery/jquery-ui
-   echo '
-      <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
-      <script src="/Jsx/jquery-1.11.1.min.js"></script>
-      <script src="/Jsx/jquery-ui.min.js"></script>
-   ';
+   //echo '
+   //   <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
+   //   <script src="/Jsx/jquery-1.11.1.min.js"></script>
+   //   <script src="/Jsx/jquery-ui.min.js"></script>
+   //';
    echo '
       <link rel="stylesheet" href="/Jsx/jquery.mobile-1.4.5.min.css" />
       <script src="/Jsx/jquery.mobile-1.4.5.min.js"></script> 
@@ -69,7 +66,7 @@ try
    // использует две разметки: для страницы на компьютере и ландшафтной странице
    // на смартфоне - простая разметка на дивах; а для портретной страницы на 
    // смартфоне с помощью jquery mobile 
-   MakeTextPages();
+  //MakeTextPages();
    // Подключаем скрипты по завершению загрузки страницы
    echo '<script>$(document).ready(function() {';
    echo '

@@ -116,16 +116,27 @@ function MakeStamp()
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
 // ****************************************************************************
-function IniPage(&$c_SignaPhoto,&$UrlHome)
+function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp)
 {
    $Result=true;
    // Инициируем или изменяем счетчик числа запросов страницы
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);  
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
+   
+   $c_FileImg=prown\MakeCookie('FileImg','images/iphoto.jpg',tStr,true);
+   $c_FileStamp=prown\MakeCookie('FileStamp','images/istamp.png',tStr,true);
+
    // Определяем Url домашней страницы
    $UrlHome='https://doortry.ru';
    if ($_SERVER["SERVER_NAME"]=='kwinflatht.nichost.ru') $UrlHome='http://kwinflatht.nichost.ru';
-
+   
+   // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
+   // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
+   // использует две разметки: для страницы на компьютере и ландшафтной странице
+   // на смартфоне - простая разметка на дивах; а для портретной страницы на 
+   // смартфоне с помощью jquery mobile 
+   MakeTextPages();
+  
    // Загружаем заголовочную часть страницы
    echo '<!DOCTYPE html>';
    echo '<html lang="ru">';
@@ -134,7 +145,16 @@ function IniPage(&$c_SignaPhoto,&$UrlHome)
    echo '<title>Подписать фотографию</title>';
    echo '<meta name="description" content="Проба Img">';
    echo '<meta name="keywords"    content="Проба Img">';
+   // Подключаем jquery/jquery-ui
+   echo '
+      <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
+      <script src="/Jsx/jquery-1.11.1.min.js"></script>
+      <script src="/Jsx/jquery-ui.min.js"></script>
+   ';
+   //
    echo '<script src="SignaPhoto.js"></script>';
+   
+
    return $Result;
 }
 // ****************************************************************************
@@ -210,7 +230,13 @@ function ViewStamp($c_FileStamp)
 }
 // Вывести изображение c подписью
 function ViewProba()
-{
+{  
+   /*                                                          
+   echo 'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba '.
+   'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba '.
+   'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba '.
+   'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba';
+   */
    echo '<img src="images/proba.png" alt="" id="picProba">';
 }
 // Вывести область управления
@@ -234,10 +260,12 @@ function LoadImg()
    echo '
       <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
       'target="rFrame" method="POST" enctype="multipart/form-data">';  
-   // Формируем два inputа для обеспечения ввода в диве с нулевыми размерами,
+   // Формируем --два inputа для обеспечения ввода в диве с нулевыми размерами,
    // для того чтобы их скрыть
+   $MaxLoadSize = 4100000;
    echo'
    <div class="hiddenInput">
+      <input type="hidden" name="MAX_FILE_SIZE" value="'.$MaxLoadSize.'">
       <input type="file"    id="my_hidden_fileImg" '.
          'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFileImg();">'.
       '<input type="submit" id="my_hidden_loadImg" '.

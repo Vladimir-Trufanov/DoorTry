@@ -32,7 +32,7 @@ try
    require_once 'SignaPhotoHtml.php';
     
    // Готовим начало страницы для подписывания фотографий
-   IniPage($c_SignaPhoto,$UrlHome);
+   IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
    // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
    // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
@@ -61,10 +61,10 @@ try
       // Размечаем область оригинального изображения и образца подписи
       echo '<div  id="View">';
       echo '<div  id="Photo">';
-      ViewPhoto();
+      ViewPhoto($c_FileImg);
       echo '</div>';
       echo '<div  id="Stamp">';
-      ViewStamp();
+      ViewStamp($c_FileStamp);
       echo '</div>';
       echo '</div>';
       // Размечаем область изображения с подписью
@@ -75,8 +75,10 @@ try
    
    // Размечаем область управления загрузкой и подписанием
    echo '<div  id="Lead">';
-   echo $c_SignaPhoto; echo ': LANDSCAPE<br>';
-   //ViewLead();
+   LoadImg();
+   LoadStamp();
+   Subscribe();
+   Tunein();
    echo '</div>';
    /*
    echo '***<br>';

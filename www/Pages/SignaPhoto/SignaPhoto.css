@@ -56,7 +56,6 @@ body
 }
 /**
   Для отладки расскрашиваем дивы
-*/
 body{background:yellow;} 
 #All{background:white;}
 #View{background:magenta;}
@@ -64,16 +63,105 @@ body{background:yellow;}
 #Stamp{background:red;}
 #Proba{background:olive;}
 #Lead{background:aqua;}
+*/
 /** Оформляем скелет разметки */
 #All,#Lead {position:fixed; width:100%; overflow:auto;}
-#All  {top:0;    height:82%;}
-#Lead {bottom:0; height:18%;}
+#All  {top:0;    height:82%; }
+#Lead {bottom:0; height:12%;}
 /** Размечаем правую и левую колонки области просмотра */
 #View  {width:48%; float:left;  height:100%;}
 #Proba {width:52%; float:right; height:100%;}
 /** Формируем область для показа загруженной фотографии и подписи */
-#Photo {height:81%;}
-#Stamp {height:19%;}
+/*
+#Photo {width:48%;}
+#Stamp {width:30%; margin-left:35%;}
+*/
+
+#pic
+{
+   width:99%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:.4rem;
+   margin-bottom:.3rem;
+}
+#picStamp
+{
+   height:9%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:.3rem;
+   margin-bottom:.4rem;
+}
+#picProba
+{
+   width:99%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:.4rem;
+   margin-bottom:.4rem;
+}
+
+
+.navButtons
+{  
+      border:1px gray solid;
+      position:absolute;
+      overflow: hidden;
+      display:block;  
+      -moz-box-shadow:5px 5px 7px rgba(3,33,33,.7);  
+      -webkit-box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
+      box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+      border-radius:4px;
+  }
+
+.navButtons:hover
+{
+  border:2px solid black;
+  background-color:#fff;
+}
+
+.hiddenInput{  
+      position:absolute;
+      overflow: hidden;
+      display:block;  
+      height:0px;  
+      width:0px;  
+  }
+#btnLoadImg
+{
+   margin-top:0;
+   margin-left:5%;
+}
+#btnLoadStamp
+{
+   margin-top:0;
+   margin-left:23%;
+}
+#btnSubscribe
+{
+   margin-top:0;
+   margin-left:64%;
+}
+#btnTunein
+{
+   margin-top:0;
+   margin-left:82%;
+}
+
+/* Отличное от общего */
+.navButtons
+{  
+   height:4rem; 
+   width:4rem;  
+}
+
+
 
 /*
  *********************************************************** SignaPhoto.css ***
