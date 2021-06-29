@@ -283,6 +283,8 @@ DoorTry
 					www\Pages\SignaPhoto\buttons\input128.png
 					www\Pages\SignaPhoto\buttons\register128.png
 					www\Pages\SignaPhoto\buttons\stamp128.png
+					www\Pages\SignaPhoto\buttons\subscribe128.png
+					www\Pages\SignaPhoto\buttons\tunein128.png
 				-font-awesome-4.7.0
 					-css
 						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.css
@@ -326,25 +328,29 @@ DoorTry
 						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\font-awesome.scss
 					www\Pages\SignaPhoto\font-awesome-4.7.0\HELP-US-OUT.txt
 				-images
+					www\Pages\SignaPhoto\images\iphoto.jpg
+					www\Pages\SignaPhoto\images\iproba.png
+					www\Pages\SignaPhoto\images\istamp.png
+					www\Pages\SignaPhoto\images\photo.gif
 					www\Pages\SignaPhoto\images\photo.jpg
-					www\Pages\SignaPhoto\images\photoOld.jpg
-					www\Pages\SignaPhoto\images\proba.png
-					www\Pages\SignaPhoto\images\probaOld.png
-					www\Pages\SignaPhoto\images\stamp.png
-					www\Pages\SignaPhoto\images\stampOld.png
+					www\Pages\SignaPhoto\images\photo.png
+				-imgdebug
+					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
+					www\Pages\SignaPhoto\imgdebug\goshan.jpg
+					www\Pages\SignaPhoto\imgdebug\iphoto.jpg
+					www\Pages\SignaPhoto\imgdebug\iproba.png
+					www\Pages\SignaPhoto\imgdebug\istamp.png
+					www\Pages\SignaPhoto\imgdebug\ksiusha.jpg
+					www\Pages\SignaPhoto\imgdebug\stamplbp.png
+					www\Pages\SignaPhoto\imgdebug\stamptve.png
+					www\Pages\SignaPhoto\imgdebug\Дед-сын-и-внук.png
+					www\Pages\SignaPhoto\imgdebug\Хорошенькая.png
 				-KwinTiny
-				www\Pages\SignaPhoto\dave.png
-				www\Pages\SignaPhoto\dave1.png
 				www\Pages\SignaPhoto\Indoor.html
 				www\Pages\SignaPhoto\log.txt
-				www\Pages\SignaPhoto\openfile.png
-				www\Pages\SignaPhoto\photo.jpg
-				www\Pages\SignaPhoto\proba.png
 				www\Pages\SignaPhoto\Register.html
 				www\Pages\SignaPhoto\Register.php
 				www\Pages\SignaPhoto\RegisterOld.php
-				www\Pages\SignaPhoto\sean.png
-				www\Pages\SignaPhoto\sean1.png
 				www\Pages\SignaPhoto\SignaPhoto.css
 				www\Pages\SignaPhoto\SignaPhoto.js
 				www\Pages\SignaPhoto\SignaPhoto.php
@@ -353,8 +359,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoOld.php
 				www\Pages\SignaPhoto\SignaPhotoPortrait.php
 				www\Pages\SignaPhoto\SignaPhotoUpload.php
-				www\Pages\SignaPhoto\stamp.png
-				www\Pages\SignaPhoto\Subscribe.html
+				www\Pages\SignaPhoto\Subscribe.php
 				www\Pages\SignaPhoto\Tunein.html
 			-Sshu
 			-TPhpPrown
@@ -475,11 +480,12 @@ DoorTry
 4=www\Pages\SignaPhoto\SignaPhotoPortrait.php
 5=www\Pages\SignaPhoto\SignaPhoto_m.css
 6=www\Pages\SignaPhoto\SignaPhoto.js
-7=www\Pages\SignaPhoto\SignaPhotoUpload.php
-8=www\Pages\SignaPhoto\SignaPhoto.css
+7=www\Pages\SignaPhoto\SignaPhoto.css
+8=www\Pages\SignaPhoto\SignaPhotoUpload.php
+9=www\Pages\SignaPhoto\Subscribe.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoHtml.php
+Selected=www\Pages\SignaPhoto\Subscribe.php
 [www\iniMem.php]
 TopLine=27
 Caret=58,47
@@ -487,23 +493,26 @@ Caret=58,47
 TopLine=137
 Caret=50,146
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=243
-Caret=19,265
+TopLine=135
+Caret=1,152
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=55
-Caret=1,82
+TopLine=31
+Caret=1,37
 [www\Pages\SignaPhoto\SignaPhotoPortrait.php]
-TopLine=39
-Caret=1,59
+TopLine=37
+Caret=1,37
 [www\Pages\SignaPhoto\SignaPhoto_m.css]
-TopLine=156
-Caret=1,180
+TopLine=117
+Caret=29,117
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=57
-Caret=25,88
-[www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=40
-Caret=1,63
+TopLine=67
+Caret=22,80
 [www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=54
-Caret=1,67
+TopLine=78
+Caret=1,92
+[www\Pages\SignaPhoto\SignaPhotoUpload.php]
+TopLine=53
+Caret=1,76
+[www\Pages\SignaPhoto\Subscribe.php]
+TopLine=69
+Caret=6,114

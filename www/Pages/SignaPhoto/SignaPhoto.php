@@ -25,6 +25,7 @@ try
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
+   require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
    // Подключаем файлы библиотеки прикладных классов:
    $TPhpTools=$SiteHost.'/TPhpTools';
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
@@ -32,7 +33,9 @@ try
    require_once 'SignaPhotoHtml.php';
     
    // Готовим начало страницы для подписывания фотографий
-   IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp);
+   $c_Orient=prown\MakeCookie('Orient','landscape',tStr);
+   IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
+
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
    // Формируем тексты запросов для вызова страниц (с помощью JS) с портретной 
    // ориентацией и ландшафтной. Так как страница "Подписать фотографию" 
@@ -69,7 +72,8 @@ try
       echo '</div>';
       // Размечаем область изображения с подписью
       echo '<div  id="Proba">';
-      ViewProba();
+      ViewProba($c_FileProba);
+      //prown\ViewGlobal(avgCOOKIE);
       echo '</div>';
    echo '</div>';
    

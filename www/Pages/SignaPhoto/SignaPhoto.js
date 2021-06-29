@@ -77,6 +77,11 @@ function LoadFileImg() { document.getElementById('my_hidden_loadImg').click(); }
 function FindFileStamp() { document.getElementById('my_hidden_fileStamp').click(); }  
 function LoadFileStamp() { document.getElementById('my_hidden_loadStamp').click(); }  
 
+function AlertMessage(messa='Загрузка новой подписи отключена!')
+{
+   alert(messa);
+}
+
 function onResponse(d) // Функция обработки ответа от сервера 
 {  
  eval('var obj = ' + d + ';');  

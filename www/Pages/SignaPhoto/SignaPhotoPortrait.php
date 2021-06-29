@@ -33,7 +33,9 @@ try
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
-   IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp);
+   $c_Orient=prown\MakeCookie('Orient','portrait',tStr);
+   IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
+
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto_m.css">';
    echo '<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">';
    // Включаем набор meta-тегов для сайтов с адаптивным дизайном:
@@ -78,7 +80,7 @@ try
    echo '</head>';
    echo '<body>';
    
-   markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileStamp);
+   markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileStamp,$c_FileProba);
 
    /*
    echo '***<br>';

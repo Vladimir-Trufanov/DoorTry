@@ -12,7 +12,7 @@
 
 
 // Выполнить разметку мобильных подстраниц "Подписать фотографию"
-function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileStamp)
+function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileStamp,$c_FileProba)
 {
    // Начинаем 1 страницу
    echo '<div data-role = "page" id = "page1">';
@@ -75,7 +75,8 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileSta
    // Размечаем область изображения с подписью
    echo '<div role="main" class="ui-content" id="exPhp">';
    echo '<div  id="Proba">';
-   ViewProba();
+   ViewProba($c_FileProba);
+   //prown\ViewGlobal(avgCOOKIE);
    echo '</div>';
    echo '</div>';
    // Размечаем подвал с двумя кнопками действий
@@ -111,20 +112,45 @@ function MakeStamp()
    echo '<br>Сделано!<br>';
 }
 
+function ImgMakeStamp($FileImg)
+{
+   /*
+   // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
+   $stamp = imagecreatefrompng('images/stamp.png');
+   $im = imagecreatefromjpeg('images/photo.jpg');
+   // Установка полей для штампа и получение высоты/ширины штампа
+   $marge_right = 10;
+   $marge_bottom = 10;
+   $sx = imagesx($stamp);
+   $sy = imagesy($stamp);
+   // Копирование изображения штампа на фотографию с помощью смещения края
+   // и ширины фотографии для расчёта позиционирования штампа.
+   imagecopy($im,$stamp,imagesx($im)-$sx-$marge_right,imagesy($im)-$sy-$marge_bottom,0,0,imagesx($stamp),imagesy($stamp));
+   // Вывод и освобождение памяти
+   //header('Content-type: image/png');
+   imagepng($im, 'images/proba.png');
+   imagedestroy($im);
+   */
+   echo '<br>'.$FileImg.'- сделано <br>';
+}
+
 
 
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
 // ****************************************************************************
-function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp)
+function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProba)
 {
    $Result=true;
    // Инициируем или изменяем счетчик числа запросов страницы
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);  
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
    
+   $c_Orient=prown\MakeCookie('Orient','landscape',tStr,true);
+
    $c_FileImg=prown\MakeCookie('FileImg','images/iphoto.jpg',tStr,true);
    $c_FileStamp=prown\MakeCookie('FileStamp','images/istamp.png',tStr,true);
+   $c_FileProba=prown\MakeCookie('FileProba','images/iproba.png',tStr,true);
 
    // Определяем Url домашней страницы
    $UrlHome='https://doortry.ru';
@@ -229,7 +255,7 @@ function ViewStamp($c_FileStamp)
    echo '<img src="'.$c_FileStamp.'" alt="" id="picStamp">';
 }
 // Вывести изображение c подписью
-function ViewProba()
+function ViewProba($c_FileProba)
 {  
    /*                                                          
    echo 'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba '.
@@ -237,22 +263,15 @@ function ViewProba()
    'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba '.
    'Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba Proba';
    */
-   echo '<img src="images/proba.png" alt="" id="picProba">';
+   echo '<img src="'.$c_FileProba.'" alt="" id="picProba">';
 }
-// Вывести область управления
-function ViewLead()
-{
-   echo 'Lead Управление<br>';
-   echo '<div id="SiteDevice">Устройство неизвестное</div>';
-}
-
 
 function LoadImg()
 { 
    $RequestFile='photo';
    // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
    echo '
-      <div id="btnLoadImg" class="navButtons" onclick="FindFileImg();" title="Загрузка файла">
+      <div id="btnLoadImg" class="navButtons" onclick="FindFileImg();" title="Загрузка изображения">
          <img src="buttons/image128.png"   width=100% height=100%/></img>
       </div>
    ';
@@ -260,8 +279,9 @@ function LoadImg()
    echo '
       <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
       'target="rFrame" method="POST" enctype="multipart/form-data">';  
-   // Формируем --два inputа для обеспечения ввода в диве с нулевыми размерами,
-   // для того чтобы их скрыть
+   // Формируем три inputа для обеспечения ввода в диве с нулевыми размерами,
+   // для того чтобы их скрыть. Разрешенный размер загружаемого файла чуть 
+   // больше, чем указанный в php.ini (где он равем 3Mb)
    $MaxLoadSize = 4100000;
    echo'
    <div class="hiddenInput">
@@ -277,6 +297,14 @@ function LoadImg()
 
 function LoadStamp()
 { 
+   // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
+   echo '
+      <div id="btnLoadStamp" class="navButtons" onclick="AlertMessage();" title="Загрузка изображения подписи">
+         <img src="buttons/stamp128.png"   width=100% height=100%/></img>
+      </div>
+   ';
+
+   /*
    $RequestFile='stamp';
    // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
    echo '
@@ -299,37 +327,58 @@ function LoadStamp()
    '</div>';
    // Завершаем форму запроса
    echo '</form>';
+   */
 }
 
 function Register()
-{ 
+{
+  /*
+   // Рисуем нашу кнопку, определяем ей реакцию на нажатие кнопки мыши
+   /*
    echo '
-      <div id="btnRegister" class="navButtons" title="Загрузка файла">
+      <div id="btnRegister" class="navButtons" title="Регистрация пользователя">
          <a  href="Register.html">
-         <img src="buttons/register128.png"   width=100% height=100%/></img>
+         <img src="buttons/register128.png" width=100% height=100%/></img>
          </a>
      </div>
     ';
+    */
+   echo '
+      <div id="btnRegister" class="navButtons"
+         onclick="AlertMessage(\'Регистрация пользователя отключена!\')"
+         title="Регистрация пользователя">
+         <img src="buttons/register128.png" width=100% height=100%/></img>
+     </div>
+   ';
 }
 function Indoor()
 { 
+   /*
    echo '
-      <div id="btnIndoor" class="navButtons" title="Загрузка файла">
+      <div id="btnIndoor" class="navButtons" title="Авторизация пользователя">
          <a  href="Indoor.html">
-         <img src="buttons/input128.png"   width=100% height=100%/></img>
+         <img src="buttons/input128.png" width=100% height=100%/></img>
          </a>
      </div>
-    ';
+   ';
+   */
+   echo '
+      <div id="btnIndoor" class="navButtons"
+         onclick="AlertMessage(\'Авторизация пользователя отключена!\')"
+         title="Авторизация пользователя">
+         <img src="buttons/input128.png" width=100% height=100%/></img>
+     </div>
+   ';
 }
 function Subscribe()
-{ 
+{
    echo '
       <div id="btnSubscribe" class="navButtons" title="Загрузка файла">
          <a  href="Subscribe.php">
          <img src="buttons/subscribe128.png"   width=100% height=100%/></img>
          </a>
      </div>
-    ';
+   ';
 }
 function Tunein()
 { 

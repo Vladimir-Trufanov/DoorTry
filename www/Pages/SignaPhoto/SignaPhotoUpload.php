@@ -1,5 +1,5 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                               *** SignaPhoto.php ***
+// PHP7/HTML5, EDGE/CHROME                         *** SignaPhotoUpload.php ***
 
 // ****************************************************************************
 // * SignaPhoto                                              Главный модуль - *
@@ -39,29 +39,40 @@ try
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 
+   $c_Orient=prown\MakeCookie('Orient');
    if (prown\isComRequest('photo','img')) 
    {
       // Определяем каталог для сохранения изображений 
       $dir = 'images/';  
       $exti= get_file_extension(basename($_FILES['loadfile']['name']));
       // Переносим в загрузочный каталог начальный файл изображения
-      $name = 'photo'; // basename($_FILES['loadfile']['name']);  
+      $name = 'photo'; 
       $file = $dir . $name.'.'.$exti;  
-      $c_FileImg=prown\MakeCookie('FileImg',$file,tStr);  
       // Копируем файл и получаем результат
       $success = move_uploaded_file($_FILES['loadfile']['tmp_name'],$file); 
       if ($success)
       {
          // Копируем оригинал на подписанную фотографию
-         $newfile = $dir.'proba.png';
+         /*
+         $newfile = $dir.'proba.'.$exti;
          if (!copy($file,$newfile)) 
          {
             echo "не удалось скопировать $file...\n";
          }
-         // Выходим на вторую страницу
-         // $page='/Pages/SignaPhoto/SignaPhotoPortrait.php#page2';
-         $page='/Pages/SignaPhoto/SignaPhotoPortrait.php';
-         Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+         */
+         // Запоминаем в кукисах имена загруженных файлов
+         $c_FileImg=prown\MakeCookie('FileImg',$file,tStr);
+         $c_FileProba=prown\MakeCookie('FileProba',$file,tStr);
+         // По ориентации устройства определяем и перезагружаем страницу
+         if ($c_Orient=='landscape') 
+         {
+            $page='/Pages/SignaPhoto/SignaPhoto.php';
+         }
+         else
+         {
+            $page='/Pages/SignaPhoto/SignaPhotoPortrait.php#page2';
+         }
+         echo "<script>window.location.replace('".$page."');</script>";
       }
       else
       {
@@ -73,16 +84,18 @@ try
       // Вызываем callback функцию и передаем ей результат
       // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
       // jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
-      //prown\ViewGlobal(avgGET);
+      
+      // prown\ViewGlobal(avgCOOKIE);
    }
    else 
    {
+      /*
       // Определяем каталог для сохранения изображений 
       $dir = 'images/';  
       $exti= get_file_extension(basename($_FILES['loadfile']['name']));
       $name = 'stamp'; // basename($_FILES['loadfile']['name']);  
       $file = $dir . $name.'.'.$exti;  
-      $c_FileStamp=prown\MakeCookie('FileStamp',$file,tStr);  
+      //$c_FileStamp=prown\MakeCookie('FileStamp',$file,tStr);  
       // Копируем файл и получаем результат
       $success = move_uploaded_file($_FILES['loadfile']['tmp_name'], $file); 
       if ($success)
@@ -102,9 +115,11 @@ try
       // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
       // jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
       //prown\ViewGlobal(avgGET);
+      */
    }
 }
 catch (E_EXCEPTION $e) 
 {
    DoorTryPage($e);
 }
+// *************************************************** SignaPhotoUpload.php ***

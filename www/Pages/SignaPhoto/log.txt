@@ -128,3 +128,15 @@ Stack trace:
 #0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
 #1 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 174
+[29-Jun-2021 14:49:40 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\ViewGlobal() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:241
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(72): ViewProba()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 241
+[29-Jun-2021 15:26:12 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewProba(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 78 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:233
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php(78): ViewProba()
+#1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoPortrait.php(81): markupMobileSite(5, 'https://doortry...', 'C:\\DoorTry\\www', 'images/iphoto.j...', 'images/istamp.p...')
+#2 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 233
+[29-Jun-2021 16:05:15 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'Регистрация' (T_STRING), expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 312
