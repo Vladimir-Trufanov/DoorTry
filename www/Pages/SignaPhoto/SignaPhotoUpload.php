@@ -10,6 +10,46 @@
 //                                                   Дата создания:  01.06.2021
 // Copyright © 2021 tve                              Посл.изменение: 25.06.2021
 
+
+function ImgMakeStamp1($FileImg,$FileExt)
+{
+   // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
+   $stamp = imagecreatefrompng('images/istamp.png');
+   if ($FileExt=='gif')
+   {
+      $im = imagecreatefromgif($FileImg);
+   }
+   elseif ($FileExt=='jpeg')
+   {
+      $im = imagecreatefromjpeg($FileImg);
+   }
+   elseif ($FileExt=='jpg')
+   {
+      $im = imagecreatefromjpeg($FileImg);
+   }
+   elseif ($FileExt=='png')
+   {
+      $im = imagecreatefrompng($FileImg);
+   }
+   else $im = imagecreatefromjpeg('images/iphoto.jpg');
+   // Установка полей для штампа и получение высоты/ширины штампа
+   $marge_right = 10;
+   $marge_bottom = 10;
+   $sx = imagesx($stamp);
+   $sy = imagesy($stamp);
+   // Копирование изображения штампа на фотографию с помощью смещения края
+   // и ширины фотографии для расчёта позиционирования штампа.
+   imagecopy($im,$stamp,
+      imagesx($im)-$sx-$marge_right,
+      imagesy($im)-$sy-$marge_bottom,0,0,
+      imagesx($stamp),imagesy($stamp));
+   // Вывод и освобождение памяти
+   //header('Content-type: image/png');
+   imagepng($im, 'images/proba.png');
+   imagedestroy($im);
+}
+
+
 // Выполнить callback функцию основного окна,
 // которой вернем ответ по окончанию загрузки 
 function jsOnResponse($obj)  
@@ -53,16 +93,20 @@ try
       if ($success)
       {
          // Копируем оригинал на подписанную фотографию
-         /*
+         
          $newfile = $dir.'proba.'.$exti;
          if (!copy($file,$newfile)) 
          {
             echo "не удалось скопировать $file...\n";
          }
-         */
+         
+         ImgMakeStamp1($newfile,get_file_extension($newfile));
+         
          // Запоминаем в кукисах имена загруженных файлов
          $c_FileImg=prown\MakeCookie('FileImg',$file,tStr);
-         $c_FileProba=prown\MakeCookie('FileProba',$file,tStr);
+         //$c_FileProba=prown\MakeCookie('FileProba',$newfile,tStr);
+         $subsfile = $dir.'proba.png';
+         $c_FileProba=prown\MakeCookie('FileProba',$subsfile,tStr);
          // По ориентации устройства определяем и перезагружаем страницу
          if ($c_Orient=='landscape') 
          {

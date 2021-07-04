@@ -372,14 +372,26 @@ function Indoor()
 }
 function Subscribe()
 {
+   /*
+   echo '
+      <div id="btnSubscribe" class="navButtons"
+         onclick="Substi()"
+         title="Авторизация пользователя">
+         <img src="buttons/subscribe128.png" width=100% height=100%/></img>
+     </div>
+   ';
+   */
+   
    echo '
       <div id="btnSubscribe" class="navButtons" title="Загрузка файла">
          <a  href="Subscribe.php">
-         <img src="buttons/subscribe128.png"   width=100% height=100%/></img>
+         <img src="buttons/subscribe128.png"   width=100% height=100%/>
+         </img>
          </a>
      </div>
    ';
-}
+   
+ }
 function Tunein()
 { 
    echo '

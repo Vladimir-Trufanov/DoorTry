@@ -81,6 +81,10 @@ function AlertMessage(messa='Загрузка новой подписи откл
 {
    alert(messa);
 }
+function Substi()
+{
+   window.location.replace('/Pages/SignaPhoto/SignaPhotoPortrait.php#page2');
+}
 
 function onResponse(d) // Функция обработки ответа от сервера 
 {  

@@ -140,3 +140,8 @@ Stack trace:
 #2 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 233
 [29-Jun-2021 16:05:15 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'Регистрация' (T_STRING), expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 312
+[04-Jul-2021 07:02:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 381
+[04-Jul-2021 07:40:13 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ImgMakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php:100
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php on line 100
