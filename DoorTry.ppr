@@ -334,6 +334,7 @@ DoorTry
 					www\Pages\SignaPhoto\images\photo.gif
 					www\Pages\SignaPhoto\images\photo.jpg
 					www\Pages\SignaPhoto\images\photo.png
+					www\Pages\SignaPhoto\images\proba.jpg
 					www\Pages\SignaPhoto\images\proba.png
 				-imgdebug
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
@@ -346,23 +347,59 @@ DoorTry
 					www\Pages\SignaPhoto\imgdebug\stamptve.png
 					www\Pages\SignaPhoto\imgdebug\Дед-сын-и-внук.png
 					www\Pages\SignaPhoto\imgdebug\Хорошенькая.png
-				-KwinTiny
-				www\Pages\SignaPhoto\Indoor.html
-				www\Pages\SignaPhoto\log.txt
-				www\Pages\SignaPhoto\Register.html
-				www\Pages\SignaPhoto\Register.php
-				www\Pages\SignaPhoto\RegisterOld.php
-				www\Pages\SignaPhoto\SignaPhoto.css
-				www\Pages\SignaPhoto\SignaPhoto.js
-				www\Pages\SignaPhoto\SignaPhoto.php
-				www\Pages\SignaPhoto\SignaPhoto_m.css
-				www\Pages\SignaPhoto\SignaPhotoHtml.php
-				www\Pages\SignaPhoto\SignaPhotoOld.php
-				www\Pages\SignaPhoto\SignaPhotoPortrait.php
-				www\Pages\SignaPhoto\SignaPhotoUpload.php
-				www\Pages\SignaPhoto\Subscribe.php
-				www\Pages\SignaPhoto\SubscribeOld.php
-				www\Pages\SignaPhoto\Tunein.html
+				-OldVer
+					-_InterSpooky
+						-css
+							www\Pages\SignaPhoto\OldVer\_InterSpooky\css\style.css
+						-js
+							www\Pages\SignaPhoto\OldVer\_InterSpooky\js\index.js
+						www\Pages\SignaPhoto\OldVer\_InterSpooky\index.html
+						www\Pages\SignaPhoto\OldVer\_InterSpooky\license.txt
+						www\Pages\SignaPhoto\OldVer\_InterSpooky\README.txt
+					-_PencilPaper
+						-css
+							www\Pages\SignaPhoto\OldVer\_PencilPaper\css\style.css
+						-js
+							www\Pages\SignaPhoto\OldVer\_PencilPaper\js\index.js
+						www\Pages\SignaPhoto\OldVer\_PencilPaper\index.html
+						www\Pages\SignaPhoto\OldVer\_PencilPaper\license.txt
+						www\Pages\SignaPhoto\OldVer\_PencilPaper\README.txt
+					-_WhipperSnapper
+						-css
+							www\Pages\SignaPhoto\OldVer\_WhipperSnapper\css\style.css
+						-js
+							www\Pages\SignaPhoto\OldVer\_WhipperSnapper\js\index.js
+						www\Pages\SignaPhoto\OldVer\_WhipperSnapper\index.html
+						www\Pages\SignaPhoto\OldVer\_WhipperSnapper\license.txt
+						www\Pages\SignaPhoto\OldVer\_WhipperSnapper\README.txt
+					-angled-menu240817
+						-css
+							www\Pages\SignaPhoto\OldVer\angled-menu240817\css\style.css
+						-js
+							www\Pages\SignaPhoto\OldVer\angled-menu240817\js\index.js
+						-scss
+							www\Pages\SignaPhoto\OldVer\angled-menu240817\scss\style.scss
+						www\Pages\SignaPhoto\OldVer\angled-menu240817\index.html
+						www\Pages\SignaPhoto\OldVer\angled-menu240817\license.txt
+						www\Pages\SignaPhoto\OldVer\angled-menu240817\README.txt
+					-KwinTiny
+					www\Pages\SignaPhoto\OldVer\Indoor.html
+					www\Pages\SignaPhoto\OldVer\log.txt
+					www\Pages\SignaPhoto\OldVer\Register.html
+					www\Pages\SignaPhoto\OldVer\Register.php
+					www\Pages\SignaPhoto\OldVer\RegisterOld.php
+					www\Pages\SignaPhoto\OldVer\SignaPhoto.css
+					www\Pages\SignaPhoto\OldVer\SignaPhoto.js
+					www\Pages\SignaPhoto\OldVer\SignaPhoto.php
+					www\Pages\SignaPhoto\OldVer\SignaPhoto_m.css
+					www\Pages\SignaPhoto\OldVer\SignaPhotoHtml.php
+					www\Pages\SignaPhoto\OldVer\SignaPhotoOld.php
+					www\Pages\SignaPhoto\OldVer\SignaPhotoPortrait.php
+					www\Pages\SignaPhoto\OldVer\SignaPhotoUpload.php
+					www\Pages\SignaPhoto\OldVer\Subscribe.php
+					www\Pages\SignaPhoto\OldVer\SubscribeOld.php
+					www\Pages\SignaPhoto\OldVer\Tunein.html
+					www\Pages\SignaPhoto\OldVer\Проект меню для подписаний.doc
 			-Sshu
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
@@ -475,27 +512,14 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Pages\SignaPhoto\Subscribe.php
-1=www\Pages\SignaPhoto\SignaPhotoHtml.php
-2=www\Pages\SignaPhoto\SubscribeOld.php
-3=www\Pages\SignaPhoto\SignaPhotoUpload.php
-4=www\Pages\SignaPhoto\SignaPhoto.js
+0=www\Pages\SignaPhoto\OldVer\Register.html
+1=www\Main.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhotoUpload.php
-[www\Pages\SignaPhoto\Subscribe.php]
-TopLine=7
-Caret=26,23
-[www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=92
-Caret=21,92
-[www\Pages\SignaPhoto\SubscribeOld.php]
-TopLine=69
-Caret=1,80
-Mark1=1,116
-[www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=73
-Caret=61,109
-[www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=71
-Caret=10,84
+Selected=www\Main.php
+[www\Pages\SignaPhoto\OldVer\Register.html]
+TopLine=1
+Caret=1,1
+[www\Main.php]
+TopLine=61
+Caret=39,81

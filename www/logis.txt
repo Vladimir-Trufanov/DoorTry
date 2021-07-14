@@ -4446,3 +4446,15 @@ Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) App
 Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263 
 ===Main===Sun, 04 Jul 2021 08:11:22 +0300 IP: ::1 URL: /?list=signaphotoportrait 
 Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263 
+***Main***Sun, 04 Jul 2021 20:00:18 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 
+===Main===Sun, 04 Jul 2021 20:00:25 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263 
+===Main===Sun, 04 Jul 2021 20:00:35 +0300 IP: ::1 URL: /index.php?list=signaphoto 
+Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263 
+===Main===Sun, 04 Jul 2021 20:00:35 +0300 IP: ::1 URL: /?list=signaphotoportrait 
+Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263 
+***Main***Wed, 14 Jul 2021 15:37:29 +0300 IP: ::1 URL: / 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 
+===Main===Wed, 14 Jul 2021 15:37:32 +0300 IP: ::1 URL: /index.php?list=signaphoto 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 
