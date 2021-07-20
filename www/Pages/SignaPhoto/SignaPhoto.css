@@ -1,0 +1,297 @@
+/** HTML5/CSS3, EDGE/CHROME                              *** SignaPhoto.css ***
+
+ ******************************************************************************
+ *           Определить стили ландшафтной версии "Подписать фотографию"       *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  03.06.2021
+ Copyright © 2021 tve                                Посл.изменение: 17.06.2021
+*/
+
+html{font-family:'Anonymous Pro',monospace;font-size:16px;}
+
+/* Регулируем управление меню */
+body 
+{
+  background:url(SignaPhoto.jpg) center center no-repeat;
+  background-size:cover;
+  font-size:1rem;
+  /*color:#fff;*/
+  /*font-family: "Lato", sans-serif;*/
+  /*font-size:2.4rem;*/
+  height:100vh;
+}
+.menu-list
+{
+  @import url(https://fonts.googleapis.com/css?family=Lato:400);
+  color:#fff;
+  font-family:"Lato",sans-serif;
+  font-size:1.8rem;
+}
+.navigation-menu__bars, 
+.navigation-menu__bars::before, 
+.navigation-menu__bars::after 
+{
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 25px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: block;
+  transition: all .3s;
+}
+
+  .navigation-menu 
+  {
+     background-color: transparent;
+     height: 100%;
+     position: fixed;
+     width: 600px;
+     transform: translateX(-100%);
+     transition: transform .3s .3s;
+  }
+.navigation-menu::before {
+  background: #4E567E;
+  content: '';
+  height: 400%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(40deg);
+  width: 100%;
+  z-index: 0;
+}
+.navigation-menu--open {
+  transform: translateX(0);
+}
+.navigation-menu--open .navigation-menu__bars {
+  background-color: transparent;
+}
+.navigation-menu--open .navigation-menu__bars::before, .navigation-menu--open .navigation-menu__bars::after {
+  top: 0;
+}
+.navigation-menu--open .navigation-menu__bars::before {
+  transform: rotate(45deg);
+}
+.navigation-menu--open .navigation-menu__bars::after {
+  transform: rotate(-45deg);
+}
+.navigation-menu--open .menu-list__item {
+  opacity: 1;
+}
+.navigation-menu--open .menu-list__item:nth-child(1) {
+  transition-delay: 1s;
+}
+.navigation-menu--open .menu-list__item:nth-child(2) {
+  transition-delay: 1.25s;
+}
+.navigation-menu--open .menu-list__item:nth-child(3) {
+  transition-delay: 1.5s;
+}
+.navigation-menu--open .menu-list__item:nth-child(4) {
+  transition-delay: 1.75s;
+}
+.navigation-menu--open .menu-list__item:nth-child(5) {
+  transition-delay: 2s;
+}
+.navigation-menu--open .menu-list__item:nth-child(6) {
+  transition-delay: 2.25s;
+}
+.navigation-menu--open .menu-list__item:nth-child(7) {
+  transition-delay: 2.5s;
+}
+.navigation-menu--open .menu-list__item:nth-child(8) {
+  transition-delay: 2.75s;
+}
+.navigation-menu--open .menu-list__item:nth-child(9) {
+  transition-delay: 3s;
+}
+.navigation-menu--open .menu-list__item:nth-child(10) {
+  transition-delay: 3.25s;
+}
+.navigation-menu--open .menu-list__item:nth-child(11) {
+  transition-delay: 3.5s;
+}
+.navigation-menu--open .menu-list__item:nth-child(12) {
+  transition-delay: 3.75s;
+}
+.navigation-menu__toggle {
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: -40px;
+  top: 5px;
+  width: 30px;
+}
+.navigation-menu__bars::before, .navigation-menu__bars::after {
+  content: '';
+}
+.navigation-menu__bars::before {
+  left: 0;
+  top: -8px;
+}
+.navigation-menu__bars::after {
+  left: 0;
+  top: 8px;
+}
+
+.menu-list {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 10;
+}
+.menu-list__item {
+  margin: 40px 0;
+  opacity: 0;
+  transition: opacity .5s .5s;
+}
+
+@media only screen and (max-width: 700px) {
+  .navigation-menu {
+    min-width: 240px;
+    width: 80%;
+  }
+  .navigation-menu::before {
+    width: 110%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navigation-menu {
+    background-color: #4E567E;
+    min-width: 240px;
+    width: 80%;
+  }
+  .navigation-menu::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+
+/*
+body
+{
+   width:100%;
+   height:100%;
+   font-size:1rem;
+} */
+/**
+  Для отладки расскрашиваем дивы
+body{background:yellow;} 
+#All{background:white;}
+#View{background:magenta;}
+#Photo{background:purple;}
+#Stamp{background:red;}
+#Proba{background:olive;}
+#Lead{background:aqua;}
+*/
+/** Оформляем скелет разметки */
+/* #All,#Lead {position:fixed; width:100%; overflow:auto;}
+#All  {top:0;    height:82%; }
+#Lead {bottom:0; height:12%;} */
+/** Размечаем правую и левую колонки области просмотра */
+/* #View  {width:48%; float:left;  height:100%;}
+#Proba {width:52%; float:right; height:100%;} */
+/** Формируем область для показа загруженной фотографии и подписи */
+/*
+#Photo {width:48%;}
+#Stamp {width:30%; margin-left:35%;}
+*/
+
+/*
+#pic
+{
+   width:99%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:.4rem;
+   margin-bottom:.3rem;
+}
+#picStamp
+{
+   height:9%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:.3rem;
+   margin-bottom:.4rem;
+}
+#picProba
+{
+   width:99%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:.4rem;
+   margin-bottom:.4rem;
+}
+
+
+.navButtons
+{  
+      border:1px gray solid;
+      position:absolute;
+      overflow: hidden;
+      display:block;  
+      -moz-box-shadow:5px 5px 7px rgba(3,33,33,.7);  
+      -webkit-box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
+      box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+      border-radius:4px;
+  }
+
+.navButtons:hover
+{
+  border:2px solid black;
+  background-color:#fff;
+}
+
+.hiddenInput{  
+      position:absolute;
+      overflow: hidden;
+      display:block;  
+      height:0px;  
+      width:0px;  
+  }
+#btnLoadImg
+{
+   margin-top:0;
+   margin-left:5%;
+}
+#btnLoadStamp
+{
+   margin-top:0;
+   margin-left:23%;
+}
+#btnSubscribe
+{
+   margin-top:0;
+   margin-left:64%;
+}
+#btnTunein
+{
+   margin-top:0;
+   margin-left:82%;
+}
+*/
+/* Отличное от общего */
+
+/*
+.navButtons
+{  
+   height:4rem; 
+   width:4rem;  
+}
+*/
+
+
+/*
+ *********************************************************** SignaPhoto.css ***
+*/	
+	
+
