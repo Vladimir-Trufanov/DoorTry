@@ -405,10 +405,13 @@ DoorTry
 					www\Pages\SignaPhoto\OldVer\Проект меню для подписаний.doc
 				-scss
 					www\Pages\SignaPhoto\scss\style.scss
+				-Wallpaper
+					www\Pages\SignaPhoto\Wallpaper\Goryi-Dyimka.jpg
+					www\Pages\SignaPhoto\Wallpaper\SignaPhoto.jpg
 				www\Pages\SignaPhoto\index.html
 				www\Pages\SignaPhoto\license.txt
+				www\Pages\SignaPhoto\log.txt
 				www\Pages\SignaPhoto\SignaPhoto.css
-				www\Pages\SignaPhoto\SignaPhoto.jpg
 				www\Pages\SignaPhoto\SignaPhoto.js
 				www\Pages\SignaPhoto\SignaPhoto.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
@@ -530,9 +533,6 @@ DoorTry
 2=www\Pages\SignaPhoto\index.html
 3=www\Pages\SignaPhoto\SignaPhoto.php
 4=www\Pages\SignaPhoto\SignaPhotoHtml.php
-5=www\Jsx\index.js
-6=www\Pages\SignaPhoto\StyleReset.css
-7=www\Pages\SignaPhoto\SignaPhoto.css
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\SignaPhoto.php
@@ -540,23 +540,14 @@ Selected=www\Pages\SignaPhoto\SignaPhoto.php
 TopLine=1
 Caret=1,1
 [www\Main.php]
-TopLine=61
-Caret=4,81
+TopLine=73
+Caret=3,99
 [www\Pages\SignaPhoto\index.html]
 TopLine=176
 Caret=1,204
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=43
-Caret=1,64
+TopLine=99
+Caret=6,115
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=27
-Caret=1,48
-[www\Jsx\index.js]
-TopLine=1
-Caret=1,1
-[www\Pages\SignaPhoto\StyleReset.css]
-TopLine=18
-Caret=1,45
-[www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=116
-Caret=1,172
+TopLine=89
+Caret=1,97

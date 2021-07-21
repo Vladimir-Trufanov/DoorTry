@@ -1,0 +1,16 @@
+[21-Jul-2021 09:59:19 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function IniPage() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 36
+[21-Jul-2021 10:00:57 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function IniPage() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 36
+[21-Jul-2021 10:02:08 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function IniPage() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 35
+[21-Jul-2021 10:06:43 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function IniPage() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 35

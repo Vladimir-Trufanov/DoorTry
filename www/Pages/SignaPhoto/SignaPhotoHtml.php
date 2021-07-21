@@ -48,6 +48,64 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    echo '<link rel="stylesheet" type="text/css" href="StyleReset.css">';
    return $Result;
 }
+// ****************************************************************************
+// *            Вывести изображение последнего загруженного фото              *
+// ****************************************************************************
+function ViewPhoto($c_FileImg)
+{
+   // Debug1: Выводим просто заполнитель
+   /*
+   echo 
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo<br>';
+   echo 
+      $c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.
+      ' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.
+      $c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.
+      ' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.
+      $c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.
+      ' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.
+      $c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.
+      ' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.' '.$c_FileImg.'<br>';
+   echo 
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
+      'Photo Photo Photo';
+   */
+   // Выводим просто изображение
+   echo '<img src="'.$c_FileImg.'" alt="" id="pic">';
+   //echo '<img src="images/stamp.png" alt="" id="picStamp">';
+   
+   // Debug2: Изображение преобразовываем к градациям серого
+   /* 
+   $im = imagecreatefrompng('dave.png');
+   if($im && imagefilter($im, IMG_FILTER_GRAYSCALE))
+   {
+      echo 'Изображение преобразовано к градациям серого.';
+      imagepng($im, 'dave1.png');
+   }
+   else
+   {
+      echo 'Преобразование не удалось.';
+   }
+   imagedestroy($im);
+   */   
+}
+// ****************************************************************************
+// *              Вывести изображение подписи последних размеров              *
+// ****************************************************************************
+function ViewStamp($c_FileStamp)
+{
+   /*
+   echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp '.
+      'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp'.
+      'Stamp Stamp Stamp Stamp Stamp Stamp';
+   */
+   echo '<img src="'.$c_FileStamp.'" alt="" id="picStamp">';
+}
 
 
 
@@ -196,44 +254,6 @@ function FinaPage()
 {
    $Result=true;
    return $Result;
-}
-// Вывести изображение последнего загруженного фото
-function ViewPhoto($c_FileImg)
-{
-   // Debug1: Выводим просто заполнитель
-   /*
-   echo 
-      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
-      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
-      'Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo Photo'.
-      'Photo Photo Photo';
-   */
-   // Debug2: Выводим просто изображение
-   echo '<img src="'.$c_FileImg.'" alt="" id="pic">';
-   //echo '<img src="images/stamp.png" alt="" id="picStamp">';
-   /* 
-   $im = imagecreatefrompng('dave.png');
-   if($im && imagefilter($im, IMG_FILTER_GRAYSCALE))
-   {
-      echo 'Изображение преобразовано к градациям серого.';
-      imagepng($im, 'dave1.png');
-   }
-   else
-   {
-      echo 'Преобразование не удалось.';
-   }
-   imagedestroy($im);
-   */   
-}
-// Вывести изображение подписи последних размеров
-function ViewStamp($c_FileStamp)
-{
-   /*
-   echo 'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp '.
-      'Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp Stamp'.
-      'Stamp Stamp Stamp Stamp Stamp Stamp';
-   */
-   echo '<img src="'.$c_FileStamp.'" alt="" id="picStamp">';
 }
 // Вывести изображение c подписью
 function ViewProba($c_FileProba)

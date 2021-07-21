@@ -82,6 +82,7 @@ else if (prown\isComRequest('signaphoto','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+/*
 else if (prown\isComRequest('signaphotoportrait','list')) 
 {
    $page='/Pages/SignaPhoto/SignaPhotoPortrait.php';
@@ -95,6 +96,7 @@ else if (prown\isComRequest('signapphoto','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+*/
 // Если поступил запрос на пробную страницу, то запускаем её
 else if (prown\isComRequest('proba','list')) 
 {

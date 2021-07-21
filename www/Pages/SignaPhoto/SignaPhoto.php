@@ -25,13 +25,12 @@ try
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-   //require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
+   require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
    // Подключаем файлы библиотеки прикладных классов:
    $TPhpTools=$SiteHost.'/TPhpTools';
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
-    
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
    echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
@@ -42,11 +41,11 @@ try
    //echo 'alert("SignaPhoto");';
    echo '});</script>';
 
-
    echo '</head>';
    echo '<body>';
    
-   //echo 'Привет!<br>';
+   // echo 'Привет!<br>';
+   // echo '<li><a href="index.php?list=signaphoto">Подписать фотографию</a></li>';
    echo '
       <nav class="navigation-menu js-nav-menu">
       <div class="navigation-menu__toggle js-nav-menu-toggle">
@@ -54,6 +53,7 @@ try
       </div>
       <ul class="menu-list">
          <li class="menu-list__item">Menu Item 1</li>
+         
          <li class="menu-list__item">Menu Item 2</li>
          <li class="menu-list__item">Menu Item 3</li>
          <li class="menu-list__item">Menu Item 4</li>
@@ -62,7 +62,17 @@ try
       </nav>
       <script src="/Jsx/index.js"></script>
    ';
-   //echo 'Пока!<br>';
+   // Размечаем область изображений
+   echo '<div id="All">';
+      // Размечаем область оригинального изображения и образца подписи
+      echo '<div  id="Photo">';
+      ViewPhoto($c_FileImg);
+      echo '</div>';
+      echo '<div  id="Stamp">';
+      ViewStamp($c_FileStamp);
+      echo '</div>';
+   echo '</div>';
+   // echo 'Пока!<br>';
    
    /*
    // Размечаем область изображений
@@ -101,9 +111,9 @@ try
    echo '***<br>';
    */
    echo '</body>';
-   echo '</html>';
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgCOOKIE);
+   echo '</html>';
 }
 catch (E_EXCEPTION $e) 
 {
