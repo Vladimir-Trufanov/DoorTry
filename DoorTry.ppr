@@ -415,6 +415,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhoto.js
 				www\Pages\SignaPhoto\SignaPhoto.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
+				www\Pages\SignaPhoto\SignaPhotoUpload.php
 				www\Pages\SignaPhoto\StyleReset.css
 			-Sshu
 			-TPhpPrown
@@ -533,6 +534,9 @@ DoorTry
 2=www\Pages\SignaPhoto\index.html
 3=www\Pages\SignaPhoto\SignaPhoto.php
 4=www\Pages\SignaPhoto\SignaPhotoHtml.php
+5=www\iniMenu.php
+6=www\Pages\SignaPhoto\SignaPhoto.js
+7=www\Pages\SignaPhoto\SignaPhotoUpload.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\SignaPhoto.php
@@ -540,14 +544,23 @@ Selected=www\Pages\SignaPhoto\SignaPhoto.php
 TopLine=1
 Caret=1,1
 [www\Main.php]
-TopLine=73
-Caret=3,99
+TopLine=75
+Caret=63,82
 [www\Pages\SignaPhoto\index.html]
 TopLine=176
 Caret=1,204
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=99
-Caret=6,115
+TopLine=33
+Caret=4,43
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=89
-Caret=1,97
+TopLine=3
+Caret=1,23
+[www\iniMenu.php]
+TopLine=137
+Caret=1,105
+[www\Pages\SignaPhoto\SignaPhoto.js]
+TopLine=63
+Caret=1,1
+[www\Pages\SignaPhoto\SignaPhotoUpload.php]
+TopLine=67
+Caret=12,118

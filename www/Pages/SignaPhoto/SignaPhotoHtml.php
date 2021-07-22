@@ -11,6 +11,43 @@
 // Copyright © 2021 tve                              Посл.изменение: 14.06.2021
 
 // ****************************************************************************
+// *                    Выбрать этап обработки фотографии                     *
+// ****************************************************************************
+function DispatchPhoto()
+{
+   if (prown\isComRequest('loadpic','img')) LoadPic();
+   else
+   {
+      echo '-------------<br>-------------<br>-------------<br>';
+   }
+}
+// ****************************************************************************
+// *                    Выбрать этап обработки фотографии                     *
+// ****************************************************************************
+function LoadPic()
+{
+   //prown\ConsoleLog('loadpic');
+   $RequestFile='photo';
+   // Начинаем форму запроса изображения по типу: photo, stamp, proba
+   echo '
+      <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
+      'target="rFrame" method="POST" enctype="multipart/form-data">';  
+   // Формируем три inputа для обеспечения ввода в диве с нулевыми размерами,
+   // для того чтобы их скрыть. Разрешенный размер загружаемого файла чуть 
+   // больше, чем указанный в php.ini (где он равем 3Mb)
+   $MaxLoadSize = 4100000;
+   echo'
+   <div class="hiddenInput">
+      <input type="hidden" name="MAX_FILE_SIZE" value="'.$MaxLoadSize.'">
+      <input type="file"    id="my_hidden_fileImg" '.
+         'accept="image/jpeg,image/png,image/gif" name="loadfile" onchange="LoadFileImg();">'.
+      '<input type="submit" id="my_hidden_loadImg" '.
+         'style="display:none" value="Загрузить">'.
+   '</div>';
+   // Завершаем форму запроса
+   echo '</form>';
+}
+// ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
 // ****************************************************************************
 function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProba)

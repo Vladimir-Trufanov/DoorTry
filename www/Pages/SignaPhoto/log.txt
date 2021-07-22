@@ -14,3 +14,4 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 35
+[22-Jul-2021 11:36:55 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 26

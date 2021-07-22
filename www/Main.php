@@ -79,7 +79,7 @@ else if (prown\isComRequest('signaphoto','list'))
 {
    //$page='/Pages/SignaPhoto/index.html';
    $page='/Pages/SignaPhoto/SignaPhoto.php';
-   Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
+   Header("Location: http://".$_SERVER['HTTP_HOST'].$page,true);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
 /*

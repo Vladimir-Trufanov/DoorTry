@@ -24,6 +24,7 @@ try
 {
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
+   require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
    // Подключаем файлы библиотеки прикладных классов:
@@ -39,20 +40,38 @@ try
    // Подключаем скрипты по завершению загрузки страницы
    echo '<script>$(document).ready(function() {';
    //echo 'alert("SignaPhoto");';
+   echo '$("#main").load("content/screen.php", function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });';
    echo '});</script>';
+   
+   
+   
 
    echo '</head>';
    echo '<body>';
    
+   echo '<div id="main">';
+   
    // echo 'Привет!<br>';
    // echo '<li><a href="index.php?list=signaphoto">Подписать фотографию</a></li>';
+   // <li class="menu-list__item">Загрузить фотографию</li>
+   //         <a href="index.php?list=signaphoto&img=loadpic">Загрузить фотографию</a>
+   // http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?il=ili
+   //         <a href="index.php?list=signaphoto&img=loadpic">Загрузить фотографию</a>
    echo '
       <nav class="navigation-menu js-nav-menu">
       <div class="navigation-menu__toggle js-nav-menu-toggle">
          <span class="navigation-menu__bars"></span>
       </div>
       <ul class="menu-list">
-         <li class="menu-list__item">Menu Item 1</li>
+         
+         <li class="menu-list__item" onclick="FindFileImg()">
+            <a href="http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?img=loadpic" 
+            target="_parent">Загрузить фотографию</a>
+         </li>
+         
          
          <li class="menu-list__item">Menu Item 2</li>
          <li class="menu-list__item">Menu Item 3</li>
@@ -62,14 +81,26 @@ try
       </nav>
       <script src="/Jsx/index.js"></script>
    ';
-   // Размечаем область изображений
+
+
+   
+   
+
+
+
+
+
+
+   // Размечаем области диалога и изображений
    echo '<div id="All">';
-      // Размечаем область оригинального изображения и образца подписи
+      echo '<div  id="Info">';
+         DispatchPhoto();
+      echo '</div>';
       echo '<div  id="Photo">';
-      ViewPhoto($c_FileImg);
+         ViewPhoto($c_FileImg);
       echo '</div>';
       echo '<div  id="Stamp">';
-      ViewStamp($c_FileStamp);
+         ViewStamp($c_FileStamp);
       echo '</div>';
    echo '</div>';
    // echo 'Пока!<br>';
@@ -110,9 +141,13 @@ try
    echo '</pre>';
    echo '***<br>';
    */
+   
+   echo '</div>'; 
+
    echo '</body>';
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgCOOKIE);
+   //prown\ViewGlobal(avgREQUEST);
    echo '</html>';
 }
 catch (E_EXCEPTION $e) 
