@@ -78,7 +78,7 @@ try
    require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
-
+   
    $c_Orient=prown\MakeCookie('Orient');
    if (prown\isComRequest('photo','img')) 
    {
@@ -107,15 +107,11 @@ try
          //$c_FileProba=prown\MakeCookie('FileProba',$newfile,tStr);
          $subsfile = $dir.'proba.png';
          $c_FileProba=prown\MakeCookie('FileProba',$subsfile,tStr);
-         // По ориентации устройства определяем и перезагружаем страницу
-         //if ($c_Orient=='landscape') 
-         //{
-            $page='/Pages/SignaPhoto/SignaPhoto.php';
-         //}
-         //else
-         //{
-         //   $page='/Pages/SignaPhoto/SignaPhotoPortrait.php#page2';
-         //}
+         // Делаем задержку 2 секунды, чтобы загрузилась фотография
+         //sleep(2);
+         // Переходим на страницу
+         $page='/Pages/SignaPhoto/SignaPhoto.php';
+         jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
          echo "<script>window.location.replace('".$page."');</script>";
       }
       else
@@ -127,7 +123,7 @@ try
       }
       // Вызываем callback функцию и передаем ей результат
       // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
-      // jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
+      //jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
       
       // prown\ViewGlobal(avgCOOKIE);
    }

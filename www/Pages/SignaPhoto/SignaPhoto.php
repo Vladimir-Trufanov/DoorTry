@@ -13,10 +13,11 @@
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
-$SiteRoot   = $_WORKSPACE[wsSiteRoot];    // Корневой каталог сайта
-$SiteAbove  = $_WORKSPACE[wsSiteAbove];   // Надсайтовый каталог
-$SiteHost   = $_WORKSPACE[wsSiteHost];    // Каталог хостинга
-$SiteDevice = $_WORKSPACE[wsSiteDevice];  // 'Computer' | 'Mobile' | 'Tablet'
+$SiteRoot     = $_WORKSPACE[wsSiteRoot];     // Корневой каталог сайта
+$SiteAbove    = $_WORKSPACE[wsSiteAbove];    // Надсайтовый каталог
+$SiteHost     = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
+$SiteDevice   = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
+$SiteProtocol = $_WORKSPACE[wsSiteProtocol]; // 'HTTP' | 'HTTPS'
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
@@ -40,10 +41,6 @@ try
    // Подключаем скрипты по завершению загрузки страницы
    echo '<script>$(document).ready(function() {';
    //echo 'alert("SignaPhoto");';
-   echo '$("#main").load("content/screen.php", function () {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");
-        });';
    echo '});</script>';
    
    
@@ -51,7 +48,8 @@ try
 
    echo '</head>';
    echo '<body>';
-   
+   // ----Создаем div с идентификатом main для того, чтобы по идентификатору 
+   // -----дожидаться полной загрузки изображения перед разворачиванием страницы
    echo '<div id="main">';
    
    // echo 'Привет!<br>';
@@ -60,6 +58,7 @@ try
    //         <a href="index.php?list=signaphoto&img=loadpic">Загрузить фотографию</a>
    // http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?il=ili
    //         <a href="index.php?list=signaphoto&img=loadpic">Загрузить фотографию</a>
+   //         <a href="http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?img=loadpic" 
    echo '
       <nav class="navigation-menu js-nav-menu">
       <div class="navigation-menu__toggle js-nav-menu-toggle">
@@ -68,8 +67,9 @@ try
       <ul class="menu-list">
          
          <li class="menu-list__item" onclick="FindFileImg()">
-            <a href="http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?img=loadpic" 
-            target="_parent">Загрузить фотографию</a>
+            <a href="'.
+            $SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/Pages/SignaPhoto/SignaPhoto.php?img=loadpic"'. 
+            'target="_parent">Загрузить фотографию</a>
          </li>
          
          
@@ -141,6 +141,12 @@ try
    echo '</pre>';
    echo '***<br>';
    */
+   
+   // Заготавливаем скрытый фрэйм для обработки загружаемого изображения 
+   // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
+   //echo '<iframe id="rFrame" name="rFrame" style="display: none"> </iframe>';
+
+   
    
    echo '</div>'; 
 

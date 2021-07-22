@@ -14,10 +14,11 @@
 require_once 'iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
 
-$SiteRoot    = $_WORKSPACE[wsSiteRoot];     // Корневой каталог сайта
-$SiteAbove   = $_WORKSPACE[wsSiteAbove];    // Надсайтовый каталог
-$SiteHost    = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
-$SiteDevice  = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
+$SiteRoot     = $_WORKSPACE[wsSiteRoot];     // Корневой каталог сайта
+$SiteAbove    = $_WORKSPACE[wsSiteAbove];    // Надсайтовый каталог
+$SiteHost     = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
+$SiteDevice   = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
+$SiteProtocol = $_WORKSPACE[wsSiteProtocol]; // 'HTTP' | 'HTTPS'
 /*
 $UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
 $TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта

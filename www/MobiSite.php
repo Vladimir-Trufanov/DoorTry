@@ -31,12 +31,12 @@ echo '<div class="main">';
    if (prown\isComRequest(prown\getTranslit(ConnHandler),'list'))
    {
       MakeH1();
-      PageContent($SiteHost);
+      PageContent($SiteHost,$SiteProtocol);
    }
    elseif (prown\isComRequest(prown\getTranslit(SimPrincip),'list'))
    {
       MakeH1();
-      PageContent($SiteHost);
+      PageContent($SiteHost,$SiteProtocol);
    }
    else
    {
@@ -44,7 +44,7 @@ echo '<div class="main">';
       if ($News==NULL) 
       {
          MakeH1();
-         PageContent($SiteHost);
+         PageContent($SiteHost,$SiteProtocol);
       }
       else
       {

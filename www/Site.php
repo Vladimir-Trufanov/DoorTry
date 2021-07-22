@@ -33,7 +33,7 @@ echo '<div class="pageWrapper">';
             //echo  prown\getTranslit('Обслуживатель баз данных SQLite3').'<br>';
             //phpinfo();
             //DebugError();
-            PageContent($SiteHost);
+            PageContent($SiteHost,$SiteProtocol);
          echo '</article>';
          echo '<aside class="RightBar">';
             Stih();

@@ -261,7 +261,7 @@ DoorTry
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-Instrumenty
@@ -278,7 +278,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+SignaPhoto
+			-SignaPhoto
 				-buttons
 					www\Pages\SignaPhoto\buttons\image128.png
 					www\Pages\SignaPhoto\buttons\input128.png
@@ -531,12 +531,12 @@ DoorTry
 [Open project files]
 0=www\Pages\SignaPhoto\OldVer\Register.html
 1=www\Main.php
-2=www\Pages\SignaPhoto\index.html
-3=www\Pages\SignaPhoto\SignaPhoto.php
-4=www\Pages\SignaPhoto\SignaPhotoHtml.php
-5=www\iniMenu.php
-6=www\Pages\SignaPhoto\SignaPhoto.js
-7=www\Pages\SignaPhoto\SignaPhotoUpload.php
+2=www\Pages\SignaPhoto\SignaPhoto.php
+3=www\Pages\SignaPhoto\SignaPhotoHtml.php
+4=www\iniMenu.php
+5=www\Pages\SignaPhoto\SignaPhoto.js
+6=www\Pages\SignaPhoto\SignaPhotoUpload.php
+7=www\index.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\SignaPhoto.php
@@ -544,23 +544,23 @@ Selected=www\Pages\SignaPhoto\SignaPhoto.php
 TopLine=1
 Caret=1,1
 [www\Main.php]
-TopLine=75
-Caret=63,82
-[www\Pages\SignaPhoto\index.html]
-TopLine=176
-Caret=1,204
+TopLine=71
+Caret=52,89
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=33
-Caret=4,43
+TopLine=127
+Caret=4,148
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=3
-Caret=1,23
+TopLine=185
+Caret=1,200
 [www\iniMenu.php]
-TopLine=137
+TopLine=106
 Caret=1,105
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=63
+TopLine=75
 Caret=1,1
 [www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=67
-Caret=12,118
+TopLine=102
+Caret=10,114
+[www\index.php]
+TopLine=1
+Caret=1,22
