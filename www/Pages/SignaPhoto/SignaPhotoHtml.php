@@ -26,6 +26,24 @@ function DispatchPhoto()
 // ****************************************************************************
 function LoadPic()
 {
+   //prown\Alert('loadpic');
+   echo '
+             <div class="image-preview">
+            <img id="preview" src="" alt="">
+          </div>
+          <form id="upload-image" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="image">Image file:</label>
+              <input type="file" name="image" id="image">
+            </div>
+            <!-- <input type="submit" class="btn btn-default"> -->
+          </form>
+          <div id="result">
+          ****
+          </div>
+   ';
+
+   /*
    //prown\ConsoleLog('loadpic');
    $RequestFile='photo';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
@@ -49,6 +67,7 @@ function LoadPic()
    '</div>';
    // Завершаем форму запроса
    echo '</form>';
+   */
 }
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
@@ -85,6 +104,9 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
       <script src="/Jsx/jquery-ui.min.js"></script>
    ';
    //
+
+   echo '<script type="text/javascript" src="ajaxupload.js"></script>';
+
    echo '<link rel="stylesheet" type="text/css" href="StyleReset.css">';
    return $Result;
 }

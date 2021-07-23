@@ -59,6 +59,8 @@ try
    // http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?il=ili
    //         <a href="index.php?list=signaphoto&img=loadpic">Загрузить фотографию</a>
    //         <a href="http://localhost:82/Pages/SignaPhoto/SignaPhoto.php?img=loadpic" 
+   //         $SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/Pages/SignaPhoto/SignaPhoto.php?img=loadpic"'. 
+   //         'target="_parent">Загрузить фотографию</a>
    echo '
       <nav class="navigation-menu js-nav-menu">
       <div class="navigation-menu__toggle js-nav-menu-toggle">
@@ -69,7 +71,7 @@ try
          <li class="menu-list__item" onclick="FindFileImg()">
             <a href="'.
             $SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/Pages/SignaPhoto/SignaPhoto.php?img=loadpic"'. 
-            'target="_parent">Загрузить фотографию</a>
+            '>Загрузить фотографию</a>
          </li>
          
          
@@ -97,10 +99,10 @@ try
          DispatchPhoto();
       echo '</div>';
       echo '<div  id="Photo">';
-         ViewPhoto($c_FileImg);
+         //ViewPhoto($c_FileImg);
       echo '</div>';
       echo '<div  id="Stamp">';
-         ViewStamp($c_FileStamp);
+         //ViewStamp($c_FileStamp);
       echo '</div>';
    echo '</div>';
    // echo 'Пока!<br>';
