@@ -11,27 +11,39 @@
 // Copyright © 2021 tve                              Посл.изменение: 25.06.2021
 
 
-function ImgMakeStamp1($FileImg,$FileExt)
+function ImgMakeStamp($FileImg,$FileExt)
 {
    // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
-   $stamp = imagecreatefrompng('images/istamp.png');
+   $stamp = @imagecreatefrompng('images/istamp.png');
+   $fname=$FileImg;
    if ($FileExt=='gif')
    {
-      $im = imagecreatefromgif($FileImg);
+      $im = @imagecreatefromgif($FileImg);
    }
    elseif ($FileExt=='jpeg')
    {
-      $im = imagecreatefromjpeg($FileImg);
+      $im = @imagecreatefromjpeg($FileImg);
    }
    elseif ($FileExt=='jpg')
    {
-      $im = imagecreatefromjpeg($FileImg);
+      $im = @imagecreatefromjpeg($FileImg);
    }
    elseif ($FileExt=='png')
    {
-      $im = imagecreatefrompng($FileImg);
+      $im = @imagecreatefrompng($FileImg);
    }
-   else $im = imagecreatefromjpeg('images/iphoto.jpg');
+   else 
+   {
+     $fname='images/iphoto.jpg';
+     $im = @imagecreatefromjpeg($fname);
+   }
+    /* Если не удалось */
+    if(!$im)
+    {
+         prown\Alert('Ошибка загрузки '.$fname.'!');
+    }   
+   
+   
    // Установка полей для штампа и получение высоты/ширины штампа
    $marge_right = 10;
    $marge_bottom = 10;
@@ -44,18 +56,9 @@ function ImgMakeStamp1($FileImg,$FileExt)
       imagesy($im)-$sy-$marge_bottom,0,0,
       imagesx($stamp),imagesy($stamp));
    // Вывод и освобождение памяти
-   //header('Content-type: image/png');
    imagepng($im, 'images/proba.png');
    imagedestroy($im);
 }
-
-
-// Выполнить callback функцию основного окна,
-// которой вернем ответ по окончанию загрузки 
-function jsOnResponse($obj)  
-{  
-   echo '<script type="text/javascript"> window.parent.onResponse("'.$obj.'"); </script> ';  
-}  
 // Выделить расширение в имени файла
 function get_file_extension($file_name)
 {
@@ -97,10 +100,10 @@ try
          $newfile = $dir.'proba.'.$exti;
          if (!copy($file,$newfile)) 
          {
-            echo "не удалось скопировать $file...\n";
+            prown\Alert('Не удалось скопировать '.$file);
          }
          
-         ImgMakeStamp1($newfile,get_file_extension($newfile));
+         ImgMakeStamp($newfile,get_file_extension($newfile));
          
          // Запоминаем в кукисах имена загруженных файлов
          $c_FileImg=prown\MakeCookie('FileImg',$file,tStr);
@@ -110,8 +113,8 @@ try
          // Делаем задержку 2 секунды, чтобы загрузилась фотография
          //sleep(2);
          // Переходим на страницу
+         prown\Alert('Изображение загружено!');
          $page='/Pages/SignaPhoto/SignaPhoto.php';
-         jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
          echo "<script>window.location.replace('".$page."');</script>";
       }
       else
@@ -119,13 +122,8 @@ try
          //echo '$file:                       '.$file.'<br>'; 
          //echo '$SiteRoot:                   '.$SiteRoot.'<br>'; 
          //echo '$_FILES["loadfile"]["name"]: '.$_FILES['loadfile']['name'].'<br>'; 
-         echo "Ошибка: файл ".$_FILES['loadfile']['name']." не загружен!<br>";  
+         prown\Alert("Файл ".$_FILES['loadfile']['name']." не загружен! Большой размер");  
       }
-      // Вызываем callback функцию и передаем ей результат
-      // (25.06.2021 убираем из кода для осмысления. Делаем по другому)
-      //jsOnResponse("{'filename':'" . $name . "', 'success':'" . $success . "'}");  
-      
-      // prown\ViewGlobal(avgCOOKIE);
    }
    else 
    {

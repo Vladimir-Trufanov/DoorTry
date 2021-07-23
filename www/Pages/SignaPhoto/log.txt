@@ -15,3 +15,8 @@ Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 35
 [22-Jul-2021 11:36:55 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 26
+[23-Jul-2021 06:43:39 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function Alert() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php:115
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php on line 115
+[23-Jul-2021 09:05:25 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 37

@@ -29,9 +29,12 @@ function LoadPic()
    //prown\ConsoleLog('loadpic');
    $RequestFile='photo';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
+   //echo '
+   //   <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
+   //   'target="rFrame" method="POST" enctype="multipart/form-data">';  
    echo '
       <form action="SignaPhotoUpload.php?img='.$RequestFile.'" '.
-      'target="rFrame" method="POST" enctype="multipart/form-data">';  
+      'method="POST" enctype="multipart/form-data">';  
    // Формируем три inputа для обеспечения ввода в диве с нулевыми размерами,
    // для того чтобы их скрыть. Разрешенный размер загружаемого файла чуть 
    // больше, чем указанный в php.ini (где он равем 3Mb)
