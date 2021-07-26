@@ -28,22 +28,23 @@ function LoadPic()
 {
    //prown\Alert('loadpic');
    echo '
-             <div class="image-preview">
-            <img id="preview" src="" alt="">
+          <div class="image-preview">
+          <img id="preview" src="" alt="">
           </div>
           <form id="upload-image" enctype="multipart/form-data">
             <div class="form-group">
               <label for="image">Image file:</label>
-              <input type="file" name="image" id="image">
+              <input type="file" name="image" id="InputImage">
             </div>
-            <!-- <input type="submit" class="btn btn-default"> -->
+            <!--  -->
+            <input type="submit" class="btn btn-default">
           </form>
           <div id="result">
           ****
           </div>
    ';
 
-   /*
+   /*   === ОТЛАДИТЬ И ВАРИАНТ БЕЗ JSCRIPT ===
    //prown\ConsoleLog('loadpic');
    $RequestFile='photo';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
