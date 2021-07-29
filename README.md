@@ -1,6 +1,8 @@
 ﻿# DoorTry
 Простой принцип программирования и общая обработка ошибок/исключений
 
+*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*
+
 В DoorTryer заложены все типы ошибок: 
 через установленный модуль от set_error_handler обрабатывается большинство ошибок, 
 остальные ошибки вылавливаются после завершения работы сценария через register_shutdown_function, через try-catch-error обрабатываются исключения
@@ -255,8 +257,8 @@ MakeCookie на сайте
 
 
 ​    
-    [PHP] syntax error, unexpected ';', expecting '{'
-    
+​    [PHP] syntax error, unexpected ';', expecting '{'
+​    
     File: C:\DoorTry\www\Common.php
     Line: 48
     
