@@ -22,29 +22,26 @@ function DispatchPhoto()
    }
 }
 // ****************************************************************************
-// *                    Выбрать этап обработки фотографии                     *
+// *                Загрузить изображение для нанесения подписи               *
 // ****************************************************************************
 function LoadPic()
 {
-   //prown\Alert('loadpic');
-   echo '
-          <div class="image-preview">
-          <img id="preview" src="" alt="">
-          </div>
-          <form id="upload-image" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="image">Image file:</label>
-              <input type="file" name="image" id="InputImage">
-            </div>
-            <!--  -->
-            <input type="submit" class="btn btn-default">
-          </form>
-          <div id="result">
+  //prown\Alert('loadpic');
+  echo '
+    <form id="frmLoadPic" enctype="multipart/form-data">
+       <div> 
+          <input type="file" id="ipfLoadPic" name="image">
+       </div> 
+       <div> 
+          <input type="submit" value="Загрузить">
+       </div> 
+       <div id="result">
           ****
-          </div>
-   ';
-
-   /*   === ОТЛАДИТЬ И ВАРИАНТ БЕЗ JSCRIPT ===
+       </div>
+    </form>
+  ';
+   
+   /*   === ОТЛАДИТЬ И ВАРИАНТ БЕЗ JSCRIPT === 
    //prown\ConsoleLog('loadpic');
    $RequestFile='photo';
    // Начинаем форму запроса изображения по типу: photo, stamp, proba
@@ -105,10 +102,13 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
       <script src="/Jsx/jquery-ui.min.js"></script>
    ';
    //
-
-   echo '<script type="text/javascript" src="ajaxupload.js"></script>';
-
    echo '<link rel="stylesheet" type="text/css" href="StyleReset.css">';
+   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
+   echo '<link rel="stylesheet" type="text/css" href="SignaMenu.css">';
+   echo '<script src="SignaPhoto.js"></script>';
+   echo '<script src="ajaxLead.js"></script>';
+   // Подключаем скрипт изменения заголовка "input file"
+   echo '<script src="jquery-input-file-text.js"></script>';
    return $Result;
 }
 // ****************************************************************************
