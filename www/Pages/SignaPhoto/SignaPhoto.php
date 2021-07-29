@@ -1,4 +1,5 @@
 <?php
+// Проба GIT 28.07.2021 13:06
 // PHP7/HTML5, EDGE/CHROME                               *** SignaPhoto.php ***
 
 // ****************************************************************************
@@ -35,16 +36,6 @@ try
    require_once 'SignaPhotoHtml.php';
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
-   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
-   echo '<script src="SignaPhoto.js"></script>';
-
-   // Подключаем скрипты по завершению загрузки страницы
-   echo '<script>$(document).ready(function() {';
-   //echo 'alert("SignaPhoto");';
-   echo '});</script>';
-   
-   
-   
 
    echo '</head>';
    echo '<body>';
@@ -98,11 +89,11 @@ try
       echo '<div  id="Info">';
          DispatchPhoto();
       echo '</div>';
-      echo '<div  id="Photo">';
-         //ViewPhoto($c_FileImg);
+      echo '<div id="Photo">';
+         ViewPhoto($c_FileImg);
       echo '</div>';
       echo '<div  id="Stamp">';
-         //ViewStamp($c_FileStamp);
+         ViewStamp($c_FileStamp);
       echo '</div>';
    echo '</div>';
    // echo 'Пока!<br>';
@@ -154,7 +145,7 @@ try
 
    echo '</body>';
    //prown\ViewGlobal(avgSERVER);
-   //prown\ViewGlobal(avgCOOKIE);
+   prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgREQUEST);
    echo '</html>';
 }
