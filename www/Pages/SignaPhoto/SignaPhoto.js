@@ -8,92 +8,177 @@
  * 
 **/ 
 
-// ****************************************************************************
-// *        Преобразовать логическое значение в соответствующий текст         *
-// ****************************************************************************
-function sayLogic($logic)
+
+function isProbaLi()
 {
-   $Result='false';
-   if ($logic) $Result='true';
-   return $Result;
-}
-// ****************************************************************************
-// *        Выполнить действия в связи с изменением ориентации смартфона      *
-// ****************************************************************************
-
-// http://greymag.ru/?p=175, 07.09.2011. При повороте устройства браузер 
-// отсылает событие orientationchange. Это актуально для обеих операционных 
-// систем. Но подписка на это событие может осуществляться по разному. 
-// При проверке на разных устройствах iPhone, iPad и Samsung GT (Android),
-// выяснилось что в iOS срабатывает следующий вариант установки обработчика: 
-// window.onorientationchange = handler; А для Android подписка осуществляется 
-// иначе: window.addEventListener( 'orientationchange', handler, false ); 
-//
-// Примечание: В обоих примерах handler - функция-обработчик. Текущую ориентацию
-// экрана можно узнать проверкой свойства window.orientation, принимающего одно
-// из следующих значений: 0 — нормальная портретная ориентация, -90 —
-// альбомная при повороте по часовой стрелке, 90 — альбомная при повороте 
-// против часовой стрелки, 180 — перевёрнутая портретная ориентация (пока 
-// только для iPad).
-//         
-// Отследить переворот экрана:
-// https://www.cyberforum.ru/javascript/thread2242547.html, 08.05.2018
-
-// Подключить обработчик изменения положения смартфона
-window.addEventListener('orientationchange',doOnOrientationChange);
-
-function doOnOrientationChange() 
-{
-   if ((window.orientation==0)||(window.orientation==180))
-   {
-      //alert('2: '+$SignaPortraitUrl);
-      window.location = $SignaPortraitUrl;
-   } 
-   if ((window.orientation==90)||(window.orientation==-90)) 
-      window.location = $SignaUrl;
-}
-
-
-// ****************************************************************************
-// *     Настроить положение навигационных кнопок в мобильной версии сайта    *
-// ****************************************************************************
-function ApartButtons()
-/**
- * В верхней части каждой мобильной страницы слева находится одна кнопка (от
- * края 5рх), потом на расстоянии 5px размещается заголовок и опять через 5px 
- * вторая кнопка. Кнопки шириной по 35px. Исходя из этого функция устанавливает
- * ширину заголовка (чтобы все три объекта умещались в ширину страницы)
-**/ 
-{
-   var nWidth;
-   nWidth=document.body.clientWidth-90;
-   console.log('ApartButtons: '+String(nWidth));
-   $('#c1Title').css('width',String(nWidth)+'px');
-   $('#c2Title').css('width',String(nWidth)+'px');
-}
-
-//function FindFileImg() { document.getElementById('my_hidden_fileImg').click(); }  
-function LoadFileImg() { document.getElementById('my_hidden_loadImg').click(); }  
-function FindFileStamp() { document.getElementById('my_hidden_fileStamp').click(); }  
-function LoadFileStamp() { document.getElementById('my_hidden_loadStamp').click(); }  
-
-function AlertMessage(messa='Загрузка новой подписи отключена!')
-{
-   alert(messa);
-}
-function Substi()
-{
-   window.location.replace('/Pages/SignaPhoto/SignaPhotoPortrait.php#page2');
+   // Обрабатываем клик
+   /*
+   var elem=document.getElementById('InfoLead');
+   elem.innerHTML=
+      '1234567890 First_ic <br>'+
+      '1234567890 Secondic <br>'+
+      '1234567890 Third_ic <br>';
+   alert('ProbaLi');
+   */
+   // Настраиваем #InfoLead на загрузку изображения
+   var elem=document.getElementById('InfoLead');
+   elem.innerHTML=
+   '<form id="frmLoadPic" enctype="multipart/form-data">'+
+   '<div>'+ 
+   '<input id="ipfLoadPic" type="file" name="image">'+
+   '</div>'+ 
+   '<div>'+ 
+   '<input type="submit" value="Загрузить">'+
+   '</div>'+ 
+   '<div id="result">'+
+   '****'+
+   '</div>'+
+   '</form>';
+   // Изменяем заголовок 'input file'
+   $('#ipfLoadPic').inputFileText({text: 'Выбрать изображение'});
+   // Сворачиваем меню
+   $('.js-nav-menu').removeClass('navigation-menu--open');
+   // Подключаем вызов загрузки нового изображения 
+   $('#ipfLoadPic').change(function(){
+    readImage(this,'parameter');
+   });
+   // Подключаем обработку и перемещение изображения на сервер
+   $('#frmLoadPic').on('submit',(function(e) {
+      e.preventDefault();
+      var formData = new FormData(this);
+      //alert('Перед вызовом аякс');
+      $.ajax({
+         type:'POST', // Тип запроса
+         url: 'Handler.php', // Скрипт обработчика
+         async: false,
+         data: formData, // Данные которые мы передаем
+         cache:false, // В запросах POST отключено по умолчанию, но перестрахуемся
+         contentType: false, // Тип кодирования данных мы задали в форме, это отключим
+         processData: false, // Отключаем, так как передаем файл
+         // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
+         success:function(data){
+            printMessage('#result', data);
+            //alert('Успешно!');
+         },
+         // Отмечаем  неуспешное выполнение аякс-запроса по причине:
+         // 1) утерян файл скрипта.
+         error:function(data){
+            console.log(data);
+            printMessage('#result', 'Утерян файл скрипта!');
+         }
+      });
+      //alert('Пщсле');
+   }));
 }
 
-function onResponse(d) // Функция обработки ответа от сервера 
-{  
- eval('var obj = ' + d + ';');  
- if(obj.success!=1)
-   {
-    alert('Ошибка!\nФайл ' + obj.filename + " не загружен - "+obj.myres); 
-    return; 
-   }; 
- alert('Файл загружен'); 
-}  
+
+// 
+  function printMessage(destination, msg) 
+  {
+    //
+    $(destination).removeClass();
+    if (msg == 'Успешно!') {
+      $(destination).addClass('alert alert-success').text('Файл успешно загружен.');
+    }
+    else if (msg == 'Большой файл!') {
+      $(destination).addClass('alert alert-danger').text('Ошибка при загрузке, большой размер файла.');
+    }
+    else if (msg == 'Не изображение!') {
+      $(destination).addClass('alert alert-danger').text('Неверный тип файла изображения.');
+    }
+    else if (msg == 'Ошибка переброса!') {
+      $(destination).addClass('alert alert-danger').text('Ошибка при перемещении файла на сервер.');
+    }
+    // Выводим сообщение при всех прочих ошибках
+    else {
+      $(destination).addClass('alert alert-danger').text('Произошла ошибка при загрузке файла.');
+    }
+ 
+  }
+
+
+// ****************************************************************************
+// *          Обработать разметку страницы, подключить аякс-сценарии          *
+// *                    по завершению загрузки страницы                       *
+// ****************************************************************************
+/*
+$(document).ready(function () 
+{
+  // Изменяем заголовок 'input file'
+  //$('#ipfLoadPic').inputFileText({text: 'Выбрать изображение'});
+  // Выполняем чтение файла изображения во временной файл по $FILES (по клику)
+  $('#ipfLoadPic').change(function(){
+    readImage(this,'parameter');
+  });
+  
+  //
+  $('#frmLoadPic').on('submit',(function(e) {
+    e.preventDefault();
+ 
+    var formData = new FormData(this);
+ 
+    $.ajax({
+      type:'POST', // Тип запроса
+      url: 'Handler.php', // Скрипт обработчика
+      data: formData, // Данные которые мы передаем
+      cache:false, // В запросах POST отключено по умолчанию, но перестрахуемся
+      contentType: false, // Тип кодирования данных мы задали в форме, это отключим
+      processData: false, // Отключаем, так как передаем файл
+      // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
+      success:function(data){
+        printMessage('#result', data);
+      },
+      // Отмечаем  неуспешное выполнение аякс-запроса по причине:
+      //   1) утерян файл скрипта.
+      error:function(data){
+        console.log(data);
+        printMessage('#result', 'Утерян файл скрипта!');
+      }
+    });
+  }));
+  
+  
+  //
+  
+});
+*/
+
+function readImage(input,actstr) 
+{
+  // Если выбран и загружен во временное хранилище хотя бы один файл
+  if (input.files && input.files[0]) 
+  {
+    // Трассируем параметры загружаемого файла
+    
+    console.log(input.files[0]);
+    console.log(input.files[0].name);
+    console.log(input.files[0].lastModified);
+    console.log(input.files[0].type);
+    console.log(input.files[0].size+' байт');
+    
+    // Создаем объект чтения содержимого файла, 
+    // хранящиеся на компьютере пользователя
+    // (асинхронно, чтобы не тормозить браузер)
+    var reader = new FileReader();
+    // Прицепляем замену существующего изображения на загруженное
+    // при успешном завершении загрузки страницы
+    reader.onload = function (e) 
+    {
+      $('#pic').attr('src', e.target.result);
+    }
+    // Прицепляем сообщение об ошибке при ошибке загрузки
+    reader.onerror = function(event) 
+    {
+      printMessage('#result', 'Ошибка "ONERROR" в readImage!');
+      // reader.abort(); 
+    };
+    // Запускаем процесс чтения изображения 
+    reader.readAsDataURL(input.files[0]);
+  }
+  else
+  {
+    printMessage('#result', 'Ошибка "NOT INPUT" readImage!');
+  }
+}
+
 // ********************************************************** SignaPhoto.js ***
