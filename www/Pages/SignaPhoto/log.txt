@@ -20,3 +20,18 @@ Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php on line 115
 [23-Jul-2021 09:05:25 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 37
+[29-Jul-2021 12:37:42 Asia/Kuwait] PHP Warning:  Unexpected character in input:  ' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 371
+[29-Jul-2021 12:37:42 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'e⿠،' (T_STRING) in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 371
+[29-Jul-2021 12:40:53 Asia/Kuwait] PHP Fatal error:  Cannot redeclare MakeStamp() (previously declared in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:119) in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 315
+[29-Jul-2021 12:46:27 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function getExtension() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:138
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php(19): MakeStamp('images/photo.gi...')
+#1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(95): DispatchPhoto('images/photo.gi...')
+#2 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 138
+[29-Jul-2021 13:24:14 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function imageimg() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:172
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php(19): MakeStamp('images/photo.jp...')
+#1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(95): DispatchPhoto('images/photo.jp...')
+#2 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 172

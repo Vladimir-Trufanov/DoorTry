@@ -7,9 +7,8 @@
 // *                                сайтостраница для подписывания фотографий *
 // ****************************************************************************
 
-//                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  01.06.2021
-// Copyright © 2021 tve                              Посл.изменение: 20.07.2021
+// v2.0, 29.07.2021                                   Автор:      Tруфанов В.Е. 
+// Copyright © 2021 tve                               Дата создания: 13.06.2021
 
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
@@ -59,14 +58,19 @@ try
       </div>
       <ul class="menu-list">
          
-         <li class="menu-list__item" onclick="FindFileImg()">
+         <li class="menu-list__item">
             <a href="'.
             $SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/Pages/SignaPhoto/SignaPhoto.php?img=loadpic"'. 
             '>Загрузить фотографию</a>
          </li>
          
+         <li class="menu-list__item">
+            <a href="'.
+            $SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/Pages/SignaPhoto/SignaPhoto.php?img=makestamp"'. 
+            '>Наложить подпись на изображение</a>
+         </li>
          
-         <li class="menu-list__item">Menu Item 2</li>
+         
          <li class="menu-list__item">Menu Item 3</li>
          <li class="menu-list__item">Menu Item 4</li>
          <li class="menu-list__item">Menu Item 5</li>
@@ -87,10 +91,13 @@ try
    // Размечаем области диалога и изображений
    echo '<div id="All">';
       echo '<div  id="Info">';
-         DispatchPhoto();
+         DispatchPhoto($c_FileImg,$c_FileProba);
       echo '</div>';
       echo '<div id="Photo">';
          ViewPhoto($c_FileImg);
+      echo '</div>';
+      echo '<div id="Proba">';
+         ViewPhoto($c_FileProba);
       echo '</div>';
       echo '<div  id="Stamp">';
          ViewStamp($c_FileStamp);

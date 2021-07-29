@@ -13,9 +13,10 @@
 // ****************************************************************************
 // *                    Выбрать этап обработки фотографии                     *
 // ****************************************************************************
-function DispatchPhoto()
+function DispatchPhoto($FileImg,&$FileProba)
 {
    if (prown\isComRequest('loadpic','img')) LoadPic();
+   elseif (prown\isComRequest('makestamp','img')) MakeStamp($FileImg,$FileProba);
    else
    {
       echo '-------------<br>-------------<br>-------------<br>';
@@ -111,6 +112,90 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    echo '<script src="jquery-input-file-text.js"></script>';
    return $Result;
 }
+
+// ****************************************************************************
+// *                        Наложить на изображение подпись                   *
+// ****************************************************************************
+function MakeStamp($FileImg,&$c_FileProba)
+{
+   // Определяем расширение загруженноного изображения
+   $info = new SplFileInfo($FileImg);
+   $FileExt=$info->getExtension();
+   // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
+   $stamp = @imagecreatefrompng('images/istamp.png');
+   $fname=$FileImg;
+   if ($FileExt=='gif')
+   {
+      $im = @imagecreatefromgif($FileImg);
+   }
+   elseif ($FileExt=='jpeg')
+   {
+      $im = @imagecreatefromjpeg($FileImg);
+   }
+   elseif ($FileExt=='jpg')
+   {
+      $im = @imagecreatefromjpeg($FileImg);
+   }
+   elseif ($FileExt=='png')
+   {
+      $im = @imagecreatefrompng($FileImg);
+   }
+   else 
+   {
+     $fname='images/iphoto.jpg';
+     $im = @imagecreatefromjpeg($fname);
+   }
+    /* Если не удалось */
+    if(!$im)
+    {
+         prown\Alert('Ошибка создания образа '.$fname.'!');
+    }   
+   
+   
+   // Установка полей для штампа и получение высоты/ширины штампа
+   $marge_right = 10;
+   $marge_bottom = 10;
+   $sx = imagesx($stamp);
+   $sy = imagesy($stamp);
+   // Копирование изображения штампа на фотографию с помощью смещения края
+   // и ширины фотографии для расчёта позиционирования штампа.
+   imagecopy($im,$stamp,
+      imagesx($im)-$sx-$marge_right,
+      imagesy($im)-$sy-$marge_bottom,0,0,
+      imagesx($stamp),imagesy($stamp));
+   // Вывод и освобождение памяти
+   //imagepng($im, 'images/proba.png');
+   
+   $proba='images/proba.'.$FileExt;
+   if ($FileExt=='gif')     imagegif($im,$proba);
+   elseif ($FileExt=='png') imagepng($im,$proba);
+   else                    imagejpeg($im,$proba);
+   $c_FileProba=prown\MakeCookie('FileProba',$proba,tStr);
+   imagedestroy($im);
+   
+   
+   /*
+   // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
+   $stamp = imagecreatefrompng('images/stamp.png');
+   $im = imagecreatefromjpeg('images/photo.jpg');
+   // Установка полей для штампа и получение высоты/ширины штампа
+   $marge_right = 10;
+   $marge_bottom = 10;
+   $sx = imagesx($stamp);
+   $sy = imagesy($stamp);
+   // Копирование изображения штампа на фотографию с помощью смещения края
+   // и ширины фотографии для расчёта позиционирования штампа.
+   imagecopy($im,$stamp,imagesx($im)-$sx-$marge_right,imagesy($im)-$sy-$marge_bottom,0,0,imagesx($stamp),imagesy($stamp));
+   // Вывод и освобождение памяти
+   //header('Content-type: image/png');
+   imagepng($im, 'images/proba.png');
+   imagedestroy($im);
+   */
+   echo $FileExt;
+   echo '<br>'.$FileImg.'- сделано <br>';
+}
+
+
 // ****************************************************************************
 // *            Вывести изображение последнего загруженного фото              *
 // ****************************************************************************
@@ -263,7 +348,7 @@ function markupMobileSite($c_SignaPhoto,$UrlHome,$SiteRoot,$c_FileImg,$c_FileSta
 }
 
 
-function MakeStamp()
+function MakeStampi()
 {
    // Загрузка штампа и фото, для которого применяется водяной знак (называется штамп или печать)
    $stamp = imagecreatefrompng('images/stamp.png');
