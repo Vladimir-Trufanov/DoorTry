@@ -1,0 +1,147 @@
+[10-Jun-2021 20:07:45 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function HtmlBegin() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php:30
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 30
+[15-Jun-2021 07:57:50 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/cCenter.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 121
+[15-Jun-2021 07:59:24 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/cCenter.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 121
+[15-Jun-2021 09:40:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 154
+[18-Jun-2021 17:23:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 202
+[18-Jun-2021 20:55:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '}', expecting end of file in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php on line 80
+[18-Jun-2021 20:56:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\ViewGlobal() in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php:95
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php(202): require_once()
+#1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoPortrait.php(94): markupMobileSite(340, 'https://doortry...')
+#2 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\UploadImg.php on line 95
+[21-Jun-2021 11:48:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 204
+[21-Jun-2021 11:49:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 204
+[25-Jun-2021 20:20:15 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 20:30:52 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 20:44:49 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 21:05:21 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 21:05:34 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[25-Jun-2021 21:06:21 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[26-Jun-2021 07:27:02 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[26-Jun-2021 07:38:51 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[26-Jun-2021 07:42:29 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[26-Jun-2021 07:53:11 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[26-Jun-2021 07:54:01 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:151
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 151
+[26-Jun-2021 08:05:18 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:05:27 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:06:46 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:06:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:06:56 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:07:16 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:07:27 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:173
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 173
+[26-Jun-2021 08:07:38 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php:47
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\Subscribe.php on line 47
+[26-Jun-2021 08:08:34 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:173
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 173
+[26-Jun-2021 08:13:47 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:173
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 173
+[26-Jun-2021 08:24:23 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:174
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 174
+[26-Jun-2021 08:24:50 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:174
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 174
+[28-Jun-2021 11:51:59 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewPhoto(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php on line 64 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:174
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(64): ViewPhoto()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 174
+[29-Jun-2021 14:49:40 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\ViewGlobal() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:241
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhoto.php(72): ViewProba()
+#1 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 241
+[29-Jun-2021 15:26:12 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ViewProba(), 0 passed in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 78 and exactly 1 expected in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php:233
+Stack trace:
+#0 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php(78): ViewProba()
+#1 C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoPortrait.php(81): markupMobileSite(5, 'https://doortry...', 'C:\\DoorTry\\www', 'images/iphoto.j...', 'images/istamp.p...')
+#2 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 233
+[29-Jun-2021 16:05:15 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'Регистрация' (T_STRING), expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 312
+[04-Jul-2021 07:02:26 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 381
+[04-Jul-2021 07:40:13 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ImgMakeStamp() in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php:100
+Stack trace:
+#0 {main}
+  thrown in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoUpload.php on line 100

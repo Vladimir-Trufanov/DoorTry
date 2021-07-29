@@ -1,0 +1,186 @@
+/** HTML5/CSS3, EDGE/CHROME                            *** SignaPhoto_m.css ***
+
+ ******************************************************************************
+ *    Определить стили портретной (мобильной) версии "Подписать фотографию"   *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  03.06.2021
+ Copyright © 2021 tve                                Посл.изменение: 17.06.2021
+*/
+
+html{font-family:'Anonymous Pro',monospace;font-size:16px;}
+/* Содержим поля в ширине блока (кроме margin) */
+* {box-sizing:border-box;}
+/* Выравниваем базовую линию блока по базовой линии родителя */
+html, body,
+a, abbr, acronym, address, article, aside, audio, b, big, blockquote,button, 
+canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, 
+em, embed,  
+fieldset, figcaption, figure, footer, form, 
+h1, h2, h3, h4, h5, h6, header, hgroup, i, iframe, img, ins, kbd, 
+label, legend, li, mark, menu, nav, 
+object, ol, output, p, pre, q, ruby, 
+s, samp, section, small, span, strike, strong, sub, summary, sup, 
+table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video 
+{
+	margin:0;
+	padding:0;
+	border:0;
+	vertical-align:baseline;
+}
+/* Снимаем умалчиваемый стили браузеров при фокусировании на поле ввода */
+*:focus {outline:none;}
+/* Все секции представляем, как блоки */
+article, aside, details, div, figcaption, figure, footer, header, hgroup, 
+menu, nav, section 
+{
+	display:block;
+}
+/* Нумеруем списки арабскими числами (1,2,3,4,...) */
+ol 
+{ 
+	list-style:decimal;
+}
+/* Ставим маркер в виде квадрата в маркированных списках */
+ul 
+{
+	list-style:square;
+}
+body
+{
+   width:100%;
+   height:100%;
+   font-size:1rem;
+}
+/**
+  Для отладки расскрашиваем дивы
+body{background:yellow;} 
+#All{background:white;}
+#View{background:magenta;}
+#Photo{background:purple;}
+#Stamp{background:red;}
+#Proba{background:olive;}
+#Lead{background:aqua;}
+*/
+
+/* Определяем размер и зеленый цвет заголовков */
+h1 
+{
+  font: bold italic 1.4rem Baskerville, "Palatino Linotype", "Times New Roman", serif;
+  /*color: #46874D;*/
+  text-align: center;
+}
+.dibtn, #bTasks, #bHandoright
+{ 
+  border-radius: 5px;
+  width: 35px; 
+  border: 4px double #3388CC; 
+  padding: 3px 3px 3px 3px; /* Поля вокруг текста */
+  text-decoration: none; /* Убираем подчёркивание */
+  text-align: center;
+}
+#bTasks
+{
+  float: left;
+  margin-left: 5px;
+}
+#c1Title, #c2Title
+{
+  float: left;
+  margin-left: 5px;
+}
+#bHandoright
+{
+  float: left;
+  margin-left: 5px;
+}
+
+/* Левое окно мобильной разметки */
+#cCenter  
+{
+  text-align: justify;
+  padding: 0;
+}
+/* Правое окно мобильной разметки */
+#exPhp  
+{
+  text-align: justify;
+}
+#pic, #picProba
+{
+   width: 100%;
+}
+#picStamp
+{
+   width: 20%;
+   margin: .2rem 40% .2rem 40%;
+}
+
+/* CSS Document */
+.navButtons
+{  
+      border:1px gray solid;
+      position:absolute;
+      overflow: hidden;
+      display:block;  
+      height:50px;  
+      width:13%;  
+      -moz-box-shadow:5px 5px 7px rgba(3,33,33,.7);  
+      -webkit-box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
+      box-shadow: 5px 5px 7px rgba(3,33,33,.7);  
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+      border-radius:4px;
+  }
+
+.navButtons:hover
+{
+  border:2px solid black;
+  background-color:#fff;
+}
+
+.hiddenInput{  
+      position:absolute;
+      overflow: hidden;
+      display:block;  
+      height:0px;  
+      width:0px;  
+  }
+#btnLoadImg
+{
+   margin-top:0;
+   margin-left:5%;
+}
+#btnLoadStamp
+{
+   margin-top:0;
+   margin-left:23%;
+}
+#btnRegister
+{
+   margin-top:0;
+   margin-left:64%;
+}
+#btnIndoor
+{
+   margin-top:0;
+   margin-left:82%;
+}
+#btnSubscribe
+{
+   margin-top:0;
+   margin-left:64%;
+}
+#btnTunein
+{
+   margin-top:0;
+   margin-left:82%;
+}
+
+
+/*
+ ********************************************************* SignaPhoto_m.css ***
+*/	
+	
+
