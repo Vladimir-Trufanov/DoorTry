@@ -72,7 +72,7 @@ function ApartButtons()
    $('#c2Title').css('width',String(nWidth)+'px');
 }
 
-function FindFileImg() { document.getElementById('my_hidden_fileImg').click(); }  
+//function FindFileImg() { document.getElementById('my_hidden_fileImg').click(); }  
 function LoadFileImg() { document.getElementById('my_hidden_loadImg').click(); }  
 function FindFileStamp() { document.getElementById('my_hidden_fileStamp').click(); }  
 function LoadFileStamp() { document.getElementById('my_hidden_loadStamp').click(); }  

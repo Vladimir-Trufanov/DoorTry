@@ -88,7 +88,7 @@ $(document).ready(function ()
     readImage(this,'parameter');
   });
   
-  
+  //
   $('#frmLoadPic').on('submit',(function(e) {
     e.preventDefault();
  
@@ -113,6 +113,7 @@ $(document).ready(function ()
       }
     });
   }));
+  //
   
 });
 // ************************************************************ ajaxLead.js ***

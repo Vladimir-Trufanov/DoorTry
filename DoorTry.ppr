@@ -37,7 +37,7 @@ DoorTry
 				www\JqueryFW\deploy\jquery.mobile-1.3.2.min.css
 				www\JqueryFW\deploy\jquery.mobile-1.3.2.min.js
 				www\JqueryFW\deploy\jquery-2.2.4.min.js
-		-Jsx
+		+Jsx
 			-images
 				-icons-png
 					www\Jsx\images\icons-png\action-black.png
@@ -256,7 +256,6 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-KwinTiny
 		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
@@ -267,7 +266,6 @@ DoorTry
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			-LastError
 			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
@@ -336,10 +334,6 @@ DoorTry
 					www\Pages\SignaPhoto\images\istamp.png
 					www\Pages\SignaPhoto\images\photo.gif
 					www\Pages\SignaPhoto\images\photo.jpg
-					www\Pages\SignaPhoto\images\photo.png
-					www\Pages\SignaPhoto\images\proba.gif
-					www\Pages\SignaPhoto\images\proba.jpg
-					www\Pages\SignaPhoto\images\proba.png
 				-imgdebug
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
 					www\Pages\SignaPhoto\imgdebug\goshan.jpg
@@ -386,7 +380,6 @@ DoorTry
 						www\Pages\SignaPhoto\OldVer\angled-menu240817\index.html
 						www\Pages\SignaPhoto\OldVer\angled-menu240817\license.txt
 						www\Pages\SignaPhoto\OldVer\angled-menu240817\README.txt
-					-KwinTiny
 					www\Pages\SignaPhoto\OldVer\Indoor.html
 					www\Pages\SignaPhoto\OldVer\log.txt
 					www\Pages\SignaPhoto\OldVer\Register.html
@@ -409,17 +402,22 @@ DoorTry
 				-Wallpaper
 					www\Pages\SignaPhoto\Wallpaper\Goryi-Dyimka.jpg
 					www\Pages\SignaPhoto\Wallpaper\SignaPhoto.jpg
-				www\Pages\SignaPhoto\ajaxupload.js
+				-Материалы для страницы
+					www\Pages\SignaPhoto\Материалы для страницы\Ajax и PHP - Загрузка изображения на сервер.doc
+				www\Pages\SignaPhoto\ajaxLead.js
+				www\Pages\SignaPhoto\Handler.php
+				www\Pages\SignaPhoto\HandlerOld.php
 				www\Pages\SignaPhoto\index.html
+				www\Pages\SignaPhoto\jquery-input-file-text.js
 				www\Pages\SignaPhoto\license.txt
 				www\Pages\SignaPhoto\log.txt
+				www\Pages\SignaPhoto\SignaMenu.css
 				www\Pages\SignaPhoto\SignaPhoto.css
 				www\Pages\SignaPhoto\SignaPhoto.js
 				www\Pages\SignaPhoto\SignaPhoto.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
 				www\Pages\SignaPhoto\SignaPhotoUpload.php
 				www\Pages\SignaPhoto\StyleReset.css
-			-Sshu
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
@@ -440,7 +438,6 @@ DoorTry
 				www\Pages\TPhpPrown\vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu.php
 				www\Pages\TPhpPrown\vyvesti-soobshchenie-ob-oshibke-na-php.php
 		-qrcode
-			-temp
 			www\qrcode\CHANGELOG
 			www\qrcode\doortry.png-errors.txt
 			www\qrcode\index.php
@@ -509,13 +506,13 @@ DoorTry
 		www\get-info.php
 		www\includErrs.php
 		www\index.php
-		www\iniCurrStih.php
+		www\IniCurrStih.php
 		www\iniErrDoorTry.php
 		www\iniHtmlBegin.php
 		www\iniHtmlEnd.php
-		www\iniMem.php
-		www\iniMenu.php
-		www\iniTPhpPrown.php
+		www\Inimem.php
+		www\IniMenu.php
+		www\IniTPhpPrown.php
 		www\iniWorkSpace.pho
 		www\iniWorkSpace.php
 		www\log.txt
@@ -539,11 +536,12 @@ DoorTry
 4=www\Pages\SignaPhoto\SignaPhoto.js
 5=www\Pages\SignaPhoto\SignaPhotoUpload.php
 6=www\Pages\SignaPhoto\SignaPhoto.css
-7=www\Pages\SignaPhoto\ajaxupload.js
-8=www\Pages\SignaPhoto\Handler.php
+7=www\Pages\SignaPhoto\Handler.php
+8=www\Pages\SignaPhoto\ajaxLead.js
+9=www\Jsx\index.js
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\ajaxupload.js
+Selected=www\Pages\SignaPhoto\SignaPhoto.php
 [www\Pages\SignaPhoto\OldVer\Register.html]
 TopLine=1
 Caret=1,1
@@ -551,23 +549,26 @@ Caret=1,1
 TopLine=71
 Caret=52,89
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=25
-Caret=12,105
+TopLine=1
+Caret=1,12
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=27
-Caret=61,37
+TopLine=61
+Caret=82,74
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=9
-Caret=21,75
+TopLine=65
+Caret=3,75
 [www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=31
-Caret=1,62
+TopLine=95
+Caret=1,113
 [www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=245
-Caret=1,254
-[www\Pages\SignaPhoto\ajaxupload.js]
-TopLine=19
-Caret=10,7
+TopLine=143
+Caret=1,143
 [www\Pages\SignaPhoto\Handler.php]
 TopLine=1
-Caret=9,23
+Caret=29,39
+[www\Pages\SignaPhoto\ajaxLead.js]
+TopLine=1
+Caret=60,8
+[www\Jsx\index.js]
+TopLine=1
+Caret=1,1
