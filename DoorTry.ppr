@@ -37,7 +37,7 @@ DoorTry
 				www\JqueryFW\deploy\jquery.mobile-1.3.2.min.css
 				www\JqueryFW\deploy\jquery.mobile-1.3.2.min.js
 				www\JqueryFW\deploy\jquery-2.2.4.min.js
-		+Jsx
+		-Jsx
 			-images
 				-icons-png
 					www\Jsx\images\icons-png\action-black.png
@@ -277,63 +277,16 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			+SignaPhoto
-				-buttons
-					www\Pages\SignaPhoto\buttons\image128.png
-					www\Pages\SignaPhoto\buttons\input128.png
-					www\Pages\SignaPhoto\buttons\register128.png
-					www\Pages\SignaPhoto\buttons\stamp128.png
-					www\Pages\SignaPhoto\buttons\subscribe128.png
-					www\Pages\SignaPhoto\buttons\tunein128.png
-				-css
-					www\Pages\SignaPhoto\css\style.css
-				-font-awesome-4.7.0
-					-css
-						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.css
-						www\Pages\SignaPhoto\font-awesome-4.7.0\css\font-awesome.min.css
-					-fonts
-						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\FontAwesome.otf
-						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
-						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
-						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
-						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
-						www\Pages\SignaPhoto\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
-					-less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\animated.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\bordered-pulled.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\core.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\fixed-width.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\font-awesome.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\icons.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\larger.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\list.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\mixins.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\path.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\rotated-flipped.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\screen-reader.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\stacked.less
-						www\Pages\SignaPhoto\font-awesome-4.7.0\less\variables.less
-					-scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_animated.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_bordered-pulled.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_core.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_fixed-width.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_icons.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_larger.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_list.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_mixins.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_path.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_rotated-flipped.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_screen-reader.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_stacked.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\_variables.scss
-						www\Pages\SignaPhoto\font-awesome-4.7.0\scss\font-awesome.scss
-					www\Pages\SignaPhoto\font-awesome-4.7.0\HELP-US-OUT.txt
 				-images
 					www\Pages\SignaPhoto\images\iphoto.jpg
 					www\Pages\SignaPhoto\images\iproba.png
 					www\Pages\SignaPhoto\images\istamp.png
 					www\Pages\SignaPhoto\images\photo.gif
 					www\Pages\SignaPhoto\images\photo.jpg
+					www\Pages\SignaPhoto\images\photo.png
+					www\Pages\SignaPhoto\images\proba.gif
+					www\Pages\SignaPhoto\images\proba.jpg
+					www\Pages\SignaPhoto\images\proba.png
 				-imgdebug
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
 					www\Pages\SignaPhoto\imgdebug\goshan.jpg
@@ -345,79 +298,163 @@ DoorTry
 					www\Pages\SignaPhoto\imgdebug\stamptve.png
 					www\Pages\SignaPhoto\imgdebug\Дед-сын-и-внук.png
 					www\Pages\SignaPhoto\imgdebug\Хорошенькая.png
-				-OldVer
-					-_InterSpooky
-						-css
-							www\Pages\SignaPhoto\OldVer\_InterSpooky\css\style.css
-						-js
-							www\Pages\SignaPhoto\OldVer\_InterSpooky\js\index.js
-						www\Pages\SignaPhoto\OldVer\_InterSpooky\index.html
-						www\Pages\SignaPhoto\OldVer\_InterSpooky\license.txt
-						www\Pages\SignaPhoto\OldVer\_InterSpooky\README.txt
-					-_PencilPaper
-						-css
-							www\Pages\SignaPhoto\OldVer\_PencilPaper\css\style.css
-						-js
-							www\Pages\SignaPhoto\OldVer\_PencilPaper\js\index.js
-						www\Pages\SignaPhoto\OldVer\_PencilPaper\index.html
-						www\Pages\SignaPhoto\OldVer\_PencilPaper\license.txt
-						www\Pages\SignaPhoto\OldVer\_PencilPaper\README.txt
-					-_WhipperSnapper
-						-css
-							www\Pages\SignaPhoto\OldVer\_WhipperSnapper\css\style.css
-						-js
-							www\Pages\SignaPhoto\OldVer\_WhipperSnapper\js\index.js
-						www\Pages\SignaPhoto\OldVer\_WhipperSnapper\index.html
-						www\Pages\SignaPhoto\OldVer\_WhipperSnapper\license.txt
-						www\Pages\SignaPhoto\OldVer\_WhipperSnapper\README.txt
-					-angled-menu240817
-						-css
-							www\Pages\SignaPhoto\OldVer\angled-menu240817\css\style.css
-						-js
-							www\Pages\SignaPhoto\OldVer\angled-menu240817\js\index.js
-						-scss
-							www\Pages\SignaPhoto\OldVer\angled-menu240817\scss\style.scss
-						www\Pages\SignaPhoto\OldVer\angled-menu240817\index.html
-						www\Pages\SignaPhoto\OldVer\angled-menu240817\license.txt
-						www\Pages\SignaPhoto\OldVer\angled-menu240817\README.txt
-					www\Pages\SignaPhoto\OldVer\Indoor.html
-					www\Pages\SignaPhoto\OldVer\log.txt
-					www\Pages\SignaPhoto\OldVer\Register.html
-					www\Pages\SignaPhoto\OldVer\Register.php
-					www\Pages\SignaPhoto\OldVer\RegisterOld.php
-					www\Pages\SignaPhoto\OldVer\SignaPhoto.css
-					www\Pages\SignaPhoto\OldVer\SignaPhoto.js
-					www\Pages\SignaPhoto\OldVer\SignaPhoto.php
-					www\Pages\SignaPhoto\OldVer\SignaPhoto_m.css
-					www\Pages\SignaPhoto\OldVer\SignaPhotoHtml.php
-					www\Pages\SignaPhoto\OldVer\SignaPhotoOld.php
-					www\Pages\SignaPhoto\OldVer\SignaPhotoPortrait.php
-					www\Pages\SignaPhoto\OldVer\SignaPhotoUpload.php
-					www\Pages\SignaPhoto\OldVer\Subscribe.php
-					www\Pages\SignaPhoto\OldVer\SubscribeOld.php
-					www\Pages\SignaPhoto\OldVer\Tunein.html
-					www\Pages\SignaPhoto\OldVer\Проект меню для подписаний.doc
-				-scss
-					www\Pages\SignaPhoto\scss\style.scss
 				-Wallpaper
 					www\Pages\SignaPhoto\Wallpaper\Goryi-Dyimka.jpg
 					www\Pages\SignaPhoto\Wallpaper\SignaPhoto.jpg
-				-Материалы для страницы
-					www\Pages\SignaPhoto\Материалы для страницы\Ajax и PHP - Загрузка изображения на сервер.doc
-				www\Pages\SignaPhoto\ajaxLead.js
 				www\Pages\SignaPhoto\Handler.php
-				www\Pages\SignaPhoto\HandlerOld.php
-				www\Pages\SignaPhoto\index.html
 				www\Pages\SignaPhoto\jquery-input-file-text.js
-				www\Pages\SignaPhoto\license.txt
-				www\Pages\SignaPhoto\log.txt
 				www\Pages\SignaPhoto\SignaMenu.css
 				www\Pages\SignaPhoto\SignaPhoto.css
 				www\Pages\SignaPhoto\SignaPhoto.js
 				www\Pages\SignaPhoto\SignaPhoto.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
-				www\Pages\SignaPhoto\SignaPhotoUpload.php
 				www\Pages\SignaPhoto\StyleReset.css
+			-SignaPhotoOld
+				-buttons
+					www\Pages\SignaPhotoOld\buttons\image128.png
+					www\Pages\SignaPhotoOld\buttons\input128.png
+					www\Pages\SignaPhotoOld\buttons\register128.png
+					www\Pages\SignaPhotoOld\buttons\stamp128.png
+					www\Pages\SignaPhotoOld\buttons\subscribe128.png
+					www\Pages\SignaPhotoOld\buttons\tunein128.png
+				-css
+					www\Pages\SignaPhotoOld\css\style.css
+				-font-awesome-4.7.0
+					-css
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\css\font-awesome.css
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\css\font-awesome.min.css
+					-fonts
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\fonts\FontAwesome.otf
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
+					-less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\animated.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\bordered-pulled.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\core.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\fixed-width.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\font-awesome.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\icons.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\larger.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\list.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\mixins.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\path.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\rotated-flipped.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\screen-reader.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\stacked.less
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\less\variables.less
+					-scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_animated.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_bordered-pulled.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_core.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_fixed-width.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_icons.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_larger.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_list.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_mixins.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_path.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_rotated-flipped.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_screen-reader.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_stacked.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\_variables.scss
+						www\Pages\SignaPhotoOld\font-awesome-4.7.0\scss\font-awesome.scss
+					www\Pages\SignaPhotoOld\font-awesome-4.7.0\HELP-US-OUT.txt
+				-images
+					www\Pages\SignaPhotoOld\images\iphoto.jpg
+					www\Pages\SignaPhotoOld\images\iproba.png
+					www\Pages\SignaPhotoOld\images\istamp.png
+					www\Pages\SignaPhotoOld\images\photo.gif
+					www\Pages\SignaPhotoOld\images\photo.jpg
+					www\Pages\SignaPhotoOld\images\photo.png
+					www\Pages\SignaPhotoOld\images\proba.gif
+					www\Pages\SignaPhotoOld\images\proba.jpg
+					www\Pages\SignaPhotoOld\images\proba.png
+				-imgdebug
+					www\Pages\SignaPhotoOld\imgdebug\goggle-eyed.gif
+					www\Pages\SignaPhotoOld\imgdebug\goshan.jpg
+					www\Pages\SignaPhotoOld\imgdebug\iphoto.jpg
+					www\Pages\SignaPhotoOld\imgdebug\iproba.png
+					www\Pages\SignaPhotoOld\imgdebug\istamp.png
+					www\Pages\SignaPhotoOld\imgdebug\ksiusha.jpg
+					www\Pages\SignaPhotoOld\imgdebug\stamplbp.png
+					www\Pages\SignaPhotoOld\imgdebug\stamptve.png
+					www\Pages\SignaPhotoOld\imgdebug\Дед-сын-и-внук.png
+					www\Pages\SignaPhotoOld\imgdebug\Хорошенькая.png
+				-OldVer
+					-_InterSpooky
+						-css
+							www\Pages\SignaPhotoOld\OldVer\_InterSpooky\css\style.css
+						-js
+							www\Pages\SignaPhotoOld\OldVer\_InterSpooky\js\index.js
+						www\Pages\SignaPhotoOld\OldVer\_InterSpooky\index.html
+						www\Pages\SignaPhotoOld\OldVer\_InterSpooky\license.txt
+						www\Pages\SignaPhotoOld\OldVer\_InterSpooky\README.txt
+					-_PencilPaper
+						-css
+							www\Pages\SignaPhotoOld\OldVer\_PencilPaper\css\style.css
+						-js
+							www\Pages\SignaPhotoOld\OldVer\_PencilPaper\js\index.js
+						www\Pages\SignaPhotoOld\OldVer\_PencilPaper\index.html
+						www\Pages\SignaPhotoOld\OldVer\_PencilPaper\license.txt
+						www\Pages\SignaPhotoOld\OldVer\_PencilPaper\README.txt
+					-_WhipperSnapper
+						-css
+							www\Pages\SignaPhotoOld\OldVer\_WhipperSnapper\css\style.css
+						-js
+							www\Pages\SignaPhotoOld\OldVer\_WhipperSnapper\js\index.js
+						www\Pages\SignaPhotoOld\OldVer\_WhipperSnapper\index.html
+						www\Pages\SignaPhotoOld\OldVer\_WhipperSnapper\license.txt
+						www\Pages\SignaPhotoOld\OldVer\_WhipperSnapper\README.txt
+					-angled-menu240817
+						-css
+							www\Pages\SignaPhotoOld\OldVer\angled-menu240817\css\style.css
+						-js
+							www\Pages\SignaPhotoOld\OldVer\angled-menu240817\js\index.js
+						-scss
+							www\Pages\SignaPhotoOld\OldVer\angled-menu240817\scss\style.scss
+						www\Pages\SignaPhotoOld\OldVer\angled-menu240817\index.html
+						www\Pages\SignaPhotoOld\OldVer\angled-menu240817\license.txt
+						www\Pages\SignaPhotoOld\OldVer\angled-menu240817\README.txt
+					www\Pages\SignaPhotoOld\OldVer\Indoor.html
+					www\Pages\SignaPhotoOld\OldVer\log.txt
+					www\Pages\SignaPhotoOld\OldVer\Register.html
+					www\Pages\SignaPhotoOld\OldVer\Register.php
+					www\Pages\SignaPhotoOld\OldVer\RegisterOld.php
+					www\Pages\SignaPhotoOld\OldVer\SignaPhoto.css
+					www\Pages\SignaPhotoOld\OldVer\SignaPhoto.js
+					www\Pages\SignaPhotoOld\OldVer\SignaPhoto.php
+					www\Pages\SignaPhotoOld\OldVer\SignaPhoto_m.css
+					www\Pages\SignaPhotoOld\OldVer\SignaPhotoHtml.php
+					www\Pages\SignaPhotoOld\OldVer\SignaPhotoOld.php
+					www\Pages\SignaPhotoOld\OldVer\SignaPhotoPortrait.php
+					www\Pages\SignaPhotoOld\OldVer\SignaPhotoUpload.php
+					www\Pages\SignaPhotoOld\OldVer\Subscribe.php
+					www\Pages\SignaPhotoOld\OldVer\SubscribeOld.php
+					www\Pages\SignaPhotoOld\OldVer\Tunein.html
+					www\Pages\SignaPhotoOld\OldVer\Проект меню для подписаний.doc
+				-scss
+					www\Pages\SignaPhotoOld\scss\style.scss
+				-Wallpaper
+					www\Pages\SignaPhotoOld\Wallpaper\Goryi-Dyimka.jpg
+					www\Pages\SignaPhotoOld\Wallpaper\SignaPhoto.jpg
+				-Материалы для страницы
+					www\Pages\SignaPhotoOld\Материалы для страницы\Ajax и PHP - Загрузка изображения на сервер.doc
+				www\Pages\SignaPhotoOld\ajaxLead.js
+				www\Pages\SignaPhotoOld\Handler.php
+				www\Pages\SignaPhotoOld\HandlerOld.php
+				www\Pages\SignaPhotoOld\index.html
+				www\Pages\SignaPhotoOld\jquery-input-file-text.js
+				www\Pages\SignaPhotoOld\license.txt
+				www\Pages\SignaPhotoOld\log.txt
+				www\Pages\SignaPhotoOld\SignaMenu.css
+				www\Pages\SignaPhotoOld\SignaPhoto.css
+				www\Pages\SignaPhotoOld\SignaPhoto.js
+				www\Pages\SignaPhotoOld\SignaPhoto.php
+				www\Pages\SignaPhotoOld\SignaPhotoHtml.php
+				www\Pages\SignaPhotoOld\SignaPhotoUpload.php
+				www\Pages\SignaPhotoOld\StyleReset.css
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
@@ -529,46 +566,38 @@ DoorTry
 		www\timer.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\Pages\SignaPhoto\OldVer\Register.html
-1=www\Main.php
-2=www\Pages\SignaPhoto\SignaPhoto.php
-3=www\Pages\SignaPhoto\SignaPhotoHtml.php
-4=www\Pages\SignaPhoto\SignaPhoto.js
-5=www\Pages\SignaPhoto\SignaPhotoUpload.php
-6=www\Pages\SignaPhoto\SignaPhoto.css
+0=www\Main.php
+1=www\Pages\SignaPhoto\SignaPhoto.php
+2=www\Pages\SignaPhoto\SignaPhotoHtml.php
+3=www\Pages\SignaPhoto\SignaPhoto.js
+4=www\Pages\SignaPhotoOld\SignaMenu.css
+5=www\Jsx\index.js
+6=www\Pages\SignaPhotoOld\SignaPhotoHtml.php
 7=www\Pages\SignaPhoto\Handler.php
-8=www\Pages\SignaPhoto\ajaxLead.js
-9=www\Jsx\index.js
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhoto.php
-[www\Pages\SignaPhoto\OldVer\Register.html]
-TopLine=1
-Caret=1,1
+Selected=www\Pages\SignaPhoto\SignaPhoto.js
 [www\Main.php]
-TopLine=71
-Caret=52,89
+TopLine=69
+Caret=1,82
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=1
-Caret=1,12
+TopLine=37
+Caret=28,58
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=61
-Caret=82,74
+TopLine=29
+Caret=4,54
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=65
-Caret=3,75
-[www\Pages\SignaPhoto\SignaPhotoUpload.php]
-TopLine=95
-Caret=1,113
-[www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=143
-Caret=1,143
-[www\Pages\SignaPhoto\Handler.php]
-TopLine=1
-Caret=29,39
-[www\Pages\SignaPhoto\ajaxLead.js]
-TopLine=1
-Caret=60,8
+TopLine=40
+Caret=13,64
+[www\Pages\SignaPhotoOld\SignaMenu.css]
+TopLine=37
+Caret=1,1
 [www\Jsx\index.js]
 TopLine=1
+Caret=64,9
+[www\Pages\SignaPhotoOld\SignaPhotoHtml.php]
+TopLine=87
+Caret=1,1
+[www\Pages\SignaPhoto\Handler.php]
+TopLine=33
 Caret=1,1
