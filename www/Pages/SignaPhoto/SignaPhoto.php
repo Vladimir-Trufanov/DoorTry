@@ -33,10 +33,10 @@ try
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
    
+   echo '<!DOCTYPE html>';
+   echo '<html lang="ru">';
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
-
-   echo '</head>';
    echo '<body>';
    echo '<div id="main">';
       echo '

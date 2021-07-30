@@ -31,13 +31,14 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    if ($_SERVER["SERVER_NAME"]=='kwinflatht.nichost.ru') $UrlHome='http://kwinflatht.nichost.ru';
    
    // Загружаем заголовочную часть страницы
-   echo '<!DOCTYPE html>';
-   echo '<html lang="ru">';
    echo '<head>';
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    echo '<title>Подписать фотографию</title>';
    echo '<meta name="description" content="Проба Img">';
    echo '<meta name="keywords"    content="Проба Img">';
+   // Подключаем межязыковые определения
+   require_once 'SignaPhotoDef.php';
+   echo $change;
    // Подключаем jquery/jquery-ui
    echo '
       <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
@@ -52,6 +53,7 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    //echo '<script src="ajaxLead.js"></script>';
    // Подключаем скрипт изменения заголовка "input file"
    echo '<script src="jquery-input-file-text.js"></script>';
+   echo '</head>';
    return $Result;
 }
 
