@@ -1,0 +1,1 @@
+[30-Jul-2021 09:38:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''</script>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoDef.php on line 11

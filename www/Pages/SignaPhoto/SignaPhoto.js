@@ -8,6 +8,30 @@
  * 
 **/ 
 
+// ****************************************************************************
+// *             Проверить, есть ли метка в переданном сообщении              *
+// ****************************************************************************
+
+/*
+function isLabel($mess,$subs,$Before='***',$After='***')
+{
+   $Result=false;
+   $Label=makeLabel($subs,$Before='***',$After='***');
+   $regLabel="/".$Label."/u");
+   $s=Findes($regLabel,$mess);
+   if ($s==$Label) $Result=true;
+   return $Result;
+}
+// ****************************************************************************
+// *                  Выделить метку для отправляемого сообщения              *
+// ****************************************************************************
+function makeLabel($subs,$Before='***',$After='***')
+{
+   $Result=$Before.$subs.$After;
+   return $Result;
+}
+*/
+
 
 function isProbaLi()
 {
@@ -21,7 +45,7 @@ function isProbaLi()
    alert('ProbaLi');
    */
    // Настраиваем #InfoLead на загрузку изображения
-   var elem=document.getElementById('InfoLead');
+   elem=document.getElementById('InfoLead');
    elem.innerHTML=
    '<form id="frmLoadPic" enctype="multipart/form-data">'+
    '<div>'+ 
@@ -45,7 +69,7 @@ function isProbaLi()
    // Подключаем обработку и перемещение изображения на сервер
    $('#frmLoadPic').on('submit',(function(e) {
       e.preventDefault();
-      var formData = new FormData(this);
+      formData = new FormData(this);
       //alert('Перед вызовом аякс');
       $.ajax({
          type:'POST', // Тип запроса
@@ -58,16 +82,20 @@ function isProbaLi()
          // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
          success:function(data){
             printMessage('#result', data);
+            
+            $preg = new RegExp("шаблон","u");
+            alert('1: '+data);
+            alert('2: '+ajSuccessfully);
             //alert('Успешно!');
          },
          // Отмечаем  неуспешное выполнение аякс-запроса по причине:
          // 1) утерян файл скрипта.
          error:function(data){
-            console.log(data);
+            // console.log(data);
             printMessage('#result', 'Утерян файл скрипта!');
          }
       });
-      //alert('Пщсле');
+      // alert('После');
    }));
 }
 
@@ -149,13 +177,13 @@ function readImage(input,actstr)
   if (input.files && input.files[0]) 
   {
     // Трассируем параметры загружаемого файла
-    
+    /*
     console.log(input.files[0]);
     console.log(input.files[0].name);
     console.log(input.files[0].lastModified);
     console.log(input.files[0].type);
     console.log(input.files[0].size+' байт');
-    
+    */
     // Создаем объект чтения содержимого файла, 
     // хранящиеся на компьютере пользователя
     // (асинхронно, чтобы не тормозить браузер)

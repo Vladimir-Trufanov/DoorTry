@@ -26,8 +26,8 @@ try
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-   //require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
-   //require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
+   // Подключаем межязыковые определения
+   require_once 'SignaPhotoDef.php';
 
    // Проверяем установлен ли массив файлов и массив с переданными данными
    if(isset($_FILES) && isset($_FILES['image'])) 
@@ -54,7 +54,8 @@ try
          // Если переброска файла на сервер произошла успешно, указываем это в сообщении
          if (move_uploaded_file($image['tmp_name'],$imageFullName)) 
          {
-            echo 'Успешно!';
+            //echo 'Успешно!';
+            echo ajSuccessfully;
             // Запоминаем в кукисах имена загруженных файлов
             $c_FileImg=prown\MakeCookie('FileImg',$filepic,tStr);
          }
