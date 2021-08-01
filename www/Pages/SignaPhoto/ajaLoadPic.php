@@ -55,7 +55,8 @@ try
          if (move_uploaded_file($image['tmp_name'],$imageFullName)) 
          {
             //echo 'Успешно!';
-            echo ajSuccessfully;
+            echo(prown\makeLabel(ajSuccessfully));  // 'Успешно'
+            // echo ajSuccessfully;
             // Запоминаем в кукисах имена загруженных файлов
             $c_FileImg=prown\MakeCookie('FileImg',$filepic,tStr);
          }
