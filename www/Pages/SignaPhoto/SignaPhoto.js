@@ -11,29 +11,29 @@
 // ****************************************************************************
 // *             Проверить, есть ли метка в переданном сообщении              *
 // ****************************************************************************
-
-/*
-function isLabel($mess,$subs,$Before='***',$After='***')
+function isLabel($mess,$subs,$Before='~~~',$After='~~~')
 {
    $Result=false;
-   $Label=makeLabel($subs,$Before='***',$After='***');
-   $regLabel="/".$Label."/u");
-   $s=Findes($regLabel,$mess);
-   if ($s==$Label) $Result=true;
+   $Label=makeLabel($subs,$Before,$After);
+   regex=new RegExp($Label,"u");
+   match=regex.exec($mess);
+   //alert('$subs='+$subs+'  $mess='+$mess);
+   alert('match[0]='+match[0]+'  $Label='+$Label);
+   if (match[0]==$Label) $Result=true;
    return $Result;
 }
 // ****************************************************************************
 // *                  Выделить метку для отправляемого сообщения              *
 // ****************************************************************************
-function makeLabel($subs,$Before='***',$After='***')
+function makeLabel($subs,$Before='~~~',$After='~~~')
 {
-   $Result=$Before.$subs.$After;
+   $Result=$Before+$subs+$After;
    return $Result;
 }
-*/
-
-
-function isProbaLi()
+// ****************************************************************************
+// *     Обработать клик "Загрузить фотографию для наложения подписи"         *
+// ****************************************************************************
+function clickLoadPic()
 {
    // Обрабатываем клик
    /*
@@ -72,21 +72,33 @@ function isProbaLi()
       formData = new FormData(this);
       //alert('Перед вызовом аякс');
       $.ajax({
-         type:'POST', // Тип запроса
-         url: 'Handler.php', // Скрипт обработчика
+         type:'POST',            // тип запроса
+         url: 'ajaLoadPic.php', // скрипт обработчика
          async: false,
-         data: formData, // Данные которые мы передаем
-         cache:false, // В запросах POST отключено по умолчанию, но перестрахуемся
-         contentType: false, // Тип кодирования данных мы задали в форме, это отключим
-         processData: false, // Отключаем, так как передаем файл
+         data: formData,         // данные которые мы передаем
+         cache: false,           // по POST отключено, но явно уточняем
+         contentType: false,     // отключаем, так как тип кодирования задан в форме
+         processData: false,     // отключаем, так как передаем файл
          // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
-         success:function(data){
-            printMessage('#result', data);
+         success:function(data)
+         {
             
+            if (isLabel(data,ajSuccessfully)) printMessage('#result',ajSuccessfully)
+            else printMessage('#result','Ошибка 1991');
+            /*
             $preg = new RegExp("шаблон","u");
             alert('1: '+data);
-            alert('2: '+ajSuccessfully);
-            //alert('Успешно!');
+            alert('2: '+makeLabel(ajSuccessfully));  // 'Успешно!'
+            
+            text = data;
+            $Label=makeLabel(ajSuccessfully);
+            regex = new RegExp($Label);
+            match = regex.exec(text);
+            alert('3: '+match[0]);       
+            isLabel(text,ajSuccessfully)
+            */
+            
+            alert('Успешно!');
          },
          // Отмечаем  неуспешное выполнение аякс-запроса по причине:
          // 1) утерян файл скрипта.
@@ -105,7 +117,7 @@ function isProbaLi()
   {
     //
     $(destination).removeClass();
-    if (msg == 'Успешно!') {
+    if (msg == ajSuccessfully) {
       $(destination).addClass('alert alert-success').text('Файл успешно загружен.');
     }
     else if (msg == 'Большой файл!') {

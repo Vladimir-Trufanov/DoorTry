@@ -45,9 +45,9 @@ try
          <span class="navigation-menu__bars"></span>
       </div>
       <ul class="menu-list">
-         <li class="menu-list__item">Загрузить фотографию</li>
+         <li class="menu-list__item" onclick="clickLoadPic()">Загрузить фотографию</li>
          <li class="menu-list__item">Наложить подпись на изображение</li>
-         <li class="menu-list__item" onclick="isProbaLi()">isProbaLi</li>
+         <li class="menu-list__item">Menu Item 3</li>
          <li class="menu-list__item">Menu Item 4</li>
          <li class="menu-list__item">Menu Item 5</li>
       </ul>

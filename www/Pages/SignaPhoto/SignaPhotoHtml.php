@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  10.06.2021
-// Copyright © 2021 tve                              Посл.изменение: 14.06.2021
+// Copyright © 2021 tve                              Посл.изменение: 01.08.2021
 
 // ****************************************************************************
 // *                            Начать HTML-страницу сайта                    *
@@ -18,7 +18,7 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    $Result=true;
    // Инициируем или изменяем счетчик числа запросов страницы
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);  
-   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
+   //$c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
    
    $c_Orient=prown\MakeCookie('Orient','landscape',tStr,true);
 
@@ -36,9 +36,9 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    echo '<title>Подписать фотографию</title>';
    echo '<meta name="description" content="Проба Img">';
    echo '<meta name="keywords"    content="Проба Img">';
-   // Подключаем межязыковые определения
+   // Подключаем межязыковые определения для PHP и JavaScript
    require_once 'SignaPhotoDef.php';
-   echo $change;
+   echo $define;
    // Подключаем jquery/jquery-ui
    echo '
       <link rel="stylesheet" href="/Jsx/jquery-ui.min.css"/> 
