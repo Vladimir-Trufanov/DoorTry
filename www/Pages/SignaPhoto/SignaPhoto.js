@@ -34,7 +34,19 @@ function isLabel($mess,$subs,$Before='~~~',$After='~~~')
    return Result;
 }
 // ****************************************************************************
-// *                  Выделить метку для отправляемого сообщения              *
+// *                          Выделить сообщение из метки                     *
+// ****************************************************************************
+function freeLabel($subs,$Before='~~~',$After='~~~')
+{
+   let regex=new RegExp($Before);
+   let p = $subs; p=p.replace(regex,'')
+   regex=new RegExp($After);
+   p=p.replace(regex,'');
+   // console.log('---'+p+'---');
+   return p;
+}
+// ****************************************************************************
+// *               Сформировать метку из отправляемого сообщения              *
 // ****************************************************************************
 function makeLabel($subs,$Before='~~~',$After='~~~')
 {
@@ -95,19 +107,25 @@ function clickLoadPic()
          {
             //console.log(data);
             //alert(data);
-            // Если "Не установлен массив файлов и не загружены данные"
-            if (isLabel(data,ajNoSetFile)) 
+            // "Файл превышает максимальный размер"
+            if (isLabel(data,ajErrBigFile)) 
+            {
+               let Label=makeLabel(ajErrBigFile);
+               regex=new RegExp(Label,"u");
+               let p = data; p=p.replace(regex,'')
+               //console.log(p);
+               p=freeLabel(p);
+               printMessage('#result',ajErrBigFile,p);
+            }
+            // "Не установлен массив файлов и не загружены данные"
+            else if (isLabel(data,ajNoSetFile)) 
             {
                printMessage('#result',ajNoSetFile);
             }
-            //Если "Файл успешно загружен"
+            // "Файл успешно загружен"
             else if (isLabel(data,ajSuccessfully)) 
             {
                printMessage('#result',ajSuccessfully);
-            }
-            else if (isLabel(data,ajErrBigFile)) 
-            {
-               printMessage('#result',ajErrBigFile);
             }
             else 
             {
@@ -131,8 +149,12 @@ function printMessage(destination,msg,mess1='',mess2='')
 {
    // Удаляем фрагмент разметки по указанному классу или идентификатору
    $(destination).removeClass();
+   // Файл превышает максимальный размер
+   if (msg == ajErrBigFile) {
+      $(destination).addClass('alert-danger').text(msg+': '+mess1+' байт!');
+   }
    // Не найдена метка в переданном сообщении
-   if (msg == ajErrorisLabel) {
+   else if (msg == ajErrorisLabel) {
       $(destination).addClass('alert-danger').text(msg+': '+mess1+' ['+mess2+']');
    }
    // Ошибка при загрузке файла во временное хранилище
@@ -154,9 +176,6 @@ function printMessage(destination,msg,mess1='',mess2='')
    // Файл успешно загружен
    else if (msg == ajSuccessfully) {
       $(destination).addClass('alert-success').text(msg+'!');
-   }
-   else if (msg == ajErrBigFile) {
-      $(destination).addClass('alert-danger').text('Ошибка при загрузке, большой размер файла.');
    }
     else if (msg == 'Не изображение!') {
       $(destination).addClass('alert-danger').text('Неверный тип файла изображения.');
