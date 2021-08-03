@@ -567,6 +567,7 @@ DoorTry
 6=www\Pages\SignaPhotoOld\SignaPhotoHtml.php
 7=www\Pages\SignaPhoto\ajaLoadPic.php
 8=www\Pages\SignaPhoto\SignaPhotoDef.php
+9=www\Pages\SignaPhoto\SignaPhoto.css
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\SignaPhoto.js
@@ -574,16 +575,16 @@ Selected=www\Pages\SignaPhoto\SignaPhoto.js
 TopLine=69
 Caret=1,82
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=18
+TopLine=44
 Caret=38,46
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=13
+TopLine=35
 Caret=6,21
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=13
-Caret=4,21
+TopLine=87
+Caret=15,97
 [www\Pages\SignaPhotoOld\SignaMenu.css]
-TopLine=37
+TopLine=131
 Caret=1,1
 [www\Jsx\index.js]
 TopLine=1
@@ -592,8 +593,11 @@ Caret=64,9
 TopLine=87
 Caret=1,1
 [www\Pages\SignaPhoto\ajaLoadPic.php]
-TopLine=35
-Caret=64,58
+TopLine=18
+Caret=50,33
 [www\Pages\SignaPhoto\SignaPhotoDef.php]
+TopLine=3
+Caret=78,5
+[www\Pages\SignaPhoto\SignaPhoto.css]
 TopLine=1
-Caret=24,4
+Caret=8,19
