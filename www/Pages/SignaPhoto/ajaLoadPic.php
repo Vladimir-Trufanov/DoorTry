@@ -1,4 +1,14 @@
 <?php
+// PHP7/HTML5, EDGE/CHROME                               *** ajaLoadPic.php ***
+
+// ****************************************************************************
+// * SignaPhoto             Перебросить и проконтроллировать файл изображения *
+// *                               из временного хранилища на сайт через аякс *
+// ****************************************************************************
+
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  10.07.2021
+// Copyright © 2021 tve                              Посл.изменение: 03.08.2021
 
 /*
 $_FILES['loadfile']=Array(
@@ -28,26 +38,25 @@ try
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    // Подключаем межязыковые определения
    require_once 'SignaPhotoDef.php';
-
    // Если установлен массив файлов и загружен переданными данными
    if (isset($_FILES) && isset($_FILES['image']))
    {
-      echo(prown\makeLabel(ajSuccessfully));
-      /*
       //Переданный массив сохраняем в переменной
       $image = $_FILES['image'];
       // Проверяем размер файла и если он превышает заданный размер
       // завершаем выполнение скрипта и выводим ошибку
-      //if ($image['size'] > 400000) {die(ajErrBigFile);}
-      //if ($image['size'] > 400000) {die(ajErrBigFile);}
+      $maxSize=400000;
+      if ($image['size']>$maxSize) 
+      {
+         echo(prown\makeLabel(ajErrBigFile).prown\makeLabel($maxSize));
+      }
+      // Максимальный размер не превышен, продолжаем анализ файла
       else
       {
          // Достаем формат изображения
          $imageFormat = explode('.', $image['name']);
          $imageFormat = $imageFormat[1];
-         // Генерируем новое имя для изображения. Можно сохранить и со старым
-         // но это не рекомендуется делать
-         //$imageFullName='./images/'.hash('crc32',time()).'.'.$imageFormat;
+         // Генерируем имя для изображения. 
          $imageFullName='./images/photo.'.$imageFormat;
          $filepic='images/photo.'.$imageFormat;
          // Сохраняем тип изображения в переменную
@@ -68,7 +77,6 @@ try
          }
          else echo 'Не изображение!';
       }
-      */
    }
    // Отмечаем, что не установлен массив файлов и не загружены данные
    else {echo(prown\makeLabel(ajNoSetFile));}
@@ -78,3 +86,4 @@ catch (E_EXCEPTION $e)
    DoorTryPage($e);
 }
 
+// **************************************   **************** ajaLoadPic.php ***
