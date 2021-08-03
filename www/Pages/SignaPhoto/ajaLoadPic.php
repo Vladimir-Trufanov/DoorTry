@@ -29,42 +29,49 @@ try
    // Подключаем межязыковые определения
    require_once 'SignaPhotoDef.php';
 
-   // Проверяем установлен ли массив файлов и массив с переданными данными
-   if(isset($_FILES) && isset($_FILES['image'])) 
+   // Если установлен массив файлов и загружен переданными данными
+   if (isset($_FILES) && isset($_FILES['image']))
    {
+      echo(prown\makeLabel(ajSuccessfully));
+      /*
       //Переданный массив сохраняем в переменной
       $image = $_FILES['image'];
       // Проверяем размер файла и если он превышает заданный размер
       // завершаем выполнение скрипта и выводим ошибку
-      if ($image['size'] > 400000) {die('Большой файл!');}
-      // Достаем формат изображения
-      $imageFormat = explode('.', $image['name']);
-      $imageFormat = $imageFormat[1];
-      // Генерируем новое имя для изображения. Можно сохранить и со старым
-      // но это не рекомендуется делать
-      //$imageFullName='./images/'.hash('crc32',time()).'.'.$imageFormat;
-      $imageFullName='./images/photo.'.$imageFormat;
-      $filepic='images/photo.'.$imageFormat;
-      // Сохраняем тип изображения в переменную
-      $imageType = $image['type'];
-      // Сверяем доступные форматы изображений, если изображение
-      // соответствует, копируем изображение в папку images
-      if ($imageType == 'image/jpeg' || $imageType == 'image/png' || $imageType == 'image/gif') 
+      //if ($image['size'] > 400000) {die(ajErrBigFile);}
+      //if ($image['size'] > 400000) {die(ajErrBigFile);}
+      else
       {
-         // Если переброска файла на сервер произошла успешно, указываем это в сообщении
-         if (move_uploaded_file($image['tmp_name'],$imageFullName)) 
+         // Достаем формат изображения
+         $imageFormat = explode('.', $image['name']);
+         $imageFormat = $imageFormat[1];
+         // Генерируем новое имя для изображения. Можно сохранить и со старым
+         // но это не рекомендуется делать
+         //$imageFullName='./images/'.hash('crc32',time()).'.'.$imageFormat;
+         $imageFullName='./images/photo.'.$imageFormat;
+         $filepic='images/photo.'.$imageFormat;
+         // Сохраняем тип изображения в переменную
+         $imageType = $image['type'];
+         // Сверяем доступные форматы изображений, если изображение
+         // соответствует, копируем изображение в папку images
+         if ($imageType == 'image/jpeg' || $imageType == 'image/png' || $imageType == 'image/gif') 
          {
-            //echo 'Успешно!';
-            echo(prown\makeLabel(ajSuccessfully));  // 'Успешно'
-            // echo ajSuccessfully;
-            // Запоминаем в кукисах имена загруженных файлов
-            $c_FileImg=prown\MakeCookie('FileImg',$filepic,tStr);
+            // Если переброска файла на сервер произошла успешно, указываем это в сообщении
+            if (move_uploaded_file($image['tmp_name'],$imageFullName)) 
+            {
+               echo(prown\makeLabel(ajSuccessfully));  // 'Файл успешно загружен'
+               // Запоминаем в кукисах имена загруженных файлов
+               $c_FileImg=prown\MakeCookie('FileImg',$filepic,tStr);
+            }
+            // Отмечаем ошибочную переброску 
+            else {echo 'Ошибка переброса!';}
          }
-         // Отмечаем ошибочную переброску 
-         else {echo 'Ошибка переброса!';}
+         else echo 'Не изображение!';
       }
-      else echo 'Не изображение!';
+      */
    }
+   // Отмечаем, что не установлен массив файлов и не загружены данные
+   else {echo(prown\makeLabel(ajNoSetFile));}
 }
 catch (E_EXCEPTION $e) 
 {
