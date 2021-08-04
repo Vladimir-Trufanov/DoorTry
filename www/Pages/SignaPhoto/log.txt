@@ -7,3 +7,5 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\Pages\SignaPhoto\ajaLoadPic.php on line 58
+[04-Aug-2021 09:44:38 Asia/Kuwait] PHP Warning:  Unexpected character in input:  ' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoDef.php on line 24
+[04-Aug-2021 09:44:38 Asia/Kuwait] PHP Warning:  Unexpected character in input:  ' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoDef.php on line 24

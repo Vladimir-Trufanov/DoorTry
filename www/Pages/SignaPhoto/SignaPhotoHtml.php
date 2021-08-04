@@ -18,7 +18,7 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    $Result=true;
    // Инициируем или изменяем счетчик числа запросов страницы
    $c_SignaPhoto=prown\MakeCookie('SignaPhoto',0,tInt,true);  
-   //$c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
+   $c_SignaPhoto=prown\MakeCookie('SignaPhoto',$c_SignaPhoto+1,tInt);  
    
    $c_Orient=prown\MakeCookie('Orient','landscape',tStr,true);
 
@@ -31,6 +31,8 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    if ($_SERVER["SERVER_NAME"]=='kwinflatht.nichost.ru') $UrlHome='http://kwinflatht.nichost.ru';
    
    // Загружаем заголовочную часть страницы
+   echo '<!DOCTYPE html>';
+   echo '<html lang="ru">';
    echo '<head>';
    echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
    echo '<title>Подписать фотографию</title>';

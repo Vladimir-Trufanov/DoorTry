@@ -72,10 +72,11 @@ try
                // Запоминаем в кукисах имена загруженных файлов
                $c_FileImg=prown\MakeCookie('FileImg',$filepic,tStr);
             }
-            // Отмечаем ошибочную переброску 
-            else {echo 'Ошибка переброса!';}
+            // Отмечаем ошибочную переброску файла на сервер 
+            else {echo(prown\makeLabel(ajErrMoveServer));}
          }
-         else echo 'Не изображение!';
+         // Выводим сообщение при неверном расширении файла
+         else {echo(prown\makeLabel(ajInvalidType));}
       }
    }
    // Отмечаем, что не установлен массив файлов и не загружены данные

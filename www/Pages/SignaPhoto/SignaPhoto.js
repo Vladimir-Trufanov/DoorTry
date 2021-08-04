@@ -3,11 +3,22 @@
 /**
  * Библиотека прикладных функций страницы "Подписать фотографию"                             
  * 
- * v1.0, 13.06.2021        Автор: Труфанов В.Е. 
+ * v1.1, 04.08.2021        Автор: Труфанов В.Е. 
  * Copyright © 2019 tve    Дата создания: 03.06.2021
  * 
 **/ 
 
+// ****************************************************************************
+// *                          Выделить сообщение из метки                     *
+// ****************************************************************************
+function freeLabel($subs,$Before='~~~',$After='~~~')
+{
+   let regex=new RegExp($Before);
+   let p = $subs; p=p.replace(regex,'')
+   regex=new RegExp($After);
+   p=p.replace(regex,'');
+   return p;
+}
 // ****************************************************************************
 // *             Проверить, есть ли метка в переданном сообщении              *
 // ****************************************************************************
@@ -32,18 +43,6 @@ function isLabel($mess,$subs,$Before='~~~',$After='~~~')
       Result=false;
    }
    return Result;
-}
-// ****************************************************************************
-// *                          Выделить сообщение из метки                     *
-// ****************************************************************************
-function freeLabel($subs,$Before='~~~',$After='~~~')
-{
-   let regex=new RegExp($Before);
-   let p = $subs; p=p.replace(regex,'')
-   regex=new RegExp($After);
-   p=p.replace(regex,'');
-   // console.log('---'+p+'---');
-   return p;
 }
 // ****************************************************************************
 // *               Сформировать метку из отправляемого сообщения              *
@@ -113,9 +112,18 @@ function clickLoadPic()
                let Label=makeLabel(ajErrBigFile);
                regex=new RegExp(Label,"u");
                let p = data; p=p.replace(regex,'')
-               //console.log(p);
                p=freeLabel(p);
                printMessage('#result',ajErrBigFile,p);
+            }
+            // "Ошибка при перемещении файла на сервер"
+            else if (isLabel(data,ajErrMoveServer)) 
+            {
+               printMessage('#result',ajErrMoveServer);
+            }
+            // "Неверный тип файла изображения"
+            else if (isLabel(data,ajInvalidType)) 
+            {
+               printMessage('#result',ajInvalidType);
             }
             // "Не установлен массив файлов и не загружены данные"
             else if (isLabel(data,ajNoSetFile)) 
@@ -135,8 +143,7 @@ function clickLoadPic()
          // Отмечаем  неуспешное выполнение аякс-запроса по причине:
          // 1) утерян файл скрипта.
          error:function(data){
-            // console.log(data);
-            printMessage('#result', 'Утерян файл скрипта!');
+            printMessage('#result',ajLostScriptFile);
          }
       });
       //alert('После');
@@ -153,6 +160,10 @@ function printMessage(destination,msg,mess1='',mess2='')
    if (msg == ajErrBigFile) {
       $(destination).addClass('alert-danger').text(msg+': '+mess1+' байт!');
    }
+   // Ошибка при перемещении файла на сервер
+   else if (msg == ajErrMoveServer) {
+      $(destination).addClass('alert-danger').text(msg+'!');
+   }
    // Не найдена метка в переданном сообщении
    else if (msg == ajErrorisLabel) {
       $(destination).addClass('alert-danger').text(msg+': '+mess1+' ['+mess2+']');
@@ -164,6 +175,14 @@ function printMessage(destination,msg,mess1='',mess2='')
    // Загрузите изображение для нанесения подписи
    else if (msg == ajInfoLoadImg) {
       $(destination).addClass('alert-info').text(msg+'!');
+   }
+   // Неверный тип файла изображения
+   else if (msg == ajInvalidType) {
+      $(destination).addClass('alert-danger').text(msg+'!');
+   }
+   // Неверный тип файла изображения
+   else if (msg == ajLostScriptFile) {
+      $(destination).addClass('alert-danger').text(msg+'!');
    }
    // Не установлен массив файлов и не загружены данные
    else if (msg == ajNoSetFile) {
@@ -177,12 +196,6 @@ function printMessage(destination,msg,mess1='',mess2='')
    else if (msg == ajSuccessfully) {
       $(destination).addClass('alert-success').text(msg+'!');
    }
-    else if (msg == 'Не изображение!') {
-      $(destination).addClass('alert-danger').text('Неверный тип файла изображения.');
-    }
-    else if (msg == 'Ошибка переброса!') {
-      $(destination).addClass('alert-danger').text('Ошибка при перемещении файла на сервер.');
-    }
    // Выводим сообщение при всех прочих ошибках
    else {
       $(destination).addClass('alert alert-danger').text('Неучтенная ошибка при выполнении операции.');
@@ -196,34 +209,45 @@ function readImage(input,actstr)
    // Если выбран и загружен во временное хранилище хотя бы один файл
    if (input.files && input.files[0]) 
    {
-      // Трассируем параметры загружаемого файла
       /*
+      // Трассируем параметры загружаемого файла
       console.log(input.files[0]);
       console.log(input.files[0].name);
-      console.log(input.files[0].lastModified);
       console.log(input.files[0].type);
+      console.log(input.files[0].lastModified);
       console.log(input.files[0].size+' байт');
       */
-      // Создаем объект чтения содержимого файла, 
-      // хранящиеся на компьютере пользователя
-      // (асинхронно, чтобы не тормозить браузер)
-      var reader = new FileReader();
-      // Прицепляем замену существующего изображения на загруженное
-      // при успешном завершении загрузки страницы
-      reader.onload = function (event) 
+      // Определяем расширение файла
+      let $imageType=input.files[0].type;
+      // Если неверное расширение файла, то выдаем сообщение
+      if (!($imageType=='image/jpeg'||$imageType=='image/png'||$imageType=='image/gif')) 
       {
-         $('#pic').attr('src', event.target.result);
-         // Напоминаем о дальнейшем шаге "Загрузите изображение для нанесения подписи"
-         printMessage('#result',ajInfoLoadImg);
+         printMessage('#result',ajInvalidType);
       }
-      // Прицепляем сообщение об ошибке загрузки во временное хранилище
-      reader.onerror = function(event) 
+      // Выполняем считывание файла во временное хранилище
+      else 
       {
-         printMessage('#result',ajErrTempoFile);
-         reader.abort(); 
-      };
-      // Запускаем процесс чтения изображения 
-      reader.readAsDataURL(input.files[0]);
+         // Создаем объект чтения содержимого файла, 
+         // хранящиеся на компьютере пользователя
+         // (асинхронно, чтобы не тормозить браузер)
+         var reader = new FileReader();
+         // Прицепляем замену существующего изображения на загруженное
+         // при успешном завершении загрузки страницы
+         reader.onload = function (event) 
+         {
+            $('#pic').attr('src', event.target.result);
+            // Напоминаем о дальнейшем шаге "Загрузите изображение для нанесения подписи"
+            printMessage('#result',ajInfoLoadImg);
+         }
+         // Прицепляем сообщение об ошибке загрузки во временное хранилище
+         reader.onerror = function(event) 
+         {
+            printMessage('#result',ajErrTempoFile);
+            reader.abort(); 
+         };
+         // Запускаем процесс чтения изображения 
+         reader.readAsDataURL(input.files[0]);
+      }
    }
    // Отмечаем, что не загружен файл во временное хранилище
    else
