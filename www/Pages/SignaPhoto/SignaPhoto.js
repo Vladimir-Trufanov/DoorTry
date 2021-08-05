@@ -150,6 +150,81 @@ function clickLoadPic()
    }));
 }
 // ****************************************************************************
+// *             Обработать клик "Наложить подпись на изображение"            *
+// ****************************************************************************
+function clickMakeStamp()
+{
+   // Обрабатываем клик
+   
+   var elem=document.getElementById('InfoLead');
+   elem.innerHTML=
+      '1234567890 clickMakeStamp <br>'+
+      '1234567890 clickMakeStamp <br>'+
+      '<div id="result">'+
+      '-----------'+
+      '</div>';
+   
+   // Настраиваем #InfoLead на загрузку изображения
+   /*
+   elem=document.getElementById('InfoLead');
+   elem.innerHTML=
+   '<form id="frmLoadPic" enctype="multipart/form-data">'+
+   '<div>'+ 
+   '<input id="ipfLoadPic" type="file" name="image">'+
+   '</div>'+ 
+   '<div>'+ 
+   '<input type="submit" value="Загрузить">'+
+   '</div>'+ 
+   '</form>';
+   */
+   // Сворачиваем меню
+   $('.js-nav-menu').removeClass('navigation-menu--open');
+   
+   // Через аякс-запрос делаем подпись на фотографии
+   alert('Перед вызовом аякс');
+   $.ajax({
+      type:'POST',             // тип запроса
+      url: 'ajaMakeStamp.php', // скрипт обработчика
+      async: false,
+      data: 'formData',        // данные которые мы передаем
+      cache: false,            // по POST отключено, но явно уточняем
+      contentType: false,      // отключаем, так как тип кодирования задан в форме
+      processData: false,      // отключаем, так как передаем файл
+      // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
+      success:function(data)
+      {
+         //console.log(data);
+         //alert(data);
+         // "---Файл превышает максимальный размер"
+         if (isLabel(data,ajErrBigFile)) 
+         {
+            let Label=makeLabel(ajErrBigFile);
+            regex=new RegExp(Label,"u");
+            let p = data; p=p.replace(regex,'')
+            //console.log(p);
+            p=freeLabel(p);
+            printMessage('#result',ajErrBigFile,p);
+         }
+         // "На изображение наложена свежая подпись"
+         else if (isLabel(data,ajIsFreshStamp)) 
+         {
+            printMessage('#result',ajIsFreshStamp);
+         }
+         // "Ошибка при наложении подписи на изображение"
+         else 
+         {
+            printMessage('#result',ajErrFreshStamp,data);
+         }
+      },
+      // Отмечаем  неуспешное выполнение аякс-запроса из-за утери файла скрипта
+      error:function(data)
+      {
+         printMessage('#result',ajLostScriptFile);
+      }
+   });
+   alert('После');
+}
+// ****************************************************************************
 // *                  Заменить указанный div разметки сообщением              *
 // ****************************************************************************
 function printMessage(destination,msg,mess1='',mess2='') 
@@ -159,6 +234,10 @@ function printMessage(destination,msg,mess1='',mess2='')
    // Файл превышает максимальный размер
    if (msg == ajErrBigFile) {
       $(destination).addClass('alert-danger').text(msg+': '+mess1+' байт!');
+   }
+   // Ошибка при наложении подписи на изображение
+   else if (msg == ajErrFreshStamp) {
+      $(destination).addClass('alert-danger').text(msg+'!');
    }
    // Ошибка при перемещении файла на сервер
    else if (msg == ajErrMoveServer) {
@@ -179,6 +258,10 @@ function printMessage(destination,msg,mess1='',mess2='')
    // Неверный тип файла изображения
    else if (msg == ajInvalidType) {
       $(destination).addClass('alert-danger').text(msg+'!');
+   }
+   // На изображение наложена свежая подпись
+   else if (msg == ajIsFreshStamp) {
+      $(destination).addClass('alert-success').text(msg+'!');
    }
    // Неверный тип файла изображения
    else if (msg == ajLostScriptFile) {

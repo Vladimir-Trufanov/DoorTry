@@ -6,7 +6,7 @@
 // *                                сайтостраница для подписывания фотографий *
 // ****************************************************************************
 
-// v3.0, 29.07.2021                                   Автор:      Tруфанов В.Е. 
+// v3.1, 05.08.2021                                   Автор:      Tруфанов В.Е. 
 // Copyright © 2021 tve                               Дата создания: 13.06.2021
 
 // Инициируем рабочее пространство страницы
@@ -15,8 +15,8 @@ $_WORKSPACE=iniWorkSpace();
 $SiteRoot     = $_WORKSPACE[wsSiteRoot];     // Корневой каталог сайта
 $SiteAbove    = $_WORKSPACE[wsSiteAbove];    // Надсайтовый каталог
 $SiteHost     = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
-$SiteDevice   = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
-$SiteProtocol = $_WORKSPACE[wsSiteProtocol]; // 'HTTP' | 'HTTPS'
+$SiteDevice   = $_WORKSPACE[wsSiteDevice];   // 'Computer'|'Mobile'|'Tablet'
+$SiteProtocol = $_WORKSPACE[wsSiteProtocol]; // 'HTTP'|'HTTPS'
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
@@ -44,7 +44,7 @@ try
       </div>
       <ul class="menu-list">
          <li class="menu-list__item" onclick="clickLoadPic()">Загрузить фотографию</li>
-         <li class="menu-list__item">Наложить подпись на изображение</li>
+         <li class="menu-list__item" onclick="clickMakeStamp()">Наложить подпись на изображение</li>
          <li class="menu-list__item">Menu Item 3</li>
          <li class="menu-list__item">Menu Item 4</li>
          <li class="menu-list__item">Menu Item 5</li>
@@ -75,10 +75,13 @@ try
          </div>
       ';
    echo '</div>'; 
-   echo '</body>';
+   echo '<div id="ViewGlobal">';
+   echo 'prown\ViewGlobal(avgCOOKIE)';
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgREQUEST);
+   echo '</div>'; 
+   echo '</body>';
    echo '</html>';
 }
 catch (E_EXCEPTION $e) 
