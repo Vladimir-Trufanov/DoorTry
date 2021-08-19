@@ -299,9 +299,12 @@ DoorTry
 				-Wallpaper
 					www\Pages\SignaPhoto\Wallpaper\Goryi-Dyimka.jpg
 					www\Pages\SignaPhoto\Wallpaper\SignaPhoto.jpg
+				-Материалы для страницы
+					www\Pages\SignaPhoto\Материалы для страницы\Ajax и PHP - Загрузка изображения на сервер.doc
 				www\Pages\SignaPhoto\ajaLoadPic.php
 				www\Pages\SignaPhoto\ajaMakeStamp.php
 				www\Pages\SignaPhoto\jquery-input-file-text.js
+				www\Pages\SignaPhoto\license.txt
 				www\Pages\SignaPhoto\log.txt
 				www\Pages\SignaPhoto\SignaMenu.css
 				www\Pages\SignaPhoto\SignaPhoto.css
@@ -310,7 +313,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoDef.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
 				www\Pages\SignaPhoto\StyleReset.css
-			-SignaPhotoOld
+			+SignaPhotoOld
 				-buttons
 					www\Pages\SignaPhotoOld\buttons\image128.png
 					www\Pages\SignaPhotoOld\buttons\input128.png
@@ -431,25 +434,16 @@ DoorTry
 					www\Pages\SignaPhotoOld\OldVer\Проект меню для подписаний.doc
 				-scss
 					www\Pages\SignaPhotoOld\scss\style.scss
-				-Wallpaper
-					www\Pages\SignaPhotoOld\Wallpaper\Goryi-Dyimka.jpg
-					www\Pages\SignaPhotoOld\Wallpaper\SignaPhoto.jpg
-				-Материалы для страницы
-					www\Pages\SignaPhotoOld\Материалы для страницы\Ajax и PHP - Загрузка изображения на сервер.doc
 				www\Pages\SignaPhotoOld\ajaxLead.js
 				www\Pages\SignaPhotoOld\Handler.php
 				www\Pages\SignaPhotoOld\HandlerOld.php
 				www\Pages\SignaPhotoOld\index.html
-				www\Pages\SignaPhotoOld\jquery-input-file-text.js
-				www\Pages\SignaPhotoOld\license.txt
-				www\Pages\SignaPhotoOld\log.txt
 				www\Pages\SignaPhotoOld\SignaMenu.css
 				www\Pages\SignaPhotoOld\SignaPhoto.css
 				www\Pages\SignaPhotoOld\SignaPhoto.js
 				www\Pages\SignaPhotoOld\SignaPhoto.php
 				www\Pages\SignaPhotoOld\SignaPhotoHtml.php
 				www\Pages\SignaPhotoOld\SignaPhotoUpload.php
-				www\Pages\SignaPhotoOld\StyleReset.css
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
@@ -566,6 +560,8 @@ DoorTry
 2=www\Pages\SignaPhoto\SignaPhoto.js
 3=www\Pages\SignaPhoto\ajaMakeStamp.php
 4=www\Pages\SignaPhoto\SignaPhotoDef.php
+5=www\Pages\SignaPhoto\SignaPhotoHtml.php
+6=www\Pages\SignaPhotoOld\SignaPhotoUpload.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\ajaMakeStamp.php
@@ -573,14 +569,21 @@ Selected=www\Pages\SignaPhoto\ajaMakeStamp.php
 TopLine=69
 Caret=1,82
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=63
-Caret=6,81
+TopLine=125
+Caret=48,143
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=256
-Caret=45,262
+TopLine=191
+Caret=10,196
 [www\Pages\SignaPhoto\ajaMakeStamp.php]
-TopLine=20
-Caret=4,43
+TopLine=29
+Caret=4,36
 [www\Pages\SignaPhoto\SignaPhotoDef.php]
-TopLine=9
-Caret=68,20
+TopLine=20
+Caret=24,20
+Mark1=1,29
+[www\Pages\SignaPhoto\SignaPhotoHtml.php]
+TopLine=15
+Caret=1,28
+[www\Pages\SignaPhotoOld\SignaPhotoUpload.php]
+TopLine=35
+Caret=1,61

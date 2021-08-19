@@ -181,7 +181,7 @@ function clickMakeStamp()
    $('.js-nav-menu').removeClass('navigation-menu--open');
    
    // Через аякс-запрос делаем подпись на фотографии
-   alert('Перед вызовом аякс');
+   // alert('Перед вызовом аякс');
    $.ajax({
       type:'POST',             // тип запроса
       url: 'ajaMakeStamp.php', // скрипт обработчика
@@ -193,7 +193,7 @@ function clickMakeStamp()
       // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
       success:function(data)
       {
-         //console.log(data);
+         console.log(data);
          //alert(data);
          // "---Файл превышает максимальный размер"
          if (isLabel(data,ajErrBigFile)) 
@@ -222,7 +222,7 @@ function clickMakeStamp()
          printMessage('#result',ajLostScriptFile);
       }
    });
-   alert('После');
+   //alert('После');
 }
 // ****************************************************************************
 // *                  Заменить указанный div разметки сообщением              *

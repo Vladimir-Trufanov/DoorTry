@@ -2,24 +2,13 @@
 // PHP7/HTML5, EDGE/CHROME                             *** ajaMakeStamp.php ***
 
 // ****************************************************************************
-// * SignaPhoto             Перебросить и проконтроллировать файл изображения *
-// *                               из временного хранилища на сайт через аякс *
+// * SignaPhoto                          Наложить подпись на файл изображения *
+// *                                        и проконтроллировать процесс аякс *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  10.07.2021
-// Copyright © 2021 tve                              Посл.изменение: 03.08.2021
-
-/*
-$_FILES['loadfile']=Array(
-   [name]     => MyFile.txt (comes from the browser, so treat as tainted)
-   [type]     => text/plain  (not sure where it gets this from - assume the browser, so treat as tainted)
-   [tmp_name] => /tmp/php/php1h4j1o (could be anywhere on your system, depending on your config settings, 
-                 but the user has no control, so this isn't tainted)
-   [error]    => UPLOAD_ERR_OK  (= 0)
-   [size]     => 123   (the size in bytes)
-)
-*/
+// Copyright © 2021 tve                              Посл.изменение: 16.08.2021
 
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
@@ -38,16 +27,156 @@ try
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    // Подключаем межязыковые определения
    require_once 'SignaPhotoDef.php';
-
-   // Отмечаем, что на фотографию наложена свежая подпись
-   echo(prown\makeLabel(ajIsFreshStamp));  
-   // Отмечаем, что произошла ошибка при наложении подписи на изображение
-   echo(prown\makeLabel(ajErrFreshStamp));  
-
+   // Определяем имена файлов для выполнения подписания
+   $c_FileImg=prown\MakeCookie('FileImg');
+   $c_FileStamp=prown\MakeCookie('FileStamp');
+   $c_FileProba=prown\MakeCookie('FileProba');
+   // Накладываем подпись на изображение, получаем сообщение результата работы
+   //$MakeStamp=ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba);
+   $MakeStamp=proba($c_FileImg);
+   // Передаем сообщение на страницу в браузере
+   echo(prown\makeLabel($MakeStamp));  
+   //echo('Приветище!');  
 }
 catch (E_EXCEPTION $e) 
 {
    DoorTryPage($e);
 }
 
+//
+function proba($c_FileImg)
+{
+   $Result=$c_FileImg.': ';
+   $source_resource = @imagecreatefromgif($c_FileImg);
+   
+   // Создаем изображение, кстати для GIF можно использовать обычную imagecreate, 
+   // но лучше все таки везде использовать imagecreatetruecolor
+   $newwidth=400;
+   $newheight=400;
+   $oldwidth=300;
+   $oldheight=300;
+   $destination_resource=@imagecreatetruecolor($newwidth,$newheight);
+   // Получаем прозрачный цвет
+   $transparent_source_index=imagecolortransparent($source_resource);
+   $Result=$Result.'transpaindex='.$transparent_source_index.' ';
+   // Проверяем наличие прозрачности
+   if($transparent_source_index!==-1)
+   {
+      // Получаем ассоциативный массив с красным, зелёным, синим и альфа ключами, 
+      // содержащий соответствующие значения для заданного индекса цвета или 
+      // false в случае возникновения ошибки.
+      $transparent_color=@imagecolorsforindex($source_resource, $transparent_source_index);
+      // Добавляем цвета в палитру нового изображения
+      $transparent_destination_index=@imagecolorallocate($destination_resource, 
+         $transparent_color['red'], 
+         $transparent_color['green'], 
+         $transparent_color['blue']);
+      // Устанавливаем прозрачный цвет 
+      imagecolortransparent($destination_resource, $transparent_destination_index);
+      // На всякий случай заливаем фон этим цветом
+      imagefill($destination_resource, 0, 0, $transparent_destination_index);
+      // Ресайз
+      imagecopyresampled($destination_resource, $source_resource, 0, 0, 0, 0, 
+         $newwidth, $newheight, $oldwidth, $oldheight);
+      // Сохранение
+      imagegif($destination_resource,'images/proba1.gif');
+      imagepng($destination_resource,'images/proba1.png');
+ 
+      //imagegif($source_resource, 'images/proba1.gif');
+   }
+   else
+   {
+      $Result=$Result.' не прозрачный!';
+   }
+   imagedestroy($im);
+
+   return $Result;
+}
+// ****************************************************************************
+// *                     Наложить подпись на файл изображения                 *
+// ****************************************************************************
+function ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba)
+{
+   // Определяем расширение имени файла изображения
+   $FileExt=get_file_extension($c_FileImg);
+   if (($FileExt<>'gif')and($FileExt<>'jpeg')and($FileExt<>'jpg')and($FileExt<>'png')) 
+   { 
+     // Если недопустимое расширение файла, то возвращаем сообщение
+     $Result=ajInvalidBuilt;
+   } 
+   else
+   {
+     // Строим изображение штампа (водяного знака)
+     $stamp = @imagecreatefrompng('images/istamp.png');
+     if (!$stamp) $Result=ajStampNotBuilt;
+     else
+     {
+       // Строим изображение для наложения подписи
+       // $fname=$c_FileImg;
+       if ($FileExt=='gif')
+       {
+       
+         $im = @imagecreatefromgif($c_FileImg);
+         /*
+         $newImage='images/proba1.png';
+         @imagecolortransparent($c_FileImg,@imagecolorallocatealpha($c_FileImg, 0, 0, 0, 127));
+         @imagealphablending($c_FileImg, false);
+         @imagesavealpha($newImage, true);
+         */
+         //imagepng($im,$newImage);
+       }
+       elseif ($FileExt=='jpeg')
+       {
+         $im = @imagecreatefromjpeg($c_FileImg);
+       }
+       elseif ($FileExt=='jpg')
+       {
+         $im = @imagecreatefromjpeg($c_FileImg);
+       }
+       elseif ($FileExt=='png')
+       {
+         $im = @imagecreatefrompng($c_FileImg);
+       }
+       if (!$im) 
+       {
+         imagedestroy($stamp);
+         $Result=ajImageNotBuilt;
+       }
+       else
+       {
+         // Отмечаем, что произошла ошибка при наложении подписи на изображение
+         // $Result=ajErrFreshStamp;
+         
+         // Устанавливаем поля для штампа
+         $marge_right = 10;
+         $marge_bottom = 10;
+         // Определяем высоту/ширину штампа
+         $sx = imagesx($stamp);
+         $sy = imagesy($stamp);
+         // Копируем изображения штампа на фотографию с помощью смещения края
+         // и ширины фотографии для расчёта позиционирования штампа.
+         imagecopy($im,$stamp,
+           imagesx($im)-$sx-$marge_right,
+           imagesy($im)-$sy-$marge_bottom,0,0,
+           imagesx($stamp),imagesy($stamp));
+         // Выводим изображение в файл и освобождаем память
+         imagepng($im, 'images/proba.png');
+         imagedestroy($im);
+         imagedestroy($stamp);
+         // Отмечаем, что на фотографию наложена свежая подпись
+         $Result=ajIsFreshStamp;
+       }
+     }
+   }
+   //$Result=$Result.
+   //   '***'.$c_FileImg.'***'.$c_FileStamp.'***'.$c_FileProba.'***'.$FileExt.'***';
+   return $Result;
+}
+// ****************************************************************************
+// *                       Выделить расширение в имени файла                  *
+// ****************************************************************************
+function get_file_extension($file_name)
+{
+   return substr(strrchr($file_name,'.'),1);
+}
 // ******************************************************* ajaMakeStamp.php ***
