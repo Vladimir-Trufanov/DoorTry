@@ -8,7 +8,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  10.07.2021
-// Copyright © 2021 tve                              Посл.изменение: 16.08.2021
+// Copyright © 2021 tve                              Посл.изменение: 20.08.2021
 
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
@@ -32,8 +32,9 @@ try
    $c_FileStamp=prown\MakeCookie('FileStamp');
    $c_FileProba=prown\MakeCookie('FileProba');
    // Накладываем подпись на изображение, получаем сообщение результата работы
-   //$MakeStamp=ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba);
-   $MakeStamp=proba($c_FileImg);
+   $MakeStamp=ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba);
+   //$MakeStamp=probaPng($c_FileImg);
+   //$MakeStamp=proba($c_FileImg);
    // Передаем сообщение на страницу в браузере
    echo(prown\makeLabel($MakeStamp));  
    //echo('Приветище!');  
@@ -43,6 +44,30 @@ catch (E_EXCEPTION $e)
    DoorTryPage($e);
 }
 
+//
+function probaPng($c_FileImg)
+{
+   $Result=$c_FileImg.': увеличиваем и делаем прозрачным!';
+   $source_resource=@imagecreatefrompng($c_FileImg);
+   // Создаем изображение
+   $newwidth=400;
+   $newheight=400;
+   $oldwidth=300;
+   $oldheight=300;
+   $destination_resource=@imagecreatetruecolor($newwidth,$newheight);
+   
+   //Отключаем режим сопряжения цветов
+   imagealphablending($destination_resource, false);
+   //Включаем сохранение альфа канала
+   imagesavealpha($destination_resource, true);
+   //Ресайз
+   imagecopyresampled($destination_resource, $source_resource, 0, 0, 0, 0, 
+      $newwidth, $newheight, $oldwidth, $oldheight);
+   //Сохранение
+   $destination_path='images/probaPng.png';
+   imagepng($destination_resource, $destination_path);
+   return $Result;
+}
 //
 function proba($c_FileImg)
 {
@@ -113,11 +138,40 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba)
      {
        // Строим изображение для наложения подписи
        // $fname=$c_FileImg;
-       if ($FileExt=='gif')
+       if (($FileExt=='gif')or($FileExt=='png'))
        {
-       
-         $im = @imagecreatefromgif($c_FileImg);
          /*
+         // Определяем размеры изображения
+         $size = getimagesize($c_FileImg); 
+         $newwidth=$size[0];  $oldwidth=$newwidth;
+         $newheight=$size[1]; $oldheight=$newheight;
+         // Переводим gif к прозрачному png
+         $source_resource=@imagecreatefromgif($c_FileImg);
+         // Создаем новое изображение
+         $destination_resource=@imagecreatetruecolor($newwidth,$newheight);
+         // Отключаем режим сопряжения цветов
+         imagealphablending($destination_resource, false);
+         // Включаем сохранение альфа канала
+         imagesavealpha($destination_resource, true);
+         // Ресайз
+         imagecopyresampled($destination_resource, $source_resource, 0, 0, 0, 0, 
+            $newwidth, $newheight, $oldwidth, $oldheight);
+         // Сохранение
+         $destination_path='images/probaPng.png';
+         imagepng($destination_resource, $destination_path);
+
+         $im = @imagecreatefrompng($destination_path);
+         */
+         
+         $messa=makeTransparentImg($im,$c_FileImg,$FileExt);
+         /*
+         $im = @imagecreatefromgif($c_FileImg);
+         $newImage='images/proba1.png';
+         //Включаем сохранение альфа канала
+         imagesavealpha($im,true);
+         imagepng($im,$newImage);
+         */
+          /*
          $newImage='images/proba1.png';
          @imagecolortransparent($c_FileImg,@imagecolorallocatealpha($c_FileImg, 0, 0, 0, 127));
          @imagealphablending($c_FileImg, false);
@@ -125,18 +179,20 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba)
          */
          //imagepng($im,$newImage);
        }
-       elseif ($FileExt=='jpeg')
+       elseif (($FileExt=='jpeg')or($FileExt=='jpg'))
        {
          $im = @imagecreatefromjpeg($c_FileImg);
        }
-       elseif ($FileExt=='jpg')
-       {
-         $im = @imagecreatefromjpeg($c_FileImg);
-       }
-       elseif ($FileExt=='png')
-       {
-         $im = @imagecreatefrompng($c_FileImg);
-       }
+       //elseif ($FileExt=='jpg')
+       //{
+       //  $im = @imagecreatefromjpeg($c_FileImg);
+       //}
+       // elseif ($FileExt=='png')
+       //{
+       //  $im = @imagecreatefrompng($c_FileImg);
+       //}
+       
+       // 
        if (!$im) 
        {
          imagedestroy($stamp);
@@ -178,5 +234,46 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba)
 function get_file_extension($file_name)
 {
    return substr(strrchr($file_name,'.'),1);
+}
+// ****************************************************************************
+// *   Сделать требуемое gif или png изображение прозрачным png-изображением  *
+// *     (так как на 20/08/2021 tve не знает способа проверки прозрачности)   *
+// ****************************************************************************
+function makeTransparentImg(&$im,$c_FileImg,$FileExt)
+{
+   $im=null;
+   // Изначально считаем, преобразование к прозрачному виду было успешным
+   $Result=ajTransparentSuccess;
+   // Выдаем сообщение, если файл не в заданном формате
+   if (($FileExt<>'gif')and($FileExt<>'png')) 
+   { 
+     // Если недопустимое расширение файла, то возвращаем сообщение
+     $Result=ajInvalidTransparent;
+   } 
+   else
+   {
+      // Определяем размеры изображения
+      $size = getimagesize($c_FileImg); 
+      $newwidth=$size[0];  $oldwidth=$newwidth;
+      $newheight=$size[1]; $oldheight=$newheight;
+      // Выбираем изображение
+      if ($FileExt=='gif') $source_resource=@imagecreatefromgif($c_FileImg);
+      else $source_resource=@imagecreatefrompng($c_FileImg);
+      // Создаем новое изображение
+      $destination_resource=@imagecreatetruecolor($newwidth,$newheight);
+      // Отключаем режим сопряжения цветов
+      imagealphablending($destination_resource, false);
+      // Включаем сохранение альфа канала
+      imagesavealpha($destination_resource, true);
+      // Копируем изображение
+      imagecopyresampled($destination_resource, $source_resource, 0, 0, 0, 0, 
+         $newwidth, $newheight, $oldwidth, $oldheight);
+      // Сохраняем изображение в промежуточный файл png
+      $destination_path='images/probaPng.png';
+      imagepng($destination_resource, $destination_path);
+      // Извлекаем уже прозрачное изображение
+      $im = @imagecreatefrompng($destination_path);
+      return $Result;
+   }
 }
 // ******************************************************* ajaMakeStamp.php ***

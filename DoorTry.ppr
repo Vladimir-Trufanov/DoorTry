@@ -444,7 +444,7 @@ DoorTry
 				www\Pages\SignaPhotoOld\SignaPhoto.php
 				www\Pages\SignaPhotoOld\SignaPhotoHtml.php
 				www\Pages\SignaPhotoOld\SignaPhotoUpload.php
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -575,12 +575,12 @@ Caret=48,143
 TopLine=191
 Caret=10,196
 [www\Pages\SignaPhoto\ajaMakeStamp.php]
-TopLine=29
-Caret=4,36
+TopLine=171
+Caret=10,189
 [www\Pages\SignaPhoto\SignaPhotoDef.php]
-TopLine=20
-Caret=24,20
-Mark1=1,29
+TopLine=18
+Caret=46,42
+Mark1=1,31
 [www\Pages\SignaPhoto\SignaPhotoHtml.php]
 TopLine=15
 Caret=1,28
