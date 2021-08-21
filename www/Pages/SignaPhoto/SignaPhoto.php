@@ -9,73 +9,6 @@
 // v3.1, 05.08.2021                                   Автор:      Tруфанов В.Е. 
 // Copyright © 2021 tve                               Дата создания: 13.06.2021
 
-function proba()
-{
-$size = 300;
-$image=imagecreatetruecolor($size, $size);
-
-// создадим белый фон с чёрной рамкой
-$back = imagecolorallocate($image, 255, 255, 255);
-$border = imagecolorallocate($image, 0, 0, 0);
-imagefilledrectangle($image, 0, 0, $size - 1, $size - 1, $back);
-imagerectangle($image, 0, 0, $size - 1, $size - 1, $border);
-
-$yellow_x = 100;
-$yellow_y = 75;
-$red_x    = 120;
-$red_y    = 165;
-$blue_x   = 187;
-$blue_y   = 125;
-$radius   = 150;
-
-// создание цветов с альфа компонентом
-
-$yellow = imagecolorallocatealpha($image, 255, 255, 0, 50);
-$red    = imagecolorallocatealpha($image, 255, 0, 0, 50);
-$blue   = imagecolorallocatealpha($image, 0, 0, 255, 50);
-/*
-$yellow = imagecolorallocate($image, 255, 255, 0);
-$red    = imagecolorallocate($image, 255, 0, 0);
-$blue   = imagecolorallocate($image, 0, 0, 255);
-*/
-// рисование 3-х пересекающихся окружностей
-imagefilledellipse($image, $yellow_x, $yellow_y, $radius, $radius, $yellow);
-imagefilledellipse($image, $red_x, $red_y, $radius, $radius, $red);
-imagefilledellipse($image, $blue_x, $blue_y, $radius, $radius, $blue);
-
-// не забудьте вывести правильный заголовок!
-header('Content-Type: image/png');
-
-// и наконец, вывод
-imagepng($image);
-imagedestroy($image);
-
-}
-
-function proba1()
-{
-
-$photoImage = ImageCreateFromJPEG('photo.jpg');
-$logoImage = ImageCreateFromPNG('logo.png');
-ImageAlphaBlending($photoImage, true);
-$logoW = ImageSX($logoImage);
-$logoH = ImageSY($logoImage);
-ImageCopy($photoImage, $logoImage, 0, 0, 0, 0, $logoW, $logoH);
-header('Content-Type: image/png');
-ImageJPEG($photoImage); // output to browser
-/*
-
-
-
-*/
-ImageDestroy($photoImage);
-ImageDestroy($logoImage);
-//echo('Привет!');
-}
-
-
-
-
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
 $_WORKSPACE=iniWorkSpace();
@@ -104,11 +37,7 @@ try
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
    echo '<body>';
-
-   //proba();
-
-   
-   
+  
    echo '<div id="main">';
       echo '
       <nav class="navigation-menu js-nav-menu">
@@ -118,9 +47,8 @@ try
       <ul class="menu-list">
          <li class="menu-list__item" onclick="clickLoadPic()">Загрузить фотографию</li>
          <li class="menu-list__item" onclick="clickMakeStamp()">Наложить подпись на изображение</li>
-         <li class="menu-list__item">Menu Item 3</li>
-         <li class="menu-list__item">Menu Item 4</li>
-         <li class="menu-list__item">Menu Item 5</li>
+         <li class="menu-list__item">Переопределить параметры</li>
+         <li class="menu-list__item">Загрузить новую подпись</li>
       </ul>
       </nav>
       <script src="/Jsx/index.js"></script>
@@ -133,27 +61,24 @@ try
          </div>
       ';
       echo '
+         <div id="Stamp">
+         <img id="stamp" src="'.$c_FileStamp.'" alt="Изображение подписи">
+         </div>
+      ';
+      echo '
          <div id="Photo">
-         <img id="pic" src="'.$c_FileImg.'" alt="FileImg">
+         <img id="pic" src="'.$c_FileImg.'" alt="Фотография без подписи">
          </div>
       ';
       echo '
          <div id="Proba">
-         <!-- <img id="proba" src="'.$c_FileProba.'" alt="FileProba"> -->
-         <img id="proba" src="images/proba1.gif" alt="FileProba">
-         </div>
-      ';
-      echo '
-         <div id="Stamp">
-         <img id="stamp" src="'.$c_FileStamp.'" alt="FileStamp">
+         <img id="proba" src="'.$c_FileProba.'" alt="Подписанная фотография">
          </div>
       ';
    echo '</div>'; 
    echo '<div id="ViewGlobal">';
-   echo 'prown\ViewGlobal(avgCOOKIE)';
-   
+   prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgSERVER);
-   //prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgREQUEST);
    echo '</div>'; 
    

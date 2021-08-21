@@ -562,6 +562,7 @@ DoorTry
 4=www\Pages\SignaPhoto\SignaPhotoDef.php
 5=www\Pages\SignaPhoto\SignaPhotoHtml.php
 6=www\Pages\SignaPhotoOld\SignaPhotoUpload.php
+7=www\Pages\SignaPhoto\ajaLoadPic.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\ajaMakeStamp.php
@@ -569,14 +570,14 @@ Selected=www\Pages\SignaPhoto\ajaMakeStamp.php
 TopLine=69
 Caret=1,82
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=125
-Caret=48,143
+TopLine=45
+Caret=1,83
 [www\Pages\SignaPhoto\SignaPhoto.js]
 TopLine=191
 Caret=10,196
 [www\Pages\SignaPhoto\ajaMakeStamp.php]
-TopLine=171
-Caret=10,189
+TopLine=78
+Caret=43,97
 [www\Pages\SignaPhoto\SignaPhotoDef.php]
 TopLine=18
 Caret=46,42
@@ -587,3 +588,6 @@ Caret=1,28
 [www\Pages\SignaPhotoOld\SignaPhotoUpload.php]
 TopLine=35
 Caret=1,61
+[www\Pages\SignaPhoto\ajaLoadPic.php]
+TopLine=57
+Caret=1,74
