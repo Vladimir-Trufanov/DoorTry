@@ -45,7 +45,7 @@ try
       $image = $_FILES['image'];
       // Проверяем размер файла и если он превышает заданный размер
       // завершаем выполнение скрипта и выводим ошибку
-      $maxSize=400000;
+      $maxSize=2400000;
       if ($image['size']>$maxSize) 
       {
          echo(prown\makeLabel(ajErrBigFile).prown\makeLabel($maxSize));

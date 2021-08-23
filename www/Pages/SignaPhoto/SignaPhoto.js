@@ -139,6 +139,9 @@ function clickLoadPic()
             {
                printMessage('#result',ajErrorisLabel,data);
             }
+            // Перегружаем страницу с очисткой кэша для того, 
+            // чтобы обновить изображения и перекинуть кукисы
+            window.location.reload(true);
          },
          // Отмечаем  неуспешное выполнение аякс-запроса по причине:
          // 1) утерян файл скрипта.
@@ -194,7 +197,7 @@ function clickMakeStamp()
       success:function(data)
       {
          console.log(data);
-         //alert(data);
+         //alert('i '+data);
          // "---Файл превышает максимальный размер"
          if (isLabel(data,ajErrBigFile)) 
          {
@@ -209,6 +212,14 @@ function clickMakeStamp()
          else if (isLabel(data,ajIsFreshStamp)) 
          {
             printMessage('#result',ajIsFreshStamp);
+            // Перегружаем страницу с очисткой кэша для того, 
+            // чтобы обновить изображения и перекинуть кукисы
+            window.location.reload(true);
+            // А здесь - в будущем для каждого пользователя свой сохраняемый 
+            // файл в браузере использовать
+            // let elemi=document.getElementById('Proba');
+            // elemi.innerHTML=
+            //   '<img id="proba" src="images/proba.png" alt="Подписанная фотография">';     
          }
          // "Ошибка при наложении подписи на изображение"
          else 
