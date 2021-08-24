@@ -141,7 +141,7 @@ function clickLoadPic()
             }
             // Перегружаем страницу с очисткой кэша для того, 
             // чтобы обновить изображения и перекинуть кукисы
-            window.location.reload(true);
+            // window.location.reload(true);
          },
          // Отмечаем  неуспешное выполнение аякс-запроса по причине:
          // 1) утерян файл скрипта.
@@ -214,7 +214,7 @@ function clickMakeStamp()
             printMessage('#result',ajIsFreshStamp);
             // Перегружаем страницу с очисткой кэша для того, 
             // чтобы обновить изображения и перекинуть кукисы
-            window.location.reload(true);
+            // window.location.reload(true);
             // А здесь - в будущем для каждого пользователя свой сохраняемый 
             // файл в браузере использовать
             // let elemi=document.getElementById('Proba');
