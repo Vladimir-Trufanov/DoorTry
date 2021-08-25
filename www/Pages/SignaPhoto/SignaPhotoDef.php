@@ -25,7 +25,7 @@ define ("ajLostScriptFile",     "Утерян файл скрипта");
 define ("ajNoSetFile",          "Не установлен массив файлов и не загружены данные");
 define ("ajNoTempoFile",        "Не загружен файл во временное хранилище");
 define ("ajStampNotBuilt",      "Не строится изображение штампа (водяного знака)");
-define ("ajSuccessfully",       "Файл успешно загружен");     
+define ("ajSuccessfully",       "Файл успешно загружен ОТЛАДКА");     
 define ("ajTransparentSuccess", "Преобразование к прозрачному виду успешно"); 
 
 // Переменные JavaScript, соответствующие определениям в PHP
