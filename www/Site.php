@@ -18,7 +18,7 @@ echo '<div class="pageWrapper">';
    echo '<header>';
       echo '<div id="dVer">';
       //echo '<div id="res"></div>';
-      echo 'in'.$s_Counter.' v1.8';
+      echo 'in'.$s_Counter.' v1.9';
       echo '</div>';
       echo  '<h2>DoorTry - коллекционер ошибок</h2>';
       echo '<nav>'; TopMenu(); echo '</nav>';
@@ -48,7 +48,8 @@ echo '<div class="pageWrapper">';
       }
    // Подвал
    echo '<footer>';
-      echo '<div class="pLeft">Copyright © 2020 tve</div>';
+      $today = getdate();
+      echo '<div class="pLeft">Copyright © 2019-'.$today["year"].' tve</div>';
       echo '<div class="pRight">Контакты: <a href="mailto:tve58@inbox.ru">tve58@inbox.ru</a></div>';
    echo '</footer>';
 echo '</div>';
