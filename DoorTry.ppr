@@ -17,7 +17,7 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
@@ -514,14 +514,13 @@ DoorTry
 		www\get-info.php
 		www\includErrs.php
 		www\index.php
-		www\IniCurrStih.php
+		www\iniCurrStih.php
 		www\iniErrDoorTry.php
 		www\iniHtmlBegin.php
 		www\iniHtmlEnd.php
-		www\Inimem.php
-		www\IniMenu.php
-		www\IniTPhpPrown.php
-		www\iniWorkSpace.pho
+		www\iniMem.php
+		www\iniMenu.php
+		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
 		www\log.txt
 		www\logis.txt
@@ -539,40 +538,28 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\index.php
-2=www\IniMenu.php
-3=www\Site.php
-4=www\Pages\DoorTry\SimPrincip.php
-5=www\Inimem.php
-6=www\IniTPhpPrown.php
-7=www\Pages\TPhpPrown\bajty-v-kilo-kibi-mega-mebibajty-i-obratno.php
-8=..\TPhpPrown\TPhpPrown\RecalcSizeInfo.php
+2=www\iniCurrStih.php
+3=www\iniMem.php
+4=www\iniMenu.php
+5=www\iniTPhpPrown.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\bajty-v-kilo-kibi-mega-mebibajty-i-obratno.php
+Selected=www\iniMem.php
 [www\Main.php]
-TopLine=95
+TopLine=69
 Caret=65,97
 [www\index.php]
 TopLine=19
 Caret=1,1
-[www\IniMenu.php]
-TopLine=118
-Caret=6,146
-[www\Site.php]
-TopLine=17
-Caret=34,21
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=17
-Caret=6,40
-[www\Inimem.php]
-TopLine=31
+[www\iniCurrStih.php]
+TopLine=1
 Caret=1,1
-[www\IniTPhpPrown.php]
-TopLine=74
-Caret=1,93
-[www\Pages\TPhpPrown\bajty-v-kilo-kibi-mega-mebibajty-i-obratno.php]
-TopLine=66
-Caret=1,81
-[..\TPhpPrown\TPhpPrown\RecalcSizeInfo.php]
-TopLine=21
-Caret=1,41
+[www\iniMem.php]
+TopLine=15
+Caret=1,1
+[www\iniMenu.php]
+TopLine=1
+Caret=1,1
+[www\iniTPhpPrown.php]
+TopLine=9
+Caret=1,1
