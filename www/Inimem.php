@@ -43,6 +43,7 @@ $aNews=array
 $aStihi=array
 (            
    'Соревнование с хакерами' => 'sorevnovanie-s-hakerami',   
+   'Капризный старик'        => 'kapriznyj-starik',   
 );
 // Инициализируем переменные-кукисы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',0,tInt,true);          // число запросов сайта из браузера

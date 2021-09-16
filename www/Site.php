@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo  prown\getTranslit('Обслуживатель баз данных SQLite3').'<br>';
+            //echo  prown\getTranslit('Капризный старик').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost,$SiteProtocol);

@@ -477,7 +477,11 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-stihi
+		+stihi
+			+kapriznyj-starik
+				www\stihi\kapriznyj-starik\index.php
+				www\stihi\kapriznyj-starik\kapriznyj-starik.php
+				www\stihi\kapriznyj-starik\logis.txt
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
@@ -542,24 +546,40 @@ DoorTry
 3=www\iniMem.php
 4=www\iniMenu.php
 5=www\iniTPhpPrown.php
+6=www\stihi\MakeStihi.php
+7=www\Site.php
+8=www\stihi\kapriznyj-starik\kapriznyj-starik.php
+9=www\stihi\kapriznyj-starik\index.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\stihi\kapriznyj-starik\kapriznyj-starik.php
 [www\Main.php]
 TopLine=69
 Caret=65,97
 [www\index.php]
-TopLine=19
+TopLine=9
 Caret=1,1
 [www\iniCurrStih.php]
 TopLine=1
 Caret=1,1
 [www\iniMem.php]
-TopLine=15
-Caret=1,1
+TopLine=31
+Caret=50,46
 [www\iniMenu.php]
-TopLine=1
+TopLine=61
 Caret=1,1
 [www\iniTPhpPrown.php]
 TopLine=9
+Caret=1,1
+[www\stihi\MakeStihi.php]
+TopLine=7
+Caret=1,1
+[www\Site.php]
+TopLine=17
+Caret=15,33
+[www\stihi\kapriznyj-starik\kapriznyj-starik.php]
+TopLine=11
+Caret=29,20
+[www\stihi\kapriznyj-starik\index.php]
+TopLine=31
 Caret=1,1
