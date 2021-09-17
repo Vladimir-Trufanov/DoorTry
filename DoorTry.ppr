@@ -482,7 +482,7 @@ DoorTry
 				www\stihi\kapriznyj-starik\index.php
 				www\stihi\kapriznyj-starik\kapriznyj-starik.php
 				www\stihi\kapriznyj-starik\logis.txt
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -549,7 +549,7 @@ DoorTry
 6=www\stihi\MakeStihi.php
 7=www\Site.php
 8=www\stihi\kapriznyj-starik\kapriznyj-starik.php
-9=www\stihi\kapriznyj-starik\index.php
+9=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
 [Selected Project Files]
 Main=
 Selected=www\stihi\kapriznyj-starik\kapriznyj-starik.php
@@ -576,10 +576,10 @@ TopLine=7
 Caret=1,1
 [www\Site.php]
 TopLine=17
-Caret=15,33
+Caret=51,33
 [www\stihi\kapriznyj-starik\kapriznyj-starik.php]
-TopLine=11
-Caret=29,20
-[www\stihi\kapriznyj-starik\index.php]
-TopLine=31
-Caret=1,1
+TopLine=175
+Caret=61,185
+[www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
+TopLine=62
+Caret=1,72
