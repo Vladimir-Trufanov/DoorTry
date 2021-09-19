@@ -478,11 +478,22 @@ DoorTry
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
 		+stihi
-			+kapriznyj-starik
+			-kapriznyj-starik
+				www\stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
+				www\stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\stihi\kapriznyj-starik\index.php
 				www\stihi\kapriznyj-starik\kapriznyj-starik.php
 				www\stihi\kapriznyj-starik\logis.txt
-			+sorevnovanie-s-hakerami
+				www\stihi\kapriznyj-starik\Stihi.css
+				www\stihi\kapriznyj-starik\Styles.css
+				www\stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
+				www\stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
+			+proba
+				www\stihi\proba\index.php
+				www\stihi\proba\logis.txt
+				www\stihi\proba\Stihi.css
+				www\stihi\proba\Styles.css
+			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
 				www\stihi\sorevnovanie-s-hakerami\index.php
@@ -548,11 +559,13 @@ DoorTry
 5=www\iniTPhpPrown.php
 6=www\stihi\MakeStihi.php
 7=www\Site.php
-8=www\stihi\kapriznyj-starik\kapriznyj-starik.php
-9=www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+8=www\stihi\proba\index.php
+9=www\stihi\kapriznyj-starik\kapriznyj-starik.php
+10=www\stihi\proba\Stihi.css
+11=www\stihi\proba\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\stihi\kapriznyj-starik\kapriznyj-starik.php
+Selected=www\stihi\proba\index.php
 [www\Main.php]
 TopLine=69
 Caret=65,97
@@ -564,22 +577,28 @@ TopLine=1
 Caret=1,1
 [www\iniMem.php]
 TopLine=31
-Caret=50,46
+Caret=39,47
 [www\iniMenu.php]
-TopLine=61
+TopLine=37
 Caret=1,1
 [www\iniTPhpPrown.php]
 TopLine=9
 Caret=1,1
 [www\stihi\MakeStihi.php]
-TopLine=7
+TopLine=9
 Caret=1,1
 [www\Site.php]
 TopLine=17
-Caret=51,33
+Caret=43,33
+[www\stihi\proba\index.php]
+TopLine=80
+Caret=20,84
 [www\stihi\kapriznyj-starik\kapriznyj-starik.php]
-TopLine=175
-Caret=61,185
-[www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php]
-TopLine=62
-Caret=1,72
+TopLine=231
+Caret=4,242
+[www\stihi\proba\Stihi.css]
+TopLine=61
+Caret=1,69
+[www\stihi\proba\Styles.css]
+TopLine=33
+Caret=1,76

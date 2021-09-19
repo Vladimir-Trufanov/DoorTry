@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            echo  prown\getTranslit('за два месяца').'<br>';
+            echo  prown\getTranslit('проба').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost,$SiteProtocol);

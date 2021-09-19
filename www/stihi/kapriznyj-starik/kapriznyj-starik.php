@@ -184,9 +184,6 @@ function StihNiz()
    echo '<p class="stihstr">https://vk.com/@geniuspub-sumei-uvidet-to-chto-za</p>';
    echo '<p class="stihstr">https://stihi.ru/2014/01/26/2454</p>';
    echo '</div>';
-   
-   
-   https://vk.com/@geniuspub-sumei-uvidet-to-chto-za
 }
 
 function KapriznyjStarik($SubPage=NULL)
