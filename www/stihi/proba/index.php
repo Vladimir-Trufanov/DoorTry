@@ -117,24 +117,56 @@ function model11($widthLeft,$widthRight)
    </style>';
    // Выводим левый блок
    echo '<div class="blo1left">';
-   blockImg("za-dva-mesyaca_1800x1300.jpg","За два месяца");
+   echo blockImg("za-dva-mesyaca_1800x1300.jpg","За два месяца");
    echo '</div>';
    // Выводим правый блок
    echo '<div class="blo1right">';
-   blockTxt();
+   eche(blockTxt());
    echo '</div>';
 }
 function blockImg($src,$alt)
 {
-   echo '<img class="bImg" src="'.$src.'" alt="'.$alt.'">';
-   echo '<p class="pStrap">'.$alt.'</p>';
+   $Result=
+   '<img class="bImg" src="'.$src.'" alt="'.$alt.'">'.
+   '<p class="pStrap">'.$alt.'</p>';
+   return $Result;
+}
+function eche($stri)
+{
+   // Заставляем анализировать строку, как форматированную
+   $str='<pre>'.$stri.'</pre>';
+   // Заменяем переводы строк на '<br>'
+   $news='';
+   for ($i=0; $i<strlen($str); $i++)
+   {
+      if (ord($str[$i])==13) $news=$news.'<br>';
+      else if (ord($str[$i])==10) $news=$news;
+      else $news=$news.$str[$i];
+   }
+   // Вырезаем '<pre>' и '</pre>'
+   $str=substr($news,5,strlen($news)-11);
+   echo $str;
 }
 function blockTxt()
 {
+   $Result='
+      <div class="stihabz"><p class="stihstr">Cranky Old Man</p></div>
+      What do you see nurses? What do you see?
+      What are you thinking when you’re looking at me?
+      A cranky old man, not very wise,
+      <p class="stihstr">Uncertain of habit with faraway eyes?</p>
+      Who dribbles his food and makes no reply.
+      When you say in a loud voice ’I do wish you’d try!’
+   ';
+
+
+
+   /*
    echo '<div class="stihabz">';
    echo '<p class="stihstr">Cranky Old Man</p>';
    echo '</div>';
    echo '<div class="stihabz">';
+   
    echo '<p class="stihstr">What do you see nurses? What do you see?</p>';
    echo '<p class="stihstr">What are you thinking when you’re looking at me?</p>';
    echo '<p class="stihstr">A cranky old man, not very wise,</p>';
@@ -181,11 +213,15 @@ function blockTxt()
    echo '<p class="stihstr">Not a cranky old man.</p>';
    echo '<p class="stihstr">Look closer see ME!</p>';
    echo '</div>';
+   
    echo '<div class="stihabzPdp">';
    echo '<p class="stihstr">https://rg.ru/2013/02/28/starik.html</p>';
    echo '<p class="stihstr">https://vk.com/@geniuspub-sumei-uvidet-to-chto-za</p>';
    echo '<p class="stihstr">https://stihi.ru/2014/01/26/2454</p>';
+   
    echo '</div>';
+   */
+   return $Result;
 }
 
 // <!-- --> ****************************** index.php ().php ***

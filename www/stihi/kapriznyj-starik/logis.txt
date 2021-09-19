@@ -76,3 +76,5 @@ Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 
 ===Stihi===Sun, 19 Sep 2021 09:29:56 +0300 IP: ::1 URL: /stihi/kapriznyj-starik/ 
 Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 
+===Stihi===Sun, 19 Sep 2021 20:55:25 +0300 IP: ::1 URL: /stihi/kapriznyj-starik/ 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 

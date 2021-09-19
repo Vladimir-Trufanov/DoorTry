@@ -565,7 +565,7 @@ DoorTry
 11=www\stihi\proba\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\stihi\proba\index.php
+Selected=www\stihi\proba\Stihi.css
 [www\Main.php]
 TopLine=69
 Caret=65,97
@@ -579,7 +579,7 @@ Caret=1,1
 TopLine=31
 Caret=39,47
 [www\iniMenu.php]
-TopLine=37
+TopLine=49
 Caret=1,1
 [www\iniTPhpPrown.php]
 TopLine=9
@@ -591,14 +591,14 @@ Caret=1,1
 TopLine=17
 Caret=43,33
 [www\stihi\proba\index.php]
-TopLine=80
-Caret=20,84
+TopLine=145
+Caret=58,159
 [www\stihi\kapriznyj-starik\kapriznyj-starik.php]
-TopLine=231
+TopLine=239
 Caret=4,242
 [www\stihi\proba\Stihi.css]
-TopLine=61
-Caret=1,69
+TopLine=9
+Caret=28,32
 [www\stihi\proba\Styles.css]
-TopLine=33
+TopLine=50
 Caret=1,76
