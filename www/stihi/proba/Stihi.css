@@ -34,13 +34,13 @@
 .stihabzPdp 
 {
    text-align: center; 
-   margin: 3rem 0 0.5rem 0
+   /*margin: 3rem 0 0.5rem 0 */
 }
 .stihabzPdp p 
 {
 	font-size: 1.2rem;	
 	font-weight: bold;
-   margin: 0 0 0.5rem 0
+   /*margin: 0 0 0.5rem 0*/
 }
 
 /* Определяем фоны = background:transparent; */

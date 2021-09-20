@@ -491,8 +491,12 @@ DoorTry
 			+proba
 				www\stihi\proba\index.php
 				www\stihi\proba\logis.txt
+				www\stihi\proba\proba.php
 				www\stihi\proba\Stihi.css
+				www\stihi\proba\StihiCommon.php
 				www\stihi\proba\Styles.css
+				www\stihi\proba\utrennee-ozero_1280x420.jpg
+				www\stihi\proba\za-dva-mesyaca_1800x1300.jpg
 			-sorevnovanie-s-hakerami
 				www\stihi\sorevnovanie-s-hakerami\favicon.png
 				www\stihi\sorevnovanie-s-hakerami\idid.vb
@@ -559,13 +563,14 @@ DoorTry
 5=www\iniTPhpPrown.php
 6=www\stihi\MakeStihi.php
 7=www\Site.php
-8=www\stihi\proba\index.php
-9=www\stihi\kapriznyj-starik\kapriznyj-starik.php
-10=www\stihi\proba\Stihi.css
-11=www\stihi\proba\Styles.css
+8=www\stihi\proba\proba.php
+9=www\stihi\proba\Stihi.css
+10=www\stihi\proba\Styles.css
+11=www\stihi\proba\StihiCommon.php
+12=www\stihi\proba\index.php
 [Selected Project Files]
 Main=
-Selected=www\stihi\proba\Stihi.css
+Selected=www\stihi\proba\StihiCommon.php
 [www\Main.php]
 TopLine=69
 Caret=65,97
@@ -590,15 +595,19 @@ Caret=1,1
 [www\Site.php]
 TopLine=17
 Caret=43,33
-[www\stihi\proba\index.php]
-TopLine=145
-Caret=58,159
-[www\stihi\kapriznyj-starik\kapriznyj-starik.php]
-TopLine=239
-Caret=4,242
+[www\stihi\proba\proba.php]
+TopLine=1
+Caret=14,12
 [www\stihi\proba\Stihi.css]
-TopLine=9
-Caret=28,32
+TopLine=49
+Caret=28,43
 [www\stihi\proba\Styles.css]
-TopLine=50
-Caret=1,76
+TopLine=89
+Caret=3,123
+[www\stihi\proba\StihiCommon.php]
+TopLine=31
+Caret=84,37
+Mark1=5,55
+[www\stihi\proba\index.php]
+TopLine=74
+Caret=75,85

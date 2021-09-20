@@ -62,9 +62,10 @@ table
 h1
 {
    font-size: 2.2rem;  
-   margin: 2rem 0 2rem 0;
+   /*margin: 2rem 0 2rem 0;*/
    text-align: center; 
 }
+/*
 #Verh,#divSeparator,#Niz 
 {
    width:98%;
@@ -79,9 +80,11 @@ h1
 {
 	color: blue;
 }
+*/
 /**
  * Позиционируем первую (верхнюю) часть стихотворения с фотографией
 **/
+/*
 #StihVerh 
 {
    float:left;
@@ -97,9 +100,11 @@ h1
 {
    width:100%;
 }
+*/
 /**
  * Позиционируем вторую (нижнюю) часть стихотворения с фотографией
 **/
+/*
 #StihNiz 
 {
    float:right;
@@ -115,3 +120,4 @@ h1
 {
    width:100%;
 }
+*/
