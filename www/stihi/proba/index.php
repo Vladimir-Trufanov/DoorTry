@@ -61,20 +61,22 @@ echo '<body>';
 // Делаем разметку страницы для смартфона
 if ($SiteDevice==Mobile) 
 {   
-   Proba($CrankyOldMan,$btSsylki);  
+   Proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo);  
 }
 // Делаем разметку страницы для компьютера
 else
 { 
-   Proba($CrankyOldMan,$btSsylki);  
+   Proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo);  
 }
 echo '</body>'; 
 echo '</html>';
 
-function proba($CrankyOldMan,$btSsylki)
+function proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo)
 {
    echo '<div id="divTop">';
-   divTop();
+   modelImgTxtEO1('40%','60%',$KapriznyjStarik,
+      "den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
+      $KapriznyjStarikInfo,"evgenij-arhipenko_852x480.jpg",'Евгений Архипенко');
    echo '</div>';
    
    echo '<div id="divStrip">';

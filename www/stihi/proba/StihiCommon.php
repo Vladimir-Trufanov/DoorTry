@@ -53,4 +53,23 @@ function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
 }
 
 
+function modelImgTxtEO1($widthLeft,$widthRight,$txtLeft,
+   $imgFileTop,$imgCommTop,$txt,$imgFileBottom,$imgCommBottom)
+{
+   // Определяем ширины колонок
+   echo '<style type="text/css">
+   .blo1left {width:'.$widthLeft.';}
+   .blo1right{width:'.$widthRight.';}
+   </style>';
+   // Выводим левый блок
+   echo '<div class="blo1left">';
+   eche($txtLeft);
+   echo '</div>';
+   // Выводим правый блок
+   echo '<div class="blo1right">';
+   blockImg($imgFileTop,$imgCommTop);
+   echo $txt;
+   blockImg($imgFileBottom,$imgCommBottom);
+   echo '</div>';
+}
 // <!-- --> ****************************** StihiCommon.php ***
