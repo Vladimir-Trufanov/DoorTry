@@ -30,7 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            echo  prown\getTranslit('проба').'<br>';
+            echo  prown\getTranslit('Старая версия').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost,$SiteProtocol);

@@ -1,2 +1,11 @@
 [12-Dec-2020 23:54:19 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPageStarter/PageStarterClass.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 24
 [12-Dec-2020 23:55:44 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 117
+[22-Sep-2021 21:00:09 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/stihi/Stih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 50
+[22-Sep-2021 21:26:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''.'' (T_CONSTANT_ENCAPSED_STRING) in C:\DoorTry\www\stihi\MakeStihi.php on line 50
+[22-Sep-2021 21:27:01 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/stihi/proba/probai.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\stihi\MakeStihi.php on line 50
+[22-Sep-2021 21:29:53 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function Proba() in C:\DoorTry\www\stihi\MakeStihi.php:94
+Stack trace:
+#0 C:\DoorTry\www\Main.php(70): MakeStihi('C:\\DoorTry\\www', 'C:', 'Computer')
+#1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\stihi\MakeStihi.php on line 94

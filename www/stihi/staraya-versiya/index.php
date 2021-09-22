@@ -1,13 +1,13 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                  *** index.php ()***
+// PHP7/HTML5, EDGE/CHROME                  *** sorevnovanie-s-hakerami.php ***
 
 // ****************************************************************************
-// *                 Страница стихотворения ""                *
+// *          Страница стихотворения "Соревнование с хакерами"                *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
-//                                                   Дата создания:  16.09.2021
-// Copyright © 2021 tve                              Посл.изменение: 16.09.2021
+//                                                   Дата создания:  07.01.2019
+// Copyright © 2019 tve                              Посл.изменение: 28.01.2020
 
 // Инициализируем рабочее пространство: корневой каталог сайта и т.д.
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
@@ -21,9 +21,8 @@ $TPhpPrown=$SiteHost.'/TPhpPrown';
 require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPhpTools/TPageStarter/PageStarterClass.php";
-// Подключаем собственно модули страницы стихотворения
-require_once $SiteRoot."/stihi/proba/StihiCommon.php";   
-require_once $SiteRoot."/stihi/proba/proba.php";   
+// Подключаем собственно вкладываемое стихотворение, как функцию
+require_once $SiteRoot."/stihi/sorevnovanie-s-hakerami/sorevnovanie-s-hakerami.php";   
 // Выполняем запуск сессии и начальную инициализацию
 //session_start();
 $oStihiStarter = new PageStarter('Stihi');
@@ -42,7 +41,7 @@ echo '';
 echo "  gtag('config', 'UA-36748654-2');";
 echo '</script>';
 //
-echo '<title>Капризный старик</title>';
+echo '<title>Соревнование с хакерами</title>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<meta name="description" content="'.
          'Бежал ноябрь, работа шла '.
@@ -54,50 +53,20 @@ echo '<meta name="keywords" content="'.
          'стихи,всякие,разные,страсти,хакеры,защита,программирование,'.
          'девушки,встречи'.
      '">';
-echo '<link href="Styles.css" rel="stylesheet" type="text/css">';
 echo '<link href="Stihi.css"  rel="stylesheet" type="text/css">';
+echo '<link href="Styles.css" rel="stylesheet" type="text/css">';
 echo '</head>';
 echo '<body>';
 // Делаем разметку страницы для смартфона
 if ($SiteDevice==Mobile) 
 {   
-   Proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo);  
+   SorevnovanieSHakerami();  
 }
 // Делаем разметку страницы для компьютера
-else
-{ 
-   Proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo);  
+else 
+{   
+   SorevnovanieSHakerami();  
 }
 echo '</body>'; 
 echo '</html>';
-
-function proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo)
-{
-
-   echo '<h1>Капризный старик</h1>';
-   echo 'Авторский перевод стихотворения "Cranky Old Man" Евгением Архипенко';
-
-   echo '<div id="divTop">';
-   model1txe3imgTxtImg('40%','60%',$KapriznyjStarik,
-      "den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
-      $KapriznyjStarikInfo,"evgenij-arhipenko_852x480.jpg",'Евгений Архипенко');
-   echo '</div>';
-   
-   echo '<div id="divStrip">';
-   blockImg('utrennee-ozero_1280x420.jpg','Утреннее озеро в Реускула');
-   echo '</div>';
-   
-   echo '<div id="divBottom">';
-   modelImgTxtEO('60%','40%',"za-dva-mesyaca_1800x1300.jpg","За два месяца",$CrankyOldMan,$btSsylki);
-   echo '</div>';
-}
-function divTop()
-{
-   echo 'divTop! '; 
-   echo 
-      'divTop! divTop! divTop! divTop! divTop! divTop! divTop! divTop! '.
-      'divTop! divTop! divTop! divTop! divTop! divTop! divTop! divTop! '.
-      'divTop! divTop! divTop! divTop! divTop! divTop! divTop! divTop! '; 
-}
-
-// <!-- --> ****************************** index.php ().php ***
+// <!-- --> *********************************** sorevnovanie-s-hakerami.php ***

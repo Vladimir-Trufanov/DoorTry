@@ -256,7 +256,7 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -425,7 +425,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoDef.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
 				www\Pages\SignaPhoto\StyleReset.css
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -562,51 +562,35 @@ DoorTry
 4=www\iniMenu.php
 5=www\stihi\MakeStihi.php
 6=www\Site.php
-7=www\stihi\proba\Stihi.css
-8=www\stihi\proba\Styles.css
-9=www\stihi\proba\StihiCommon.php
-10=www\stihi\proba\index.php
-11=www\stihi\kapriznyj-starik\kapriznyj-starik.php
-12=www\stihi\proba\proba.php
+7=www\stihi\proba\proba.php
+8=www\stihi\proba\index.php
 [Selected Project Files]
 Main=
 Selected=www\stihi\proba\proba.php
 [www\Main.php]
-TopLine=69
-Caret=65,97
+TopLine=63
+Caret=62,70
 [www\index.php]
-TopLine=9
-Caret=1,1
+TopLine=23
+Caret=10,19
 [www\iniCurrStih.php]
 TopLine=1
 Caret=1,1
 [www\iniMem.php]
 TopLine=31
-Caret=39,47
+Caret=49,45
 [www\iniMenu.php]
-TopLine=49
+TopLine=121
 Caret=1,1
 [www\stihi\MakeStihi.php]
-TopLine=9
-Caret=1,1
+TopLine=77
+Caret=15,95
 [www\Site.php]
 TopLine=17
-Caret=43,33
-[www\stihi\proba\Stihi.css]
-TopLine=31
-Caret=1,59
-[www\stihi\proba\Styles.css]
-TopLine=95
-Caret=3,123
-[www\stihi\proba\StihiCommon.php]
-TopLine=46
-Caret=54,62
-[www\stihi\proba\index.php]
-TopLine=68
-Caret=23,77
-[www\stihi\kapriznyj-starik\kapriznyj-starik.php]
-TopLine=101
-Caret=1,129
+Caret=51,33
 [www\stihi\proba\proba.php]
-TopLine=93
-Caret=47,111
+TopLine=213
+Caret=41,228
+[www\stihi\proba\index.php]
+TopLine=67
+Caret=1,94

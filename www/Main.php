@@ -67,7 +67,7 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgGLOBALS);
 
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
-if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteDevice);
+if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteHost,$SiteDevice);
 // Если поступил запрос на пробную BaseMaker страницу, то запускаем её
 else if (prown\isComRequest('basemaker','list')) 
 {

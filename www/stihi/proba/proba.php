@@ -7,7 +7,11 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  16.09.2021
-// Copyright © 2021 tve                              Посл.изменение: 16.09.2021
+// Copyright © 2021 tve                              Посл.изменение: 22.09.2021
+
+
+function MakePage()
+{
 
 $KapriznyjStarik='
    Входя будить меня с утра,
@@ -210,5 +214,32 @@ $btSsylki='
    <p class="stihstr">https://stihi.ru/2014/01/26/2454</p>
    </div>
 ';
+
+
+
+
+
+   echo '<h1>Капризный старик</h1>';
+   echo 'Авторский перевод стихотворения "Cranky Old Man" Евгением Архипенко';
+
+   echo '<div id="divTop">';
+   model1txe3imgTxtImg('40%','60%',$KapriznyjStarik,
+      "stihi/proba/den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
+      $KapriznyjStarikInfo,"stihi/proba/evgenij-arhipenko_852x480.jpg",'Евгений Архипенко');
+   echo '</div>';
+   
+   echo '<div id="divStrip">';
+   blockImg('stihi/proba/utrennee-ozero_1280x420.jpg','Утреннее озеро в Реускула');
+   echo '</div>';
+   
+   echo '<div id="divBottom">';
+   modelImgTxtEO('60%','40%',"stihi/proba/za-dva-mesyaca_1800x1300.jpg","За два месяца",$CrankyOldMan,$btSsylki);
+   echo '</div>';
+}
+
+function SeoTag()
+{
+}
+
  
 // <!-- --> ****************************** proba.php ().php ***

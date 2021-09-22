@@ -41,7 +41,8 @@ $aNews=array
    //'Журнал Хакер'     => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
 );
 $aStihi=array
-(            
+( 
+   'Старая версия'           => 'staraya-versiya',
    'Соревнование с хакерами' => 'sorevnovanie-s-hakerami',   
    'Капризный старик'        => 'kapriznyj-starik',   
    'Проба'                   => 'proba',   
