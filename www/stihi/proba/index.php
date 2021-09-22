@@ -74,7 +74,7 @@ echo '</html>';
 function proba($CrankyOldMan,$btSsylki,$KapriznyjStarik,$KapriznyjStarikInfo)
 {
    echo '<div id="divTop">';
-   modelImgTxtEO1('40%','60%',$KapriznyjStarik,
+   model1txe3imgTxtImg('40%','60%',$KapriznyjStarik,
       "den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
       $KapriznyjStarikInfo,"evgenij-arhipenko_852x480.jpg",'Евгений Архипенко');
    echo '</div>';

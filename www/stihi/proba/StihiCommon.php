@@ -38,35 +38,35 @@ function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
 {
    // Определяем ширины колонок
    echo '<style type="text/css">
-   .blo1left {width:'.$widthLeft.';}
-   .blo1right{width:'.$widthRight.';}
+   #blo1left {width:'.$widthLeft.';float:left;}
+   #blo1right{width:'.$widthRight.';float:right;}
    </style>';
    // Выводим левый блок
-   echo '<div class="blo1left">';
+   echo '<div id="blo1left">';
    blockImg($imgFile,$imgComm);
    echo '</div>';
    // Выводим правый блок
-   echo '<div class="blo1right">';
+   echo '<div id="blo1right">';
    eche($txt1);
    echo $txt2;
    echo '</div>';
 }
 
 
-function modelImgTxtEO1($widthLeft,$widthRight,$txtLeft,
+function model1txe3imgTxtImg($widthLeft,$widthRight,$txtLeft,
    $imgFileTop,$imgCommTop,$txt,$imgFileBottom,$imgCommBottom)
 {
    // Определяем ширины колонок
    echo '<style type="text/css">
-   .blo1left {width:'.$widthLeft.';}
-   .blo1right{width:'.$widthRight.';}
+   #m1te3itxileft {width:'.$widthLeft.';float:left;}
+   #m1te3itxiright{width:'.$widthRight.';float:right;}
    </style>';
    // Выводим левый блок
-   echo '<div class="blo1left">';
+   echo '<div id="m1te3itxileft">';
    eche($txtLeft);
    echo '</div>';
    // Выводим правый блок
-   echo '<div class="blo1right">';
+   echo '<div id="m1te3itxiright">';
    blockImg($imgFileTop,$imgCommTop);
    echo $txt;
    blockImg($imgFileBottom,$imgCommBottom);

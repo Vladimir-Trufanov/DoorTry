@@ -56,17 +56,6 @@
 {
 	color:blue;
 }
-/**
- * Позиционируем модели
-**/
-.blo1left 
-{
-   float:left;
-}
-.blo1right
-{
-   float:right;
-}
 .bImg
 {
    width:100%;
