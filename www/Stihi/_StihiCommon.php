@@ -1,18 +1,20 @@
 <?php
-// PHP7/HTML5, EDGE/CHROME                  *** StihiCommon.php ***
+// PHP7/HTML5, EDGE/CHROME                              *** StihiCommon.php ***
 
 // ****************************************************************************
-// *                 Страница стихотворения ""                *
+// *           Общие функции обслуживания страниц стихотворений               *
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  16.09.2021
-// Copyright © 2021 tve                              Посл.изменение: 20.09.2021
+// Copyright © 2021 tve                              Посл.изменение: 23.09.2021
 
-function blockImg($src,$alt)
+function blockImg($src,$alt,$StihoPage)
 {
+   $path=dirStihi.$StihoPage.'/'.$src;
+   // echo $path.'<br>'; 
    $Result=
-   '<img class="bImg" src="'.$src.'" alt="'.$alt.'">'.
+   '<img class="bImg" src="'.$path.'" alt="'.$alt.'">'.
    '<p class="pStrap">'.$alt.'</p>';
    echo $Result;
 }
@@ -34,7 +36,7 @@ function eche($stri)
    echo $str;
 }
 
-function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='')
+function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='',$StihoPage)
 {
    // Определяем ширины колонок
    echo '<style type="text/css">
@@ -43,7 +45,7 @@ function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
    </style>';
    // Выводим левый блок
    echo '<div id="blo1left">';
-   blockImg($imgFile,$imgComm);
+   blockImg($imgFile,$imgComm,$StihoPage);
    echo '</div>';
    // Выводим правый блок
    echo '<div id="blo1right">';
@@ -52,9 +54,8 @@ function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
    echo '</div>';
 }
 
-
 function model1txe3imgTxtImg($widthLeft,$widthRight,$txtLeft,
-   $imgFileTop,$imgCommTop,$txt,$imgFileBottom,$imgCommBottom)
+   $imgFileTop,$imgCommTop,$txt,$imgFileBottom,$imgCommBottom,$StihoPage)
 {
    // Определяем ширины колонок
    echo '<style type="text/css">
@@ -67,9 +68,9 @@ function model1txe3imgTxtImg($widthLeft,$widthRight,$txtLeft,
    echo '</div>';
    // Выводим правый блок
    echo '<div id="m1te3itxiright">';
-   blockImg($imgFileTop,$imgCommTop);
+   blockImg($imgFileTop,$imgCommTop,$StihoPage);
    echo $txt;
-   blockImg($imgFileBottom,$imgCommBottom);
+   blockImg($imgFileBottom,$imgCommBottom,$StihoPage);
    echo '</div>';
 }
-// <!-- --> ****************************** StihiCommon.php ***
+// <!-- --> *********************************************** StihiCommon.php ***

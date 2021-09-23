@@ -256,7 +256,7 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -425,7 +425,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoDef.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
 				www\Pages\SignaPhoto\StyleReset.css
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -477,40 +477,42 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+stihi
-			+kapriznyj-starik
-				www\stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
-				www\stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
-				www\stihi\kapriznyj-starik\index.php
-				www\stihi\kapriznyj-starik\kapriznyj-starik.php
-				www\stihi\kapriznyj-starik\logis.txt
-				www\stihi\kapriznyj-starik\Stihi.css
-				www\stihi\kapriznyj-starik\Styles.css
-				www\stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
-				www\stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			+proba
-				www\stihi\proba\index.php
-				www\stihi\proba\logis.txt
-				www\stihi\proba\proba.php
-				www\stihi\proba\Stihi.css
-				www\stihi\proba\StihiCommon.php
-				www\stihi\proba\Styles.css
-				www\stihi\proba\utrennee-ozero_1280x420.jpg
-				www\stihi\proba\za-dva-mesyaca_1800x1300.jpg
+		+Stihi
+			-kapriznyj-starik
+				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
+				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
+				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
+				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
 			-sorevnovanie-s-hakerami
-				www\stihi\sorevnovanie-s-hakerami\favicon.png
-				www\stihi\sorevnovanie-s-hakerami\idid.vb
-				www\stihi\sorevnovanie-s-hakerami\index.php
-				www\stihi\sorevnovanie-s-hakerami\logis.txt
-				www\stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
-				www\stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
-				www\stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
-				www\stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
-				www\stihi\sorevnovanie-s-hakerami\Stihi.css
-				www\stihi\sorevnovanie-s-hakerami\Styles.css
-			www\stihi\MakeStihi.php
-			www\stihi\sorevnovanie-s-hakerami.png
-			www\stihi\Stih.php
+				www\Stihi\sorevnovanie-s-hakerami\favicon.png
+				www\Stihi\sorevnovanie-s-hakerami\idid.vb
+				www\Stihi\sorevnovanie-s-hakerami\index.php
+				www\Stihi\sorevnovanie-s-hakerami\logis.txt
+				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
+				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
+				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
+				www\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
+				www\Stihi\sorevnovanie-s-hakerami\Stihi.css
+				www\Stihi\sorevnovanie-s-hakerami\Styles.css
+			-staraya-versiya
+				www\Stihi\staraya-versiya\favicon.png
+				www\Stihi\staraya-versiya\idid.vb
+				www\Stihi\staraya-versiya\index.php
+				www\Stihi\staraya-versiya\logis.txt
+				www\Stihi\staraya-versiya\majskij-vecher-v-karelii_2416x503.jpg
+				www\Stihi\staraya-versiya\molody-dushoj_808x808.jpg
+				www\Stihi\staraya-versiya\raznye-vmeste_1280x850.jpg
+				www\Stihi\staraya-versiya\sorevnovanie-s-hakerami.php
+				www\Stihi\staraya-versiya\staraya-versiya.php
+				www\Stihi\staraya-versiya\Stihi.css
+				www\Stihi\staraya-versiya\Styles.css
+			www\Stihi\_MakeStihi.php
+			www\Stihi\_Stihi.css
+			www\Stihi\_StihiCommon.php
+			www\Stihi\_Styles.css
+			www\Stihi\kapriznyj-starik.php
+			www\Stihi\sorevnovanie-s-hakerami.png
+			www\Stihi\Stih.php
 		-Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -556,41 +558,37 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\index.php
-2=www\iniCurrStih.php
-3=www\iniMem.php
-4=www\iniMenu.php
-5=www\stihi\MakeStihi.php
-6=www\Site.php
-7=www\stihi\proba\proba.php
-8=www\stihi\proba\index.php
+1=www\iniCurrStih.php
+2=www\iniMem.php
+3=www\iniMenu.php
+4=www\Site.php
+5=www\stihi\_StihiCommon.php
+6=www\Stihi\_MakeStihi.php
+7=www\Stihi\kapriznyj-starik.php
 [Selected Project Files]
 Main=
-Selected=www\stihi\proba\proba.php
+Selected=www\iniMem.php
 [www\Main.php]
-TopLine=63
-Caret=62,70
-[www\index.php]
-TopLine=23
-Caret=10,19
+TopLine=41
+Caret=27,50
 [www\iniCurrStih.php]
 TopLine=1
 Caret=1,1
 [www\iniMem.php]
-TopLine=31
-Caret=49,45
+TopLine=37
+Caret=28,28
 [www\iniMenu.php]
-TopLine=121
+TopLine=89
 Caret=1,1
-[www\stihi\MakeStihi.php]
-TopLine=77
-Caret=15,95
 [www\Site.php]
-TopLine=17
-Caret=51,33
-[www\stihi\proba\proba.php]
-TopLine=213
-Caret=41,228
-[www\stihi\proba\index.php]
-TopLine=67
-Caret=1,94
+TopLine=21
+Caret=26,34
+[www\stihi\_StihiCommon.php]
+TopLine=28
+Caret=1,56
+[www\Stihi\_MakeStihi.php]
+TopLine=15
+Caret=29,45
+[www\Stihi\kapriznyj-starik.php]
+TopLine=45
+Caret=1,1

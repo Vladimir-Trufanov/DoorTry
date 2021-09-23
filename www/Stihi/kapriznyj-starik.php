@@ -10,10 +10,9 @@
 // Copyright © 2021 tve                              Посл.изменение: 22.09.2021
 
 
-function MakePage()
+function MakePage($StihoPage)
 {
-
-$KapriznyjStarik='
+   $KapriznyjStarik='
    Входя будить меня с утра,
    Кого ты видишь, медсестра?
    Старик капризный, по привычке
@@ -113,9 +112,9 @@ $KapriznyjStarik='
    Летящий в даль на карусели.
    Попробуй разглядеть МЕНЯ
    И, может, обо мне скорбя, ... найдёшь СЕБЯ!
-';
+   ';
 
-$KapriznyjStarikInfo='
+   $KapriznyjStarikInfo='
    В Рунете в последнее время весьма популярно одно стихотворение. Его 
    пересылают друзьям, копируют себе в блоги, дают свои варианты перевода. А 
    стихотворению предшествует небольшое предисловие. В "каноническом" варианте 
@@ -157,9 +156,9 @@ $KapriznyjStarikInfo='
    престарелых, в котором работала. Когда та преставилась, написанная ее рукой 
    копия стихотворения была передана газете Sunday Post. А потом родилась и 
    красивая сопроводительная история.
-';
+   ';
 
-$CrankyOldMan='
+   $CrankyOldMan='
    Cranky Old Man
    What do you see nurses? What do you see?
    What are you thinking when you’re looking at me?
@@ -205,41 +204,50 @@ $CrankyOldMan='
    And accept the stark fact that nothing can last.
    So open your eyes, people open and see.
    Not a cranky old man. Look closer see ME!
-';
+   ';
 
-$btSsylki='
+   $btSsylki='
    <div class="stihabzPdp">
    <p class="stihstr">https://rg.ru/2013/02/28/starik.html</p>
    <p class="stihstr">https://vk.com/@geniuspub-sumei-uvidet-to-chto-za</p>
    <p class="stihstr">https://stihi.ru/2014/01/26/2454</p>
    </div>
-';
-
-
-
-
+   ';
 
    echo '<h1>Капризный старик</h1>';
    echo 'Авторский перевод стихотворения "Cranky Old Man" Евгением Архипенко';
 
    echo '<div id="divTop">';
    model1txe3imgTxtImg('40%','60%',$KapriznyjStarik,
-      "stihi/proba/den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
-      $KapriznyjStarikInfo,"stihi/proba/evgenij-arhipenko_852x480.jpg",'Евгений Архипенко');
+      "den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
+      $KapriznyjStarikInfo,"evgenij-arhipenko_852x480.jpg",'Евгений Архипенко',$StihoPage);
    echo '</div>';
-   
+
    echo '<div id="divStrip">';
-   blockImg('stihi/proba/utrennee-ozero_1280x420.jpg','Утреннее озеро в Реускула');
+   blockImg('utrennee-ozero_1280x420.jpg','Утреннее озеро в Реускула',$StihoPage);
    echo '</div>';
    
    echo '<div id="divBottom">';
-   modelImgTxtEO('60%','40%',"stihi/proba/za-dva-mesyaca_1800x1300.jpg","За два месяца",$CrankyOldMan,$btSsylki);
+   modelImgTxtEO('60%','40%',"za-dva-mesyaca_1800x1300.jpg","За два месяца",$CrankyOldMan,$btSsylki,$StihoPage);
    echo '</div>';
 }
 
 function SeoTag()
 {
+   echo '<title>Капризный старик</title>';
+   echo '<meta name="description" content="
+      Открой глаза свои, сестрица.
+      Я не старик капризный, нет!
+      Любимый муж, отец и дед.
+      И мальчик маленький, доселе
+      В сиянье солнечного дня
+      Летящий в даль на карусели.
+      Попробуй разглядеть МЕНЯ
+      И, может, обо мне скорбя, ... найдёшь СЕБЯ!
+   ">';
+   echo '<meta name="keywords" content="
+      стихи,всякие,разные,капризный,старик,большая,прожитая,жизнь
+   ">';
 }
-
  
 // <!-- --> ****************************** proba.php ().php ***

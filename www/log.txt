@@ -9,3 +9,15 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\stihi\MakeStihi.php on line 94
+[23-Sep-2021 15:35:51 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '/' in C:\DoorTry\www\Site.php on line 38
+[23-Sep-2021 15:41:30 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function blockImg(), 2 passed in C:\DoorTry\www\stihi\StihiCommon.php on line 70 and exactly 3 expected in C:\DoorTry\www\stihi\StihiCommon.php:12
+Stack trace:
+#0 C:\DoorTry\www\stihi\StihiCommon.php(70): blockImg('stihi/proba/den...', '\xD0\x90\xD0\xBB\xD0\xB5\xD0\xBA\xD1\x81\xD0\xB0\xD0\xBD\xD0...')
+#1 C:\DoorTry\www\stihi\kapriznyj-starik\kapriznyj-starik.php(228): model1txe3imgTxtImg('40%', '60%', '\r\n   \xD0\x92\xD1\x85\xD0\xBE\xD0\xB4\xD1\x8F...', 'stihi/proba/den...', '\xD0\x90\xD0\xBB\xD0\xB5\xD0\xBA\xD1\x81\xD0\xB0\xD0\xBD\xD0...', '\r\n   \xD0\x92 \xD0\xA0\xD1\x83\xD0\xBD\xD0...', 'stihi/proba/evg...', '\xD0\x95\xD0\xB2\xD0\xB3\xD0\xB5\xD0\xBD\xD0\xB8\xD0\xB9 ...')
+#2 C:\DoorTry\www\stihi\MakeStihi.php(86): MakePage('kapriznyj-stari...')
+#3 C:\DoorTry\www\Main.php(70): MakeStihi('C:\\DoorTry\\www', 'C:', 'Computer')
+#4 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#5 {main}
+  thrown in C:\DoorTry\www\stihi\StihiCommon.php on line 12
+[23-Sep-2021 16:11:38 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '--' (T_DEC) in C:\DoorTry\www\stihi\StihiCommon.php on line 21
+[23-Sep-2021 20:43:46 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\DoorTry\www\iniMem.php on line 27
