@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  16.09.2021
-// Copyright © 2021 tve                              Посл.изменение: 23.09.2021
+// Copyright © 2021 tve                              Посл.изменение: 24.09.2021
 
 function blockImg($src,$alt,$StihoPage)
 {
@@ -40,17 +40,54 @@ function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
 {
    // Определяем ширины колонок
    echo '<style type="text/css">
-   #blo1left {width:'.$widthLeft.';float:left;}
-   #blo1right{width:'.$widthRight.';float:right;}
+   .blo1left {width:'.$widthLeft.';float:left;}
+   .blo1right{width:'.$widthRight.';float:right;}
    </style>';
    // Выводим левый блок
-   echo '<div id="blo1left">';
+   echo '<div class="blo1left">';
    blockImg($imgFile,$imgComm,$StihoPage);
    echo '</div>';
    // Выводим правый блок
-   echo '<div id="blo1right">';
+   echo '<div class="blo1right">';
    eche($txt1);
    echo $txt2;
+   echo '</div>';
+}
+
+/*
+function modelImgTxtEE($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='',$StihoPage)
+{
+   // Определяем ширины колонок
+   echo '<style type="text/css">
+   .ImgTxtEEleft {width:'.$widthLeft.';float:left;}
+   .ImgTxtEEright{width:'.$widthRight.';float:right;}
+   </style>';
+   // Выводим левый блок
+   echo '<div class="ImgTxtEEleft">';
+   blockImg($imgFile,$imgComm,$StihoPage);
+   echo '</div>';
+   // Выводим правый блок
+   echo '<div class="ImgTxtEEright">';
+   eche($txt1);
+   eche($txt2);
+   echo '</div>';
+}
+*/
+
+function modelTxtEImg($widthLeft,$widthRight,$txt='',$imgFile,$imgComm,$StihoPage)
+{
+   // Определяем ширины колонок
+   echo '<style type="text/css">
+   .TxtEImgleft {width:'.$widthLeft.';float:left;}
+   .TxtEImgright{width:'.$widthRight.';float:right;}
+   </style>';
+   // Выводим левый блок
+   echo '<div class="TxtEImgleft">';
+   eche($txt);
+   echo '</div>';
+   // Выводим правый блок
+   echo '<div class="TxtEImgright">';
+   blockImg($imgFile,$imgComm,$StihoPage);
    echo '</div>';
 }
 

@@ -7,7 +7,7 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 22.09.2021
+// Copyright © 2019 tve                              Посл.изменение: 24.09.2021
 
 function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
 {
@@ -15,9 +15,6 @@ function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
    $StihoPage=prown\getComRequest('stihi');  // sorevnovanie-s-hakerami
    $page='/Stihi/'.$StihoPage;
    // Запускаем сценарий стихотворения
-   if ($StihoPage=='staraya-versiya') Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   else
-   {
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
    require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
@@ -58,6 +55,5 @@ function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
    }
    echo '</body>'; 
    echo '</html>';
-   }
 }
 // ********************************************************** MakeStihi.php ***

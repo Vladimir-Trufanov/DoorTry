@@ -36,3 +36,9 @@ Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 
 ===Stihi===Wed, 22 Sep 2021 21:08:58 +0300 IP: ::1 URL: /stihi/staraya-versiya/ 
 Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 
+***Stihi***Fri, 24 Sep 2021 15:35:23 +0300 IP: ::1 URL: /Stihi/staraya-versiya/ 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 
+***Stihi***Fri, 24 Sep 2021 15:49:00 +0300 IP: ::1 URL: /Stihi/staraya-versiya/ 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 
+===Stihi===Fri, 24 Sep 2021 16:15:37 +0300 IP: ::1 URL: /Stihi/staraya-versiya/ 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 

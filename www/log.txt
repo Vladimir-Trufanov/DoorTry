@@ -21,3 +21,5 @@ Stack trace:
   thrown in C:\DoorTry\www\stihi\StihiCommon.php on line 12
 [23-Sep-2021 16:11:38 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '--' (T_DEC) in C:\DoorTry\www\stihi\StihiCommon.php on line 21
 [23-Sep-2021 20:43:46 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\DoorTry\www\iniMem.php on line 27
+[24-Sep-2021 15:35:31 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/sorevnovanie-s-hakerami.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Stihi\_MakeStihi.php on line 26
+[24-Sep-2021 16:15:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 70

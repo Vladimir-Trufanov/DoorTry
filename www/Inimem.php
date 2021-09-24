@@ -46,7 +46,6 @@ $aNews=array
 );
 $aStihi=array
 ( 
-   'Старая версия'           => 'staraya-versiya',
    'Соревнование с хакерами' => 'sorevnovanie-s-hakerami',   
    'Капризный старик'        => 'kapriznyj-starik',   
 );

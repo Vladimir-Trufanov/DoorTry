@@ -483,7 +483,7 @@ DoorTry
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
 				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\Stihi\sorevnovanie-s-hakerami\favicon.png
 				www\Stihi\sorevnovanie-s-hakerami\idid.vb
 				www\Stihi\sorevnovanie-s-hakerami\index.php
@@ -511,6 +511,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\_Styles.css
 			www\Stihi\kapriznyj-starik.php
+			www\Stihi\sorevnovanie-s-hakerami.php
 			www\Stihi\sorevnovanie-s-hakerami.png
 			www\Stihi\Stih.php
 		-Styles
@@ -565,9 +566,10 @@ DoorTry
 5=www\stihi\_StihiCommon.php
 6=www\Stihi\_MakeStihi.php
 7=www\Stihi\kapriznyj-starik.php
+8=www\Stihi\sorevnovanie-s-hakerami.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\Stihi\_MakeStihi.php
 [www\Main.php]
 TopLine=41
 Caret=27,50
@@ -575,8 +577,8 @@ Caret=27,50
 TopLine=1
 Caret=1,1
 [www\iniMem.php]
-TopLine=37
-Caret=28,28
+TopLine=31
+Caret=1,49
 [www\iniMenu.php]
 TopLine=89
 Caret=1,1
@@ -584,11 +586,14 @@ Caret=1,1
 TopLine=21
 Caret=26,34
 [www\stihi\_StihiCommon.php]
-TopLine=28
-Caret=1,56
+TopLine=23
+Caret=20,51
 [www\Stihi\_MakeStihi.php]
-TopLine=15
-Caret=29,45
+TopLine=9
+Caret=72,10
 [www\Stihi\kapriznyj-starik.php]
-TopLine=45
-Caret=1,1
+TopLine=214
+Caret=1,214
+[www\Stihi\sorevnovanie-s-hakerami.php]
+TopLine=75
+Caret=22,93
