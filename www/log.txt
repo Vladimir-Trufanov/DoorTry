@@ -23,3 +23,24 @@ Stack trace:
 [23-Sep-2021 20:43:46 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'isNichost' (T_STRING), expecting '(' in C:\DoorTry\www\iniMem.php on line 27
 [24-Sep-2021 15:35:31 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/sorevnovanie-s-hakerami.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Stihi\_MakeStihi.php on line 26
 [24-Sep-2021 16:15:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 70
+[24-Sep-2021 18:28:26 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/Stih.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 50
+[24-Sep-2021 21:11:46 Asia/Kuwait] PHP Fatal error:  Cannot redeclare Stih() (previously declared in C:\DoorTry\www\Stihi\Stih.php:12) in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 69
+[24-Sep-2021 21:24:47 Asia/Kuwait] PHP Fatal error:  Cannot redeclare Stih() (previously declared in C:\DoorTry\www\Stihi\Stih.php:12) in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 69
+[24-Sep-2021 21:26:46 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 51
+[24-Sep-2021 21:27:36 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function eche() in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php:67
+Stack trace:
+#0 C:\DoorTry\www\Site.php(40): Stih()
+#1 C:\DoorTry\www\Main.php(128): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 67
+[24-Sep-2021 21:37:06 Asia/Kuwait] PHP Fatal error:  Cannot redeclare Stih() (previously declared in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php:67) in C:\DoorTry\www\Stihi\kapriznyj-starik.php on line 22
+[24-Sep-2021 21:40:08 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '-', expecting '(' in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 65
+[24-Sep-2021 21:42:30 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function Stih() in C:\DoorTry\www\Site.php:40
+Stack trace:
+#0 C:\DoorTry\www\Main.php(129): require_once()
+#1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Site.php on line 40
+[24-Sep-2021 21:43:28 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '-', expecting '(' in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 65
+[24-Sep-2021 21:59:53 Asia/Kuwait] PHP Fatal error:  Cannot redeclare MakePage() (previously declared in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php:87) in C:\DoorTry\www\Stihi\kapriznyj-starik.php on line 246

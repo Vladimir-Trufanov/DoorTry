@@ -46,8 +46,11 @@ else
    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 }
 // Подключаем управление стихами и ранее выбранное стихотворение
+require_once $SiteRoot."/Stihi/_StihiCommon.php";   
 require_once $SiteRoot."/Stihi/_MakeStihi.php";   
-require_once $SiteRoot."/Stihi/Stih.php";  
+//require_once $SiteRoot."/Stihi/Stih.php";  
+//require_once $SiteRoot.'/Stihi/'.$c_StihoPage.'.php';   
+
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  

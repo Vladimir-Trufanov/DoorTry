@@ -49,11 +49,16 @@ function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
    echo '</div>';
    // Выводим правый блок
    echo '<div class="blo1right">';
-   eche($txt1);
+   eche($txt1.pri());
+   echo 'Привет';
    echo $txt2;
    echo '</div>';
 }
 
+function pri()
+{
+   return 'Приветик';
+}
 /*
 function modelImgTxtEE($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='',$StihoPage)
 {

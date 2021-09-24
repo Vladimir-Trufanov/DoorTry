@@ -1,16 +1,62 @@
-/** HTML5/CSS3, EDGE/CHROME                                   *** Stihi.css ***
+/** HTML5/CSS3, EDGE/CHROME                                  *** _Stihi.css ***
  *
  ******************************************************************************
- * doortry.ru     Отформатировать колонку со стихами для сайт сбора сообщений *
+ * doortry.ru     Форматировать страницы со стихами для сайта сбора сообщений *
  *                                                     об ошибках/исключениях *
  ******************************************************************************
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 18.09.2021
+ * Copyright © 2019 tve                              Посл.изменение: 24.09.2021
  * 
- *     !!! При написании комментария через 2 слэша не выполняются директивы CSS 
 **/
+
+/* Cбрасываем стили браузера */
+* {box-sizing: border-box;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, 
+q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, 
+dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
+footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+   margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
+{
+   display: block;
+}
+/* 
+  Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
+  списков и таблиц и определяем в процентах пространство документа 
+*/
+html
+{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+   font-size: 10px;
+}
+body 
+{
+   font-size: 1.8rem;  
+   width: 100%;
+   height: 100%;
+}
+table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1
+{
+   font-size: 2.2rem;  
+   text-align: center; 
+}
 .stihabzL 
 {
    text-align: left; 
@@ -23,24 +69,14 @@
 {
    text-align: center; 
 }
-.stihabz, .stihabzL, .stihabzR  
-{
-   /*margin: 0 0 2rem 0*/
-}
-.stihabz p, .stihabzL p, .stihabzR p  
-{
-   /*margin: 0 0 0.8rem 0*/
-}
 .stihabzPdp 
 {
    text-align: center; 
-   /*margin: 3rem 0 0.5rem 0 */
 }
 .stihabzPdp p 
 {
 	font-size: 1.2rem;	
 	font-weight: bold;
-   /*margin: 0 0 0.5rem 0*/
 }
 
 /* Определяем фоны = background:transparent; */
@@ -60,5 +96,4 @@
 {
    width:100%;
 }
-
-
+/* ********************************************************** _Stihi.css *** */

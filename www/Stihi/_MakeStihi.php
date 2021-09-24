@@ -13,7 +13,7 @@ function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
 {
    // Определяем каталог страницы со стихотворением (где есть index.php)
    $StihoPage=prown\getComRequest('stihi');  // sorevnovanie-s-hakerami
-   $page='/Stihi/'.$StihoPage;
+   //$page='/Stihi/'.$StihoPage;
    // Запускаем сценарий стихотворения
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
@@ -39,7 +39,6 @@ function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
  
    SeoTag();
 
-   echo '<link href="Stihi/_Styles.css" rel="stylesheet" type="text/css">';
    echo '<link href="Stihi/_Stihi.css"  rel="stylesheet" type="text/css">';
    echo '</head>';
    echo '<body>';

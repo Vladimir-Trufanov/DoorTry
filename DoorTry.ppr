@@ -477,43 +477,22 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+Stihi
+		-Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
 				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			+sorevnovanie-s-hakerami
-				www\Stihi\sorevnovanie-s-hakerami\favicon.png
-				www\Stihi\sorevnovanie-s-hakerami\idid.vb
-				www\Stihi\sorevnovanie-s-hakerami\index.php
-				www\Stihi\sorevnovanie-s-hakerami\logis.txt
+			-sorevnovanie-s-hakerami
 				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
-				www\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.php
-				www\Stihi\sorevnovanie-s-hakerami\Stihi.css
-				www\Stihi\sorevnovanie-s-hakerami\Styles.css
-			-staraya-versiya
-				www\Stihi\staraya-versiya\favicon.png
-				www\Stihi\staraya-versiya\idid.vb
-				www\Stihi\staraya-versiya\index.php
-				www\Stihi\staraya-versiya\logis.txt
-				www\Stihi\staraya-versiya\majskij-vecher-v-karelii_2416x503.jpg
-				www\Stihi\staraya-versiya\molody-dushoj_808x808.jpg
-				www\Stihi\staraya-versiya\raznye-vmeste_1280x850.jpg
-				www\Stihi\staraya-versiya\sorevnovanie-s-hakerami.php
-				www\Stihi\staraya-versiya\staraya-versiya.php
-				www\Stihi\staraya-versiya\Stihi.css
-				www\Stihi\staraya-versiya\Styles.css
 			www\Stihi\_MakeStihi.php
 			www\Stihi\_Stihi.css
 			www\Stihi\_StihiCommon.php
-			www\Stihi\_Styles.css
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
 			www\Stihi\sorevnovanie-s-hakerami.png
-			www\Stihi\Stih.php
 		-Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -567,33 +546,37 @@ DoorTry
 6=www\Stihi\_MakeStihi.php
 7=www\Stihi\kapriznyj-starik.php
 8=www\Stihi\sorevnovanie-s-hakerami.php
+9=www\Stihi\_Stihi.css
 [Selected Project Files]
 Main=
-Selected=www\Stihi\_MakeStihi.php
+Selected=www\stihi\_StihiCommon.php
 [www\Main.php]
-TopLine=41
-Caret=27,50
+TopLine=39
+Caret=3,52
 [www\iniCurrStih.php]
-TopLine=1
+TopLine=21
 Caret=1,1
 [www\iniMem.php]
-TopLine=31
-Caret=1,49
+TopLine=51
+Caret=13,62
 [www\iniMenu.php]
 TopLine=89
 Caret=1,1
 [www\Site.php]
 TopLine=21
-Caret=26,34
+Caret=12,41
 [www\stihi\_StihiCommon.php]
-TopLine=23
-Caret=20,51
+TopLine=49
+Caret=20,52
 [www\Stihi\_MakeStihi.php]
-TopLine=9
-Caret=72,10
+TopLine=3
+Caret=6,16
 [www\Stihi\kapriznyj-starik.php]
-TopLine=214
-Caret=1,214
+TopLine=3
+Caret=31,12
 [www\Stihi\sorevnovanie-s-hakerami.php]
-TopLine=75
-Caret=22,93
+TopLine=79
+Caret=1,74
+[www\Stihi\_Stihi.css]
+TopLine=47
+Caret=10,60

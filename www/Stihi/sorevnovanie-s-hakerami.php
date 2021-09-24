@@ -9,9 +9,7 @@
 //                                                   Дата создания:  13.01.2019
 // Copyright © 2019 tve                              Посл.изменение: 24.09.2021
 
-function MakePage($StihoPage)
-{
-   $StihVerh='
+define ("StihVerh",'
    Бежал ноябрь, работа шла
    В душе кипели страсти
    Жил на работе - чуть дыша
@@ -38,9 +36,9 @@ function MakePage($StihoPage)
 
    Горят, как факел, в голове
    Три милых буквы - "ич" и "е"...
-   ';
+');       
 
-   $StihNiz='
+define ("StihNiz",'
    Две недели пролетели
    Всё готово, как хотели
 
@@ -54,20 +52,44 @@ function MakePage($StihoPage)
    Всё те же буквы я возьму
    Идею вскрою свежую
    
-   ';
+');       
 
-   $StihPdp='
+define ("StihPdp",'
    <div class="stihabzPdp">
    <p class="stihstr">январь, кабинет</p>
    <p class="stihstr">июнь, 115 километр</p>
    <p class="stihstr">кабинет, декабрь, 1998</p>
    </div>
-   ';
-   
+'); 
+
+define ('Stih'.'sorevnovanie-s-hakerami','
+   <div class="stihabzPdp">
+   <p class="stihstr">январь, кабинет</p>
+   <p class="stihstr">июнь, 115 километр</p>
+   <p class="stihstr">кабинет, декабрь, 1998</p>
+   </div>
+'); 
+
+$stih='Привет Соревнование с хакерами<br>';
+
+function Stih1()
+{
+   echo '<!--noindex-->';
+   echo '<h2>Соревнование с хакерами</h2>';
+   eche(StihVerh);
+   eche(StihNiz);
+   echo '<!--/noindex-->';
+   echo '<div id="dImghStih">';
+   echo '<img id="ImghStih" src="stihi/sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';
+   echo '</div>';
+}      
+
+function MakePage($StihoPage)
+{
    echo '<h1>Соревнование с хакерами</h1>';
 
    echo '<div id="divTop">';
-   modelTxtEImg('40%','60%',$StihVerh,'molody-dushoj_808x808.jpg',"Молоды душой",$StihoPage);
+   modelTxtEImg('40%','60%',StihVerh,'molody-dushoj_808x808.jpg',"Молоды душой",$StihoPage);
    echo '</div>';
 
    echo '<div id="divStrip">';
@@ -75,7 +97,7 @@ function MakePage($StihoPage)
    echo '</div>';
    
    echo '<div id="divBottom">';
-   modelImgTxtEO('60%','40%',"raznye-vmeste_1280x850.jpg","Разные вместе",$StihNiz,$StihPdp,$StihoPage);
+   modelImgTxtEO('60%','40%',"raznye-vmeste_1280x850.jpg","Разные вместе",StihNiz,StihPdp,$StihoPage);
    echo '</div>';
 }
 

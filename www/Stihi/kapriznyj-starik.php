@@ -9,6 +9,20 @@
 //                                                   Дата создания:  16.09.2021
 // Copyright © 2021 tve                              Посл.изменение: 24.09.2021
 
+$stih='Привет Капризный старик<br>';
+
+function Stih()
+{
+   echo '<!--noindex-->';
+   echo '<h2>Капризный старик</h2>';
+   //eche(StihVerh);
+   //eche(StihNiz);
+   echo '<!--/noindex-->';
+   echo '<div id="dImghStih">';
+   echo '<img id="ImghStih" src="stihi/sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';
+   echo '</div>';
+}      
+
 function MakePage($StihoPage)
 {
    $KapriznyjStarik='

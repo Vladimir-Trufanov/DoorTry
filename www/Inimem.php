@@ -55,9 +55,11 @@ $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчи
 $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов     
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
+// Последняя просмотренная страница стихотворения
+//$c_StihoPage=prown\MakeCookie('StihoPage',"sorevnovanie-s-hakerami",tStr,true);   
 // Каталог текущего стихотворения - записи базы данных
-$c_CurrStih=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true); 
-$c_CurrStih=IniCurrStih($c_CurrStih);
+$c_StihoPage=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true); 
+$c_StihoPage=IniCurrStih($c_StihoPage);
 // Инициализируем параметры страницы сайта 
 if ($SiteDevice==Mobile) 
 {   
@@ -72,5 +74,6 @@ $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - ра�
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 $s_NameNews=prown\MakeSession('NameNews',NotNews,tStr,true);     // активированная лента новостей
+echo $c_StihoPage.'<br>';
 
 // ************************************************************* iniMem.php *** 
