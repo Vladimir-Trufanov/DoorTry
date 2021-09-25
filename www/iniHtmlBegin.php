@@ -72,9 +72,7 @@ if ($SiteDevice==Mobile)
 // Делаем страницу для компьютера
 else 
 {   
-   //echo '<script>alert("Computer");</script>';
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
-   echo '<link href="Styles/Stihi.css" rel="stylesheet">';
    echo '<link rel="stylesheet" href="SmartMenus/sm-doortry.css">';
 }
 // Определяем заданную ленту новостей

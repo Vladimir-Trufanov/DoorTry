@@ -37,7 +37,7 @@ function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
    echo "  gtag('config', 'UA-36748654-2');";
    echo '</script>';
  
-   SeoTag();
+   echo $SeoTag;
 
    echo '<link href="Stihi/_Stihi.css"  rel="stylesheet" type="text/css">';
    echo '</head>';
@@ -50,7 +50,7 @@ function MakeStihi($SiteRoot,$SiteHost,$SiteDevice)
    // Делаем разметку страницы для компьютера
    else
    { 
-      MakePage($StihoPage);  
+      echo $MakePage; 
    }
    echo '</body>'; 
    echo '</html>';

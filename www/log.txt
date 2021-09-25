@@ -44,3 +44,12 @@ Stack trace:
   thrown in C:\DoorTry\www\Site.php on line 40
 [24-Sep-2021 21:43:28 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '-', expecting '(' in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 65
 [24-Sep-2021 21:59:53 Asia/Kuwait] PHP Fatal error:  Cannot redeclare MakePage() (previously declared in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php:87) in C:\DoorTry\www\Stihi\kapriznyj-starik.php on line 246
+[25-Sep-2021 07:49:37 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\Stihi\_StihiCommon.php on line 54
+[25-Sep-2021 07:52:15 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$str' (T_VARIABLE) in C:\DoorTry\www\Stihi\_StihiCommon.php on line 54
+[25-Sep-2021 07:53:11 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function MakePage() in C:\DoorTry\www\Stihi\_MakeStihi.php:53
+Stack trace:
+#0 C:\DoorTry\www\Main.php(73): MakeStihi('C:\\DoorTry\\www', 'C:', 'Computer')
+#1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\Stihi\_MakeStihi.php on line 53
+[25-Sep-2021 08:16:02 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\Stihi\sorevnovanie-s-hakerami.php on line 39

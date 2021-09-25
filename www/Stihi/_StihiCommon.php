@@ -12,11 +12,10 @@
 function blockImg($src,$alt,$StihoPage)
 {
    $path=dirStihi.$StihoPage.'/'.$src;
-   // echo $path.'<br>'; 
    $Result=
    '<img class="bImg" src="'.$path.'" alt="'.$alt.'">'.
    '<p class="pStrap">'.$alt.'</p>';
-   echo $Result;
+   return $Result;
 }
 
 function eche($stri)
@@ -33,32 +32,30 @@ function eche($stri)
    }
    // Вырезаем '<pre>' и '</pre>'
    $str=substr($news,5,strlen($news)-11);
-   echo $str;
+   return $str;
 }
 
 function modelImgTxtEO($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='',$StihoPage)
 {
    // Определяем ширины колонок
-   echo '<style type="text/css">
-   .blo1left {width:'.$widthLeft.';float:left;}
-   .blo1right{width:'.$widthRight.';float:right;}
-   </style>';
+   $s1=
+   '<style type="text/css">'.
+   '.blo1left {width:'.$widthLeft.';float:left;}'.
+   '.blo1right{width:'.$widthRight.';float:right;}'.
+   '</style>';
    // Выводим левый блок
-   echo '<div class="blo1left">';
-   blockImg($imgFile,$imgComm,$StihoPage);
-   echo '</div>';
+   $s2=
+   '<div class="blo1left">'.
+   blockImg($imgFile,$imgComm,$StihoPage).
+   '</div>';
    // Выводим правый блок
-   echo '<div class="blo1right">';
-   eche($txt1.pri());
-   echo 'Привет';
-   echo $txt2;
-   echo '</div>';
+   $s3=
+   '<div class="blo1right">'.
+   eche($txt1).$txt2.
+   '</div>';
+   return $s1.$s2.$s3;
 }
 
-function pri()
-{
-   return 'Приветик';
-}
 /*
 function modelImgTxtEE($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='',$StihoPage)
 {
@@ -82,18 +79,22 @@ function modelImgTxtEE($widthLeft,$widthRight,$imgFile,$imgComm,$txt1='',$txt2='
 function modelTxtEImg($widthLeft,$widthRight,$txt='',$imgFile,$imgComm,$StihoPage)
 {
    // Определяем ширины колонок
-   echo '<style type="text/css">
+   $s1=
+   '<style type="text/css">
    .TxtEImgleft {width:'.$widthLeft.';float:left;}
    .TxtEImgright{width:'.$widthRight.';float:right;}
    </style>';
    // Выводим левый блок
-   echo '<div class="TxtEImgleft">';
-   eche($txt);
-   echo '</div>';
+   $s2=
+   '<div class="TxtEImgleft">'.
+   eche($txt).
+   '</div>';
    // Выводим правый блок
-   echo '<div class="TxtEImgright">';
-   blockImg($imgFile,$imgComm,$StihoPage);
-   echo '</div>';
+   $s3=
+   '<div class="TxtEImgright">'.
+   blockImg($imgFile,$imgComm,$StihoPage).
+   '</div>';
+   return $s1.$s2.$s3;
 }
 
 function model1txe3imgTxtImg($widthLeft,$widthRight,$txtLeft,

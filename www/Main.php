@@ -49,7 +49,8 @@ else
 require_once $SiteRoot."/Stihi/_StihiCommon.php";   
 require_once $SiteRoot."/Stihi/_MakeStihi.php";   
 //require_once $SiteRoot."/Stihi/Stih.php";  
-//require_once $SiteRoot.'/Stihi/'.$c_StihoPage.'.php';   
+$StihoPage=$c_StihoPage;
+require_once $SiteRoot.'/Stihi/'.$c_StihoPage.'.php';   
 
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы

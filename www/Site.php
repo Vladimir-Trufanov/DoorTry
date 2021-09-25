@@ -37,8 +37,7 @@ echo '<div class="pageWrapper">';
             PageContent($SiteHost,$SiteProtocol);
          echo '</article>';
          echo '<aside class="RightBar">';
-            //Stih();
-         //echo $stih;
+         echo $stih;
          echo '</aside>';
       echo '</div>';
       // Новости

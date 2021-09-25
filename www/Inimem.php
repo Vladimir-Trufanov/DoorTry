@@ -74,6 +74,6 @@ $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - ра�
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 $s_NameNews=prown\MakeSession('NameNews',NotNews,tStr,true);     // активированная лента новостей
-echo $c_StihoPage.'<br>';
+//echo $c_StihoPage.'<br>';
 
 // ************************************************************* iniMem.php *** 
