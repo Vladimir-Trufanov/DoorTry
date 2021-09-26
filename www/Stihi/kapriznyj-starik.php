@@ -7,25 +7,9 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  16.09.2021
-// Copyright © 2021 tve                              Посл.изменение: 24.09.2021
+// Copyright © 2021 tve                              Посл.изменение: 25.09.2021
 
-$stih='Привет Капризный старик<br>';
-
-function Stih()
-{
-   echo '<!--noindex-->';
-   echo '<h2>Капризный старик</h2>';
-   //eche(StihVerh);
-   //eche(StihNiz);
-   echo '<!--/noindex-->';
-   echo '<div id="dImghStih">';
-   echo '<img id="ImghStih" src="stihi/sorevnovanie-s-hakerami.png" alt="sorevnovanie-s-hakerami.png">';
-   echo '</div>';
-}      
-
-function MakePage($StihoPage)
-{
-   $KapriznyjStarik='
+$KapriznyjStarik='
    Входя будить меня с утра,
    Кого ты видишь, медсестра?
    Старик капризный, по привычке
@@ -125,9 +109,9 @@ function MakePage($StihoPage)
    Летящий в даль на карусели.
    Попробуй разглядеть МЕНЯ
    И, может, обо мне скорбя, ... найдёшь СЕБЯ!
-   ';
+';
 
-   $KapriznyjStarikInfo='
+$KapriznyjStarikInfo='
    В Рунете в последнее время весьма популярно одно стихотворение. Его 
    пересылают друзьям, копируют себе в блоги, дают свои варианты перевода. А 
    стихотворению предшествует небольшое предисловие. В "каноническом" варианте 
@@ -171,7 +155,7 @@ function MakePage($StihoPage)
    красивая сопроводительная история.
    ';
 
-   $CrankyOldMan='
+$CrankyOldMan='
    Cranky Old Man
    What do you see nurses? What do you see?
    What are you thinking when you’re looking at me?
@@ -219,7 +203,7 @@ function MakePage($StihoPage)
    Not a cranky old man. Look closer see ME!
    ';
 
-   $btSsylki='
+$btSsylki='
    <div class="stihabzPdp">
    <p class="stihstr">https://rg.ru/2013/02/28/starik.html</p>
    <p class="stihstr">https://vk.com/@geniuspub-sumei-uvidet-to-chto-za</p>
@@ -227,28 +211,33 @@ function MakePage($StihoPage)
    </div>
    ';
 
-   echo '<h1>Капризный старик</h1>';
-   echo 'Авторский перевод стихотворения "Cranky Old Man" Евгением Архипенко';
+$stih=
+   '<!--noindex-->'.
+   '<h2>Капризный старик</h2>'.
+   eche($KapriznyjStarik).
+   '<!--/noindex-->'.
+   '<div id="dImghStih">'.
+   '<img id="ImghStih" src="Stihi/'.$StihoPage.'/'.$StihoPage.'.png" alt="'.$StihoPage.'.png">'.
+   '</div>';
 
-   echo '<div id="divTop">';
+$MakePage=
+   '<h1>Капризный старик</h1>'.
+   'Авторский перевод стихотворения "Cranky Old Man" Евгением Архипенко'.
+   '<div id="divTop">'.
    model1txe3imgTxtImg('40%','60%',$KapriznyjStarik,
       "den-rozhdeniya-arishi_1005x800.jpg",'Александр Шилов "В день рождения Ариши"',
-      $KapriznyjStarikInfo,"evgenij-arhipenko_852x480.jpg",'Евгений Архипенко',$StihoPage);
-   echo '</div>';
+      $KapriznyjStarikInfo,"evgenij-arhipenko_852x480.jpg",'Евгений Архипенко',$StihoPage).
+   '</div>'.
+   '<div id="divStrip">'.
+   blockImg('utrennee-ozero_1280x420.jpg','Утреннее озеро в Реускула',$StihoPage).
+   '</div>'.
+   '<div id="divBottom">'.
+   modelImgTxtEO('60%','40%',"za-dva-mesyaca_1800x1300.jpg","За два месяца",$CrankyOldMan,$btSsylki,$StihoPage).
+   '</div>';
 
-   echo '<div id="divStrip">';
-   blockImg('utrennee-ozero_1280x420.jpg','Утреннее озеро в Реускула',$StihoPage);
-   echo '</div>';
-   
-   echo '<div id="divBottom">';
-   modelImgTxtEO('60%','40%',"za-dva-mesyaca_1800x1300.jpg","За два месяца",$CrankyOldMan,$btSsylki,$StihoPage);
-   echo '</div>';
-}
-
-function SeoTag()
-{
-   echo '<title>Капризный старик</title>';
-   echo '<meta name="description" content="
+$SeoTag='
+   <title>Капризный старик</title>
+   <meta name="description" content="
       Открой глаза свои, сестрица.
       Я не старик капризный, нет!
       Любимый муж, отец и дед.
@@ -257,10 +246,9 @@ function SeoTag()
       Летящий в даль на карусели.
       Попробуй разглядеть МЕНЯ
       И, может, обо мне скорбя, ... найдёшь СЕБЯ!
-   ">';
-   echo '<meta name="keywords" content="
+   ">
+   <meta name="keywords" content="
       стихи,всякие,разные,капризный,старик,большая,прожитая,жизнь
    ">';
-}
  
 // <!-- --> ****************************************** kapriznyj-starik.php ***

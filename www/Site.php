@@ -31,7 +31,6 @@ echo '<div class="pageWrapper">';
             MakeQrcode();
             MakeH1();
             //echo  prown\getTranslit('Старая версия').'<br>';
-            echo dirStihi.'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost,$SiteProtocol);

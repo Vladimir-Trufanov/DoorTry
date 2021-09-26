@@ -47,11 +47,8 @@ else
 }
 // Подключаем управление стихами и ранее выбранное стихотворение
 require_once $SiteRoot."/Stihi/_StihiCommon.php";   
-require_once $SiteRoot."/Stihi/_MakeStihi.php";   
-//require_once $SiteRoot."/Stihi/Stih.php";  
 $StihoPage=$c_StihoPage;
 require_once $SiteRoot.'/Stihi/'.$c_StihoPage.'.php';   
-
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
@@ -71,7 +68,8 @@ if ($c_PersName<>$c_UserName)
 //\prown\ViewGlobal(avgGLOBALS);
 
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
-if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteHost,$SiteDevice);
+//if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteHost,$SiteDevice);
+if (IsSet($_REQUEST['stihi'])) require_once $SiteRoot."/Stihi/_MakeStihi.php";
 // Если поступил запрос на пробную BaseMaker страницу, то запускаем её
 else if (prown\isComRequest('basemaker','list')) 
 {

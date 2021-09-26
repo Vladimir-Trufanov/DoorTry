@@ -101,19 +101,23 @@ function model1txe3imgTxtImg($widthLeft,$widthRight,$txtLeft,
    $imgFileTop,$imgCommTop,$txt,$imgFileBottom,$imgCommBottom,$StihoPage)
 {
    // Определяем ширины колонок
-   echo '<style type="text/css">
-   #m1te3itxileft {width:'.$widthLeft.';float:left;}
-   #m1te3itxiright{width:'.$widthRight.';float:right;}
-   </style>';
+   $s1=
+   '<style type="text/css">'.
+   '#m1te3itxileft {width:'.$widthLeft.';float:left;}'.
+   '#m1te3itxiright{width:'.$widthRight.';float:right;}'.
+   '</style>';
    // Выводим левый блок
-   echo '<div id="m1te3itxileft">';
-   eche($txtLeft);
-   echo '</div>';
+   $s2=
+   '<div id="m1te3itxileft">'.
+   eche($txtLeft).
+   '</div>';
    // Выводим правый блок
-   echo '<div id="m1te3itxiright">';
-   blockImg($imgFileTop,$imgCommTop,$StihoPage);
-   echo $txt;
-   blockImg($imgFileBottom,$imgCommBottom,$StihoPage);
-   echo '</div>';
+   $s3=
+   '<div id="m1te3itxiright">'.
+   blockImg($imgFileTop,$imgCommTop,$StihoPage).
+   $txt.
+   blockImg($imgFileBottom,$imgCommBottom,$StihoPage).
+   '</div>';
+   return $s1.$s2.$s3;
 }
 // <!-- --> *********************************************** StihiCommon.php ***

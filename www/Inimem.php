@@ -39,7 +39,7 @@ $aNews=array
    'Google Новости'             => 'http://news.google.com/news?hl=ru&um=1&q='.
       '%D0%D2%C1%D7%C1+%C9%CE%D7%C1%CC%C9%C4%CF%D7&ie=windows-1251&output=rss',
    'Что достойно перевода!'     => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
-   'Гороскопы для женщин'       => 'http://www.diskoteteka.org/blog/rss/',            
+   'Русская весна'              => 'http://rusvesna.su/rss.xml',            
    'Новости Mail.ru'            => 'http://news.mail.ru/rss/',
    //'Столица на Онего'         => 'http://www.stolica.onego.ru/rss.php/feed.xml',  
    //'Журнал Хакер'     => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
@@ -55,8 +55,6 @@ $c_PersEntry=prown\MakeCookie('PersEntry',0,tInt,true);          // счетчи
 $c_PersName=prown\MakeCookie('PersName',"Гость",tStr,true);      // логин посетителя
 $с_ResCookie=prown\MakeCookie('ResCookie',rciCookiNo,tInt,true); // порядок использования кукисов     
 $c_UserName=prown\MakeCookie('UserName',"Гость",tStr,true);      // логин авторизованного посетителя
-// Последняя просмотренная страница стихотворения
-//$c_StihoPage=prown\MakeCookie('StihoPage',"sorevnovanie-s-hakerami",tStr,true);   
 // Каталог текущего стихотворения - записи базы данных
 $c_StihoPage=prown\MakeCookie('CurrStih',"sorevnovanie-s-hakerami",tStr,true); 
 $c_StihoPage=IniCurrStih($c_StihoPage);
@@ -74,6 +72,5 @@ $p_NewsView=prown\MakeParm('NewsView',true,tBool,true);          // true - ра�
 // Инициализируем сессионные переменные
 $s_Counter=prown\MakeSession('Counter',0,tInt,true);             // посещения за сессию
 $s_NameNews=prown\MakeSession('NameNews',NotNews,tStr,true);     // активированная лента новостей
-//echo $c_StihoPage.'<br>';
 
 // ************************************************************* iniMem.php *** 

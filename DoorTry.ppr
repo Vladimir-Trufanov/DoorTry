@@ -487,18 +487,17 @@ DoorTry
 				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
+				www\Stihi\sorevnovanie-s-hakerami\sorevnovanie-s-hakerami.png
 			www\Stihi\_MakeStihi.php
 			www\Stihi\_Stihi.css
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-			www\Stihi\sorevnovanie-s-hakerami.png
 		-Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
 			www\Styles\NoColNews.css
-			www\Styles\Stihi.css
 			www\Styles\Styles.css
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
@@ -540,39 +539,15 @@ DoorTry
 0=www\Main.php
 1=www\iniCurrStih.php
 2=www\iniMem.php
-3=www\iniMenu.php
-4=www\Site.php
-5=www\stihi\_StihiCommon.php
-6=www\Stihi\_MakeStihi.php
-7=www\Stihi\kapriznyj-starik.php
-8=www\Stihi\sorevnovanie-s-hakerami.php
 [Selected Project Files]
 Main=
-Selected=www\Stihi\sorevnovanie-s-hakerami.php
+Selected=www\iniMem.php
 [www\Main.php]
-TopLine=115
-Caret=25,52
+TopLine=111
+Caret=1,52
 [www\iniCurrStih.php]
 TopLine=21
 Caret=1,1
 [www\iniMem.php]
-TopLine=57
-Caret=3,77
-[www\iniMenu.php]
-TopLine=89
-Caret=1,1
-[www\Site.php]
-TopLine=29
-Caret=10,40
-[www\stihi\_StihiCommon.php]
-TopLine=37
-Caret=1,38
-[www\Stihi\_MakeStihi.php]
-TopLine=1
-Caret=15,15
-[www\Stihi\kapriznyj-starik.php]
-TopLine=3
-Caret=31,12
-[www\Stihi\sorevnovanie-s-hakerami.php]
-TopLine=37
-Caret=23,67
+TopLine=23
+Caret=63,42
