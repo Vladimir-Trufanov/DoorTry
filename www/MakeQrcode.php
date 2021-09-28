@@ -25,7 +25,7 @@ function MakeQrcode()
    <?php
     
    // 2 штрих-код
-   include "QrCode/qrlib.php";
+   include "qrcode/qrlib.php";
    //QRcode::png("https://doortry.ru/Stihi/sorevnovanie-s-hakerami/",
    //"sorevnovanie-s-hakerami.png","L",4,4);
    //QRcode::png("https://doortry.ru - Обработчик ошибок и исключений","doortry.png","L",4,4);

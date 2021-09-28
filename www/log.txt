@@ -60,3 +60,4 @@ Stack trace:
 [25-Sep-2021 21:23:18 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/kapriznyj-starik.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Stihi\_MakeStihi.php on line 17
 [25-Sep-2021 21:24:13 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''<meta name="keywords" content' (T_CONSTANT_ENCAPSED_STRING) in C:\DoorTry\www\Stihi\kapriznyj-starik.php on line 260
 [26-Sep-2021 02:24:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ',' in C:\DoorTry\www\MakeQrcode.php on line 30
+[28-Sep-2021 22:35:24 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Stihi/index.php?stihi=kapriznyj-starik.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Stihi\_MakeStihi.php on line 14

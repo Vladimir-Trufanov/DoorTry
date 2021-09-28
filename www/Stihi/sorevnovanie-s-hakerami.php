@@ -51,14 +51,13 @@ $StihNiz='
    Опять защиту сделаю
    Всё те же буквы я возьму
    Идею вскрою свежую
-   
 ';       
 
 $StihPdp='
    <div class="stihabzPdp">
-   <p class="stihstr">январь, кабинет</p>
-   <p class="stihstr">июнь, 115 километр</p>
-   <p class="stihstr">кабинет, декабрь, 1998</p>
+   январь, кабинет
+   июнь, 115 километр
+   кабинет, декабрь, 1998
    </div>
 '; 
 
@@ -81,7 +80,7 @@ $MakePage=
    blockImg("majskij-vecher-v-karelii_2416x503.jpg","Майский вечер в Карелии",$StihoPage).
    '</div>'.
    '<div id="divBottom">'.
-   modelImgTxtEO('60%','40%',"raznye-vmeste_1280x850.jpg","Разные вместе",$StihNiz,$StihPdp,$StihoPage).
+   modelImgTxtEE('60%','40%',"raznye-vmeste_1280x850.jpg","Разные вместе",$StihNiz,$StihPdp,$StihoPage).
    '</div>';
 
 $SeoTag='

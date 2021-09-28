@@ -81,8 +81,16 @@ function StihiMenu()
    foreach($aStihi as $k=>$v)
    {
       echo '<li><a href="';
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo 'Stihi/';
+      }
+      else
+      {
+         echo 'index.php?stihi=';
+      }
       echo 'index.php?stihi=';
-      echo prown\getTranslit($k).'"'.'>'.$k.'</a></li>';
+      echo $v.'"'.'>'.$k.'</a></li>';
    }
    return $Result;
 }

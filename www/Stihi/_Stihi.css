@@ -7,12 +7,11 @@
  *
  *                                                   Автор:       Труфанов В.Е.
  *                                                   Дата создания:  09.04.2019
- * Copyright © 2019 tve                              Посл.изменение: 24.09.2021
- * 
+ * Copyright © 2019 tve                              Посл.изменение: 28.09.2021
 **/
 
 /* Cбрасываем стили браузера */
-* {box-sizing: border-box;}
+* {box-sizing:border-box;}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, 
 q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, 
@@ -21,15 +20,15 @@ thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video 
 {
-   margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+   margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
 {
-   display: block;
+   display:block;
 }
 /* 
   Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию, стили
@@ -51,49 +50,53 @@ table
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 h1
 {
    font-size: 2.2rem;  
    text-align: center; 
 }
-.stihabzL 
-{
-   text-align: left; 
-}
-.stihabzR 
-{
-   text-align: right; 
-}
-.stihabz 
-{
-   text-align: center; 
-}
+/* Форматируем тексты */
 .stihabzPdp 
 {
+   text-align:center; 
+	font-size:1.2rem;	
+	font-weight:bold;
+}
+.StihCenter
+{
    text-align: center; 
 }
-.stihabzPdp p 
+.TxtJustify
 {
-	font-size: 1.2rem;	
-	font-weight: bold;
+   text-align:justify; 
+   color:#b8860b; /*darkgoldenrod*/
+   font-size:1.4rem;  
+	font-weight:bold;
 }
 
 /* Определяем фоны = background:transparent; */
 #divTop    {background:blue;}
 #divStrip  {background:transparent;}
 #divBottom {background:teal;}
-/* Форматируем разделительное фото */
-#imgStrap
+/* Форматируем размещение фотографий, подписей под ними и текстов между фото*/
+.bImg
 {
    width:100%;
+   margin-top:1.3rem;
+   padding-left:.7rem;
+   padding-right:.7rem;
 }
 .pStrap
 {
 	color:blue;
+   font-size:1.4rem;  
+	font-weight:bold;
+   padding-left:.7rem;
 }
-.bImg
+.WithImg
 {
-   width:100%;
+   padding-left:.7rem;
+   padding-right:.7rem;
 }
+
 /* ********************************************************** _Stihi.css *** */

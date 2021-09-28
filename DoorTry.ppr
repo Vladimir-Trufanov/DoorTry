@@ -477,13 +477,13 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-Stihi
+		+Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
 				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
@@ -539,15 +539,31 @@ DoorTry
 0=www\Main.php
 1=www\iniCurrStih.php
 2=www\iniMem.php
+3=www\Stihi\sorevnovanie-s-hakerami.php
+4=www\Site.php
+5=www\.htaccess
+6=www\iniMenu.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\iniMenu.php
 [www\Main.php]
-TopLine=111
+TopLine=38
 Caret=1,52
 [www\iniCurrStih.php]
 TopLine=21
 Caret=1,1
 [www\iniMem.php]
-TopLine=23
+TopLine=29
 Caret=63,42
+[www\Stihi\sorevnovanie-s-hakerami.php]
+TopLine=62
+Caret=1,70
+[www\Site.php]
+TopLine=11
+Caret=1,1
+[www\.htaccess]
+TopLine=57
+Caret=73,78
+[www\iniMenu.php]
+TopLine=73
+Caret=14,93
