@@ -83,13 +83,20 @@ function StihiMenu()
       echo '<li><a href="';
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
-         echo 'Stihi/';
+         echo 'stihi/';
       }
       else
+      // <li><a href="#">Штрихотворения</a>
+      // <ul>
+      //        <li><a href="index.php?stihi=sorevnovanie-s-hakerami">Соревнование с хакерами</a></li>
+      //        <li><a href="index.php?stihi=kapriznyj-starik">Капризный старик</a></li>
+      // http://localhost:82/index.php?stihi=kapriznyj-starik
+      // </ul>
+      // </li>
       {
          echo 'index.php?stihi=';
       }
-      echo 'index.php?stihi=';
+      //echo 'index.php?stihi=';
       echo $v.'"'.'>'.$k.'</a></li>';
    }
    return $Result;

@@ -46,9 +46,9 @@ else
    require $SiteRoot.'/Pages/DoorTry/SimPrincip.php';
 }
 // Подключаем управление стихами и ранее выбранное стихотворение
-require_once $SiteRoot."/Stihi/_StihiCommon.php";   
+require_once $SiteRoot."/stihi/_StihiCommon.php";   
 $StihoPage=$c_StihoPage;
-require_once $SiteRoot.'/Stihi/'.$c_StihoPage.'.php';   
+require_once $SiteRoot.'/stihi/'.$c_StihoPage.'.php';   
 // Изменяем счетчик запросов сайта из браузера и, таким образом,       
 // регистрируем новую загрузку страницы
 $c_BrowEntry=prown\MakeCookie('BrowEntry',$c_BrowEntry+1,tInt);  
@@ -69,7 +69,18 @@ if ($c_PersName<>$c_UserName)
 
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 //if (IsSet($_REQUEST['stihi'])) MakeStihi($SiteRoot,$SiteHost,$SiteDevice);
-if (IsSet($_REQUEST['stihi'])) require_once $SiteRoot."/Stihi/_MakeStihi.php";
+if (IsSet($_REQUEST['stihi'])) 
+{
+/*
+           prown\ConsoleLog('===');
+           prown\ConsoleLog('===');
+           prown\ConsoleLog('==='.$_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+           prown\ConsoleLog('==='.$_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+           prown\ConsoleLog('===');
+           prown\ConsoleLog('===');
+*/
+require_once $SiteRoot."/stihi/_MakeStihi.php";
+}
 // Если поступил запрос на пробную BaseMaker страницу, то запускаем её
 else if (prown\isComRequest('basemaker','list')) 
 {

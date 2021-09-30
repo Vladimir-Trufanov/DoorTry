@@ -73,7 +73,7 @@ RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
 RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
 
 ## Преобразовываем URL-запросы стихотворений
-RewriteRule ^Stihi/([a-z-]{1,})$ index.php?stihi=$1 [L]
+RewriteRule ^stihi/([a-z-]{1,})$ index.php?stihi=$1 [L]
 
 ## Преобразовываем URL-запросы новостных страниц
 RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]

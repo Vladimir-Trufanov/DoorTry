@@ -10,8 +10,10 @@
 // Copyright © 2019 tve                              Посл.изменение: 24.09.2021
 
 // Подключаем сценарий стихотворения
+
+
 $StihoPage=prown\getComRequest('stihi');  // sorevnovanie-s-hakerami
-require_once $SiteRoot.'/Stihi/'.$StihoPage.'.php';  
+require_once $SiteRoot.'/stihi/'.$StihoPage.'.php';  
 $c_StihoPage=prown\MakeCookie('CurrStih',$StihoPage,tStr); 
 // Формируем страницу окружения стихотворения
 echo '<!DOCTYPE html>';
@@ -31,7 +33,7 @@ echo '</script>';
  
 echo $SeoTag;
 
-echo '<link href="Stihi/_Stihi.css"  rel="stylesheet" type="text/css">';
+echo '<link href="_Stihi.css" rel="stylesheet" type="text/css">';
 echo '</head>';
 echo '<body>';
 // Делаем разметку страницы для смартфона
