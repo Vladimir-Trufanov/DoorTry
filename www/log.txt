@@ -67,3 +67,5 @@ Stack trace:
 #1 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
 #2 {main}
   thrown in C:\DoorTry\www\Site.php on line 34
+[01-Oct-2021 19:35:45 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\wwwStihi/_MakeStihi.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 75
+[01-Oct-2021 20:40:48 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\Stihi\_MakeStihi.php on line 23

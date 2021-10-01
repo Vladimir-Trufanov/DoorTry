@@ -40,6 +40,7 @@ require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
 require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/MakeUserError.php";
+require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
    
 require_once($TPhpPrown.'/TPhpPrownTests/MakeCookie_test_D.php');
 require_once($TPhpPrown.'/TPhpPrownTests/MakeCookie_test_I.php');
@@ -71,6 +72,9 @@ else if (!isTPhpPrownFunc($Parm,$aTPhpPrown))
 // подключаем страницу библиотеки
 else
 {
+   prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+   prown\ViewGlobal(avgREQUEST);
+ 
    // Загружаем контент выбранной страницы
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');
    require_once $SiteRoot."/Pages/TPhpPrown/_CodePart.php";

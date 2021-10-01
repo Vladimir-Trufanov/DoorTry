@@ -30,8 +30,8 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            echo $_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME'].'<br>';
-            prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+            //echo $_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME'].'<br>';
+            //prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
             /*
             $regex = '/(Colo(u?)r)/is';
  

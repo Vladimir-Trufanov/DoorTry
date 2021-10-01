@@ -10,11 +10,16 @@
 // Copyright © 2019 tve                              Посл.изменение: 24.09.2021
 
 // Подключаем сценарий стихотворения
-
-
 $StihoPage=prown\getComRequest('stihi');  // sorevnovanie-s-hakerami
-require_once $SiteRoot.'/stihi/'.$StihoPage.'.php';  
+require_once $SiteRoot.'/Stihi/'.$StihoPage.'.php';  
 $c_StihoPage=prown\MakeCookie('CurrStih',$StihoPage,tStr); 
+// При необходимости генерируем Qr-код
+/*
+$qrText='https://doortry.ru/stihi/'.$StihoPage;
+$qrFile='Stihi/'.$StihoPage.'/'.$StihoPage.'.png';
+include "qrcode/qrlib.php";
+QRcode::png($qrText,$qrFile,"L",4,4);
+*/
 // Формируем страницу окружения стихотворения
 echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
@@ -33,9 +38,15 @@ echo '</script>';
  
 echo $SeoTag;
 
-echo '<link href="_Stihi.css" rel="stylesheet" type="text/css">';
+echo '<link href="/Stihi/_Stihi.css" rel="stylesheet" type="text/css">';
 echo '</head>';
 echo '<body>';
+
+//echo '_MakeStihi.php<br>';
+//prown\ViewGlobal(avgREQUEST);
+
+
+
 // Делаем разметку страницы для смартфона
 if ($SiteDevice==Mobile) 
 {   
@@ -46,6 +57,7 @@ else
 { 
    echo $MakePage; 
 }
+
 echo '</body>'; 
 echo '</html>';
 // ********************************************************* _MakeStihi.php ***

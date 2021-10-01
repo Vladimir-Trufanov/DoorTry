@@ -66,7 +66,6 @@ if ($SiteDevice==Mobile)
 {   
    //echo '<script>alert("Mobile");</script>';
    echo '<link href="Styles/MobiStyles.css" rel="stylesheet">';
-   echo '<link href="Styles/Stihi.css" rel="stylesheet">';
    echo '<link rel="stylesheet" href="SmartMenus/sm-doortry-mobi.css">';
 }
 // Делаем страницу для компьютера

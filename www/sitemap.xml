@@ -19,7 +19,13 @@
       <priority>0.500</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/stihi/sorevnovanie-s-hakerami</loc>
+      <loc>https://doortry.ru/Stihi/kapriznyj-starik</loc>
+      <lastmod>2021-10-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.301</priority>
+   </url>
+   <url>
+      <loc>https://doortry.ru/Stihi/sorevnovanie-s-hakerami</loc>
       <lastmod>2019-10-08</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.301</priority>
@@ -31,16 +37,16 @@
       <priority>0.300</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/TPhpPrown/blok-obshchih-funkcij</loc>
-      <lastmod>2020-03-21</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/bajty-v-kilo-kibi-mega-mebibajty-i-obratno</loc>
+      <lastmod>2021-10-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.301</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
-      <lastmod>2019-12-22</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/blok-obshchih-funkcij</loc>
+      <lastmod>2020-03-21</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.302</priority>
+      <priority>0.301</priority>
    </url>
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-obshchie-konstanty</loc>
@@ -67,12 +73,6 @@
       <priority>0.306</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/TPhpPrown/ustanovit-novoe-znachenie-cookie-v-brauzere</loc>
-      <lastmod>2020-04-06</lastmod>
-      <changefreq>monthly</changefreq>
-       <priority>0.307</priority>
-   </url>
-   <url>
       <loc>https://doortry.ru/TPhpPrown/otrabotat-regulyarnoe-vyrazhenie-na-tekste </loc>
       <lastmod>2020-04-08</lastmod>
       <changefreq>monthly</changefreq>
@@ -85,10 +85,22 @@
       <priority>0.309</priority>
    </url>
    <url>
+      <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
+      <lastmod>2019-12-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.302</priority>
+   </url>
+   <url>
       <loc>https://doortry.ru/TPhpPrown/vyvesti-soobshchenie-ob-oshibke-na-php</loc>
       <lastmod>2020-01-11</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.310</priority>
+   </url>
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/ustanovit-novoe-znachenie-cookie-v-brauzere</loc>
+      <lastmod>2020-04-06</lastmod>
+      <changefreq>monthly</changefreq>
+       <priority>0.307</priority>
    </url>
    <url>
       <loc>https://doortry.ru/TPhpPrown/ustanovit-znachenie-sessionnoj-peremennoj</loc>

@@ -80,24 +80,18 @@ function StihiMenu()
    $Result = true;
    foreach($aStihi as $k=>$v)
    {
-      echo '<li><a href="';
+      $li='<li><a href="';
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
-         echo 'stihi/';
+         $li=$li.'/stihi/'.$v.'"'.'>'.$k;
       }
       else
-      // <li><a href="#">Штрихотворения</a>
-      // <ul>
-      //        <li><a href="index.php?stihi=sorevnovanie-s-hakerami">Соревнование с хакерами</a></li>
-      //        <li><a href="index.php?stihi=kapriznyj-starik">Капризный старик</a></li>
-      // http://localhost:82/index.php?stihi=kapriznyj-starik
-      // </ul>
-      // </li>
       {
-         echo 'index.php?stihi=';
+         $li=$li.'?stihi='.$v.'"'.'>'.$k;
       }
-      //echo 'index.php?stihi=';
-      echo $v.'"'.'>'.$k.'</a></li>';
+      $li=$li.'</a></li>';
+      echo $li;
+      //prown\ConsoleLog($li);
    }
    return $Result;
 }

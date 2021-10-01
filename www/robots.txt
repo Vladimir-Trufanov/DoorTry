@@ -4,7 +4,7 @@ Allow: /$
 Allow: /sitemap.xml$ 
 Allow: /prostoj-princip-programmirovaniya$ 
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
-Allow: /stihi
+Allow: /Stihi
 Allow: /TPhpPrown 
 Disallow: /instrumenty 
 Disallow: / 
@@ -14,7 +14,7 @@ Allow: /$
 Allow: /sitemap.xml$ 
 Allow: /prostoj-princip-programmirovaniya$ 
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
-Allow: /stihi
+Allow: /Stihi
 Allow: /TPhpPrown 
 Disallow: /instrumenty 
 Disallow: / 
@@ -24,7 +24,7 @@ Allow: /$
 Allow: /sitemap.xml$ 
 Allow: /prostoj-princip-programmirovaniya$ 
 Allow: /podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ 
-Allow: /stihi
+Allow: /Stihi
 Allow: /TPhpPrown 
 Disallow: /instrumenty 
 Disallow: / 
