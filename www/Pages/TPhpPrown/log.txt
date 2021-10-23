@@ -6,3 +6,15 @@
 Stack trace:
 #0 {main}
   thrown in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 74
+[23-Oct-2021 19:05:43 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 19:06:43 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/--.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 20:10:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 20:33:24 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 20:54:42 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/--.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 20:59:54 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 21:09:46 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[23-Oct-2021 21:11:14 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/------.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[24-Oct-2021 00:18:51 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[24-Oct-2021 00:21:32 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[24-Oct-2021 00:23:27 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 79
+[24-Oct-2021 00:27:04 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/Pages/TPhpPrown/-.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php on line 81

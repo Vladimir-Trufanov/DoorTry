@@ -56,6 +56,8 @@ require_once $SiteRoot."/iniTPhpPrown.php";
 
 // Определяем переданный параметр
 $Parm=prown\getComRequest('list');
+prown\ConsoleLog('$Parm='.$Parm);
+
 // Если параметр в запросе не был указан, то выводим сообщение 
 // "Страница из библиотеки не указана в параметре!"
 if (!IsSet($Parm)) 
