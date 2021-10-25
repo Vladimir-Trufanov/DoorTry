@@ -105,23 +105,11 @@ echo ("Информационная страница об инструмента
       <td>Оригинальная документация по jQuery Mobile.</td>
    </tr>
    <tr>
-      <td rowspan="3" class="third">
+      <td rowspan="2" class="third">
          <p>jQuery Mobile — это отличная инфраструктура (framework) для написания мобильных веб-приложений. jQuery Mobile позволяет разработчику гарантировать единообразие вида, взаимодействия и поведения своего приложения на различных мобильных платформах.</p>
          <p>Инфраструктура jQuery Mobile содержит все компоненты пользовательского интерфейса, необходимые для построения полных мобильных веб-приложений и веб-сайтов: страницы, диалоговые окна, панели инструментов, различные виды списковых представлений, различные элементы форм и кнопки и т.д. jQuery Mobile поддерживает не только устройства высшего уровня, но и менее продвинутые устройства, например, устройства без поддержки JavaScript.</p>
          <p>Весь базовый контент отображается надлежащим образом и на простейших устройствах, и на более совершенных платформах.</p>
       </td>
-      <td>
-         <a href="https://www.ibm.com/developerworks/ru/library/l-jquery_mobile_01/index.html">
-         https://www.ibm.com/developerworks/ru/library/l-jquery_mobile_01/index.html<br><br>
-         <a href="https://www.ibm.com/developerworks/ru/library/wa-jquerymobileupdate/index.html">
-         https://www.ibm.com/developerworks/ru/library/wa-jquerymobileupdate/index.html
-      </td>
-      <td>
-         <p>Исторически сложилось так, что производители смартфонов и планшетов не стремятся к унификации и выработке стандартов, и поэтому разработчикам прикладного ПО приходится иметь дело с целым “зоопарком” операционных систем и Web-браузеров. Для выхода из подобной ситуации приходится использовать каркасы (англ. framework), которые позволяют разрабатывать приложения без оглядки на особенности той или иной мобильной платформы.</p>
-         <p>В ноябре 2010 командой разработчиков популярной библиотеки jQuery был представлен каркас jQuery Mobile для разработки Web-интерфейсов.</p>
-      </td>
-   </tr>
-   <tr>
       <td>
          <a href="https://coderlessons.com/tutorials/mobilnaia-razrabotka/jquery-mobile/jquery-mobile-obzor">
          https://coderlessons.com/tutorials/mobilnaia-razrabotka/jquery-mobile/jquery-mobile-obzor

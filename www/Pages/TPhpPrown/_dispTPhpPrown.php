@@ -74,8 +74,8 @@ else if (!isTPhpPrownFunc($Parm,$aTPhpPrown))
 // подключаем страницу библиотеки
 else
 {
-   prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
-   prown\ViewGlobal(avgREQUEST);
+   // prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
+   // prown\ViewGlobal(avgREQUEST);
  
    // Загружаем контент выбранной страницы
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');

@@ -129,6 +129,8 @@ else
       //echo $SiteRoot."/TPhpPrown/Findes.php".'<br>';
       //echo $SiteAbove."/TPhpPrown/Findes.php".'<br>';
       //echo $SiteHost."/TPhpPrown/Findes.php".'<br>';
+      //\prown\ViewGlobal(avgREQUEST);
+      //\prown\ViewGlobal(avgCOOKIE);
       require_once $SiteRoot."/Site.php";
    }
    // Подключаем и запускаем регистратор времени загрузки страницы
@@ -136,7 +138,6 @@ else
    $oFixLoadTimer = new FixLoadTimer();
    //require_once $SiteRoot."/timer.php";
    //require_once $SiteRoot."/DebugTimer.php";
-   //\prown\ViewGlobal(avgCOOKIE);
    //require_once $SiteRoot."/get-info.php";
    require_once $SiteRoot."/iniHtmlEnd.php";
 }

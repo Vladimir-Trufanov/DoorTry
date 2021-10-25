@@ -262,7 +262,7 @@ DoorTry
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
-			-Instrumenty
+			+Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
 			-News
@@ -276,15 +276,6 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			-SignaPhoto
-				-images
-					www\Pages\SignaPhoto\images\iphoto.jpg
-					www\Pages\SignaPhoto\images\iproba.png
-					www\Pages\SignaPhoto\images\istamp.png
-					www\Pages\SignaPhoto\images\photo.gif
-					www\Pages\SignaPhoto\images\photo.jpg
-					www\Pages\SignaPhoto\images\photo.png
-					www\Pages\SignaPhoto\images\proba.png
-					www\Pages\SignaPhoto\images\probaPng.png
 				-imgdebug
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.png
@@ -449,6 +440,7 @@ DoorTry
 			www\qrcode\doortry.png-errors.txt
 			www\qrcode\index.php
 			www\qrcode\INSTALL
+			www\qrcode\kapriznyj-starik.png-errors.txt
 			www\qrcode\LICENSE
 			www\qrcode\phpqrcode.php
 			www\qrcode\qrbitstream.php
@@ -476,13 +468,14 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+Stihi
+		-Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
+				www\Stihi\kapriznyj-starik\kapriznyj-starik.png
 				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
 				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			+sorevnovanie-s-hakerami
+			-sorevnovanie-s-hakerami
 				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
@@ -492,7 +485,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		-Styles
+		+Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
@@ -513,13 +506,13 @@ DoorTry
 		www\get-info.php
 		www\includErrs.php
 		www\index.php
-		www\iniCurrStih.php
+		www\IniCurrStih.php
 		www\iniErrDoorTry.php
 		www\iniHtmlBegin.php
 		www\iniHtmlEnd.php
-		www\iniMem.php
-		www\iniMenu.php
-		www\iniTPhpPrown.php
+		www\Inimem.php
+		www\IniMenu.php
+		www\IniTPhpPrown.php
 		www\iniWorkSpace.php
 		www\log.txt
 		www\logis.txt
@@ -537,12 +530,32 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Pages\TPhpPrown\_dispTPhpPrown.php
+2=www\Pages\Instrumenty\indexInstrumenty.php
+3=www\Pages\Instrumenty\Instrumenty.php
+4=www\Pages\TPhpPrown\o-biblioteke.php
+5=www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
+6=www\Pages\TPhpPrown\_viewTPhpPrown.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\TPhpPrown\_dispTPhpPrown.php
+Selected=www\Pages\TPhpPrown\o-biblioteke.php
 [www\Main.php]
-TopLine=65
-Caret=1,75
+TopLine=7
+Caret=120,52
 [www\Pages\TPhpPrown\_dispTPhpPrown.php]
-TopLine=33
-Caret=32,59
+TopLine=60
+Caret=7,77
+[www\Pages\Instrumenty\indexInstrumenty.php]
+TopLine=65
+Caret=1,1
+[www\Pages\Instrumenty\Instrumenty.php]
+TopLine=105
+Caret=1,132
+[www\Pages\TPhpPrown\o-biblioteke.php]
+TopLine=1
+Caret=1,62
+[www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php]
+TopLine=29
+Caret=1,40
+[www\Pages\TPhpPrown\_viewTPhpPrown.php]
+TopLine=39
+Caret=1,1
