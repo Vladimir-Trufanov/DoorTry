@@ -24,7 +24,8 @@ define ("ajIsFreshStamp",       "На изображение наложена с
 define ("ajLostScriptFile",     "Утерян файл скрипта");   
 define ("ajNoSetFile",          "Не установлен массив файлов и не загружены данные");
 define ("ajNoTempoFile",        "Не загружен файл во временное хранилище");
-define ("ajStampNotBuilt",      "Не строится изображение штампа (водяного знака)");
+define ("ajProba",              "Это проверочное сообщение");
+define ("ajStampNotBuilt",      "Не строится изображение штампа - водяного знака");
 define ("ajSuccessfully",       "Файл успешно загружен ОТЛАДКА");     
 define ("ajTransparentSuccess", "Преобразование к прозрачному виду успешно"); 
 
@@ -45,6 +46,7 @@ $define=
 'ajLostScriptFile="'    .ajLostScriptFile.    '";'.
 'ajNoSetFile="'         .ajNoSetFile.         '";'.
 'ajNoTempoFile="'       .ajNoTempoFile.       '";'.
+'ajProba="'             .ajProba.             '";'.
 'ajStampNotBuilt="'     .ajStampNotBuilt.     '";'.
 'ajSuccessfully="'      .ajSuccessfully.      '";'.
 'ajTransparentSuccess="'.ajTransparentSuccess.'";'.

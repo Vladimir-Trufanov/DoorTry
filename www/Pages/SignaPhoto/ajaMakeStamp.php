@@ -60,8 +60,6 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,&$c_FileProba)
       if (!$stamp) $Result=ajStampNotBuilt;
       else
       {
-         $Result=$c_FileStamp.'jjjj';
-         /*
          // Строим изображение для наложения подписи
          if (($FileExt=='gif')or($FileExt=='png'))
          {
@@ -79,9 +77,6 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,&$c_FileProba)
          }
          else
          {
-            // Отмечаем, что произошла ошибка при наложении подписи на изображение
-            // $Result=ajErrFreshStamp;
-         
             // Устанавливаем поля для штампа
             $marge_right = 10;
             $marge_bottom = 10;
@@ -104,7 +99,6 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,&$c_FileProba)
             // Отмечаем, что на фотографию наложена свежая подпись
             $Result=ajIsFreshStamp;
          }
-         */
       }
    }
    return $Result;

@@ -195,6 +195,14 @@ function clickMakeStamp()
       success:function(data)
       {
          console.log(data);
+         
+         //printMessage('#result',ajStampNotBuilt);
+         //printMessage('#result',ajStampNotBuilt);
+         if (isLabel(data,ajStampNotBuilt)) 
+         {
+            printMessage('#result',ajStampNotBuilt);
+         }
+         /*
          // alert('i '+data);
          // "---Файл превышает максимальный размер"
          if (isLabel(data,ajErrBigFile)) 
@@ -229,6 +237,7 @@ function clickMakeStamp()
          {
             printMessage('#result','ajErrFreshStamp,data');
          }
+         */
       },
       // Отмечаем  неуспешное выполнение аякс-запроса из-за утери файла скрипта
       error:function(data)
@@ -289,6 +298,10 @@ function printMessage(destination,msg,mess1='',mess2='')
    else if (msg == ajNoTempoFile) {
       $(destination).addClass('alert-danger').text(msg+'!');
    }
+   // Это проверочное сообщение
+   else if (msg == ajProba) {
+      $(destination).addClass('alert-success').text(msg+'!');
+   }
    // Не строится изображение штампа (водяного знака)
    else if (msg == ajStampNotBuilt) {
       $(destination).addClass('alert-danger').text(msg+'!');
@@ -299,7 +312,8 @@ function printMessage(destination,msg,mess1='',mess2='')
    }
    // Выводим сообщение при всех прочих ошибках
    else {
-      $(destination).addClass('alert alert-danger').text('Неучтенная ошибка при выполнении операции.');
+      //$(destination).addClass('alert alert-danger').text('Неучтенная ошибка при выполнении операции.'+);
+      $(destination).addClass('alert alert-danger').text('Неучтенная ошибка по msg: '+msg+'.');
    }
 }
 // ****************************************************************************

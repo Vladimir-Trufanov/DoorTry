@@ -537,7 +537,7 @@ DoorTry
 5=www\Pages\SignaPhoto\ajaMakeStamp.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhoto.js
+Selected=www\Pages\SignaPhoto\ajaMakeStamp.php
 [www\Main.php]
 TopLine=64
 Caret=1,72
@@ -545,14 +545,14 @@ Caret=1,72
 TopLine=45
 Caret=6,80
 [www\Pages\SignaPhoto\ajaLoadPic.php]
-TopLine=25
+TopLine=26
 Caret=120,26
 [www\Pages\SignaPhoto\SignaPhotoDef.php]
-TopLine=7
-Caret=82,27
+TopLine=19
+Caret=81,28
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=200
-Caret=54,292
+TopLine=185
+Caret=12,200
 [www\Pages\SignaPhoto\ajaMakeStamp.php]
-TopLine=41
-Caret=43,60
+TopLine=53
+Caret=1,80
