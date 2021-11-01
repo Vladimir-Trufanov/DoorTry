@@ -77,7 +77,7 @@ try
       ';
    echo '</div>'; 
    echo '<div id="ViewGlobal">';
-   prown\ViewGlobal(avgCOOKIE);
+   //prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgREQUEST);
    echo '</div>'; 

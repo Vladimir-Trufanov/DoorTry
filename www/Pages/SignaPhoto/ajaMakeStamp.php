@@ -33,9 +33,8 @@ try
    $c_FileProba=prown\MakeCookie('FileProba');
    // Накладываем подпись на изображение, получаем сообщение результата работы
    $MakeStamp=ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba);
-   // Передаем сообщение на страницу в браузере
+   // Помечаем и передаем сообщение на страницу в браузере
    echo(prown\makeLabel($MakeStamp));  
-   //echo('Приветище!');  
 }
 catch (E_EXCEPTION $e) 
 {
@@ -61,6 +60,8 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,&$c_FileProba)
       if (!$stamp) $Result=ajStampNotBuilt;
       else
       {
+         $Result=$c_FileStamp.'jjjj';
+         /*
          // Строим изображение для наложения подписи
          if (($FileExt=='gif')or($FileExt=='png'))
          {
@@ -103,10 +104,9 @@ function ImgMakeStamp($c_FileImg,$c_FileStamp,&$c_FileProba)
             // Отмечаем, что на фотографию наложена свежая подпись
             $Result=ajIsFreshStamp;
          }
+         */
       }
    }
-   //$Result=$Result.
-   //   '***'.$c_FileImg.'***'.$c_FileStamp.'***'.$c_FileProba.'***'.$FileExt.'***';
    return $Result;
 }
 // ****************************************************************************

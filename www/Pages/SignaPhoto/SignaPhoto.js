@@ -158,7 +158,6 @@ function clickLoadPic()
 function clickMakeStamp()
 {
    // Обрабатываем клик
-   
    var elem=document.getElementById('InfoLead');
    elem.innerHTML=
       '1234567890 clickMakeStamp <br>'+
@@ -182,7 +181,6 @@ function clickMakeStamp()
    */
    // Сворачиваем меню
    $('.js-nav-menu').removeClass('navigation-menu--open');
-   
    // Через аякс-запрос делаем подпись на фотографии
    // alert('Перед вызовом аякс');
    $.ajax({
@@ -197,7 +195,7 @@ function clickMakeStamp()
       success:function(data)
       {
          console.log(data);
-         //alert('i '+data);
+         // alert('i '+data);
          // "---Файл превышает максимальный размер"
          if (isLabel(data,ajErrBigFile)) 
          {
@@ -221,10 +219,15 @@ function clickMakeStamp()
             // elemi.innerHTML=
             //   '<img id="proba" src="images/proba.png" alt="Подписанная фотография">';     
          }
+         // "Не строится изображение штампа (водяного знака)"
+         else if (isLabel(data,ajStampNotBuilt)) 
+         {
+            printMessage('#result',ajStampNotBuilt);
+         }
          // "Ошибка при наложении подписи на изображение"
          else 
          {
-            printMessage('#result',ajErrFreshStamp,data);
+            printMessage('#result','ajErrFreshStamp,data');
          }
       },
       // Отмечаем  неуспешное выполнение аякс-запроса из-за утери файла скрипта
@@ -284,6 +287,10 @@ function printMessage(destination,msg,mess1='',mess2='')
    }
    // Не загружен файл во временное хранилище
    else if (msg == ajNoTempoFile) {
+      $(destination).addClass('alert-danger').text(msg+'!');
+   }
+   // Не строится изображение штампа (водяного знака)
+   else if (msg == ajStampNotBuilt) {
       $(destination).addClass('alert-danger').text(msg+'!');
    }
    // Файл успешно загружен
