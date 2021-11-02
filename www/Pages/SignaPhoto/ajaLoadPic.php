@@ -35,20 +35,24 @@ try
 {
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
+   require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    // Подключаем межязыковые определения
    require_once 'SignaPhotoDef.php';
+   
+   prown\ConsoleLog('----: '.$c_FileImg); 
+
    // Если установлен массив файлов и загружен переданными данными
    if (isset($_FILES) && isset($_FILES['image']))
    {
       // Отлаживаем UploadToServer
-      echo(prown\makeLabel(ajSuccessfully));
+      // echo(prown\makeLabel(ajSuccessfully));
    
    
    
    
       /* Это отлаженный вариант до 25.08.2021 */
-      /*
+      
       //Переданный массив сохраняем в переменной
       $image = $_FILES['image'];
       // Проверяем размер файла и если он превышает заданный размер
@@ -79,6 +83,9 @@ try
                echo(prown\makeLabel(ajSuccessfully));  // 'Файл успешно загружен'
                // Запоминаем в кукисах имена загруженных файлов
                $c_FileImg=prown\MakeCookie('FileImg',$filepic,tStr);
+                  
+               prown\ConsoleLog('LoadPic: '.$c_FileImg); 
+
             }
             // Отмечаем ошибочную переброску файла на сервер 
             else {echo(prown\makeLabel(ajErrMoveServer));}
@@ -86,7 +93,7 @@ try
          // Выводим сообщение при неверном расширении файла
          else {echo(prown\makeLabel(ajInvalidType));}
       }
-      */
+      
    }
    // Отмечаем, что не установлен массив файлов и не загружены данные
    else {echo(prown\makeLabel(ajNoSetFile));}

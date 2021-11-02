@@ -195,15 +195,12 @@ function clickMakeStamp()
       success:function(data)
       {
          console.log(data);
-         
-         //printMessage('#result',ajStampNotBuilt);
-         //printMessage('#result',ajStampNotBuilt);
+         // alert('i '+data);
          if (isLabel(data,ajStampNotBuilt)) 
          {
             printMessage('#result',ajStampNotBuilt);
          }
          /*
-         // alert('i '+data);
          // "---Файл превышает максимальный размер"
          if (isLabel(data,ajErrBigFile)) 
          {
@@ -214,13 +211,14 @@ function clickMakeStamp()
             p=freeLabel(p);
             printMessage('#result',ajErrBigFile,p);
          }
+         */
          // "На изображение наложена свежая подпись"
          else if (isLabel(data,ajIsFreshStamp)) 
          {
             printMessage('#result',ajIsFreshStamp);
             // Перегружаем страницу с очисткой кэша для того, 
             // чтобы обновить изображения и перекинуть кукисы
-            // window.location.reload(true);
+            window.location.reload(true);
             // А здесь - в будущем для каждого пользователя свой сохраняемый 
             // файл в браузере использовать
             // let elemi=document.getElementById('Proba');
@@ -237,7 +235,6 @@ function clickMakeStamp()
          {
             printMessage('#result','ajErrFreshStamp,data');
          }
-         */
       },
       // Отмечаем  неуспешное выполнение аякс-запроса из-за утери файла скрипта
       error:function(data)
