@@ -11,13 +11,17 @@
 // ****************************************************************************
 // *                          Выделить сообщение из метки                     *
 // ****************************************************************************
-function freeLabel($subs,$Before='~~~',$After='~~~')
+function freeLabel(subs,Before='~~~',After='~~~')
 {
-   let regex=new RegExp($Before);
-   let p = $subs; p=p.replace(regex,'')
-   regex=new RegExp($After);
-   p=p.replace(regex,'');
-   return p;
+   // Находим начало контекста метки
+   let nBeg=subs.indexOf(Before)+Before.length;
+   // Выделяем контекст метки с мусором в конце
+   let cRight=subs.substring(nBeg); 
+   // Находим конец контекста метки
+   let nEnd=cRight.indexOf(After);
+   // Выделяем контекст метки
+   let c=cRight.substring(0,nEnd); 
+   return c;
 }
 // ****************************************************************************
 // *             Проверить, есть ли метка в переданном сообщении              *
@@ -104,8 +108,7 @@ function clickLoadPic()
          // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
          success:function(data)
          {
-            //console.log(data);
-            //alert(data);
+            //alert('LoadPic.success: '+data);
             // "Файл превышает максимальный размер"
             if (isLabel(data,ajErrBigFile)) 
             {
@@ -146,6 +149,7 @@ function clickLoadPic()
          // Отмечаем  неуспешное выполнение аякс-запроса по причине:
          // 1) утерян файл скрипта.
          error:function(data){
+            //alert('LoadPic.error: '+data);
             printMessage('#result',ajLostScriptFile);
          }
       });
@@ -182,7 +186,7 @@ function clickMakeStamp()
    // Сворачиваем меню
    $('.js-nav-menu').removeClass('navigation-menu--open');
    // Через аякс-запрос делаем подпись на фотографии
-   // alert('Перед вызовом аякс');
+   //alert('Перед вызовом аякс');
    $.ajax({
       type:'POST',             // тип запроса
       url: 'ajaMakeStamp.php', // скрипт обработчика
@@ -194,8 +198,10 @@ function clickMakeStamp()
       // Отмечаем результат выполнения скрипта по аякс-запросу (успешный или нет)
       success:function(data)
       {
-         console.log(data);
-         // alert('i '+data);
+         //console.log(data);
+         //let il=freeLabel(data);
+         //alert('Метка: ***'+il+'***');
+         //alert('i '+data);
          if (isLabel(data,ajStampNotBuilt)) 
          {
             printMessage('#result',ajStampNotBuilt);
@@ -219,11 +225,13 @@ function clickMakeStamp()
             // Перегружаем страницу с очисткой кэша для того, 
             // чтобы обновить изображения и перекинуть кукисы
             window.location.reload(true);
-            // А здесь - в будущем для каждого пользователя свой сохраняемый 
+            
+            // !!! А здесь - в будущем для каждого пользователя свой сохраняемый 
             // файл в браузере использовать
             // let elemi=document.getElementById('Proba');
             // elemi.innerHTML=
-            //   '<img id="proba" src="images/proba.png" alt="Подписанная фотография">';     
+            //   '<img id="proba" src="images/proba.png" alt="Подписанная фотография">';
+                 
          }
          // "Не строится изображение штампа (водяного знака)"
          else if (isLabel(data,ajStampNotBuilt)) 

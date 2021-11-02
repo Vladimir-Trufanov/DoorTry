@@ -24,7 +24,7 @@ try
 {
    // Подключаем файлы библиотеки прикладных модулей:
    $TPhpPrown=$SiteHost.'/TPhpPrown';
-   require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
+   //require_once $TPhpPrown."/TPhpPrown/CommonPrown.php";
    require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
    // Подключаем межязыковые определения
    require_once 'SignaPhotoDef.php';
@@ -32,9 +32,9 @@ try
    $c_FileImg=prown\MakeCookie('FileImg');
    $c_FileStamp=prown\MakeCookie('FileStamp');
    $c_FileProba=prown\MakeCookie('FileProba');
-   
-   prown\ConsoleLog('MakeStamp: '.$c_FileImg); 
-   
+   //
+   //prown\ConsoleLog('MakeStamp: '.$c_FileImg); 
+   //
    // Накладываем подпись на изображение, получаем сообщение результата работы
    $MakeStamp=ImgMakeStamp($c_FileImg,$c_FileStamp,$c_FileProba);
    // Помечаем и передаем сообщение на страницу в браузере
