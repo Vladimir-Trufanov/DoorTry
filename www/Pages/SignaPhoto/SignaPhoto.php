@@ -75,11 +75,8 @@ try
          <img id="proba" src="'.$c_FileProba.'" alt="Подписанная фотография">
          </div>
       ';
-      echo '
-         <div id="Variant3">
-         ------------------------------------------Вариант3
-         </div>
-      ';
+      // Подключаем модули страницы "Подписать фотографию"
+      require_once 'Variant3.php';
    echo '</div>'; 
    echo '<div id="ViewGlobal">';
    //prown\ViewGlobal(avgCOOKIE);
@@ -94,4 +91,4 @@ catch (E_EXCEPTION $e)
 {
    DoorTryPage($e);
 }
-// *** <!-- --> ******************************************** SignaPhoto.php ***
+?> <?php // *** <!-- --> *** ******************************* SignaPhoto.php ***
