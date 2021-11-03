@@ -26,7 +26,7 @@ define ("ajNoSetFile",          "Не установлен массив файл
 define ("ajNoTempoFile",        "Не загружен файл во временное хранилище");
 define ("ajProba",              "Это проверочное сообщение");
 define ("ajStampNotBuilt",      "Не строится изображение штампа - водяного знака");
-define ("ajSuccessfully",       "Файл успешно загружен ОТЛАДКА");     
+define ("ajSuccessfully",       "Файл успешно загружен sss ОТЛАДКА");     
 define ("ajTransparentSuccess", "Преобразование к прозрачному виду успешно"); 
 
 // Переменные JavaScript, соответствующие определениям в PHP

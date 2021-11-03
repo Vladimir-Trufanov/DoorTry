@@ -47,7 +47,7 @@ try
       <ul class="menu-list">
          <li class="menu-list__item" onclick="clickLoadPic()">Загрузить фотографию</li>
          <li class="menu-list__item" onclick="clickMakeStamp()">Наложить подпись на изображение</li>
-         <li class="menu-list__item">Переопределить параметры</li>
+         <li class="menu-list__item" onclick="clickProba()">Переопределить параметры</li>
          <li class="menu-list__item">Загрузить новую подпись</li>
       </ul>
       </nav>
