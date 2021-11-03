@@ -256,7 +256,7 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -276,7 +276,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			-SignaPhoto
+			+SignaPhoto
 				-images
 					www\Pages\SignaPhoto\images\iphoto.jpg
 					www\Pages\SignaPhoto\images\iproba.png
@@ -294,7 +294,7 @@ DoorTry
 					www\Pages\SignaPhoto\imgdebug\Дед-сын-и-внук.png
 					www\Pages\SignaPhoto\imgdebug\Танцы в Северном.doc
 					www\Pages\SignaPhoto\imgdebug\Хорошенькая.png
-				-Reserv
+				+Reserv
 					-_InterSpooky
 						-css
 							www\Pages\SignaPhoto\Reserv\_InterSpooky\css\style.css
@@ -378,7 +378,7 @@ DoorTry
 							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_variables.scss
 							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\font-awesome.scss
 						www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\HELP-US-OUT.txt
-					-OldVer
+					+OldVer
 						www\Pages\SignaPhoto\Reserv\OldVer\Indoor.html
 						www\Pages\SignaPhoto\Reserv\OldVer\log.txt
 						www\Pages\SignaPhoto\Reserv\OldVer\Register.html
@@ -541,15 +541,18 @@ DoorTry
 5=www\Pages\SignaPhoto\ajaMakeStamp.php
 6=..\TPhpPrown\TPhpPrown\CommonPrown.php
 7=www\index.php
+8=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhotoPortrait.php
+9=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js
+10=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto_m.css
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhoto.js
+Selected=www\Pages\SignaPhoto\SignaPhoto.php
 [www\Main.php]
 TopLine=5
 Caret=1,16
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=41
-Caret=59,50
+TopLine=53
+Caret=52,80
 [www\Pages\SignaPhoto\ajaLoadPic.php]
 TopLine=32
 Caret=6,38
@@ -557,8 +560,8 @@ Caret=6,38
 TopLine=18
 Caret=60,29
 [www\Pages\SignaPhoto\SignaPhoto.js]
-TopLine=253
-Caret=1,269
+TopLine=245
+Caret=6,266
 [www\Pages\SignaPhoto\ajaMakeStamp.php]
 TopLine=27
 Caret=6,27
@@ -566,5 +569,14 @@ Caret=6,27
 TopLine=69
 Caret=58,84
 [www\index.php]
-TopLine=7
+TopLine=11
+Caret=1,1
+[www\Pages\SignaPhoto\Reserv\OldVer\SignaPhotoPortrait.php]
+TopLine=69
+Caret=1,1
+[www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js]
+TopLine=62
+Caret=1,73
+[www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto_m.css]
+TopLine=119
 Caret=1,1

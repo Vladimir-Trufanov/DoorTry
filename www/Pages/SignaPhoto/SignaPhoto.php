@@ -75,6 +75,11 @@ try
          <img id="proba" src="'.$c_FileProba.'" alt="Подписанная фотография">
          </div>
       ';
+      echo '
+         <div id="Variant3">
+         ------------------------------------------Вариант3
+         </div>
+      ';
    echo '</div>'; 
    echo '<div id="ViewGlobal">';
    //prown\ViewGlobal(avgCOOKIE);

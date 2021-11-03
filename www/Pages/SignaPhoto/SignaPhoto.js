@@ -255,10 +255,15 @@ function clickMakeStamp()
 
 function clickProba()
 {
+   // Скрываем дивы
+   $('#InfoLead').css('display','none');
+   $('#Stamp').css('display','none');
+   $('#Photo').css('display','none');
+   $('#Proba').css('display','none');
    // Сворачиваем меню
    $('.js-nav-menu').removeClass('navigation-menu--open');
    //
-   alert('clickProba');
+   //alert('clickProba');
 }
 
 // ****************************************************************************
