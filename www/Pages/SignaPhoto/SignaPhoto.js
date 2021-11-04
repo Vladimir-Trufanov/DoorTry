@@ -255,6 +255,7 @@ function clickMakeStamp()
 
 function clickProba()
 {
+   /*
    // Настраиваем #InfoLead на загрузку изображения
    elem=document.getElementById('InfoLead');
    elem.innerHTML=
@@ -263,7 +264,7 @@ function clickProba()
    '<input id="ipfLoadPic" type="file" name="image">'+
    '</div>'+ 
    '<div>'+ 
-   '<input type="submit" value="Загрузить">'+
+   '<input id="sbfLoadPic" type="submit" value="Загрузить">'+
    '</div>'+ 
    '<div id="result">'+
    'Выберите изображение для нанесения подписи!'+
@@ -271,21 +272,15 @@ function clickProba()
    '</form>';
    // Изменяем заголовок 'input file'
    $('#ipfLoadPic').inputFileText({text: 'Выбрать изображение'});
+   */
    // Скрываем дивы
-   //$('#InfoLead').css('display','none');
+   $('#InfoLead').css('display','none');
    $('#Stamp').css('display','none');
    $('#Photo').css('display','none');
    $('#Proba').css('display','none');
    // Сворачиваем меню
    $('.js-nav-menu').removeClass('navigation-menu--open');
 }
-
-function thisClick() 
-{
-   alert("thisClick");
-   document.getElementById('ipfLoadPic').click();
-}
-
 
 // ****************************************************************************
 // *                  Заменить указанный div разметки сообщением              *
