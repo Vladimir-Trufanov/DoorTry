@@ -154,6 +154,7 @@ function TopMenu()
    //echo '<li><a href="index.php?list=basemaker">Пробная BaseMaker страница</a></li>';
    // Подключаем "Подписать фотографию"
    echo '<li><a href="index.php?list=signaphoto">Подписать фотографию</a></li>';
+    
    // Подключаем страницы для проверки FsbProba
    /*
    echo '<li><a href="index.php?fsb=probaPolityConfident">probaPolityConfident</a></li>';

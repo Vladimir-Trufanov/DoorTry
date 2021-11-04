@@ -6,7 +6,7 @@
 // *                                сайтостраница для подписывания фотографий *
 // ****************************************************************************
 
-// v3.1, 05.08.2021                                   Автор:      Tруфанов В.Е. 
+// v4.0, 04.11.2021                                   Автор:      Tруфанов В.Е. 
 // Copyright © 2021 tve                               Дата создания: 13.06.2021
 
 // Инициируем рабочее пространство страницы
@@ -33,57 +33,60 @@ try
    //require_once $TPhpTools."/TPhpTools/iniErrMessage.php";
    // Подключаем модули страницы "Подписать фотографию"
    require_once 'SignaPhotoHtml.php';
-   
    // Готовим начало страницы для подписывания фотографий
    IniPage($c_SignaPhoto,$UrlHome,$c_FileImg,$c_FileStamp,$c_FileProba);
    echo '<body>';
-  
-   echo '<div id="main">';
-      echo '
-      <nav class="navigation-menu js-nav-menu">
-      <div class="navigation-menu__toggle js-nav-menu-toggle">
-         <span class="navigation-menu__bars"></span>
-      </div>
-      <ul class="menu-list">
-         <li class="menu-list__item" onclick="clickLoadPic()">Загрузить фотографию</li>
-         <li class="menu-list__item" onclick="clickMakeStamp()">Наложить подпись на изображение</li>
-         <li class="menu-list__item" onclick="clickProba()">Переопределить параметры</li>
-         <li class="menu-list__item">Загрузить новую подпись</li>
-      </ul>
-      </nav>
-      <script src="/Jsx/index.js"></script>
-      ';
-      echo '
-         <div  id="InfoLead">
-            1234567890 First  <br>
-            1234567890 Second <br>
-            1234567890 Third  <br>
-         </div>
-      ';
-      echo '
-         <div id="Stamp">
-         <img id="stamp" src="'.$c_FileStamp.'" alt="Изображение подписи">
-         </div>
-      ';
-      echo '
-         <div id="Photo">
-         <img id="pic" src="'.$c_FileImg.'" alt="Фотография без подписи">
-         </div>
-      ';
-      echo '
-         <div id="Proba">
-         <img id="proba" src="'.$c_FileProba.'" alt="Подписанная фотография">
-         </div>
-      ';
-      // Подключаем модули страницы "Подписать фотографию"
-      require_once 'Variant3.php';
-   echo '</div>'; 
+   
+   //
+   ?> 
+   <style type="text/css">
+    a {
+      text-decoration: none; /*убираем подчеркивание текста ссылок*/
+      background:#30A8E6; /*добавляем фон к пункту меню*/
+      color:#fff; /*меняем цвет ссылок*/
+      padding:10px; /*добавляем отступ*/
+      font-family: arial; /*меняем шрифт*/
+      border-radius:4px; /*добавляем скругление*/
+      -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+      -o-transition: all 0.3s 0.01s ease;
+      -webkit-transition: all 0.3s 0.01s ease;
+    }
+    a:hover {
+      background:#1C85BB;/*добавляем эффект при наведении*/
+    }
+    li {
+      float:left; /*Размещаем список горизонтально для реализации меню*/
+      margin-right:5px; /*Добавляем отступ у пунктов меню*/
+      
+    } 
+    
+    
+    
+   </style>
+
+   
+   <ul>
+      <li><a href="acsLoadStamp.php">Загрузить и подписать</a></li>
+      <li><a href="acsToСonfigure.php">Настроить</a></li>
+   </ul>
+
+   <?php
+   //
+   echo '
+     <div  id="InfoLead">
+     <form enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
+     <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
+     <input name="userfile" type="file" />
+     <input type="submit" value="Отправить файл" />
+     </form>
+     </div>
+   ';
+   
    echo '<div id="ViewGlobal">';
-   //prown\ViewGlobal(avgCOOKIE);
+   // prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgREQUEST);
    echo '</div>'; 
-   
    echo '</body>';
    echo '</html>';
 }
