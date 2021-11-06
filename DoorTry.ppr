@@ -540,8 +540,8 @@ Selected=www\Pages\SignaPhoto\SignaPhoto.php
 TopLine=16
 Caret=1,16
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=49
-Caret=41,67
+TopLine=56
+Caret=89,71
 [www\Pages\SignaPhoto\SignaPhotoUpload.php]
 TopLine=42
 Caret=33,68
@@ -555,5 +555,5 @@ Caret=1,1
 TopLine=1
 Caret=21,30
 [..\Webservers\SignaPhoto\SignaPhoto3\ajaLoadPic.php]
-TopLine=22
+TopLine=41
 Caret=1,79

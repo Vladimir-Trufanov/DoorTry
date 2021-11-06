@@ -50,12 +50,31 @@ try
    <?php
    // Выводим див управления и сообщений
    echo '
-      <div  id="InfoLead">
-      <form enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
-      <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
-      <input name="userfile" type="file" />
-      <input type="submit" value="Отправить файл" />
-      </form>
+      <div id="InfoLead">
+         <div id="LoadStamp">
+            <form enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
+            <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
+            <input name="userfile" type="file" />
+            <input type="submit" value="Отправить файл" />
+            </form>
+         </div>
+         <div id="ImgButtons">
+            <button>
+               <img src="Images/LeftRight.png" alt="LeftRight.png" 
+               title="По ширине" style="vertical-align: middle">
+            </button>
+            <button>
+               <img src="Images/AsIs.png" alt="AsIs.png" 
+               title="Разместить изображение по центру" 
+               style="vertical-align: middle">
+            </button>
+            <input type="number" name="quantity" min="10" max="500" step="10" value="50">
+            <button>%</button>
+            <button>
+               <img src="Images/UpDown.png" alt="UpDown.png" 
+               title="По высоте" style="vertical-align: middle">
+            </button>
+         </div>
       </div>
    ';
    // Выводим див с изображением
@@ -67,12 +86,18 @@ try
    // Выводим див настройки и статистики
    echo '
       <div id="CtrlStat">
-      CtrlStat'.$c_FileImg.'
-      </div>
+         <div id="Messages">
+            CtrlStat'.$c_FileImg.'
+         </div>
+         <button>
+            <img src="Images/Options.png" alt="LeftRight.png" 
+            title="Настроить параметры подписи" style="vertical-align: middle">
+         </button>
+      <div id="CtrlStat">
    ';
    
    echo '<div id="ViewGlobal">';
-   prown\ViewGlobal(avgCOOKIE);
+   //prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgREQUEST);
    echo '</div>'; 
