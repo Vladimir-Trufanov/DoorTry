@@ -1,0 +1,46 @@
+/** HTML5/CSS3, EDGE/CHROME                              *** SignaPhoto.css ***
+
+ ******************************************************************************
+ *                Определить стили страницы "Подписать фотографию"            *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  03.06.2021
+ Copyright © 2021 tve                                Посл.изменение: 17.06.2021
+*/
+
+html{font-family:'Anonymous Pro',monospace;font-size:16px;}
+body 
+{
+  background:url(Wallpaper/Goryi-Dyimka.jpg) center center no-repeat;
+  background-size:cover;
+  font-size:1rem;
+  /*color:#fff;*/
+  /*font-family: "Lato", sans-serif;*/
+  /*font-size:2.4rem;*/
+  height:100vh;
+}
+
+#InfoLead
+{
+   background:green;
+} 
+#Photo
+{
+   background:yellow;
+} 
+#CtrlStat
+{
+   background:magenta;
+} 
+/*
+.alert-danger  {color:red;}
+.alert-info    {color:black;}
+.alert-success {color:blue;}
+*/
+
+/*
+ *********************************************************** SignaPhoto.css ***
+*/	
+	
+

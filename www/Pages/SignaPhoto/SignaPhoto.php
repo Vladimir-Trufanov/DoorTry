@@ -40,50 +40,39 @@ try
    //
    ?> 
    <style type="text/css">
-    a {
-      text-decoration: none; /*убираем подчеркивание текста ссылок*/
-      background:#30A8E6; /*добавляем фон к пункту меню*/
-      color:#fff; /*меняем цвет ссылок*/
-      padding:10px; /*добавляем отступ*/
-      font-family: arial; /*меняем шрифт*/
-      border-radius:4px; /*добавляем скругление*/
-      -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
-      -o-transition: all 0.3s 0.01s ease;
-      -webkit-transition: all 0.3s 0.01s ease;
-    }
-    a:hover {
-      background:#1C85BB;/*добавляем эффект при наведении*/
-    }
-    li {
-      float:left; /*Размещаем список горизонтально для реализации меню*/
-      margin-right:5px; /*Добавляем отступ у пунктов меню*/
-      
-    } 
-    
-    
-    
    </style>
-
-   
+   <!-- 
    <ul>
       <li><a href="acsLoadStamp.php">Загрузить и подписать</a></li>
       <li><a href="acsToСonfigure.php">Настроить</a></li>
    </ul>
-
+   -->
    <?php
-   //
+   // Выводим див управления и сообщений
    echo '
-     <div  id="InfoLead">
-     <form enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
-     <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
-     <input name="userfile" type="file" />
-     <input type="submit" value="Отправить файл" />
-     </form>
-     </div>
+      <div  id="InfoLead">
+      <form enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
+      <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
+      <input name="userfile" type="file" />
+      <input type="submit" value="Отправить файл" />
+      </form>
+      </div>
+   ';
+   // Выводим див с изображением
+   echo '
+      <div id="Photo">
+      <img id="pic" src="'.$c_FileImg.'" alt="Фотография">
+      </div>
+   ';
+   // Выводим див настройки и статистики
+   echo '
+      <div id="CtrlStat">
+      CtrlStat'.$c_FileImg.'
+      </div>
    ';
    
    echo '<div id="ViewGlobal">';
-   // prown\ViewGlobal(avgCOOKIE);
+   prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgSERVER);
    //prown\ViewGlobal(avgREQUEST);
    echo '</div>'; 

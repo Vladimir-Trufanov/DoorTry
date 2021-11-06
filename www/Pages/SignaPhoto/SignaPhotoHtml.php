@@ -49,7 +49,7 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    ';
    //
    echo '<link rel="stylesheet" type="text/css" href="StyleReset.css">';
-   //echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
+   echo '<link rel="stylesheet" type="text/css" href="SignaPhoto.css">';
    //echo '<link rel="stylesheet" type="text/css" href="SignaMenu.css">';
    //echo '<script src="SignaPhoto.js"></script>';
    //echo '<script src="SignaPhoto1.js"></script>';
