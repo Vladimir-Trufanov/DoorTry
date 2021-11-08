@@ -9,35 +9,63 @@
  Copyright © 2021 tve                                Посл.изменение: 17.06.2021
 */
 
-html{font-family:'Anonymous Pro',monospace;font-size:16px;}
+/*html{font-family:'Anonymous Pro',monospace;font-size:16px;}*/
 body 
 {
-  background:url(Wallpaper/Goryi-Dyimka.jpg) center center no-repeat;
-  background-size:cover;
-  font-size:1rem;
-  /*color:#fff;*/
-  /*font-family: "Lato", sans-serif;*/
-  /*font-size:2.4rem;*/
-  height:100vh;
+  //background:url(Wallpaper/Goryi-Dyimka.jpg) center center no-repeat;
+  //background-size:cover;
+  background:red;
 }
 
+/* Размещаем div-ы по высоте */
+.Buttons
+{
+}
 #InfoLead
 {
    background:green;
+   height:30rem;
 } 
 #Photo
 {
    background:yellow;
+}
+#Pic
+{
 } 
 #CtrlStat
 {
    background:magenta;
-} 
-/*
-.alert-danger  {color:red;}
-.alert-info    {color:black;}
-.alert-success {color:blue;}
-*/
+}
+
+.BtnRight
+{
+   float:right;
+}
+.BtnLeft
+{
+   float:left;
+}
+#LoadForm{height:4rem;background:yellow;}
+
+.InputAll
+{
+   font-size:1.2rem;
+   padding:1.2rem .4rem 1.2rem .4rem;
+   /*border: 1px solid #cecece;
+   border-radius: 8px;*/
+}
+#Quant{width:4rem}
+/*#InputFile{font-size:1.2rem;}*/
+.BtnImg
+{
+   width:4rem;
+   width:4rem;
+   padding:0;
+}
+
+
+ 
 
 /*
  *********************************************************** SignaPhoto.css ***

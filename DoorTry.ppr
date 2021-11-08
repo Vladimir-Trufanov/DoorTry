@@ -483,7 +483,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		-Styles
+		+Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
@@ -533,6 +533,8 @@ DoorTry
 4=www\Pages\SignaPhoto\acsTo—onfigure.php
 5=www\Pages\SignaPhoto\SignaPhoto.css
 6=..\Webservers\SignaPhoto\SignaPhoto3\ajaLoadPic.php
+7=www\Pages\SignaPhoto\SignaPhotoHtml.php
+8=www\Styles\Styles.css
 [Selected Project Files]
 Main=
 Selected=www\Pages\SignaPhoto\SignaPhoto.php
@@ -540,8 +542,8 @@ Selected=www\Pages\SignaPhoto\SignaPhoto.php
 TopLine=16
 Caret=1,16
 [www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=56
-Caret=89,71
+TopLine=47
+Caret=51,67
 [www\Pages\SignaPhoto\SignaPhotoUpload.php]
 TopLine=42
 Caret=33,68
@@ -552,8 +554,14 @@ Caret=1,1
 TopLine=1
 Caret=1,1
 [www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=1
-Caret=21,30
+TopLine=36
+Caret=1,65
 [..\Webservers\SignaPhoto\SignaPhoto3\ajaLoadPic.php]
 TopLine=41
 Caret=1,79
+[www\Pages\SignaPhoto\SignaPhotoHtml.php]
+TopLine=21
+Caret=4,52
+[www\Styles\Styles.css]
+TopLine=35
+Caret=1,65

@@ -51,28 +51,28 @@ try
    // Выводим див управления и сообщений
    echo '
       <div id="InfoLead">
-         <div id="LoadStamp">
-            <form enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
+         <div id="LoadStamp" class="BtnLeft">
+            <form id="LoadForm" enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
             <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
-            <input name="userfile" type="file" />
-            <input type="submit" value="Отправить файл" />
+            <input class="InputAll" id="InputFile" name="userfile" type="file" />
+            <input class="InputAll" type="submit" value="Отправить файл" />
             </form>
          </div>
-         <div id="ImgButtons">
+         <div id="ImgButtons" class="BtnRight" >
             <button>
-               <img src="Images/LeftRight.png" alt="LeftRight.png" 
-               title="По ширине" style="vertical-align: middle">
+               <img class="BtnImg" src="Images/LeftRight.png" alt="LeftRight.png" 
+               title="По ширине">
             </button>
             <button>
-               <img src="Images/AsIs.png" alt="AsIs.png" 
-               title="Разместить изображение по центру" 
-               style="vertical-align: middle">
+               <img class="BtnImg" src="Images/AsIs.png" alt="AsIs.png" 
+               title="Разместить изображение по центру">
             </button>
-            <input type="number" name="quantity" min="10" max="500" step="10" value="50">
-            <button>%</button>
+            <input class="InputAll" id="Quant" type="number" name="quantity" min="10" max="500" step="10" value="50">
+            <button class="InputAll">%</button>
             <button>
-               <img src="Images/UpDown.png" alt="UpDown.png" 
-               title="По высоте" style="vertical-align: middle">
+               <a href="acsToСonfigure.php">
+               <img class="BtnImg" src="Images/UpDown.png" alt="UpDown.png" 
+               title="По высоте">
             </button>
          </div>
       </div>
@@ -80,7 +80,7 @@ try
    // Выводим див с изображением
    echo '
       <div id="Photo">
-      <img id="pic" src="'.$c_FileImg.'" alt="Фотография">
+      <img id="Pic" src="'.$c_FileImg.'" alt="Фотография">
       </div>
    ';
    // Выводим див настройки и статистики
@@ -89,11 +89,14 @@ try
          <div id="Messages">
             CtrlStat'.$c_FileImg.'
          </div>
+         <div class="BtnRight"> 
          <button>
-            <img src="Images/Options.png" alt="LeftRight.png" 
-            title="Настроить параметры подписи" style="vertical-align: middle">
+            <img class="BtnImg" src="Images/Options.png" alt="LeftRight.png"
+            href="acsToСonfigure.php" 
+            title="Настроить параметры подписи">
          </button>
-      <div id="CtrlStat">
+         </div>
+      </div>
    ';
    
    echo '<div id="ViewGlobal">';
