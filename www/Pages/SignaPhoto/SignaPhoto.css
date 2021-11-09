@@ -17,15 +17,28 @@ body
   background:red;
 }
 
-/* Размещаем div-ы по высоте */
-.Buttons
+/* Выравниваем верхнее меню InfoLead */
+#InfoLead{background:green;height:5rem;} 
+/*
+#Quant
 {
+background-color:transparent;border:0;
 }
-#InfoLead
-{
-   background:green;
-   height:30rem;
-} 
+#Quant{width:4rem;background:red;}
+*/
+#BtnQuant{background:red;}
+
+/*
+input#inputi{
+    display:none;
+}
+label#labeli{
+   font-family:'Lobster',cursive;
+   font-size:1.4rem;
+   width:10rem;
+}
+*/
+
 #Photo
 {
    background:yellow;
@@ -45,18 +58,19 @@ body
 .BtnLeft
 {
    float:left;
+   font-family:'Lobster',cursive;
+   font-size:1.4rem;
 }
-#LoadForm{height:4rem;background:yellow;}
+.LoadForm{height:4rem;background:yellow;}
 
 .InputAll
 {
-   font-size:1.2rem;
-   padding:1.2rem .4rem 1.2rem .4rem;
-   /*border: 1px solid #cecece;
+   font-family:'Lobster',cursive;
+   font-size:1.4rem;
+   /*padding:1.2rem .4rem 1.2rem .4rem;*/
+   /* border: 1px solid #cecece;
    border-radius: 8px;*/
 }
-#Quant{width:4rem}
-/*#InputFile{font-size:1.2rem;}*/
 .BtnImg
 {
    width:4rem;

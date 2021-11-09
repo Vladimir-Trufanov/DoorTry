@@ -52,10 +52,12 @@ try
    echo '
       <div id="InfoLead">
          <div id="LoadStamp" class="BtnLeft">
-            <form id="LoadForm" enctype="multipart/form-data" action="SignaPhotoUpload.php" method="POST">
+            <form class="LoadForm" enctype="multipart/form-data" action="frmPhotoUpload.php" method="POST">
             <input type="hidden" name="MAX_FILE_SIZE" value="2400000" />
-            <input class="InputAll" id="InputFile" name="userfile" type="file" />
-            <input class="InputAll" type="submit" value="Отправить файл" />
+            <!-- <label id="labeli" for="InputFile" >Выбрать файл</label> -->
+            <input id="InputFile" class="InputAll" name="userfile" type="file" />
+            <input  class="InputAll" type="submit" value="Подпишите файл" />
+            <!-- <div>Здесь могло быть имя файла</div> -->
             </form>
          </div>
          <div id="ImgButtons" class="BtnRight" >
@@ -67,8 +69,12 @@ try
                <img class="BtnImg" src="Images/AsIs.png" alt="AsIs.png" 
                title="Разместить изображение по центру">
             </button>
-            <input class="InputAll" id="Quant" type="number" name="quantity" min="10" max="500" step="10" value="50">
-            <button class="InputAll">%</button>
+            <button id="BtnQuant" form="frmQuant" class="InputAll">
+            <form class="LoadForm" action="SignaPhoto.php" id="frmQuant">
+               <input id="Quant" class="InputAll" type="number" name="quantity" min="10" max="500" step="10" value="50">
+               %
+            </form>
+            </button>
             <button>
                <a href="acsToСonfigure.php">
                <img class="BtnImg" src="Images/UpDown.png" alt="UpDown.png" 
@@ -102,7 +108,7 @@ try
    echo '<div id="ViewGlobal">';
    //prown\ViewGlobal(avgCOOKIE);
    //prown\ViewGlobal(avgSERVER);
-   //prown\ViewGlobal(avgREQUEST);
+   prown\ViewGlobal(avgREQUEST);
    echo '</div>'; 
    echo '</body>';
    echo '</html>';

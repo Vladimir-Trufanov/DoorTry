@@ -53,6 +53,13 @@ function IniPage(&$c_SignaPhoto,&$UrlHome,&$c_FileImg,&$c_FileStamp,&$c_FileProb
    //echo '<link rel="stylesheet" type="text/css" href="SignaMenu.css">';
    //echo '<script src="SignaPhoto.js"></script>';
    //echo '<script src="SignaPhoto1.js"></script>';
+   
+   echo '
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   ';
+   
    echo '</head>';
    return $Result;
 }
