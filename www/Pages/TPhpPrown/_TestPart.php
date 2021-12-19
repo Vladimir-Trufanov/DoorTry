@@ -47,11 +47,12 @@ function TestPart($SiteHost,$Parm)
          function isOnButtonClick() 
          {
             var cScript="<?php echo $ListName; ?>";
+            console.log(cScript);
             DeleteCookie('WasTest');
             location.replace(cScript);
          }
       </script>
-      <button id="button" onclick="isOnButtonClick()">Протестировать функцию!</button>
+      <button id="button" onclick="isOnButtonClick()">Протестировать функцию!</button><br><br>
       </body></html>
       <?php
    }

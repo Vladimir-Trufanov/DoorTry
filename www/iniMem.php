@@ -31,18 +31,17 @@ else define ("dirStihi",'/Stihi/');
 // Ссылка на список RSS-каналов "https://subscribe.ru/catalog?rss"
 $aNews=array
 (
-   'Ведомости России'           => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
-   'Яндекс Общество'            => 'http://news.yandex.ru/society.rss',   
-   'Новости Украины'            => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
-   'Новости российского спорта' => 'http://stadium.ru/rss', 
-   'Яндекс Интернет'            => 'http://feeds.feedburner.com/yandex/MAOo',
-   'Google Новости'             => 'http://news.google.com/news?hl=ru&um=1&q='.
+   'Ведомости России'              => 'http://www.vedomosti.ru/newsline/out/rss.xml',   
+   'Яндекс Общество'               => 'http://news.yandex.ru/society.rss',   
+   'Новости Украины'               => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
+   'Новости российского спорта'    => 'http://stadium.ru/rss', 
+   'Яндекс Интернет'               => 'http://feeds.feedburner.com/yandex/MAOo',
+   'Google Новости'                => 'http://news.google.com/news?hl=ru&um=1&q='.
       '%D0%D2%C1%D7%C1+%C9%CE%D7%C1%CC%C9%C4%CF%D7&ie=windows-1251&output=rss',
-   'Что достойно перевода!'     => 'http://www.inosmi.ru/misc/export/xml/rss/translation.xml',
-   'Русская весна'              => 'http://rusvesna.su/rss.xml',            
-   'Новости Mail.ru'            => 'http://news.mail.ru/rss/',
-   //'Столица на Онего'         => 'http://www.stolica.onego.ru/rss.php/feed.xml',  
-   //'Журнал Хакер'     => 'http://www.xakep.ru/articles/rss/default.asp?rss_cat=hack',
+   'Популярная механика'           => 'http://www.popmech.ru/out/public-technologies.xml',
+   'Русская весна'                 => 'http://rusvesna.su/rss.xml',            
+   'Новости Mail.ru'               => 'http://news.mail.ru/rss/',
+   'Идеи перепланировки и ремонта' => 'https://www.houzz.ru/getGalleries/featured/out-rss', 
 );
 $aStihi=array
 ( 

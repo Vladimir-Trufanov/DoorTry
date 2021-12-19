@@ -56,7 +56,7 @@ require_once $SiteRoot."/iniTPhpPrown.php";
 
 // Определяем переданный параметр
 $Parm=prown\getComRequest('list');
-prown\ConsoleLog('$Parm='.$Parm);
+//prown\ConsoleLog('$Parm='.$Parm);
 
 // Если параметр в запросе не был указан, то выводим сообщение 
 // "Страница из библиотеки не указана в параметре!"
@@ -74,9 +74,6 @@ else if (!isTPhpPrownFunc($Parm,$aTPhpPrown))
 // подключаем страницу библиотеки
 else
 {
-   // prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
-   // prown\ViewGlobal(avgREQUEST);
- 
    // Загружаем контент выбранной страницы
    require_once($SiteRoot.'/Pages/TPhpPrown/'.$Parm.'.php');
    require_once $SiteRoot."/Pages/TPhpPrown/_CodePart.php";
@@ -84,7 +81,6 @@ else
 
    if (defined("FuncName")&&(FuncName=='MakeCookie')) 
    {
-      //prown\ConsoleLog('Поймали MakeCookie');
       if (FuncName=='MakeCookie') 
       {
          if (!IsSet($_COOKIE['WasTest']))
@@ -94,13 +90,10 @@ else
       }
 
    }  
-   
    require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
    // Формируем и выводим страницу
    require_once $SiteRoot."/Pages/TPhpPrown/_viewTPhpPrown.php";
 }
-
-
 // ----------------------------------------------------------------------------
 }
 catch (E_EXCEPTION $e) 

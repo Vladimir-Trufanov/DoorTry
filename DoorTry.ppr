@@ -266,7 +266,7 @@ DoorTry
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -276,7 +276,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+SignaPhoto
+			-SignaPhoto
 				-imgdebug
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.png
@@ -413,7 +413,7 @@ DoorTry
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
 				www\Pages\SignaPhoto\frmPhotoUpload.php
 				www\Pages\SignaPhoto\StyleReset.css
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -527,49 +527,61 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\Pages\SignaPhoto\SignaPhoto.php
-2=www\Pages\SignaPhoto\frmPhotoUpload.php
-3=www\Pages\SignaPhoto\acsLoadStamp.php
-4=www\Pages\SignaPhoto\acsTo—onfigure.php
-5=www\Pages\SignaPhoto\SignaPhoto.css
-6=..\Webservers\SignaPhoto\SignaPhoto3\ajaLoadPic.php
-7=www\Pages\SignaPhoto\SignaPhotoHtml.php
-8=www\Styles\Styles.css
-9=www\Pages\SignaPhoto\StyleReset.css
-10=www\Pages\SignaPhoto\frmQuant.php
+1=www\Pages\TPhpPrown\ustanovit-novoe-znachenie-cookie-v-brauzere.php
+2=www\Pages\TPhpPrown\_TestPart.php
+3=..\TPhpPrown\TPhpPrown\CommonPrown.php
+4=www\Pages\TPhpPrown\_dispTPhpPrown.php
+5=..\TPhpPrown\TPhpPrown\MakeCookie.php
+6=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php
+7=www\Pages\TPhpPrown\_viewTPhpPrown.php
+8=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php
+9=..\TPhpPrown\TPhpPrown\iniErrMessage.php
+10=www\Pages\News\MakeNews.php
+11=www\iniMenu.php
+12=www\iniMem.php
+13=www\Pages\News\SimpleTape.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\SignaPhoto.php
+Selected=www\iniMem.php
 [www\Main.php]
 TopLine=16
 Caret=1,16
-[www\Pages\SignaPhoto\SignaPhoto.php]
-TopLine=47
-Caret=69,59
-[www\Pages\SignaPhoto\frmPhotoUpload.php]
-TopLine=15
-Caret=33,68
-[www\Pages\SignaPhoto\acsLoadStamp.php]
-TopLine=1
+[www\Pages\TPhpPrown\ustanovit-novoe-znachenie-cookie-v-brauzere.php]
+TopLine=100
 Caret=1,1
-[www\Pages\SignaPhoto\acsTo—onfigure.php]
-TopLine=1
+[www\Pages\TPhpPrown\_TestPart.php]
+TopLine=22
+Caret=91,55
+[..\TPhpPrown\TPhpPrown\CommonPrown.php]
+TopLine=65
+Caret=80,73
+[www\Pages\TPhpPrown\_dispTPhpPrown.php]
+TopLine=65
+Caret=1,97
+[..\TPhpPrown\TPhpPrown\MakeCookie.php]
+TopLine=93
 Caret=1,1
-[www\Pages\SignaPhoto\SignaPhoto.css]
-TopLine=9
-Caret=1,41
-[..\Webservers\SignaPhoto\SignaPhoto3\ajaLoadPic.php]
-TopLine=41
-Caret=1,79
-[www\Pages\SignaPhoto\SignaPhotoHtml.php]
-TopLine=29
-Caret=6,61
-[www\Styles\Styles.css]
-TopLine=35
-Caret=1,65
-[www\Pages\SignaPhoto\StyleReset.css]
-TopLine=6
-Caret=19,39
-[www\Pages\SignaPhoto\frmQuant.php]
+[..\TPhpPrown\TPhpPrownTests\MakeCookie_test_I.php]
+TopLine=144
+Caret=1,144
+[www\Pages\TPhpPrown\_viewTPhpPrown.php]
+TopLine=20
+Caret=1,20
+[..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php]
 TopLine=1
+Caret=23,17
+[..\TPhpPrown\TPhpPrown\iniErrMessage.php]
+TopLine=14
+Caret=1,21
+[www\Pages\News\MakeNews.php]
+TopLine=84
+Caret=1,1
+[www\iniMenu.php]
+TopLine=1
+Caret=1,15
+[www\iniMem.php]
+TopLine=11
+Caret=1,45
+[www\Pages\News\SimpleTape.php]
+TopLine=5
 Caret=1,1
