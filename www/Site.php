@@ -30,24 +30,7 @@ echo '<div class="pageWrapper">';
          echo '<article class="main">';
             MakeQrcode();
             MakeH1();
-            //echo $_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME'].'<br>';
-            //prown\ConsoleLog($_SERVER['DOCUMENT_ROOT'].$_SERVER['SCRIPT_NAME']);
-            /*
-            $regex = '/(Colo(u?)r)/is';
- 
-if(preg_match($regex, 'I like yellow color', $pocket)) {
- echo '<pre>' . print_r($pocket, true) . '</pre>';}
-            */
-            
-            /*
-            $regex = '/Stihi\/([a-z-]{1,})/u';
-            if(preg_match($regex, 'Stihi/kapriznyj-starik', $pocket)) 
-            {
-               echo '<pre>' . print_r($pocket, true) . '</pre>';
-            }
-            */
-           
-            //echo  prown\getTranslit('Старая версия').'<br>';
+            //echo  prown\getTranslit('Создать каталог и задать его права').'<br>';
             //phpinfo();
             //DebugError();
             PageContent($SiteHost,$SiteProtocol);

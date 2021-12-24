@@ -70,9 +70,27 @@ body
 {
    color:#FF8015;         
    font-size:105%;   
-	font-weight:bold;
+   font-weight:bold;
    position:relative; 
 }
+.TPhpPrown .codestring 
+{
+   font-weight:bold;
+   position:relative; 
+}
+
+#prava
+{
+   border-top: 2px solid #000;    /* Линия сверху таблицы */
+   border-bottom: 2px solid #000; /* Линия внизу таблицы */
+}
+#prava th 
+{
+   text-align: left;              /* Выравнивание текста по левому краю */
+   border-bottom: 1px solid #000; /* Линия под верхним заголовком */
+}
+
+
 #AboutTPhpPrown
 {
    padding-right:2rem;

@@ -66,6 +66,11 @@ pre
    color:#FF8015;         
    position:relative; 
 }
+.TPhpPrown .codestring 
+{
+   font-weight:bold;
+   position:relative; 
+}
 #AboutTPhpPrown blockquote
 {
    background:#FFE9EF;

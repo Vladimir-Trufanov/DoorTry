@@ -45,10 +45,6 @@ require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 require_once($TPhpPrown.'/TPhpPrownTests/MakeCookie_test_D.php');
 require_once($TPhpPrown.'/TPhpPrownTests/MakeCookie_test_I.php');
 
-
-
-
-
 // Подгружаем рабочие модули
 require_once $SiteRoot."/Common.php";
 require_once $SiteRoot."/iniErrDoorTry.php";
@@ -88,7 +84,6 @@ else
             MakeCookieTest(entryDoorTry);
          }
       }
-
    }  
    require_once($TPhpPrown.'/TPhpPrownTests/FunctionsBlock.php');
    // Формируем и выводим страницу
