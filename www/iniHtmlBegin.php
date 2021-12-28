@@ -18,6 +18,7 @@ echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
 echo '<link rel="icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
 echo '<link rel="shortcut icon" href="https://doortry.ru/favicon.ico" type="image/x-icon">';
 // Добавляем Google аналитику
+/*
 if ($_SERVER['HTTP_HOST']=='doortry.ru')
 {
    echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
@@ -30,6 +31,7 @@ if ($_SERVER['HTTP_HOST']=='doortry.ru')
    echo "  gtag('config', 'UA-36748654-2');";
    echo '</script>';
 }
+*/
 // Подключаем jquery/jquery-ui
 
    echo '
@@ -89,6 +91,7 @@ echo '<script src="/Jsx/TJsPrown.js"></script>';
 // Разворачиваем смартменю
 echo '<script> MakeSmartMenu(); </script>';
 // Подключаем яндекс-метрику
+/*
 if ($_SERVER['HTTP_HOST']=='doortry.ru')
 {
 echo '
@@ -109,6 +112,7 @@ echo '
 <!-- /Yandex.Metrika counter -->
 ';
 }
+*/
 echo '</head>';
 echo '<body>';
 //echo '<div id="res">Сообщение</div>';

@@ -38,4 +38,38 @@ function isNichost()
    }
    return $Result;
 }
+
+// ****************************************************************************
+// *                Вывести значок верного CSS в текущей позиции              *
+// ****************************************************************************
+function MarkerCSS($mColor='vcss')
+{
+   if ($mColor=='vcss')
+   {
+   ?>
+      <p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer"
+         title="Правильный CSS!">
+         <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Правильный CSS!" />
+      </a>
+      </p>
+   <?php
+   }
+   else
+   {
+   ?>
+      <p>
+       <a href="https://jigsaw.w3.org/css-validator/check/referer"
+          title="Правильный CSS!">
+          <img style="border:0;width:88px;height:31px"
+             src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+             alt="Правильный CSS!" />
+      </a>
+      </p>
+   <?php
+   }
+}
+
 // ************************************************************* Common.php *** 

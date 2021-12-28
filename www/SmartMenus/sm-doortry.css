@@ -27,40 +27,31 @@
 	background-color:rgb(25,25,25);
 	/*background-color:yellow;*/
    zoom:1;	
-   height:3.65rem ! только в настольной версии;
+   height:3.65rem; /* ! только в настольной версии; */
 }
 /* Цвета названий пунктов меню и их фона */
 .sm-doortry a
 {
    color:white;
-	background-color:rgb(25,25,25);
+   background-color:rgb(25,25,25);
    font-size:1.4rem;
-	font-weight:normal;
+   font-weight:normal;
    text-decoration:none;
    text-shadow:none;
    text-align:left;
    padding:1rem 1rem 0.9rem 1rem;
-	transition:all .5s;
+   transition:all .5s;
 }
 .sm-doortry a:hover 
 {
  	background-color:rgb(93,43,78); /* Сиреневый цвет */
 }
-.sm-doortry a:hover, 
-.sm-doortry a:focus, 
-.sm-doortry a:active, 
-.sm-doortry a.highlighted ! Выбираемый пункт меню с подменю 
-{
- 	background-color:yellow ! Цвет задан до выявления нежелательного эффекта its?; 
-}
-/* .sm-doortry a.current ! its? */
 .sm-doortry a.current
 {
    color: red;
    background:#3092c0;
    background-image:linear-gradient(to bottom, #3298c8, #2e8cb8);
 }
-/* .sm-doortry a.disabled ! its? */
 .sm-doortry a.disabled
 {
    color:#a1d1e8;

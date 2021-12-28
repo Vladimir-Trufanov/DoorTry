@@ -55,6 +55,7 @@ function PageContent($SiteHost,$SiteProtocol)
    <img id="ImgObrErr" src="Images/DoorTry2.png" alt="Обработать ошибки/исключения">
    </div>
    <?php
+   MarkerCSS('vcss-blue');
    return $Result;
 }
 // <!-- class="half center" --> ************************************************ SimPrincip.php ***

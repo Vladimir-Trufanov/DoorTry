@@ -96,10 +96,10 @@ function DescriptPart()
 
 <p>Например, при вызове функции CreateRightsDir следующим образом:</p>
 
-<span class="codestring"><p>
+<span class="codestring">
 $ImgDir=$_SERVER['DOCUMENT_ROOT'].'/CreateRightsDir';<br>
 $Result=prown\CreateRightsDir($ImgDir,0755,rvsReturn);
-</p></span>
+</span>
 <p>установятся права: <span class="codestring">"d rwx r-x r-x".</span></p>
 
 <p>Очень любопытный режим доступа к каталогу - 3 (-wx): 
@@ -135,12 +135,14 @@ ID - бит смены идентификатора группы). Если ус
 каждого бита <span class="codestring">"d rws rws rwt"</span> следующим образом:
 </p>
 
-<span class="codestring"><p>
+<span class="codestring">
 $ImgDir=$_SERVER['DOCUMENT_ROOT'].'/CreateRightsDir';<br>
 $Result=prown\CreateRightsDir($ImgDir,07777,rvsReturn);
-</p></span>
+</span>
 </div>
 </div>
 <?php
+// Выводим значок верного CSS в текущей позиции 
+MarkerCSS();
 }
 // <!-- --> ************************** sozdat-katalog-i-zadat-ego-prava.php ***

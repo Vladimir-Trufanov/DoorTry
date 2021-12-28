@@ -260,13 +260,13 @@ DoorTry
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -277,6 +277,12 @@ DoorTry
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
 			-SignaPhoto
+				-Images
+					www\Pages\SignaPhoto\Images\AsIs.png
+					www\Pages\SignaPhoto\Images\Home.png
+					www\Pages\SignaPhoto\Images\LeftRight.png
+					www\Pages\SignaPhoto\Images\Options.png
+					www\Pages\SignaPhoto\Images\UpDown.png
 				-imgdebug
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
 					www\Pages\SignaPhoto\imgdebug\goggle-eyed.png
@@ -396,6 +402,7 @@ DoorTry
 					www\Pages\SignaPhoto\Reserv\SignaPhoto.js
 					www\Pages\SignaPhoto\Reserv\SignaPhoto.php
 					www\Pages\SignaPhoto\Reserv\SignaPhotoHtml.php
+				-Temp
 				-Wallpaper
 					www\Pages\SignaPhoto\Wallpaper\Goryi-Dyimka.jpg
 					www\Pages\SignaPhoto\Wallpaper\SignaPhoto.jpg
@@ -406,14 +413,16 @@ DoorTry
 				www\Pages\SignaPhoto\acsTo—onfigure.php
 				www\Pages\SignaPhoto\ajaLoadPic.php
 				www\Pages\SignaPhoto\ajaMakeStamp.php
+				www\Pages\SignaPhoto\frmPhotoUpload.php
+				www\Pages\SignaPhoto\frmQuant.php
 				www\Pages\SignaPhoto\license.txt
+				www\Pages\SignaPhoto\log.txt
 				www\Pages\SignaPhoto\SignaPhoto.css
 				www\Pages\SignaPhoto\SignaPhoto.php
 				www\Pages\SignaPhoto\SignaPhotoDef.php
 				www\Pages\SignaPhoto\SignaPhotoHtml.php
-				www\Pages\SignaPhoto\frmPhotoUpload.php
 				www\Pages\SignaPhoto\StyleReset.css
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -421,13 +430,13 @@ DoorTry
 				www\Pages\TPhpPrown\bajty-v-kilo-kibi-mega-mebibajty-i-obratno.php
 				www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 				www\Pages\TPhpPrown\dlyaobschego.php
-				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
 				www\Pages\TPhpPrown\opredelit-populyarnye-regulyarnye-vyrazheniya-php.php
 				www\Pages\TPhpPrown\opredelit-rabotaet-li-funkciya-calc-dlya-css.php
 				www\Pages\TPhpPrown\otrabotat-regulyarnoe-vyrazhenie-na-tekste.php
+				www\Pages\TPhpPrown\preobrazovat-znachenie-k-zadannomu-tipu.php
 				www\Pages\TPhpPrown\sozdat-katalog-i-zadat-ego-prava.php
 				www\Pages\TPhpPrown\ustanovit-novoe-znachenie-cookie-v-brauzere.php
 				www\Pages\TPhpPrown\ustanovit-znachenie-sessionnoj-peremennoj.php
@@ -458,9 +467,13 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-SmartMenus
+		+SmartMenus
 			www\SmartMenus\AjaxBase.db3
+			www\SmartMenus\ColabLig-webfont.ttf
+			www\SmartMenus\ColabLig-webfont.woff
 			www\SmartMenus\jquery.smartmenus.min.js
+			www\SmartMenus\leaguegothic-regular-webfont.ttf
+			www\SmartMenus\leaguegothic-regular-webfont.woff
 			www\SmartMenus\MakeSmartMenu.js
 			www\SmartMenus\save.php
 			www\SmartMenus\sm-core-css.css
@@ -483,7 +496,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		+Styles
+		-Styles
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
@@ -500,6 +513,7 @@ DoorTry
 		www\DebugTimer.php
 		www\doortry.png
 		www\DoorTryError.php
+		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -512,7 +526,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -531,41 +544,41 @@ DoorTry
 2=www\Pages\TPhpPrown\_viewTPhpPrown.php
 3=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php
 4=..\TPhpPrown\TPhpPrown\CreateRightsDir.php
-5=www\Pages\TPhpPrown\sozdat-katalog-i-zadat-ego-prava.php
-6=www\Pages\TPhpPrown\o-biblioteke.php
-7=www\Styles\TPhpPrownComp.css
-8=www\Styles\TPhpPrownMobi.css
-9=..\TPhpPrown\TPhpPrown\MakeType.php
+5=www\iniHtmlBegin.php
+6=www\Site.php
+7=www\Pages\DoorTry\SimPrincip.php
+8=www\Pages\DoorTry\ConnHandler.php
+9=www\Common.php
 [Selected Project Files]
 Main=
-Selected=..\TPhpPrown\TPhpPrown\CreateRightsDir.php
+Selected=www\Common.php
 [www\Main.php]
-TopLine=16
-Caret=1,16
+TopLine=14
+Caret=1,42
 [www\Pages\TPhpPrown\_dispTPhpPrown.php]
-TopLine=51
+TopLine=49
 Caret=1,87
 [www\Pages\TPhpPrown\_viewTPhpPrown.php]
-TopLine=20
-Caret=1,20
+TopLine=53
+Caret=1,89
 [..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php]
 TopLine=1
 Caret=23,17
 [..\TPhpPrown\TPhpPrown\CreateRightsDir.php]
-TopLine=125
+TopLine=56
 Caret=1,94
-[www\Pages\TPhpPrown\sozdat-katalog-i-zadat-ego-prava.php]
-TopLine=3
-Caret=28,24
-[www\Pages\TPhpPrown\o-biblioteke.php]
-TopLine=9
-Caret=80,10
-[www\Styles\TPhpPrownComp.css]
-TopLine=53
-Caret=34,89
-[www\Styles\TPhpPrownMobi.css]
-TopLine=41
-Caret=1,74
-[..\TPhpPrown\TPhpPrown\MakeType.php]
+[www\iniHtmlBegin.php]
+TopLine=77
+Caret=3,115
+[www\Site.php]
+TopLine=23
+Caret=1,61
+[www\Pages\DoorTry\SimPrincip.php]
+TopLine=21
+Caret=27,58
+[www\Pages\DoorTry\ConnHandler.php]
 TopLine=1
-Caret=1,1
+Caret=61,2
+[www\Common.php]
+TopLine=33
+Caret=34,65
