@@ -1,1 +1,1 @@
-[08-Nov-2021 20:48:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\DoorTry\www\Pages\SignaPhoto\SignaPhotoHtml.php on line 57
+[05-Mar-2022 14:14:29 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:\DoorTry\www/ViewEnviron.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Pages\Signaphoto\SignaPhoto.php on line 36

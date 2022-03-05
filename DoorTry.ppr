@@ -256,7 +256,7 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -276,7 +276,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			-SignaPhoto
+			+SignaPhoto
 				-Images
 					www\Pages\SignaPhoto\Images\AsIs.png
 					www\Pages\SignaPhoto\Images\Home.png
@@ -296,7 +296,7 @@ DoorTry
 					www\Pages\SignaPhoto\imgdebug\Дед-сын-и-внук.png
 					www\Pages\SignaPhoto\imgdebug\Танцы в Северном.doc
 					www\Pages\SignaPhoto\imgdebug\Хорошенькая.png
-				-Reserv
+				+Reserv
 					-_InterSpooky
 						-css
 							www\Pages\SignaPhoto\Reserv\_InterSpooky\css\style.css
@@ -380,7 +380,7 @@ DoorTry
 							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_variables.scss
 							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\font-awesome.scss
 						www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\HELP-US-OUT.txt
-					-OldVer
+					+OldVer
 						www\Pages\SignaPhoto\Reserv\OldVer\Indoor.html
 						www\Pages\SignaPhoto\Reserv\OldVer\log.txt
 						www\Pages\SignaPhoto\Reserv\OldVer\Register.html
@@ -467,7 +467,7 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		+SmartMenus
+		-SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\ColabLig-webfont.ttf
 			www\SmartMenus\ColabLig-webfont.woff
@@ -546,15 +546,12 @@ DoorTry
 4=..\TPhpPrown\TPhpPrown\CreateRightsDir.php
 5=www\iniHtmlBegin.php
 6=www\Site.php
-7=www\Pages\DoorTry\SimPrincip.php
-8=www\Pages\DoorTry\ConnHandler.php
-9=www\Common.php
-10=www\iniMenu.php
+7=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js
 [Selected Project Files]
 Main=
-Selected=www\iniMenu.php
+Selected=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js
 [www\Main.php]
-TopLine=52
+TopLine=42
 Caret=1,42
 [www\Pages\TPhpPrown\_dispTPhpPrown.php]
 TopLine=49
@@ -574,15 +571,6 @@ Caret=3,115
 [www\Site.php]
 TopLine=23
 Caret=1,61
-[www\Pages\DoorTry\SimPrincip.php]
-TopLine=21
-Caret=27,58
-[www\Pages\DoorTry\ConnHandler.php]
-TopLine=1
-Caret=61,2
-[www\Common.php]
-TopLine=33
-Caret=34,65
-[www\iniMenu.php]
-TopLine=91
-Caret=4,122
+[www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js]
+TopLine=38
+Caret=1,1
