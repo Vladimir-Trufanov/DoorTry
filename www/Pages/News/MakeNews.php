@@ -92,18 +92,18 @@ function getNews()
    }
    return $Result;
 }
-
+// ****************************************************************************
+// *                     Показать колонку выбранных новостей                  *
+// ****************************************************************************
 function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
 {  
    $Result = true;
    // переключаемся на пользовательский обработчик
    if ($p_NewsView)
    {
-      //$old_error_handler = set_error_handler("myErrorHandler");
+      set_error_handler("NewsViewHandler");
       echo '<h1>'.getH2_News($s_NameNews).'</h1>';
-      //echo '<p>';'.getH2_News($s_NameNews).'r</h1>";
       $urlNews=getUrlNews($s_NameNews);
-      //echo $urlNews.'<br>';
       if ($p_NewsForm==frnSimple) 
       {
          SimpleTape($urlNews,$p_NewsAmt);
@@ -112,12 +112,60 @@ function NewsView($p_NewsView,$p_NewsForm,$p_NewsAmt,$s_NameNews)
       {
          WithImgTape($urlNews,$p_NewsAmt);
       }
-      //echo '</p>';
-      
-      //restore_error_handler();
-      //echo "<b>restore_error_handler</b><br />\n";
+      restore_error_handler();
    }
    return $Result;
-   
 }
+// ****************************************************************************
+// *          Обыграть ошибки показа колонки выбранных новостей               *
+// ****************************************************************************
+function NewsViewHandler($errno,$errstr,$errfile,$errline)
+{
+   $modul='NewsViewHandler';
+   // Если error_reporting нулевой, значит, использован оператор @,
+   // все ошибки должны игнорироваться
+   if (!error_reporting()) 
+   {
+       prown\Alert('Заблокированная ошибка '.$errstr);
+       //putErrorInfo($modul,$errno,
+       //  '['.NoErrReporting.'] '.$errstr,$errfile,$errline);
+   }
+   else
+   {
+      // Отлавливаем ошибку "Не удалось загрузить страницу новостей"
+      $Find='failed to load external entity';
+      $Resu=Findes('/'.$Find.'/u',$errstr); 
+      if ($Resu==$Find) 
+      {
+         prown\Alert('Не удалось загрузить страницу новостей!');
+      }
+      // Игнорируем первое доп.сообщение по ошибке 
+      // "Не удалось загрузить страницу новостей"
+      else 
+      {
+         $Find='Trying to get property \'channel\' of non-object';
+         $Resu=Findes('/'.$Find.'/u',$errstr); 
+         if ($Resu==$Find) {}
+         // Игнорируем второе доп.сообщение по ошибке 
+         else 
+         {
+            $Find='Trying to get property \'item\' of non-object';
+            $Resu=Findes('/'.$Find.'/u',$errstr); 
+            if ($Resu==$Find) {}
+            // Игнорируем третье доп.сообщение по ошибке 
+            else 
+            {
+               $Find='Invalid argument supplied for foreach';
+               $Resu=Findes('/'.$Find.'/u',$errstr); 
+               if ($Resu==$Find) {}
+               // Обобщаем остальные ошибки
+               else 
+               {
+                  prown\Alert($errstr);
+               }
+            }
+         }
+      }
+   }                  
+}  
 // *********************************************************** MakeNews.php ***

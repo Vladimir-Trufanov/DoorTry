@@ -16,11 +16,11 @@
 function TuneinRequest($urlPage,&$c_PointCorner,&$c_PerSizeImg,&$c_PerMargeWidth,&$c_PerMargeHight,&$c_MaintainProp)
 {
    // Обеспечиваем инициацию параметров подписи при первом запуске
-   $c_PointCorner=prown\MakeCookie('PointCorner',ohRightBottom,tStr,true);      // точка привязки подписи
+   $c_PointCorner=prown\MakeCookie('PointCorner',ohLeftTop,tStr,true);          // точка привязки подписи
    $c_PerSizeImg=prown\MakeCookie('PerSizeImg',20,tInt,true);                   // процент размера подписи к изображению
    $c_PerMargeWidth=prown\MakeCookie('PerMargeWidth',5,tInt,true);              // процент смещения подписи по ширине от точки привязки
    $c_PerMargeHight=prown\MakeCookie('PerMargeHight',5,tInt,true);              // процент смещения подписи по высоте от точки привязки
-   $c_MaintainProp=prown\MakeCookie('MaintainProp',ohMaintainFalse,tStr,true);  // не сохранять пропорции подписи
+   $c_MaintainProp=prown\MakeCookie('MaintainProp',ohMaintainTrue,tStr,true);   // сохранять пропорции подписи
   
    // Настраиваем процент размера подписи к изображению 
    if (IsSet($_POST['PerSizeImg']))

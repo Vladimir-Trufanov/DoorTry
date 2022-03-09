@@ -17,11 +17,11 @@ function ConnectImgFiles(&$c_FileImg,&$c_FileStamp,&$c_FileProba)
    // Обеспечиваем инициацию изображений при первом запуске в браузере
    $c_FileImg=prown\MakeCookie('FileImg','images/iphoto.jpg',tStr,true);
    $c_FileStamp=prown\MakeCookie('FileStamp','images/istamp.png',tStr,true);
-   $c_FileProba=prown\MakeCookie('FileProba','images/iproba.png',tStr,true);
+   $c_FileProba=prown\MakeCookie('FileProba','images/iproba.jpeg',tStr,true);
    // Проверяем существование изображений, инициируем при отсутствии
    if (@!fopen($c_FileImg,"r"))   $c_FileImg=prown\MakeCookie('FileImg','images/iphoto.jpg',tStr); 
    if (@!fopen($c_FileStamp,"r")) $c_FileStamp=prown\MakeCookie('FileStamp','images/istamp.png',tStr); 
-   if (@!fopen($c_FileProba,"r")) $c_FileProba=prown\MakeCookie('FileProba','images/iproba.png',tStr); 
+   if (@!fopen($c_FileProba,"r")) $c_FileProba=prown\MakeCookie('FileProba','images/iproba.jpeg',tStr); 
 }
 // ****************************************************************************
 // *                       Выделить расширение в имени файла                  *

@@ -256,17 +256,17 @@ DoorTry
 			www\Jsx\jquery-ui.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
-			+DoorTry
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -276,152 +276,37 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+SignaPhoto
-				-Images
-					www\Pages\SignaPhoto\Images\AsIs.png
-					www\Pages\SignaPhoto\Images\Home.png
-					www\Pages\SignaPhoto\Images\LeftRight.png
-					www\Pages\SignaPhoto\Images\Options.png
-					www\Pages\SignaPhoto\Images\UpDown.png
+			-Signaphoto
+				-Fonts
+					-Lobster
+						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
+						www\Pages\Signaphoto\Fonts\Lobster\OFL.txt
+				-images
+					www\Pages\Signaphoto\images\bg_page.png
+					www\Pages\Signaphoto\images\iphoto.jpg
+					www\Pages\Signaphoto\images\iproba.png
+					www\Pages\Signaphoto\images\istamp.png
 				-imgdebug
-					www\Pages\SignaPhoto\imgdebug\goggle-eyed.gif
-					www\Pages\SignaPhoto\imgdebug\goggle-eyed.png
-					www\Pages\SignaPhoto\imgdebug\goshan.jpg
-					www\Pages\SignaPhoto\imgdebug\iphoto.jpg
-					www\Pages\SignaPhoto\imgdebug\iproba.png
-					www\Pages\SignaPhoto\imgdebug\istamp.png
-					www\Pages\SignaPhoto\imgdebug\ksiusha.jpg
-					www\Pages\SignaPhoto\imgdebug\stamplbp.png
-					www\Pages\SignaPhoto\imgdebug\stamptve.png
-					www\Pages\SignaPhoto\imgdebug\Дед-сын-и-внук.png
-					www\Pages\SignaPhoto\imgdebug\Танцы в Северном.doc
-					www\Pages\SignaPhoto\imgdebug\Хорошенькая.png
-				+Reserv
-					-_InterSpooky
-						-css
-							www\Pages\SignaPhoto\Reserv\_InterSpooky\css\style.css
-						-js
-							www\Pages\SignaPhoto\Reserv\_InterSpooky\js\index.js
-						www\Pages\SignaPhoto\Reserv\_InterSpooky\index.html
-						www\Pages\SignaPhoto\Reserv\_InterSpooky\license.txt
-						www\Pages\SignaPhoto\Reserv\_InterSpooky\README.txt
-					-_PencilPaper
-						-css
-							www\Pages\SignaPhoto\Reserv\_PencilPaper\css\style.css
-						-js
-							www\Pages\SignaPhoto\Reserv\_PencilPaper\js\index.js
-						www\Pages\SignaPhoto\Reserv\_PencilPaper\index.html
-						www\Pages\SignaPhoto\Reserv\_PencilPaper\license.txt
-						www\Pages\SignaPhoto\Reserv\_PencilPaper\README.txt
-					-_WhipperSnapper
-						-css
-							www\Pages\SignaPhoto\Reserv\_WhipperSnapper\css\style.css
-						-js
-							www\Pages\SignaPhoto\Reserv\_WhipperSnapper\js\index.js
-						www\Pages\SignaPhoto\Reserv\_WhipperSnapper\index.html
-						www\Pages\SignaPhoto\Reserv\_WhipperSnapper\license.txt
-						www\Pages\SignaPhoto\Reserv\_WhipperSnapper\README.txt
-					-angled-menu240817
-						-css
-							www\Pages\SignaPhoto\Reserv\angled-menu240817\css\style.css
-						-js
-							www\Pages\SignaPhoto\Reserv\angled-menu240817\js\index.js
-						-scss
-							www\Pages\SignaPhoto\Reserv\angled-menu240817\scss\style.scss
-						www\Pages\SignaPhoto\Reserv\angled-menu240817\index.html
-						www\Pages\SignaPhoto\Reserv\angled-menu240817\license.txt
-						www\Pages\SignaPhoto\Reserv\angled-menu240817\README.txt
-					-buttons
-						www\Pages\SignaPhoto\Reserv\buttons\image128.png
-						www\Pages\SignaPhoto\Reserv\buttons\input128.png
-						www\Pages\SignaPhoto\Reserv\buttons\register128.png
-						www\Pages\SignaPhoto\Reserv\buttons\stamp128.png
-						www\Pages\SignaPhoto\Reserv\buttons\subscribe128.png
-						www\Pages\SignaPhoto\Reserv\buttons\tunein128.png
-					-font-awesome-4.7.0
-						-css
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\css\font-awesome.css
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\css\font-awesome.min.css
-						-fonts
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\fonts\FontAwesome.otf
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
-						-less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\animated.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\bordered-pulled.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\core.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\fixed-width.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\font-awesome.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\icons.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\larger.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\list.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\mixins.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\path.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\rotated-flipped.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\screen-reader.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\stacked.less
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\less\variables.less
-						-scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_animated.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_bordered-pulled.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_core.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_fixed-width.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_icons.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_larger.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_list.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_mixins.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_path.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_rotated-flipped.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_screen-reader.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_stacked.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\_variables.scss
-							www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\scss\font-awesome.scss
-						www\Pages\SignaPhoto\Reserv\font-awesome-4.7.0\HELP-US-OUT.txt
-					+OldVer
-						www\Pages\SignaPhoto\Reserv\OldVer\Indoor.html
-						www\Pages\SignaPhoto\Reserv\OldVer\log.txt
-						www\Pages\SignaPhoto\Reserv\OldVer\Register.html
-						www\Pages\SignaPhoto\Reserv\OldVer\Register.php
-						www\Pages\SignaPhoto\Reserv\OldVer\RegisterOld.php
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.css
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.php
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto_m.css
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhotoHtml.php
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhotoOld.php
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhotoPortrait.php
-						www\Pages\SignaPhoto\Reserv\OldVer\SignaPhotoUpload.php
-						www\Pages\SignaPhoto\Reserv\OldVer\Subscribe.php
-						www\Pages\SignaPhoto\Reserv\OldVer\SubscribeOld.php
-						www\Pages\SignaPhoto\Reserv\OldVer\Tunein.html
-						www\Pages\SignaPhoto\Reserv\OldVer\Проект меню для подписаний.doc
-					www\Pages\SignaPhoto\Reserv\SignaPhoto.css
-					www\Pages\SignaPhoto\Reserv\SignaPhoto.js
-					www\Pages\SignaPhoto\Reserv\SignaPhoto.php
-					www\Pages\SignaPhoto\Reserv\SignaPhotoHtml.php
-				-Temp
-				-Wallpaper
-					www\Pages\SignaPhoto\Wallpaper\Goryi-Dyimka.jpg
-					www\Pages\SignaPhoto\Wallpaper\SignaPhoto.jpg
-				-Материалы для страницы
-					www\Pages\SignaPhoto\Материалы для страницы\Ajax и PHP - Загрузка изображения на сервер.doc
-					www\Pages\SignaPhoto\Материалы для страницы\Правильный ресайз прозрачных картинок на PHP.doc
-				www\Pages\SignaPhoto\acsLoadStamp.php
-				www\Pages\SignaPhoto\acsToСonfigure.php
-				www\Pages\SignaPhoto\ajaLoadPic.php
-				www\Pages\SignaPhoto\ajaMakeStamp.php
-				www\Pages\SignaPhoto\frmPhotoUpload.php
-				www\Pages\SignaPhoto\frmQuant.php
-				www\Pages\SignaPhoto\license.txt
-				www\Pages\SignaPhoto\log.txt
-				www\Pages\SignaPhoto\SignaPhoto.css
-				www\Pages\SignaPhoto\SignaPhoto.php
-				www\Pages\SignaPhoto\SignaPhotoDef.php
-				www\Pages\SignaPhoto\SignaPhotoHtml.php
-				www\Pages\SignaPhoto\StyleReset.css
+					www\Pages\Signaphoto\imgdebug\goggle-eyed.gif
+					www\Pages\Signaphoto\imgdebug\goggle-eyed.png
+					www\Pages\Signaphoto\imgdebug\goshan.jpg
+					www\Pages\Signaphoto\imgdebug\ksiusha.jpg
+					www\Pages\Signaphoto\imgdebug\stamplbp.png
+					www\Pages\Signaphoto\imgdebug\stamptve.png
+					www\Pages\Signaphoto\imgdebug\watermark.png
+					www\Pages\Signaphoto\imgdebug\Дед-сын-и-внук.png
+					www\Pages\Signaphoto\imgdebug\Танцы в Северном.doc
+					www\Pages\Signaphoto\imgdebug\Хорошенькая.png
+				www\Pages\Signaphoto\ajaEraseFiles.php
+				www\Pages\Signaphoto\reset.min.css
+				www\Pages\Signaphoto\SignaMakeStamp.php
+				www\Pages\Signaphoto\SignaPhoto.css
+				www\Pages\Signaphoto\SignaPhoto.js
+				www\Pages\Signaphoto\SignaPhoto.php
+				www\Pages\Signaphoto\SignaPhotoDef.php
+				www\Pages\Signaphoto\SignaPhotoImg.php
+				www\Pages\Signaphoto\SignaTunein.php
+				www\Pages\Signaphoto\SignaUpload.php
 			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
@@ -513,7 +398,6 @@ DoorTry
 		www\DebugTimer.php
 		www\doortry.png
 		www\DoorTryError.php
-		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -526,6 +410,7 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
+		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -540,37 +425,29 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\Pages\TPhpPrown\_dispTPhpPrown.php
-2=www\Pages\TPhpPrown\_viewTPhpPrown.php
-3=..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php
-4=..\TPhpPrown\TPhpPrown\CreateRightsDir.php
-5=www\iniHtmlBegin.php
-6=www\Site.php
-7=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js
+1=www\Pages\Signaphoto\SignaPhotoImg.php
+2=www\Pages\News\MakeNews.php
+3=www\Site.php
+4=www\iniMenu.php
+5=www\iniMem.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js
+Selected=www\iniMem.php
 [www\Main.php]
-TopLine=42
-Caret=1,42
-[www\Pages\TPhpPrown\_dispTPhpPrown.php]
-TopLine=49
-Caret=1,87
-[www\Pages\TPhpPrown\_viewTPhpPrown.php]
-TopLine=53
-Caret=1,89
-[..\TPhpPrown\TPhpPrownTests\MakeCookie_test_D.php]
+TopLine=43
+Caret=16,65
+[www\Pages\Signaphoto\SignaPhotoImg.php]
 TopLine=1
-Caret=23,17
-[..\TPhpPrown\TPhpPrown\CreateRightsDir.php]
-TopLine=56
-Caret=1,94
-[www\iniHtmlBegin.php]
-TopLine=77
-Caret=3,115
+Caret=96,35
+[www\Pages\News\MakeNews.php]
+TopLine=134
+Caret=35,160
 [www\Site.php]
-TopLine=23
-Caret=1,61
-[www\Pages\SignaPhoto\Reserv\OldVer\SignaPhoto.js]
-TopLine=38
+TopLine=17
 Caret=1,1
+[www\iniMenu.php]
+TopLine=1
+Caret=1,1
+[www\iniMem.php]
+TopLine=19
+Caret=70,37
