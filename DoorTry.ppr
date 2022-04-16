@@ -21,6 +21,48 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
+		-font-awesome-4.7.0
+			-css
+				www\font-awesome-4.7.0\css\font-awesome.css
+				www\font-awesome-4.7.0\css\font-awesome.min.css
+			-fonts
+				www\font-awesome-4.7.0\fonts\FontAwesome.otf
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.eot
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.svg
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff
+				www\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2
+			-less
+				www\font-awesome-4.7.0\less\animated.less
+				www\font-awesome-4.7.0\less\bordered-pulled.less
+				www\font-awesome-4.7.0\less\core.less
+				www\font-awesome-4.7.0\less\fixed-width.less
+				www\font-awesome-4.7.0\less\font-awesome.less
+				www\font-awesome-4.7.0\less\icons.less
+				www\font-awesome-4.7.0\less\larger.less
+				www\font-awesome-4.7.0\less\list.less
+				www\font-awesome-4.7.0\less\mixins.less
+				www\font-awesome-4.7.0\less\path.less
+				www\font-awesome-4.7.0\less\rotated-flipped.less
+				www\font-awesome-4.7.0\less\screen-reader.less
+				www\font-awesome-4.7.0\less\stacked.less
+				www\font-awesome-4.7.0\less\variables.less
+			-scss
+				www\font-awesome-4.7.0\scss\_animated.scss
+				www\font-awesome-4.7.0\scss\_bordered-pulled.scss
+				www\font-awesome-4.7.0\scss\_core.scss
+				www\font-awesome-4.7.0\scss\_fixed-width.scss
+				www\font-awesome-4.7.0\scss\_icons.scss
+				www\font-awesome-4.7.0\scss\_larger.scss
+				www\font-awesome-4.7.0\scss\_list.scss
+				www\font-awesome-4.7.0\scss\_mixins.scss
+				www\font-awesome-4.7.0\scss\_path.scss
+				www\font-awesome-4.7.0\scss\_rotated-flipped.scss
+				www\font-awesome-4.7.0\scss\_screen-reader.scss
+				www\font-awesome-4.7.0\scss\_stacked.scss
+				www\font-awesome-4.7.0\scss\_variables.scss
+				www\font-awesome-4.7.0\scss\font-awesome.scss
+			www\font-awesome-4.7.0\HELP-US-OUT.txt
 		-Fsb
 			www\Fsb\FsbProba.php
 			www\Fsb\PolityConfident.php
@@ -254,6 +296,8 @@ DoorTry
 			www\Jsx\jquery-1.11.1.min.map
 			www\Jsx\jquery-ui.min.css
 			www\Jsx\jquery-ui.min.js
+			www\Jsx\jqueryui-1.13.0.min.css
+			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
 		+Pages
@@ -263,10 +307,10 @@ DoorTry
 			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
-			-Instrumenty
+			+Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -284,7 +328,7 @@ DoorTry
 				-images
 					www\Pages\Signaphoto\images\bg_page.png
 					www\Pages\Signaphoto\images\iphoto.jpg
-					www\Pages\Signaphoto\images\iproba.png
+					www\Pages\Signaphoto\images\iproba.jpeg
 					www\Pages\Signaphoto\images\istamp.png
 				-imgdebug
 					www\Pages\Signaphoto\imgdebug\goggle-eyed.gif
@@ -298,11 +342,13 @@ DoorTry
 					www\Pages\Signaphoto\imgdebug\Танцы в Северном.doc
 					www\Pages\Signaphoto\imgdebug\Хорошенькая.png
 				www\Pages\Signaphoto\ajaEraseFiles.php
+				www\Pages\Signaphoto\log.txt
 				www\Pages\Signaphoto\reset.min.css
 				www\Pages\Signaphoto\SignaMakeStamp.php
 				www\Pages\Signaphoto\SignaPhoto.css
 				www\Pages\Signaphoto\SignaPhoto.js
 				www\Pages\Signaphoto\SignaPhoto.php
+				www\Pages\Signaphoto\SignaPhoto.txt
 				www\Pages\Signaphoto\SignaPhotoDef.php
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
@@ -364,7 +410,7 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-Stihi
+		+Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
@@ -381,7 +427,8 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		-Styles
+		+Styles
+			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
 			www\Styles\MobiStyles.css
@@ -389,6 +436,7 @@ DoorTry
 			www\Styles\Styles.css
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
+		-Temp
 		www\.htaccess
 		www\.user.ini
 		www\basemaker.db3
@@ -410,7 +458,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -422,32 +469,49 @@ DoorTry
 		www\sort.db3
 		www\stat.dat
 		www\timer.php
+		www\ViewEnviron.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
 1=www\Pages\Signaphoto\SignaPhotoImg.php
 2=www\Pages\News\MakeNews.php
-3=www\Site.php
-4=www\iniMenu.php
-5=www\iniMem.php
+3=www\iniMenu.php
+4=www\iniMem.php
+5=www\Pages\Instrumenty\Instrumenty.php
+6=www\Styles\ApiPogoda.css
+7=www\ApiPogoda.php
+8=www\Styles\Styles.css
+9=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\Site.php
 [www\Main.php]
-TopLine=43
-Caret=16,65
+TopLine=29
+Caret=45,29
 [www\Pages\Signaphoto\SignaPhotoImg.php]
 TopLine=1
 Caret=96,35
 [www\Pages\News\MakeNews.php]
 TopLine=134
 Caret=35,160
-[www\Site.php]
-TopLine=17
-Caret=1,1
 [www\iniMenu.php]
 TopLine=1
 Caret=1,1
 [www\iniMem.php]
-TopLine=19
+TopLine=5
 Caret=70,37
+[www\Pages\Instrumenty\Instrumenty.php]
+TopLine=34
+Caret=1,66
+[www\Styles\ApiPogoda.css]
+TopLine=6
+Caret=1,44
+[www\ApiPogoda.php]
+TopLine=1
+Caret=34,2
+[www\Styles\Styles.css]
+TopLine=90
+Caret=8,113
+[www\Site.php]
+TopLine=27
+Caret=1,55

@@ -75,28 +75,56 @@ table
 **/
 header 
 {
-	background-color:rgb(93,43,78); 
-	background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
+   background-color:rgb(93,43,78); 
+   background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
    height:12.4rem;
    margin-left:14.4rem;
    min-width:128px;
 }
-header h1, header h2 
+header h1,h2,h3 
 {
-	font-size:3rem;	
-	color:white;
-	font-weight:bold;
+   font-weight:bold;
    padding-top:2.64rem;
    padding-bottom:2.64rem;
-	padding-left:1rem;
+   padding-left:1rem;
 }
+header h1 {font-size:3rem;color:white;}
+header h2 {font-size:3rem;color:white;}
+header h3 {font-size:3rem;color:black;}
+
+#tipo
+{
+   height:8.8rem;
+}
+#tipoTTL
+{
+   float:left;
+   background-color:yellow;
+   height:100%;
+   width:18.8rem;
+}
+#tipoIMG
+{
+   float:left;
+   background-color:magenta;
+   height:100%;
+   width:8.8rem;
+}
+.Pogoda
+{
+   background-color:yellow;
+   height:100%;
+}
+
+/*
 #dVer
 {
    float:right;
-	color:white;
+   color:white;
    padding-top:1rem;   
    padding-right:1rem;
 }
+*/
 /**
  * Позиционируем элементы разметки, порядок размещения текстов
 **/

@@ -63,7 +63,7 @@ $StihPdp='
 
 $stih=
    '<!--noindex-->'.
-   '<h2>Соревнование с хакерами</h2>'.
+   '<h3>Соревнование с хакерами</h3>'.
    eche($StihVerh).
    eche($StihNiz).
    '<!--/noindex-->'.

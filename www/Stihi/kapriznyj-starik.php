@@ -180,7 +180,7 @@ $btSsylki='<div class="stihabzPdp">
 
 $stih=
    '<!--noindex-->'.
-   '<h2>Капризный старик</h2>'.
+   '<h3>Капризный старик</h3>'.
    eche($KapriznyjStarik).
    '<!--/noindex-->'.
    '<div id="dImghStih">'.

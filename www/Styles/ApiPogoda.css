@@ -1,0 +1,60 @@
+.Pogoda 
+{
+   margin: 0;
+   background: #F4F1F8;
+}
+.Pogoda table 
+{
+   border-collapse: collapse; 
+   line-height: 1.1;
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   background:  radial-gradient(farthest-corner at 50% 50%, white, #DCECF8);
+   color: #0C213B;
+   /*width: 100%;*/
+}
+.Pogoda .separator 
+{
+   background: #A9E2CC;
+}
+.Pogoda .separator td
+{
+   padding: .1rem .1rem;
+}
+.Pogoda td 
+{
+   font-size: 0.8rem;
+   padding: .5rem .7rem;
+   border: .1rem solid #A9E2CC;
+}
+.Pogoda .first 
+{
+   font-size: 1rem;
+   font-weight: bold;
+   text-align: center;
+   color: red;
+}
+.Pogoda .comment
+{                                            
+   width: 30%;
+}
+.Pogoda p
+{
+   text-indent: 1rem; 
+}
+
+/*
+.Pogoda caption 
+{
+   font-family: annabelle, cursive;
+   font-weight: bold;
+   font-size: 2rem;
+   padding: 1rem; 
+   color: #F3CD26;
+   text-shadow: .1rem .1rem 0 rgba(0,0,0,.3);
+}
+.Pogoda th 
+{
+   padding: 1rem;
+   border: .1rem solid #A9E2CC;
+}
+*/

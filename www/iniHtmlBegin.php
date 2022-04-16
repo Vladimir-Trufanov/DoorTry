@@ -74,6 +74,7 @@ if ($SiteDevice==Mobile)
 else 
 {   
    echo '<link href="Styles/Styles.css" rel="stylesheet">';
+   echo '<link href="Styles/ApiPogoda.css" rel="stylesheet">';
    echo '<link rel="stylesheet" href="SmartMenus/sm-doortry.css">';
 }
 // Определяем заданную ленту новостей
