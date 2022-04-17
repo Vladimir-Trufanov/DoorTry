@@ -16,54 +16,12 @@ echo '</div>';
 
 // Верхнее меню и название сайта
 echo '<header>';
-   ?>
-   <div id="tipo">
-      <div id="tipoTTL">
-      DoorTry - коллекционер ошибок
-      in1 v1.9
-      </div>
-      <div id="tipoIMG">
-         ЗНАЧОК
-      </div>
-      <div class="Pogoda">
-      <table>
-      <tr>
-        <td rowspan="4" class="first">Первая</td>
-        <td class="second">Вторая</td>
-        <td>Третья</td>
-        <td>Четвертая</td>
-      </tr>
-      <tr>
-        <td rowspan="3" class="third">Пятая</td>
-        <td>Шестая</td>
-        <td>Седьмая</td>
-      </tr>
-      <tr>
-        <td>Восьмая</td>
-        <td>Девятая</td>
-      </tr>
-      <tr>
-        <td>Десятая</td>
-        <td>Одиннадцатая</td>
-      </tr>
-      <tr class="separator">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      </table>
-      </div>
-   </div>
-   
-   <?php
-
+   require_once $SiteRoot."/ApiPogoda.php";
    /*
    echo '<div id="dVer">';
    //echo '<div id="res"></div>';
    echo 'in'.$s_Counter.' v1.9';
    echo '</div>';
-   //require_once $SiteRoot."/ApiPogoda.php";
    echo  '<h2>DoorTry - коллекционер ошибок</h2>';
    */
    echo '<nav>'; TopMenu(); echo '</nav>';

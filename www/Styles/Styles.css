@@ -53,7 +53,7 @@ body
 }
 table 
 {
-	border-collapse:collapse;
+	/*border-collapse:collapse;*/
 	border-spacing:0;
 } 
 /**
@@ -91,30 +91,6 @@ header h1,h2,h3
 header h1 {font-size:3rem;color:white;}
 header h2 {font-size:3rem;color:white;}
 header h3 {font-size:3rem;color:black;}
-
-#tipo
-{
-   height:8.8rem;
-}
-#tipoTTL
-{
-   float:left;
-   background-color:yellow;
-   height:100%;
-   width:18.8rem;
-}
-#tipoIMG
-{
-   float:left;
-   background-color:magenta;
-   height:100%;
-   width:8.8rem;
-}
-.Pogoda
-{
-   background-color:yellow;
-   height:100%;
-}
 
 /*
 #dVer
