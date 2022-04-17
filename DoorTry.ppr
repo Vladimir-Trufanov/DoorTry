@@ -304,7 +304,7 @@ DoorTry
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
-			-DoorTry
+			+DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
 			+Instrumenty
@@ -482,7 +482,8 @@ DoorTry
 7=www\ApiPogoda.php
 8=www\Styles\Styles.css
 9=www\Site.php
-10=..\TPhpPrown\TPhpPrown\CommonPrown.php
+10=www\Common.php
+11=www\iniHtmlBegin.php
 [Selected Project Files]
 Main=
 Selected=www\ApiPogoda.php
@@ -509,13 +510,16 @@ TopLine=17
 Caret=11,37
 [www\ApiPogoda.php]
 TopLine=1
-Caret=9,29
+Caret=1,13
 [www\Styles\Styles.css]
 TopLine=56
 Caret=1,83
 [www\Site.php]
-TopLine=13
+TopLine=25
 Caret=49,25
-[..\TPhpPrown\TPhpPrown\CommonPrown.php]
-TopLine=61
-Caret=20,88
+[www\Common.php]
+TopLine=9
+Caret=10,23
+[www\iniHtmlBegin.php]
+TopLine=49
+Caret=1,1
