@@ -509,8 +509,8 @@ Caret=1,66
 TopLine=17
 Caret=11,37
 [www\ApiPogoda.php]
-TopLine=1
-Caret=1,13
+TopLine=25
+Caret=1,49
 [www\Styles\Styles.css]
 TopLine=56
 Caret=1,83

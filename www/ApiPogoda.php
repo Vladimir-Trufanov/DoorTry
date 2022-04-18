@@ -25,19 +25,27 @@
       <div class="Pogoda">
       <table>
       <tr>
-        <td class="iLeft">Третья</td>
-        <td>Четвертая</td>
+        <td class="tLeft">Температура</td>
+        <?php
+        echo '<td class="tRight">'.$temperature.'ºC</td>';
+        ?>
       </tr>
       <tr>
-        <td class="iLeft">Восьмая</td>
-        <td>Девятая</td>
+        <td class="tLeft">Влажность</td>
+        <?php
+        echo '<td class="tRight">'.$humidity.'%</td>';
+        ?>
       </tr>
       <tr>
-        <td class="iLeft">Десятая</td>
-        <td>Одиннадцатая</td>
+        <td class="tLeft">Давление</td>
+        <?php
+        echo '<td class="tRight">'.$pressure.'мм рт.ст.</td>';
+        ?>
       </tr>
       <tr>
-        <td colspan="2">Двенадцатая</td>
+        <?php
+        echo '<td class="tWidth" colspan="2">'.$description.'</td>';
+        ?>
       </tr>
       </table>
       </div>
