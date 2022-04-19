@@ -484,11 +484,12 @@ DoorTry
 9=www\Site.php
 10=www\Common.php
 11=www\iniHtmlBegin.php
+12=..\TPhpPrown\TPhpPrown\CreateRightsDir.php
 [Selected Project Files]
 Main=
 Selected=www\ApiPogoda.php
 [www\Main.php]
-TopLine=41
+TopLine=90
 Caret=34,67
 [www\Pages\Signaphoto\SignaPhotoImg.php]
 TopLine=1
@@ -506,16 +507,16 @@ Caret=70,37
 TopLine=34
 Caret=1,66
 [www\Styles\ApiPogoda.css]
-TopLine=17
+TopLine=37
 Caret=11,37
 [www\ApiPogoda.php]
-TopLine=1
-Caret=41,20
+TopLine=281
+Caret=6,335
 [www\Styles\Styles.css]
 TopLine=56
 Caret=1,83
 [www\Site.php]
-TopLine=25
+TopLine=15
 Caret=49,25
 [www\Common.php]
 TopLine=9
@@ -523,3 +524,6 @@ Caret=21,32
 [www\iniHtmlBegin.php]
 TopLine=49
 Caret=1,1
+[..\TPhpPrown\TPhpPrown\CreateRightsDir.php]
+TopLine=247
+Caret=1,284

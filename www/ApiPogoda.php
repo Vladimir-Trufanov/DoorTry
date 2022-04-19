@@ -7,25 +7,45 @@
    $description=NULL;
    $idPoint=NULL;
    $namePoint=NULL;
-   // Выбираем данные по ip-адресу
+
    echo '<br><br><br><br><br><br><br>$ip='.$ip.'<br>';
+
+   // Выбираем данные по ip-адресу
    $json=getGisMeteoOnIP($ip,$idPoint,$namePoint);
-   echo '<br>'.$json.'<br>';
-   echo '<br>'.$idPoint.'<br>';
-   echo '<br>'.$namePoint.'<br>';
-   // Выбираем json-данные о погоде
-   $json=getGisMeteo();
-   echo '<br>'.$json.'<br>';
+   // Если ошибка, размечаем "погоду" под ошибку
+   if ($idPoint==NULL) MeteoMarkupError($json);
+   else
+   {
+      echo '<br>'.$json.'<br>';
+      echo '<br>'.$idPoint.'<br>';
+      echo '<br>'.$namePoint.'<br>';
+      // Выбираем json-данные о погоде
+      $json=getGisMeteo();
+      echo '<br>'.$json.'<br>';
    
-   $json=getGisMeteoOnIdPoint($idPoint);
-   echo '<br>'.$json.'<br>';
+      $json=getGisMeteoOnIdPoint($idPoint);
+      echo '<br>'.$json.'<br>';
    
-   // Парсим
-   $json=getParmGisMeteo($json,$temperature,$humidity,$pressure,$description);
-   \prown\ConsoleLog('$temperature: '.$temperature);
-   \prown\ConsoleLog('$humidity: '.$humidity);
-   \prown\ConsoleLog('$pressure: '.$pressure);
-   \prown\ConsoleLog('$description: '.$description);
+      // Парсим
+      $json=getParmGisMeteo($json,$temperature,$humidity,$pressure,$description);
+      \prown\ConsoleLog('$temperature: '.$temperature);
+      \prown\ConsoleLog('$humidity: '.$humidity);
+      \prown\ConsoleLog('$pressure: '.$pressure);
+      \prown\ConsoleLog('$description: '.$description);
+      MeteoMarkup($temperature,$humidity,$pressure,$description);
+   }
+// ****************************************************************************
+// *                     Разметить "погоду" под ошибку                        *
+// ****************************************************************************
+function MeteoMarkupError($rmessa)
+{
+   echo 'Погода размечена под ошибку '.$rmessa.'<br>';
+}
+// ****************************************************************************
+// *                            Разметить "погоду"                            *
+// ****************************************************************************
+function MeteoMarkup($temperature,$humidity,$pressure,$description)
+{
    ?>
    <div id="tipo">
    
@@ -68,41 +88,8 @@
    </div>
    
    <?php
-   /*
-   
-      <div class="TitleCalc">
-      DoorTry - коллекционер ошибок
-      in1 v1.9
-      </div>
 
-
-      <tr>
-        <td rowspan="4"><img src="c3_r3.png" alt=""></td>
-        <td class="ppoint">ВВосьмая</td>
-        <td>ДДевятая</td>
-      </tr>
-        <td rowspan="4">Значoк</td>
-        <td rowspan="4"><img id="ImghVerh" src="doortry.png" alt="doortry.ru"></td>
-         <tr>
-        <td rowspan="4" class="first">Первая</td>
-        <td class="second">Вторая</td>
-        <td>Третья</td>
-        <td>Четвертая</td>
-      </tr>
-      <tr>
-        <td rowspan="3" class="third">Пятая</td>
-        <td>Шестая</td>
-        <td>Седьмая</td>
-      </tr>
-
-      <tr class="separator">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-   */
-
+}
 // ****************************************************************************
 // *                   Выбрать данные о погоде в GisMeteo                     *
 // ****************************************************************************
@@ -248,70 +235,6 @@ function getGisMeteoOnIdPoint($idPoint)
    }
    return $Result;
 }
-// ****************************************************************************
-// *    Выполнить поиск в GisMeteo данных места расположения по ip-адресу     *
-// ****************************************************************************
-function getGisMeteoOnIP($ip,&$idPoint,&$namePoint)
-// curl -H 'X-Gismeteo-Token: 56b30cb255.3443075' 
-// 'https://api.gismeteo.net/v2/search/cities/?ip=185.90.102.110'
-{
-   // Выбираем данные на сайте doortry.ru
-   if (isNichost()) 
-   {
-      // Назначаем URL о погоде по координатам
-      $url = 'https://api.gismeteo.net/v2/search/cities/?ip='.$ip;
-      // Указываем заголовок с моим токеном
-      $headers = ['X-Gismeteo-Token: 61f2622da85fe2.06084651']; 
-      // Назначаем поля нашего запроса и переводим их в формат JSON
-      //$post_data = ['field1'=>'val_1','field2'=>'val_2',];
-      $post_data = [];
-      $data_json = json_encode($post_data);
-      // Инициируем новый сеанс cURL и возвращаем дескриптор
-      $curl = curl_init();
-      // Загружаем URL
-      curl_setopt($curl, CURLOPT_URL, $url);
-      curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-      curl_setopt($curl, CURLOPT_VERBOSE, 1);
-      curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);
-      curl_setopt($curl, CURLOPT_POST, true);
-      curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
-      $Result = curl_exec($curl); // результат POST запроса
-      if (curl_error($curl)) 
-      {
-         $Result=curl_error($curl);
-         $messa='Ошибка запроса по ip-адресу: '.$Result;
-      }
-      else 
-      {
-         $messa='Данные по ip-адресу: '.$Result;
-      }
-   }  
-   // Выбираем отладочный результат на локальном сервере 
-   else
-   {
-      $Result=
-      '{
-      "meta":{"message":"","code":"200"},
-      "response":
-         {
-         "district":{"name":"Республика Карелия","nameP":"в Республике Карелии"},
-         "id":3934,
-         "sub_district":{"name":"Петрозаводский городской округ","nameP":"в Петрозаводском городском округе"},
-         "url":"\/weather-petrozavodsk-3934\/",
-         "nameP":"в Петрозаводске",
-         "name":"Петрозаводск",
-         "kind":"M",
-         "country":{"name":"Россия","code":"RU","nameP":"в России"}
-         }
-      }';
-      $messa=$Result;
-   }
-   $obj = json_decode($Result);
-   $idPoint=$obj->{'response'}->{'id'};
-   $namePoint=$obj->{'response'}->{'name'};
-   return $Result;
-}
 
 
 // ****************************************************************************
@@ -350,3 +273,82 @@ function getParmGisMeteo($json,&$temperature,&$humidity,&$pressure,&$description
    }
 }
 */
+// ****************************************************************************
+// *    Выполнить поиск в GisMeteo данных места расположения по ip-адресу     *
+// ****************************************************************************
+function getGisMeteoOnIP($ip,&$idPoint,&$namePoint)
+// curl -H 'X-Gismeteo-Token: 56b30cb255.3443075' 
+// 'https://api.gismeteo.net/v2/search/cities/?ip=185.90.102.110'
+{
+   // Выбираем данные на сайте doortry.ru
+   //if (isNichost()) 
+  // {
+      // Назначаем URL о погоде по координатам
+      $url = 'https://api.gismeteo.net/v2/search/cities/?ip='.$ip;
+      // Указываем заголовок с моим токеном
+      $headers = ['X-Gismeteo-Token: 61f2622da85fe2.06084651']; 
+      // Назначаем поля нашего запроса и переводим их в формат JSON
+      //$post_data = ['field1'=>'val_1','field2'=>'val_2',];
+      $post_data = [];
+      $data_json = json_encode($post_data);
+      // Инициируем новый сеанс cURL и возвращаем дескриптор
+      $curl = curl_init();
+      // Загружаем URL
+      curl_setopt($curl, CURLOPT_URL, $url);
+      curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+      curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($curl, CURLOPT_VERBOSE, 1);
+      curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);
+      curl_setopt($curl, CURLOPT_POST, true);
+      curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+      $Result = curl_exec($curl); 
+      // Возвращаем сообщение, если ошибка curl-запроса
+      if (curl_error($curl)) 
+      {
+         $Result='Ошибка запроса по ip-адресу: '.ConvertErrorMeteo(curl_error($curl));
+         return $Result;
+      }
+   //} 
+   /*
+   // Выбираем отладочный результат на локальном сервере 
+   else
+   {
+      $Result=
+      '{
+      "meta":{"message":"","code":"200"},
+      "response":
+         {
+         "district":{"name":"Республика Карелия","nameP":"в Республике Карелии"},
+         "id":3934,
+         "sub_district":{"name":"Петрозаводский городской округ","nameP":"в Петрозаводском городском округе"},
+         "url":"\/weather-petrozavodsk-3934\/",
+         "nameP":"в Петрозаводске",
+         "name":"Петрозаводск",
+         "kind":"M",
+         "country":{"name":"Россия","code":"RU","nameP":"в России"}
+         }
+      }';
+   }
+   $obj = json_decode($Result);
+   $idPoint=$obj->{'response'}->{'id'};
+   $namePoint=$obj->{'response'}->{'name'};
+   */
+   return $Result;
+}
+
+// ****************************************************************************
+// *      Конвертировать сообщение об ошибке при работе с погодным API,       *
+// *          как постфикс для нового сообщения на русском языке              *
+// ****************************************************************************
+function ConvertErrorMeteo($emessa)
+{
+   $rmessa='неопределенная ошибка';
+
+   // Отлавливаем ошибку "проблема с сертификатом SSL"
+   // "SSL certificate problem: self signed certificate in certificate chain"
+   $Find='self signed certificate in certificate chain';
+   $Resu=Findes('/'.$Find.'/u',$emessa); 
+   if ($Resu==$Find) $rmessa='проблема с сертификатом SSL';
+
+   return $rmessa;
+}
