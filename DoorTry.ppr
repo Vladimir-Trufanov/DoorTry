@@ -489,7 +489,7 @@ DoorTry
 Main=
 Selected=www\ApiPogoda.php
 [www\Main.php]
-TopLine=90
+TopLine=67
 Caret=34,67
 [www\Pages\Signaphoto\SignaPhotoImg.php]
 TopLine=1
@@ -510,8 +510,8 @@ Caret=1,66
 TopLine=37
 Caret=11,37
 [www\ApiPogoda.php]
-TopLine=281
-Caret=6,335
+TopLine=201
+Caret=1,26
 [www\Styles\Styles.css]
 TopLine=56
 Caret=1,83
