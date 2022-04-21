@@ -7,6 +7,7 @@
    $description=NULL;
    $idPoint=NULL;
    $namePoint=NULL;
+   $icon=NULL;
 
    echo '<br><br><br><br><br><br><br>$ip='.$ip.'<br>';
 
@@ -17,7 +18,7 @@
    else
    {
       // Выбираем json-данные о погоде по идентификатору места
-      $json=getGisMeteoOnIdPoint($idPoint,$temperature,$humidity,$pressure,$description);
+      $json=getGisMeteoOnIdPoint($idPoint,$temperature,$humidity,$pressure,$description,$icon);
       // Если ошибка, размечаем "погоду" под ошибку
       if ($temperature==NULL) MeteoMarkupError($json);
       else
@@ -27,7 +28,11 @@
          \prown\ConsoleLog('$humidity: '.$humidity);
          \prown\ConsoleLog('$pressure: '.$pressure);
          \prown\ConsoleLog('$description: '.$description);
-         MeteoMarkup($temperature,$humidity,$pressure,$description);
+         // Назначаем путь к иконке погоды
+         $picon='https://kwinflat.ru/IttveIMG/meteo/gismeteo/'.$icon; 
+         \prown\ConsoleLog('$picon: '.$picon);
+         // Размечаем погоду
+         MeteoMarkup($temperature,$humidity,$pressure,$description,$picon);
       }
    }
 // ****************************************************************************
@@ -40,7 +45,7 @@ function MeteoMarkupError($rmessa)
 // ****************************************************************************
 // *                            Разметить "погоду"                            *
 // ****************************************************************************
-function MeteoMarkup($temperature,$humidity,$pressure,$description)
+function MeteoMarkup($temperature,$humidity,$pressure,$description,$icon)
 {
    ?>
    <div id="tipo">
@@ -52,7 +57,9 @@ function MeteoMarkup($temperature,$humidity,$pressure,$description)
 
       
       <div id="Badge">
-         <img src="c3_r3.png" alt="">
+        <?php
+        echo '<img src="'.$icon.'.png" alt="'.$icon.'.png">';
+        ?>
       </div>
       <div class="Pogoda">
       <table>
@@ -160,7 +167,7 @@ function ConvertErrorMeteo($emessa)
 // ****************************************************************************
 // *   Выбрать данные о погоде в GisMeteo: вариант по идентификатору места    *
 // ****************************************************************************
-function getGisMeteoOnIdPoint($idPoint,&$temperature,&$humidity,&$pressure,&$description)
+function getGisMeteoOnIdPoint($idPoint,&$temperature,&$humidity,&$pressure,&$description,&$icon)
 /*
 // Вариант по координатам
 // curl -H 'X-Gismeteo-Token: 56b30cb255.3443075' 
@@ -210,8 +217,7 @@ $url = 'https://api.gismeteo.net/v2/weather/current/?'.$dacha;
       "meta":{"message":"","code":"200"},
       "response":
       {
-      "precipitation":
-         {"type_ext":null,"intensity":1,"correction":true,"amount":0.1,"duration":0,"type":2},
+         "precipitation":{"type_ext":null,"intensity":1,"correction":true,"amount":0.1,"duration":0,"type":2},
          "pressure":{"h_pa":974,"mm_hg_atm":731,"in_hg":38.3},
          "humidity":{"percent":93},
          "icon":"c3_s1","gm":2,
@@ -234,5 +240,6 @@ $url = 'https://api.gismeteo.net/v2/weather/current/?'.$dacha;
    $humidity=$obj->{'response'}->{'humidity'}->{'percent'};
    $pressure=$obj->{'response'}->{'pressure'}->{'mm_hg_atm'};
    $description=$obj->{'response'}->{'description'}->{'full'};
+   $icon=$obj->{'response'}->{'icon'};
    return $Result;
 }

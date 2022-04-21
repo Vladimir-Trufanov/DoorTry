@@ -320,7 +320,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			-Signaphoto
+			+Signaphoto
 				-Fonts
 					-Lobster
 						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
@@ -411,7 +411,7 @@ DoorTry
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
 		+Stihi
-			-kapriznyj-starik
+			+kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\kapriznyj-starik.png
@@ -427,7 +427,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		+Styles
+		-Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -477,19 +477,16 @@ DoorTry
 2=www\Pages\News\MakeNews.php
 3=www\iniMenu.php
 4=www\iniMem.php
-5=www\Pages\Instrumenty\Instrumenty.php
-6=www\Styles\ApiPogoda.css
-7=www\ApiPogoda.php
-8=www\Styles\Styles.css
-9=www\Site.php
-10=www\Common.php
-11=www\iniHtmlBegin.php
-12=..\TPhpPrown\TPhpPrown\CreateRightsDir.php
+5=www\Styles\ApiPogoda.css
+6=www\ApiPogoda.php
+7=www\Pages\Signaphoto\SignaPhoto.php
+8=www\index.php
+9=www\Stihi\_MakeStihi.php
 [Selected Project Files]
 Main=
 Selected=www\ApiPogoda.php
 [www\Main.php]
-TopLine=67
+TopLine=29
 Caret=34,67
 [www\Pages\Signaphoto\SignaPhotoImg.php]
 TopLine=1
@@ -502,28 +499,19 @@ TopLine=1
 Caret=1,1
 [www\iniMem.php]
 TopLine=5
-Caret=70,37
-[www\Pages\Instrumenty\Instrumenty.php]
-TopLine=34
-Caret=1,66
+Caret=30,16
 [www\Styles\ApiPogoda.css]
 TopLine=37
 Caret=11,37
 [www\ApiPogoda.php]
-TopLine=201
-Caret=1,26
-[www\Styles\Styles.css]
-TopLine=56
-Caret=1,83
-[www\Site.php]
-TopLine=15
-Caret=49,25
-[www\Common.php]
-TopLine=9
-Caret=21,32
-[www\iniHtmlBegin.php]
-TopLine=49
+TopLine=19
+Caret=10,32
+[www\Pages\Signaphoto\SignaPhoto.php]
+TopLine=1
+Caret=1,24
+[www\index.php]
+TopLine=1
+Caret=9,29
+[www\Stihi\_MakeStihi.php]
+TopLine=25
 Caret=1,1
-[..\TPhpPrown\TPhpPrown\CreateRightsDir.php]
-TopLine=247
-Caret=1,284
