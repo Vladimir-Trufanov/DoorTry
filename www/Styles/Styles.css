@@ -51,11 +51,6 @@ body
    min-width:532px;
    /*background: yellow;*/
 }
-table 
-{
-	/*border-collapse:collapse;*/
-	/*border-spacing:0;*/
-} 
 /**
  * Размещаем штрих-код с адресом сайта
 **/
@@ -99,6 +94,9 @@ header h3 {font-size:3rem;color:black;}
 #Title
 {
    float:left;
+   width:40%;
+   font-size:2.4rem;
+   font-weight:bold;
    padding-top:1rem;   
    padding-left:1rem;
    padding-right:1rem;
@@ -205,11 +203,11 @@ aside p, aside li
 **/
 footer 
 {
-	margin-top:1.5rem;
-	font-size:1.4rem;	
-	padding:1rem 3rem 3rem 3rem;
-	background-color:black;
-	color:rgb(204,204,204);
+   margin-top:1.5rem;
+   font-size:1.4rem;	
+   padding:1rem 3rem 3rem 3rem;
+   background-color:black;
+   color:rgb(204,204,204);
    clear:both;  
 }
 footer a 
@@ -238,7 +236,7 @@ code
    /*overflow:auto;*/ 
    white-space:nowrap;
    font-size:1.6rem;	
-	font-weight:bold;
+   font-weight:bold;
    /*border:1px solid gray;*/
 }
 @media (min-width: 481px) and (max-width:768px) 
