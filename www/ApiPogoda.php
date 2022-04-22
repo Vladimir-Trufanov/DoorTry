@@ -1,40 +1,46 @@
 <?php
-   // Инициируем данные по погоде
-   $ip=$_SERVER['REMOTE_ADDR'];
-   $temperature=NULL;
-   $humidity=NULL;
-   $pressure=NULL;
-   $description=NULL;
-   $idPoint=NULL;
-   $namePoint=NULL;
-   $icon=NULL;
+// PHP7/HTML5, EDGE/CHROME                                *** ApiPogoga.php ***
 
-   echo '<br><br><br><br><br><br><br>$ip='.$ip.'<br>';
+// ****************************************************************************
+// * doortry.ru          Вывести информацию о погоде с IP-адреса пользователя *
+// ****************************************************************************
 
-   // Выбираем данные по ip-адресу
-   $json=getGisMeteoOnIP($ip,$idPoint,$namePoint);
+//                                                   Автор:       Труфанов В.Е.
+//                                                   Дата создания:  19.04.2022
+// Copyright © 2022 tve                              Посл.изменение: 22.04.2022
+
+// Инициируем данные по погоде
+$ip=$_SERVER['REMOTE_ADDR'];
+$temperature=NULL;
+$humidity=NULL;
+$pressure=NULL;
+$description=NULL;
+$idPoint=NULL;
+$namePoint=NULL;
+$icon=NULL;
+// Выбираем данные по ip-адресу
+$json=getGisMeteoOnIP($ip,$idPoint,$namePoint);
+// Если ошибка, размечаем "погоду" под ошибку
+if ($idPoint==NULL) MeteoMarkupError($json);
+else
+{
+   // Выбираем json-данные о погоде по идентификатору места
+   $json=getGisMeteoOnIdPoint($idPoint,$temperature,$humidity,$pressure,$description,$icon);
    // Если ошибка, размечаем "погоду" под ошибку
-   if ($idPoint==NULL) MeteoMarkupError($json);
+   if ($temperature==NULL) MeteoMarkupError($json);
    else
    {
-      // Выбираем json-данные о погоде по идентификатору места
-      $json=getGisMeteoOnIdPoint($idPoint,$temperature,$humidity,$pressure,$description,$icon);
-      // Если ошибка, размечаем "погоду" под ошибку
-      if ($temperature==NULL) MeteoMarkupError($json);
-      else
-      {
-         echo '<br>'.$json.'<br>';
-         \prown\ConsoleLog('$temperature: '.$temperature);
-         \prown\ConsoleLog('$humidity: '.$humidity);
-         \prown\ConsoleLog('$pressure: '.$pressure);
-         \prown\ConsoleLog('$description: '.$description);
-         // Назначаем путь к иконке погоды
-         $picon='https://kwinflat.ru/IttveIMG/meteo/gismeteo/'.$icon; 
-         \prown\ConsoleLog('$picon: '.$picon);
-         // Размечаем погоду
-         MeteoMarkup($temperature,$humidity,$pressure,$description,$picon);
-      }
+      \prown\ConsoleLog('$temperature: '.$temperature);
+      \prown\ConsoleLog('$humidity: '.$humidity);
+      \prown\ConsoleLog('$pressure: '.$pressure);
+      \prown\ConsoleLog('$description: '.$description);
+      // Назначаем путь к иконке погоды
+      $picon='https://kwinflat.ru/IttveIMG/meteo/gismeteo/'.$icon; 
+      \prown\ConsoleLog('$picon: '.$picon);
+      // Размечаем погоду
+      MeteoMarkup($temperature,$humidity,$pressure,$description,$picon);
    }
+}
 // ****************************************************************************
 // *                     Разметить "погоду" под ошибку                        *
 // ****************************************************************************
@@ -243,3 +249,4 @@ $url = 'https://api.gismeteo.net/v2/weather/current/?'.$dacha;
    $icon=$obj->{'response'}->{'icon'};
    return $Result;
 }
+// ********************************************************** ApiPogoga.php ***

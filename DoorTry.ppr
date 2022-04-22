@@ -300,7 +300,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -320,7 +320,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+Signaphoto
+			-Signaphoto
 				-Fonts
 					-Lobster
 						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
@@ -410,7 +410,7 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+Stihi
+		-Stihi
 			+kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
@@ -427,7 +427,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		-Styles
+		+Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -473,24 +473,20 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\Pages\Signaphoto\SignaPhotoImg.php
-2=www\Pages\News\MakeNews.php
-3=www\iniMenu.php
-4=www\iniMem.php
-5=www\Styles\ApiPogoda.css
-6=www\ApiPogoda.php
-7=www\Pages\Signaphoto\SignaPhoto.php
-8=www\index.php
-9=www\Stihi\_MakeStihi.php
+1=www\Pages\News\MakeNews.php
+2=www\iniMenu.php
+3=www\iniMem.php
+4=www\ApiPogoda.php
+5=www\Pages\Signaphoto\SignaPhoto.php
+6=www\index.php
+7=www\Styles\IsColNews.css
+8=www\Styles\ApiPogoda.css
 [Selected Project Files]
 Main=
-Selected=www\ApiPogoda.php
+Selected=www\Styles\ApiPogoda.css
 [www\Main.php]
 TopLine=29
 Caret=34,67
-[www\Pages\Signaphoto\SignaPhotoImg.php]
-TopLine=1
-Caret=96,35
 [www\Pages\News\MakeNews.php]
 TopLine=134
 Caret=35,160
@@ -500,18 +496,18 @@ Caret=1,1
 [www\iniMem.php]
 TopLine=5
 Caret=30,16
-[www\Styles\ApiPogoda.css]
-TopLine=37
-Caret=11,37
 [www\ApiPogoda.php]
-TopLine=19
-Caret=10,32
+TopLine=22
+Caret=58,22
 [www\Pages\Signaphoto\SignaPhoto.php]
 TopLine=1
 Caret=1,24
 [www\index.php]
 TopLine=1
-Caret=9,29
-[www\Stihi\_MakeStihi.php]
-TopLine=25
-Caret=1,1
+Caret=1,13
+[www\Styles\IsColNews.css]
+TopLine=1
+Caret=1,15
+[www\Styles\ApiPogoda.css]
+TopLine=1
+Caret=1,40

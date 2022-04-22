@@ -1,16 +1,17 @@
-
-
+/** HTML5/CSS3, EDGE/CHROME                               *** ApiPogoda.css ***
+ *
+ ******************************************************************************
+ * doortry.ru            Вывести информацию о погоде с IP-адреса пользователя *
+ ******************************************************************************
+ *
+ *                                                   Автор:       Труфанов В.Е.
+ *                                                   Дата создания:  19.04.2022
+ * Copyright © 2022 tve                              Посл.изменение: 22.04.2022
+**/
 #tipo
 {
    height:8.8rem;
    width:100%;
-}
-.TitleCalc
-{
-   float:left;
-   background-color:yellow;
-   height:100%;
-   width:20%;
 }
 #Badge
 {
@@ -36,55 +37,14 @@
 {
    width:60%;
 }
-/*
-.Pogoda .separator 
-{
-   background: #A9E2CC;
-}
-*/
-/*
-.Pogoda .separator td
-{
-   padding: .1rem .1rem;
-}
-*/
 .Pogoda td 
 {
    font-size: 0.8rem;
-   padding: .5rem .7rem;
-   /*border: .1rem solid #A9E2CC;*/
-}
-/*
-.Pogoda .first 
-{
-   font-size: 1rem;
-   font-weight: bold;
-   text-align: center;
-   color: red;
-}
-
-.Pogoda .comment
-{                                            
-   width: 30%;
-}
-.Pogoda p
-{
-   text-indent: 1rem; 
-}
-*/
-/*
-.Pogoda caption 
-{
    font-family: annabelle, cursive;
    font-weight: bold;
-   font-size: 2rem;
-   padding: 1rem; 
+   font-size: 1.4rem;
    color: #F3CD26;
    text-shadow: .1rem .1rem 0 rgba(0,0,0,.3);
 }
-.Pogoda th 
-{
-   padding: 1rem;
-   border: .1rem solid #A9E2CC;
-}
-*/
+
+/*********************************************************** ApiPogoda.css ***/
