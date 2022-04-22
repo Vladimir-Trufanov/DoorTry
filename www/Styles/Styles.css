@@ -25,10 +25,10 @@ figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
 time,mark,audio,video 
 {
    margin:0;
-	padding:0;
-	border:0;
-	font-size:100%;
-	vertical-align:baseline;
+   padding:0;
+   border:0;
+   font-size:100%;
+   vertical-align:baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
 {
@@ -54,7 +54,7 @@ body
 table 
 {
 	/*border-collapse:collapse;*/
-	border-spacing:0;
+	/*border-spacing:0;*/
 } 
 /**
  * Размещаем штрих-код с адресом сайта
@@ -75,11 +75,10 @@ table
 **/
 header 
 {
-   background-color:rgb(93,43,78); 
-   background-image:linear-gradient(to left, rgb(93,43,78), rgb(8,2,50));
    height:12.4rem;
    margin-left:14.4rem;
    min-width:128px;
+   background:  radial-gradient(farthest-corner at 50% 50%, white, #DCECF8);
 }
 header h1,h2,h3 
 {
@@ -92,7 +91,22 @@ header h1 {font-size:3rem;color:white;}
 header h2 {font-size:3rem;color:white;}
 header h3 {font-size:3rem;color:black;}
 
-/*
+#tipo
+{
+   background-color:transparent; 
+   height:8.8rem;
+}
+#Title
+{
+   float:left;
+   padding-top:1rem;   
+   padding-left:1rem;
+   padding-right:1rem;
+}
+#Meteo
+{
+   float:left;
+}
 #dVer
 {
    float:right;
@@ -100,7 +114,6 @@ header h3 {font-size:3rem;color:black;}
    padding-top:1rem;   
    padding-right:1rem;
 }
-*/
 /**
  * Позиционируем элементы разметки, порядок размещения текстов
 **/

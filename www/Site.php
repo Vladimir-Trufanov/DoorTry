@@ -16,15 +16,16 @@ echo '</div>';
 
 // Верхнее меню и название сайта
 echo '<header>';
+echo '<div id="tipo">';
+   echo '<div id="Title">DoorTry - коллекционер ошибок</div>';
+   echo '<div id="Meteo">';
    require_once $SiteRoot."/ApiPogoda.php";
-   /*
+   echo '</div>';
    echo '<div id="dVer">';
-   //echo '<div id="res"></div>';
    echo 'in'.$s_Counter.' v1.9';
    echo '</div>';
-   echo  '<h2>DoorTry - коллекционер ошибок</h2>';
-   */
-   echo '<nav>'; TopMenu(); echo '</nav>';
+echo '</div>';
+echo '<nav>'; TopMenu(); echo '</nav>';
 echo '</header>';
 
 // 2 или 3 колонки контента сайта

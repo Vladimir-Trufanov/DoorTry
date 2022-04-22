@@ -481,9 +481,11 @@ DoorTry
 6=www\index.php
 7=www\Styles\IsColNews.css
 8=www\Styles\ApiPogoda.css
+9=www\Site.php
+10=www\Styles\Styles.css
 [Selected Project Files]
 Main=
-Selected=www\Styles\ApiPogoda.css
+Selected=www\Styles\Styles.css
 [www\Main.php]
 TopLine=29
 Caret=34,67
@@ -497,8 +499,8 @@ Caret=1,1
 TopLine=5
 Caret=30,16
 [www\ApiPogoda.php]
-TopLine=22
-Caret=58,22
+TopLine=66
+Caret=7,42
 [www\Pages\Signaphoto\SignaPhoto.php]
 TopLine=1
 Caret=1,24
@@ -509,5 +511,11 @@ Caret=1,13
 TopLine=1
 Caret=1,15
 [www\Styles\ApiPogoda.css]
-TopLine=1
-Caret=1,40
+TopLine=10
+Caret=1,24
+[www\Site.php]
+TopLine=14
+Caret=55,20
+[www\Styles\Styles.css]
+TopLine=79
+Caret=1,102

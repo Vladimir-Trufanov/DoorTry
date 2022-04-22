@@ -38,6 +38,7 @@ else
       $picon='https://kwinflat.ru/IttveIMG/meteo/gismeteo/'.$icon; 
       \prown\ConsoleLog('$picon: '.$picon);
       // Размечаем погоду
+      //MeteoMarkupError('$json');
       MeteoMarkup($temperature,$humidity,$pressure,$description,$picon);
    }
 }
@@ -46,7 +47,15 @@ else
 // ****************************************************************************
 function MeteoMarkupError($rmessa)
 {
-   echo 'Погода размечена под ошибку '.$rmessa.'<br>';
+   ?>
+   <div id="Badge">
+   </div>
+   <div id="Pogoda">
+      <?php
+      echo 'Погода размечена под ошибку '.$rmessa.'<br>';
+      ?>
+   </div>
+   <?php
 }
 // ****************************************************************************
 // *                            Разметить "погоду"                            *
@@ -54,20 +63,12 @@ function MeteoMarkupError($rmessa)
 function MeteoMarkup($temperature,$humidity,$pressure,$description,$icon)
 {
    ?>
-   <div id="tipo">
-   
-      <div class="TitleCalc">
-      DoorTry - коллекционер ошибок
-      in1 v1.9
-      </div>
-
-      
-      <div id="Badge">
-        <?php
-        echo '<img src="'.$icon.'.png" alt="'.$icon.'.png">';
-        ?>
-      </div>
-      <div class="Pogoda">
+   <div id="Badge">
+      <?php
+      echo '<img src="'.$icon.'.png" alt="'.$icon.'.png">';
+      ?>
+   </div>
+   <div id="Pogoda">
       <table>
       <tr>
         <td class="tLeft">Температура</td>
@@ -93,7 +94,6 @@ function MeteoMarkup($temperature,$humidity,$pressure,$description,$icon)
         ?>
       </tr>
       </table>
-      </div>
    </div>
    <?php
 }
