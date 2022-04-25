@@ -45,8 +45,6 @@ echo '<body>';
 //echo '_MakeStihi.php<br>';
 //prown\ViewGlobal(avgREQUEST);
 
-
-
 // Делаем разметку страницы для смартфона
 if ($SiteDevice==Mobile) 
 {   
@@ -57,7 +55,6 @@ else
 { 
    echo $MakePage; 
 }
-
 echo '</body>'; 
 echo '</html>';
 // ********************************************************* _MakeStihi.php ***

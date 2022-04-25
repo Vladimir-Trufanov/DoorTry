@@ -300,7 +300,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -410,8 +410,8 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-Stihi
-			+kapriznyj-starik
+		+Stihi
+			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\kapriznyj-starik.png
@@ -477,15 +477,19 @@ DoorTry
 2=www\iniMenu.php
 3=www\iniMem.php
 4=www\ApiPogoda.php
-5=www\Pages\Signaphoto\SignaPhoto.php
-6=www\index.php
-7=www\Styles\IsColNews.css
-8=www\Styles\ApiPogoda.css
-9=www\Site.php
-10=www\Styles\Styles.css
+5=www\index.php
+6=www\Styles\IsColNews.css
+7=www\Styles\ApiPogoda.css
+8=www\Site.php
+9=www\Styles\Styles.css
+10=www\Stihi\_MakeStihi.php
+11=www\Stihi\_Stihi.css
+12=www\Stihi\kapriznyj-starik.php
+13=www\Stihi\sorevnovanie-s-hakerami.php
+14=www\Stihi\_StihiCommon.php
 [Selected Project Files]
 Main=
-Selected=www\index.php
+Selected=www\Stihi\_StihiCommon.php
 [www\Main.php]
 TopLine=29
 Caret=34,67
@@ -499,23 +503,35 @@ Caret=1,1
 TopLine=5
 Caret=30,16
 [www\ApiPogoda.php]
-TopLine=42
-Caret=7,42
-[www\Pages\Signaphoto\SignaPhoto.php]
-TopLine=1
-Caret=1,24
+TopLine=58
+Caret=27,69
 [www\index.php]
-TopLine=1
+TopLine=9
 Caret=1,13
 [www\Styles\IsColNews.css]
 TopLine=1
 Caret=1,15
 [www\Styles\ApiPogoda.css]
-TopLine=1
-Caret=1,14
+TopLine=7
+Caret=13,32
 [www\Site.php]
 TopLine=14
-Caret=55,20
+Caret=56,23
 [www\Styles\Styles.css]
-TopLine=231
-Caret=1,54
+TopLine=19
+Caret=17,51
+[www\Stihi\_MakeStihi.php]
+TopLine=22
+Caret=1,58
+[www\Stihi\_Stihi.css]
+TopLine=43
+Caret=1,81
+[www\Stihi\kapriznyj-starik.php]
+TopLine=154
+Caret=1,1
+[www\Stihi\sorevnovanie-s-hakerami.php]
+TopLine=61
+Caret=1,1
+[www\Stihi\_StihiCommon.php]
+TopLine=67
+Caret=1,1

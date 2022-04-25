@@ -65,7 +65,8 @@ function MeteoMarkup($temperature,$humidity,$pressure,$description,$icon)
    ?>
    <div id="Badge">
       <?php
-      echo '<img src="'.$icon.'.png" alt="'.$icon.'.png">';
+      echo '<img id="bbadge" src="'.$icon.'.png"                alt="'.$icon.'.png">';
+      echo '<img id="blogo"  src="Images/gismeteo-white-bg.svg" alt="Images/gismeteo-white-bg.svg">';
       ?>
    </div>
    <div id="Pogoda">

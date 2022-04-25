@@ -21,10 +21,10 @@ footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video 
 {
    margin:0;
-	padding:0;
-	border:0;
-	font-size:100%;
-	vertical-align:baseline;
+   padding:0;
+   border:0;
+   font-size:100%;
+   vertical-align:baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section 
 {
@@ -36,7 +36,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 */
 html
 {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
    font-size: 10px;
 }
 body 
@@ -59,8 +59,8 @@ h1
 .stihabzPdp 
 {
    text-align:center; 
-	font-size:1.2rem;	
-	font-weight:bold;
+   font-size:1.2rem;	
+   font-weight:bold;
 }
 .StihCenter
 {
@@ -71,9 +71,8 @@ h1
    text-align:justify; 
    color:#b8860b; /*darkgoldenrod*/
    font-size:1.4rem;  
-	font-weight:bold;
+   font-weight:bold;
 }
-
 /* Определяем фоны = background:transparent; */
 #divTop    {background:blue;}
 #divStrip  {background:transparent;}
