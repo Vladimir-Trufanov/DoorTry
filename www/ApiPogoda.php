@@ -30,13 +30,13 @@ else
    if ($temperature==NULL) MeteoMarkupError($json);
    else
    {
-      \prown\ConsoleLog('$temperature: '.$temperature);
-      \prown\ConsoleLog('$humidity: '.$humidity);
-      \prown\ConsoleLog('$pressure: '.$pressure);
-      \prown\ConsoleLog('$description: '.$description);
+      //\prown\ConsoleLog('$temperature: '.$temperature);
+      //\prown\ConsoleLog('$humidity: '.$humidity);
+      //\prown\ConsoleLog('$pressure: '.$pressure);
+      //\prown\ConsoleLog('$description: '.$description);
       // Назначаем путь к иконке погоды
       $picon='https://kwinflat.ru/IttveIMG/meteo/gismeteo/'.$icon; 
-      \prown\ConsoleLog('$picon: '.$picon);
+      //\prown\ConsoleLog('$picon: '.$picon);
       // Размечаем погоду
       //MeteoMarkupError('$json');
       MeteoMarkup($temperature,$humidity,$pressure,$description,$picon);
@@ -243,7 +243,8 @@ $url = 'https://api.gismeteo.net/v2/weather/current/?'.$dacha;
        }';
    }
    $obj = json_decode($Result);
-   $temperature=$obj->{'response'}->{'temperature'}->{'comfort'}->{'C'};
+   //$temperature=$obj->{'response'}->{'temperature'}->{'comfort'}->{'C'};
+   $temperature=$obj->{'response'}->{'temperature'}->{'air'}->{'C'};
    $humidity=$obj->{'response'}->{'humidity'}->{'percent'};
    $pressure=$obj->{'response'}->{'pressure'}->{'mm_hg_atm'};
    $description=$obj->{'response'}->{'description'}->{'full'};

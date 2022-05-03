@@ -66,6 +66,13 @@ RewriteEngine On
 RewriteRule ^home$ index.php [L]
 RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
 RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
+
+
+## https://kwinflatht.nichost.ru/podpisat-fotografiyu 
+## https://kwinflatht.nichost.ru/Pages/SignaPhoto/Signaphoto.php
+## RewriteRule ^podpisat-fotografiyu$ /Pages/Signaphoto/SignaPhoto.php
+## https://kwinflatht.nichost.ru/instrumenty 
+## https://kwinflatht.nichost.ru/Pages/Instrumenty/indexInstrumenty.php
 RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
 
 ## Преобразовываем URL-запросы на страницы функций TPhpPrown

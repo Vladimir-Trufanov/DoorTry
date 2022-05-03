@@ -78,7 +78,7 @@ else if (prown\isComRequest('basemaker','list'))
 }
 else if (prown\isComRequest('signaphoto','list')) 
 {
-   $page='/Pages/SignaPhoto/SignaPhoto.php';
+   $page='/Pages/Signaphoto/SignaPhoto.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page,true);
 }
 // Если поступил запрос на пробную страницу, то запускаем её
