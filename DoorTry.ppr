@@ -18,9 +18,9 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
-		-.well-known
-			-pki-validation
-				www\.well-known\pki-validation\6E745A960661380242B10AC8F251622A.txt
+		+.well-known
+			+pki-validation
+				www\.well-known\pki-validation\gsdv.txt
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -70,6 +70,7 @@ DoorTry
 		-Images
 			www\Images\DoorTry1.png
 			www\Images\DoorTry2.png
+			www\Images\gismeteo-white-bg.svg
 			www\Images\Index.png
 			www\Images\nasampo.jpg
 		-JqueryFW
@@ -304,10 +305,10 @@ DoorTry
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
-			+DoorTry
+			-DoorTry
 				www\Pages\DoorTry\ConnHandler.php
 				www\Pages\DoorTry\SimPrincip.php
-			+Instrumenty
+			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
 			-News
@@ -353,7 +354,7 @@ DoorTry
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
 				www\Pages\Signaphoto\SignaUpload.php
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -398,6 +399,7 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
+		-SiteReset
 		-SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\ColabLig-webfont.ttf
@@ -410,7 +412,7 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+Stihi
+		-Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
@@ -427,7 +429,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		+Styles
+		-Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -439,6 +441,7 @@ DoorTry
 		-Temp
 		www\.htaccess
 		www\.user.ini
+		www\ApiPogoda.php
 		www\basemaker.db3
 		www\check.php
 		www\Common.php
@@ -458,6 +461,7 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
+		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -478,11 +482,13 @@ DoorTry
 3=www\iniMem.php
 4=www\.htaccess
 5=www\Pages\Signaphoto\SignaPhoto.js
+6=www\Pages\TPhpPrown\blok-obshchih-funkcij.php
+7=..\TPhpPrown\TPhpPrown\CommonPrown.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Signaphoto\SignaPhoto.js
+Selected=www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 [www\Main.php]
-TopLine=61
+TopLine=48
 Caret=33,86
 [www\Pages\News\MakeNews.php]
 TopLine=134
@@ -497,5 +503,11 @@ Caret=30,16
 TopLine=59
 Caret=26,76
 [www\Pages\Signaphoto\SignaPhoto.js]
-TopLine=9
+TopLine=42
 Caret=7,42
+[www\Pages\TPhpPrown\blok-obshchih-funkcij.php]
+TopLine=42
+Caret=58,74
+[..\TPhpPrown\TPhpPrown\CommonPrown.php]
+TopLine=15
+Caret=14,50
