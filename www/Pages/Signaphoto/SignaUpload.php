@@ -30,7 +30,7 @@ function MakeSignaUpload(&$InfoMess,$imgDir,$urlDir,&$c_FileStamp,&$c_FileImg,&$
       // или образца подписи, через имя массива ("loadimg","loadstamp") из $_FILES         
       $NameInput=getLoadKind();
       $field=current($_FILES);
-      $type=substr($field['type'],strpos($field['type'],'/')+1);
+      $type=substr($field['name'],strpos($field['name'],'.')+1);
       // Перемещаем штамп
       if ($NameInput=="loadstamp") 
       {
