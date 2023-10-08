@@ -321,7 +321,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+Signaphoto
+			-Signaphoto
 				-Fonts
 					-Lobster
 						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
@@ -354,7 +354,7 @@ DoorTry
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
 				www\Pages\Signaphoto\SignaUpload.php
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -412,14 +412,14 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-Stihi
-			-kapriznyj-starik
+		+Stihi
+			+kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\kapriznyj-starik.png
 				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
 				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			-sorevnovanie-s-hakerami
+			+sorevnovanie-s-hakerami
 				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
@@ -477,49 +477,33 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\Pages\Signaphoto\SignaUpload.php
-2=www\Pages\Signaphoto\SignaPhoto.php
-3=www\Pages\Signaphoto\SignaPhotoImg.php
-4=www\Pages\Signaphoto\SignaPhoto.js
-5=www\iniHtmlBegin.php
-6=www\Site.php
-7=www\ApiPogoda.php
-8=..\TPhpPrown\TPhpPrown\MakeRID.php
-9=..\TPhpPrown\TPhpPrown\getBrowscap.php
-10=www\Pages\Signaphoto\SignaMakeStamp.php
+1=www\Stihi\_MakeStihi.php
+2=www\iniMenu.php
+3=www\Stihi\sorevnovanie-s-hakerami.php
+4=www\.htaccess
+5=www\iniMem.php
+6=www\Stihi\_StihiCommon.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Signaphoto\SignaUpload.php
+Selected=www\.htaccess
 [www\Main.php]
 TopLine=86
 Caret=33,86
-[www\Pages\Signaphoto\SignaUpload.php]
-TopLine=19
-Caret=1,33
-[www\Pages\Signaphoto\SignaPhoto.php]
-TopLine=21
-Caret=84,44
-[www\Pages\Signaphoto\SignaPhotoImg.php]
-TopLine=37
-Caret=1,37
-[www\Pages\Signaphoto\SignaPhoto.js]
-TopLine=180
+[www\Stihi\_MakeStihi.php]
+TopLine=5
 Caret=1,1
-[www\iniHtmlBegin.php]
-TopLine=68
-Caret=1,1
-[www\Site.php]
-TopLine=7
-Caret=6,22
-[www\ApiPogoda.php]
+[www\iniMenu.php]
+TopLine=29
+Caret=9,57
+[www\Stihi\sorevnovanie-s-hakerami.php]
+TopLine=58
+Caret=12,80
+[www\.htaccess]
+TopLine=45
+Caret=33,58
+[www\iniMem.php]
+TopLine=16
+Caret=3,28
+[www\Stihi\_StihiCommon.php]
 TopLine=1
-Caret=1,1
-[..\TPhpPrown\TPhpPrown\MakeRID.php]
-TopLine=56
-Caret=91,61
-[..\TPhpPrown\TPhpPrown\getBrowscap.php]
-TopLine=3
-Caret=1,1
-[www\Pages\Signaphoto\SignaMakeStamp.php]
-TopLine=192
-Caret=2,207
+Caret=18,14

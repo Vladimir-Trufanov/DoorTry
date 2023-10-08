@@ -47,14 +47,14 @@ function StihiMenu()
    foreach($aStihi as $k=>$v)
    {
       $li='<li><a href="';
-      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
-      {
-         $li=$li.'/stihi/'.$v.'"'.'>'.$k;
-      }
-      else
-      {
+      //if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      //{
+      //   $li=$li.'/stihi/'.$v.'"'.'>'.$k;
+      //}
+      //else
+      //{
          $li=$li.'?stihi='.$v.'"'.'>'.$k;
-      }
+      //}
       $li=$li.'</a></li>';
       echo $li;
       //prown\ConsoleLog($li);
