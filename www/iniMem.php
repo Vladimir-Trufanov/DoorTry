@@ -29,21 +29,16 @@ define ("rciCookiUserYes", 2);   // пользователем разрешен�
 define ("dirStihi",'/Stihi/');
 
 // Инициализируем массив новостных лент и массив стихотворений
-// 'Новости Украины'               => 'http://uaport.net/cgi-bin/infostream.rss?rubr15',
-// 'Русская весна'                 => 'http://rusvesna.su/rss.xml',            
 // Ссылка на список RSS-каналов "https://subscribe.ru/catalog?rss"
 $aNews=array
 (
    'Ведомости России'                => 'http://www.vedomosti.ru/newsline/out/rss.xml', 
    'Новости Карелии и Петрозаводска' => 'http://rk.karelia.ru/feed/', 
-   'Яндекс Общество'                 => 'http://news.yandex.ru/society.rss',   
    'Новости российского спорта'      => 'http://stadium.ru/rss', 
-   'Яндекс Интернет'                 => 'http://feeds.feedburner.com/yandex/MAOo',
-   'Google Новости'                  => 'http://news.google.com/news?hl=ru&um=1&q='.
-      '%D0%D2%C1%D7%C1+%C9%CE%D7%C1%CC%C9%C4%CF%D7&ie=windows-1251&output=rss',
    'Популярная механика'             => 'http://www.popmech.ru/out/public-technologies.xml',
    'Новости Mail.ru'                 => 'http://news.mail.ru/rss/',
    'Идеи перепланировки и ремонта'   => 'https://www.houzz.ru/getGalleries/featured/out-rss', 
+   'Все самое самое'                 => 'http://only-most.ru/?feed=rss', 
 );
 $aStihi=array
 ( 

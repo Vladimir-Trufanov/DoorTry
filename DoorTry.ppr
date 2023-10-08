@@ -18,8 +18,8 @@ Extensions=*.*
 [Project tree]
 DoorTry
 	+www
-		+.well-known
-			+pki-validation
+		-.well-known
+			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		-font-awesome-4.7.0
 			-css
@@ -311,7 +311,7 @@ DoorTry
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -349,7 +349,6 @@ DoorTry
 				www\Pages\Signaphoto\SignaPhoto.css
 				www\Pages\Signaphoto\SignaPhoto.js
 				www\Pages\Signaphoto\SignaPhoto.php
-				www\Pages\Signaphoto\SignaPhoto.txt
 				www\Pages\Signaphoto\SignaPhotoDef.php
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
@@ -399,7 +398,6 @@ DoorTry
 			www\qrcode\sorevnovanie-s-hakerami.png-errors.txt
 			www\qrcode\test.png-errors.txt
 			www\qrcode\VERSION
-		-SiteReset
 		-SmartMenus
 			www\SmartMenus\AjaxBase.db3
 			www\SmartMenus\ColabLig-webfont.ttf
@@ -412,14 +410,14 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+Stihi
-			+kapriznyj-starik
+		-Stihi
+			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
 				www\Stihi\kapriznyj-starik\kapriznyj-starik.png
 				www\Stihi\kapriznyj-starik\utrennee-ozero_1280x420.jpg
 				www\Stihi\kapriznyj-starik\za-dva-mesyaca_1800x1300.jpg
-			+sorevnovanie-s-hakerami
+			-sorevnovanie-s-hakerami
 				www\Stihi\sorevnovanie-s-hakerami\majskij-vecher-v-karelii_2416x503.jpg
 				www\Stihi\sorevnovanie-s-hakerami\molody-dushoj_808x808.jpg
 				www\Stihi\sorevnovanie-s-hakerami\raznye-vmeste_1280x850.jpg
@@ -461,7 +459,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -479,13 +476,11 @@ DoorTry
 0=www\Main.php
 1=www\Stihi\_MakeStihi.php
 2=www\iniMenu.php
-3=www\Stihi\sorevnovanie-s-hakerami.php
-4=www\.htaccess
-5=www\iniMem.php
-6=www\Stihi\_StihiCommon.php
+3=www\Pages\News\MakeNews.php
+4=www\iniMem.php
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\iniMem.php
 [www\Main.php]
 TopLine=86
 Caret=33,86
@@ -495,15 +490,9 @@ Caret=1,1
 [www\iniMenu.php]
 TopLine=29
 Caret=9,57
-[www\Stihi\sorevnovanie-s-hakerami.php]
-TopLine=58
-Caret=12,80
-[www\.htaccess]
-TopLine=45
-Caret=33,58
+[www\Pages\News\MakeNews.php]
+TopLine=75
+Caret=1,1
 [www\iniMem.php]
-TopLine=16
-Caret=3,28
-[www\Stihi\_StihiCommon.php]
-TopLine=1
-Caret=18,14
+TopLine=23
+Caret=1,42
