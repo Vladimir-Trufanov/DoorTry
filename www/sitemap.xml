@@ -16,96 +16,116 @@
       <loc>https://doortry.ru/podklyuchenie-obrabotchika-oshibok-i-isklyuchenij</loc>
       <lastmod>2019-10-08</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.500</priority>
+      <priority>0.501</priority>
    </url>
    <url>
       <loc>https://doortry.ru/Stihi/kapriznyj-starik</loc>
       <lastmod>2021-10-01</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.301</priority>
+      <priority>0.401</priority>
    </url>
    <url>
       <loc>https://doortry.ru/Stihi/sorevnovanie-s-hakerami</loc>
       <lastmod>2019-10-08</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.301</priority>
+      <priority>0.402</priority>
    </url>
+   <!-- О библиотеке -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/o-biblioteke</loc>
       <lastmod>2020-03-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.300</priority>
    </url>
-   <url>
-      <loc>https://doortry.ru/TPhpPrown/bajty-v-kilo-kibi-mega-mebibajty-i-obratno</loc>
-      <lastmod>2021-10-01</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.301</priority>
-   </url>
+   <!-- CommonPrown - блок общих функций -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/blok-obshchih-funkcij</loc>
       <lastmod>2020-03-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.301</priority>
    </url>
+   <!-- CreateRightsDir - создать каталог (проверить существование) и задать его права -->
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/sozdat-katalog-i-zadat-ego-prava</loc>
+      <lastmod>2024-01-20</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.302</priority>
+   </url>
+   <!-- Findes - выбрать из строки подстроку, соответствующую регулярному выражению -->
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
+      <lastmod>2024-01-20</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.303</priority>
+   </url>
+   <!-- iniConstMem - определить общие константы библиотеки -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-obshchie-konstanty</loc>
       <lastmod>2019-12-22</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.303</priority>
-   </url>
-   <url>
-      <loc>https://doortry.ru/TPhpPrown/opredelit-obshchie-soobshcheniya-biblioteki</loc>
-      <lastmod>2019-12-22</lastmod>
-      <changefreq>monthly</changefreq>
       <priority>0.304</priority>
    </url>
+   <!-- iniErrMessage - определить общие сообщения библиотеки -->
    <url>
-      <loc>https://doortry.ru/TPhpPrown/opredelit-populyarnye-regulyarnye-vyrazheniya-php</loc>
-      <lastmod>2019-12-22</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/opredelit-obshchie-soobshcheniya-biblioteki</loc>
+      <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.305</priority>
    </url>
+   <!-- iniRegExp - определить популярные регулярные выражения PHP -->
    <url>
-      <loc>https://doortry.ru/TPhpPrown/opredelit-rabotaet-li-funkciya-calc-dlya-css</loc>
-      <lastmod>2020-01-11</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/opredelit-populyarnye-regulyarnye-vyrazheniya-php</loc>
+      <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.306</priority>
    </url>
+   <!-- isCalcInBrowser - проанализировать UserAgent браузера по версиям родительских браузеров и определить работает ли функция Calc для CSS -->
    <url>
-      <loc>https://doortry.ru/TPhpPrown/otrabotat-regulyarnoe-vyrazhenie-na-tekste </loc>
-      <lastmod>2020-04-08</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/opredelit-rabotaet-li-funkciya-calc-dlya-css</loc>
+      <lastmod>2024-01-20</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.307</priority>
+   </url>
+   <!-- MakeCookie - установить новое значение COOKIE в браузере, заменить это значение во внутреннем массиве $_COOKIE и установить новое значение переменной-кукиса в сценарии -->
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/ustanovit-novoe-znachenie-cookie-v-brauzere</loc>
+      <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.308</priority>
    </url>
+   <!-- MakeRegExp - отработать регулярное выражение на тексте и оттрассировать разбор -->
    <url>
-      <loc>https://doortry.ru/TPhpPrown/preobrazovat-znachenie-k-zadannomu-tipu</loc>
-      <lastmod>2020-01-08</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/otrabotat-regulyarnoe-vyrazhenie-na-tekste </loc>
+      <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.309</priority>
    </url>
+   <!-- MakeSession - установить по заданному имени новое значение сессионной переменной на сервере (элемента в массиве $_SESSION) и вернуть это значение для записи в локальную переменную -->
    <url>
-      <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
-      <lastmod>2019-12-22</lastmod>
+      <loc>https://doortry.ru/TPhpPrown/ustanovit-znachenie-sessionnoj-peremennoj</loc>
+      <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.302</priority>
+      <priority>0.310</priority>
    </url>
+   <!-- MakeType - преобразовать переданное значение к заданному типу -->
+   <url>
+      <loc>https://doortry.ru/TPhpPrown/preobrazovat-znachenie-k-zadannomu-tipu</loc>
+      <lastmod>2024-01-20</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.311</priority>
+   </url>
+   <!-- MakeUserError - вывести сообщение разработчика об ошибке в программируемом модуле или сформировать пользовательское исключение -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/vyvesti-soobshchenie-ob-oshibke-na-php</loc>
       <lastmod>2020-01-11</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.310</priority>
+      <priority>0.312</priority>
    </url>
    <url>
-      <loc>https://doortry.ru/TPhpPrown/ustanovit-novoe-znachenie-cookie-v-brauzere</loc>
-      <lastmod>2020-04-06</lastmod>
+      <!-- RecalcSizeInfo - изменить представление информации о размерности -->
+      <loc>https://doortry.ru/TPhpPrown/bajty-v-kilo-kibi-mega-mebibajty-i-obratno</loc>
+      <lastmod>2021-10-01</lastmod>
       <changefreq>monthly</changefreq>
-       <priority>0.307</priority>
-   </url>
-   <url>
-      <loc>https://doortry.ru/TPhpPrown/ustanovit-znachenie-sessionnoj-peremennoj</loc>
-      <lastmod>2020-01-11</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.311</priority>
+      <priority>0.313</priority>
    </url>
 </urlset>

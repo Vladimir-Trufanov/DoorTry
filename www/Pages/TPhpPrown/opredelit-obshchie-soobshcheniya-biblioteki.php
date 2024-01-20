@@ -34,7 +34,7 @@ function DescriptPart()
 {
 ?>
 <div class="TPhpPrown">
-<h4 id="inierrmessage">iniErrMessage - Определить общие сообщения библиотеки.</h4>
+<h4 id="inierrmessage">iniErrMessage - определить общие сообщения библиотеки.</h4>
 <h5><span class="letter">М</span>одуль собирает в одном файле константы, 
 соответствующие пользовательским ошибочным сообщениям и предупреждениям 
 со всех функций библиотеки.</h5><br>

@@ -311,7 +311,7 @@ DoorTry
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -410,7 +410,7 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		-Stihi
+		+Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
@@ -475,24 +475,32 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\Stihi\_MakeStihi.php
-2=www\iniMenu.php
-3=www\Pages\News\MakeNews.php
+2=www\.htaccess
+3=www\iniMenu.php
 4=www\iniMem.php
+5=www\iniTPhpPrown.php
+6=www\Site.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\Stihi\_MakeStihi.php
 [www\Main.php]
-TopLine=86
-Caret=33,86
+TopLine=62
+Caret=9,128
 [www\Stihi\_MakeStihi.php]
-TopLine=5
-Caret=1,1
+TopLine=11
+Caret=1,34
+[www\.htaccess]
+TopLine=56
+Caret=1,79
 [www\iniMenu.php]
-TopLine=29
-Caret=9,57
-[www\Pages\News\MakeNews.php]
-TopLine=75
-Caret=1,1
+TopLine=151
+Caret=1,183
 [www\iniMem.php]
-TopLine=23
-Caret=1,42
+TopLine=1
+Caret=1,11
+[www\iniTPhpPrown.php]
+TopLine=19
+Caret=16,57
+[www\Site.php]
+TopLine=17
+Caret=30,27

@@ -1,0 +1,2 @@
+[20-Jan-2024 14:37:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\iniMenu.php on line 189
+[20-Jan-2024 18:56:43 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\iniMenu.php on line 189

@@ -46,19 +46,49 @@ function StihiMenu()
    $Result = true;
    foreach($aStihi as $k=>$v)
    {
-      $li='<li><a href="';
-      //if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
-      //{
-      //   $li=$li.'/stihi/'.$v.'"'.'>'.$k;
-      //}
-      //else
-      //{
+      $li=NewLine.'<li><a href="';
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         $li=$li.'/stihi/'.$v.'"'.'>'.$k;
+      }
+      else
+      {
          $li=$li.'?stihi='.$v.'"'.'>'.$k;
-      //}
+      }
       $li=$li.'</a></li>';
       echo $li;
-      //prown\ConsoleLog($li);
    }
+   echo NewLine;
+
+   /*
+   global $aStihi;
+   $Result = true;
+   // Делаем так, чтобы в трассировке кода явно были видны <li>
+   $NewLine="\r\n";
+   $NewLine='';
+   $li=$NewLine; 
+   
+   foreach($aStihi as $k=>$v)
+   {
+      prown\ConsoleLog($k.'=='.$v);
+      $li=$li.$NewLine.'<li><a href="';
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         $li=$li.'/stihi/'.$v.'"'.'>'.'+'.$k;
+      }
+      else
+      {
+         $li=$li.'?stihi='.$v.'"'.'>'.'='.$k;
+      }
+      $li=$li.'</a></li>';
+      echo $li;
+      prown\ConsoleLog($k.'=='.$v);
+   }
+   //prown\Alert($li);
+   
+   //echo $NewLine;
+   */
+   
    return $Result;
 }
 // ****************************************************************************
@@ -103,17 +133,18 @@ function TopMenu()
       echo '</li>';
    }
    // Подключаем сведения о библиотеке TPhpPrown                                                    
-   echo '<li><a href="#">TPhpPrown</a>';
-      echo '<ul>';
+   echo NewLine.'<li><a href="#">TPhpPrown</a>';
+      echo NewLine.'<ul>';
       TPhpPrownMenu();
-      echo '</ul>';
-   echo '</li>';
+      echo '</ul>'.NewLine;
+   echo '</li>'.NewLine;
    // Подключаем показ стихотворения
-   echo '<li><a href="#">Штрихотворения</a>';
-      echo '<ul>';
+   echo NewLine.'<li><a href="#">Штрихотворения</a>';
+      echo NewLine.'<ul>';
       StihiMenu();
-      echo '</ul>';
-   echo '</li>';
+      echo '</ul>'.NewLine;
+   echo '</li>'.NewLine;
+   
    // Подключаем пробную страницу
    //echo '<li><a href="index.php?list=proba">Пробная страница</a></li>';
    // Подключаем пробную  по BaseMaker
@@ -149,7 +180,8 @@ function TopMenu()
    }
    else
    {
-      echo '<li><a href="index.php?list=instrumenty">Инструменты</a></li>';
+      $href='index.php?list=instrumenty';                              
+      echo '<li><a href="'.$href.'">Инструменты</a></li>';
    }
    //echo '<li><a href="#">SoftШутки</a></li>';
    echo '</ul>';

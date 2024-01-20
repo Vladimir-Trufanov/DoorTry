@@ -40,6 +40,7 @@ function TPhpPrownMenu()
    $Result = true;
    foreach($aTPhpPrown as $k=>$v)
    {
+      echo NewLine;
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
          echo '<li><a href="';
@@ -53,6 +54,7 @@ function TPhpPrownMenu()
          echo $k.'</a>'.$v.'</li>';
       }
    }
+   echo NewLine;
    return $Result;
 }
 // ****************************************************************************

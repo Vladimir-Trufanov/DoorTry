@@ -67,7 +67,6 @@ RewriteRule ^home$ index.php [L]
 RewriteRule ^podklyuchenie-obrabotchika-oshibok-i-isklyuchenij$ index.php?list=podklyuchenie-obrabotchika-oshibok-i-isklyuchenij [L]
 RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-programmirovaniya [L]
 
-
 ## https://kwinflatht.nichost.ru/podpisat-fotografiyu 
 ## https://kwinflatht.nichost.ru/Pages/SignaPhoto/Signaphoto.php
 ## RewriteRule ^podpisat-fotografiyu$ /Pages/Signaphoto/SignaPhoto.php
@@ -76,13 +75,9 @@ RewriteRule ^prostoj-princip-programmirovaniya$ index.php?list=prostoj-princip-p
 RewriteRule ^instrumenty$ /Pages/Instrumenty/indexInstrumenty.php
 
 ## Преобразовываем URL-запросы на страницы функций TPhpPrown
-## RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/$1.php [L]
 RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
-
 ## Преобразовываем URL-запросы стихотворений
-## RewriteRule ^/Stihi/([a-z-]{1,})$ index.php?stihi=$1 [L]
-## RewriteRule ^/Stihi/([a-z-]{1,})$ /Stihi/_MakeStihi.php?stihi=$1 
-## RewriteRule ^stihi/([a-z-]{1,})$ ?stihi=$1 
+RewriteRule ^stihi/([a-z-]{1,})$ ?stihi=$1 
 
 ## Преобразовываем URL-запросы новостных страниц
 RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]

@@ -25,17 +25,7 @@ echo '<!DOCTYPE html>';
 echo '<html lang="ru">';
 echo '<head>';
 echo '<meta http-equiv="content-type" content="text/html; charset=utf-8"/>';
-// Добавляем Google аналитику
-echo '<!-- Global site tag (gtag.js) - Google Analytics -->';
-echo '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36748654-2"></script>';
-echo '<script>';
-echo '  window.dataLayer = window.dataLayer || [];';
-echo '  function gtag(){dataLayer.push(arguments);}';
-echo "  gtag('js', new Date());";
-echo '';
-echo "  gtag('config', 'UA-36748654-2');";
-echo '</script>';
- 
+
 echo $SeoTag;
 
 echo '<link href="/Stihi/_Stihi.css" rel="stylesheet" type="text/css">';
