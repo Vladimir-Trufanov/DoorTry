@@ -1,2 +1,12 @@
 [20-Jan-2024 14:37:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\DoorTry\www\iniMenu.php on line 189
 [20-Jan-2024 18:56:43 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\DoorTry\www\iniMenu.php on line 189
+[21-Jan-2024 10:51:29 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function BitofExpertMenu() in C:\DoorTry\www\iniMenu.php:175
+Stack trace:
+#0 C:\DoorTry\www\Site.php(30): TopMenu()
+#1 C:\DoorTry\www\Main.php(129): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(34): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\iniMenu.php on line 175
+[21-Jan-2024 16:06:42 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/Pages/BitofExpert/BitofExpert.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 94
+[22-Jan-2024 14:54:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'a' (T_STRING), expecting ']' in C:\DoorTry\www\Pages\BitofExpert\BitofExpert.php on line 70
+[22-Jan-2024 14:55:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'a' (T_STRING), expecting ']' in C:\DoorTry\www\Pages\BitofExpert\BitofExpert.php on line 70

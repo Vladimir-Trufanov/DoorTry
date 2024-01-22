@@ -1,0 +1,6 @@
+***sph***Sun, 21 Jan 2024 09:50:13 +0300 IP: ::1 URL: /Pages/Signaphoto/SignaPhoto.php 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 
+===sph===Sun, 21 Jan 2024 09:50:19 +0300 IP: ::1 URL: /Pages/Signaphoto/SignaPhoto.php 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 
+===sph===Sun, 21 Jan 2024 10:11:17 +0300 IP: ::1 URL: /Pages/Signaphoto/SignaPhoto.php 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 

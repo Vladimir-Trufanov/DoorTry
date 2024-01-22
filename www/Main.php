@@ -88,6 +88,11 @@ else if (prown\isComRequest('proba','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+// Если поступил запрос на страницы "Крошки опыта", то запускаем её
+else if (prown\isComRequest('kroshki-opyta','list')) 
+{
+   require_once  $SiteRoot."/BitofExpert/BitofExpert.php";
+}
 // Если поступил запрос по политике конфиденциальности FsbProba, то запускаем её
 else if (prown\isComRequest('probaPolityConfident','fsb')) 
 {
@@ -137,3 +142,4 @@ else
    require_once $SiteRoot."/iniHtmlEnd.php";
 }
 // *************************************************************** Main.php ***
+

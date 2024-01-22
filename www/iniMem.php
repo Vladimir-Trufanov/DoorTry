@@ -39,7 +39,7 @@ $aNews=array
    'Ведомости России'                => 'http://www.vedomosti.ru/newsline/out/rss.xml', 
    'Новости Карелии и Петрозаводска' => 'http://rk.karelia.ru/feed/', 
    'Новости российского спорта'      => 'http://stadium.ru/rss', 
-   'Популярная механика'             => 'http://www.popmech.ru/out/public-technologies.xml',
+   'Военное обозрение'               => 'http://topwar.ru/rss.xml',
    'Новости Mail.ru'                 => 'http://news.mail.ru/rss/',
    'Идеи перепланировки и ремонта'   => 'https://www.houzz.ru/getGalleries/featured/out-rss', 
    'Все самое самое'                 => 'http://only-most.ru/?feed=rss', 

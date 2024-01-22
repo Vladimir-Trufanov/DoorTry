@@ -7,12 +7,13 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  13.01.2019
-// Copyright © 2019 tve                              Посл.изменение: 26.11.2019
+// Copyright © 2019 tve                              Посл.изменение: 21.01.2024
 
 /**
  *  Список новостных лент
  *  https://subscribe.ru/catalog?rss
 **/
+
 // ****************************************************************************
 // *                       Вывести пункты новостного меню                     *
 // ****************************************************************************
@@ -167,12 +168,40 @@ function TopMenu()
    echo '<li><a href="index.php?fsb=probaPolzoSogl">probaPolzoSogl</a></li>';
    echo '<li><a href="index.php?fsb=FsbProba">FsbProba</a></li>';
    */
+
+   // Подключаем страницы темы "Крошки опыта" 
+   echo '<li>';
+      // Для основного и контрольного сайтов выводим краткий URL
+      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+      {
+         echo '<a href="index.php/kroshki-opyta">Крошки опыта</a>';
+      }
+      else
+      {
+         echo '<a href="index.php?list=kroshki-opyta">Крошки опыта</a>';
+      }
+   echo '</li>';
+
+   
+   /*                                                   
+   echo NewLine.'<li><a href="/Pages/BitofExpert/BitofExpert.html">Крошки опыта</a>';
+      / *
+      <li><a href="/TPhpPrown/bajty-v-kilo-kibi-mega-mebibajty-i-obratno">RecalcSizeInfo</a></li>
+      
+      echo NewLine.'<ul>';
+      BitofExpertMenu();
+      echo '</ul>'.NewLine;
+      * /
+   echo '</li>'.NewLine;
+   */
+   
    // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';
       NewsMenu();
       echo '</ul>';
    echo '</li>';
+   
    // Подключаем страницу с инструментами и документацией
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {

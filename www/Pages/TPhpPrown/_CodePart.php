@@ -12,6 +12,7 @@
 function CodePart($TPhpPrown,$FuncFile,$pattern,$replacement)
 {
 $FileSpec=$TPhpPrown.'/TPhpPrown/'.$FuncFile;
+// \prown\ConsoleLog($FileSpec);
 $FileContent=file_get_contents($FileSpec);
 // Вырезаем комментарий, который уже представлен
 $FileItog=preg_replace($pattern,$replacement,$FileContent);

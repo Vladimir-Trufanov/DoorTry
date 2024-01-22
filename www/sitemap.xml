@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- --------------------------------------- ÃËÀÂÍÛÅ ÑÒÐÀÍÈÖÛ DOORTRY.RU -->
    <url>
       <loc>https://doortry.ru/</loc>
       <lastmod>2019-10-08</lastmod>
@@ -18,18 +19,7 @@
       <changefreq>monthly</changefreq>
       <priority>0.501</priority>
    </url>
-   <url>
-      <loc>https://doortry.ru/Stihi/kapriznyj-starik</loc>
-      <lastmod>2021-10-01</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.401</priority>
-   </url>
-   <url>
-      <loc>https://doortry.ru/Stihi/sorevnovanie-s-hakerami</loc>
-      <lastmod>2019-10-08</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.402</priority>
-   </url>
+   <!-- --------------------------------------------------------- TPHPPROWN -->
    <!-- Î áèáëèîòåêå -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/o-biblioteke</loc>
@@ -127,5 +117,34 @@
       <lastmod>2021-10-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.313</priority>
+   </url>
+   <!-- ---------------------------------------------------- ØÒÐÈÕÎÒÂÎÐÅÍÈß -->
+   <!-- Êàïðèçíûé ñòàðèê -->
+   <url>
+      <loc>https://doortry.ru/stihi/kapriznyj-starik</loc>
+      <lastmod>2021-10-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.401</priority>
+   </url>
+   <!-- Ñîðåâíîâàíèå ñ õàêåðàìè -->
+   <url>
+      <loc>https://doortry.ru/stihi/sorevnovanie-s-hakerami</loc>
+      <lastmod>2019-10-08</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.402</priority>
+   </url>
+   <!-- ---------------------------------------------- ÏÎÄÏÈÑÀÒÜ ÔÎÒÎÃÐÀÔÈÞ -->
+   <url>
+      <loc>https://doortry.ru/Pages/Signaphoto/SignaPhoto.php</loc>
+      <lastmod>2022-10-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.300</priority>
+   </url>
+   <!-- ---------------------------------------- ÈÍÑÒÐÓÌÅÍÒÛ È ÄÎÊÓÌÅÍÒÀÖÈß -->
+   <url>
+      <loc>https://doortry.ru/instrumenty</loc>
+      <lastmod>2022-10-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.300</priority>
    </url>
 </urlset>

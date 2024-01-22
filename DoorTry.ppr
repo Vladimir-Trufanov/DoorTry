@@ -21,6 +21,10 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
+		+BitofExpert
+			www\BitofExpert\BitofExpert.html
+			www\BitofExpert\BitofExpert.php
+			www\BitofExpert\BitofExpert.phpo
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -301,7 +305,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -349,6 +353,7 @@ DoorTry
 				www\Pages\Signaphoto\SignaPhoto.css
 				www\Pages\Signaphoto\SignaPhoto.js
 				www\Pages\Signaphoto\SignaPhoto.php
+				www\Pages\Signaphoto\SignaPhoto.txt
 				www\Pages\Signaphoto\SignaPhotoDef.php
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
@@ -361,6 +366,7 @@ DoorTry
 				www\Pages\TPhpPrown\bajty-v-kilo-kibi-mega-mebibajty-i-obratno.php
 				www\Pages\TPhpPrown\blok-obshchih-funkcij.php
 				www\Pages\TPhpPrown\dlyaobschego.php
+				www\Pages\TPhpPrown\log.txt
 				www\Pages\TPhpPrown\o-biblioteke.php
 				www\Pages\TPhpPrown\opredelit-obshchie-konstanty.php
 				www\Pages\TPhpPrown\opredelit-obshchie-soobshcheniya-biblioteki.php
@@ -410,7 +416,7 @@ DoorTry
 			www\SmartMenus\sm-core-css.css
 			www\SmartMenus\sm-doortry.css
 			www\SmartMenus\sm-doortry-mobi.css
-		+Stihi
+		-Stihi
 			-kapriznyj-starik
 				www\Stihi\kapriznyj-starik\den-rozhdeniya-arishi_1005x800.jpg
 				www\Stihi\kapriznyj-starik\evgenij-arhipenko_852x480.jpg
@@ -437,6 +443,8 @@ DoorTry
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
 		-Temp
+			www\Temp\Win10Ch0De--1img.jpg
+			www\Temp\Win10Ch0De--1proba.jpg
 		www\.htaccess
 		www\.user.ini
 		www\ApiPogoda.php
@@ -447,6 +455,7 @@ DoorTry
 		www\DebugTimer.php
 		www\doortry.png
 		www\DoorTryError.php
+		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -459,6 +468,7 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
+		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -474,33 +484,25 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\Stihi\_MakeStihi.php
-2=www\.htaccess
-3=www\iniMenu.php
-4=www\iniMem.php
-5=www\iniTPhpPrown.php
-6=www\Site.php
+1=www\iniMenu.php
+2=www\iniMem.php
+3=www\BitofExpert\BitofExpert.php
+4=www\BitofExpert\BitofExpert.phpo
 [Selected Project Files]
 Main=
-Selected=www\Stihi\_MakeStihi.php
+Selected=www\Main.php
 [www\Main.php]
-TopLine=62
-Caret=9,128
-[www\Stihi\_MakeStihi.php]
-TopLine=11
-Caret=1,34
-[www\.htaccess]
-TopLine=56
-Caret=1,79
+TopLine=85
+Caret=30,94
 [www\iniMenu.php]
-TopLine=151
-Caret=1,183
+TopLine=166
+Caret=53,181
 [www\iniMem.php]
-TopLine=1
-Caret=1,11
-[www\iniTPhpPrown.php]
-TopLine=19
-Caret=16,57
-[www\Site.php]
-TopLine=17
-Caret=30,27
+TopLine=7
+Caret=1,1
+[www\BitofExpert\BitofExpert.php]
+TopLine=5
+Caret=1,42
+[www\BitofExpert\BitofExpert.phpo]
+TopLine=36
+Caret=75,72
