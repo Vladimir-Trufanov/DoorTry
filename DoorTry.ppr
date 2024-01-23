@@ -24,7 +24,8 @@ DoorTry
 		+BitofExpert
 			www\BitofExpert\BitofExpert.html
 			www\BitofExpert\BitofExpert.php
-			www\BitofExpert\BitofExpert.phpo
+			www\BitofExpert\iniRegExp.php
+			www\BitofExpert\Replaces.php
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -443,8 +444,6 @@ DoorTry
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
 		-Temp
-			www\Temp\Win10Ch0De--1img.jpg
-			www\Temp\Win10Ch0De--1proba.jpg
 		www\.htaccess
 		www\.user.ini
 		www\ApiPogoda.php
@@ -487,13 +486,15 @@ DoorTry
 1=www\iniMenu.php
 2=www\iniMem.php
 3=www\BitofExpert\BitofExpert.php
-4=www\BitofExpert\BitofExpert.phpo
+4=www\BitofExpert\BitofExpert.html
+5=www\BitofExpert\Replaces.php
+6=www\BitofExpert\iniRegExp.php
 [Selected Project Files]
 Main=
-Selected=www\Main.php
+Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=85
-Caret=30,94
+TopLine=5
+Caret=45,17
 [www\iniMenu.php]
 TopLine=166
 Caret=53,181
@@ -501,8 +502,14 @@ Caret=53,181
 TopLine=7
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=5
-Caret=1,42
-[www\BitofExpert\BitofExpert.phpo]
-TopLine=36
-Caret=75,72
+TopLine=59
+Caret=1,87
+[www\BitofExpert\BitofExpert.html]
+TopLine=3
+Caret=28,4
+[www\BitofExpert\Replaces.php]
+TopLine=68
+Caret=3,91
+[www\BitofExpert\iniRegExp.php]
+TopLine=8
+Caret=22,8

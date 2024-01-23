@@ -10,3 +10,6 @@ Stack trace:
 [21-Jan-2024 16:06:42 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/Pages/BitofExpert/BitofExpert.php' (include_path='.;C:\php\pear') in C:\DoorTry\www\Main.php on line 94
 [22-Jan-2024 14:54:14 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'a' (T_STRING), expecting ']' in C:\DoorTry\www\Pages\BitofExpert\BitofExpert.php on line 70
 [22-Jan-2024 14:55:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'a' (T_STRING), expecting ']' in C:\DoorTry\www\Pages\BitofExpert\BitofExpert.php on line 70
+[23-Jan-2024 08:30:04 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file, expecting ',' or ';' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 77
+[23-Jan-2024 08:31:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\DoorTry\www\BitofExpert\Replaces.php on line 39
+[23-Jan-2024 08:45:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\DoorTry\www\BitofExpert\iniRegExp.php on line 45

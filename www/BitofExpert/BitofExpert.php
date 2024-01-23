@@ -28,18 +28,71 @@ else
 // Загружаем файл html
 $FileContent=file_get_contents($SiteRoot."/Pages/BitofExpert/BitofExpert.html");
 
-// Спецсимволы, которые следует экранировать:       $ ^ . * + ? \ { } [ ] ( ) |
-// по опыту tve (22.01.2024) экранировать:          -
-// ограничитель рег.выражения / , то экранировать:  /
+// Специальные символы следует экранировать обратной наклонной чертой (обратным слэшем) "\"
 
-// Не являются спецсимволами:
-// @ : , ' " ; - _ = < > % # ~ ` & ! /
+// Спецсимволы, которые следует экранировать:             $ ^ . * + ? \ { } [ ] ( ) |
+// по опыту tve (22.01.2024) экранировать:                -
+// если ограничитель рег.выражения / , то экранировать:   /
+// экранировать пробел, перевод строки, возврат каретки:  \s \n \r
+
+// Не являются спецсимволами:                             // @ : , ' " ; - _ = < > % # ~ ` & ! /
 
 $FileContent=preg_replace('/<!DOCTYPE([0-9a-zA-Zа-яёА-ЯЁ><!=":;,%\[\]\{\}\/\-\.\s\n\r]+)body/u', '<body', $FileContent);
 echo $FileContent;
 */
 
-require_once "BitofExpert.html";
+//require_once "BitofExpert.html";
+
+$Text=
+'<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+Hello World!
+</body>
+</html>
+';
+
+//require_once "Replaces.php";
+
+/*
+// Заменяем текст второй строки на <html>
+$beg='<html';
+$endreg='lang="">';
+$newfrag='<html>';
+echo prown\Replaces($beg,$Text,$endreg,$newfrag);
+*/
+
+
+// На место трех строк meta вставляем только первую
+$beg='<meta';
+$endreg='"\s\/>';
+$newfrag='<meta charset="utf-8" />';
+echo prown\Replaces($beg,$Text,$endreg,$newfrag);
+
+
+/*
+// Убираем все строки стиля (включая возврат каретки и перевод строки вначале)
+$begreg='\/title>';
+$endreg='\/style>';
+$newfrag='/title>';
+echo prown\Replaces($begreg,$Text,$endreg,$newfrag);
+*/
 
 // ******************************************************** BitofExpert.php ***
 
