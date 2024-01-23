@@ -13,3 +13,6 @@ Stack trace:
 [23-Jan-2024 08:30:04 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file, expecting ',' or ';' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 77
 [23-Jan-2024 08:31:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\DoorTry\www\BitofExpert\Replaces.php on line 39
 [23-Jan-2024 08:45:52 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\DoorTry\www\BitofExpert\iniRegExp.php on line 45
+[23-Jan-2024 11:48:27 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$FileContent' (T_VARIABLE) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 106
+[23-Jan-2024 12:04:56 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '.', expecting end of file in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 114
+[23-Jan-2024 13:18:05 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ''<body>'' (T_CONSTANT_ENCAPSED_STRING) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 39

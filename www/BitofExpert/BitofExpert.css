@@ -1,0 +1,56 @@
+/** HTML5/CSS3, EDGE/CHROME                             *** BitofExpert.css ***
+ *
+ ******************************************************************************
+ * Крошки опыта             Кусочки информации о  преодоленных препятствиях в *
+ *          программировании всего лишь одного человека. Здесь не представлен *
+ *          весь путь: ассемблеры, алгол, фортран, кобол, бэйсик, c, clipper, *
+ *          delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
+ ******************************************************************************
+ *
+ *                                                   Автор:       Труфанов В.Е.
+ * v1.0                                              Дата создания:  21.01.2024
+ * Copyright © 2024 tve                              Посл.изменение: 23.01.2024
+**/
+
+html
+{
+   font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;	
+   font-size:10px;
+}
+body 
+{
+   font-size:1.8rem;  
+   width:99%;
+   height:100%;
+}
+#kroshki-opyta 
+{
+   /*color: blue;*/
+   margin-left:1rem; 
+   margin-right:1rem; 
+   min-width:50%;
+   text-align:justify; 
+}
+table
+{
+   width:100%;
+}
+td
+{
+   font-size:2.2rem;
+   border:0.4rem solid olive;
+}
+blockquote
+{
+   background:#FFE9EF;
+   padding:.2rem 2rem .2rem 2rem;
+   font-size:1.8rem;  
+	font-weight:bold;
+   text-align:right; 
+   width:80%;
+   margin-left:10%; 
+   border-radius:1rem; 
+}
+
+/************************************************************** Styles.css ***/
+

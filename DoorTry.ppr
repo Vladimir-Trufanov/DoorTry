@@ -17,15 +17,28 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		+BitofExpert
+		-BitofExpert
+			-bifeArduino
+			-bifeGitHub
+				-kak-udalit-repozitarij-v-github
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Dashboard.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Ihaveread.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Iwont.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\kak-udalit-repozitarij-v-github.html
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Last-step.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\probnyj-proekt.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Setting.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Toconfirm.jpg
+			-bifeWindows
+				-kak-zamenit-drajver-windows
+					www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html
+			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
 			www\BitofExpert\BitofExpert.php
-			www\BitofExpert\iniRegExp.php
-			www\BitofExpert\Replaces.php
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -485,31 +498,39 @@ DoorTry
 0=www\Main.php
 1=www\iniMenu.php
 2=www\iniMem.php
-3=www\BitofExpert\BitofExpert.php
-4=www\BitofExpert\BitofExpert.html
-5=www\BitofExpert\Replaces.php
-6=www\BitofExpert\iniRegExp.php
+3=www\BitofExpert\BitofExpert.html
+4=www\BitofExpert\BitofExpert.php
+5=www\index.php
+6=www\iniHtmlBegin.php
+7=www\BitofExpert\BitofExpert.css
+8=www\Styles\Styles.css
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=5
+TopLine=7
 Caret=45,17
 [www\iniMenu.php]
-TopLine=166
+TopLine=142
 Caret=53,181
 [www\iniMem.php]
-TopLine=7
+TopLine=35
 Caret=1,1
-[www\BitofExpert\BitofExpert.php]
-TopLine=59
-Caret=1,87
 [www\BitofExpert\BitofExpert.html]
-TopLine=3
-Caret=28,4
-[www\BitofExpert\Replaces.php]
-TopLine=68
-Caret=3,91
-[www\BitofExpert\iniRegExp.php]
-TopLine=8
-Caret=22,8
+TopLine=19
+Caret=1,19
+[www\BitofExpert\BitofExpert.php]
+TopLine=114
+Caret=6,18
+[www\index.php]
+TopLine=1
+Caret=1,1
+[www\iniHtmlBegin.php]
+TopLine=31
+Caret=1,65
+[www\BitofExpert\BitofExpert.css]
+TopLine=1
+Caret=1,32
+[www\Styles\Styles.css]
+TopLine=97
+Caret=1,130

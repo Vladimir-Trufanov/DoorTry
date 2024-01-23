@@ -10,7 +10,39 @@
 
 //                                                   Автор:       Труфанов В.Е.
 //                                                   Дата создания:  21.01.2024
-// Copyright © 2024 tve                              Посл.изменение: 21.01.2024
+// Copyright © 2024 tve                              Посл.изменение: 23.01.2024
+
+
+function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="stylesheet" href="../BitofExpert/BitofExpert.css">')
+{
+   //prown\Alert($FileSpec);
+   // Загружаем файл html
+   $FileContent=file_get_contents($FileSpec);
+   // Убираем все строки стиля и вставляем ссылку на файл CSS-стилей
+   $begreg='<style';
+   $endreg='\/style>';
+   $FileContent=prown\Replaces($begreg,$FileContent,$endreg,$BitofExpertCSS);
+   // Вставляем начало общего окна HTML "kroshki-opyta"
+   $winKroshkiOpyta='/head>'.'<body>'.'<div id="kroshki-opyta">';
+   $begreg='\/head>';
+   $endreg='<body>';
+   $FileContent=prown\Replaces($begreg,$FileContent,$endreg,$winKroshkiOpyta);
+   // Вставляем завершение общего окна HTML "kroshki-opyta"
+   $winKroshkiOpyta='</div>'.'</body>'.'</html>';
+   $begreg='<\/body>';
+   $endreg='<\/html>';
+   $FileContent=prown\Replaces($begreg,$FileContent,$endreg,$winKroshkiOpyta);
+   // Меняем заголовок страницы
+   $winKroshkiOpyta='<title>'.$Title.'</title>';
+   $begreg='<title>';
+   $endreg='<\/title>';
+   $FileContent=prown\Replaces($begreg,$FileContent,$endreg,$winKroshkiOpyta);
+   // Заменяем расширения подгружаемых файлов 'md' на 'html'
+   $FileContent=str_replace('.md"','.html"',$FileContent);
+   // Заменяем каталог загрузки подгружаемых файлов html
+   $FileContent=str_replace('href="bife','href="BitofExpert/bife',$FileContent);
+   return $FileContent;
+}
 
 /*
 // Подключаем особенности стиля для компьютерной и мобильной версий
@@ -78,13 +110,13 @@ $newfrag='<html>';
 echo prown\Replaces($beg,$Text,$endreg,$newfrag);
 */
 
-
+/*
 // На место трех строк meta вставляем только первую
 $beg='<meta';
 $endreg='"\s\/>';
 $newfrag='<meta charset="utf-8" />';
 echo prown\Replaces($beg,$Text,$endreg,$newfrag);
-
+*/
 
 /*
 // Убираем все строки стиля (включая возврат каретки и перевод строки вначале)
@@ -93,6 +125,29 @@ $endreg='\/style>';
 $newfrag='/title>';
 echo prown\Replaces($begreg,$Text,$endreg,$newfrag);
 */
+
+// Готовим ссылку на файл CSS-стилей для файлов темы BitofExpert
+//$BitofExpertCSS='<link rel="stylesheet" href="BitofExpert/BitofExpert.css">';
+//$BitofExpertCSS='<link rel="stylesheet" href="'.'../'.'BitofExpert/BitofExpert.css">';
+
+
+
+/*
+//
+//$SiteRoot=preg_quote($SiteRoot);
+// Готовим ссылку на файл CSS-стилей для файлов темы BitofExpert
+$BitofExpertCSS='<link rel="stylesheet" href="'.'../../'.'BitofExpert/BitofExpert.css">';
+// Обрабатываем файлы раздела Windows
+prown\ConsoleLog('$SiteRoot='.$SiteRoot);
+$FileSpec=$SiteRoot."/BitofExpert/bifeGitHub/kak-udalit-repozitarij-v-github/kak-udalit-repozitarij-v-github.html";
+$FileContent=ReplaceHtmlExpert($FileSpec,'Как удалить репозитарий из GitHub',$BitofExpertCSS);
+*/
+
+// Обрабатываем корневой файл темы BitofExpert, не изменяя его самого
+// prown\ConsoleLog('$SiteRoot='.$SiteRoot);
+$FileSpec=$SiteRoot."/BitofExpert/BitofExpert.html";
+$FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
+echo $FileContent;
 
 // ******************************************************** BitofExpert.php ***
 
