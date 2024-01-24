@@ -17,12 +17,14 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		-BitofExpert
+		+BitofExpert
 			-bifeArduino
+				-infrakrasnyj-pult-na-smartfone-dlya-vsego
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
 			-bifeGitHub
 				-kak-udalit-repozitarij-v-github
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Dashboard.jpg
@@ -38,7 +40,11 @@ DoorTry
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
+			www\BitofExpert\bold.php
 			www\BitofExpert\BitofExpert.php
+			www\BitofExpert\Findes.php
+			www\BitofExpert\iniRegExp.php
+			www\BitofExpert\Replaces.php
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -319,7 +325,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -372,7 +378,7 @@ DoorTry
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
 				www\Pages\Signaphoto\SignaUpload.php
-			-TPhpPrown
+			+TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -500,37 +506,45 @@ DoorTry
 2=www\iniMem.php
 3=www\BitofExpert\BitofExpert.html
 4=www\BitofExpert\BitofExpert.php
-5=www\index.php
-6=www\iniHtmlBegin.php
-7=www\BitofExpert\BitofExpert.css
-8=www\Styles\Styles.css
+5=www\BitofExpert\iniRegExp.php
+6=www\BitofExpert\Findes.php
+7=www\BitofExpert\Replaces.php
+8=www\BitofExpert\BitofExpert.css
+9=www\BitofExpert\bold.php
+10=www\Pages\News\MakeNews.php
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=7
-Caret=45,17
+TopLine=9
+Caret=1,15
 [www\iniMenu.php]
-TopLine=142
+TopLine=180
 Caret=53,181
 [www\iniMem.php]
 TopLine=35
 Caret=1,1
 [www\BitofExpert\BitofExpert.html]
-TopLine=19
-Caret=1,19
+TopLine=1
+Caret=158,36
 [www\BitofExpert\BitofExpert.php]
-TopLine=114
-Caret=6,18
-[www\index.php]
-TopLine=1
-Caret=1,1
-[www\iniHtmlBegin.php]
-TopLine=31
-Caret=1,65
+TopLine=16
+Caret=9,44
+[www\BitofExpert\iniRegExp.php]
+TopLine=8
+Caret=41,29
+[www\BitofExpert\Findes.php]
+TopLine=17
+Caret=21,44
+[www\BitofExpert\Replaces.php]
+TopLine=3
+Caret=69,28
 [www\BitofExpert\BitofExpert.css]
-TopLine=1
-Caret=1,32
-[www\Styles\Styles.css]
-TopLine=97
-Caret=1,130
+TopLine=5
+Caret=1,1
+[www\BitofExpert\bold.php]
+TopLine=33
+Caret=1,62
+[www\Pages\News\MakeNews.php]
+TopLine=14
+Caret=1,33

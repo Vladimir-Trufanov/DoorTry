@@ -19,6 +19,9 @@ $SiteAbove    = $_WORKSPACE[wsSiteAbove];    // Надсайтовый ката�
 $SiteHost     = $_WORKSPACE[wsSiteHost];     // Каталог хостинга
 $SiteDevice   = $_WORKSPACE[wsSiteDevice];   // 'Computer' | 'Mobile' | 'Tablet'
 $SiteProtocol = $_WORKSPACE[wsSiteProtocol]; // 'HTTP' | 'HTTPS'
+
+$urltxt=$_SERVER['REQUEST_URI'];
+
 /*
 $UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
 $TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта
