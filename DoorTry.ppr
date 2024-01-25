@@ -40,11 +40,7 @@ DoorTry
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
-			www\BitofExpert\bold.php
 			www\BitofExpert\BitofExpert.php
-			www\BitofExpert\Findes.php
-			www\BitofExpert\iniRegExp.php
-			www\BitofExpert\Replaces.php
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -325,7 +321,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -378,7 +374,7 @@ DoorTry
 				www\Pages\Signaphoto\SignaPhotoImg.php
 				www\Pages\Signaphoto\SignaTunein.php
 				www\Pages\Signaphoto\SignaUpload.php
-			+TPhpPrown
+			-TPhpPrown
 				www\Pages\TPhpPrown\_CodePart.php
 				www\Pages\TPhpPrown\_dispTPhpPrown.php
 				www\Pages\TPhpPrown\_TestPart.php
@@ -506,12 +502,7 @@ DoorTry
 2=www\iniMem.php
 3=www\BitofExpert\BitofExpert.html
 4=www\BitofExpert\BitofExpert.php
-5=www\BitofExpert\iniRegExp.php
-6=www\BitofExpert\Findes.php
-7=www\BitofExpert\Replaces.php
-8=www\BitofExpert\BitofExpert.css
-9=www\BitofExpert\bold.php
-10=www\Pages\News\MakeNews.php
+5=www\BitofExpert\BitofExpert.css
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
@@ -525,26 +516,11 @@ Caret=53,181
 TopLine=35
 Caret=1,1
 [www\BitofExpert\BitofExpert.html]
-TopLine=1
-Caret=158,36
+TopLine=13
+Caret=74,38
 [www\BitofExpert\BitofExpert.php]
-TopLine=16
-Caret=9,44
-[www\BitofExpert\iniRegExp.php]
-TopLine=8
-Caret=41,29
-[www\BitofExpert\Findes.php]
 TopLine=17
-Caret=21,44
-[www\BitofExpert\Replaces.php]
-TopLine=3
-Caret=69,28
+Caret=1,52
 [www\BitofExpert\BitofExpert.css]
 TopLine=5
 Caret=1,1
-[www\BitofExpert\bold.php]
-TopLine=33
-Caret=1,62
-[www\Pages\News\MakeNews.php]
-TopLine=14
-Caret=1,33

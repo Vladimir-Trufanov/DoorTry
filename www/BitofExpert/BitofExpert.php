@@ -8,46 +8,22 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.2, 24.01.2024                                  Автор:       Труфанов В.Е.
+// v1.2, 25.01.2024                                  Автор:       Труфанов В.Е.
 // Copyright © 2024 tve                              Дата создания:  21.01.2024
-
 
 // Выбираем все крошки опыта
 function MakeLinks($FileContent)
 {
    // Определяем 'нежадное' регулярное выражение для выборки cсылки на страницу .md
-   $regArts='/<a\shref="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}<\/a>/uU';
-   // Выбираем все ссылки на страницы .md
-   
-   /*
-   $str = "The rain in SPAIN falls mainly on the plains.";
-   $pattern = "/ain/i";
-   if(preg_match_all($pattern, $str, $matches)) 
-   {
-      print_r($matches);
-      echo '*** '.$matches[0][1].' ***';
-   }
-   */
-   
-   if(preg_match_all($regArts, $FileContent, $matches)) 
-   {
-      //print_r($matches);
-      //echo 'count='.count($matches)."\n\r";
-      $row=$matches[0];
-      //echo '$row='.count($row)."\n\r";
-      
-      foreach($matches[0] as $linki)
-      {
-         echo '*** '.$linki.' ***'."\n\r";
-      }
-      
-      //echo '*** '.$matches[0][1].' ***'."\n\r";
-   }
-   
-   //prown\Alert('$matches');
-
+   // (далее показаны три работающие регулярки и четвертая с карманами - для использования)
+   //$regArts='/<a\shref="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}<\/a>/uU';
+   //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}\.md/uU';
+   //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
+   $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
+   // Заменяем все ссылки на страницы .md (здесь используем два кармана)
+   $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2"',$FileContent);
+   return $FileContent;
 }
-
 
 function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="stylesheet" href="../BitofExpert/BitofExpert.css">')
 {
@@ -72,10 +48,7 @@ function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="styleshe
    $begreg='<title>';
    $endreg='<\/title>';
    $FileContent=prown\Replaces($begreg,$FileContent,$endreg,$winKroshkiOpyta);
-   
-   MakeLinks($FileContent);
-
-   
+   $FileContent=MakeLinks($FileContent);
    return $FileContent;
 }
 
