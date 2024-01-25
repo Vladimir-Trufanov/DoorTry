@@ -19,9 +19,12 @@ function MakeLinks($FileContent)
    //$regArts='/<a\shref="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}<\/a>/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}\.md/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
-   $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
+   //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
+   $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана)
-   $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2"',$FileContent);
+   //$FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2&tit=$4"',$FileContent);
+   //$FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2"',$FileContent);
+   $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2&tit=$4">$4</a>',$FileContent);
    return $FileContent;
 }
 
@@ -65,11 +68,38 @@ else
 }
 */
 
+// Определяем путь к файлу загрузки
+$FileName='BitofExpert.html';
+$FileDir=$SiteRoot.'/BitofExpert/';
+$par=prown\getComRequest('par');
+if ($par>'')
+{
+   $FileDir=$FileDir.'bife'.$par.'/';
+}
+$art=prown\getComRequest('art');
+if ($art>'')
+{
+   //echo '***'.$art.'***<br>';
+   $FileDir=$FileDir.$art.'/';
+   $FileName=$art.'.html';
+}
+$FileSpec=$FileDir.$FileName;
+//echo $FileSpec.'<br>';
+
+if (($par>'')||($art>''))
+{
+   echo ('Выделить изображения'.'<br>');
+}
+
+
+
+
 // Обрабатываем корневой файл темы BitofExpert, не изменяя его самого
-$FileSpec=$SiteRoot."/BitofExpert/BitofExpert.html";
+//$FileSpec=$SiteRoot."/BitofExpert/BitofExpert.html";
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
 // Выводим главную страницу темы BitofExpert
 // prown\ConsoleLog($urltxt);
+//echo $urltxt.'<br>';
 echo $FileContent;
 
 // ******************************************************** BitofExpert.php ***
