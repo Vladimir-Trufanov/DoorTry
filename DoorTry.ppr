@@ -449,7 +449,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		-Styles
+		+Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -505,30 +505,34 @@ DoorTry
 5=www\BitofExpert\BitofExpert.css
 6=www\Pages\TPhpPrown\_dispTPhpPrown.php
 7=www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html
+8=www\.htaccess
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=39
-Caret=1,41
+TopLine=107
+Caret=4,125
 [www\iniMenu.php]
-TopLine=180
-Caret=53,181
+TopLine=168
+Caret=1,180
 [www\iniMem.php]
 TopLine=35
 Caret=1,1
 [www\BitofExpert\BitofExpert.html]
-TopLine=17
+TopLine=27
 Caret=124,42
 [www\BitofExpert\BitofExpert.php]
-TopLine=67
-Caret=6,25
+TopLine=80
+Caret=38,98
 [www\BitofExpert\BitofExpert.css]
-TopLine=5
-Caret=22,28
+TopLine=24
+Caret=1,55
 [www\Pages\TPhpPrown\_dispTPhpPrown.php]
 TopLine=43
 Caret=1,55
 [www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html]
 TopLine=1
 Caret=1,1
+[www\.htaccess]
+TopLine=43
+Caret=4,82

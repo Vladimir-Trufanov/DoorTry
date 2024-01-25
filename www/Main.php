@@ -121,6 +121,10 @@ else if (prown\isComRequest('instrumenty','list'))
 else
 {
    require_once $SiteRoot."/iniHtmlBegin.php";                
+
+   echo $urltxt.'<br>';
+
+
    if ($SiteDevice==Mobile)
    {   
       require_once $SiteRoot."/MobiSite.php";

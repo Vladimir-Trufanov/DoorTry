@@ -8,26 +8,28 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.2, 25.01.2024                                  Автор:       Труфанов В.Е.
-// Copyright © 2024 tve                              Дата создания:  21.01.2024
+// v1.3, 25.01.2024                                   Автор:      Труфанов В.Е.
+// Copyright © 2024 tve                               Дата создания: 21.01.2024
 
-// Выбираем все крошки опыта
+// ****************************************************************************
+// *               Переопределить ссылки на все "крошки опыта"                *
+// ****************************************************************************
 function MakeLinks($FileContent)
 {
    // Определяем 'нежадное' регулярное выражение для выборки cсылки на страницу .md
-   // (далее показаны три работающие регулярки и четвертая с карманами - для использования)
+   // (далее показаны четыре работающие регулярки и пятая с карманами - для использования)
    //$regArts='/<a\shref="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}<\/a>/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}\.md/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана)
-   //$FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2&tit=$4"',$FileContent);
-   //$FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2"',$FileContent);
    $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2&tit=$4">$4</a>',$FileContent);
    return $FileContent;
 }
-
+// ****************************************************************************
+// *   Модифицировать файл темы "крошки опыта" для показа как html-страница   *
+// ****************************************************************************
 function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="stylesheet" href="../BitofExpert/BitofExpert.css">')
 {
    // Загружаем файл html
@@ -55,7 +57,6 @@ function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="styleshe
    return $FileContent;
 }
 
-
 /*
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
@@ -68,38 +69,50 @@ else
 }
 */
 
-// Определяем путь к файлу загрузки
+// Инициируем имя файла загрузки темы, путь к файлу и префикс URI 
 $FileName='BitofExpert.html';
 $FileDir=$SiteRoot.'/BitofExpert/';
+$urlDir='../BitofExpert/';
+// Если требуется загрузка файла темы по ссылке, то
+// переопределяем имя файла загрузки темы, путь к файлу и префикс URI 
 $par=prown\getComRequest('par');
 if ($par>'')
 {
    $FileDir=$FileDir.'bife'.$par.'/';
+   $urlDir=$urlDir.'bife'.$par.'/';
 }
 $art=prown\getComRequest('art');
 if ($art>'')
 {
-   //echo '***'.$art.'***<br>';
    $FileDir=$FileDir.$art.'/';
+   $urlDir=$urlDir.$art.'/';
    $FileName=$art.'.html';
 }
+// Определяем спецификацию файла для его загрузки,
+// загружаем его и модифицируем
 $FileSpec=$FileDir.$FileName;
-//echo $FileSpec.'<br>';
-
+$FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
+// Модифицируем вызов имеющихся изображений и меняем заголовок
 if (($par>'')||($art>''))
 {
-   echo ('Выделить изображения'.'<br>');
+   echo ('$urlDir='.$urlDir.'<br><br>');
+   // В файле .md могут быть показаны изображения след.образом:
+   //    <p><img src="probnyj-proekt.jpg" /></p>
+   //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
+   $regImgs='/<img\ssrc="/uU';
+   $FileContent=preg_replace($regImgs,'<img src="'.$urlDir,$FileContent);
+   // Меняем заголовок страницы
+   $tit=prown\getComRequest('tit');
+   if ($tit>'')
+   {
+      //<title>Крошки опыта</title>
+      $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
+      $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>'.$urlDir,$FileContent);
+   }
 }
-
-
-
-
-// Обрабатываем корневой файл темы BitofExpert, не изменяя его самого
-//$FileSpec=$SiteRoot."/BitofExpert/BitofExpert.html";
-$FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
-// Выводим главную страницу темы BitofExpert
+// Выводим затребованную страницу темы BitofExpert
 // prown\ConsoleLog($urltxt);
-//echo $urltxt.'<br>';
+echo $urltxt.'<br>';
 echo $FileContent;
 
 // ******************************************************** BitofExpert.php ***

@@ -6,10 +6,8 @@
  *          весь путь: ассемблеры, алгол, фортран, кобол, бэйсик, c, clipper, *
  *          delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
  ******************************************************************************
- *
- *                                                   Автор:       Труфанов В.Е.
- * v1.0                                              Дата создания:  21.01.2024
- * Copyright © 2024 tve                              Посл.изменение: 23.01.2024
+ * v1.1, 25.01.2024                                   Автор:      Труфанов В.Е.
+ * Copyright © 2024 tve                               Дата создания: 21.01.2024 
 **/
 
 html
@@ -25,7 +23,6 @@ body
 }
 #kroshki-opyta 
 {
-   /* color: blue; */
    margin-left:1rem; 
    margin-right:1rem; 
    min-width:50%;
@@ -52,5 +49,28 @@ blockquote
    border-radius:1rem; 
 }
 
-/************************************************************** Styles.css ***/
+#kroshki-opyta img
+{
+   border:0.4rem solid olive;
+   border-radius:1rem; 
+}
+
+#kroshki-opyta img,
+#kroshki-opyta figcaption
+{
+   width:80%;
+   margin:10px auto 20px;
+   display:block;
+}
+
+#kroshki-opyta figcaption
+{
+   color:olive;
+   font-size:1.6rem;  
+	font-weight:bold;
+   font-style:italic; 
+   margin-top:-1.6rem; 
+}
+
+/********************************************************* BitofExpert.css ***/
 
