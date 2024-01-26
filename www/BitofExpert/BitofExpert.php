@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.3, 25.01.2024                                   Автор:      Труфанов В.Е.
+// v1.4, 26.01.2024                                   Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 21.01.2024
 
 // Инициализируем массив изображений с шириной 20% для класса CSS: .imgWidth40
@@ -42,6 +42,36 @@ function MakeImgWidth40($FileContent)
 // ****************************************************************************
 // *               Переопределить ссылки на все "крошки опыта"                *
 // ****************************************************************************
+
+/*
+404 Не найдено
+Запрашиваемая страница не найдена на сервере
+URL: http-s://kwinflatht.nichost.ru/kroshki-opyta/Windows=
+%D0%9A%D0%B0%D0%BA%20%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%20%D0%BD%D0%B0%20Windows
+---
+IP: 178.19.253.110
+Браузер: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0
+Дата и время сервера: 26.01.2024 18:14:46
+Вышли со страницы: https://kwinflatht.nichost.ru/kroshki-opyta/
+HTTP_X_FORWARDED_FOR=178.19.253.110
+*/
+
+/*
+<h4><a href="/kroshki-opyta/Arduino=Инфракрасный пульт на смартфоне для всего"> Инфракрасный пульт на смартфоне для всего</a></h4>
+             /kroshki-opyta/Arduino=Инфракрасный%20пульт%20на%20смартфоне%20для%20всего
+             /kroshki-opyta/Arduino=%D0%98%D0%BD%D1%84%D1%80%D0%B0%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%BB%D1%8C%D1%82%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D0%B3%D0%BE
+google       /kroshki-opyta/Arduino=%D0%98%D0%BD%D1%84%D1%80%D0%B0%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%BB%D1%8C%D1%82%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D0%B3%D0%BE
+яндекс       /kroshki-opyta/Arduino=%D0%98%D0%BD%D1%84%D1%80%D0%B0%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%BB%D1%8C%D1%82%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D0%B3%D0%BE
+
+<h4><a href="/kroshki-opyta/Windows=Как заменить драйвер на Windows">           Как заменить драйвер на Windows</a></h4>
+             /kroshki-opyta/Windows=Как%20заменить%20драйвер%20на%20Windows
+             /kroshki-opyta/Windows=%D0%9A%D0%B0%D0%BA%20%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%20%D0%BD%D0%B0%20Windows
+
+<h4><a href="/kroshki-opyta/GitHub=Как удалить репозитарий из GitHub">          Как удалить репозитарий из GitHub</a></h4>
+             /kroshki-opyta/GitHub=Как%20удалить%20репозитарий%20из%20GitHub
+             /kroshki-opyta/GitHub=%D0%9A%D0%B0%D0%BA%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B0%D1%80%D0%B8%D0%B9%20%D0%B8%D0%B7%20GitHub
+*/
+
 function MakeLinks($FileContent)
 {
    // Определяем 'нежадное' регулярное выражение для выборки cсылки на страницу .md
@@ -52,7 +82,17 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
-   $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+   //$FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+   if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+   {
+      //$FileContent=preg_replace($regArts,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
+      $FileContent=preg_replace($regArts,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
+   }
+   else
+   {
+      $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+   }
+
    return $FileContent;
 }
 // ****************************************************************************
@@ -101,6 +141,20 @@ else
 $FileName='BitofExpert.html';
 $FileDir=$SiteRoot.'/BitofExpert/';
 $urlDir='../BitofExpert/';
+
+// Для отладки
+echo 'Привет!<br>';
+$par=prown\getComRequest('par');
+if ($par>'')
+{
+   echo '$par='.$par.'<br>';
+}
+$tit=prown\getComRequest('tit');
+if ($tit>'')
+{
+   echo '$tit='.$tit.'<br>';
+}
+
 // Если требуется загрузка файла темы по ссылке, то
 // переопределяем имя файла загрузки темы, путь к файлу и префикс URI 
 $par=prown\getComRequest('par');
@@ -121,8 +175,14 @@ if ($tit>'')
 
 // Определяем спецификацию файла для его загрузки,
 // загружаем его и модифицируем
+
+//prown\ConsoleLog($FileName);
+
+
+
 $FileSpec=$FileDir.$FileName;
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
+
 // Модифицируем вызов имеющихся изображений и меняем заголовок
 if (($par>'')||($tit>''))
 {
@@ -143,6 +203,10 @@ if (($par>'')||($tit>''))
 // Выводим затребованную страницу темы BitofExpert
 // prown\ConsoleLog($urltxt);
 // echo $urltxt.'<br>';
+
+//if ($FileName=='BitofExpert.html') echo $FileContent;
+//else echo $FileSpec;
+
 echo $FileContent;
 
 // ******************************************************** BitofExpert.php ***
