@@ -72,5 +72,11 @@ blockquote
    margin-top:-1.6rem; 
 }
 
+#kroshki-opyta .imgWidth40,
+#kroshki-opyta .imgWidth40 + figcaption 
+{
+   width:40%;
+}
+
 /********************************************************* BitofExpert.css ***/
 

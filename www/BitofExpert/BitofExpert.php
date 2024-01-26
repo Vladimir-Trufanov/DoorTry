@@ -11,6 +11,34 @@
 // v1.3, 25.01.2024                                   Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 21.01.2024
 
+// Инициализируем массив изображений с шириной 20% для класса CSS: .imgWidth40
+// и модифицируем текст страницы
+function MakeImgWidth40($FileContent)
+{
+   $aimwidth40=array
+   (
+      'Last-step.jpg', 
+   );
+   $Result=false;
+   foreach ($aimwidth40 as $filename) 
+   {
+      // Отлавливаем изображения с заранее заданной шириной в прцентах:
+      // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
+      // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
+      
+      //$regImgs='/\/([0-9a-zA-Z\-]+)\.jpg"/uU';
+      //$FileContent=preg_replace($regImgs,'/$1.jpg" class="imgWidth40"',$FileContent);
+       
+      $sfilename=quotemeta($filename);
+      $regImgs='/\/'.$sfilename.'"/uU';
+      $FileContent=preg_replace($regImgs,'/'.$filename.'" class="imgWidth40"',$FileContent);
+      
+      echo ('$regImgs='.$regImgs.'<br>'); 
+      echo ('$filename='.$filename.'<br>'); 
+      echo ('$sfilename='.$sfilename.'<br>'); 
+   }
+   return $FileContent;
+}
 // ****************************************************************************
 // *               Переопределить ссылки на все "крошки опыта"                *
 // ****************************************************************************
@@ -23,8 +51,8 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+)<\/a>/uU';
-   // Заменяем все ссылки на страницы .md (здесь используем два кармана)
-   $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&art=$2&tit=$4">$4</a>',$FileContent);
+   // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
+   $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
    return $FileContent;
 }
 // ****************************************************************************
@@ -81,19 +109,22 @@ if ($par>'')
    $FileDir=$FileDir.'bife'.$par.'/';
    $urlDir=$urlDir.'bife'.$par.'/';
 }
-$art=prown\getComRequest('art');
-if ($art>'')
+// Получаем имя файла
+$tit=prown\getComRequest('tit');
+if ($tit>'')
 {
+   $art=prown\getTranslit($tit);
    $FileDir=$FileDir.$art.'/';
    $urlDir=$urlDir.$art.'/';
    $FileName=$art.'.html';
 }
+
 // Определяем спецификацию файла для его загрузки,
 // загружаем его и модифицируем
 $FileSpec=$FileDir.$FileName;
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
 // Модифицируем вызов имеющихся изображений и меняем заголовок
-if (($par>'')||($art>''))
+if (($par>'')||($tit>''))
 {
    echo ('$urlDir='.$urlDir.'<br><br>');
    // В файле .md могут быть показаны изображения след.образом:
@@ -101,18 +132,17 @@ if (($par>'')||($art>''))
    //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
    $regImgs='/<img\ssrc="/uU';
    $FileContent=preg_replace($regImgs,'<img src="'.$urlDir,$FileContent);
-   // Меняем заголовок страницы
-   $tit=prown\getComRequest('tit');
-   if ($tit>'')
-   {
-      //<title>Крошки опыта</title>
-      $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
-      $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>'.$urlDir,$FileContent);
-   }
+   // Отлавливаем изображения с заранее заданной шириной в прцентах:
+   // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
+   // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
+   $FileContent=MakeImgWidth40($FileContent);
+   // Меняем заголовок страницы <title>Крошки опыта</title>
+   $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
+   $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>'.$urlDir,$FileContent);
 }
 // Выводим затребованную страницу темы BitofExpert
 // prown\ConsoleLog($urltxt);
-echo $urltxt.'<br>';
+// echo $urltxt.'<br>';
 echo $FileContent;
 
 // ******************************************************** BitofExpert.php ***

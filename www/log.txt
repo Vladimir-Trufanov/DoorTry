@@ -20,3 +20,5 @@ Stack trace:
 [24-Jan-2024 09:11:38 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'ошибка' (T_STRING) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 75
 [25-Jan-2024 10:35:24 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '>' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 72
 [25-Jan-2024 14:51:06 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$FileDir' (T_VARIABLE) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 101
+[26-Jan-2024 11:23:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 89
+[26-Jan-2024 12:18:23 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '{', expecting '(' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 16

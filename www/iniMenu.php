@@ -174,8 +174,6 @@ function TopMenu()
       // Для основного и контрольного сайтов выводим краткий URL
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
-         //echo '<a href="index.php/kroshki-opyta">Крошки опыта</a>';
-         //echo '<a href="/kroshki-opyta">Крошки опыта</a>';
          echo '<a href="index.php?list=kroshki-opyta">Крошки опыта</a>';
       }
       else
@@ -183,7 +181,6 @@ function TopMenu()
          echo '<a href="index.php?list=kroshki-opyta">Крошки опыта</a>';
       }
    echo '</li>';
-
    
    /*                                                   
    echo NewLine.'<li><a href="/Pages/BitofExpert/BitofExpert.html">Крошки опыта</a>';
