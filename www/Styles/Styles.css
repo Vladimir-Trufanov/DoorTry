@@ -85,8 +85,11 @@ header h2 {font-size:3rem;color:white;}
 header h3 {font-size:3rem;color:black;}
 #tipo
 {
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bold;
    background-color:transparent; 
    height:8.8rem;
+   text-align:center; 
 }
 #Title
 {

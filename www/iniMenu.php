@@ -60,36 +60,6 @@ function StihiMenu()
       echo $li;
    }
    echo NewLine;
-
-   /*
-   global $aStihi;
-   $Result = true;
-   // Делаем так, чтобы в трассировке кода явно были видны <li>
-   $NewLine="\r\n";
-   $NewLine='';
-   $li=$NewLine; 
-   
-   foreach($aStihi as $k=>$v)
-   {
-      prown\ConsoleLog($k.'=='.$v);
-      $li=$li.$NewLine.'<li><a href="';
-      if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
-      {
-         $li=$li.'/stihi/'.$v.'"'.'>'.'+'.$k;
-      }
-      else
-      {
-         $li=$li.'?stihi='.$v.'"'.'>'.'='.$k;
-      }
-      $li=$li.'</a></li>';
-      echo $li;
-      prown\ConsoleLog($k.'=='.$v);
-   }
-   //prown\Alert($li);
-   
-   //echo $NewLine;
-   */
-   
    return $Result;
 }
 // ****************************************************************************
@@ -174,7 +144,6 @@ function TopMenu()
       // Для основного и контрольного сайтов выводим краткий URL
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
-         //echo '<a href="index.php?list=kroshki-opyta">Крошки опыта</a>';
          echo '<a href="kroshki-opyta/">Крошки опыта</a>';
       }
       else
@@ -182,19 +151,6 @@ function TopMenu()
          echo '<a href="index.php?list=kroshki-opyta">Крошки опыта</a>';
       }
    echo '</li>';
-   
-   /*                                                   
-   echo NewLine.'<li><a href="/Pages/BitofExpert/BitofExpert.html">Крошки опыта</a>';
-      / *
-      <li><a href="/TPhpPrown/bajty-v-kilo-kibi-mega-mebibajty-i-obratno">RecalcSizeInfo</a></li>
-      
-      echo NewLine.'<ul>';
-      BitofExpertMenu();
-      echo '</ul>'.NewLine;
-      * /
-   echo '</li>'.NewLine;
-   */
-   
    // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';
       echo '<ul>';

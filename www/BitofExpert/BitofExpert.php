@@ -11,7 +11,7 @@
 // v1.5, 27.01.2024                                   Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 21.01.2024
 
-// Инициализируем массив изображений с шириной 20% для класса CSS: .imgWidth40
+// Инициализируем массив изображений с шириной 40% для класса CSS: .imgWidth40
 // и модифицируем текст страницы
 function MakeImgWidth40($FileContent)
 {
@@ -22,28 +22,23 @@ function MakeImgWidth40($FileContent)
    $Result=false;
    foreach ($aimwidth40 as $filename) 
    {
-      // Отлавливаем изображения с заранее заданной шириной в прцентах:
+      // Отлавливаем изображения с заранее заданной шириной в процентах:
       // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
       // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
       
-      //$regImgs='/\/([0-9a-zA-Z\-]+)\.jpg"/uU';
-      //$FileContent=preg_replace($regImgs,'/$1.jpg" class="imgWidth40"',$FileContent);
-       
-      $sfilename=quotemeta($filename);
+      // $regImgs='/\/([0-9a-zA-Z\-]+)\.jpg"/uU';
+      $sfilename=quotemeta($filename); // экранировали символы в имени файла
       $regImgs='/\/'.$sfilename.'"/uU';
       $FileContent=preg_replace($regImgs,'/'.$filename.'" class="imgWidth40"',$FileContent);
-      
-      //echo ('$regImgs='.$regImgs.'<br>'); 
-      //echo ('$filename='.$filename.'<br>'); 
-      //echo ('$sfilename='.$sfilename.'<br>'); 
    }
    return $FileContent;
 }
 // ****************************************************************************
 // *               Переопределить ссылки на все "крошки опыта"                *
 // ****************************************************************************
-
 /*
+Вид сообщения со страницы 404:
+------------------------------
 404 Не найдено
 Запрашиваемая страница не найдена на сервере
 URL: http-s://kwinflatht.nichost.ru/kroshki-opyta/Windows=
@@ -54,9 +49,9 @@ IP: 178.19.253.110
 Дата и время сервера: 26.01.2024 18:14:46
 Вышли со страницы: https://kwinflatht.nichost.ru/kroshki-opyta/
 HTTP_X_FORWARDED_FOR=178.19.253.110
-*/
 
-/*
+По факту псевдоидентичные URI:
+------------------------------
 <h4><a href="/kroshki-opyta/Arduino=Инфракрасный пульт на смартфоне для всего"> Инфракрасный пульт на смартфоне для всего</a></h4>
              /kroshki-opyta/Arduino=Инфракрасный%20пульт%20на%20смартфоне%20для%20всего
              /kroshki-opyta/Arduino=%D0%98%D0%BD%D1%84%D1%80%D0%B0%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%BB%D1%8C%D1%82%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D0%B3%D0%BE
@@ -71,7 +66,6 @@ google       /kroshki-opyta/Arduino=%D0%98%D0%BD%D1%84%D1%80%D0%B0%D0%BA%D1%80%D
              /kroshki-opyta/GitHub=Как%20удалить%20репозитарий%20из%20GitHub
              /kroshki-opyta/GitHub=%D0%9A%D0%B0%D0%BA%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%B0%D1%80%D0%B8%D0%B9%20%D0%B8%D0%B7%20GitHub
 */
-
 function MakeLinks($FileContent)
 {
    // Определяем 'нежадное' регулярное выражение для выборки cсылки на страницу .md
@@ -82,17 +76,14 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    $regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
-   //$FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
-      //$FileContent=preg_replace($regArts,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
       $FileContent=preg_replace($regArts,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
    }
    else
    {
       $FileContent=preg_replace($regArts,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
    }
-
    return $FileContent;
 }
 // ****************************************************************************
@@ -124,7 +115,6 @@ function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="styleshe
    $FileContent=MakeLinks($FileContent);
    return $FileContent;
 }
-
 /*
 // Подключаем особенности стиля для компьютерной и мобильной версий
 if ($SiteDevice==Mobile) 
@@ -136,26 +126,23 @@ else
    //echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
 }
 */
-
 // Инициируем имя файла загрузки темы, путь к файлу и префикс URI 
 $FileName='BitofExpert.html';
 $FileDir=$SiteRoot.'/BitofExpert/';
 $urlDir='../BitofExpert/';
-
+/*
 // Для отладки
-//echo 'Привет!<br>';
 $par=prown\getComRequest('par');
 if ($par>'')
 {
-   //echo '$par='.$par.'<br>';
+   echo '$par='.$par.'<br>';
 }
 $tit=prown\getComRequest('tit');
 if ($tit>'')
 {
-   //echo '$tit='.$tit.'<br>';
+   echo '$tit='.$tit.'<br>';
 }
-
- 
+*/
 // Если требуется загрузка файла темы по ссылке, то
 // переопределяем имя файла загрузки темы, путь к файлу и префикс URI 
 $par=prown\getComRequest('par');
@@ -173,21 +160,12 @@ if ($tit>'')
    $urlDir=$urlDir.$art.'/';
    $FileName=$art.'.html';
 }
-
-// Определяем спецификацию файла для его загрузки,
-// загружаем его и модифицируем
-
-//prown\ConsoleLog($FileName);
-
-//<link rel="alternate" hreflang="lang_code" href="url" />
-
+// Определяем спецификацию файла для его загрузки, загружаем его и модифицируем
 $FileSpec=$FileDir.$FileName;
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
-
 // Модифицируем вызов имеющихся изображений и меняем заголовок
 if (($par>'')||($tit>''))
 {
-   //echo ('$urlDir='.$urlDir.'<br><br>');
    // В файле .md могут быть показаны изображения след.образом:
    //    <p><img src="probnyj-proekt.jpg" /></p>
    //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
@@ -201,35 +179,17 @@ if (($par>'')||($tit>''))
    $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
    $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>',$FileContent);
 }
-// Вставляем альтернативную ссылку
-$alternateLink=$SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/kroshki-opyta/';
-if (($par>'')&&($tit>'')) $alternateLink=$alternateLink.$par.'='.$tit;
-//echo '$alternateLink='.$alternateLink.'<br>';
+// Вставляем альтернативную ссылку в код:
 // <title>Крошки опыта</title>
 // <link rel="stylesheet" href="../BitofExpert/BitofExpert.css">
-// $regAlt='/<\/title>([А-Яа-яЁё\s]+)<link/uU';
-//$regAlt='/<\/title>\n\r<link/uU';
-/*
-$regAlt='/<\/title>([.\n\r]*)<link/uU';
-//$regAlt='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
-$FileContent=preg_replace($regAlt,
-  '</title>'."\n\r".
-  '<link rel="alternate" hreflang="ru" href="'.$alternateLink.'" />'."\n\r".
-  '<link',$FileContent);
-*/
+$alternateLink=$SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/kroshki-opyta/';
+if (($par>'')&&($tit>'')) $alternateLink=$alternateLink.$par.'='.$tit;
 $regAlt='/<\/title>/uU';
 $FileContent=preg_replace($regAlt,
   '</title>'."\r  ".
   '<link rel="alternate" hreflang="ru" href="'.$alternateLink.'" />',
   $FileContent);
-
 // Выводим затребованную страницу темы BitofExpert
-// prown\ConsoleLog($urltxt);
-// echo $urltxt.'<br>';
-
-//if ($FileName=='BitofExpert.html') echo $FileContent;
-//else echo $FileSpec;
-
 echo $FileContent;
 
 // ******************************************************** BitofExpert.php ***

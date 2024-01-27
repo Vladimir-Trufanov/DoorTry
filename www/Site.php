@@ -17,14 +17,12 @@ echo '</div>';
 // Верхнее меню и название сайта
 echo '<header>';
 echo '<div id="tipo">';
-   echo '<div id="Title">DoorTry - коллекционер ошибок</div>';
+   echo '<div id="Title">DoorTry - коллекционер ошибок PHP7</div>';
    echo '<div id="Meteo">';
    //require_once $SiteRoot."/ApiPogoda.php";
    echo '</div>';
    echo '<div id="dVer">';
-   //echo 'in'.$s_Counter.' v1.10';
-   //echo 'Привет!';
-   echo $_SERVER['REQUEST_URI'];
+   echo 'in'.$s_Counter.' v1.10';
    echo '</div>';
 echo '</div>';
 echo '<nav>'; TopMenu(); echo '</nav>';

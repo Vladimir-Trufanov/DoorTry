@@ -65,9 +65,6 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
-//\prown\ViewGlobal(avgSESSION);
-//\prown\ViewGlobal(avgGLOBALS);
-
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) require_once $SiteRoot."/Stihi/_MakeStihi.php";
 // Если поступил запрос на пробную BaseMaker страницу, то запускаем её
@@ -75,7 +72,6 @@ else if (prown\isComRequest('basemaker','list'))
 {
    $page='/Pages/BaseMaker/ProbaTestBMaker.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
-   //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
 else if (prown\isComRequest('signaphoto','list')) 
 {
@@ -121,21 +117,12 @@ else if (prown\isComRequest('instrumenty','list'))
 else
 {
    require_once $SiteRoot."/iniHtmlBegin.php";                
-
-   echo $urltxt.'<br>';
-
-
    if ($SiteDevice==Mobile)
    {   
       require_once $SiteRoot."/MobiSite.php";
    }
    else 
    {                                             
-      //echo $SiteRoot."/TPhpPrown/Findes.php".'<br>';
-      //echo $SiteAbove."/TPhpPrown/Findes.php".'<br>';
-      //echo $SiteHost."/TPhpPrown/Findes.php".'<br>';
-      //\prown\ViewGlobal(avgREQUEST);
-      //\prown\ViewGlobal(avgCOOKIE);
       require_once $SiteRoot."/Site.php";
    }
    // Подключаем и запускаем регистратор времени загрузки страницы
