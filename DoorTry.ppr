@@ -21,7 +21,7 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		+BitofExpert
+		-BitofExpert
 			-bifeArduino
 				-infrakrasnyj-pult-na-smartfone-dlya-vsego
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
@@ -35,7 +35,7 @@ DoorTry
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\probnyj-proekt.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Setting.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Toconfirm.jpg
-			+bifeWindows
+			-bifeWindows
 				+kak-zamenit-drajver-windows
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html
 			www\BitofExpert\BitofExpert.css
@@ -449,7 +449,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		+Styles
+		-Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -504,6 +504,8 @@ DoorTry
 4=www\BitofExpert\BitofExpert.css
 5=..\TPhpPrown\TPhpPrown\Replaces.php
 6=www\BitofExpert\BitofExpert.php
+7=www\sitemap.xml
+8=www\index.php
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
@@ -517,14 +519,20 @@ Caret=1,184
 TopLine=11
 Caret=1,47
 [www\BitofExpert\BitofExpert.html]
-TopLine=1
+TopLine=11
 Caret=1,49
 [www\BitofExpert\BitofExpert.css]
 TopLine=43
 Caret=1,74
 [..\TPhpPrown\TPhpPrown\Replaces.php]
-TopLine=27
-Caret=93,26
+TopLine=17
+Caret=68,28
 [www\BitofExpert\BitofExpert.php]
-TopLine=173
-Caret=19,210
+TopLine=186
+Caret=3,207
+[www\sitemap.xml]
+TopLine=114
+Caret=139,142
+[www\index.php]
+TopLine=1
+Caret=14,21

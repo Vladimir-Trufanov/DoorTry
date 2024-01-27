@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.4, 26.01.2024                                   Автор:      Труфанов В.Е.
+// v1.5, 27.01.2024                                   Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 21.01.2024
 
 // Инициализируем массив изображений с шириной 20% для класса CSS: .imgWidth40
@@ -33,9 +33,9 @@ function MakeImgWidth40($FileContent)
       $regImgs='/\/'.$sfilename.'"/uU';
       $FileContent=preg_replace($regImgs,'/'.$filename.'" class="imgWidth40"',$FileContent);
       
-      echo ('$regImgs='.$regImgs.'<br>'); 
-      echo ('$filename='.$filename.'<br>'); 
-      echo ('$sfilename='.$sfilename.'<br>'); 
+      //echo ('$regImgs='.$regImgs.'<br>'); 
+      //echo ('$filename='.$filename.'<br>'); 
+      //echo ('$sfilename='.$sfilename.'<br>'); 
    }
    return $FileContent;
 }
@@ -143,18 +143,19 @@ $FileDir=$SiteRoot.'/BitofExpert/';
 $urlDir='../BitofExpert/';
 
 // Для отладки
-echo 'Привет!<br>';
+//echo 'Привет!<br>';
 $par=prown\getComRequest('par');
 if ($par>'')
 {
-   echo '$par='.$par.'<br>';
+   //echo '$par='.$par.'<br>';
 }
 $tit=prown\getComRequest('tit');
 if ($tit>'')
 {
-   echo '$tit='.$tit.'<br>';
+   //echo '$tit='.$tit.'<br>';
 }
 
+ 
 // Если требуется загрузка файла темы по ссылке, то
 // переопределяем имя файла загрузки темы, путь к файлу и префикс URI 
 $par=prown\getComRequest('par');
@@ -178,7 +179,7 @@ if ($tit>'')
 
 //prown\ConsoleLog($FileName);
 
-
+//<link rel="alternate" hreflang="lang_code" href="url" />
 
 $FileSpec=$FileDir.$FileName;
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
@@ -186,7 +187,7 @@ $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
 // Модифицируем вызов имеющихся изображений и меняем заголовок
 if (($par>'')||($tit>''))
 {
-   echo ('$urlDir='.$urlDir.'<br><br>');
+   //echo ('$urlDir='.$urlDir.'<br><br>');
    // В файле .md могут быть показаны изображения след.образом:
    //    <p><img src="probnyj-proekt.jpg" /></p>
    //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
@@ -198,8 +199,30 @@ if (($par>'')||($tit>''))
    $FileContent=MakeImgWidth40($FileContent);
    // Меняем заголовок страницы <title>Крошки опыта</title>
    $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
-   $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>'.$urlDir,$FileContent);
+   $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>',$FileContent);
 }
+// Вставляем альтернативную ссылку
+$alternateLink=$SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/kroshki-opyta/';
+if (($par>'')&&($tit>'')) $alternateLink=$alternateLink.$par.'='.$tit;
+//echo '$alternateLink='.$alternateLink.'<br>';
+// <title>Крошки опыта</title>
+// <link rel="stylesheet" href="../BitofExpert/BitofExpert.css">
+// $regAlt='/<\/title>([А-Яа-яЁё\s]+)<link/uU';
+//$regAlt='/<\/title>\n\r<link/uU';
+/*
+$regAlt='/<\/title>([.\n\r]*)<link/uU';
+//$regAlt='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
+$FileContent=preg_replace($regAlt,
+  '</title>'."\n\r".
+  '<link rel="alternate" hreflang="ru" href="'.$alternateLink.'" />'."\n\r".
+  '<link',$FileContent);
+*/
+$regAlt='/<\/title>/uU';
+$FileContent=preg_replace($regAlt,
+  '</title>'."\r  ".
+  '<link rel="alternate" hreflang="ru" href="'.$alternateLink.'" />',
+  $FileContent);
+
 // Выводим затребованную страницу темы BitofExpert
 // prown\ConsoleLog($urltxt);
 // echo $urltxt.'<br>';
