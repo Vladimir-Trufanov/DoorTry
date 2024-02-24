@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h3 id="представление-детали-компонента-во-fritzing-2024-02-21"><a href="https://github.com/Vladimir-Trufanov/Fritzing-parts/blob/main/Part-file-format/Part-file-format.md">Представление детали (компонента) во Fritzing</a> [2024-02-21]</h3>
+<figure>
+<img src="LCD-FM-RX-V20.jpg" alt="Модуль радиоприемника DSP PLL FM на макетной плате" /><figcaption>Модуль радиоприемника DSP PLL FM на макетной плате</figcaption>
+</figure>
+<p>Любой компонент Fritzing (деталь) распространяется в виде архивного файла с расширением <strong><em>.fzpz</em></strong>. Внутри архива может находиться до пяти файлов: одного файла метаданных <strong><em>.fzp</em></strong> и до четырех файлов <strong><em>.svg</em></strong>.</p>
+<p>Каждая деталь может отображаться в четырех разных видах (макет - breadboard, схема - schematic, печатная плата - pcb и значок - icon детали), как правило с разным изображением для каждого вида. Решено не объединять все SVG и метаданные в один файл, потому что их раздельное хранение упрощает совместное использование одного изображения разными деталями (например, многие детали занимают одинаковую площадь печатной платы), а также потому, что хранение SVG в отдельных файлах упрощает доступ к отдельным изображениям, например, для проверки или загрузки в редактор деталей.</p>
+<p>В файле метаданных (это файл формата .xml, переименованный в .fzp) перечислены название детали, описание и другие свойства, а также ссылки на SVG-файлы детали. В нем также указаны разъемы детали и внутренние шины. Графическое изображение каждого соединителя (разъёма) представляет собой элемент, найденный в соответствующем файле SVG. Поскольку любой SVG-элемент для Fritzing должен иметь атрибут id, файл метаданных ссылается на графический элемент соединителя, используя id этого элемента.</p>
+<figure>
+<img src="LCD-FM-RX-V20-parts.jpg" alt="Архив компонента LCD-FM-RX-V2.0 и его файлы" /><figcaption>Архив компонента LCD-FM-RX-V2.0 и его файлы</figcaption>
+</figure>
+<h4 id="структура-папок-во-fritzing">Структура папок во Fritzing</h4>
+<p>Файлы метаданных для всех деталей, поставляемых с Fritzing, можно найти в <strong><em>fritzing-parts</em></strong> папке приложения в следующих подпапках:</p>
+<pre><code>Папка                   Описание
+-----------------------------------------------------------------
+fritzing-parts/core     файлы метаданных всех деталей в ядре
+fritzing-parts/contrib  файлы метаданных всех добавленных деталей 
+fritzing-parts/obsolete файлы метаданных устаревших деталей для обратной совместимости</code></pre>
+<p>В папке <strong><em>fritzing-parts/svg</em></strong> вы найдете соответствующие подпапки core, contrib и obsolete. Структура подпапки core (базовой библиотеки элементов) выглядит следующим образом:</p>
+<pre><code>Папка                               Описание
+-----------------------------------------------------------------
+fritzing-parts/svg/core/breadboard  SVG-файлы для макетного представления деталей (частей) 
+fritzing-parts/svg/core/icon        SVG-файлы для значков деталей 
+fritzing-parts/svg/core/pcb         SVG-файлы  для отображения деталей на печатной плате (footprints)
+fritzing-parts/svg/core/schematic   SVG-файлы  для схематического представления деталей</code></pre>
+<p>Структура других подпапок (contrib и obsolete) аналогична подпапке элементов базовой библиотеки (core).</p>
+<p>Начиная с версии 0.9.3, папка <strong><em>fritzing-parts</em></strong> фактически является git-клоном <a href="https://github.com/fritzing/fritzing-parts" class="uri">https://github.com/fritzing/fritzing-parts</a>. Fritzing проверяет репозиторий github на наличие обновлений при каждом запуске и выполняет “git pull”, если пользователь согласен.</p>
+<p>Во Fritzing некоторые детали создаются “на лету”, а не просто загружаются, например, линейки, резисторы, штыревые головки, типовые углубления (при изменении своих параметров). Шаблоны для этих деталей компилируются вместе с программой.</p>
+<p>Детали, которые создаются пользователем, хранятся в пользовательском каталоге (user), чтобы не потеряться при установке новых версий Fritzing. Для Windows эта папка - <strong><em>C:/Users/username/Documents/Fritzing/parts</em></strong>.</p>
+<p>При работе приложения создаются некоторые временные файлы, связанные с деталями, которые участвуют в проектирование схемы (модели). Для Windows эти файлы хранятся в папке <strong><em>C:/Users/username/AppData/Roaming/Fritzing</em></strong>.</p>
+<p>Файлы проектов - это файлы <strong><em>.fzz</em></strong>. Они размещаются в одноименной папке <strong><em>fzz</em></strong>. Папка <strong><em>partfactory</em></strong> содержит файлы для созданных деталей, такие как заголовки выводов (пины) и типовые углубления (отверстия).</p>
+<p>До версии 0.9.2 здесь также хранились пользовательские детали.</p>
+<p>Расположение файла svg любой детали можно узнать открыв её в редакторе деталей. После переключения <strong><em>на нужный вид</em></strong> (макет - breadboard, схема - schematic, печатная плата - pcb или значок - icon) следует выбрать <strong><em>“Показать в папке”</em></strong> (Show in folder) в меню Файл.</p>
+<p>Базовые детали Fritzing (детали ядра) собираются в базу данных <strong><em>Sqlite</em></strong> (файл с расширением <strong><em>.db</em></strong>) с использованием данных из файлов fzp. Эта база данных используется для замены деталей (Sqlite обеспечивает быстрый механизм переключения между связанными деталями). Для компиляции базы данных запустите Fritzing из командной строки: <strong><em>fritzing.exe -db path/to/parts/parts.db</em></strong> или выберите <strong><em>“Компонент”</em></strong> -&gt; <strong><em>“Восстановить базу данных компонентов”</em></strong> в меню.</p>
+<h4 id="формат-fzp"><a href="LCD-FM-RX-V2.0.xml">Формат FZP</a></h4>
+<p>Файл метаданных компонента (детали) <strong><em>.fzp</em></strong> представляет собой xml-файл.</p>
+<p>Самым внешним элементом в файле FZP всегда является тег <strong><em>&lt;module&gt;</em></strong>. Важен атрибут <strong><em>ModuleID</em></strong> - он должен быть уникальным для каждой детали. Fritzing отклонит деталь, если она уже загружена с таким же ModuleID. Атрибут <strong><em>fritzingVersion</em></strong> указывает какой версией Fritzing был сгенерирован компонент. Для указания атрибута fritzingVersion вручную лучше всего запустить Fritzing и открыть окно “About”, из которого вы можете скопировать строку “version”. Первая часть строки является наиболее важной: в приведенном выше примере это означает просто “0.3.15b”.</p>
+<pre><code>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;
+&lt;module  
+  fritzingVersion=&quot;0.3.15b.02.03.3943&quot; 
+  moduleId=&quot;LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1&quot;
+  referenceFile=&quot;GLCD 128x64.fzp&quot;&gt;
+  
+  &lt;author&gt;Vladimir Trufanov&lt;/author&gt;
+  &lt;title&gt;LCD-FM-RX-V2.0&lt;/title&gt;
+  &lt;label&gt;LCD-FM-RX-V2.0&lt;/label&gt;
+  &lt;date&gt;Sun Feb 18 2024&lt;/date&gt;
+  &lt;description&gt;Модуль цифрового стереорадиоприемника DSP PLL FM Receiver&lt;/description&gt;
+  &lt;url&gt;https://www.doortry.ru&lt;/url&gt;
+     
+  &lt;tags&gt;
+    &lt;tag&gt;FM radio&lt;/tag&gt;
+  &lt;/tags&gt;
+
+  - - - - -
+&lt;/module&gt;</code></pre>
+<p>Контекст следующих строк от <strong><em>&lt;author&gt;</em></strong> до <strong><em>&lt;/tags&gt;</em></strong> очевиден без комментариев.</p>
+<p>Элемент <strong><em>&lt;label&gt;</em></strong> - это строка метки детали по умолчанию, когда она появляется в эскизе Fritzing.</p>
+<p>Элемент <strong><em>&lt;description&gt;</em></strong> - краткое описание детали, может быть обычным текстом или в виде форматированного текста - подмножества html, которое может отображаться в определенных виджетах Qt (Qt - базовый графический интерфейс Fritzing). Если используется форматированный текст, он должен быть экранирован для формата xml, чтобы не запутаться в структуре <a href="LCD-FM-RX-V2.0.xml">FZP-файла</a>.</p>
+<p>Поисковые теги <strong><em>&lt;tag&gt;</em></strong> позволяют выполнять поиск деталей в корзине компонентов.</p>
+<p>Для устаревших деталей используется специальный синтаксис <strong><em>&lt;version replacedby=“”&gt;</em></strong>. Значением атрибута replacedby является ModuleID детали, которая заменяет устаревшую деталь. В папках obsolete есть такие компоненты. Атрибут replacedby также может быть применен к отдельным соединителям.</p>
+<h4 id="свойства-детали">Свойства детали</h4>
+<p>Как пример, ниже представлены свойства потенциометра:</p>
+<pre><code>&lt;properties&gt;
+   &lt;property name=&quot;family&quot;&gt;             Potentiometer  &lt;/property&gt;
+   &lt;property name=&quot;type&quot;&gt;               Trimmer Potentiometer  &lt;/property&gt;
+   &lt;property name=&quot;Maximum Resistance&quot;&gt; 10k&amp;#8486;  &lt;/property&gt;
+   &lt;property name=&quot;Track&quot;&gt;              Linear  &lt;/property&gt;
+   &lt;property name=&quot;Size&quot;&gt;               Trimmer - 6mm  &lt;/property&gt;
+&lt;/properties&gt;</code></pre>
+<p>Свойства важны - Fritzing использует их, чтобы упростить переключение между связанными деталями в эскизе. Когда свойства загружены, они сохраняются в базе данных; поиск в этой базе данных дает набор связанных деталей. Наиболее важным свойством является <strong><em>“family”</em></strong> - Fritzing выполняет замену только между деталями из одного семейства. Если требуется семейное свойство, то Fritzing отклонит детали, у которых нет соответствующего семейного свойства.</p>
+<p>Значения других свойств используются для заполнения всплывающих меню в окне инспектора Fritzing. Например, когда вы выбираете потенциометр в эскизе, в окне инспектора появляется всплывающее меню с надписью <strong><em>“type”</em></strong> с опциями “Trimmer Potentiometer”, “Slide Potentiometer”, или “Rotary Shaft Potentiometer”. Эти значения взяты от разных деталей семейства “Potentiometer”; каждая деталь (компонент) в этом семействе имеет разное значение свойства “type”.</p>
+<p>Для атрибута свойства <strong><em>showInLabel</em></strong> может быть установлено значение <strong><em>yes</em></strong> и это означает, что по умолчанию это свойство должно отображаться в эскизе проекта. Например, резистор:</p>
+<pre><code>&lt;property name=&quot;Resistance&quot; showInLabel=&quot;yes&quot;&gt;220&lt;/property&gt;</code></pre>
+<h4 id="виды-и-слои">Виды и слои</h4>
+<p>Теги <strong><em>“&lt;views&gt;”</em></strong> указывают на SVG-файлы, используемые компонентом для каждого из четырёх видов: IconView, breadboardView, schematicView и pcbView.</p>
+<pre><code>&lt;views&gt;
+   &lt;iconView&gt;
+      &lt;layers image=&quot;icon/LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1_icon.svg&quot;&gt;
+         &lt;layer layerId=&quot;icon&quot;/&gt;
+      &lt;/layers&gt;
+   &lt;/iconView&gt;
+   
+   &lt;breadboardView&gt;
+      &lt;layers image=&quot;breadboard/LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1_breadboard.svg&quot;&gt;
+         &lt;layer layerId=&quot;breadboard&quot;/&gt;
+      &lt;/layers&gt;
+   &lt;/breadboardView&gt;
+   
+   &lt;schematicView&gt;
+      &lt;layers image=&quot;schematic/LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1_schematic.svg&quot;&gt;
+         &lt;layer layerId=&quot;schematic&quot;/&gt;
+      &lt;/layers&gt;
+   &lt;/schematicView&gt;
+   
+   &lt;pcbView&gt;
+      &lt;layers image=&quot;pcb/LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1_pcb.svg&quot;&gt;
+         &lt;layer layerId=&quot;copper0&quot;/&gt;
+         &lt;layer layerId=&quot;copper1&quot;/&gt;
+         &lt;layer layerId=&quot;silkscreen&quot;/&gt;
+      &lt;/layers&gt;
+   &lt;/pcbView&gt;
+&lt;/views&gt;
+  </code></pre>
+<p>Для каждого вида детали обычно используется отдельный SVG-файл. Но помимо этого, каждый вид имеет несколько слоев. Слои имеют определенный уровневый порядок и в пользовательском интерфейсе Fritzing каждый слой может быть видимым или скрытым.</p>
+<p>Изображения деталей во Fritzing могут находиться в различных слоях. Но соединители (разъёмы) могут быть назначены только определенным слоям. Это хорошо видно в слоях печатной платы. Для печатной платы обязательны: copper0, copper1, silkscreen.</p>
+<p>Если слой указан в файле FZP, очень важно, чтобы элемент с таким id существовал и в SVG-файле, даже если это всего лишь пустой элемент.</p>
+<p>Во Fritzing по умолчанию компоненты в виде макета и печатной платы нельзя переворачивать, поскольку обычно это плохо согласуется с тем, как ведётся работа с реальными физическими деталями. В отличие от этого, на схеме деталь по умолчанию можно переворачивать всегда. Однако можно включить переворачивание в любом виде компонента для каждой из двух осей по отдельности, установив для соответствующего атрибута переворачивания flipVertical или flipHorizontal значение “true”.</p>
+<pre><code>&lt;breadboardView fliphorizontal=&quot;true&quot; flipvertical=&quot;true&quot; &gt;</code></pre>
+<h4 id="сквозные-отверстия-tht-и-поверхностный-монтаж-деталей-smd">Сквозные отверстия (THT) и поверхностный монтаж деталей (SMD)</h4>
+<p>Во Fritzing детали со сквозными отверстиями определяют как те, которые используют оба слоя copper0 и copper1; детали SMD используют только слой copper1. Под “использованием” подразумевается использование компонентов в FZP для &lt;views&gt; и &lt;connectors&gt;, а также в качестве идентификаторов элементов в соответствующем svg-файле pcb.</p>
+<p>Если SMD-деталь помещается на нижний слой во Fritzing, слой динамически обновляется до copper0. Некоторые старые детали для сквозных отверстий (THT) используют только copper0 слой; теперь это неправильно, однако Fritzing будет обрабатывать эти части так, как если бы были указаны оба слоя: copper0 и copper1.</p>
+<p>Важно, чтобы при указании слоев в FZP были указаны соответствующие слои в соответствующем SVG (подробнее об этом ниже).</p>
+<h4 id="соединители-connectors">Соединители (connectors)</h4>
+<pre><code>&lt;connectors&gt;
+
+  &lt;connector id=&quot;connector0&quot; name=&quot;1 ANT&quot; type=&quot;male&quot;&gt;
+  &lt;description&gt;Antenna&lt;/description&gt;
+    &lt;views&gt;
+    &lt;breadboardView&gt;
+      &lt;p layer=&quot;breadboard&quot; svgId=&quot;connector0pin&quot;/&gt;
+    &lt;/breadboardView&gt;
+    &lt;schematicView&gt;
+      &lt;p layer=&quot;schematic&quot; svgId=&quot;connector0pin&quot; terminalId=&quot;connector0terminal&quot;/&gt;
+    &lt;/schematicView&gt;
+    &lt;pcbView&gt;
+      &lt;p layer=&quot;copper0&quot; svgId=&quot;connector0pin&quot;/&gt;
+      &lt;p layer=&quot;copper1&quot; svgId=&quot;connector0pin&quot;/&gt;
+    &lt;/pcbView&gt;
+    &lt;/views&gt;
+  &lt;/connector&gt;
+  
+  &lt;connector id=&quot;connector9&quot; name=&quot;10 F+&quot; type=&quot;male&quot;&gt;
+    &lt;description&gt;F+&lt;/description&gt;
+    &lt;views&gt;
+    &lt;breadboardView&gt;
+      &lt;p layer=&quot;breadboard&quot; svgId=&quot;connector9pin&quot;/&gt;
+    &lt;/breadboardView&gt;
+    &lt;schematicView&gt;
+      &lt;p layer=&quot;schematic&quot; svgId=&quot;connector9pin&quot; terminalId=&quot;connector9terminal&quot;/&gt;
+    &lt;/schematicView&gt;
+    &lt;pcbView&gt;
+      &lt;p layer=&quot;copper0&quot; svgId=&quot;connector9pin&quot;/&gt;
+      &lt;p layer=&quot;copper1&quot; svgId=&quot;connector9pin&quot;/&gt;
+    &lt;/pcbView&gt;
+    &lt;/views&gt;
+  &lt;/connector&gt;
+  
+&lt;connectors&gt;</code></pre>
+<p>Тип разъема имеет значение только на макетной плате, где детали с гнездовыми разъемами могут быть напрямую присоединены к деталям с гнездовыми разъемами. На всех остальных видах для подключения разъемов необходимо использовать провода. К деталям с гнездовыми разъемами относятся макетные платы и Arduino, но и подавляющее большинство деталей имеют гнездовые разъемы.</p>
+<p>Тег <strong><em>&lt;description&gt;</em></strong> элемента и <strong><em>name</em></strong> кажутся самоочевидными. Но важно отметить, что внутри детали атрибуты <strong><em>name</em></strong> и <strong><em>id</em></strong> соединителя должны быть уникальными, то есть никакие два соединителя в данной детали не должны иметь одинаковый идентификатор или одно и то же имя.</p>
+<p>Каждый соединитель имеет подэлементы, которые ссылаются на определенный вид. Каждый подэлемент имеет атрибут <strong><em>layer</em></strong> (в настоящее время все компоненты имеют все свои соединители на одном уровне, и маловероятно, что это изменится).</p>
+<p>Атрибут <strong><em>svgId</em></strong> относится к элементу в SVG-файле представленным с соответствующим атрибутом <strong><em>id</em></strong>. Этот элемент определяет форму соединителя и указывает его положение в детали. В приведенном выше примере значение <strong><em>“connector0pin”</em></strong> для атрибута <strong><em>svgId</em></strong> в представлении макета относится к элементу в SVG-файле <strong><em>LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1_breadboard.svg</em></strong>, который может быть записан, как:</p>
+<pre><code>&lt;rect id=&quot;connector0pin&quot; x=&quot;4.793&quot; y=&quot;65.307&quot; fill=&quot;нет&quot; width=&quot;2.989&quot; height=&quot;9.442&quot;/&gt;</code></pre>
+<p>Атрибут <strong><em>terminalId</em></strong> необязателен. Каждый соединитель занимает определенную область в детали (в приведенном выше примере это прямоугольник), но фактически провод будет присоединен к соединителю в одной точке в пределах области соединителя. Эта точка прикрепления называется <strong><em>конечной точкой - terminal point</em></strong>.</p>
+<p>Конечной точкой по умолчанию является центр области соединителя. Если вам нужна конечная точка в другом месте, атрибут <strong><em>terminalId</em></strong> указывает на еще один элемент в SVG-файле - <strong><em>terminalId=“connector0terminal”</em></strong>:</p>
+<pre><code>&lt;rect id=&quot;connector0terminal&quot; x=&quot;4.793&quot; y=&quot;74.192&quot; fill=&quot;none&quot; width=&quot;2.989&quot; height=&quot;0.562&quot;/&gt;</code></pre>
+<p>Если вы используете атрибут <strong><em>terminalId</em></strong> в вашем файле FZP, убедитесь, что элемент с таким идентификатором действительно существует в соответствующем SVG-файле. Tеоретически можно значение атрибута <strong><em>terminalId</em></strong> сделать любым, при условии, что с этим идентификатором связан SVG-элемент, но на практике лучше всего использовать имя соединителя, за которым следует постфикс <strong><em>“terminal”</em></strong>.</p>
+<p>В устаревшей детали используется атрибут <strong><em>replacedby</em></strong> для указания на <strong><em>ModuleID</em></strong> более новой версии детали. Обычно для каждого разъема на устаревшей детали имеется соответствующий разъем на заменяемой детали, и обычно заменяемый разъем имеет тот же идентификатор, что и устаревший разъем, так что программному обеспечению легко поддерживать соединения при замене устаревшей детали.</p>
+<p>Но иногда заменяемый соединитель не имеет того же идентификатора. В этом случае вы можете использовать атрибут <strong><em>replacedby</em></strong> для устаревшего соединителя, значением которого является либо идентификатор, либо имя заменяемого соединителя:</p>
+<pre><code>&lt;connector id=&#39;connector15&#39; name=&#39;D0RX&#39; type=&#39;female&#39; replacedby=&#39;RX/D0&#39;&gt;</code></pre>
+<h4 id="гибкие---резиновые-ножки-необязательные-элементы">Гибкие - “резиновые” ножки (необязательные элементы)</h4>
+<p>В режиме макета ряд деталей имеют резиновые ножки (также называемые сгибаемыми ножками). Во Fritzing гибкие ножки можно растягивать и добавлять точки сгиба. Ножки могут использовать прямые линии или кривые Безье. Со стороны fzp настроить это довольно просто, например, вот один из них <strong><em>&lt;connector&gt;</em></strong> от герконового переключателя:</p>
+<pre><code>&lt;connector id=&quot;connector0&quot; name=&quot;pin 1&quot; type=&quot;male&quot;&gt;
+    &lt;description&gt;Pin 1&lt;/description&gt;
+    &lt;views&gt;
+    &lt;breadboardView&gt;
+        &lt;p layer=&quot;breadboard&quot; svgId=&quot;connector0pin&quot; legId=&quot;connector0leg&quot;/&gt;
+    &lt;/breadboardView&gt;
+    &lt;schematicView&gt;
+        &lt;p layer=&quot;schematic&quot; svgId=&quot;connector0pin&quot; terminalId=&quot;connector0terminal&quot;/&gt;
+    &lt;/schematicView&gt;
+    &lt;pcbView&gt;
+        &lt;p layer=&quot;copper0&quot; svgId=&quot;connector0pin&quot;/&gt;
+        &lt;p layer=&quot;copper1&quot; svgId=&quot;connector0pin&quot;/&gt;
+    &lt;/pcbView&gt;
+    &lt;/views&gt;
+&lt;/connector&gt;</code></pre>
+<p>Обратите внимание на атрибут legId: <strong><em>legId=“connector0leg”</em></strong> в элементе breadboardView &lt;layer&gt;, что указывает сгибаемые ножки соединения. Понятно, что в SVG макета должен быть соответствующий элемент с <strong><em>id=“connector0leg”</em></strong> для геркона. Этим элементом всегда должен быть <strong><em>&lt;line&gt;</em></strong>. Из двух конечных точек линии та, которая ближе всего к центру детали, рассматривается как прикрепленный конец провода. Другой конец линии - тот, который можно перетащить. Вот соответствующая ветвь от герконового переключателя (для дополнительной информации добавлен сам разъём <strong><em>&lt;rect&gt;</em></strong>):</p>
+<pre><code>&lt;rect id=&quot;connector0pin&quot; x=&quot;0&quot; y=&quot;2.937&quot; fill=&quot;none&quot; width=&quot;1&quot; height=&quot;1&quot;/&gt;
+&lt;line id=&quot;connector0leg&quot; stroke-linecap=&quot;round&quot; x1=&quot;0&quot; y1=&quot;4.062&quot; x2=&quot;3&quot; y2=&quot;4.062&quot; stroke=&quot;#6D6D6D&quot; fill=&quot;none&quot; stroke-width=&quot;2.5&quot;/&gt;</code></pre>
+<p>Это своего рода искусство - красиво расположить &lt;line&gt; элемент ножки по отношению к соединительному &lt;rect&gt; элементу. Существует вариант ножки, используемый рядом деталей, таких как конденсаторы и светодиоды, в котором ножка выходит за пределы корпуса детали. Хитрость здесь в том, чтобы установить перетаскиваемую конечную точку строки за пределами поля просмотра, которое определяет остальную часть детали, как показано в следующем фрагменте SVG-файла для конденсатора:</p>
+<pre><code>&lt;svg  width=&quot;0.243056in&quot; height=&quot;0.400278in&quot; viewBox=&quot;0 0 17.5 28.82&quot; &gt;
+&lt;g id=&quot;breadboard&quot;&gt;
+    &lt;rect id=&quot;connector0pin&quot; x=&quot;4.292&quot; y=&quot;27.82&quot; fill=&quot;none&quot; width=&quot;2.083&quot; height=&quot;1&quot;/&gt;
+    &lt;rect id=&quot;connector1pin&quot; x=&quot;11.365&quot; y=&quot;27.82&quot; fill=&quot;none&quot; width=&quot;2.275&quot; height=&quot;1&quot;/&gt;
+    &lt;line id=&quot;connector0leg&quot; stroke-linecap=&quot;round&quot; x1=&quot;5.332&quot; y1=&quot;28.82&quot; x2=&quot;5.332&quot; y2=&quot;49.0&quot; stroke=&quot;#8C8C8C&quot; fill=&quot;none&quot; stroke-width=&quot;2.146&quot; /&gt;
+    &lt;line id=&quot;connector1leg&quot; stroke-linecap=&quot;round&quot; x1=&quot;12.502&quot; y1=&quot;28.82&quot; x2=&quot;12.502&quot; y2=&quot;49.0&quot; stroke=&quot;#8C8C8C&quot; fill=&quot;none&quot; stroke-width=&quot;2.346&quot; /&gt;</code></pre>
+<p>Здесь в примере координата y2 для каждой строки выходит за нижнюю границу окна просмотра на отметке 28.82.</p>
+<h4 id="гибридные-соединители-необязательные-элементы">Гибридные соединители (необязательные элементы)</h4>
+<p>Гибридным называется соединитель, который не всегда виден. Например, есть ряд деталей, у которых в режиме макета есть области прототипирования, которые не видны в других режимах. Таких деталей несколько - в основном <strong><em>Sparkfun shields</em></strong> - которые поставляются с Fritzing.</p>
+<p>Другое применение - для плат, которые имеют внутренние соединения между разъемами, где требуется только одна ссылка на схематическом виде (например, <strong><em>GND</em></strong>).</p>
+<p>Третий случай - это плата, на которой есть разъемы для подключения коллекторов как сверху, так и снизу. На виде печатной платы должны быть показаны нижние разъемы, но не верхние.</p>
+<p>В каждой из этих ситуаций для определения соединителя необходимо установить <strong><em>hybrid</em></strong> атрибут равным <strong><em>‘yes’</em></strong> для каждого представления, где конкретный соединитель <strong><em>НЕ</em></strong> должен отображаться. Слой, указанный в записи <strong><em>hybrid</em></strong>, должен быть таким же, какой использовался бы для негибридного соединителя. То есть слой должен быть определен в &lt;views&gt; и это должен быть слой, содержащий соединители. Не используйте <strong><em>silkscreen</em></strong> или необычное название слоя, чтобы попытаться отделить контакты гибридного разъема от остальных графических элементов соединительных контактов.</p>
+<pre><code>&lt;connector id=&#39;connector98&#39; type=&#39;female&#39; name=&#39;5V@1&#39;&gt;
+&lt;description&gt;5V@1&lt;/description&gt;
+    &lt;views&gt;
+        &lt;breadboardView&gt;
+            &lt;p layer=&#39;breadboard&#39; svgId=&#39;connector98pin&#39; /&gt;
+        &lt;/breadboardView&gt;
+        &lt;schematicView&gt;
+            &lt;p layer=&#39;schematic&#39; svgId=&#39;connector98pin&#39; terminalId=&#39;connector98terminal&#39; hybrid=&#39;yes&#39; /&gt;
+        &lt;/schematicView&gt;
+        &lt;pcbView&gt;
+            &lt;p layer=&#39;copper0&#39; svgId=&#39;connector98pad&#39; hybrid=&#39;yes&#39; /&gt;
+            &lt;p layer=&#39;copper1&#39; svgId=&#39;connector98pad&#39; hybrid=&#39;yes&#39; /&gt;
+        &lt;/pcbView&gt;
+    &lt;/views&gt;</code></pre>
+<p>Гибридный разъем не будет выбираться, и к нему не будут подведены никакие провода в отмеченном представлении. Чтобы сделать соединитель полностью невидимым, svg-элементы, указанные атрибутами <strong><em>xxxId</em></strong>, должны быть невидимыми. Для этого установите значения атрибутов заливки и обводки элемента равными <strong><em>“none”</em></strong>.</p>
+<p>Это один из случаев, когда недостаточно установить значения атрибутов для элемента-оболочки (родительского или предкового). Атрибуты необходимо устанавливать непосредственно для элементов с атрибутом <strong><em>id</em></strong>, которые соответствует <strong><em>svgId</em></strong> или <strong><em>terminalId</em></strong> из определения соединителя. Можно использовать либо отдельные атрибуты <strong><em>“заливка”</em></strong> и <strong><em>“обводка”</em></strong>, либо их можно комбинировать с помощью атрибута <strong><em>“стиль” (style=“fill:none;stroke:none”)</em></strong>.</p>
+<p>Поскольку разъемы в любом случае невидимы, их можно исключить как из файлов определения, так и из файлов изображений svg. Для согласованности с другими соединителями в тех же файлах их можно оставить, при условии, что значения svg-заливки и обводки установлены правильно.</p>
+<p>Невидимые соединительные элементы могут быть расположены в любом месте (в зависимости от координат) в пределах изображения. Все они могут быть размещены в одних и тех же координатах без проблем с перекрывающимися проводами. К ним никогда не подключается провод, поэтому нечему мешать.</p>
+<p>Недостаточно сделать видимые графические элементы невидимыми и/или переместить их за пределы обычного слоя (групп). Это приводит к появлению фиктивных строк в файле компонента.</p>
+<p>Для деталей, у которых нет схемы или содержимого для просмотра печатной платы, этот метод работает не совсем так, как хотелось бы. Пустая деталь и (изначально) ее метка детали все еще видны на видах, даже несмотря на отсутствие разъемов. Единственный способ обойти это, состоит в том, чтобы определить деталь как принадлежащую к семейству макетов - “breadboard”.</p>
+<h4 id="внутренние-подключения-необязательные-элементы">Внутренние подключения (необязательные элементы)</h4>
+<p>Шина во Fritzing - это то, что называется внутренним соединением между разъемами. Макетные платы и ленточные платы широко используют шины (а с помощью ленточных плат пользователь может динамически изменять структуру шины).</p>
+<p>Ряд других деталей поставляется с шинами, в первую очередь с GND и различными выводами ICSP на различных Arduino, но также и, например, с 4-контактной кнопкой. В редакторе деталей есть режим <strong><em>“показать внутренние соединения”</em></strong>, который позволяет визуализировать и редактировать шины, рассматривая каждую из них как провод. Далее показан раздел шин для 4-контактной кнопки, где описаны две отдельные шины:</p>
+<pre><code>&lt;buses&gt;
+    &lt;bus id=&quot;bus0&quot; &gt;
+        &lt;nodeMember connectorId=&quot;connector0&quot; /&gt;
+        &lt;nodeMember connectorId=&quot;connector1&quot; /&gt;
+    &lt;/bus&gt;
+    &lt;bus id=&quot;bus1&quot; &gt;
+        &lt;nodeMember connectorId=&quot;connector2&quot; /&gt;
+        &lt;nodeMember connectorId=&quot;connector3&quot; /&gt;
+    &lt;/bus&gt;
+&lt;/buses&gt;</code></pre>
+<p>Атрибут <strong><em>connectorId</em></strong> относится к атрибуту <strong><em>id</em></strong> соединителя в &lt;connectors&gt; элементе. Имена шин могут быть произвольными, при условии, что каждое имя шины уникально в пределах данной детали (т. е. в файле fzp).</p>
+<h3 id="библиография">Библиография</h3>
+<h3 id="part-file-format---httpsgithub.comfritzingfritzing-appwiki2.1-part-file-format"><a href="https://github.com/fritzing/fritzing-app/wiki/2.1-Part-file-format">Part file format - https://github.com/fritzing/fritzing-app/wiki/2.1-Part-file-format</a></h3>
+</body>
+</html>

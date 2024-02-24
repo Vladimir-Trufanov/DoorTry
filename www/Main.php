@@ -88,6 +88,8 @@ else if (prown\isComRequest('proba','list'))
 // Если поступил запрос на страницы "Крошки опыта", то запускаем её
 else if (prown\isComRequest('kroshki-opyta','list')) 
 {
+   //prown\Alert('$_SERVER[HTTP_HOST]='.$_SERVER['HTTP_HOST']);
+   //prown\Alert('$_SERVER[REQUEST_URI]='.$_SERVER['REQUEST_URI']);
    require_once  $SiteRoot."/BitofExpert/BitofExpert.php";
 }
 // Если поступил запрос по политике конфиденциальности FsbProba, то запускаем её

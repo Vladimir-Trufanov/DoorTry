@@ -21,26 +21,39 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		-BitofExpert
+		+BitofExpert
 			-bifeArduino
 				-infrakrasnyj-pult-na-smartfone-dlya-vsego
+					-vybor-kodov-universalnogo-pulta
+						-VyborKodovPulta
+							www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta\VyborKodovPulta\VyborKodovPulta.ino
+						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta\vybor-kodov-universalnogo-pulta.png
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\ik-datchik-vs1838b.jpg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\modul-ky-022-s-infrakrasnym-datchikom.jpg
+			-bifeFritzing
+				-predstavlenie-detali-komponenta-vo-fritzing
+					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml
+					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20.jpg
+					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
+					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 			-bifeGitHub
-				-kak-udalit-repozitarij-v-github
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Dashboard.jpg
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Ihaveread.jpg
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Iwont.jpg
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\kak-udalit-repozitarij-v-github.html
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Last-step.jpg
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\probnyj-proekt.jpg
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Setting.jpg
-					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-v-github\Toconfirm.jpg
+				-kak-udalit-repozitarij-iz-github
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Dashboard.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Ihaveread.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Iwont.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\kak-udalit-repozitarij-iz-github.html
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Last-step.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\probnyj-proekt.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Setting.jpg
+					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Toconfirm.jpg
 			-bifeWindows
-				+kak-zamenit-drajver-windows
-					www\BitofExpert\bifeWindows\kak-zamenit-drajver-windows\kak-zamenit-drajver-windows.html
+				-kak-zamenit-drajver-na-windows
+					www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
 			www\BitofExpert\BitofExpert.php
+			www\BitofExpert\Fil.xml
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -469,6 +482,7 @@ DoorTry
 		www\DebugTimer.php
 		www\doortry.png
 		www\DoorTryError.php
+		www\e404.php
 		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
@@ -488,6 +502,7 @@ DoorTry
 		www\MainDoorTry.php
 		www\MakeQrcode.php
 		www\MobiSite.php
+		www\photo-8i.jpg
 		www\robots.txt
 		www\Site.php
 		www\sitemap.xml
@@ -498,21 +513,29 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\BitofExpert\BitofExpert.html
-2=www\BitofExpert\BitofExpert.css
+1=www\iniMem.php
+2=www\iniMenu.php
 3=www\BitofExpert\BitofExpert.php
+4=www\index.php
+5=www\BitofExpert\BitofExpert.css
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=13
-Caret=1,126
-[www\BitofExpert\BitofExpert.html]
-TopLine=11
-Caret=1,49
-[www\BitofExpert\BitofExpert.css]
-TopLine=43
-Caret=1,74
+TopLine=2
+Caret=24,27
+[www\iniMem.php]
+TopLine=1
+Caret=1,1
+[www\iniMenu.php]
+TopLine=123
+Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=158
-Caret=1,193
+TopLine=211
+Caret=4,241
+[www\index.php]
+TopLine=1
+Caret=1,1
+[www\BitofExpert\BitofExpert.css]
+TopLine=11
+Caret=21,45
