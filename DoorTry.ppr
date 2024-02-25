@@ -22,7 +22,7 @@ DoorTry
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		+BitofExpert
-			-bifeArduino
+			+bifeArduino
 				-infrakrasnyj-pult-na-smartfone-dlya-vsego
 					-vybor-kodov-universalnogo-pulta
 						-VyborKodovPulta
@@ -31,14 +31,14 @@ DoorTry
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\ik-datchik-vs1838b.jpg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\modul-ky-022-s-infrakrasnym-datchikom.jpg
-			-bifeFritzing
-				-predstavlenie-detali-komponenta-vo-fritzing
+			+bifeFritzing
+				+predstavlenie-detali-komponenta-vo-fritzing
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
-			-bifeGitHub
-				-kak-udalit-repozitarij-iz-github
+			+bifeGitHub
+				+kak-udalit-repozitarij-iz-github
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Dashboard.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Ihaveread.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Iwont.jpg
@@ -47,8 +47,8 @@ DoorTry
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\probnyj-proekt.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Setting.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Toconfirm.jpg
-			-bifeWindows
-				-kak-zamenit-drajver-na-windows
+			+bifeWindows
+				+kak-zamenit-drajver-na-windows
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
@@ -515,13 +515,11 @@ DoorTry
 0=www\Main.php
 1=www\iniMem.php
 2=www\iniMenu.php
-3=www\BitofExpert\BitofExpert.php
-4=www\index.php
-5=www\BitofExpert\BitofExpert.css
-6=www\.htaccess
+3=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
+4=www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -531,15 +529,9 @@ Caret=1,1
 [www\iniMenu.php]
 TopLine=123
 Caret=1,1
-[www\BitofExpert\BitofExpert.php]
-TopLine=258
-Caret=25,292
-[www\index.php]
+[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html]
+TopLine=1
+Caret=6,23
+[www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html]
 TopLine=1
 Caret=1,1
-[www\BitofExpert\BitofExpert.css]
-TopLine=35
-Caret=1,55
-[www\.htaccess]
-TopLine=65
-Caret=132,83
