@@ -287,7 +287,9 @@ function highlight_xml($FileName)
    // Окрашиваем защищенный комментарий
    $FileCode=preg_replace("~&lt;description&gt;.*&lt;/description&gt;~iU",'<span style="color:Chocolate">$0</span>',$FileCode);
 
-   $FileCode='<div style="color:Purple;background:Azure;font-size:1.4rem;font-weight:bold;">'.$FileCode.'</div>';
+   $FileCode=
+      '<div style="color:Purple;background:Azure;font-size:1.4rem;'.
+      'font-weight:bold;overflow-x:auto;">'.$FileCode.'</div>';
 
    return $FileCode;
 }

@@ -518,9 +518,10 @@ DoorTry
 3=www\BitofExpert\BitofExpert.php
 4=www\index.php
 5=www\BitofExpert\BitofExpert.css
+6=www\.htaccess
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.php
+Selected=www\.htaccess
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -531,11 +532,14 @@ Caret=1,1
 TopLine=123
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=211
-Caret=4,241
+TopLine=258
+Caret=25,292
 [www\index.php]
 TopLine=1
 Caret=1,1
 [www\BitofExpert\BitofExpert.css]
-TopLine=11
-Caret=21,45
+TopLine=35
+Caret=1,55
+[www\.htaccess]
+TopLine=65
+Caret=132,83
