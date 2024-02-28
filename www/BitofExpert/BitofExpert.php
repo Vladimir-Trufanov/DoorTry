@@ -204,9 +204,17 @@ if (($par>'')||($tit>''))
    $regXml1='/<a\shref="([a-zA-Z0-9\-\.]+)">/uU';
    $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1">',$FileContent);
 
+
+   $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
+
+
+
+   
+   /*
    // Определяем имя xml-файла для показа
    $regXml='/href="\.\.(.*\.xml)/uU';
    $FileXml=prown\Findes($regXml,$FileContent);
+   prown\ConsoleLog($FileXml);
    $FileXml=$SiteRoot.substr($FileXml,8); 
      
    // Отлавливаем ссылку на xml-файл и заменяем ее на прямой показ xml-файла:
@@ -215,10 +223,11 @@ if (($par>'')||($tit>''))
    //   Примерный общий вид файла FZP</a></h4>
    if ($FileXml>$SiteRoot)
    {
-      $regXml='/<h4\s(.*)\.xml">(.*)<\/a><\/h4>/uU';
-      $FileContent=preg_replace($regXml,'<h4>$2</h4>'.highlight_xml($FileXml),$FileContent);
+      //$regXml='/<h4\s(.*)\.xml">(.*)<\/a><\/h4>/uU';
+      //$FileContent=preg_replace($regXml,'<h4>$2</h4>'.highlight_xml($FileXml),$FileContent);
    } 
-
+   */
+   
    // Меняем заголовок страницы <title>Крошки опыта</title>
    $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
    $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>',$FileContent);
@@ -240,6 +249,111 @@ echo $FileContent;
 // Трассируем xml-файл
 // echo '['.$FileXml.']';
 
+
+function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
+{
+   // Находим все заголовки 'h4' со ссылками на файлы *.xml
+   // $regXml='/href="\.\.(.*\.xml)/uU';
+   $regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
+   
+   $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
+   if ($value>0)
+   { 
+      $af=$matches[0];
+      // Выделяем 
+      foreach ($af as $matches2)
+      {
+         //echo '<br>***'.$matches2[0].'***<br>';
+         $afNames[]=$matches2[0];
+      }
+      // Проходим по выбранным ссылкам на xml-файлы  
+      foreach ($afNames as $NameXml)
+      {
+         // Определяем имя xml-файла для показа
+         $regNXml='/href="\.\.(.*\.xml)/uU';
+         $regNXml=prown\Findes($regNXml,$NameXml);
+         $FileXml=$SiteRoot.substr($regNXml,8); 
+         // Выделяем заголовок
+         $regNXml='/xml">(.*)<\/a>/uU';
+         $regNXml=prown\Findes($regNXml,$NameXml);
+         $TitleXml=substr($regNXml,5);
+         //echo '$NameXml='.$NameXml.'<br>';
+         //echo '$regNXml='.$regNXml.'<br>';
+         //echo '$FileXml='.$FileXml.'<br>';
+         //echo '$TitleXml='.$TitleXml.'<br>';
+         
+         // Формируем рег.выражение (экранируем)
+         $regNXml='/'.preg_quote($NameXml,'/').'/uU';
+         //echo '$regNXml='.$regNXml.'<br>';
+
+         $FileContent=preg_replace($regNXml,$FileXml.'<br>',$FileContent);
+         
+         //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.'<br>'.$FileXml.'<br>',$FileContent);
+         //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.'<br>'.$FileXml.'<br>',$FileContent);
+   
+         //$FileContent=preg_replace($regXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
+         
+         
+      }
+   }
+   //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.'<br>'.$FileXml.'<br>',$FileContent);
+   
+   
+   
+   
+   
+   
+   /*
+   $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
+   if ($value>0)
+   { 
+      $af=$matches[0];
+      // Выделяем 
+      foreach ($af as $matches2)
+      {
+         //echo '<br>***'.$matches2[0].'***<br>';
+         $afNames[]=$matches2[0];
+      }
+      // Проходим по выбранным ссылкам на xml-файлы  
+      foreach ($afNames as $NameXml)
+      {
+         //echo $NameXml;
+         // Выбираем имена файлов
+         //$regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
+         // Определяем имя xml-файла для показа
+         $regXml='/href="\.\.(.*\.xml)/uU';
+         $FileXml=prown\Findes($regXml,$NameXml);
+         $FileXml=$SiteRoot.substr($FileXml,8); 
+         echo '$FileXml='.$FileXml.'<br>';
+         
+         if ($FileXml>$SiteRoot)
+         {
+            //$regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
+            //echo '<br>';
+            //echo $NameXml; 
+            //echo '<br>';
+            //echo addslashes($NameXml); 
+            //echo '<br>';
+            $regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
+            //echo '$regXml ='.$regXml.'<br>';
+            //echo '$NameXml='.$NameXml.'<br>';
+            //echo 'addslashes($FileXml)='.addslashes($FileXml).'<br>';
+            //$FileContent=preg_replace($regXml,'***',$FileContent);
+            //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
+         } 
+
+         
+      } 
+      
+         
+   }
+   */
+   return $FileContent;
+
+}
+
+
+// Из XML-файла получить раскрашенный текст
 function highlight_xml($FileName)
 {
    $FileContent=file_get_contents($FileName);

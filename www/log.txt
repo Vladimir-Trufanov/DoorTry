@@ -28,3 +28,13 @@ Stack trace:
 [22-Feb-2024 12:45:02 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '~', expecting ')' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 243
 [23-Feb-2024 10:57:17 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ')' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 269
 [23-Feb-2024 17:07:11 Asia/Kuwait] PHP Parse error:  syntax error, unexpected ',' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 230
+[27-Feb-2024 10:08:59 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function String() in C:\DoorTry\www\BitofExpert\BitofExpert.php:218
+Stack trace:
+#0 C:\DoorTry\www\Main.php(93): require_once()
+#1 C:\DoorTry\www\index.php(37): require_once('C:\\DoorTry\\www\\...')
+#2 {main}
+  thrown in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 218
+[27-Feb-2024 10:14:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 219
+[27-Feb-2024 10:15:07 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$j' (T_VARIABLE), expecting ')' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 222
+[27-Feb-2024 11:10:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 214
+[27-Feb-2024 11:10:30 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 214
