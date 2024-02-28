@@ -38,6 +38,7 @@ DoorTry
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
+					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
 			-bifeGitHub
 				-kak-udalit-repozitarij-iz-github
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Dashboard.jpg
@@ -517,9 +518,11 @@ DoorTry
 2=www\iniMenu.php
 3=www\BitofExpert\BitofExpert.php
 4=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
+5=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml
+6=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.php
+Selected=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -531,7 +534,13 @@ TopLine=123
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
 TopLine=271
-Caret=10,289
+Caret=14,303
 [www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html]
-TopLine=210
-Caret=21,248
+TopLine=213
+Caret=1,248
+[www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml]
+TopLine=1
+Caret=1,2
+[www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml]
+TopLine=1
+Caret=37,3

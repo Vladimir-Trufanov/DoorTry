@@ -246,9 +246,10 @@ $FileContent=preg_replace($regAlt,
   
 // Выводим затребованную страницу темы BitofExpert
 echo $FileContent;
-// Трассируем xml-файл
-// echo '['.$FileXml.']';
-
+// Трассируем xml-файлы
+// echo (highlight_xml('C:\DoorTry\www/BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/LCD-FM-RX-V2.0.xml'));
+// echo '-------------------------------------------------------------------------------------------------------------<br>';
+// echo (highlight_xml('C:\DoorTry\www/BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/sitemap.xml'));
 
 function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
 {
@@ -267,6 +268,7 @@ function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
          $afNames[]=$matches2[0];
       }
       // Проходим по выбранным ссылкам на xml-файлы  
+      $i=0;
       foreach ($afNames as $NameXml)
       {
          // Определяем имя xml-файла для показа
@@ -277,77 +279,33 @@ function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
          $regNXml='/xml">(.*)<\/a>/uU';
          $regNXml=prown\Findes($regNXml,$NameXml);
          $TitleXml=substr($regNXml,5);
-         //echo '$NameXml='.$NameXml.'<br>';
-         //echo '$regNXml='.$regNXml.'<br>';
-         //echo '$FileXml='.$FileXml.'<br>';
-         //echo '$TitleXml='.$TitleXml.'<br>';
-         
+         $TitleXml=substr($TitleXml,0,strlen($TitleXml)-4);
          // Формируем рег.выражение (экранируем)
          $regNXml='/'.preg_quote($NameXml,'/').'/uU';
-         //echo '$regNXml='.$regNXml.'<br>';
+         //if ($i==0)
+         //{
+           //echo '$NameXml='.$NameXml.'<br>';
+           //echo '$FileXml='.$FileXml.'<br>';
+           //echo '$TitleXml='.$TitleXml.'<br>';
+           //echo '$regNXml='.$regNXml.'<br>';
 
-         $FileContent=preg_replace($regNXml,$FileXml.'<br>',$FileContent);
-         
-         //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.'<br>'.$FileXml.'<br>',$FileContent);
-         //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.'<br>'.$FileXml.'<br>',$FileContent);
-   
-         //$FileContent=preg_replace($regXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
-         
-         
+// <h4 id="sitemapfzp">                   <a href="sitemap.xml">       Примерный SITEMAP            </a></h4>
+// <h4 id="примерный-общий-вид-файла-fzp"><a href="LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
+
+// <h4 id="sitemapfzp">                   <a href="../BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/       sitemap.xml">Примерный SITEMAP</a></h4>
+// <h4 id="примерный-общий-вид-файла-fzp"><a href="../BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
+
+// /\<h4 id\="примерный\-общий\-вид\-файла\-fzp"\> \<a href\="\.\.\/BitofExpert\/bifeFritzing\/predstavlenie\-detali\-komponenta\-vo\-fritzing\/ LCD\-FM\-RX\-V2\.0\.xml"\> Примерный общий вид файла FZP \<\/a\>\<\/h4\>/uU<br>
+// /\<h4 id\="sitemapfzp"\>                        \<a href\="\.\.\/BitofExpert\/bifeFritzing\/predstavlenie\-detali\-komponenta\-vo\-fritzing\/            sitemap\.xml"\> Примерный SITEMAP             \<\/a\>\<\/h4\>/uU<br>
+           
+           
+           
+           //$FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>',$FileContent);
+           $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
+         //}
+         $i++;
       }
    }
-   //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.'<br>'.$FileXml.'<br>',$FileContent);
-   
-   
-   
-   
-   
-   
-   /*
-   $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
-   if ($value>0)
-   { 
-      $af=$matches[0];
-      // Выделяем 
-      foreach ($af as $matches2)
-      {
-         //echo '<br>***'.$matches2[0].'***<br>';
-         $afNames[]=$matches2[0];
-      }
-      // Проходим по выбранным ссылкам на xml-файлы  
-      foreach ($afNames as $NameXml)
-      {
-         //echo $NameXml;
-         // Выбираем имена файлов
-         //$regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
-         // Определяем имя xml-файла для показа
-         $regXml='/href="\.\.(.*\.xml)/uU';
-         $FileXml=prown\Findes($regXml,$NameXml);
-         $FileXml=$SiteRoot.substr($FileXml,8); 
-         echo '$FileXml='.$FileXml.'<br>';
-         
-         if ($FileXml>$SiteRoot)
-         {
-            //$regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
-            //echo '<br>';
-            //echo $NameXml; 
-            //echo '<br>';
-            //echo addslashes($NameXml); 
-            //echo '<br>';
-            $regXml='/<'.$hteg.'\s(.*)\.xml">(.*)<\/a><\/'.$hteg.'>/uU';
-            //echo '$regXml ='.$regXml.'<br>';
-            //echo '$NameXml='.$NameXml.'<br>';
-            //echo 'addslashes($FileXml)='.addslashes($FileXml).'<br>';
-            //$FileContent=preg_replace($regXml,'***',$FileContent);
-            //$FileContent=preg_replace($regXml,'<'.$hteg.'>$2</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
-         } 
-
-         
-      } 
-      
-         
-   }
-   */
    return $FileContent;
 
 }
@@ -404,7 +362,6 @@ function highlight_xml($FileName)
    $FileCode=
       '<div style="color:Purple;background:Azure;font-size:1.4rem;'.
       'font-weight:bold;overflow-x:auto;">'.$FileCode.'</div>';
-
    return $FileCode;
 }
 

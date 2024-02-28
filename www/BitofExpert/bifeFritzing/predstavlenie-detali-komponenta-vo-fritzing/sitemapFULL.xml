@@ -1,9 +1,7 @@
-
-<!-- Р¤Р°Р№Р» РїСЂРѕ doortry -->
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <!-- --------------------------------------- Р“Р›РђР’РќР«Р• РЎРўР РђРќРР¦Р« DOORTRY.RU -->
+   <!-- --------------------------------------- ГЛАВНЫЕ СТРАНИЦЫ DOORTRY.RU -->
    <url>
       <loc>https://doortry.ru/</loc>
       <lastmod>2019-10-08</lastmod>
@@ -23,91 +21,91 @@
       <priority>0.501</priority>
    </url>
    <!-- --------------------------------------------------------- TPHPPROWN -->
-   <!-- Рћ Р±РёР±Р»РёРѕС‚РµРєРµ -->
+   <!-- О библиотеке -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/o-biblioteke</loc>
       <lastmod>2020-03-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.300</priority>
    </url>
-   <!-- CommonPrown - Р±Р»РѕРє РѕР±С‰РёС… С„СѓРЅРєС†РёР№ -->
+   <!-- CommonPrown - блок общих функций -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/blok-obshchih-funkcij</loc>
       <lastmod>2020-03-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.301</priority>
    </url>
-   <!-- CreateRightsDir - СЃРѕР·РґР°С‚СЊ РєР°С‚Р°Р»РѕРі (РїСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ) Рё Р·Р°РґР°С‚СЊ РµРіРѕ РїСЂР°РІР° -->
+   <!-- CreateRightsDir - создать каталог (проверить существование) и задать его права -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/sozdat-katalog-i-zadat-ego-prava</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.302</priority>
    </url>
-   <!-- Findes - РІС‹Р±СЂР°С‚СЊ РёР· СЃС‚СЂРѕРєРё РїРѕРґСЃС‚СЂРѕРєСѓ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ СЂРµРіСѓР»СЏСЂРЅРѕРјСѓ РІС‹СЂР°Р¶РµРЅРёСЋ -->
+   <!-- Findes - выбрать из строки подстроку, соответствующую регулярному выражению -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/vybrat-iz-stroki-podstroku-po-regulyarnomu-vyrazheniyu</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.303</priority>
    </url>
-   <!-- iniConstMem - РѕРїСЂРµРґРµР»РёС‚СЊ РѕР±С‰РёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹ Р±РёР±Р»РёРѕС‚РµРєРё -->
+   <!-- iniConstMem - определить общие константы библиотеки -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-obshchie-konstanty</loc>
       <lastmod>2019-12-22</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.304</priority>
    </url>
-   <!-- iniErrMessage - РѕРїСЂРµРґРµР»РёС‚СЊ РѕР±С‰РёРµ СЃРѕРѕР±С‰РµРЅРёСЏ Р±РёР±Р»РёРѕС‚РµРєРё -->
+   <!-- iniErrMessage - определить общие сообщения библиотеки -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-obshchie-soobshcheniya-biblioteki</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.305</priority>
    </url>
-   <!-- iniRegExp - РѕРїСЂРµРґРµР»РёС‚СЊ РїРѕРїСѓР»СЏСЂРЅС‹Рµ СЂРµРіСѓР»СЏСЂРЅС‹Рµ РІС‹СЂР°Р¶РµРЅРёСЏ PHP -->
+   <!-- iniRegExp - определить популярные регулярные выражения PHP -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-populyarnye-regulyarnye-vyrazheniya-php</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.306</priority>
    </url>
-   <!-- isCalcInBrowser - РїСЂРѕР°РЅР°Р»РёР·РёСЂРѕРІР°С‚СЊ UserAgent Р±СЂР°СѓР·РµСЂР° РїРѕ РІРµСЂСЃРёСЏРј СЂРѕРґРёС‚РµР»СЊСЃРєРёС… Р±СЂР°СѓР·РµСЂРѕРІ Рё РѕРїСЂРµРґРµР»РёС‚СЊ СЂР°Р±РѕС‚Р°РµС‚ Р»Рё С„СѓРЅРєС†РёСЏ Calc РґР»СЏ CSS -->
+   <!-- isCalcInBrowser - проанализировать UserAgent браузера по версиям родительских браузеров и определить работает ли функция Calc для CSS -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/opredelit-rabotaet-li-funkciya-calc-dlya-css</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.307</priority>
    </url>
-   <!-- MakeCookie - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ COOKIE РІ Р±СЂР°СѓР·РµСЂРµ, Р·Р°РјРµРЅРёС‚СЊ СЌС‚Рѕ Р·РЅР°С‡РµРЅРёРµ РІРѕ РІРЅСѓС‚СЂРµРЅРЅРµРј РјР°СЃСЃРёРІРµ $_COOKIE Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№-РєСѓРєРёСЃР° РІ СЃС†РµРЅР°СЂРёРё -->
+   <!-- MakeCookie - установить новое значение COOKIE в браузере, заменить это значение во внутреннем массиве $_COOKIE и установить новое значение переменной-кукиса в сценарии -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/ustanovit-novoe-znachenie-cookie-v-brauzere</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.308</priority>
    </url>
-   <!-- MakeRegExp - РѕС‚СЂР°Р±РѕС‚Р°С‚СЊ СЂРµРіСѓР»СЏСЂРЅРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ РЅР° С‚РµРєСЃС‚Рµ Рё РѕС‚С‚СЂР°СЃСЃРёСЂРѕРІР°С‚СЊ СЂР°Р·Р±РѕСЂ -->
+   <!-- MakeRegExp - отработать регулярное выражение на тексте и оттрассировать разбор -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/otrabotat-regulyarnoe-vyrazhenie-na-tekste </loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.309</priority>
    </url>
-   <!-- MakeSession - СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёРјРµРЅРё РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃРµСЃСЃРёРѕРЅРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РЅР° СЃРµСЂРІРµСЂРµ (СЌР»РµРјРµРЅС‚Р° РІ РјР°СЃСЃРёРІРµ $_SESSION) Рё РІРµСЂРЅСѓС‚СЊ СЌС‚Рѕ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ Р·Р°РїРёСЃРё РІ Р»РѕРєР°Р»СЊРЅСѓСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ -->
+   <!-- MakeSession - установить по заданному имени новое значение сессионной переменной на сервере (элемента в массиве $_SESSION) и вернуть это значение для записи в локальную переменную -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/ustanovit-znachenie-sessionnoj-peremennoj</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.310</priority>
    </url>
-   <!-- MakeType - РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РїРµСЂРµРґР°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ Рє Р·Р°РґР°РЅРЅРѕРјСѓ С‚РёРїСѓ -->
+   <!-- MakeType - преобразовать переданное значение к заданному типу -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/preobrazovat-znachenie-k-zadannomu-tipu</loc>
       <lastmod>2024-01-20</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.311</priority>
    </url>
-   <!-- MakeUserError - РІС‹РІРµСЃС‚Рё СЃРѕРѕР±С‰РµРЅРёРµ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР° РѕР± РѕС€РёР±РєРµ РІ РїСЂРѕРіСЂР°РјРјРёСЂСѓРµРјРѕРј РјРѕРґСѓР»Рµ РёР»Рё СЃС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ -->
+   <!-- MakeUserError - вывести сообщение разработчика об ошибке в программируемом модуле или сформировать пользовательское исключение -->
    <url>
       <loc>https://doortry.ru/TPhpPrown/vyvesti-soobshchenie-ob-oshibke-na-php</loc>
       <lastmod>2020-01-11</lastmod>
@@ -115,42 +113,42 @@
       <priority>0.312</priority>
    </url>
    <url>
-      <!-- RecalcSizeInfo - РёР·РјРµРЅРёС‚СЊ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё -->
+      <!-- RecalcSizeInfo - изменить представление информации о размерности -->
       <loc>https://doortry.ru/TPhpPrown/bajty-v-kilo-kibi-mega-mebibajty-i-obratno</loc>
       <lastmod>2021-10-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.313</priority>
    </url>
-   <!-- ---------------------------------------------------- РЁРўР РРҐРћРўР’РћР Р•РќРРЇ -->
-   <!-- РљР°РїСЂРёР·РЅС‹Р№ СЃС‚Р°СЂРёРє -->
+   <!-- ---------------------------------------------------- ШТРИХОТВОРЕНИЯ -->
+   <!-- Капризный старик -->
    <url>
       <loc>https://doortry.ru/stihi/kapriznyj-starik</loc>
       <lastmod>2021-10-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.401</priority>
    </url>
-   <!-- РЎРѕСЂРµРІРЅРѕРІР°РЅРёРµ СЃ С…Р°РєРµСЂР°РјРё -->
+   <!-- Соревнование с хакерами -->
    <url>
       <loc>https://doortry.ru/stihi/sorevnovanie-s-hakerami</loc>
       <lastmod>2019-10-08</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.402</priority>
    </url>
-   <!-- ------------------------------------------------------ РљР РћРЁРљР РћРџР«РўРђ -->
-   <!--         РЎС‚СЂР°РЅРёС†С‹ С‚РµРјС‹ Р·Р°РјРµРЅРµРЅС‹ РЅР° Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Рµ СЃСЃС‹Р»РєРё Рё СЂР°Р·РјРµС‰РµРЅС‹ -->
-   <!--                  РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РІ С„Р°Р№Р»Р°С… СЃС‚СЂР°РЅРёС† РІРЅСѓС‚СЂРё С‚РµРіР° head: -->
+   <!-- ------------------------------------------------------ КРОШКИ ОПЫТА -->
+   <!--         Страницы темы заменены на альтернативные ссылки и размещены -->
+   <!--                  непосредственно в файлах страниц внутри тега head: -->
    <!--                                                                     -->
-   <!-- <title>РРЅС„СЂР°РєСЂР°СЃРЅС‹Р№ РїСѓР»СЊС‚ РЅР° СЃРјР°СЂС‚С„РѕРЅРµ РґР»СЏ РІСЃРµРіРѕ</title>            -->
+   <!-- <title>Инфракрасный пульт на смартфоне для всего</title>            -->
    <!-- <link rel="alternate" hreflang="ru" href="https://doortry.ru/kroshki-opyta/Arduino=%D0%98%D0%BD%D1%84%D1%80%D0%B0%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%83%D0%BB%D1%8C%D1%82%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D0%B3%D0%BE" /> -->
-   <!-- <link rel="alternate" hreflang="ru" href="https://doortry.ru/kroshki-opyta/Arduino=РРЅС„СЂР°РєСЂР°СЃРЅС‹Р№ РїСѓР»СЊС‚ РЅР° СЃРјР°СЂС‚С„РѕРЅРµ РґР»СЏ РІСЃРµРіРѕ" /> -->
-   <!-- ---------------------------------------------- РџРћР”РџРРЎРђРўР¬ Р¤РћРўРћР“Р РђР¤РР® -->
+   <!-- <link rel="alternate" hreflang="ru" href="https://doortry.ru/kroshki-opyta/Arduino=Инфракрасный пульт на смартфоне для всего" /> -->
+   <!-- ---------------------------------------------- ПОДПИСАТЬ ФОТОГРАФИЮ -->
    <url>
       <loc>https://doortry.ru/Pages/Signaphoto/SignaPhoto.php</loc>
       <lastmod>2022-10-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.300</priority>
    </url>
-   <!-- ---------------------------------------- РРќРЎРўР РЈРњР•РќРўР« Р Р”РћРљРЈРњР•РќРўРђР¦РРЇ -->
+   <!-- ---------------------------------------- ИНСТРУМЕНТЫ И ДОКУМЕНТАЦИЯ -->
    <url>
       <loc>https://doortry.ru/instrumenty</loc>
       <lastmod>2022-10-01</lastmod>
