@@ -32,7 +32,11 @@ DoorTry
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\modul-ky-022-s-infrakrasnym-datchikom.jpg
 			+bifeFritzing
-				+predstavlenie-detali-komponenta-vo-fritzing
+				+kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
+					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
+					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\Structura-katalogov.jpg
+					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\USB-UART-CP2102-dtr.jpg
+				-predstavlenie-detali-komponenta-vo-fritzing
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
@@ -53,6 +57,7 @@ DoorTry
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
+			www\BitofExpert\BitofExpert.htmlo
 			www\BitofExpert\BitofExpert.php
 		-font-awesome-4.7.0
 			-css
@@ -516,12 +521,11 @@ DoorTry
 1=www\iniMem.php
 2=www\iniMenu.php
 3=www\BitofExpert\BitofExpert.php
-4=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
-5=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml
-6=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
+4=www\BitofExpert\BitofExpert.html
+5=www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
+Selected=www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -532,14 +536,11 @@ Caret=1,1
 TopLine=123
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=306
+TopLine=252
 Caret=1,290
-[www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html]
-TopLine=214
-Caret=83,239
-[www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml]
-TopLine=1
-Caret=1,2
-[www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml]
-TopLine=1
-Caret=37,3
+[www\BitofExpert\BitofExpert.html]
+TopLine=22
+Caret=1,1
+[www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html]
+TopLine=5
+Caret=237,20
