@@ -38,7 +38,6 @@ DoorTry
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
-					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
 			-bifeGitHub
 				-kak-udalit-repozitarij-iz-github
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Dashboard.jpg
@@ -533,11 +532,11 @@ Caret=1,1
 TopLine=123
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=271
-Caret=14,303
+TopLine=306
+Caret=1,290
 [www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html]
-TopLine=213
-Caret=1,248
+TopLine=214
+Caret=83,239
 [www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V2.0.xml]
 TopLine=1
 Caret=1,2
