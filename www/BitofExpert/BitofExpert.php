@@ -177,12 +177,14 @@ if ($tit>'')
    $urlDir=$urlDir.$art.'/';
    $FileName=$art.'.html';
 }
-// Инициируем имя xml-файла для показа
-$FileXml='';
-// Определяем спецификацию файла для его загрузки, загружаем его и модифицируем
-$FileSpec=$FileDir.$FileName;
+// Инициируем имена xml-файлов, файлов-ino для показа
+$FileXml=''; $FileIno='';
 
+// Определяем спецификацию файла текущей страницы для загрузки, 
+// загружаем его и модифицируем
+$FileSpec=$FileDir.$FileName;
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
+
 // Модифицируем вызов имеющихся изображений, XML-файлов и меняем заголовок
 if (($par>'')||($tit>''))
 {
@@ -203,7 +205,10 @@ if (($par>'')||($tit>''))
    $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1">',$FileContent);
 
    // Показываем все xml-файлы по найденным ссылкам
-   $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
+   //$FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
+
+   // Показываем все ino-файлы по найденным ссылкам
+   //$FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
    
    // Меняем заголовок страницы <title>Крошки опыта</title>
    $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
@@ -259,7 +264,7 @@ function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
          $TitleXml=substr($TitleXml,0,strlen($TitleXml)-4);
          // Формируем рег.выражение (экранируем)
          $regNXml='/'.preg_quote($NameXml,'/').'/uU';
-         //echo '$NameXml='.$NameXml.'<br>';
+         echo '$NameXml='.$NameXml.'<br>';
          //echo '$FileXml='.$FileXml.'<br>';
          //echo '$TitleXml='.$TitleXml.'<br>';
          //echo '$regNXml='.$regNXml.'<br>';
@@ -337,6 +342,123 @@ function highlight_xml($FileName)
    $FileCode=
       '<div style="color:Purple;background:Azure;font-size:1.4rem;'.
       'font-weight:bold;overflow-x:auto;">'.$FileCode.'</div>';
+   return $FileCode;
+}
+
+// ****************************************************************************
+// *                  Показать все ino-файлы по найденным ссылкам             *
+// ****************************************************************************
+function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
+{
+   // Находим все заголовки 'h4' со ссылками на файлы *.xml
+   $regXml='/<'.$hteg.'\s(.*)\.'.$ext.'">(.*)<\/a><\/'.$hteg.'>/uU';
+   
+   $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
+   if ($value>0)
+   { 
+      $af=$matches[0];
+      // Выделяем все заголовки 'h4' со ссылками на файлы .$ext
+      foreach ($af as $matches2)
+      {
+         $afNames[]=$matches2[0];
+      }
+      // Проходим по выбранным ссылкам на xml-файлы  
+      foreach ($afNames as $NameXml)
+      {
+         // Определяем имя xml-файла для показа
+         $regNXml='/href="\.\.(.*\.'.$ext.')/uU';
+         $regNXml=prown\Findes($regNXml,$NameXml);
+         $FileXml=$SiteRoot.substr($regNXml,8); 
+         // Выделяем заголовок
+         $regNXml='/'.$ext.'">(.*)<\/a>/uU';
+         $regNXml=prown\Findes($regNXml,$NameXml);
+         $TitleXml=substr($regNXml,5);
+         $TitleXml=substr($TitleXml,0,strlen($TitleXml)-4);
+         // Формируем рег.выражение (экранируем)
+         $regNXml='/'.preg_quote($NameXml,'/').'/uU';
+         //echo '$NameXml='.$NameXml.'<br>';
+         //echo '$FileXml='.$FileXml.'<br>';
+         //echo '$TitleXml='.$TitleXml.'<br>';
+         //echo '$regNXml='.$regNXml.'<br>';
+
+         // Примеры заголовков со ссылками на xml-файлы для их вывода на экран браузера
+         // <h4 id="sitemapfzp">                   <a href="sitemap.xml">       Примерный SITEMAP            </a></h4>
+         // <h4 id="примерный-общий-вид-файла-fzp"><a href="LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
+
+         // Примеры заголовков с подставленными ссылками на xml-файлы с явным путем в BitofExpert
+         // <h4 id="sitemapfzp">                   <a href="../BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/       sitemap.xml">Примерный SITEMAP</a></h4>
+         // <h4 id="примерный-общий-вид-файла-fzp"><a href="../BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
+
+         // Примеры экранированных заголовков с подставленными ссылками на xml-файлы для регулярного выражения
+         // /\<h4 id\="примерный\-общий\-вид\-файла\-fzp"\> \<a href\="\.\.\/BitofExpert\/bifeFritzing\/predstavlenie\-detali\-komponenta\-vo\-fritzing\/ LCD\-FM\-RX\-V2\.0\.xml"\> Примерный общий вид файла FZP \<\/a\>\<\/h4\>/uU<br>
+         // /\<h4 id\="sitemapfzp"\>                        \<a href\="\.\.\/BitofExpert\/bifeFritzing\/predstavlenie\-detali\-komponenta\-vo\-fritzing\/            sitemap\.xml"\> Примерный SITEMAP             \<\/a\>\<\/h4\>/uU<br>
+
+         // Подставляем вместо ссылки на xml-файл заголовок и явный вывод расцвеченного файла
+         if ($ext=='ino') 
+           $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_ino($FileXml),$FileContent);
+         else 
+           $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>');
+      }
+   }
+   return $FileContent;
+}
+
+// ****************************************************************************
+// *                  Из INO-файла получить раскрашенный текст                *
+// ****************************************************************************
+function highlight_ino($FileName)
+{
+   //$FileContent=file_get_contents($FileName);
+   //$FileCode=highlight_string($FileContent,true);
+   
+   $FileCode='<br>***'.$FileName.'***<br>';
+   /*
+   // Вырезаем верхний и единственный SPAN: <span style="color: #000000"> и </span>, 
+   // которые появились после работы highlight_string()
+   $FileCode=preg_replace("~<code><span.*>~iU",'',$FileCode);
+   $FileCode=preg_replace("~<\/span>~iU",'',$FileCode);
+   $FileCode=preg_replace("~<\/code>~iU",'',$FileCode);
+
+   $cRU="абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+
+   // Окрашиваем двухкомпонентные строки c тегами:
+   // &lt;author&gt;Vladimir&nbsp;Trufanov&lt;/author&gt; 
+   $FileCode=preg_replace("~&lt;([a-zA-Z0-9]+)&gt;([a-zA-Z0-9&;:/\-\.]+)&lt;([/a-zA-Z0-9]+)&gt;~iU",
+      '&lt;$1&gt;<span style="color:Blue">$2</span>&lt;$3&gt;',
+      $FileCode);
+
+   // Окрашиваем трехкомпонентные строки c тегами:
+   // &lt; property&nbsp;name="family" &gt; FM&nbsp;radio                      &lt; /property &gt;
+   // &lt; property&nbsp;name="прием"  &gt; 87,0&nbsp;МГц-108,0&nbsp;МГц&nbsp; &lt; /property &gt;
+   $FileCode=preg_replace(
+      "~&lt;([a-zA-Z0-9".$cRU."&;:<>\s=\"/]+)&gt;([a-zA-Z0-9".$cRU."&;:\,/\-\.]+)&lt;([/a-zA-Z0-9]+)&gt;~U",
+      '&lt;$1&gt;<span style="color:DarkSlateGray">$2</span>&lt;$3&gt;',
+      $FileCode);
+   
+   // Окрашиваем двухкомпонентные строки без тегов:
+   //    fritzingVersion="0.3.15b.02.03.3943" 
+   //    moduleId="LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1" 
+   //    name="прием"
+   $FileCode=preg_replace("~([a-zA-Z0-9\.]+)=\"([a-zA-Z0-9".$cRU."\.\-&;_]+)\"~iU",
+      '<span style="color:LightSeaGreen">$1</span>="<span style="color:Blue">$2</span>"',
+      $FileCode);
+   
+   // Окрашиваем комментарии
+   // <!--         Файл метаданных компонента (детали) .fzp                          -->
+   // &lt;!--&nbsp;Файл&nbsp;метаданных&nbsp;компонента&nbsp;(детали)&nbsp;.fzp&nbsp;--&gt;
+   $FileCode=preg_replace("~&lt;!--(.*)--&gt;~iU", '&lt;!--<span style="color:Green">$1</span>--&gt;',$FileCode);
+   
+   // Окрашиваем xml version
+   // &lt;?xml&nbsp;version='1.0'&nbsp;encoding='UTF-8'?&gt;
+   $FileCode=preg_replace("~&lt;\?xml.*\?&gt;~iU", '<span style="color:#FF8000">$0</span>',$FileCode);
+   
+   // Окрашиваем защищенный комментарий
+   $FileCode=preg_replace("~&lt;description&gt;.*&lt;/description&gt;~iU",'<span style="color:Chocolate">$0</span>',$FileCode);
+
+   $FileCode=
+      '<div style="color:Purple;background:Azure;font-size:1.4rem;'.
+      'font-weight:bold;overflow-x:auto;">'.$FileCode.'</div>';
+   */
    return $FileCode;
 }
 

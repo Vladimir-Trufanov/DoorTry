@@ -17,20 +17,23 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	-www
+	+www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		-BitofExpert
-			-bifeArduino
-				-infrakrasnyj-pult-na-smartfone-dlya-vsego
-					-vybor-kodov-universalnogo-pulta
-						-VyborKodovPulta
-							www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta\VyborKodovPulta\VyborKodovPulta.ino
-						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta\vybor-kodov-universalnogo-pulta.png
+		+BitofExpert
+			+bifeArduino
+				+infrakrasnyj-pult-na-smartfone-dlya-vsego
+					+MakeProntoHEX
+						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
+						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\PinDefinitionsAndMore.h
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\ik-datchik-vs1838b.jpg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.htmlo
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\modul-ky-022-s-infrakrasnym-datchikom.jpg
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\nec8-protocol.jpeg
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\One-or-Zero.jpeg
+					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta.png
 			-bifeFritzing
 				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
@@ -520,9 +523,11 @@ DoorTry
 0=www\Main.php
 1=www\iniMem.php
 2=www\iniMenu.php
+3=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
+4=www\BitofExpert\BitofExpert.php
 [Selected Project Files]
 Main=
-Selected=www\iniMenu.php
+Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -532,3 +537,9 @@ Caret=1,1
 [www\iniMenu.php]
 TopLine=123
 Caret=1,1
+[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino]
+TopLine=99
+Caret=1,1
+[www\BitofExpert\BitofExpert.php]
+TopLine=196
+Caret=6,208
