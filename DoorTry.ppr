@@ -17,11 +17,11 @@ HTServer=localhost
 Extensions=*.*
 [Project tree]
 DoorTry
-	+www
+	-www
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		+BitofExpert
+		-BitofExpert
 			-bifeArduino
 				-infrakrasnyj-pult-na-smartfone-dlya-vsego
 					-vybor-kodov-universalnogo-pulta
@@ -31,8 +31,8 @@ DoorTry
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\ik-datchik-vs1838b.jpg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\modul-ky-022-s-infrakrasnym-datchikom.jpg
-			+bifeFritzing
-				+kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
+			-bifeFritzing
+				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\Structura-katalogov.jpg
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\USB-UART-CP2102-dtr.jpg
@@ -520,12 +520,9 @@ DoorTry
 0=www\Main.php
 1=www\iniMem.php
 2=www\iniMenu.php
-3=www\BitofExpert\BitofExpert.php
-4=www\BitofExpert\BitofExpert.html
-5=www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
+Selected=www\iniMenu.php
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -535,12 +532,3 @@ Caret=1,1
 [www\iniMenu.php]
 TopLine=123
 Caret=1,1
-[www\BitofExpert\BitofExpert.php]
-TopLine=252
-Caret=1,290
-[www\BitofExpert\BitofExpert.html]
-TopLine=22
-Caret=1,1
-[www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html]
-TopLine=5
-Caret=237,20
