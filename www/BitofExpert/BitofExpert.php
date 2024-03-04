@@ -198,17 +198,18 @@ if (($par>'')||($tit>''))
    // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
    $FileContent=MakeImgWidth40($FileContent);
 
-   // В файле .md могут быть ссылки на локальные XML-файлы след.образом:
-   //    <a href="LCD-FM-RX-V2.0.xml">Формат FZP</a>
+   // В файле .md могут быть ссылки на локальные XML-файлы, INO-файлы след.образом:
+   //    <a href=             "LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a>
+   //    <a href="MakeProntoHEX/MakeProntoHEX.ino">Скетч для подбора кодов MakeProntoHEX</a>
    // Делаем ссылку с относительным адресом файла
-   $regXml1='/<a\shref="([a-zA-Z0-9\-\.]+)">/uU';
+   $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)">/uU';
    $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1">',$FileContent);
 
    // Показываем все xml-файлы по найденным ссылкам
-   //$FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
+   $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
 
    // Показываем все ino-файлы по найденным ссылкам
-   //$FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
+   $FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
    
    // Меняем заголовок страницы <title>Крошки опыта</title>
    $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
@@ -264,7 +265,7 @@ function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
          $TitleXml=substr($TitleXml,0,strlen($TitleXml)-4);
          // Формируем рег.выражение (экранируем)
          $regNXml='/'.preg_quote($NameXml,'/').'/uU';
-         echo '$NameXml='.$NameXml.'<br>';
+         //echo '$NameXml='.$NameXml.'<br>';
          //echo '$FileXml='.$FileXml.'<br>';
          //echo '$TitleXml='.$TitleXml.'<br>';
          //echo '$regNXml='.$regNXml.'<br>';
@@ -397,7 +398,7 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
          if ($ext=='ino') 
            $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_ino($FileXml),$FileContent);
          else 
-           $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>');
+           $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>',$FileContent);
       }
    }
    return $FileContent;
@@ -408,11 +409,9 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
 // ****************************************************************************
 function highlight_ino($FileName)
 {
-   //$FileContent=file_get_contents($FileName);
-   //$FileCode=highlight_string($FileContent,true);
+   $FileContent=file_get_contents($FileName);
+   $FileCode=highlight_string($FileContent,true);
    
-   $FileCode='<br>***'.$FileName.'***<br>';
-   /*
    // Вырезаем верхний и единственный SPAN: <span style="color: #000000"> и </span>, 
    // которые появились после работы highlight_string()
    $FileCode=preg_replace("~<code><span.*>~iU",'',$FileCode);
@@ -421,44 +420,37 @@ function highlight_ino($FileName)
 
    $cRU="абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
 
-   // Окрашиваем двухкомпонентные строки c тегами:
-   // &lt;author&gt;Vladimir&nbsp;Trufanov&lt;/author&gt; 
-   $FileCode=preg_replace("~&lt;([a-zA-Z0-9]+)&gt;([a-zA-Z0-9&;:/\-\.]+)&lt;([/a-zA-Z0-9]+)&gt;~iU",
-      '&lt;$1&gt;<span style="color:Blue">$2</span>&lt;$3&gt;',
+   // Окрашиваем цифры с точкой между круглыми скобками в синий цвет:
+   //      delay(4000);
+   $FileCode=preg_replace("~\(([0-9\.\-\+]+)\)~iU",
+      '<span style="color:Blue">($1)</span>',
+      $FileCode);
+   
+   // Окрашиваем между кавычками в коричневый цвет:
+   // Serial.print(F("Датчик готов к приему ИК-сигналов протоколов:\r\n"));
+   $FileCode=preg_replace("~\"([a-zA-Z0-9".$cRU."\.\-=&;_]+)\"~iU",
+      '<span style="color:SaddleBrown">"$1"</span>',
       $FileCode);
 
-   // Окрашиваем трехкомпонентные строки c тегами:
-   // &lt; property&nbsp;name="family" &gt; FM&nbsp;radio                      &lt; /property &gt;
-   // &lt; property&nbsp;name="прием"  &gt; 87,0&nbsp;МГц-108,0&nbsp;МГц&nbsp; &lt; /property &gt;
-   $FileCode=preg_replace(
-      "~&lt;([a-zA-Z0-9".$cRU."&;:<>\s=\"/]+)&gt;([a-zA-Z0-9".$cRU."&;:\,/\-\.]+)&lt;([/a-zA-Z0-9]+)&gt;~U",
-      '&lt;$1&gt;<span style="color:DarkSlateGray">$2</span>&lt;$3&gt;',
-      $FileCode);
-   
-   // Окрашиваем двухкомпонентные строки без тегов:
-   //    fritzingVersion="0.3.15b.02.03.3943" 
-   //    moduleId="LCD-FM-RX-V2.0_52aa9f163650adf1bd33aebd1592fa04_1" 
-   //    name="прием"
-   $FileCode=preg_replace("~([a-zA-Z0-9\.]+)=\"([a-zA-Z0-9".$cRU."\.\-&;_]+)\"~iU",
-      '<span style="color:LightSeaGreen">$1</span>="<span style="color:Blue">$2</span>"',
-      $FileCode);
-   
    // Окрашиваем комментарии
-   // <!--         Файл метаданных компонента (детали) .fzp                          -->
-   // &lt;!--&nbsp;Файл&nbsp;метаданных&nbsp;компонента&nbsp;(детали)&nbsp;.fzp&nbsp;--&gt;
-   $FileCode=preg_replace("~&lt;!--(.*)--&gt;~iU", '&lt;!--<span style="color:Green">$1</span>--&gt;',$FileCode);
+   //   /*
+   //   <br />&nbsp;*&nbsp;MakeProntoHEX.cpp
+   //   <br />&nbsp;*
+   //   <br />&nbsp;*******************************************************************************
+   //   <br />&nbsp;
+   //   */
+   $FileCode=preg_replace("~\/\*(.*)\*\/~iU", '<span style="color:Green">/*$1*/</span>',$FileCode);
+   // Окрашиваем комментарии
+   //   <br />//&nbsp;Пример&nbsp;места&nbsp;размещения&nbsp;arduino.h
+   //   <br />//&nbsp;C:/Users/Евгеньевич/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino/Arduino.h
+   $FileCode=preg_replace("~\/\/(.*)<br\s/>~iU", '<span style="color:Green">//$1</span><br />',$FileCode);
+  
    
-   // Окрашиваем xml version
-   // &lt;?xml&nbsp;version='1.0'&nbsp;encoding='UTF-8'?&gt;
-   $FileCode=preg_replace("~&lt;\?xml.*\?&gt;~iU", '<span style="color:#FF8000">$0</span>',$FileCode);
-   
-   // Окрашиваем защищенный комментарий
-   $FileCode=preg_replace("~&lt;description&gt;.*&lt;/description&gt;~iU",'<span style="color:Chocolate">$0</span>',$FileCode);
-
    $FileCode=
-      '<div style="color:Purple;background:Azure;font-size:1.4rem;'.
+      '<div style="color:Black;background:Azure;font-size:1.4rem;'.
       'font-weight:bold;overflow-x:auto;">'.$FileCode.'</div>';
-   */
+   
+
    return $FileCode;
 }
 
