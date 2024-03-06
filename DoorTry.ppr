@@ -22,14 +22,13 @@ DoorTry
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		+BitofExpert
-			+bifeArduino
-				+infrakrasnyj-pult-na-smartfone-dlya-vsego
-					+MakeProntoHEX
+			-bifeArduino
+				-infrakrasnyj-pult-na-smartfone-dlya-vsego
+					-MakeProntoHEX
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\PinDefinitionsAndMore.h
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\ik-datchik-vs1838b.jpg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
-					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.htmlo
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\modul-ky-022-s-infrakrasnym-datchikom.jpg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\nec8-protocol.jpeg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\One-or-Zero.jpeg
@@ -525,9 +524,11 @@ DoorTry
 2=www\iniMenu.php
 3=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
 4=www\BitofExpert\BitofExpert.php
+5=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
+6=www\BitofExpert\BitofExpert.html
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.php
+Selected=www\BitofExpert\BitofExpert.html
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -538,8 +539,14 @@ Caret=1,1
 TopLine=123
 Caret=1,1
 [www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino]
-TopLine=151
-Caret=2,105
+TopLine=1
+Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=412
-Caret=44,425
+TopLine=416
+Caret=62,450
+[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html]
+TopLine=108
+Caret=1,1
+[www\BitofExpert\BitofExpert.html]
+TopLine=15
+Caret=1,1

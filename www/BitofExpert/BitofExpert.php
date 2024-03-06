@@ -447,8 +447,8 @@ function highlight_ino($FileName)
   
    
    $FileCode=
-      '<div style="color:Black;background:Azure;font-size:1.4rem;'.
-      'font-weight:bold;overflow-x:auto;">'.$FileCode.'</div>';
+      '<div style="color:Black;background:Azure;font-size:1.6rem;'.
+      'font-weight:bold;overflow-x:auto;"><code>'.$FileCode.'</code></div>';
    
 
    return $FileCode;
