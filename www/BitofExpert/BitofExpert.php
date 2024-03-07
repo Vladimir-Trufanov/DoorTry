@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.8, 24.02.2024                                   Автор:      Труфанов В.Е.
+// v1.9, 07.03.2024                                   Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 29.02.2024
 
 /**
@@ -89,7 +89,7 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}\.md/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
-   $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>="А-Яа-яЁё]+)<\/a>/uU';
+   $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
@@ -188,6 +188,14 @@ $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
 // Модифицируем вызов имеющихся изображений, XML-файлов и меняем заголовок
 if (($par>'')||($tit>''))
 {
+   // В файле .md могут быть показаны видео след.образом:
+   //    <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls>
+   $regImgs1='/<video\ssrc="/uU';
+   $FileContent=preg_replace($regImgs1,'<video src="'.$urlDir,$FileContent);
+   // В файле .md могут быть показаны изображения след.образом:
+   // <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls poster="poster-pult.jpg">
+   $regImgs1='/\sposter="/uU';
+   $FileContent=preg_replace($regImgs1,' poster="'.$urlDir,$FileContent);
    // В файле .md могут быть показаны изображения след.образом:
    //    <p><img src="probnyj-proekt.jpg" /></p>
    //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />

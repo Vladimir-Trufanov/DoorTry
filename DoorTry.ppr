@@ -22,8 +22,12 @@ DoorTry
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		+BitofExpert
-			-bifeArduino
-				-infrakrasnyj-pult-na-smartfone-dlya-vsego
+			+bifeArduino
+				+byl-smartfon-a-stal-eshchyo-i-pult
+					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html
+					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\GalaxyS4-Pult.mp4
+					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\IR_ChrisTree.txt
+				+infrakrasnyj-pult-na-smartfone-dlya-vsego
 					-MakeProntoHEX
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\PinDefinitionsAndMore.h
@@ -524,11 +528,12 @@ DoorTry
 2=www\iniMenu.php
 3=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
 4=www\BitofExpert\BitofExpert.php
-5=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
-6=www\BitofExpert\BitofExpert.html
+5=www\BitofExpert\BitofExpert.html
+6=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
+7=www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.html
+Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -536,17 +541,20 @@ Caret=24,27
 TopLine=1
 Caret=1,1
 [www\iniMenu.php]
-TopLine=123
+TopLine=107
 Caret=1,1
 [www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino]
 TopLine=1
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=416
-Caret=62,450
-[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html]
-TopLine=108
-Caret=1,1
+TopLine=181
+Caret=42,198
 [www\BitofExpert\BitofExpert.html]
-TopLine=15
+TopLine=17
+Caret=148,37
+[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html]
+TopLine=41
 Caret=1,1
+[www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html]
+TopLine=63
+Caret=99,89
