@@ -22,12 +22,13 @@ DoorTry
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		+BitofExpert
-			+bifeArduino
-				+byl-smartfon-a-stal-eshchyo-i-pult
+			-bifeArduino
+				-byl-smartfon-a-stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html
 					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\GalaxyS4-Pult.mp4
 					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\IR_ChrisTree.txt
-				+infrakrasnyj-pult-na-smartfone-dlya-vsego
+					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\poster-pult.jpg
+				-infrakrasnyj-pult-na-smartfone-dlya-vsego
 					-MakeProntoHEX
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\PinDefinitionsAndMore.h
@@ -63,7 +64,6 @@ DoorTry
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
-			www\BitofExpert\BitofExpert.htmlo
 			www\BitofExpert\BitofExpert.php
 		-font-awesome-4.7.0
 			-css
@@ -528,9 +528,6 @@ DoorTry
 2=www\iniMenu.php
 3=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
 4=www\BitofExpert\BitofExpert.php
-5=www\BitofExpert\BitofExpert.html
-6=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html
-7=www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
@@ -547,14 +544,5 @@ Caret=1,1
 TopLine=1
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=181
-Caret=42,198
-[www\BitofExpert\BitofExpert.html]
-TopLine=17
-Caret=148,37
-[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\infrakrasnyj-pult-na-smartfone-dlya-vsego.html]
-TopLine=41
-Caret=1,1
-[www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html]
-TopLine=63
-Caret=99,89
+TopLine=331
+Caret=7,11

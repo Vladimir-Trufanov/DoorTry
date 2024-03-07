@@ -99,6 +99,19 @@ function MakeLinks($FileContent)
    {
       $FileContent=preg_replace($regArts1,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
    }
+   // Определяем регулярное выражение для взаимных ссылок между материалами в BitofExpert
+   //$regArts1='/href="          bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
+   $regArts2='/href="\.\.\/\.\.\/bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
+   // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
+   if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
+   {
+      $FileContent=preg_replace($regArts2,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
+   }
+   else
+   {
+      $FileContent=preg_replace($regArts2,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+   }
+ 
    return $FileContent;
 }
 // ****************************************************************************
@@ -190,6 +203,9 @@ if (($par>'')||($tit>''))
 {
    // В файле .md могут быть показаны видео след.образом:
    //    <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls>
+   /*
+   <iframe src="https://vk.com/video_ext.php?oid=41932239&id=456239392&hash=ad25d1a9c868b9d8" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+   */
    $regImgs1='/<video\ssrc="/uU';
    $FileContent=preg_replace($regImgs1,'<video src="'.$urlDir,$FileContent);
    // В файле .md могут быть показаны изображения след.образом:
@@ -210,8 +226,10 @@ if (($par>'')||($tit>''))
    //    <a href=             "LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a>
    //    <a href="MakeProntoHEX/MakeProntoHEX.ino">Скетч для подбора кодов MakeProntoHEX</a>
    // Делаем ссылку с относительным адресом файла
-   $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)">/uU';
-   $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1">',$FileContent);
+   $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)\.xml">/uU';
+   $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1.xml">',$FileContent);
+   $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)\.ino">/uU';
+   $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1.ino">',$FileContent);
 
    // Показываем все xml-файлы по найденным ссылкам
    $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
