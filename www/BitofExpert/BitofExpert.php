@@ -29,7 +29,7 @@
 // и модифицируем текст страницы
 function MakeImgWidth40($FileContent)
 {
-   // Перечень реальных файловизображений в разных файлах md->html
+   // Перечень реальных файлов изображений в разных файлах md->html
    $aimwidth40=array
    (
       'Last-step.jpg', 
@@ -45,6 +45,29 @@ function MakeImgWidth40($FileContent)
       $sfilename=quotemeta($filename); // экранировали символы в имени файла
       $regImgs2='/\/'.$sfilename.'"/uU';
       $FileContent=preg_replace($regImgs2,'/'.$filename.'" class="imgWidth40"',$FileContent);
+   }
+   return $FileContent;
+}
+
+// Инициализируем массив изображений для деталей Fritzing (с шириной 31% для класса CSS: .imgFritzing
+// и модифицируем текст страницы
+function MakeImgFritzing($FileContent)
+{
+   // Перечень реальных файлов изображений в разных файлах md->html для Fritzing
+   $aimFritzing=array
+   (
+      'Battery3AA-A',
+      'IRFZ24N', 
+      'LCD-FM-RX-V2.0', 
+      'USB-TTL_UART', 
+   );
+   $Result=false;
+   foreach ($aimFritzing as $filename) 
+   {
+      // Отлавливаем изображения для Fritzing
+      $sfilename=quotemeta($filename); // экранировали символы в имени файла
+      $regImgs2='/\/'.$sfilename.'.jpg"/uU';
+      $FileContent=preg_replace($regImgs2,'/'.$filename.'" class="imgFritzing" style="width:31%"',$FileContent);
    }
    return $FileContent;
 }
@@ -217,10 +240,13 @@ if (($par>'')||($tit>''))
    //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
    $regImgs1='/<img\ssrc="/uU';
    $FileContent=preg_replace($regImgs1,'<img src="'.$urlDir,$FileContent);
+
    // Отлавливаем изображения с заранее заданной шириной в процентах:
    // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
    // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
    $FileContent=MakeImgWidth40($FileContent);
+   // Отлавливаем изображения для деталей Fritzing 
+   //$FileContent=MakeImgFritzing($FileContent);
 
    // В файле .md могут быть ссылки на локальные XML-файлы, INO-файлы след.образом:
    //    <a href=             "LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a>

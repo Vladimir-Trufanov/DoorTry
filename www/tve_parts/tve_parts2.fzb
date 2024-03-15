@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="1.0.2b.2023-12-20.CD-1901-0-dbdbe34c" icon="C:/Fritzing-parts/tve_parts/tve_parts.png">
+    <title>tve_parts</title>
+    <instances>
+        <instance moduleIdRef="IRFZ24N" modelIndex="85417760" path="C:/Users/Евгеньевич/Documents/Fritzing/parts/user/IRFZ24N.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>

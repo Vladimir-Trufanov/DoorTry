@@ -39,3 +39,5 @@ Stack trace:
 [27-Feb-2024 11:10:03 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 214
 [27-Feb-2024 11:10:30 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 214
 [28-Feb-2024 18:11:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 289
+[15-Mar-2024 20:42:09 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$regXml1' (T_VARIABLE) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 254
+[15-Mar-2024 20:43:39 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '$regXml1' (T_VARIABLE) in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 254

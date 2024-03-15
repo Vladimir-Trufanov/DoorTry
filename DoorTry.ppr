@@ -22,12 +22,12 @@ DoorTry
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		+BitofExpert
-			+bifeArduino
-				+byl-smartfon-a-stal-eshchyo-i-pult
-					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\byl-smartfon-a-stal-eshchyo-i-pult.html
-					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\GalaxyS4-Pult.mp4
-					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\IR_ChrisTree.txt
-					www\BitofExpert\bifeArduino\byl-smartfon-a-stal-eshchyo-i-pult\poster-pult.jpg
+			-bifeArduino
+				-byl-smartfon---stal-eshchyo-i-pult
+					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
+					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\GalaxyS4-Pult.mp4
+					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\IR_ChrisTree.txt
+					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\poster-pult.jpg
 				-infrakrasnyj-pult-na-smartfone-dlya-vsego
 					-MakeProntoHEX
 						www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
@@ -38,7 +38,7 @@ DoorTry
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\nec8-protocol.jpeg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\One-or-Zero.jpeg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta.png
-			-bifeFritzing
+			+bifeFritzing
 				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\Structura-katalogov.jpg
@@ -49,6 +49,14 @@ DoorTry
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
+				+rabochie-komponenty-dlya-fritzing-tve-parts
+					-images
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\Battery3AA-A.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\CP2102-USB-UART.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\IRFZ24N.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\LCD-FM-RX-V2.0.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\USB-TTL_UART.jpg
+					www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\rabochie-komponenty-dlya-fritzing-tve-parts.html
 			-bifeGitHub
 				-kak-udalit-repozitarij-iz-github
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Dashboard.jpg
@@ -483,6 +491,17 @@ DoorTry
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
 		-Temp
+		-tve_parts
+			-images
+				www\tve_parts\images\CP2102-USB-UART.jpg
+				www\tve_parts\images\IRFZ24N.jpg
+				www\tve_parts\images\LCD-FM-RX-V2.0.jpg
+				www\tve_parts\images\USB converter CP2102.jpg
+				www\tve_parts\images\USB TTL Serial Cable.jpg
+				www\tve_parts\images\USB-TTL_UART.jpg
+			www\tve_parts\.htaccess
+			www\tve_parts\tve_parts.png
+			www\tve_parts\tve_parts2.fzb
 		www\.htaccess
 		www\.user.ini
 		www\ApiPogoda.php
@@ -525,28 +544,28 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iniMem.php
-2=www\iniMenu.php
-3=www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino
-4=www\BitofExpert\BitofExpert.php
+2=www\BitofExpert\BitofExpert.php
+3=www\BitofExpert\BitofExpert.css
+4=www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\rabochie-komponenty-dlya-fritzing-tve-parts.html
 5=www\BitofExpert\BitofExpert.html
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.html
+Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
 TopLine=2
 Caret=24,27
 [www\iniMem.php]
 TopLine=1
 Caret=1,1
-[www\iniMenu.php]
-TopLine=107
+[www\BitofExpert\BitofExpert.php]
+TopLine=127
+Caret=6,249
+[www\BitofExpert\BitofExpert.css]
+TopLine=50
 Caret=1,1
-[www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\MakeProntoHEX\MakeProntoHEX.ino]
+[www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\rabochie-komponenty-dlya-fritzing-tve-parts.html]
 TopLine=1
 Caret=1,1
-[www\BitofExpert\BitofExpert.php]
-TopLine=11
-Caret=7,11
 [www\BitofExpert\BitofExpert.html]
-TopLine=23
-Caret=1,59
+TopLine=17
+Caret=1,1
