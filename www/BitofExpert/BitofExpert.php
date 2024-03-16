@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.9, 07.03.2024                                   Автор:      Труфанов В.Е.
+// v1.10, 16.03.2024                                  Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 29.02.2024
 
 /**
@@ -25,50 +25,40 @@
  * 
  */
 
-// Инициализируем массив изображений с шириной 40% для класса CSS: .imgWidth40
-// и модифицируем текст страницы
+// ****************************************************************************
+// *           Инициализировать массив изображений с заданной шириной         *
+// *             (по умолчанию 40%) и модифицировать текст страницы           *
+// ****************************************************************************
 function MakeImgWidth40($FileContent)
 {
-   // Перечень реальных файлов изображений в разных файлах md->html
-   $aimwidth40=array
+   $aimwidth43=array
    (
       'Last-step.jpg', 
+      'LCD-FM-RX-V2.0.jpg', 
    );
-   $Result=false;
-   foreach ($aimwidth40 as $filename) 
+   $FileContent=MakeImgWidth($FileContent,43,$aimwidth43);
+   
+   $aimwidth31=array
+   (
+      'Battery3AA-A.jpg',
+      'CP2102-USB-UART.jpg',
+      'IRFZ24N.jpg', 
+      'USB-TTL_UART.jpg', 
+   );
+   $FileContent=MakeImgWidth($FileContent,31,$aimwidth31);
+   return $FileContent;
+}
+function MakeImgWidth($FileContent,$Percent,$aimwidth)
+{
+   $Result=$FileContent;
+   foreach ($aimwidth as $filename) 
    {
       // Отлавливаем изображения с заранее заданной шириной в процентах:
       // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
       // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
-      
-      // $regImgs1='/\/([0-9a-zA-Z\-]+)\.jpg"/uU';
       $sfilename=quotemeta($filename); // экранировали символы в имени файла
       $regImgs2='/\/'.$sfilename.'"/uU';
-      $FileContent=preg_replace($regImgs2,'/'.$filename.'" class="imgWidth40"',$FileContent);
-   }
-   return $FileContent;
-}
-
-// Инициализируем массив изображений для деталей Fritzing (с шириной 31% для класса CSS: .imgFritzing
-// и модифицируем текст страницы
-function MakeImgFritzing($FileContent)
-{
-   // Перечень реальных файлов изображений в разных файлах md->html для Fritzing
-   $aimFritzing=array
-   (
-      'Battery3AA-A',
-      'CP2102 USB UART',
-      'IRFZ24N', 
-      'LCD-FM-RX-V2.0', 
-      'USB-TTL_UART', 
-   );
-   $Result=false;
-   foreach ($aimFritzing as $filename) 
-   {
-      // Отлавливаем изображения для Fritzing
-      $sfilename=quotemeta($filename); // экранировали символы в имени файла
-      $regImgs2='/\/'.$sfilename.'.jpg"/uU';
-      $FileContent=preg_replace($regImgs2,'/'.$filename.'" class="imgFritzing" style="width:31%"',$FileContent);
+      $FileContent=preg_replace($regImgs2,'/'.$filename.'" class="imgWidth40" style="width:'.$Percent.'%"',$FileContent);
    }
    return $FileContent;
 }
@@ -135,7 +125,6 @@ function MakeLinks($FileContent)
    {
       $FileContent=preg_replace($regArts2,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
    }
- 
    return $FileContent;
 }
 // ****************************************************************************
@@ -216,12 +205,10 @@ if ($tit>'')
 }
 // Инициируем имена xml-файлов, файлов-ino для показа
 $FileXml=''; $FileIno='';
-
 // Определяем спецификацию файла текущей страницы для загрузки, 
 // загружаем его и модифицируем
 $FileSpec=$FileDir.$FileName;
 $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
-
 // Модифицируем вызов имеющихся изображений, XML-файлов и меняем заголовок
 if (($par>'')||($tit>''))
 {
@@ -340,9 +327,7 @@ function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
       }
    }
    return $FileContent;
-
 }
-
 // ****************************************************************************
 // *                  Из XML-файла получить раскрашенный текст                *
 // ****************************************************************************
@@ -506,6 +491,5 @@ function highlight_ino($FileName)
 
    return $FileCode;
 }
-
 // ******************************************************** BitofExpert.php ***
 
