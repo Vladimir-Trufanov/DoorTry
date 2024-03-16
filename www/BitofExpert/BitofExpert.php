@@ -57,6 +57,7 @@ function MakeImgFritzing($FileContent)
    $aimFritzing=array
    (
       'Battery3AA-A',
+      'CP2102 USB UART',
       'IRFZ24N', 
       'LCD-FM-RX-V2.0', 
       'USB-TTL_UART', 
@@ -112,7 +113,7 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}\.md/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
-   $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
+   $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
@@ -124,7 +125,7 @@ function MakeLinks($FileContent)
    }
    // Определяем регулярное выражение для взаимных ссылок между материалами в BitofExpert
    //$regArts1='/href="          bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
-   $regArts2='/href="\.\.\/\.\.\/bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
+   $regArts2='/href="\.\.\/\.\.\/bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {

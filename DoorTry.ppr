@@ -49,14 +49,14 @@ DoorTry
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
-				+rabochie-komponenty-dlya-fritzing-tve-parts
+				-rabochie-komponenty-dlya-fritzing---tve_parts
 					-images
-						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\Battery3AA-A.jpg
-						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\CP2102-USB-UART.jpg
-						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\IRFZ24N.jpg
-						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\LCD-FM-RX-V2.0.jpg
-						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\images\USB-TTL_UART.jpg
-					www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\rabochie-komponenty-dlya-fritzing-tve-parts.html
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve_parts\images\Battery3AA-A.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve_parts\images\CP2102-USB-UART.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve_parts\images\IRFZ24N.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve_parts\images\LCD-FM-RX-V2.0.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve_parts\images\USB-TTL_UART.jpg
+					www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve_parts\rabochie-komponenty-dlya-fritzing---tve-parts.html
 			-bifeGitHub
 				-kak-udalit-repozitarij-iz-github
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Dashboard.jpg
@@ -546,8 +546,7 @@ DoorTry
 1=www\iniMem.php
 2=www\BitofExpert\BitofExpert.php
 3=www\BitofExpert\BitofExpert.css
-4=www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\rabochie-komponenty-dlya-fritzing-tve-parts.html
-5=www\BitofExpert\BitofExpert.html
+4=www\BitofExpert\BitofExpert.html
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
@@ -558,13 +557,10 @@ Caret=24,27
 TopLine=1
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=127
-Caret=6,249
+TopLine=228
+Caret=6,250
 [www\BitofExpert\BitofExpert.css]
 TopLine=50
-Caret=1,1
-[www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing-tve-parts\rabochie-komponenty-dlya-fritzing-tve-parts.html]
-TopLine=1
 Caret=1,1
 [www\BitofExpert\BitofExpert.html]
 TopLine=17
