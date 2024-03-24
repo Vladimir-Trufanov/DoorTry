@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="обработка-прерываний-от-таймеров-2024-03-20"><a href="https://github.com/Vladimir-Trufanov/BitofExpert/blob/main/bifeArduino/obrabotka-preryvanij-ot-tajmerov/obrabotka-preryvanij-ot-tajmerov.md">Обработка прерываний от таймеров</a> [2024-03-20]</h2>
+<p>Обычно при выполнении инструкций скетча Arduino последовательно выполняет все команды функции <strong><em>loop()</em></strong> в том порядке, в котором они записаны. Прерывания по таймеру позволяют на мгновение приостановить обычную последовательность действий, происходящих в цикле <strong><em>loop()</em></strong>, с точно рассчитанной периодичностью и выполнить отдельный набор команд. Как только эти команды будут выполнены, Arduino снова продолжит работу с того места, где она была прервана.</p>
+<p>Прерывания полезны для:</p>
+<ul>
+<li>измерения входящего сигнала с равными интервалами (постоянная частота дискретизации);</li>
+<li>вычисления времени между двумя событиями;</li>
+<li>отправки сигнала определенной частоты;</li>
+<li>периодической проверки входящих данных;</li>
+<li>многое другое…</li>
+</ul>
+<p>Для Arduino Nano/UNO/Pro Mini доступно три таймера: <strong><em>Timer0, Timer1, Timer2</em></strong> (на чипах Atmega168 и Atmega328). Для Arduino MEGA – пять: <strong><em>Timer0, Timer1, Timer2, Timer3, Timer4, Timer5</em></strong>. Так же имеется сторожевой таймер - <strong><em>WDT</em></strong>, который можно использовать для защиты от сбоев или как механизм программного сброса.</p>
+<p><strong><em>Timer0</em></strong> является 8 битным таймером, это означает, что его счетный регистр может хранить числа от 0 до 255 (т.е. байт без знака). Timer0 используется стандартными временными функциями Arduino delay() и millis().</p>
+<p><strong><em>Timer1</em></strong> это 16 битный таймер с максимальным значением счета 65535 (целое без знака). Этот таймер использует библиотека Arduino Servo.</p>
+<p><strong><em>Timer2</em></strong> - 8 битный и очень похож на Timer0. Он используется в Arduino функции tone().</p>
+<p><strong><em>Timer3, Timer4, Timer5</em></strong>. Чипы ATmega1280 и ATmega2560 (установлены в вариантах Arduino Mega) имеют три добавочных таймера. Все они 16 битные и работают аналогично Timer1.</p>
+<h3 id="возникновение-прерываний-от-таймеров">Возникновение прерываний от таймеров</h3>
+<p>Оттолкнёмся для сведения!</p>
+<ul>
+<li>Arduino Uno - микропроцессор ATmega328P, тактовая частота 16 МГц;</li>
+<li>Arduino Nano - микропроцессор Atmel ATmega168, 16 МГц</li>
+<li>Arduino Pro Mini - микропроцессор ATmega168, 8 МГц</li>
+<li>ESP8266 - 32-битный микропроцессор Tensilica Lx106, 80 МГц</li>
+<li>ESP32 - 32-битный микропроцессор Xtensa LX6, 160 или 240 МГц</li>
+</ul>
+<p>Таймеры увеличивают значение <a href="#%D1%81%D1%87%D0%B5%D1%82%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80-tcntx">счетного регистра</a> за один такт источника тактовой частоты. Но, <strong><em>как правил</em></strong>о, это очень быстро. Поэтому в <a href="#%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D1%8B-tccr">конфигурационном регистре</a> включается коэффициент - предделитель, который меняет счётный регистр за 8, 64, 256 или 1024 такта.</p>
+<p>Источник тактовой частоты может быть внутренний, в этом случае используется тактовая частота процессора, или внешний. В случае внешнего источника изменение счетчика в счетном регистре происходит по переднему или заднему фронту этого внешнего тактового источника.</p>
+<p>Таймер увеличивает значение счетного регистра на единичку за раз, пока не достигнет максимального значения, после чего счетчик переполняется, от этого возникает прерывание последовательной работы процессора, счетчик сбрасывается в ноль, процессор быстро отрабатывает маленькую программу прерывания и продолжает прерванные действия.</p>
+<p>Так работает режим Normal (по переполнению счетчика). Второй из основных режимов - СТС (Clear Timer on Compare или “сброс при совпадении”) вызывает прерывание и сброс значения счетного регистра при совпадению со значением <a href="#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80-%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-ocrx">регистра сравнения</a>.</p>
+<h3 id="расчет-значения-счетчика-для-прерывания">Расчет значения счетчика для прерывания</h3>
+<p>Для понимания вопроса сделаем несколько расчетов для Arduino Pro Mini - микропроцессора ATmega168, 8 МГц.</p>
+<h4 id="определяем-интервал-для-возникновения-прерывания-по-переполнению-первого-таймера."><em>1. Определяем интервал для возникновения прерывания по переполнению первого таймера.</em></h4>
+<p><img src="raschet-znacheniya-schetchika-dlya-preryvaniya.jpg" /></p>
+<h4 id="определяем-интервал-для-возникновения-прерывания-по-переполнению-нулевого-таймера."><em>2. Определяем интервал для возникновения прерывания по переполнению нулевого таймера.</em></h4>
+<p>В предыдущем расчете определили, что переполнение первого 16-разрядного счетчика для Arduino Pro Mini наступает примерно через 8 миллисекунд.</p>
+<p>Сделаем расчет для нулевого 8-разрядного счетчика:</p>
+<pre><code>Fcpu = 8000000 Гц                         - тактовая частота процессора
+Tcpu = 1/Fcpu=1/8000000=0,000000125 сек   - период тактового сигнала
+Nc   = 128                                - максимальное число тактов
+
+Период до прерывания по переполнению счетчика:
+Tisr = Tcpu * Nc = 0,000000125 * 256 = 0,000032 с</code></pre>
+<p>Таким образом переполнение счетного регистра нулевого таймера наступает через 0,032 мсек.</p>
+<h4 id="выполняем-расчет-для-выполнения-прерывания-первого-таймера-по-совпадению-значений-регистров-через-1-секунду."><em>3. Выполняем расчет для выполнения прерывания первого таймера по совпадению значений регистров через 1 секунду.</em></h4>
+<p>Для использования режима СТС с целью получения интервала в одну секунду нужно определить два значения для размещения их в регистрах таймера:</p>
+<ul>
+<li>предделитель выбираем равным 1024 (предварительно), что обеспечивает изменение счетчика (счетного регистра) не по каждому такту процессора, а по прошествии 1024 тактов;</li>
+<li>значение счетчика определяем следующим образом за несколько шагов:</li>
+</ul>
+<ol type="1">
+<li><p>Разрешение таймера = 1 / (тактовая частота контроллера / предделитель)</p></li>
+<li><p>Значение счетчика = интервал таймера / разрешение таймера - 1 (дополнительная единица добавляется к счетчику потому, что при совпадении счетчика с заданным значением он сбросится в ноль. Сброс занимает один тактовый период, который надо учесть в расчетах. Во многих случаях ошибка в один период не слишком значима, но в высокоточных задачах она может быть критичной).</p></li>
+</ol>
+<pre><code>Разрешение таймера = 1 / (8000000 / 1024) = 0,000128 (cек)
+Значение счетчика  = 1 / 0,000128 - 1 = 7811,5 ~ 7812</code></pre>
+<p>Здесь мы получили значение счетчика равным 7811.5, если нам не критично “плюс-минус”, то можем округлить и с такими данными работать.</p>
+<p>Но, лучше, подобрать другой предделитель. Пусть будет 256.</p>
+<pre><code>Разрешение таймера = 1 / (8000000 / 256) = 0,000032 (cек)
+Значение счетчика  = 1 / 0,000032 - 1 = 31250 - 1 = 31249</code></pre>
+<p>Таким образом значение счетчика для сравнения целое и меньше 65536, что и требуется. Можно программировать прерывание.</p>
+<h4 id="скетч-обеспечить-мигание-светодиода-с-интервалом-в-1-сек-на-плате-arduino-uno"><a href="simple1/simple1.ino">Скетч “Обеспечить мигание светодиода с интервалом в 1 сек на плате Arduino Uno”</a></h4>
+<blockquote>
+<p>Следует заметить, что предделитель нужно выбирать аккуратно для малых временных интервалов, таким образом, чтобы, по возможности, отсутствовала дробная часть в количестве тактов для счетчика.</p>
+</blockquote>
+<h3 id="использование-ключевого-слова-volatile"><a href="http://www.pic24.ru/doku.php/osa/articles/volatile_for_chainiks">Использование ключевого слова volatile</a></h3>
+<p>Работа с переменными, объявляемыми в скетчах, компилятором подвергаются оптимизации. Внутреннее размещение и действия с ними, их структура могут быть изменены. Если это выполняется в последовательном коде (без прерываний кода), то модификации переменных нивелируются и проблемы не возникает.</p>
+<p>Теперь возьмём легко понимаемый пример. Пусть программист использует два бита для управления своими процессами и формирует следующий фрагмент кода</p>
+<pre><code>char a = 0;
+...
+a |= 1;
+...
+a |= 2;
+...</code></pre>
+<p>С точки зрения алгоритма устанавливаются два младших разряда в переменной a по разным причинам. Между установлением одного и второго разряда в переменной может вклиниться прерывание, пусть оно работает правильно, разберется с битами и сделает своё дело.</p>
+<p>Но оптимизатор компилятора может сделать подмену двух действий одним оператором:</p>
+<pre><code>a |= 3; </code></pre>
+<p>В этом случае <strong><em>логика взаимодействия</em></strong> между прерыванием и основным последовательным кодом <strong><em>изменится</em></strong>. Поэтому переменные, использование которых изменчиво, и которые, предположительно, могут повлиять на правильное поведение кода, следует объявлять изменчивыми (волотильными).</p>
+<p><strong><em>Типичным случаем</em></strong> для описания переменных, как волотильных, являются многопотоковые приложения (в т.ч. с обработчиками прерываний), когда две задачи обмениваются информацией через совместно используемый адрес ячейки памяти (глобальную переменную):</p>
+<pre><code>int cntr;
+
+void task1(void)
+{
+    cntr = 0;
+    
+    while (cntr == 0)
+    {
+        sleep(1);
+    }
+    ...
+}
+
+void task2(void)
+{
+    ...
+    cntr++;
+    sleep(10);
+    ...
+}</code></pre>
+<blockquote>
+<p>В общем случае, переменные, к которым нужно обращаться из основного кода и из обработчиков прерываний нужно помечать, как изменчивые (волотильные) с помощью квалификатора <strong><em>volatile</em></strong>.</p>
+</blockquote>
+<p>Ключевое слово volatile пишется до или после типа данных объявляемой переменной.</p>
+<pre><code>volatile int cntr;
+int volatile cntr;</code></pre>
+<blockquote>
+<p>Переменная должна быть объявлена с ключевым словом volatile всякий раз, когда ее значение может измениться неожиданно.</p>
+</blockquote>
+<h4 id="скетч-управлять-светодиодом-используя-прерывание-по-переполнению-таймера"><a href="simple2/simple2.ino">Скетч “Управлять светодиодом, используя прерывание по переполнению таймера”</a></h4>
+<h3 id="регистры-настроек-таймеров"><a href="https://chipenable.ru/index.php/programming-avr/171-avr-timer-t0-ch1.html">Регистры настроек таймеров</a></h3>
+<h4 id="счетный-регистр-tcntx">Счетный регистр TCNTx</h4>
+<p>Это 8-ми разрядный счетный регистр (Timer/CouNTer - TCNT0, TCNT1, TCNT2 …). Когда таймер работает, по каждому импульсу тактового сигнала значение TCNTx изменяется на единицу. В зависимости от режима работы таймера, счетный регистр может или увеличиваться, или уменьшаться.</p>
+<p>Регистр TCNTx можно как читать, так и записывать. Последнее используется если требуется задать его начальное значение. Когда таймер работает, изменять содержимое счетного регистра не рекомендуется, так как это блокирует схему сравнения на один такт.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">TCNTx</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ReadWrite</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Начальное значение</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="регистр-сравнения-ocrx">Регистр сравнения OCRx</h4>
+<p>Это 8-ми разрядный регистр сравнения (Output Compare Register - OCR0, OCR2) или 16-ти разрядный (два канала - OCR1A, OCR1B). Его значение постоянно сравнивается со счетным регистром TCNTx и в случае совпадения таймер может выполнять какие-то действия - вызывать прерывание, менять состояние вывода и т.д. в зависимости от режима работы. Значение OCRx можно как читать, так и записывать.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">OCRx</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ReadWrite</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Начальное значение</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="конфигурационные-регистры-tccr">Конфигурационные регистры TCCR</h4>
+<p>Конфигурационные регистры (Timer/Counter Control Register) TCCRxA, TCCRxB, где x - номер таймера, определяют управление таймерами-счётчиками и содержат установочные биты: источник тактирования таймера, коэффициент предделителя, режим работы таймера-счетчика и поведение вывода.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">TCCRxA</th>
+<th style="text-align: center;">COMxA1</th>
+<th style="text-align: center;">COMxA0</th>
+<th style="text-align: center;">COMxB1</th>
+<th style="text-align: center;">COMxB0</th>
+<th style="text-align: center;">-</th>
+<th style="text-align: center;">-</th>
+<th style="text-align: center;">WGMx1</th>
+<th style="text-align: center;">WGMx0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Бит</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ReadWrite</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Начал. значение</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Биты WGMx1, WGMx0 (<strong><em>Wave Generator Mode</em></strong>) - определяют режим работы таймера-счетчика. Всего их может быть четыре - нормальный режим (normal), сброс таймера при совпадении (CTC), и два режима широтно-импульсной модуляции (FastPWM и Phase Correct PWM).</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">WGMx1</th>
+<th style="text-align: center;">WGMx0</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Нормальный режим (Normal)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Режим широтно-импульсной модуляции - Phase Correct PWM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Cброс таймера при совпадении (CTC)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Режим широтно-импульсной модуляции - FastPW</td>
+</tr>
+</tbody>
+</table>
+<p>Поведение вывода таймера зависит от режима работы. В режимах Normal и СTC вывод ведет себя одинаково, а вот в режимах широтно-импульсной модуляции его поведение отличается.</p>
+<p>Биты <strong><em>COM (Compare Match Output Mode)</em></strong> - определяют поведение вывода таймера. Если хоть один из этих битов установлен в 1, то вывод таймера перестает функционировать как обычный вывод общего назначения и подключается к схеме сравнения таймера счетчика. Однако при этом он должен быть еще настроен как выход.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">TCCRxB</th>
+<th style="text-align: center;">ICNCx</th>
+<th style="text-align: center;">ICESx</th>
+<th style="text-align: center;">-</th>
+<th style="text-align: center;">WGMx3</th>
+<th style="text-align: center;">WGMx2</th>
+<th style="text-align: center;">CSx2</th>
+<th style="text-align: center;">CSx1</th>
+<th style="text-align: center;">CSx0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Бит</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ReadWrite</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Начальное значение</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Биты CSx2, CSx1, CSx0 (<strong><em>Clock Select</em></strong>) - определяют источник тактовой частоты для таймера Тx и задают коэффициент предделителя. Таймер-счетчик может быть остановлен, может тактироваться от внутренней частоты и также может тактироваться от сигнала на выводе.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">CSx2</th>
+<th style="text-align: center;">CSx1</th>
+<th style="text-align: center;">CSx0</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Нет тактового источника (таймер-счетчик остановлен)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Тактовая частота контроллера</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Тактовая частота контроллера / 8 - делитель частоты</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Тактовая частота контроллера / 64</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Тактовая частота контроллера / 256</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Тактовая частота контроллера / 1024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Внешний источник. Тактирование по спаду - заднему фронту</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Внешний тактовый источник. Тактирование по переднему фронту</td>
+</tr>
+</tbody>
+</table>
+<h4 id="timsk---регистр-маски-прерываний-таймеров">TIMSK - регистр маски прерываний таймеров</h4>
+<p>Общий регистр (Timer/Counter Interrupt Mask Register) для трех таймеров; он содержит флаги разрешения прерываний. Например Timer0 может вызывать прерывания при переполнении счетного регистра TCNT0 и при совпадении счетного регистра с регистром сравнения OCR0. Соответственно для этого таймера в регистре TIMSK зарезервированы два бита - это TOIE0 и OCIE0.</p>
+<pre><code>TOIE0: 0-е значение бита запрещает прерывание по событию переполнение, 
+       1 - разрешает. 
+OCIE0: 0-е значение запрещает прерывания по событию совпадение, 
+       1 - разрешает.</code></pre>
+<p>Остальные биты относятся к другим таймерам.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">TIMSK</th>
+<th style="text-align: center;">OCIE2</th>
+<th style="text-align: center;">TOIE2</th>
+<th style="text-align: center;">TICIE1</th>
+<th style="text-align: center;">OCIE1A</th>
+<th style="text-align: center;">OCIE1B</th>
+<th style="text-align: center;">TOIE1</th>
+<th style="text-align: center;">OCIE0</th>
+<th style="text-align: center;">TOIE0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Бит</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ReadWrite</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Начальное значение</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<pre><code>7 бит - OCIE2  - прерывание в случаи совпадения TC2 - Timer2
+6 бит - TOIE2  - прерывание в случае переполнения TC2 
+5 бит - TICIE1 - прерывания в случае захвата TC1 - Timer1
+4 бит - OCIE1A - прерывание в случае совпадения A TC1
+3 бит - OCIE1B - прерывание в случае совпадения B TC1
+2 бит - TOIE1  - прерывание в случае переполнения TC1
+1 бит - OCIE0  - прерывание в случае совпадения TC0
+0 бит - TOIE0  - прерывание в случае переполнения TC0 - Timer0</code></pre>
+<h3 id="вызов-обработчиков-прерываний"><a href="http://adior.ru/index.php/robototekhnika/178-timer-interrupt">Вызов обработчиков прерываний</a></h3>
+<p>Обработка таймерных прерываний ведётся в стандартной функции <strong><em>ISR</em></strong>, которой передаётся обязательный и единственный параметр (вектор обработчика прерывания). Параметр напрямую связан с конкретным таймером и режимом работы счетчика, имена функции и параметров зарезервированы и их изменить нельзя.</p>
+<p>Векторы обработчиков прерываний:</p>
+<pre><code>WDT_vect          - прерывание от сторожевого таймера
+TIMER2_COMPA_vect - прерывание от таймера/счетчика T2 при совпадении с A
+TIMER2_COMPB_vect - прерывание от таймера/счетчика T2 при совпадении с B
+TIMER2_OVF_vect   - прерывание по переполнению таймера/счетчика T2
+TIMER1_CAPT_vect  - прерывание по захвату таймера/счетчика T1 (по записи)
+TIMER1_COMPA_vect - прерывание от таймера/счетчика T1 при совпадении с A
+TIMER1_COMPB_vect - прерывание от таймера/счетчика T1 при совпадении с B
+TIMER1_OVF_vect   - прерывание по переполнению таймера/счетчика T1
+TIMER0_COMPA_vect - прерывание от таймера/счетчика T0 при совпадении с A
+TIMER0_COMPB_vect - прерывание от таймера/счетчика T0 при совпадении с B
+TIMER0_OVF_vect   - прерывание по переполнению таймера/счетчика T0</code></pre>
+<p>Поэтому цель обработчика прерывания в Arduino всегда реализуется в коде функции с именем <strong><em>ISR</em></strong> и с правильно выбранным вектором обработки.</p>
+<p>Каждый таймер может генерировать несколько типов прерываний. Тип прерывания и его временные параметры зависят от значений служебных битов в специальных регистрах управления.</p>
+<p>Общую картину по запущенным или не запущенным обработчикам прерываний можно увидеть через статусный регистр TIFR (Timer/Counter Interrupt Flag Register).</p>
+<h4 id="tifr---статусный-регистр">TIFR - статусный регистр</h4>
+<p>Общий для всех таймеров-счетчиков регистр. Содержит статусные флаги, которые устанавливаются при возникновении событий. Для таймера Т0: TOV0 устанавливается в 1 при переполнении счетного регистра TCNT0, OCF0 - устанавливается в 1 при совпадении счетного регистра с регистром сравнения OCR0.</p>
+<p>Если в эти моменты в регистре TIMSK разрешено прерывание и установлен соответствующий бит, то микроконтроллер вызовет обработчик.</p>
+<p>Флаги автоматически очистятся при запуске обработчика прерывания.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">TIFR</th>
+<th style="text-align: center;">OCF2</th>
+<th style="text-align: center;">TOV2</th>
+<th style="text-align: center;">ICF1</th>
+<th style="text-align: center;">OCF1А</th>
+<th style="text-align: center;">OCF1B</th>
+<th style="text-align: center;">TOV1</th>
+<th style="text-align: center;">OCF0</th>
+<th style="text-align: center;">TOV0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Бит</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ReadWrite</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;">RW</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Начальное значение</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="библиография">Библиография</h3>
+<h4 id="arduino-timer-interrupts---httpswww.instructables.comarduino-timer-interrupts">1. <a href="https://www.instructables.com/Arduino-Timer-Interrupts/">Arduino Timer Interrupts</a> - https://www.instructables.com/Arduino-Timer-Interrupts/</h4>
+<h4 id="arduino-и-прерывания-таймера---httpshabr.comruarticles453276">2. <a href="https://habr.com/ru/articles/453276/">Arduino и прерывания таймера</a> - https://habr.com/ru/articles/453276/</h4>
+<h4 id="timer-interrupts---httpsarduinodiy.wordpress.com20120228timer-interrupts">3. <a href="https://arduinodiy.wordpress.com/2012/02/28/timer-interrupts/">Timer interrupts</a> - https://arduinodiy.wordpress.com/2012/02/28/timer-interrupts/</h4>
+<h4 id="как-использовать-ключевое-слово-volatile---httpschipenable.ruindex.phpprogramming-c60-how-to-use-cs-volatile-keyword.html">4. <a href="https://chipenable.ru/index.php/programming-c/60-how-to-use-cs-volatile-keyword.html">Как использовать ключевое слово volatile</a> - https://chipenable.ru/index.php/programming-c/60-how-to-use-cs-volatile-keyword.html</h4>
+</body>
+</html>

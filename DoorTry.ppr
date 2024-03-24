@@ -38,7 +38,15 @@ DoorTry
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\nec8-protocol.jpeg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\One-or-Zero.jpeg
 					www\BitofExpert\bifeArduino\infrakrasnyj-pult-na-smartfone-dlya-vsego\vybor-kodov-universalnogo-pulta.png
-			+bifeFritzing
+				-obrabotka-preryvanij-ot-tajmerov
+					-simple1
+						www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\simple1\simple1.ino
+					-simple2
+						www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\simple2\simple2.ino
+					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\obrabotka-preryvanij-ot-tajmerov.html
+					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\raschet-znacheniya-schetchika-dlya-preryvaniya.jpg
+					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\vyvody-po-preryvaniya-mikrokontrollera.jpeg
+			-bifeFritzing
 				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\Structura-katalogov.jpg
@@ -49,12 +57,13 @@ DoorTry
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\LCD-FM-RX-V20-parts.jpg
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\predstavlenie-detali-komponenta-vo-fritzing.html
 					www\BitofExpert\bifeFritzing\predstavlenie-detali-komponenta-vo-fritzing\sitemap.xml
-				+rabochie-komponenty-dlya-fritzing---tve-parts
+				-rabochie-komponenty-dlya-fritzing---tve-parts
 					-images
 						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\Battery3AA-A.jpg
-						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\CP2102 USB UART.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\CP2102-USB-UART.jpg
 						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\IRFZ24N.jpg
 						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\LCD-FM-RX-V2.0.jpg
+						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\USB-converer-CP2102.jpg
 						www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\images\USB-TTL_UART.jpg
 					www\BitofExpert\bifeFritzing\rabochie-komponenty-dlya-fritzing---tve-parts\rabochie-komponenty-dlya-fritzing---tve-parts.html
 			-bifeGitHub
@@ -481,7 +490,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		-Styles
+		+Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -491,17 +500,6 @@ DoorTry
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
 		-Temp
-		-tve_parts
-			-images
-				www\tve_parts\images\CP2102-USB-UART.jpg
-				www\tve_parts\images\IRFZ24N.jpg
-				www\tve_parts\images\LCD-FM-RX-V2.0.jpg
-				www\tve_parts\images\USB converter CP2102.jpg
-				www\tve_parts\images\USB TTL Serial Cable.jpg
-				www\tve_parts\images\USB-TTL_UART.jpg
-			www\tve_parts\.htaccess
-			www\tve_parts\tve_parts.png
-			www\tve_parts\tve_parts2.fzb
 		www\.htaccess
 		www\.user.ini
 		www\ApiPogoda.php
@@ -544,12 +542,20 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iniMem.php
+2=www\BitofExpert\BitofExpert.php
+3=www\BitofExpert\BitofExpert.css
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\BitofExpert\BitofExpert.css
 [www\Main.php]
 TopLine=2
 Caret=24,27
 [www\iniMem.php]
 TopLine=1
 Caret=1,1
+[www\BitofExpert\BitofExpert.php]
+TopLine=347
+Caret=1,1
+[www\BitofExpert\BitofExpert.css]
+TopLine=38
+Caret=14,66

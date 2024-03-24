@@ -23,19 +23,21 @@ body
 }
 #kroshki-opyta 
 {
-   margin-left:1rem; 
-   margin-right:1rem; 
    min-width:50%;
    text-align:justify; 
+   padding:.5rem;
+   padding:.5rem;
+   width:99%;
 }
 table
 {
-   width:100%;
+   border-collapse: collapse;
+   width:99%;
 }
-td
+td,th
 {
    font-size:2.2rem;
-   border:0.4rem solid olive;
+   border:0.2rem solid olive;
 }
 blockquote
 {
@@ -52,7 +54,7 @@ code
 {
    background:LightCyan;
    display:block;
-   width:100%;
+   width:99%;
    padding:.5rem 2rem .7rem 2rem;
    overflow-x:auto;
 }
@@ -61,7 +63,7 @@ code
 **/
 #kroshki-opyta img
 {
-   border:0.4rem solid olive;
+   border:0.2rem solid olive;
    border-radius:1rem; 
 }
 
