@@ -79,8 +79,7 @@ RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
 ## Преобразовываем URL-запросы стихотворений
 RewriteRule ^stihi/([a-z-]{1,})$ ?stihi=$1 
 ## Преобразовываем URL-запросы темы "Крошки опыта"
-## RewriteRule ^kroshki-opyta/([a-zA-Z]{0,})([=]{0,})([0-9a-zA-ZА-Яа-яЁёЫы\-\s]{0,})$ /index.php?list=kroshki-opyta
-RewriteRule ^kroshki-opyta/([a-zA-Z]{0,})([=]{0,})([0-9a-zA-ZАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя\(\)\-\s]{0,})$ /index.php?list=kroshki-opyta&par=$1&tit=$3
+## RewriteRule ^kroshki-opyta/([a-zA-Z]{0,})([=]{0,})([0-9a-zA-ZАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя\(\)\-\s]{0,})$ /index.php?list=kroshki-opyta&par=$1&tit=$3
 
 ## Преобразовываем URL-запросы новостных страниц
 RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]

@@ -142,14 +142,18 @@ function TopMenu()
    // Подключаем страницы темы "Крошки опыта" 
    echo '<li>';
       // Для основного и контрольного сайтов выводим краткий URL
+      /*
       if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
       {
          echo '<a href="kroshki-opyta/">Крошки опыта</a>';
       }
       else
       {
+      */
          echo '<a href="index.php?list=kroshki-opyta">Крошки опыта</a>';
+      /*
       }
+      */
    echo '</li>';
    // Подключаем вызов новостей                                                    
    echo '<li><a href="#">Новости</a>';

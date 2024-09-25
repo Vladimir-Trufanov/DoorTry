@@ -105,26 +105,34 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
+   /*
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
       $FileContent=preg_replace($regArts1,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
    }
    else
    {
+   */
       $FileContent=preg_replace($regArts1,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+   /*
    }
+   */
    // Определяем регулярное выражение для взаимных ссылок между материалами в BitofExpert
    //$regArts1='/href="          bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    $regArts2='/href="\.\.\/\.\.\/bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
+   /*
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
       $FileContent=preg_replace($regArts2,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
    }
    else
    {
+   */
       $FileContent=preg_replace($regArts2,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+   /*
    }
+   */
    return $FileContent;
 }
 // ****************************************************************************

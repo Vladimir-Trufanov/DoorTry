@@ -490,7 +490,7 @@ DoorTry
 			www\Stihi\_StihiCommon.php
 			www\Stihi\kapriznyj-starik.php
 			www\Stihi\sorevnovanie-s-hakerami.php
-		+Styles
+		-Styles
 			www\Styles\ApiPogoda.css
 			www\Styles\InstrumentyComp.css
 			www\Styles\IsColNews.css
@@ -511,7 +511,6 @@ DoorTry
 		www\doortry.png
 		www\DoorTryError.php
 		www\e404.php
-		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -524,7 +523,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -534,7 +532,6 @@ DoorTry
 		www\robots.txt
 		www\Site.php
 		www\sitemap.xml
-		www\sort.db3
 		www\stat.dat
 		www\timer.php
 		www\ViewEnviron.php
@@ -544,9 +541,13 @@ DoorTry
 1=www\iniMem.php
 2=www\BitofExpert\BitofExpert.php
 3=www\BitofExpert\BitofExpert.css
+4=www\.htaccess
+5=www\iniMenu.php
+6=www\BitofExpert\BitofExpert.html
+7=www\iniErrDoorTry.php
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.css
+Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
 TopLine=2
 Caret=24,27
@@ -554,8 +555,20 @@ Caret=24,27
 TopLine=1
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=347
-Caret=1,1
+TopLine=465
+Caret=6,135
 [www\BitofExpert\BitofExpert.css]
 TopLine=38
 Caret=14,66
+[www\.htaccess]
+TopLine=59
+Caret=1,82
+[www\iniMenu.php]
+TopLine=123
+Caret=9,156
+[www\BitofExpert\BitofExpert.html]
+TopLine=19
+Caret=1,1
+[www\iniErrDoorTry.php]
+TopLine=1
+Caret=1,1
