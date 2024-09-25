@@ -82,6 +82,7 @@ DoorTry
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
 			www\BitofExpert\BitofExpert.php
+			www\BitofExpert\BitofExpertOld.php
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -539,36 +540,24 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iniMem.php
-2=www\BitofExpert\BitofExpert.php
-3=www\BitofExpert\BitofExpert.css
-4=www\.htaccess
-5=www\iniMenu.php
-6=www\BitofExpert\BitofExpert.html
-7=www\iniErrDoorTry.php
+2=www\BitofExpert\BitofExpert.css
+3=www\BitofExpert\BitofExpert.html
+4=www\BitofExpert\BitofExpert.php
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=2
+TopLine=62
 Caret=24,27
 [www\iniMem.php]
-TopLine=1
-Caret=1,1
-[www\BitofExpert\BitofExpert.php]
-TopLine=465
-Caret=6,135
+TopLine=34
+Caret=30,16
 [www\BitofExpert\BitofExpert.css]
 TopLine=38
 Caret=14,66
-[www\.htaccess]
-TopLine=59
-Caret=1,82
-[www\iniMenu.php]
-TopLine=123
-Caret=9,156
 [www\BitofExpert\BitofExpert.html]
 TopLine=19
 Caret=1,1
-[www\iniErrDoorTry.php]
+[www\BitofExpert\BitofExpert.php]
 TopLine=1
-Caret=1,1
+Caret=21,36

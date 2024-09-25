@@ -1,0 +1,7 @@
+[25-Sep-2024 20:25:27 Asia/Kuwait] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function SetOfContent(), 1 passed in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 44 and exactly 3 expected in C:\DoorTry\www\BitofExpert\BitofExpert.php:139
+Stack trace:
+#0 C:\DoorTry\www\BitofExpert\BitofExpert.php(44): SetOfContent(NULL)
+#1 C:\DoorTry\www\Main.php(93): require_once('C:\\DoorTry\\www\\...')
+#2 C:\DoorTry\www\index.php(31): require_once('C:\\DoorTry\\www\\...')
+#3 {main}
+  thrown in C:\DoorTry\www\BitofExpert\BitofExpert.php on line 139

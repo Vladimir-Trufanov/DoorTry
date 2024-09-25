@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.20, 25.09.2024                                  Автор:      Труфанов В.Е.
+// v1.10, 16.03.2024                                  Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 29.02.2024
 
 /**
@@ -25,109 +25,6 @@
  * 
  */
 
-// Инициируем имя файла загрузки темы, путь к файлу и префикс URI 
-$FileName='BitofExpert.html';
-$FileDir=$SiteRoot.'/BitofExpert/';
-$urlDir='../BitofExpert/';
-// Извлекаем параметры
-$par=prown\getComRequest('par');
-$tit=prown\getComRequest('tit');
-
-define ("isDebug","iyes");
-// Если отладка, то в начале страницы подвешиваем параметры
-if (isDebug=="yes")
-{
-   if ($par>'') echo '$par='.$par.'<br>';
-   if ($tit>'') echo '$tit='.$tit.'<br>';
-}
-// Комплектуем содержимое страницы
-$FileContent=SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRoot);
-// Выводим затребованную страницу темы BitofExpert
-echo $FileContent;
-
-// Трассируем xml-файлы
-// echo (highlight_xml('C:\DoorTry\www/BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/LCD-FM-RX-V2.0.xml'));
-// echo '-------------------------------------------------------------------------------------------------------------<br>';
-// echo (highlight_xml('C:\DoorTry\www/BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/sitemap.xml'));
-
-// ****************************************************************************
-// *                        Собрать содержимое страницы                       *
-// ****************************************************************************
-function SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRoot) 
-{
-   // Если требуется загрузка файла темы по ссылке, то
-   // переопределяем имя файла загрузки темы, путь к файлу и префикс URI 
-   if ($par>'')
-   {
-      $FileDir=$FileDir.'bife'.$par.'/';
-      $urlDir=$urlDir.'bife'.$par.'/';
-   }
-   // Получаем имя файла
-   if ($tit>'')
-   {
-      $art=prown\getTranslit($tit);
-      $FileDir=$FileDir.$art.'/';
-      $urlDir=$urlDir.$art.'/';
-      $FileName=$art.'.html';
-   }
-   // Инициируем имена xml-файлов, файлов-ino для показа
-   $FileXml=''; $FileIno='';
-   // Определяем спецификацию файла текущей страницы для загрузки, 
-   // загружаем его и модифицируем
-   $FileSpec=$FileDir.$FileName;
-   $FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
-   // Модифицируем вызов имеющихся изображений, XML-файлов и меняем заголовок
-   if (($par>'')||($tit>''))
-   {
-      // В файле .md могут быть показаны видео след.образом:
-      //    <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls>
-      // или
-      //    <iframe src="https://vk.com/video_ext.php?oid=41932239&id=456239392&hash=ad25d1a9c868b9d8" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      $regImgs1='/<video\ssrc="/uU';
-      $FileContent=preg_replace($regImgs1,'<video src="'.$urlDir,$FileContent);
-      // В файле .md могут быть показаны изображения след.образом:
-      // <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls poster="poster-pult.jpg">
-      $regImgs1='/\sposter="/uU';
-      $FileContent=preg_replace($regImgs1,' poster="'.$urlDir,$FileContent);
-      // В файле .md могут быть показаны изображения след.образом:
-      //    <p><img src="probnyj-proekt.jpg" /></p>
-      //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
-      $regImgs1='/<img\ssrc="/uU';
-      $FileContent=preg_replace($regImgs1,'<img src="'.$urlDir,$FileContent);
-      // Отлавливаем изображения с заранее заданной шириной в процентах:
-      // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
-      // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
-      $FileContent=MakeImgWidth40($FileContent);
-      // Отлавливаем изображения для деталей Fritzing 
-      //$FileContent=MakeImgFritzing($FileContent);
-      // В файле .md могут быть ссылки на локальные XML-файлы, INO-файлы след.образом:
-      //    <a href=             "LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a>
-      //    <a href="MakeProntoHEX/MakeProntoHEX.ino">Скетч для подбора кодов MakeProntoHEX</a>
-      // Делаем ссылку с относительным адресом файла
-      $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)\.xml">/uU';
-      $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1.xml">',$FileContent);
-      $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)\.ino">/uU';
-      $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1.ino">',$FileContent);
-      // Показываем все xml-файлы по найденным ссылкам
-      $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
-      // Показываем все ino-файлы по найденным ссылкам
-      $FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
-      // Меняем заголовок страницы <title>Крошки опыта</title>
-      $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
-      $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>',$FileContent);
-   }
-   // Вставляем альтернативную ссылку в код:
-   // <title>Крошки опыта</title>
-   // <link rel="stylesheet" href="../BitofExpert/BitofExpert.css">
-   $alternateLink=$SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/kroshki-opyta/';
-   if (($par>'')&&($tit>'')) $alternateLink=$alternateLink.$par.'='.$tit;
-   $regAlt='/<\/title>/uU';
-   $FileContent=preg_replace($regAlt,
-      '</title>'."\r  ".
-      '<link rel="alternate" hreflang="ru" href="'.$alternateLink.'" />',
-      $FileContent);
-   return $FileContent;
-} 
 // ****************************************************************************
 // *           Инициализировать массив изображений с заданной шириной         *
 // *             (по умолчанию 40%) и модифицировать текст страницы           *
@@ -267,6 +164,124 @@ function ReplaceHtmlExpert($FileSpec,$Title,$BitofExpertCSS='<link rel="styleshe
    $FileContent=MakeLinks($FileContent);
    return $FileContent;
 }
+/*
+// Подключаем особенности стиля для компьютерной и мобильной версий
+if ($SiteDevice==Mobile) 
+{   
+   //echo '<link href="/Styles/TPhpPrownMobi.css" rel="stylesheet">';
+}
+else 
+{   
+   //echo '<link href="/Styles/TPhpPrownComp.css" rel="stylesheet">';
+}
+*/
+// Инициируем имя файла загрузки темы, путь к файлу и префикс URI 
+$FileName='BitofExpert.html';
+$FileDir=$SiteRoot.'/BitofExpert/';
+$urlDir='../BitofExpert/';
+
+/*
+// Для отладки
+$par=prown\getComRequest('par');
+if ($par>'')
+{
+   echo '$par='.$par.'<br>';
+}
+$tit=prown\getComRequest('tit');
+if ($tit>'')
+{
+   echo '$tit='.$tit.'<br>';
+}
+*/
+
+// Если требуется загрузка файла темы по ссылке, то
+// переопределяем имя файла загрузки темы, путь к файлу и префикс URI 
+$par=prown\getComRequest('par');
+if ($par>'')
+{
+   $FileDir=$FileDir.'bife'.$par.'/';
+   $urlDir=$urlDir.'bife'.$par.'/';
+}
+// Получаем имя файла
+$tit=prown\getComRequest('tit');
+if ($tit>'')
+{
+   $art=prown\getTranslit($tit);
+   $FileDir=$FileDir.$art.'/';
+   $urlDir=$urlDir.$art.'/';
+   $FileName=$art.'.html';
+}
+// Инициируем имена xml-файлов, файлов-ino для показа
+$FileXml=''; $FileIno='';
+// Определяем спецификацию файла текущей страницы для загрузки, 
+// загружаем его и модифицируем
+$FileSpec=$FileDir.$FileName;
+$FileContent=ReplaceHtmlExpert($FileSpec,'Крошки опыта');
+// Модифицируем вызов имеющихся изображений, XML-файлов и меняем заголовок
+if (($par>'')||($tit>''))
+{
+   // В файле .md могут быть показаны видео след.образом:
+   //    <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls>
+   /*
+   <iframe src="https://vk.com/video_ext.php?oid=41932239&id=456239392&hash=ad25d1a9c868b9d8" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+   */
+   $regImgs1='/<video\ssrc="/uU';
+   $FileContent=preg_replace($regImgs1,'<video src="'.$urlDir,$FileContent);
+   // В файле .md могут быть показаны изображения след.образом:
+   // <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls poster="poster-pult.jpg">
+   $regImgs1='/\sposter="/uU';
+   $FileContent=preg_replace($regImgs1,' poster="'.$urlDir,$FileContent);
+   // В файле .md могут быть показаны изображения след.образом:
+   //    <p><img src="probnyj-proekt.jpg" /></p>
+   //    <img src="Iwont.jpg" alt="“Да, я хочу удалить свой репозитарий”" />
+   $regImgs1='/<img\ssrc="/uU';
+   $FileContent=preg_replace($regImgs1,'<img src="'.$urlDir,$FileContent);
+
+   // Отлавливаем изображения с заранее заданной шириной в процентах:
+   // <p><img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Dashboard.jpg" /></p>
+   // <img src="../BitofExpert/bifeGitHub/kak-udalit-repozitarij-iz-github/Last-step.jpg" alt="Уфф! Всё." /><figcaption>Уфф! Всё.</figcaption>
+   $FileContent=MakeImgWidth40($FileContent);
+   // Отлавливаем изображения для деталей Fritzing 
+   //$FileContent=MakeImgFritzing($FileContent);
+
+   // В файле .md могут быть ссылки на локальные XML-файлы, INO-файлы след.образом:
+   //    <a href=             "LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a>
+   //    <a href="MakeProntoHEX/MakeProntoHEX.ino">Скетч для подбора кодов MakeProntoHEX</a>
+   // Делаем ссылку с относительным адресом файла
+   $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)\.xml">/uU';
+   $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1.xml">',$FileContent);
+   $regXml1='/<a\shref="([a-zA-Z0-9\-\.\/]+)\.ino">/uU';
+   $FileContent=preg_replace($regXml1,'<a href="'.$urlDir.'$1.ino">',$FileContent);
+
+   // Показываем все xml-файлы по найденным ссылкам
+   $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
+
+   // Показываем все ino-файлы по найденным ссылкам
+   $FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
+   
+   // Меняем заголовок страницы <title>Крошки опыта</title>
+   $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
+   $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>',$FileContent);
+}
+
+// Вставляем альтернативную ссылку в код:
+// <title>Крошки опыта</title>
+// <link rel="stylesheet" href="../BitofExpert/BitofExpert.css">
+$alternateLink=$SiteProtocol.'://'.$_SERVER['HTTP_HOST'].'/kroshki-opyta/';
+if (($par>'')&&($tit>'')) $alternateLink=$alternateLink.$par.'='.$tit;
+$regAlt='/<\/title>/uU';
+$FileContent=preg_replace($regAlt,
+  '</title>'."\r  ".
+  '<link rel="alternate" hreflang="ru" href="'.$alternateLink.'" />',
+  $FileContent);
+  
+// Выводим затребованную страницу темы BitofExpert
+echo $FileContent;
+// Трассируем xml-файлы
+// echo (highlight_xml('C:\DoorTry\www/BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/LCD-FM-RX-V2.0.xml'));
+// echo '-------------------------------------------------------------------------------------------------------------<br>';
+// echo (highlight_xml('C:\DoorTry\www/BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/sitemap.xml'));
+
 // ****************************************************************************
 // *                  Показать все xml-файлы по найденным ссылкам             *
 // ****************************************************************************

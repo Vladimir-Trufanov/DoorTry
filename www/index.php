@@ -22,12 +22,6 @@ $SiteProtocol = $_WORKSPACE[wsSiteProtocol]; // 'HTTP' | 'HTTPS'
 
 $urltxt=$_SERVER['REQUEST_URI'];
 
-/*
-$UserAgent   = $_WORKSPACE[wsUserAgent];    // HTTP_USER_AGENT
-$TimeRequest = $_WORKSPACE[wsTimeRequest];  // Время запроса сайта
-$Ip          = $_WORKSPACE[wsRemoteAddr];   // IP-адрес запроса сайта
-$SiteName    = $_WORKSPACE[wsSiteName];     // Доменное имя сайта
-*/
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
