@@ -22,8 +22,8 @@ DoorTry
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
 		+BitofExpert
-			-bifeArduino
-				-byl-smartfon---stal-eshchyo-i-pult
+			+bifeArduino
+				+byl-smartfon---stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\GalaxyS4-Pult.mp4
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\IR_ChrisTree.txt
@@ -547,17 +547,17 @@ DoorTry
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=62
+TopLine=27
 Caret=24,27
 [www\iniMem.php]
-TopLine=34
+TopLine=16
 Caret=30,16
 [www\BitofExpert\BitofExpert.css]
 TopLine=38
 Caret=14,66
 [www\BitofExpert\BitofExpert.html]
-TopLine=19
+TopLine=15
 Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=1
-Caret=21,36
+TopLine=405
+Caret=1,443

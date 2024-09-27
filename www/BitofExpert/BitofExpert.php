@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.20, 25.09.2024                                  Автор:      Труфанов В.Е.
+// v1.21, 26.09.2024                                  Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 29.02.2024
 
 /**
@@ -25,6 +25,9 @@
  * 
  */
 
+// При необходимости, включаем режим отладки 
+define ("isDebug","iyes");
+
 // Инициируем имя файла загрузки темы, путь к файлу и префикс URI 
 $FileName='BitofExpert.html';
 $FileDir=$SiteRoot.'/BitofExpert/';
@@ -33,7 +36,6 @@ $urlDir='../BitofExpert/';
 $par=prown\getComRequest('par');
 $tit=prown\getComRequest('tit');
 
-define ("isDebug","iyes");
 // Если отладка, то в начале страницы подвешиваем параметры
 if (isDebug=="yes")
 {
@@ -69,6 +71,8 @@ function SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRo
       $FileDir=$FileDir.$art.'/';
       $urlDir=$urlDir.$art.'/';
       $FileName=$art.'.html';
+      // Если отладка, то покажем имя загружаемой страницы
+      if (isDebug=="yes") echo '$FileName='.$FileName.'<br>';
    }
    // Инициируем имена xml-файлов, файлов-ino для показа
    $FileXml=''; $FileIno='';
@@ -208,34 +212,34 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
-   /*
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
-      $FileContent=preg_replace($regArts1,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
+      // Устаревший формат - вызов с 1 и 4 карманом
+      // $FileContent=preg_replace($regArts1,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
+
+      // Текущий формат - вызов с 1 и 2 карманом (kroshki-opyta/$1=$2)
+      $FileContent=preg_replace($regArts1,'href="/kroshki-opyta/$1=$2">$4</a>',$FileContent);
    }
    else
    {
-   */
-      $FileContent=preg_replace($regArts1,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
-   /*
+      // Устаревший формат, когда 2 параметр был на русском (после лета 2024 страницы перестали загружаться) 
+      // $FileContent=preg_replace($regArts1,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
+      
+      // Текущий формат, 2 параметр - моя транслитерация
+      $FileContent=preg_replace($regArts1,'href="?list=kroshki-opyta&par=$1&tit=$2">$4</a>',$FileContent);
    }
-   */
    // Определяем регулярное выражение для взаимных ссылок между материалами в BitofExpert
    //$regArts1='/href="          bife([a-zA-Z]+)\/([a-z\-]+)\/([a-z\-]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    $regArts2='/href="\.\.\/\.\.\/bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
-   /*
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
-      $FileContent=preg_replace($regArts2,'href="/kroshki-opyta/$1=$4">$4</a>',$FileContent);
+      $FileContent=preg_replace($regArts2,'href="/kroshki-opyta/$1=$2">$4</a>',$FileContent);
    }
    else
    {
-   */
       $FileContent=preg_replace($regArts2,'href="?list=kroshki-opyta&par=$1&tit=$4">$4</a>',$FileContent);
-   /*
    }
-   */
    return $FileContent;
 }
 // ****************************************************************************
@@ -378,13 +382,14 @@ function highlight_xml($FileName)
 }
 
 // ****************************************************************************
-// *                  Показать все ino-файлы по найденным ссылкам             *
+// *                  Показать все ino-файлы (то есть с заданным              *
+// *                        расширением) по найденным ссылкам                 *
 // ****************************************************************************
 function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
 {
-   // Находим все заголовки 'h4' со ссылками на файлы *.xml
+   // Находим все заголовки 'h4' со ссылками на файлы с заданным расширением
+   // <h4 id="скетч-для-подбора-кодов-makeprontohex"><a href="MakeProntoHEX/MakeProntoHEX.ino">Скетч для подбора кодов MakeProntoHEX</a></h4>
    $regXml='/<'.$hteg.'\s(.*)\.'.$ext.'">(.*)<\/a><\/'.$hteg.'>/uU';
-   
    $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
    if ($value>0)
    { 
@@ -397,9 +402,19 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
       // Проходим по выбранным ссылкам на xml-файлы  
       foreach ($afNames as $NameXml)
       {
-         // Определяем имя xml-файла для показа
+         // Если отладка, то показываем имя загружаемой страницы
+         if (isDebug=="yes") echo '$NameXml='.$NameXml.'<br>';
+         // Выделяем идентификатор заголовка (при отладке показываем)
+         $idhteg='/id="(.*'.'"'.')/uU';
+         $idhteg=prown\Findes($idhteg,$NameXml);
+         if (isDebug=="yes") echo '$idhteg: '.$idhteg.'<br>';
+
+         // Определяем имя xml-файла для показа (при отладке показываем)
          $regNXml='/href="\.\.(.*\.'.$ext.')/uU';
          $regNXml=prown\Findes($regNXml,$NameXml);
+         if (isDebug=="yes") echo '$regNXml: '.$regNXml.'<br>';
+        
+         // Формируем имя файла с путем
          $FileXml=$SiteRoot.substr($regNXml,8); 
          // Выделяем заголовок
          $regNXml='/'.$ext.'">(.*)<\/a>/uU';
@@ -427,7 +442,7 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
 
          // Подставляем вместо ссылки на xml-файл заголовок и явный вывод расцвеченного файла
          if ($ext=='ino') 
-           $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_ino($FileXml),$FileContent);
+           $FileContent=preg_replace($regNXml,'<'.$hteg.' '.$idhteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_ino($FileXml),$FileContent);
          else 
            $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>',$FileContent);
       }
