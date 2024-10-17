@@ -21,9 +21,9 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		+BitofExpert
-			+bifeArduino
-				+byl-smartfon---stal-eshchyo-i-pult
+		-BitofExpert
+			-bifeArduino
+				-byl-smartfon---stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\GalaxyS4-Pult.mp4
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\IR_ChrisTree.txt
@@ -46,6 +46,20 @@ DoorTry
 					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\obrabotka-preryvanij-ot-tajmerov.html
 					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\raschet-znacheniya-schetchika-dlya-preryvaniya.jpg
 					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\vyvody-po-preryvaniya-mikrokontrollera.jpeg
+			-bifeEsp32
+				-kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos
+					-ex5-1-33-twousoneBlink
+						www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\ex5-1-33-twousoneBlink\ex5-1-33-twousoneBlink.ino
+					-ex5-1-33-twousoneMutex
+						www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\ex5-1-33-twousoneMutex\ex5-1-33-twousoneMutex.ino
+					-ex5-1-33-twousonePortCritical
+						www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\ex5-1-33-twousonePortCritical\ex5-1-33-twousonePortCritical.ino
+					-ex5-1-33-twousoneSemaphore
+						www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\ex5-1-33-twousoneSemaphore\ex5-1-33-twousoneSemaphore.ino
+					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01.png
+					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01-1280x556.png
+					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01-1280x751.png
+					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos.html
 			-bifeFritzing
 				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
@@ -82,7 +96,6 @@ DoorTry
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
 			www\BitofExpert\BitofExpert.php
-			www\BitofExpert\BitofExpertOld.php
 		-font-awesome-4.7.0
 			-css
 				www\font-awesome-4.7.0\css\font-awesome.css
@@ -540,24 +553,20 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iniMem.php
-2=www\BitofExpert\BitofExpert.css
-3=www\BitofExpert\BitofExpert.html
-4=www\BitofExpert\BitofExpert.php
+2=www\BitofExpert\BitofExpert.php
+3=www\.htaccess
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.php
+Selected=www\.htaccess
 [www\Main.php]
 TopLine=27
 Caret=24,27
 [www\iniMem.php]
 TopLine=16
 Caret=30,16
-[www\BitofExpert\BitofExpert.css]
-TopLine=38
-Caret=14,66
-[www\BitofExpert\BitofExpert.html]
-TopLine=15
-Caret=1,1
 [www\BitofExpert\BitofExpert.php]
-TopLine=405
-Caret=1,443
+TopLine=3
+Caret=21,29
+[www\.htaccess]
+TopLine=19
+Caret=1,1

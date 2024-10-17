@@ -8,7 +8,7 @@
 // *        delphi, lazarus, java, PHP, js, apitor, arduino, chto-esche-budet * 
 // ****************************************************************************
 
-// v1.21, 26.09.2024                                  Автор:      Труфанов В.Е.
+// v1.22, 17.10.2024                                  Автор:      Труфанов В.Е.
 // Copyright © 2024 tve                               Дата создания: 29.02.2024
 
 /**
@@ -210,7 +210,7 @@ function MakeLinks($FileContent)
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]{1,}\.md/uU';
    //$regArts='/href="bife[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
    //$regArts='/href="bife([a-zA-Z]+)\/([a-z\-]+)\/[0-9a-zA-Z\.\s\/\-_<>="А-Яа-яЁё]+\.md"/uU';
-   $regArts1='/href="bife([a-zA-Z]+)\/([a-z\-_]+)\/([a-z\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
+   $regArts1='/href="bife([a-zA-Z0-9]+)\/([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.md">([0-9a-zA-Z\.\(\)\s\/\-_<>,="А-Яа-яЁё]+)<\/a>/uU';
    // Заменяем все ссылки на страницы .md (здесь используем два кармана: раздел и название материала)
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
@@ -382,14 +382,15 @@ function highlight_xml($FileName)
 }
 
 // ****************************************************************************
-// *                  Показать все ino-файлы (то есть с заданным              *
-// *                        расширением) по найденным ссылкам                 *
+// *     Показать все ino-файлы (то есть с заданным расширением) по найденным *
+// * ссылкам.        !!! В ПУТИ ФАЙЛА НЕ ДОЛЖНО БЫТЬ ЗНАКОВ ПОДЧЕРКИВАНИЯ "_" *
 // ****************************************************************************
 function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
 {
    // Находим все заголовки 'h4' со ссылками на файлы с заданным расширением
    // <h4 id="скетч-для-подбора-кодов-makeprontohex"><a href="MakeProntoHEX/MakeProntoHEX.ino">Скетч для подбора кодов MakeProntoHEX</a></h4>
    $regXml='/<'.$hteg.'\s(.*)\.'.$ext.'">(.*)<\/a><\/'.$hteg.'>/uU';
+   if (isDebug=="yes") echo '$regXml: '.$regXml.'<br>';
    $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
    if ($value>0)
    { 
@@ -403,6 +404,7 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
       foreach ($afNames as $NameXml)
       {
          // Если отладка, то показываем имя загружаемой страницы
+         if (isDebug=="yes") echo '---------------------<br>';
          if (isDebug=="yes") echo '$NameXml='.$NameXml.'<br>';
          // Выделяем идентификатор заголовка (при отладке показываем)
          $idhteg='/id="(.*'.'"'.')/uU';
@@ -411,11 +413,13 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
 
          // Определяем имя xml-файла для показа (при отладке показываем)
          $regNXml='/href="\.\.(.*\.'.$ext.')/uU';
+         if (isDebug=="yes") echo '$regNXml1: '.$regNXml.'<br>';
          $regNXml=prown\Findes($regNXml,$NameXml);
-         if (isDebug=="yes") echo '$regNXml: '.$regNXml.'<br>';
+         if (isDebug=="yes") echo '$regNXml2: '.$regNXml.'<br>';
         
          // Формируем имя файла с путем
          $FileXml=$SiteRoot.substr($regNXml,8); 
+         if (isDebug=="yes") echo '$FileXml: '.$FileXml.'<br>';
          // Выделяем заголовок
          $regNXml='/'.$ext.'">(.*)<\/a>/uU';
          $regNXml=prown\Findes($regNXml,$NameXml);
@@ -423,11 +427,8 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
          $TitleXml=substr($TitleXml,0,strlen($TitleXml)-4);
          // Формируем рег.выражение (экранируем)
          $regNXml='/'.preg_quote($NameXml,'/').'/uU';
-         //echo '$NameXml='.$NameXml.'<br>';
-         //echo '$FileXml='.$FileXml.'<br>';
-         //echo '$TitleXml='.$TitleXml.'<br>';
-         //echo '$regNXml='.$regNXml.'<br>';
-
+         if (isDebug=="yes") echo '$regNXml: '.$regNXml.'<br>';
+ 
          // Примеры заголовков со ссылками на xml-файлы для их вывода на экран браузера
          // <h4 id="sitemapfzp">                   <a href="sitemap.xml">       Примерный SITEMAP            </a></h4>
          // <h4 id="примерный-общий-вид-файла-fzp"><a href="LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
@@ -443,6 +444,7 @@ function ReplaceHrefExt($FileContent,$SiteRoot,$hteg='h4',$ext='ino')
          // Подставляем вместо ссылки на xml-файл заголовок и явный вывод расцвеченного файла
          if ($ext=='ino') 
            $FileContent=preg_replace($regNXml,'<'.$hteg.' '.$idhteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_ino($FileXml),$FileContent);
+           //$FileContent=preg_replace($regNXml,'<'.$hteg.' '.$idhteg.'>'.$TitleXml.'</'.$hteg.'>'.'167',$FileContent);
          else 
            $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>',$FileContent);
       }
@@ -495,7 +497,6 @@ function highlight_ino($FileName)
    $FileCode=
       '<div style="color:Black;background:Azure;font-size:1.6rem;'.
       'font-weight:bold;overflow-x:auto;"><code>'.$FileCode.'</code></div>';
-   
 
    return $FileCode;
 }
