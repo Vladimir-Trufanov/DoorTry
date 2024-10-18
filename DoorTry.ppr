@@ -376,7 +376,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -386,7 +386,7 @@ DoorTry
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			-News
+			+News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -414,6 +414,7 @@ DoorTry
 					www\Pages\Signaphoto\imgdebug\stamplbp.png
 					www\Pages\Signaphoto\imgdebug\stamptve.png
 					www\Pages\Signaphoto\imgdebug\watermark.png
+					www\Pages\Signaphoto\imgdebug\Без-слов-понятно.jpg
 					www\Pages\Signaphoto\imgdebug\Дед-сын-и-внук.png
 					www\Pages\Signaphoto\imgdebug\Танцы в Северном.doc
 					www\Pages\Signaphoto\imgdebug\Хорошенькая.png
@@ -553,20 +554,20 @@ DoorTry
 [Open project files]
 0=www\Main.php
 1=www\iniMem.php
-2=www\BitofExpert\BitofExpert.php
-3=www\.htaccess
+2=www\Pages\News\MakeNews.php
+3=www\iniMenu.php
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\iniMem.php
 [www\Main.php]
-TopLine=27
+TopLine=67
 Caret=24,27
 [www\iniMem.php]
 TopLine=16
-Caret=30,16
-[www\BitofExpert\BitofExpert.php]
-TopLine=3
-Caret=21,29
-[www\.htaccess]
-TopLine=19
+Caret=1,38
+[www\Pages\News\MakeNews.php]
+TopLine=1
 Caret=1,1
+[www\iniMenu.php]
+TopLine=57
+Caret=5,14

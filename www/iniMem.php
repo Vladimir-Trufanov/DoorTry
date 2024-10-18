@@ -34,7 +34,8 @@ define ("dirStihi",'/Stihi/');
 $aNews=array
 (
    'Ведомости России'                => 'http://www.vedomosti.ru/newsline/out/rss.xml', 
-   'Новости Карелии и Петрозаводска' => 'http://rk.karelia.ru/feed/', 
+   'Cтолица на Онего'                => 'https://stolicaonego.ru/rss.php',
+   'Новости Абхазии'                 => 'https://www.votpusk.ru/newsrss/cn/newsAB1.xml',
    'Новости российского спорта'      => 'http://stadium.ru/rss', 
    'Военное обозрение'               => 'http://topwar.ru/rss.xml',
    'Новости Mail.ru'                 => 'http://news.mail.ru/rss/',
