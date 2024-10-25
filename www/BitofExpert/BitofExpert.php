@@ -492,12 +492,8 @@ function highlight_ino($FileName)
    //   <br />//&nbsp;Пример&nbsp;места&nbsp;размещения&nbsp;arduino.h
    //   <br />//&nbsp;C:/Users/Евгеньевич/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino/Arduino.h
    $FileCode=preg_replace("~\/\/(.*)<br\s/>~iU", '<span style="color:Green">//$1</span><br />',$FileCode);
-  
    
-   $FileCode=
-      '<div style="color:Black;background:Azure;font-size:1.6rem;'.
-      'font-weight:bold;overflow-x:auto;"><code>'.$FileCode.'</code></div>';
-
+   $FileCode='<code>'.$FileCode.'</code>';
    return $FileCode;
 }
 // ******************************************************** BitofExpert.php ***

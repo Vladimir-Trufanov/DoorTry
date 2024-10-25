@@ -52,11 +52,11 @@ blockquote
 }
 code
 {
-   background:LightCyan;
-   display:block;
-   width:99%;
-   padding:.5rem 2rem .7rem 2rem;
-   overflow-x:auto;
+   font-size:1.6rem;
+   font-weight:bold;
+   display:inline-block;
+   color:Black;
+   background:Azure;
 }
 /**
  * Форматируем изображения и подписи под ними

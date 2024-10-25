@@ -21,7 +21,7 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		-BitofExpert
+		+BitofExpert
 			-bifeArduino
 				-byl-smartfon---stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
@@ -556,11 +556,13 @@ DoorTry
 1=www\iniMem.php
 2=www\Pages\News\MakeNews.php
 3=www\iniMenu.php
+4=www\BitofExpert\BitofExpert.css
+5=www\BitofExpert\BitofExpert.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\BitofExpert\BitofExpert.css
 [www\Main.php]
-TopLine=67
+TopLine=27
 Caret=24,27
 [www\iniMem.php]
 TopLine=16
@@ -569,5 +571,11 @@ Caret=1,38
 TopLine=1
 Caret=1,1
 [www\iniMenu.php]
-TopLine=57
+TopLine=14
 Caret=5,14
+[www\BitofExpert\BitofExpert.css]
+TopLine=56
+Caret=1,60
+[www\BitofExpert\BitofExpert.php]
+TopLine=462
+Caret=1,497
