@@ -83,6 +83,18 @@ function SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRo
    // Модифицируем вызов имеющихся изображений, XML-файлов и меняем заголовок
    if (($par>'')||($tit>''))
    {
+      // Пример фрагмента файла с заголовком статьи: 
+      //                               .md">Был смартфон - стал ещё и пульт</a>
+      // Меняем заголовок страницы <title>Крошки опыта</title>
+      $regTit='/md">([A-Za-z0-9А-Яа-яЁё\s-]+)<\/a>/uU';
+      $title=Findes($regTit,$FileContent);
+      if (strlen($title)>4) $title=substr($title,4);
+      if (strlen($title)>4) $title=substr($title,0,strlen($title)-4);
+      // Если отладка, то покажем заголовок статьи
+      if (isDebug=="yes") echo '$title='.$title.'<br>';
+      $regTit='/<title>([A-Za-z0-9А-Яа-яЁё\s-]+)<\/title>/uU';
+      $FileContent=preg_replace($regTit,'<title>'.$title.'</title>',$FileContent);
+
       // В файле .md могут быть показаны видео след.образом:
       //    <video src="GalaxyS4-Pult.mp4" width="640" type="video/mp4" controls>
       // или
@@ -116,9 +128,6 @@ function SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRo
       $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
       // Показываем все ino-файлы по найденным ссылкам
       $FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
-      // Меняем заголовок страницы <title>Крошки опыта</title>
-      $regTit='/<title>([А-Яа-яЁё\s]+)<\/title>/uU';
-      $FileContent=preg_replace($regTit,'<title>'.$tit.'</title>',$FileContent);
    }
    // Вставляем альтернативную ссылку в код:
    // <title>Крошки опыта</title>

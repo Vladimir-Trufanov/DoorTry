@@ -47,6 +47,36 @@ DoorTry
 					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\raschet-znacheniya-schetchika-dlya-preryvaniya.jpg
 					www\BitofExpert\bifeArduino\obrabotka-preryvanij-ot-tajmerov\vyvody-po-preryvaniya-mikrokontrollera.jpeg
 			-bifeEsp32
+				-ispolzovanie-tajmernyh-preryvanij-v-esp32
+					-RepeatTimer
+						www\BitofExpert\bifeEsp32\ispolzovanie-tajmernyh-preryvanij-v-esp32\RepeatTimer\RepeatTimer.ino
+					-WatchdogTimer
+						www\BitofExpert\bifeEsp32\ispolzovanie-tajmernyh-preryvanij-v-esp32\WatchdogTimer\WatchdogTimer.ino
+					www\BitofExpert\bifeEsp32\ispolzovanie-tajmernyh-preryvanij-v-esp32\ispolzovanie-tajmernyh-preryvanij-v-esp32.html
+				-izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov
+					-nvs-rw-blob
+						www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\nvs-rw-blob\nvs-rw-blob.ino
+					-nvs-rw-value
+						www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\nvs-rw-value\nvs-rw-value.ino
+					-simpleFlashNVS
+						www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\simpleFlashNVS\ArduinoNvs.cpp
+						www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\simpleFlashNVS\ArduinoNvs.h
+						www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\simpleFlashNVS\simpleFlashNVS.ino
+					www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov.html
+					www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\shema-hraneniya-dannyh-v-zapisi.png
+					www\BitofExpert\bifeEsp32\izuchaem-nvs-ehnergonezavisimoe-hranilishche-parametrov\struktura-stranicy.png
+				-kak-nastroit-datu-i-vremya-v-esp32
+					-Advanced
+						www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\Advanced\Advanced.ino
+					-LwIPSNTPexample
+						www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\LwIPSNTPexample\LwIPSNTPexample.ino
+					-SynchronizingESP32clock
+						www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\SynchronizingESP32clock\SynchronizingESP32clock.ino
+					www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\ActiveNTPservers.png
+					www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\ide-arduino.jpg
+					www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\image-18.png
+					www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\image-8.png
+					www\BitofExpert\bifeEsp32\kak-nastroit-datu-i-vremya-v-esp32\kak-nastroit-datu-i-vremya-v-esp32.html
 				-kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos
 					-ex5-1-33-twousoneBlink
 						www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\ex5-1-33-twousoneBlink\ex5-1-33-twousoneBlink.ino
@@ -60,6 +90,24 @@ DoorTry
 					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01-1280x556.png
 					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01-1280x751.png
 					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos.html
+				-obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera
+					-ex3-0-6-0-Watchdog
+						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-0-Watchdog\ex3-0-6-0-Watchdog.ino
+					-ex3-0-6-1-BasicWDT
+						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-1-BasicWDT\ex3-0-6-1-BasicWDT.ino
+					-ex3-0-6-2-DeadLockWDT
+						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-2-DeadLockWDT\ex3-0-6-2-DeadLockWDT.ino
+					-ex3-0-6-3-SanityCheckSingleLoop
+						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-3-SanityCheckSingleLoop\ex3-0-6-3-SanityCheckSingleLoop.ino
+					-ex3-0-6-4-SanityCheckRTOS
+						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-4-SanityCheckRTOS\ex3-0-6-4-SanityCheckRTOS.ino
+					-ex3-0-6-5-GreatWDT
+						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-5-GreatWDT\ex3-0-6-5-GreatWDT.ino
+					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\A-typical-Watchdog-setup.jpg
+					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera.html
+					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\prostaya-proverka-rabotosposobnosti.jpg
+					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\proverka-rabotosposobnosti-s-neskolkimi-flagami-v-neskolkih-zadachah.jpg
+					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\proverka-rabotosposobnosti-s-neskolkimi-flagami-v-odnom-cikle.jpg
 			-bifeFritzing
 				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
@@ -376,7 +424,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\log.txt
 				www\Pages\Basemaker\ProbaTestBMaker.php
@@ -386,7 +434,7 @@ DoorTry
 			-Instrumenty
 				www\Pages\Instrumenty\indexInstrumenty.php
 				www\Pages\Instrumenty\Instrumenty.php
-			+News
+			-News
 				www\Pages\News\MakeNews.php
 				www\Pages\News\SimpleTape.php
 				www\Pages\News\WithImgTape.php
@@ -553,29 +601,13 @@ DoorTry
 		www\yandex_62a939d60929cd83.html
 [Open project files]
 0=www\Main.php
-1=www\iniMem.php
-2=www\Pages\News\MakeNews.php
-3=www\iniMenu.php
-4=www\BitofExpert\BitofExpert.css
-5=www\BitofExpert\BitofExpert.php
+1=www\BitofExpert\BitofExpert.php
 [Selected Project Files]
 Main=
 Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
 TopLine=27
 Caret=24,27
-[www\iniMem.php]
-TopLine=16
-Caret=1,38
-[www\Pages\News\MakeNews.php]
-TopLine=1
-Caret=1,1
-[www\iniMenu.php]
-TopLine=14
-Caret=5,14
-[www\BitofExpert\BitofExpert.css]
-TopLine=54
-Caret=1,60
 [www\BitofExpert\BitofExpert.php]
-TopLine=380
-Caret=1,497
+TopLine=79
+Caret=1,131
