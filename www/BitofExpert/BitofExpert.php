@@ -128,6 +128,8 @@ function SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRo
       $FileContent=ReplaceHrefXml($FileContent,$SiteRoot);
       // Показываем все ino-файлы по найденным ссылкам
       $FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
+      ReplaceHrefPdf($FileContent,$SiteRoot);
+
    }
    // Вставляем альтернативную ссылку в код:
    // <title>Крошки опыта</title>
@@ -330,6 +332,59 @@ function ReplaceHrefXml($FileContent,$SiteRoot,$hteg='h4')
 
          // Подставляем вместо ссылки на xml-файл заголовок и явный вывод расцвеченного файла
          $FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
+      }
+   }
+   return $FileContent;
+}
+
+function ReplaceHrefPdf($FileContent,$SiteRoot,$hteg='h4')
+{
+   // Находим все заголовки 'h4' со ссылками на файлы *.xml
+   $regXml='/<'.$hteg.'\s(.*)\.pdf">(.*)<\/a><\/'.$hteg.'>/uU';
+   
+   $value=preg_match_all($regXml,$FileContent,$matches,PREG_OFFSET_CAPTURE);
+   if ($value>0)
+   { 
+      $af=$matches[0];
+      // Выделяем все заголовки 'h4' со ссылками на файлы *.xml
+      foreach ($af as $matches2)
+      {
+         $afNames[]=$matches2[0];
+      }
+      // Проходим по выбранным ссылкам на xml-файлы  
+      foreach ($afNames as $NameXml)
+      {
+         // Определяем имя xml-файла для показа
+         $regNXml='/href="\.\.(.*\.pdf)/uU';
+         $regNXml=prown\Findes($regNXml,$NameXml);
+         $FileXml=$SiteRoot.substr($regNXml,8); 
+         // Выделяем заголовок
+         $regNXml='/pdf">(.*)<\/a>/uU';
+         $regNXml=prown\Findes($regNXml,$NameXml);
+         $TitleXml=substr($regNXml,5);
+         $TitleXml=substr($TitleXml,0,strlen($TitleXml)-4);
+         // Формируем рег.выражение (экранируем)
+         $regNXml='/'.preg_quote($NameXml,'/').'/uU';
+         //echo '$NameXml='.$NameXml.'<br>';
+         //echo '$FileXml='.$FileXml.'<br>';
+         //echo '$TitleXml='.$TitleXml.'<br>';
+         //echo '$regNXml='.$regNXml.'<br>';
+
+         // Примеры заголовков со ссылками на xml-файлы для их вывода на экран браузера
+         // <h4 id="sitemapfzp">                   <a href="sitemap.xml">       Примерный SITEMAP            </a></h4>
+         // <h4 id="примерный-общий-вид-файла-fzp"><a href="LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
+
+         // Примеры заголовков с подставленными ссылками на xml-файлы с явным путем в BitofExpert
+         // <h4 id="sitemapfzp">                   <a href="../BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/       sitemap.xml">Примерный SITEMAP</a></h4>
+         // <h4 id="примерный-общий-вид-файла-fzp"><a href="../BitofExpert/bifeFritzing/predstavlenie-detali-komponenta-vo-fritzing/LCD-FM-RX-V2.0.xml">Примерный общий вид файла FZP</a></h4>
+
+         // Примеры экранированных заголовков с подставленными ссылками на xml-файлы для регулярного выражения
+         // /\<h4 id\="примерный\-общий\-вид\-файла\-fzp"\> \<a href\="\.\.\/BitofExpert\/bifeFritzing\/predstavlenie\-detali\-komponenta\-vo\-fritzing\/ LCD\-FM\-RX\-V2\.0\.xml"\> Примерный общий вид файла FZP \<\/a\>\<\/h4\>/uU<br>
+         // /\<h4 id\="sitemapfzp"\>                        \<a href\="\.\.\/BitofExpert\/bifeFritzing\/predstavlenie\-detali\-komponenta\-vo\-fritzing\/            sitemap\.xml"\> Примерный SITEMAP             \<\/a\>\<\/h4\>/uU<br>
+
+         // Подставляем вместо ссылки на xml-файл заголовок и явный вывод расцвеченного файла
+         //$FileContent=preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.highlight_xml($FileXml),$FileContent);
+         echo preg_replace($regNXml,'<'.$hteg.'>'.$TitleXml.'</'.$hteg.'>'.$FileXml,$FileContent);
       }
    }
    return $FileContent;
