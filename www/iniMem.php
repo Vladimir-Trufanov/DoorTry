@@ -35,7 +35,7 @@ $aNews=array
 (
    'Ведомости России'                => 'http://www.vedomosti.ru/newsline/out/rss.xml', 
    'Cтолица на Онего'                => 'https://stolicaonego.ru/rss.php',
-   'Новости Абхазии'                 => 'https://www.votpusk.ru/newsrss/cn/newsAB1.xml',
+   'Новости Курска'                  => 'https://sekunda.media/?format=feed&type=rss',
    'Новости российского спорта'      => 'http://stadium.ru/rss', 
    'Военное обозрение'               => 'http://topwar.ru/rss.xml',
    'Новости Mail.ru'                 => 'http://news.mail.ru/rss/',
