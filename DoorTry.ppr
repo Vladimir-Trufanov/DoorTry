@@ -623,21 +623,21 @@ DoorTry
 5=www\iniMem.php
 [Selected Project Files]
 Main=
-Selected=www\iniMem.php
+Selected=www\BitofExpert\BitofExpert.php
 [www\Main.php]
-TopLine=59
+TopLine=15
 Caret=56,15
 [www\Pages\Signaphoto\SignaPhoto.php]
 TopLine=87
 Caret=17,106
 [www\BitofExpert\BitofExpert.php]
-TopLine=140
-Caret=1,169
+TopLine=108
+Caret=61,128
 [www\BitofExpert\ReplaceHrefPdf.php]
 TopLine=9
 Caret=1,48
 [www\iniMenu.php]
-TopLine=81
+TopLine=14
 Caret=5,14
 [www\iniMem.php]
 TopLine=17
