@@ -1,4 +1,5 @@
 <?php
+
 // PHP7/HTML5, EDGE/CHROME                                    *** index.php ***
 
 // ****************************************************************************
@@ -25,9 +26,11 @@ $urltxt=$_SERVER['REQUEST_URI'];
 // Подключаем сайт сбора сообщений об ошибках/исключениях и формирования 
 // страницы с выводом сообщений, а также комментариев для PHP5-PHP7
 require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
+
 try 
 {
    // Запускаем сценарий сайта
+   // echo "Всем привет!";
    require_once $_SERVER['DOCUMENT_ROOT']."/Main.php";
    // Запускаем примеры ошибок и исключений
    // require_once $_SERVER['DOCUMENT_ROOT']."/MainDoorTry.php";
@@ -42,4 +45,5 @@ catch (E_EXCEPTION $e)
    // Подключаем обработку исключений верхнего уровня
    DoorTryPage($e);
 }
+
 // ************************************************************** index.php ***

@@ -21,6 +21,7 @@ require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
 require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
+
 // Подключаем задействованные классы
 require_once $SiteHost."/TPhpTools/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 
@@ -65,9 +66,10 @@ if ($c_PersName<>$c_UserName)
    $s_Counter=prown\MakeSession('Counter',1,tInt); 
    $c_PersName=prown\MakeCookie('PersName',$c_UserName,tStr);
 }
+
 // Если поступил запрос на страницу со стихотворением, то запускаем страницу
 if (IsSet($_REQUEST['stihi'])) require_once $SiteRoot."/Stihi/_MakeStihi.php";
-// Если поступил запрос на пробную BaseMaker страницу, то запускаем её
+/*
 else if (prown\isComRequest('basemaker','list')) 
 {
    $page='/Pages/BaseMaker/ProbaTestBMaker.php';
@@ -115,6 +117,7 @@ else if (prown\isComRequest('instrumenty','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+*/
 // В большинстве остальных случаев запускаем главные страницы
 else
 {
@@ -127,6 +130,7 @@ else
    {                                             
       require_once $SiteRoot."/Site.php";
    }
+   //echo "Всем привет ужe!";
    // Подключаем и запускаем регистратор времени загрузки страницы
    require_once $SiteHost."/TPhpTools/TPhpTools/TFixLoadTimer/FixLoadTimerClass.php";
    $oFixLoadTimer = new FixLoadTimer();

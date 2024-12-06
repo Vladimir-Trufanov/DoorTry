@@ -86,8 +86,11 @@ RewriteRule ^kroshki-opyta/([a-zA-Z0-9]{0,})([=]{0,})([0-9a-zA-ZАаБбВвГг
 RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
 
 ## Перенаправляем все запросы с HTTP на HTTPS
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+## RewriteCond %{ENV:HTTPS} !on
+## RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP:PORT} !^443$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
 
 ## Перенаправляем ошибки в файл e404.php
 ErrorDocument 400 /e404.php?err=400 
