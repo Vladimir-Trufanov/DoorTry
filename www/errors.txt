@@ -1,0 +1,3 @@
+CreateRightsMkdirHandler 2024-12-07 07:35:59 $errno=2 [Неверно указано название каталога] mkdir(): No such file or directory C:\TPhpPrown\TPhpPrown\CreateRightsDir.php $errline=161
+CreateRightsRmdirHandler 2024-12-07 07:35:59 $errno=2 [Ошибка удаления каталога] rmdir(C:\DoorTry\www/CreateRightsDir): Permission denied C:\TPhpPrown\TPhpPrownTests\CreateRightsDir_test.php $errline=94
+CreateRightsChmodHandler 2024-12-07 07:35:59 $errno=8 [Некорректное числовое значение в правах каталога] A non well formed numeric value encountered C:\TPhpPrown\TPhpPrown\CreateRightsDir.php $errline=194

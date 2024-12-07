@@ -1,6 +1,0 @@
-[22-Jan-2024 10:32:52 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function ConsoleLog() in C:\DoorTry\www\Pages\TPhpPrown\_CodePart.php:15
-Stack trace:
-#0 C:\DoorTry\www\Pages\TPhpPrown\_viewTPhpPrown.php(75): CodePart('C:/TPhpPrown', 'CommonPrown.php', '/\r\n\\/\\*\\*([0-9a...', '')
-#1 C:\DoorTry\www\Pages\TPhpPrown\_dispTPhpPrown.php(90): require_once('C:\\DoorTry\\www\\...')
-#2 {main}
-  thrown in C:\DoorTry\www\Pages\TPhpPrown\_CodePart.php on line 15

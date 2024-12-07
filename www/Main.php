@@ -18,7 +18,7 @@ require_once $TPhpPrown."/TPhpPrown/Replaces.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
 require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
 require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
+require_once $TPhpPrown."/TPhpPrown/MakeParmi.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 
@@ -75,11 +75,15 @@ else if (prown\isComRequest('basemaker','list'))
    $page='/Pages/BaseMaker/ProbaTestBMaker.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+*/
+/*
 else if (prown\isComRequest('signaphoto','list')) 
 {
    $page='/Pages/Signaphoto/SignaPhoto.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page,true);
 }
+*/
+/*
 // Если поступил запрос на пробную страницу, то запускаем её
 else if (prown\isComRequest('proba','list')) 
 {
@@ -87,6 +91,7 @@ else if (prown\isComRequest('proba','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+*/
 // Если поступил запрос на страницы "Крошки опыта", то запускаем её
 else if (prown\isComRequest('kroshki-opyta','list')) 
 {
@@ -94,6 +99,7 @@ else if (prown\isComRequest('kroshki-opyta','list'))
    //prown\Alert('$_SERVER[REQUEST_URI]='.$_SERVER['REQUEST_URI']);
    require_once  $SiteRoot."/BitofExpert/BitofExpert.php";
 }
+/*
 // Если поступил запрос по политике конфиденциальности FsbProba, то запускаем её
 else if (prown\isComRequest('probaPolityConfident','fsb')) 
 {
@@ -111,13 +117,14 @@ else if (prown\isComRequest('FsbProba','fsb'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
+*/
+
 else if (prown\isComRequest('instrumenty','list')) 
 {
    $page='/Pages/Instrumenty/indexInstrumenty.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
    //echo ("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
-*/
 // В большинстве остальных случаев запускаем главные страницы
 else
 {

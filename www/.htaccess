@@ -79,7 +79,6 @@ RewriteRule ^TPhpPrown/([a-z-]{1,})$ /Pages/TPhpPrown/_dispTPhpPrown.php?list=$1
 ## Преобразовываем URL-запросы стихотворений
 RewriteRule ^stihi/([a-z-]{1,})$ ?stihi=$1 
 ## Преобразовываем URL-запросы темы "Крошки опыта"
-## RewriteRule ^kroshki-opyta/([a-zA-Z0-9]{0,})([=]{0,})([0-9a-zA-ZАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя\(\)\-\s]{0,})$ /index.php?list=kroshki-opyta&par=$1&tit=$3
 RewriteRule ^kroshki-opyta/([a-zA-Z0-9]{0,})([=]{0,})([0-9a-zA-ZАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя\(\)\-\s]{0,})$ /index.php?list=kroshki-opyta&par=$1&tit=$3
 
 ## Преобразовываем URL-запросы новостных страниц
@@ -89,6 +88,7 @@ RewriteRule ^([a-z-]{1,})$ index.php?novosti=$1 [L]
 ## RewriteCond %{ENV:HTTPS} !on
 ## RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+## Уточненные настройки MASTERHOST
 RewriteCond %{HTTP:PORT} !^443$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
 

@@ -30,7 +30,11 @@ require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 try 
 {
    // Запускаем сценарий сайта
-   // echo "Всем привет!";
+   
+   //$browser = get_browser(null, true);
+   //print_r($browser);
+
+   //echo "Всем привет!";
    require_once $_SERVER['DOCUMENT_ROOT']."/Main.php";
    // Запускаем примеры ошибок и исключений
    // require_once $_SERVER['DOCUMENT_ROOT']."/MainDoorTry.php";

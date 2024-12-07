@@ -21,6 +21,10 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
+		-Any
+			-PhpiniFromNicru
+				www\Any\PhpiniFromNicru\php.ini
+				www\Any\PhpiniFromNicru\php.ini 2022-01-08
 		-BitofExpert
 			-bifeArduino
 				-byl-smartfon---stal-eshchyo-i-pult
@@ -90,6 +94,13 @@ DoorTry
 					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01-1280x556.png
 					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\CIRCUITSTATE-Electronics-01-1280x751.png
 					www\BitofExpert\bifeEsp32\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos\kak-pisat-parallelnye-mnogozadachnye-prilozheniya-esp32-v-arduino-s-freertos.html
+				-kak-rabotat-s-ocheredyami-vo-freertos
+					-QueueHandleOne
+						www\BitofExpert\bifeEsp32\kak-rabotat-s-ocheredyami-vo-freertos\QueueHandleOne\QueueHandleOne.ino
+					-QueueHandlMulti2
+						www\BitofExpert\bifeEsp32\kak-rabotat-s-ocheredyami-vo-freertos\QueueHandlMulti2\QueueHandlMulti2.ino
+					www\BitofExpert\bifeEsp32\kak-rabotat-s-ocheredyami-vo-freertos\kak-rabotat-s-ocheredyami-vo-freertos.html
+					www\BitofExpert\bifeEsp32\kak-rabotat-s-ocheredyami-vo-freertos\queue_animation.gif
 				-obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera
 					-ex3-0-6-0-Watchdog
 						www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\ex3-0-6-0-Watchdog\ex3-0-6-0-Watchdog.ino
@@ -114,13 +125,21 @@ DoorTry
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\Cache-Block-Diagram.jpg
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\Cache-memory-mode.jpg
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\esp32_technical_reference_manual_en.pdf
-					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\fil.pdf
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\module-with-dma.jpg
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\nastrsketcha.jpg
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\PeripheralAddressMapping1.jpg
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\PeripheralAddressMapping2.jpg
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\vse-pro-pamyat-esp32.html
 					www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\Win10ChDe352k.png
+				-vse-pro-sram-pamyat
+					-StackFiller
+						www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\StackFiller\StackFiller.ino
+					www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\obychnaya-shema-deleniya-pamyati-mezhdu-shinami.jpg
+					www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\organizaciya-dram.jpg
+					www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\organizaciya-iram.jpg
+					www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\shema-vnutrennej-operativnoj-pamyati.jpg
+					www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\vse-pro-sram-pamyat.html
+					www\BitofExpert\bifeEsp32\vse-pro-sram-pamyat\vse-pro-sram-pamyat.jpg
 			-bifeFritzing
 				-kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz
 					www\BitofExpert\bifeFritzing\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz\kak-sobrat-komponent-fritzing-s-pomoshchyu-make-fzpz.html
@@ -157,7 +176,6 @@ DoorTry
 			www\BitofExpert\BitofExpert.css
 			www\BitofExpert\BitofExpert.html
 			www\BitofExpert\BitofExpert.php
-			www\BitofExpert\esp32_technical_reference_manual_en.pdf
 			www\BitofExpert\ReplaceHrefPdf.php
 		-font-awesome-4.7.0
 			-css
@@ -589,6 +607,7 @@ DoorTry
 		www\doortry.png
 		www\DoorTryError.php
 		www\e404.php
+		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -601,7 +620,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
 		www\MakeQrcode.php
@@ -619,22 +637,22 @@ DoorTry
 1=www\Main.php
 2=www\iniMem.php
 3=www\Site.php
-4=www\.htaccess
+4=www\sitemap.xml
 [Selected Project Files]
 Main=
-Selected=www\.htaccess
+Selected=www\sitemap.xml
 [www\index.php]
-TopLine=7
-Caret=1,29
+TopLine=8
+Caret=4,38
 [www\Main.php]
-TopLine=62
-Caret=1,141
+TopLine=21
+Caret=46,21
 [www\iniMem.php]
 TopLine=3
 Caret=1,1
 [www\Site.php]
-TopLine=5
+TopLine=23
 Caret=43,25
-[www\.htaccess]
-TopLine=65
-Caret=4,90
+[www\sitemap.xml]
+TopLine=119
+Caret=1,1
