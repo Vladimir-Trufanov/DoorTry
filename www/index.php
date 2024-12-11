@@ -29,12 +29,23 @@ require_once $SiteHost."/TDoorTryer/DoorTryerPage.php";
 
 try 
 {
-   // Запускаем сценарий сайта
-   
+   // Проверяем информацию о текущей установленной GD библиотеке
+   /*
+   ?>
+   <pre>
+   <?php
+   var_dump(gd_info());
+   ?>
+   </pre>
+   <?php
+   */
+   // Проверяем, работает ли get-browser (2024-12-08 не работал в мастерхост)
    //$browser = get_browser(null, true);
    //print_r($browser);
 
+   // Запускаем сценарий сайта
    //echo "Всем привет!";
+   //phpinfo();
    require_once $_SERVER['DOCUMENT_ROOT']."/Main.php";
    // Запускаем примеры ошибок и исключений
    // require_once $_SERVER['DOCUMENT_ROOT']."/MainDoorTry.php";

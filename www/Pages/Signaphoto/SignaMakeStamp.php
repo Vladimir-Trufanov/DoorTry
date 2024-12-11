@@ -176,7 +176,9 @@ function ImageAndStamp(&$InfoMess,$im,$stamp,$type,$SiteProtocol,$xDesc,$yDesc,
       imagepng($im,$nameimgp);
       imagedestroy($im);
       imagedestroy($stamp);
+      
       // Отмечаем, что на фотографию наложена свежая подпись
+      prown\ConsoleLog('Подписали фотографию!');
       // $InfoMess=ajIsFreshStamp;
    }
 }

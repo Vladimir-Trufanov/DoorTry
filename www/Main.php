@@ -18,7 +18,7 @@ require_once $TPhpPrown."/TPhpPrown/Replaces.php";
 require_once $TPhpPrown."/TPhpPrown/getTranslit.php";
 require_once $TPhpPrown."/TPhpPrown/iniConstMem.php";
 require_once $TPhpPrown."/TPhpPrown/MakeCookie.php";
-require_once $TPhpPrown."/TPhpPrown/MakeParmi.php";
+require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
 require_once $TPhpPrown."/TPhpPrown/MakeSession.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 
@@ -76,13 +76,13 @@ else if (prown\isComRequest('basemaker','list'))
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page);
 }
 */
-/*
+
 else if (prown\isComRequest('signaphoto','list')) 
 {
    $page='/Pages/Signaphoto/SignaPhoto.php';
    Header("Location: http://".$_SERVER['HTTP_HOST'].$page,true);
 }
-*/
+
 /*
 // Если поступил запрос на пробную страницу, то запускаем её
 else if (prown\isComRequest('proba','list')) 
