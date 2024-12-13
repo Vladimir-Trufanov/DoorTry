@@ -126,6 +126,7 @@ function SetOfContent($par,$tit,$FileDir,$urlDir,$FileName,$SiteProtocol,$SiteRo
       // Показываем все ino-файлы по найденным ссылкам
       $FileContent=ReplaceHrefExt($FileContent,$SiteRoot);
       $FileContent=ReplaceHrefExt($FileContent,$SiteRoot,'h3');
+      $FileContent=ReplaceHrefExt($FileContent,$SiteRoot,'h4','txt');
       // Показываем файлы PDF
       $FileContent=ReplaceHrefPdf($FileContent,$urlDir);
    }

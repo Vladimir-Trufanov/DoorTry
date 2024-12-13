@@ -21,7 +21,7 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		-BitofExpert
+		+BitofExpert
 			-bifeArduino
 				-byl-smartfon---stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
@@ -166,6 +166,11 @@ DoorTry
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\probnyj-proekt.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Setting.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Toconfirm.jpg
+			-bifePHP
+				-skoncentrirovannye-svedeniya-o-phpini
+					-phpini
+						www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\phpini\phpini.txt
+					www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html
 			-bifeWindows
 				-kak-zamenit-drajver-na-windows
 					www\BitofExpert\bifeWindows\kak-zamenit-drajver-na-windows\kak-zamenit-drajver-na-windows.html
@@ -589,12 +594,9 @@ DoorTry
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
 		-Temp
-			www\Temp\Win10Ch0De--15stamt.png
 			www\Temp\Win10Ch0De--1img.jpg
-			www\Temp\Win10Ch0De--1img.png
 			www\Temp\Win10Ch0De--1proba.jpg
-			www\Temp\Win10Ch0De--1proba.png
-			www\Temp\Win10Ch0De--1probt.png
+			www\Temp\Win10Ch0De--1stamt.png
 		www\.htaccess
 		www\.user.ini
 		www\ApiPogoda.php
@@ -637,34 +639,34 @@ DoorTry
 1=www\Main.php
 2=www\iniMem.php
 3=www\Site.php
-4=www\iniMenu.php
-5=www\Pages\Signaphoto\SignaPhoto.php
-6=www\Pages\Signaphoto\SignaMakeStamp.php
-7=www\MainDoorTry.php
+4=www\BitofExpert\BitofExpert.php
+5=www\BitofExpert\BitofExpert.css
+6=www\BitofExpert\BitofExpert.html
+7=www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html
 [Selected Project Files]
 Main=
-Selected=www\iniMenu.php
+Selected=www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html
 [www\index.php]
 TopLine=23
 Caret=4,49
 [www\Main.php]
-TopLine=45
+TopLine=46
 Caret=1,85
 [www\iniMem.php]
-TopLine=26
+TopLine=27
 Caret=22,66
 [www\Site.php]
 TopLine=1
 Caret=43,25
-[www\iniMenu.php]
-TopLine=104
-Caret=145,136
-[www\Pages\Signaphoto\SignaPhoto.php]
+[www\BitofExpert\BitofExpert.php]
+TopLine=105
+Caret=67,129
+[www\BitofExpert\BitofExpert.css]
+TopLine=41
+Caret=1,1
+[www\BitofExpert\BitofExpert.html]
 TopLine=1
 Caret=1,1
-[www\Pages\Signaphoto\SignaMakeStamp.php]
-TopLine=189
-Caret=21,198
-[www\MainDoorTry.php]
-TopLine=1
-Caret=1,1
+[www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html]
+TopLine=403
+Caret=29,436

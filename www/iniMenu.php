@@ -122,7 +122,7 @@ function TopMenu()
    //echo '<li><a href="index.php?list=basemaker">Пробная BaseMaker страница</a></li>';
 
    // Подключаем "Подписать фотографию"
-   /*
+   
    if (($_SERVER['HTTP_HOST']=='doortry.ru')||($_SERVER['HTTP_HOST']=='kwinflatht.nichost.ru'))
    {
       //echo '<li><a href="podpisat-fotografiyu">Подписать фотографию</a></li>';
@@ -132,7 +132,7 @@ function TopMenu()
    {
       echo '<li><a href="index.php?list=signaphoto">Подписать фотографию</a></li>';
    }
-   */
+   
    // Подключаем страницы для проверки FsbProba
    /*
    echo '<li><a href="index.php?fsb=probaPolityConfident">probaPolityConfident</a></li>';
