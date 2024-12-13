@@ -642,10 +642,9 @@ DoorTry
 4=www\BitofExpert\BitofExpert.php
 5=www\BitofExpert\BitofExpert.css
 6=www\BitofExpert\BitofExpert.html
-7=www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html
+Selected=www\BitofExpert\BitofExpert.php
 [www\index.php]
 TopLine=23
 Caret=4,49
@@ -659,14 +658,11 @@ Caret=22,66
 TopLine=1
 Caret=43,25
 [www\BitofExpert\BitofExpert.php]
-TopLine=105
-Caret=67,129
+TopLine=125
+Caret=1,129
 [www\BitofExpert\BitofExpert.css]
 TopLine=41
 Caret=1,1
 [www\BitofExpert\BitofExpert.html]
 TopLine=1
 Caret=1,1
-[www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html]
-TopLine=403
-Caret=29,436
