@@ -21,7 +21,7 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		+BitofExpert
+		-BitofExpert
 			-bifeArduino
 				-byl-smartfon---stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
@@ -168,8 +168,8 @@ DoorTry
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Toconfirm.jpg
 			-bifePHP
 				-skoncentrirovannye-svedeniya-o-phpini
-					-phpini
-						www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\phpini\phpini.txt
+					-PHPIni
+						www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\PHPIni\PHPIni.ino
 					www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\skoncentrirovannye-svedeniya-o-phpini.html
 			-bifeWindows
 				-kak-zamenit-drajver-na-windows
@@ -458,7 +458,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		-Pages
+		+Pages
 			-Basemaker
 				www\Pages\Basemaker\ProbaTestBMaker.php
 			-DoorTry
@@ -477,7 +477,7 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			-Signaphoto
+			+Signaphoto
 				-Fonts
 					-Lobster
 						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
@@ -594,9 +594,6 @@ DoorTry
 			www\Styles\TPhpPrownComp.css
 			www\Styles\TPhpPrownMobi.css
 		-Temp
-			www\Temp\Win10Ch0De--1img.jpg
-			www\Temp\Win10Ch0De--1proba.jpg
-			www\Temp\Win10Ch0De--1stamt.png
 		www\.htaccess
 		www\.user.ini
 		www\ApiPogoda.php
@@ -639,12 +636,11 @@ DoorTry
 1=www\Main.php
 2=www\iniMem.php
 3=www\Site.php
-4=www\BitofExpert\BitofExpert.php
-5=www\BitofExpert\BitofExpert.css
-6=www\BitofExpert\BitofExpert.html
+4=www\Pages\Signaphoto\SignaPhoto.php
+5=..\Probatv\www\Pages\Signaphoto\SignaPhoto.php
 [Selected Project Files]
 Main=
-Selected=www\BitofExpert\BitofExpert.php
+Selected=www\Pages\Signaphoto\SignaPhoto.php
 [www\index.php]
 TopLine=23
 Caret=4,49
@@ -657,12 +653,9 @@ Caret=22,66
 [www\Site.php]
 TopLine=1
 Caret=43,25
-[www\BitofExpert\BitofExpert.php]
-TopLine=125
-Caret=1,129
-[www\BitofExpert\BitofExpert.css]
-TopLine=41
-Caret=1,1
-[www\BitofExpert\BitofExpert.html]
-TopLine=1
-Caret=1,1
+[www\Pages\Signaphoto\SignaPhoto.php]
+TopLine=157
+Caret=1,188
+[..\Probatv\www\Pages\Signaphoto\SignaPhoto.php]
+TopLine=99
+Caret=1,124

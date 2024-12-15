@@ -7,8 +7,8 @@
 // ****************************************************************************
 
 //                                                   Автор:       Труфанов В.Е.
-// v5.1                                              Дата создания:  01.06.2021
-// Copyright © 2021 tve                              Посл.изменение: 02.03.2022
+// v5.1.1                                            Дата создания:  01.06.2021
+// Copyright © 2021 tve                              Посл.изменение: 15.12.2025
 
 // Инициируем рабочее пространство страницы
 require_once $_SERVER['DOCUMENT_ROOT'].'/iniWorkSpace.php';
@@ -122,7 +122,7 @@ try
    // DebugView($c_Orient);
    // Запускаем построение базовой разметки
    MarkupBase($c_FileImg,$c_FileStamp,$c_FileProba,$RemoteAddr,$c_PerSizeImg,$c_PointCorner,
-      $c_PerMargeWidth,$c_PerMargeHight,$c_MaintainProp,$c_Orient,$SiteDevice);
+      $c_PerMargeWidth,$c_PerMargeHight,$c_MaintainProp,$c_Orient,$SiteDevice,$s_Counter);
 
    // Завершаем вывод страницы 
    //ViewMess($InfoMess);
@@ -159,7 +159,7 @@ function ViewMess($InfoMess)
 // *                           Выполняем базовую разметку                     *
 // ****************************************************************************
 function MarkupBase($c_FileImg,$c_FileStamp,$c_FileProba,$RemoteAddr,
-   $c_PerSizeImg,$c_PointCorner,$c_PerMargeWidth,$c_PerMargeHight,$c_MaintainProp,$c_Orient,$SiteDevice)
+   $c_PerSizeImg,$c_PointCorner,$c_PerMargeWidth,$c_PerMargeHight,$c_MaintainProp,$c_Orient,$SiteDevice,$s_Counter)
 {
   // Размечаем область изображений
   echo '<div id="All">';
@@ -181,6 +181,10 @@ function MarkupBase($c_FileImg,$c_FileStamp,$c_FileProba,$RemoteAddr,
     echo '</div>';
     // Размечаем область изображения с подписью
     echo '<div  id="Proba">';
+      // Для того, чтобы отключиться от кэширования файла, условно меняем его
+      // название - добавляем параметр '?n='.$s_Counter
+      $c_FileProba=$c_FileProba.'?n='.$s_Counter;
+      prown\ConsoleLog('Выводим подписанное фото: '.$c_FileProba);
       ViewProba($c_FileProba,$RemoteAddr,
          $c_PointCorner,$c_PerSizeImg,$c_PerMargeWidth,$c_PerMargeHight,$c_MaintainProp,
          $c_FileImg,$c_FileStamp,$c_Orient);
