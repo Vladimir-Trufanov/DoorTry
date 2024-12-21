@@ -482,7 +482,7 @@ DoorTry
 					-Lobster
 						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
 						www\Pages\Signaphoto\Fonts\Lobster\OFL.txt
-				-images
+				+images
 					www\Pages\Signaphoto\images\bg_page.png
 					www\Pages\Signaphoto\images\iphoto.jpg
 					www\Pages\Signaphoto\images\iproba.jpeg
@@ -638,6 +638,7 @@ DoorTry
 3=www\Site.php
 4=www\Pages\Signaphoto\SignaPhoto.php
 5=..\Probatv\www\Pages\Signaphoto\SignaPhoto.php
+6=www\Pages\Signaphoto\SignaPhotoImg.php
 [Selected Project Files]
 Main=
 Selected=www\Pages\Signaphoto\SignaPhoto.php
@@ -645,7 +646,7 @@ Selected=www\Pages\Signaphoto\SignaPhoto.php
 TopLine=23
 Caret=4,49
 [www\Main.php]
-TopLine=46
+TopLine=52
 Caret=1,85
 [www\iniMem.php]
 TopLine=27
@@ -654,8 +655,11 @@ Caret=22,66
 TopLine=1
 Caret=43,25
 [www\Pages\Signaphoto\SignaPhoto.php]
-TopLine=157
-Caret=1,188
+TopLine=171
+Caret=80,186
 [..\Probatv\www\Pages\Signaphoto\SignaPhoto.php]
-TopLine=99
+TopLine=33
 Caret=1,124
+[www\Pages\Signaphoto\SignaPhotoImg.php]
+TopLine=183
+Caret=10,15

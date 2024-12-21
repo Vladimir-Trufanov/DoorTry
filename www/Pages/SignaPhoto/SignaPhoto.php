@@ -183,7 +183,8 @@ function MarkupBase($c_FileImg,$c_FileStamp,$c_FileProba,$RemoteAddr,
     echo '<div  id="Proba">';
       // Для того, чтобы отключиться от кэширования файла, условно меняем его
       // название - добавляем параметр '?n='.$s_Counter
-      $c_FileProba=$c_FileProba.'?n='.$s_Counter;
+      // (при отсутствии фото с подписью выводим заготовку "images/iproba.jpeg")
+      if ($c_FileProba!="images/iproba.jpeg") $c_FileProba=$c_FileProba.'?n='.$s_Counter;
       prown\ConsoleLog('Выводим подписанное фото: '.$c_FileProba);
       ViewProba($c_FileProba,$RemoteAddr,
          $c_PointCorner,$c_PerSizeImg,$c_PerMargeWidth,$c_PerMargeHight,$c_MaintainProp,
