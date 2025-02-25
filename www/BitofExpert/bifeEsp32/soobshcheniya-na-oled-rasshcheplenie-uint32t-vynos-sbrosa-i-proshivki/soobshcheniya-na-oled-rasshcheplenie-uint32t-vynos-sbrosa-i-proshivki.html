@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="сообщения-на-oled-дисплей-из-задачи-через-уведомления-расщепление-uint32_t-на-составляющие-вынос-во-вне-кнопок-сброса-и-прошивки-esp32-cam-2025-02-24"><a href="https://github.com/Vladimir-Trufanov/BitofExpert/blob/main/bifeEsp32/soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki/soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki.md">Сообщения на Oled-дисплей из задачи через уведомления, расщепление uint32_t на составляющие, вынос во вне кнопок сброса и прошивки ESP32-CAM</a> [2025-02-24]</h2>
+<p>OLED-дисплей (128x64) - это графический дисплей, каждый пиксель которого является отдельным OLED (organic light-emitting diode) светодиодом. В отличии от TFT (Thin-Film Transistor), LCD (ЖК) и других дисплеев, этот дисплей не нуждается в подсветке, каждый пиксель светится самостоятельно, а не затемняет свет подсветки. Благодаря этому черный цвет - действительно чёрный (выключенный светодиод не светится в темноте), а белый цвет - действительно белый (не проходит через слой жидких кристаллов или тонкоплёночных транзисторов).</p>
+<p>Использование органических светодиодов позволило достичь угла обзора более 160° и значительно снизить энергопотребление. Так же стоит отметить высокую контрастность (что повышает удобочитаемость текста и изображений), и небольшие размеры дисплея, всего 0.96 дюйма. Всё это, в сочетании с удобством и функциональностью, позволяет сказать что OLED-дисплей (128x64) один из лучших.</p>
+<h4 id="характеристики">Характеристики</h4>
+<pre><code>Тип дисплея: графический, OLED (organic light-emitting diode) на основе органических светодиодов.
+Тип драйвера матрицы: SSD1306.
+Разрешение: 128 x 64 точек.
+Цвет пикселей (светодиодов): белый.
+Количество цветов: белый и черный (монохромный).
+Угол обзора: &gt; 160°.
+Коэффициент контрастности: 10000:1.
+Яркость: &gt;120 кд/м2.
+Напряжение питания: 3,3 ... 5 В.
+Энергопотребление: до 80 мВт (при свечении всего экрана);
+Интерфейс: I2C (поддерживается Arduino, WeMos, STM32, MSP430 и множеством других микроконтроллеров, и отладочных плат).
+Адрес на шине I2C: 0x3C или 0x3D выбирается переключателем.
+Время отклика &lt; 10 мкс.
+Рабочая температура: -40 ... 85 °С.
+Габариты: 30x30 мм.</code></pre>
+<figure>
+<img src="OLED%20SSD1306%20i2c.jpg" alt="OLED SSD1306" /><figcaption>OLED SSD1306</figcaption>
+</figure>
+<h3 id="сообщения-на-оled-дисплей-из-задачи-через-уведомления"><a href="#%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-oled-%D0%B4%D0%B8%D1%81%D0%BF%D0%BB%D0%B5%D0%B9-%D0%B8%D0%B7-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D1%83%D0%B2%D0%B5%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F">Сообщения на Оled-дисплей из задачи через уведомления</a></h3>
+<h3 id="расщепление-uint32_t-на-составляющие-c-помощью-union"><a href="#%D1%80%D0%B0%D1%81%D1%89%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-uint32_t-%D0%BD%D0%B0-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%D1%89%D0%B8%D0%B5-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-union">Расщепление uint32_t на составляющие c помощью union</a></h3>
+<h3 id="сообщения-на-oled-дисплей-из-задачи-через-уведомления">Сообщения на Oled-дисплей из задачи через уведомления</h3>
+<p>Существует несколько библиотек для работы с Oled-дисплеями. Основной пример статьи использует две библиотеки <strong><em><a href="Adafruit_SSD1306.zip">Adafruit_SSD1306.h v2.5.13</a></em></strong> и <strong><em><a href="Adafruit-GFX-Library.zip">Adafruit_GFX.h v1.11.11</a></em></strong>, установленные из IDE Arduino.</p>
+<p><img src="AdafruitLibs.jpg" /></p>
+<p>Подключение этих двух библиотек позволяет работать с дисплеем, но без использования русских букв. Для руссификации дисплея следует в библиотеке <strong><em>Adafruit_GFX.h</em></strong> заменить оригинальный файл шрифтов <strong><em>glcdfont.c</em></strong> на его <strong><em><a href="glcdfont.c.zip">руссифицированную версию</a></em></strong>.</p>
+<p>Но есть ещё одна особенность. Кодировка символов Oled-дисплея является однобайтовой, поэтому перед загрузкой русских символов их следует перекодировать из <strong><em>Utf8</em></strong> в <strong><em>Windows-1251</em></strong>. Об этих процедурах хорошо изложено в статье <strong><em><a href="https://arduino.ru/forum/programmirovanie/rusifikatsiya-biblioteki-adafruit-gfx-i-vyvod-russkikh-bukv-na-displei-v-kodi">“Русификация библиотеки Adafruit-GFX и вывод русских букв на дисплей в кодировке UTF-8 из Arduino IDE”</a></em></strong>.</p>
+<p>В следующем примере используется подключение Oled-дисплея к плате ESP32-CAM для вывода кратких сообщений журнала приложения с помощью этих инструментов.</p>
+<figure>
+<img src="RaspinovkaESP32CAM.jpg" alt="Распиновка ESP32-CAM" /><figcaption>Распиновка ESP32-CAM</figcaption>
+</figure>
+<p>В примере контакт SDA дисплея подключается к 14 пину контроллера (GPIO14), а контакт SCL к 13 пину (так как карта microSD не используется). При необходимости можно использовать еще 2 пары контактов (GPIO3 и GPIO1, если не используется аппаратный последовательный порт или GPIO0 и GPIO16).</p>
+<h4 id="тестовая-программа-работы-с-oled-дисплеем-ssd1306-128x64-на-esp32-cam-в-отдельной-задаче-и-назначением-собственных-выводов-i2с">Тестовая программа работы с OLED-дисплеем SSD1306 128x64 на ESP32-CAM в отдельной задаче и назначением собственных выводов I2С</h4>
+<p>В приложении отправляются 32-разрядные уведомления в задачу <strong><em>Echo</em></strong> (#include “task_Echo.h”) из двух мест: из таймерного прерывания <strong><em>onTimer()</em></strong> и низкоприоритетного основного цикла <strong><em>loop()</em></strong>.</p>
+<p>Уведомление имеет следующую структуру:</p>
+<pre><code>// Определяем структуру уведомления задачи по работе с дисплеем
+// с расщеплением на команды по формированию сообщений приложения
+typedef union
+{
+  uint32_t value;      // для контрольного значения = 0x1A2B3C4D; 
+  struct 
+  {
+    uint8_t сode;      // код сообщения = 1 байт (от 0 до 255)
+    unsigned v00:4;    // младшая контекстная тетрада  (0-15)
+    unsigned v01:4;    // старшая контекстная тетрада  (0-15)
+    uint16_t calc;     // счётчик или беззнаковое целое (0-65535)
+  }
+  nibbles;
+}
+split;</code></pre>
+<p>Уведомления, поступающие в задачу <strong><em>Echo</em></strong> из прерывания содержат код команды <strong><em>uint8_t сode = 1</em></strong> и значение счетчика прерываний <strong><em>uint16_t calc</em></strong>.</p>
+<p>Уведомления, поступающие из основного цикла могут содержать:</p>
+<ul>
+<li><strong><em>uint32_t value = 0x1A2B3C4D</em></strong> - контрольное значение, занимающее всё пространство уведомления;</li>
+<li>команды <strong><em>uint8_t сode = 13</em></strong> или <strong><em>uint8_t сode = 14</em></strong>, заставляющие менять направление движения строк в дисплее;</li>
+<li>прочие команды, заставляющие выводить на дисплей сообщение из списка в функции <strong><em>String TakeMess(uint8_t code)</em></strong>.</li>
+</ul>
+<pre><code>/** Arduino-Esp32-CAM                                  *** Rus32CAMExt5.ino ***
+ *                          
+ *        Тестовая программа работы с OLED-дисплеем SSD1306 128x64 на ESP32-CAM
+ *                    в отдельной задаче и назначением собственных выводов I2С.
+ * Используются:     #include &lt;Adafruit_GFX.h&gt; (с руссифицированным glcdfont.c)
+ *                   #include &lt;Adafruit_SSD1306.h&gt;
+ * 
+ * v1.0.7, 24.02.2025                                 Автор:      Труфанов В.Е.
+ * Copyright © 2025 tve                               Дата создания: 21.02.2025
+**/
+
+#include &quot;task_Echo.h&quot;
+
+// Определяем заголовок для объекта таймерного прерывания
+hw_timer_t *timer = NULL;
+
+void setup() 
+{
+  Serial.begin(115200);
+  iniEcho();
+  // Создаём объект таймера, устанавливаем его частоту отсчёта (1Mhz)
+  timer = timerBegin(1000000);
+  // Подключаем функцию обработчика прерывания от таймера - onTimer
+  timerAttachInterrupt(timer, &amp;onTimer);
+  // Настраиваем таймер: интервал перезапуска - 2 секунды (2000000 микросекунд),
+  // всегда повторяем перезапуск (третий параметр = true), неограниченное число 
+  // раз (четвертый параметр = 0) 
+  timerAlarm(timer, 2000000, true, 0);
+  Serial.println(&quot;SETUP отработал!&quot;);
+}
+
+// ****************************************************************************
+// *           Отправить уведомление cо значением задаче из прерывания        *
+// ****************************************************************************
+
+int i=0; // счётчик прерываний
+static split CommAndCalc;
+
+void ARDUINO_ISR_ATTR onTimer() 
+{
+  // Резервируем переменную для значения
+  uint32_t ulStatusRegister;
+  // Резервируем регистратор приоритета разблокированной задачи
+  BaseType_t xHigherPriorityTaskWoken;
+  i++;
+  CommAndCalc.nibbles.сode=1;
+  CommAndCalc.nibbles.calc=i;
+
+  Serial.print(&quot;Прерывание сработало &quot;); Serial.print(i); Serial.println(&quot; раз&quot;);
+  // Готовим значение для передачи с оповещением
+  ulStatusRegister = CommAndCalc.value;
+  // Инициализируем xHigherPriorityTaskWoken значением false. При вызове
+  // функция xTaskNotifyFromISR() разблокирует задачу обработки, и если приоритет
+  // задачи обработки выше приоритета текущей запущенной задачи, то для функции 
+  // xHigherPriorityTaskWoken автоматически будет установлено значение pdTRUE
+  xHigherPriorityTaskWoken = pdFALSE;
+  // Передаём сообщение в задачу обработки от прерывания. xHandlingTask - это дескриптор задачи,
+  // который был получен когда задача была создана. eSetValueWithOverwrite - заставляем уведомление 
+  // для целевой задачи обязательно быть равным отправляемому значению ulStatusRegister.
+  xTaskNotifyFromISR(xHandlingEcho,ulStatusRegister,eSetValueWithOverwrite,&amp;xHigherPriorityTaskWoken);
+  // Принудительно переключаеме контекст на задачу xHandlingTask, так как теперь xHigherPriorityTaskWoken = pdTRUE
+  portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+}
+
+void loop() 
+{
+  // Резервируем переменную для значения
+  uint32_t ulValue;
+  // Даём возможность поработать счетчику прерываний без помех 
+  delay(10000);
+  
+  // Направляем сообщения вверх, code=13
+  xTaskNotify(xHandlingEcho,13,eSetValueWithOverwrite);   // &quot;Вверх - команда на движение строк СНИЗУ-ВВЕРХ&quot;
+  delay(2000);
+  // Передаём контрольное сообщение в задачу. xHandlingEcho - это дескриптор задачи,
+  // который был получен когда задача была создана. eSetValueWithOverwrite - заставляем уведомление 
+  // для целевой задачи обязательно быть равным отправляемому значению ulStatusRegister.
+  ulValue=0x1A2B3C4D;
+  xTaskNotify(xHandlingEcho,ulValue,eSetValueWithOverwrite);
+  delay(2000);
+  // Передаем учтенные сообщения
+  xTaskNotify(xHandlingEcho,0,eSetValueWithOverwrite);    // &quot;NULL&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,2,eSetValueWithOverwrite);    // &quot;Привет!&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,3,eSetValueWithOverwrite);    // &quot;555&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,4,eSetValueWithOverwrite);    // &quot;Привет МИР, такой очень удивительный&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,5,eSetValueWithOverwrite);    // &quot;01234567890123456789&quot;
+  delay(2000);
+  // Передаем неучтенное сообщение
+  xTaskNotify(xHandlingEcho,254,eSetValueWithOverwrite);  // &quot;Неизвестно&quot;
+  delay(2000);
+  
+  // Возвращаем направление движения вниз, code=14
+  xTaskNotify(xHandlingEcho,14,eSetValueWithOverwrite);   // &quot;Вниз  - команда на движение строк СВЕРХУ-ВНИЗ&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,6,eSetValueWithOverwrite);    // &quot;Hello&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,7,eSetValueWithOverwrite);    // &quot;world&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,8,eSetValueWithOverwrite);    // &quot;идем&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,9,eSetValueWithOverwrite);    // &quot;уже&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,10,eSetValueWithOverwrite);  // &quot;внизёхонько&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,11,eSetValueWithOverwrite);  // &quot;Сейчас&quot;
+  delay(2000);
+  xTaskNotify(xHandlingEcho,12,eSetValueWithOverwrite);  // &quot;0123456789&quot;
+}
+
+// ******************************************************* Rus32CAMExt5.ino ***</code></pre>
+<pre><code>/** Arduino-Esp32-CAM                                       *** task_Echo.h ***
+ *                          
+ *               Задача вывода сообщений журнала на OLED-дисплее SSD1306 128x64 
+ *                                     на ESP32-CAM с назначенными выводами I2С
+ *
+ * Используются:     #include &lt;Adafruit_GFX.h&gt; (с руссифицированным glcdfont.c)
+ *                   #include &lt;Adafruit_SSD1306.h&gt;
+ * 
+ * v1.0.7, 24.02.2025                                 Автор:      Труфанов В.Е.
+ * Copyright © 2025 tve                               Дата создания: 21.02.2025
+**/
+
+#pragma once
+
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+
+// Назначаем объекты для работы через шину I2C с OLED-дисплеем
+static TwoWire I2Cbus = TwoWire(0);  // объект для работы с шиной I2C
+static Adafruit_SSD1306 display;     // объект дисплея
+// Назначаем пины для подключения дисплея по шине I2C к контроллеру
+#define I2C_SDA 14                   // контакт SDA к GPIO14 
+#define I2C_SCL 13                   // контакт SCL к GPIO13
+// Определяем параметры экрана и направления движения строк
+#define SCREEN_WIDTH 128             // ширина экрана OLED-дисплея в пикселах
+#define SCREEN_HEIGHT 64             // высота экрана OLED-дисплея в пикселах
+#define TopToBottom    1             // сверху-вниз   
+#define FromBottomTop  2             // снизу-вверх   
+// Определяем структуру уведомления задачи по работе с дисплеем
+// с расщеплением на команды по формированию сообщений приложения
+typedef union
+{
+  uint32_t value;      // для контрольного значения = 0x1A2B3C4D; 
+  struct 
+  {
+    uint8_t сode;      // код сообщения = 1 байт (от 0 до 255)
+    unsigned v00:4;    // младшая контекстная тетрада  (0-15)
+    unsigned v01:4;    // старшая контекстная тетрада  (0-15)
+    uint16_t calc;     // счётчик или беззнаковое целое (0-65535)
+  }
+  nibbles;
+}
+split;
+// ****************************************************************************
+// *       Сформировать сообщение приложения для  OLED-дисплея SSD1306        *
+// *                      по коду из поступившего уведомления                 *
+// ****************************************************************************
+#define def(ncase,mmess)  case (ncase): mess=(mmess); break;  // макрос функции
+/* Описания кодов:
+   1          - поступило значение счетчика прерываний
+   13         - поступила команда начать движение строк СНИЗУ-ВВЕРХ
+   14         - поступила команда начать движение строк СВЕРХУ-ВНИЗ
+   0x1A2B3C4D - контрольное сообщение &quot;0x1A2B3C4D&quot;
+   Остальные коды вызывают вывод на дисплей соответствующих сообщений
+*/
+String TakeMess(uint8_t code)
+{
+  String mess;
+  switch (code) {
+  def (0x1A2B3C4D,&quot;0x1A2B3C4D&quot;)
+  def ( 0, &quot;NULL&quot;)
+  def ( 1, &quot;: ISR&quot;)
+  def ( 2, &quot;Привет!&quot;)
+  def ( 3, &quot;555&quot;)
+  def ( 4, &quot;Привет МИР, такой очень удивительный&quot;)
+  def ( 5, &quot;01234567890123456789&quot;)
+
+  def ( 6, &quot;Hello&quot;)
+  def ( 7, &quot;world&quot;)
+  def ( 8, &quot;идем&quot;)
+  def ( 9, &quot;уже&quot;)
+  def (10, &quot;внизёхонько&quot;)
+  def (11, &quot;Сейчас&quot;)
+  def (12, &quot;0123456789&quot;)
+
+  def (13, &quot;Идем ВВЕРХ&quot;)
+  def (14, &quot;Поток ВНИЗ&quot;)
+
+  default: mess=&quot;Неизвестно&quot;; break;
+  }
+  return mess;
+}
+// ****************************************************************************
+// *                      Отрезать лишние символы справа                      *
+// *   (по умолчанию задача настраивает вывод на дислей символы среднего      *
+// *         размера - четыре строки по не более чем 10 символов)             *
+// ****************************************************************************
+String squezy(String str)
+{
+  String strUtf8;
+  return strUtf8=str.substring(0,10);
+}
+// ****************************************************************************
+// *            Перекодировать русские буквы из UTF-8 в Win-1251              *
+// ****************************************************************************
+String utf8rus(String source)
+{
+  int i,k;
+  String target;
+  unsigned char n;
+  char m[2] = { &#39;0&#39;, &#39;\0&#39; };
+  k = source.length(); i = 0;
+  while (i &lt; k) 
+  {
+    n = source[i]; i++;
+    if (n &gt;= 0xC0) 
+    {
+      switch (n) 
+      {
+        case 0xD0: 
+        {
+          n = source[i]; i++;
+          if (n == 0x81) { n = 0xA8; break; }
+          if (n &gt;= 0x90 &amp;&amp; n &lt;= 0xBF) n = n + 0x30;
+          break;
+        }
+        case 0xD1: 
+        {
+          n = source[i]; i++;
+          if (n == 0x91) { n = 0xB8; break; }
+          if (n &gt;= 0x80 &amp;&amp; n &lt;= 0x8F) n = n + 0x70;
+          break;
+        }
+      }
+    }
+    m[0] = n; target = target + String(m);
+  }
+return target;
+}
+// ****************************************************************************
+// *      Отработать задачу по выводу сообщений на OLED-дисплей SSD1306       *
+// ****************************************************************************
+void Echo (void* pvParameters) 
+{
+  int i;                             // счетчик внутренних циклов
+  uint32_t ulInterruptStatus;        // уведомление к задаче
+  static split EchoComm;             // расщепление уведомления
+  static int direction=TopToBottom;  // текущее направление движения строк
+  // Инициируем программную шину I2C
+  I2Cbus.begin(I2C_SDA,I2C_SCL,100000);
+  // Подключаем дисплей к шине 
+  Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;I2Cbus, -1);
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
+  { 
+    Serial.println(&quot;SSD1306 - ошибка подключения к I2C&quot;);
+    //for(;;);
+  }
+  vTaskDelay(97/portTICK_PERIOD_MS);
+  // Включаем использование новых версий Adafruit-GFX (в том числе руссификация)
+  display.cp437(true);
+  // Выбираем средний размер шрифта и цвет
+  display.setTextSize(2);             
+  display.setTextColor(WHITE);  
+  // Выполняем начальное заполнение массива сообщений
+  String aLines[4]; 
+  aLines[0]=&quot; &quot;; aLines[1]=&quot; &quot;; aLines[2]=&quot; &quot;; aLines[3]=&quot; &quot;;
+  // Делаем первый вывод на экран
+  display.clearDisplay();
+  for (i=0; i&lt;4; i++)
+  {
+    display.setCursor(0,i*16);             
+    display.println(aLines[i]);
+  }
+  display.display();
+  vTaskDelay(97/portTICK_PERIOD_MS);
+  // Циклически отрабатываемпоступающие уведомления
+  while (1) 
+  {
+    // Ждём получения уведомления, которое будет отправлено непосредственно в эту задачу.   
+    xTaskNotifyWait ( 
+      0,              
+      0,       
+      &amp;ulInterruptStatus, // для приёма значения 
+      portMAX_DELAY       // блокировка до приема на неопределённый срок
+    );
+    // Выполняем обработку уведомления                       
+    EchoComm=split(ulInterruptStatus);
+    // Выделяем команду
+    uint8_t inсode=EchoComm.nibbles.сode;
+    // Формируем сообщение текущей строки
+    String inmess=&quot;Undefaund!&quot;;
+    if (EchoComm.value==0x1A2B3C4D) inmess=&quot;Контроль&quot;;
+    else if (inсode==1) inmess=String(EchoComm.nibbles.calc)+TakeMess(inсode);
+    // При необходимости устанавливаем направление движения строк вверх 
+    // def (13, &quot;Вверх - команда на движение строк СНИЗУ-ВВЕРХ&quot;)
+    else if (inсode==13) 
+    {
+      direction=FromBottomTop;
+      inmess=TakeMess(inсode);
+    }
+    // Или устанавливаем направление движения строк вниз 
+    // def (14, &quot;Вниз  - команда на движение строк СВЕРХУ-ВНИЗ&quot;)
+    else if (inсode==14) 
+    {
+      direction=TopToBottom;
+      inmess=TakeMess(inсode);
+    }
+    else inmess=TakeMess(inсode);
+    // Сдвигаем 3 строки на 1 позицию, заполняем первую
+    for (i=3; i&gt;0; i--)
+    {
+      aLines[i]=aLines[i-1];
+    }
+    aLines[0]=squezy(utf8rus(inmess));
+    // Очищаем в мгновение дисплей 
+    display.clearDisplay();
+    // Выводим строки на дисплей сверху-вниз
+    if (direction==TopToBottom)
+    {
+      for (i=0; i&lt;4; i++)
+      {
+        display.setCursor(0,i*16);             
+        display.println(aLines[i]);
+      }
+    }
+    // Или снизу-вверх
+    else
+    {
+      for (i=0; i&lt;4; i++)
+      {
+        display.setCursor(0,i*16);             
+        display.println(aLines[3-i]);
+      }
+    }
+    // Зажигаем дисплей
+    display.display();
+    vTaskDelay(97/portTICK_PERIOD_MS);
+  }
+}
+// ****************************************************************************
+// *          Определить задачу по выводу сообщений на Oled-дисплей           *
+// *                 по блокирующим уведомлениям к задаче                     *
+// ****************************************************************************
+// Определяем заголовок задачи Echo, играющей роль блокированных действий. 
+// Другая задача RTOS (или обработчик прерывания) вызовет функцию оповещения, 
+// а затем будет ожидать его в заблокированном состоянии (чтобы не использовать 
+// процессорное время) до тех пор, пока не будет получено уведомление о 
+// завершении передачи. Передача осуществляется с помощью DMA и в завершении 
+// прерывания также DMA используется для отправки уведомления задаче
+static TaskHandle_t xHandlingEcho = NULL;  
+// Определяем задачу Echo
+void iniEcho() 
+{
+  xTaskCreatePinnedToCore (
+    Echo,            // название функции, которая будет запускаться, как параллельная задача
+    &quot;Echo&quot;,          // название задачи
+    3072,            // размер стека в байтах
+    NULL,            // указатель на параметр новой задаче. NULL, если параметр не передаётся.
+    1,               // приоритет задачи
+    &amp;xHandlingEcho,  // дескриптор (указатель или заголовок) на задачу
+    1                // идентификатор ядра процессора, на котором требуется запустить задачу. 
+  );
+}
+
+// ************************************************************ task_Echo.h ***</code></pre>
+<h6 id="в-начало"><a href="#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8">в начало</a></h6>
+<h3 id="расщепление-uint32_t-на-составляющие-с-помощью-union"><a href="https://forum.arduino.cc/t/solved-split-uint-32-to-bytes/532751">Расщепление uint32_t на составляющие с помощью union</a></h3>
+<p>Так как разработчиками FreeRTOS была реализована идея замены семафоров и мьютексов 32-разрядными уведомлениями к задачам возникла потребность интерпретировать всяко-разно само уведомление.</p>
+<p>И здесь хорошо употребить конструкцию <strong><em>union</em></strong>, которая позволяет манипулировать данными Arduino и объединение их с помощью структур.</p>
+<p>Union позволяет объединить и записать несколько переменных в однобайтовый массив для отправки по Bluetooth, i2c, EspNow или любому другому протоколу, работающему с массивами;</p>
+<p>позволяет записать данные в одном формате, а затем прочитать в другом.</p>
+<h4 id="пример-расщепления-uint32_t-на-составляющие-с-помощью-union"><a href="Rus32CAMExt6/Rus32CAMExt6.ino">Пример расщепления uint32_t на составляющие с помощью union</a></h4>
+<!--
+
+#### OLED SSD1306.jpg
+
+![OLED SSD1306](OLED SSD1306.jpg)
+
+### Библиография
+
+#### [ESP-WebOTA Легко добавляйте веб-обновления OTA в свои проекты ESP32/ESP8266](https://github.com/scottchiefbaker/ESP-WebOTA)
+
+#### [Разделить uint-32 на байты](https://forum.arduino.cc/t/solved-split-uint-32-to-bytes/532751)
+
+#### [ESP32 – Автоматическое программирование и сброс настроек](https://www.studiopieters.nl/esp32-auto-program-reset/)
+
+#### [Форматирование карты microSD, фотографирование с PIR или без и сохранение снимка на SD-карте](https://www.diyengineers.com/2023/04/13/esp32-cam-complete-guide/)
+
+#### [Как назначить фиксированный IP-адрес вашему устройству ESP32](https://arduinokitproject.com/esp32-static-ip-tutorial/)
+
+#### [Источник пробуждения ESP32-CAM, Таймер](https://lastminuteengineers.com/esp32-deep-sleep-wakeup-sources/)
+
+#### [ThingPulse OLED SSD1306 (ESP8266/ESP32/Mbed-OS)](https://github.com/ThingPulse/esp8266-oled-ssd1306/tree/master)
+
+
+### OLED дисплей на русском языке
+
+#### [Описание команд - Adafruit_SSD1306 Class Reference](https://adafruit.github.io/Adafruit_SSD1306/html/class_adafruit___s_s_d1306.html)
+
+#### [Дисплей SSD1306 подключаем к Arduino. Выводим текст, рисуем фигуры](https://portal-pk.ru/news/232-displei-ssd1306-podklyuchaem-k-arduino-vyvodim-tekst-risuem.html)
+
+#### [ESP32-CAM With SSD1306 OLED Display](https://github.com/ClaudeMarais/ESP32-CAM_With_SSD1306)
+
+#### [ESP32 и ESP8266 с выводом статуса на веб-страницу и на OLED дисплей](https://arduino-tex.ru/news/23/esp32-i-esp8266-s-vyvodom-statusa-na-veb-stranicu-i-na-oled.html?ysclid=m76l3hhe1l969660993)
+
+#### [SSD1306 OLED-дисплей, вывод текста на русском языке в Arduino IDE](https://portal-pk.ru/news/233-ssd1306-oled-displei-vyvod-teksta-na-russkom-yazyke-v-arduino-ide.html)
+
+#### [Файлы и библиотеки и другое для Arduino](https://iarduino.ru/file/)
+
+#### [Русификация библиотеки Adafruit-GFX и вывод русских букв на дисплей в кодировке UTF-8 из Arduino IDE](https://arduino.ru/forum/programmirovanie/rusifikatsiya-biblioteki-adafruit-gfx-i-vyvod-russkikh-bukv-na-displei-v-kodi)
+
+-->
+<h6 id="в-начало-1"><a href="#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8">в начало</a></h6>
+</body>
+</html>
