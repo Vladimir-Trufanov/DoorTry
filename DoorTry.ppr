@@ -21,7 +21,7 @@ DoorTry
 		-.well-known
 			-pki-validation
 				www\.well-known\pki-validation\gsdv.txt
-		-BitofExpert
+		+BitofExpert
 			-bifeArduino
 				-byl-smartfon---stal-eshchyo-i-pult
 					www\BitofExpert\bifeArduino\byl-smartfon---stal-eshchyo-i-pult\byl-smartfon---stal-eshchyo-i-pult.html
@@ -115,6 +115,22 @@ DoorTry
 					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\prostaya-proverka-rabotosposobnosti.jpg
 					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\proverka-rabotosposobnosti-s-neskolkimi-flagami-v-neskolkih-zadachah.jpg
 					www\BitofExpert\bifeEsp32\obnaruzhenie-blokirovki-esp32-s-pomoshchyu-storozhevogo-tajmera\proverka-rabotosposobnosti-s-neskolkimi-flagami-v-odnom-cikle.jpg
+				-opoveshchenie-zadachi-vmesto-semafora-i-ocheredi
+					-NotificForSynchro
+						www\BitofExpert\bifeEsp32\opoveshchenie-zadachi-vmesto-semafora-i-ocheredi\NotificForSynchro\NotificForSynchro.ino
+					-NotificValueFromISR
+						www\BitofExpert\bifeEsp32\opoveshchenie-zadachi-vmesto-semafora-i-ocheredi\NotificValueFromISR\NotificValueFromISR.ino
+					www\BitofExpert\bifeEsp32\opoveshchenie-zadachi-vmesto-semafora-i-ocheredi\kommunikaciya-cherez-obekt-posrednik.jpg
+					www\BitofExpert\bifeEsp32\opoveshchenie-zadachi-vmesto-semafora-i-ocheredi\obshchenie-bez-posrednicheskogo-obekta.jpg
+					www\BitofExpert\bifeEsp32\opoveshchenie-zadachi-vmesto-semafora-i-ocheredi\opoveshchenie-zadachi-vmesto-semafora-i-ocheredi.html
+				-soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki
+					-Rus32CAMExt6
+						www\BitofExpert\bifeEsp32\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki\Rus32CAMExt6\Rus32CAMExt6.ino
+					www\BitofExpert\bifeEsp32\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki\AdafruitLibs.jpg
+					www\BitofExpert\bifeEsp32\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki\OLED SSD1306 i2c.jpg
+					www\BitofExpert\bifeEsp32\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki\OLED SSD1306.jpg
+					www\BitofExpert\bifeEsp32\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki\RaspinovkaESP32CAM.jpg
+					www\BitofExpert\bifeEsp32\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki\soobshcheniya-na-oled-rasshcheplenie-uint32t-vynos-sbrosa-i-proshivki.html
 				-vse-pro-pamyat-esp32
 					-ControllerMemory
 						www\BitofExpert\bifeEsp32\vse-pro-pamyat-esp32\ControllerMemory\ControllerMemory.ino
@@ -167,6 +183,9 @@ DoorTry
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Setting.jpg
 					www\BitofExpert\bifeGitHub\kak-udalit-repozitarij-iz-github\Toconfirm.jpg
 			-bifePHP
+				-kak-sdelat-begushchuyu-stroku
+					www\BitofExpert\bifePHP\kak-sdelat-begushchuyu-stroku\kak-sdelat-begushchuyu-stroku.html
+					www\BitofExpert\bifePHP\kak-sdelat-begushchuyu-stroku\kesha-sdelal-podumal-ne-ponravilos.mp4
 				-skoncentrirovannye-svedeniya-o-phpini
 					-PHPIni
 						www\BitofExpert\bifePHP\skoncentrirovannye-svedeniya-o-phpini\PHPIni\PHPIni.ino
@@ -458,7 +477,7 @@ DoorTry
 			www\Jsx\jqueryui-1.13.0.min.js
 			www\Jsx\TJsPrown.css
 			www\Jsx\TJsPrown.js
-		+Pages
+		-Pages
 			-Basemaker
 				www\Pages\Basemaker\ProbaTestBMaker.php
 			-DoorTry
@@ -477,12 +496,12 @@ DoorTry
 				www\Pages\Proba\ProbaTest.php
 				www\Pages\Proba\TJsPrown.css
 				www\Pages\Proba\TJsPrown.js
-			+Signaphoto
+			-Signaphoto
 				-Fonts
 					-Lobster
 						www\Pages\Signaphoto\Fonts\Lobster\Lobster-Regular.ttf
 						www\Pages\Signaphoto\Fonts\Lobster\OFL.txt
-				+images
+				-images
 					www\Pages\Signaphoto\images\bg_page.png
 					www\Pages\Signaphoto\images\iphoto.jpg
 					www\Pages\Signaphoto\images\iproba.jpeg
@@ -605,7 +624,6 @@ DoorTry
 		www\doortry.png
 		www\DoorTryError.php
 		www\e404.php
-		www\errors.txt
 		www\favicon.ico
 		www\get-info.php
 		www\includErrs.php
@@ -618,7 +636,6 @@ DoorTry
 		www\iniMenu.php
 		www\iniTPhpPrown.php
 		www\iniWorkSpace.php
-		www\log.txt
 		www\logis.txt
 		www\Main.php
 		www\MainDoorTry.php
@@ -632,34 +649,10 @@ DoorTry
 		www\ViewEnviron.php
 		www\yandex_62a939d60929cd83.html
 [Open project files]
-0=www\index.php
-1=www\Main.php
-2=www\iniMem.php
-3=www\Site.php
-4=www\Pages\Signaphoto\SignaPhoto.php
-5=..\Probatv\www\Pages\Signaphoto\SignaPhoto.php
-6=www\Pages\Signaphoto\SignaPhotoImg.php
+0=www\BitofExpert\BitofExpert.php
 [Selected Project Files]
 Main=
-Selected=www\Pages\Signaphoto\SignaPhoto.php
-[www\index.php]
-TopLine=23
-Caret=4,49
-[www\Main.php]
-TopLine=52
-Caret=1,85
-[www\iniMem.php]
-TopLine=27
-Caret=22,66
-[www\Site.php]
+Selected=www\BitofExpert\BitofExpert.php
+[www\BitofExpert\BitofExpert.php]
 TopLine=1
-Caret=43,25
-[www\Pages\Signaphoto\SignaPhoto.php]
-TopLine=171
-Caret=80,186
-[..\Probatv\www\Pages\Signaphoto\SignaPhoto.php]
-TopLine=33
-Caret=1,124
-[www\Pages\Signaphoto\SignaPhotoImg.php]
-TopLine=183
-Caret=10,15
+Caret=67,28
