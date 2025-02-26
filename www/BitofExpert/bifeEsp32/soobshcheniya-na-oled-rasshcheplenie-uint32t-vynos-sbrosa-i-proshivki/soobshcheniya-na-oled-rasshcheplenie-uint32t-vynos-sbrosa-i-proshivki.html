@@ -39,8 +39,12 @@
 <figure>
 <img src="OLED%20SSD1306%20i2c.jpg" alt="OLED SSD1306" /><figcaption>OLED SSD1306</figcaption>
 </figure>
+<hr />
 <h3 id="сообщения-на-оled-дисплей-из-задачи-через-уведомления"><a href="#%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-oled-%D0%B4%D0%B8%D1%81%D0%BF%D0%BB%D0%B5%D0%B9-%D0%B8%D0%B7-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D1%83%D0%B2%D0%B5%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F">Сообщения на Оled-дисплей из задачи через уведомления</a></h3>
 <h3 id="расщепление-uint32_t-на-составляющие-c-помощью-union"><a href="#%D1%80%D0%B0%D1%81%D1%89%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-uint32_t-%D0%BD%D0%B0-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%D1%89%D0%B8%D0%B5-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-union">Расщепление uint32_t на составляющие c помощью union</a></h3>
+<h3 id="вынос-вo-вне-кнопок-сброса-и-прошивки-esp32-cam"><a href="#%D0%B2%D1%8B%D0%BD%D0%BE%D1%81-%D0%B2%D0%BE-%D0%B2%D0%BD%D0%B5-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BE%D0%BA-%D1%81%D0%B1%D1%80%D0%BE%D1%81%D0%B0-%D0%B8-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-esp32-cam">Вынос вo вне кнопок сброса и прошивки ESP32-CAM</a></h3>
+<h3 id="библиoграфия"><a href="#%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F">Библиoграфия</a></h3>
+<hr />
 <h3 id="сообщения-на-oled-дисплей-из-задачи-через-уведомления">Сообщения на Oled-дисплей из задачи через уведомления</h3>
 <p>Существует несколько библиотек для работы с Oled-дисплеями. Основной пример статьи использует две библиотеки <strong><em><a href="../zip/Adafruit_SSD1306.zip">Adafruit_SSD1306.h v2.5.13</a></em></strong> и <strong><em><a href="../zip/Adafruit-GFX-Library.zip">Adafruit_GFX.h v1.11.11</a></em></strong>, установленные из IDE Arduino.</p>
 <p><img src="AdafruitLibs.jpg" /></p>
@@ -190,6 +194,8 @@ void loop()
 }
 
 // ******************************************************* Rus32CAMExt5.ino ***</code></pre>
+<video src="OledVideo.mov" width="800" type="video/mov" controls poster="poster-pult.jpg">
+</video>
 <pre><code>/** Arduino-Esp32-CAM                                       *** task_Echo.h ***
  *                          
  *               Задача вывода сообщений журнала на OLED-дисплее SSD1306 128x64 
@@ -453,46 +459,28 @@ void iniEcho()
 <p>Union позволяет объединить и записать несколько переменных в однобайтовый массив для отправки по Bluetooth, i2c, EspNow или любому другому протоколу, работающему с массивами;</p>
 <p>позволяет записать данные в одном формате, а затем прочитать в другом.</p>
 <h4 id="пример-расщепления-uint32_t-на-составляющие-с-помощью-union"><a href="Rus32CAMExt6/Rus32CAMExt6.ino">Пример расщепления uint32_t на составляющие с помощью union</a></h4>
+<h6 id="в-начало-1"><a href="#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8">в начало</a></h6>
+<h3 id="вынос-во-вне-кнопок-сброса-и-прошивки-esp32-cam"><a href="https://www.studiopieters.nl/esp32-auto-program-reset/">Вынос во вне кнопок сброса и прошивки ESP32-CAM</a></h3>
+<p>Понятно, пока идут пробные учебные эксперименты с контроллером, можно отсоединять провод от нулевого пина и подсоединять снова много раз, нажимать кнопку сброса на контроллере много раз, но наступает момент, когда нужно уже строить изделие на макетной плате.</p>
+<p>Здесь предлагается дежурное решение вопроса при отладке работы с дисплеем Oled. В разрыв между контактами <strong><em>GND</em></strong> и <strong><em>GPIO0</em></strong> вставляется выключатель, а между контактом <strong><em>GND/Rst</em></strong> и землей ставится кнопка с подтягивающим резистором <strong><em>10 кОм</em></strong>.</p>
+<p><img src="zagruzka-i-sbros-MAKET.jpg" /></p>
+<p><img src="zagruzka-i-sbros-SHEMA.jpg" /></p>
+<h6 id="в-начало-2"><a href="#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8">в начало</a></h6>
 <!--
 
 #### OLED SSD1306.jpg
 
 ![OLED SSD1306](OLED SSD1306.jpg)
 
-### Библиография
-
-#### [ESP-WebOTA Легко добавляйте веб-обновления OTA в свои проекты ESP32/ESP8266](https://github.com/scottchiefbaker/ESP-WebOTA)
-
-#### [Разделить uint-32 на байты](https://forum.arduino.cc/t/solved-split-uint-32-to-bytes/532751)
-
-#### [ESP32 – Автоматическое программирование и сброс настроек](https://www.studiopieters.nl/esp32-auto-program-reset/)
-
-#### [Форматирование карты microSD, фотографирование с PIR или без и сохранение снимка на SD-карте](https://www.diyengineers.com/2023/04/13/esp32-cam-complete-guide/)
-
-#### [Как назначить фиксированный IP-адрес вашему устройству ESP32](https://arduinokitproject.com/esp32-static-ip-tutorial/)
-
-#### [Источник пробуждения ESP32-CAM, Таймер](https://lastminuteengineers.com/esp32-deep-sleep-wakeup-sources/)
-
-#### [ThingPulse OLED SSD1306 (ESP8266/ESP32/Mbed-OS)](https://github.com/ThingPulse/esp8266-oled-ssd1306/tree/master)
-
-
-### OLED дисплей на русском языке
-
-#### [Описание команд - Adafruit_SSD1306 Class Reference](https://adafruit.github.io/Adafruit_SSD1306/html/class_adafruit___s_s_d1306.html)
-
-#### [Дисплей SSD1306 подключаем к Arduino. Выводим текст, рисуем фигуры](https://portal-pk.ru/news/232-displei-ssd1306-podklyuchaem-k-arduino-vyvodim-tekst-risuem.html)
-
-#### [ESP32-CAM With SSD1306 OLED Display](https://github.com/ClaudeMarais/ESP32-CAM_With_SSD1306)
-
-#### [ESP32 и ESP8266 с выводом статуса на веб-страницу и на OLED дисплей](https://arduino-tex.ru/news/23/esp32-i-esp8266-s-vyvodom-statusa-na-veb-stranicu-i-na-oled.html?ysclid=m76l3hhe1l969660993)
-
-#### [SSD1306 OLED-дисплей, вывод текста на русском языке в Arduino IDE](https://portal-pk.ru/news/233-ssd1306-oled-displei-vyvod-teksta-na-russkom-yazyke-v-arduino-ide.html)
-
-#### [Файлы и библиотеки и другое для Arduino](https://iarduino.ru/file/)
-
-#### [Русификация библиотеки Adafruit-GFX и вывод русских букв на дисплей в кодировке UTF-8 из Arduino IDE](https://arduino.ru/forum/programmirovanie/rusifikatsiya-biblioteki-adafruit-gfx-i-vyvod-russkikh-bukv-na-displei-v-kodi)
-
 -->
-<h6 id="в-начало-1"><a href="#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8">в начало</a></h6>
+<h3 id="библиография">Библиография</h3>
+<h4 id="thingpulse-oled-ssd1306-esp8266esp32mbed-os"><a href="https://github.com/ThingPulse/esp8266-oled-ssd1306/tree/master">ThingPulse OLED SSD1306 (ESP8266/ESP32/Mbed-OS)</a></h4>
+<h4 id="описание-команд---adafruit_ssd1306-class-reference"><a href="https://adafruit.github.io/Adafruit_SSD1306/html/class_adafruit___s_s_d1306.html">Описание команд - Adafruit_SSD1306 Class Reference</a></h4>
+<h4 id="дисплей-ssd1306-подключаем-к-arduino.-выводим-текст-рисуем-фигуры"><a href="https://portal-pk.ru/news/232-displei-ssd1306-podklyuchaem-k-arduino-vyvodim-tekst-risuem.html">Дисплей SSD1306 подключаем к Arduino. Выводим текст, рисуем фигуры</a></h4>
+<h4 id="esp32-cam-with-ssd1306-oled-display"><a href="https://github.com/ClaudeMarais/ESP32-CAM_With_SSD1306">ESP32-CAM With SSD1306 OLED Display</a></h4>
+<h4 id="esp32-и-esp8266-с-выводом-статуса-на-веб-страницу-и-на-oled-дисплей"><a href="https://arduino-tex.ru/news/23/esp32-i-esp8266-s-vyvodom-statusa-na-veb-stranicu-i-na-oled.html?ysclid=m76l3hhe1l969660993">ESP32 и ESP8266 с выводом статуса на веб-страницу и на OLED дисплей</a></h4>
+<h4 id="ssd1306-oled-дисплей-вывод-текста-на-русском-языке-в-arduino-ide"><a href="https://portal-pk.ru/news/233-ssd1306-oled-displei-vyvod-teksta-na-russkom-yazyke-v-arduino-ide.html">SSD1306 OLED-дисплей, вывод текста на русском языке в Arduino IDE</a></h4>
+<h4 id="русификация-библиотеки-adafruit-gfx-и-вывод-русских-букв-на-дисплей-в-кодировке-utf-8-из-arduino-ide"><a href="https://arduino.ru/forum/programmirovanie/rusifikatsiya-biblioteki-adafruit-gfx-i-vyvod-russkikh-bukv-na-displei-v-kodi">Русификация библиотеки Adafruit-GFX и вывод русских букв на дисплей в кодировке UTF-8 из Arduino IDE</a></h4>
+<h6 id="в-начало-3"><a href="#%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8">в начало</a></h6>
 </body>
 </html>
