@@ -24,3 +24,5 @@ Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) QupZilla/1.8.6 Safari/537.21 
 ***Main***Mon, 03 Feb 2025 19:41:57 +0300 IP: ::1 URL: /index.php?list=kroshki-opyta&par=Esp32&tit=vse-pro-pamyat-esp32 
 Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) QupZilla/1.8.6 Safari/537.21 
+***Main***Mon, 03 Mar 2025 18:33:17 +0300 IP: 127.0.0.1 URL: / 
+Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0 
